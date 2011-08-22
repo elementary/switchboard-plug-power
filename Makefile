@@ -1,14 +1,19 @@
 all:
-	make build && make clean && make install && make run
+	make build
 build:
 	valac --pkg pantheon power.vala -o power
 
 install:
-	sudo cp ./* /usr/share/plugs/power/
+	mkdir -p /usr/lib/plugs/
+	rm /usr/lib/plugs/power -rf
+	cp . /usr/lib/plugs/power/ -R
 
+unclean:
+	rm /usr/lib/plugs/power/ -rf
+ 
 clean:
-	sudo rm /usr/share/plugs/power/*
-
+	rm power
+ 
 run:
 	switchboard
 	
