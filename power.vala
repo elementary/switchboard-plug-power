@@ -161,6 +161,8 @@ public class PowerPlug : Pantheon.Switchboard.Plug {
 		sizegroup2 = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
 		content_area = new Gtk.VBox (false, 0);
 		box = new Gtk.VBox (false, 0);
+		box.halign = Gtk.Align.CENTER;
+		box.valign = Gtk.Align.CENTER;
 		var vbox = new Gtk.VBox (false, 4);
 		
 		var label = new Gtk.Label ("Put the computer to sleep when inactive:");
@@ -179,10 +181,8 @@ public class PowerPlug : Pantheon.Switchboard.Plug {
 		
 		
 		check_ac = add_label_widget (vbox, "On AC power:",ac_pow,true);
-		check_ac.toggled.connect ( () => {
-			ac_pow.set_sensitive (check_ac.get_active ());
-		});
 		settings.bind ("sleep-inactive-ac", check_ac, "active", SettingsBindFlags.DEFAULT);
+		settings.bind ("sleep-inactive-ac", ac_pow, "sensitive", SettingsBindFlags.DEFAULT);
 		
 		bat_pow = new Gtk.ComboBox.with_model (liststore_time);
 		cell = new Gtk.CellRendererText();
@@ -194,10 +194,8 @@ public class PowerPlug : Pantheon.Switchboard.Plug {
 		bat_pow.changed.connect (update_bat_pow);
 		
 		check_bat = add_label_widget (vbox, "On battery power:",bat_pow,true);
-		check_bat.toggled.connect ( () => {
-			bat_pow.set_sensitive (check_bat.get_active ());
-		});
 		settings.bind ("sleep-inactive-battery", check_bat, "active", SettingsBindFlags.DEFAULT);
+		settings.bind ("sleep-inactive-battery", bat_pow, "sensitive", SettingsBindFlags.DEFAULT);
 		
 		content_area.pack_start (vbox, false, false, 4);
 

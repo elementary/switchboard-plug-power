@@ -8,7 +8,7 @@ install:
 	rm /usr/lib/plugs/power -rf
 	cp . /usr/lib/plugs/power/ -R
 
-unclean:
+uninstall:
 	rm /usr/lib/plugs/power/ -rf
  
 clean:
