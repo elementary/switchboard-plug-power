@@ -10,13 +10,10 @@ public class PowerPlug : Pantheon.Switchboard.Plug {
 	Gtk.ComboBox pow_crit;
 	Gtk.ComboBox but_pow;
 	Gtk.ComboBox but_slp;
-	Gtk.ComboBox lock_dis;
-	Gtk.CheckButton check_lock;
 	Gtk.CheckButton check_ac;
 	Gtk.CheckButton check_bat;
 
 	GLib.Settings settings;
-	GLib.Settings session;
 	Gtk.SizeGroup sizegroup;
 	Gtk.SizeGroup sizegroup2;
 	Gtk.VBox content_area;
@@ -24,7 +21,6 @@ public class PowerPlug : Pantheon.Switchboard.Plug {
 
 	public PowerPlug () {
 		settings = new GLib.Settings ("org.gnome.settings-daemon.plugins.power");
-		session = new GLib.Settings ("org.gnome.desktop.session");
 
 		var builder = new Gtk.Builder ();
 		try {
@@ -47,7 +43,7 @@ public class PowerPlug : Pantheon.Switchboard.Plug {
 	Gtk.CheckButton? add_label_widget (Gtk.Box parent, string text, Gtk.Widget widget, bool check_box=false) {
 		var editable = (widget is Gtk.Bin) ? (widget as Gtk.Bin).get_child () : widget;
 		var hbox = new Gtk.HBox (false, 0);
-		parent.pack_start (hbox, false, false, 10);
+		parent.pack_start (hbox, false, false, 4);
 		Gtk.Widget label;
 		if (check_box)
 			label = new Gtk.CheckButton.with_mnemonic (text);
@@ -58,7 +54,7 @@ public class PowerPlug : Pantheon.Switchboard.Plug {
 		hbox.pack_start (label, false, false, 12);
 		if (label is Gtk.Label)
 			(label as Gtk.Label).xalign = 0.0f;
-		hbox.pack_start (widget, false, false, 10);
+		hbox.pack_start (widget, false, false, 4);
 		if (label is Gtk.CheckButton) {
 			(label as Gtk.CheckButton).xalign = 0.0f;
 			return (label as Gtk.CheckButton);
@@ -158,21 +154,6 @@ public class PowerPlug : Pantheon.Switchboard.Plug {
 		settings.set_enum ("button-sleep", val);
 	}
 	
-	void update_lock_dis () {
-		Gtk.TreeIter iter;
-		bool ret = lock_dis.get_active_iter (out iter);
-		if (!ret)
-			return;
-
-		/* get entry */
-		var model = lock_dis.get_model ();
-		uint32 val;
-		model.get (iter, 1, out val);
-		var variant = new Variant.uint32 (val);
-
-		session.set_value ("idle-delay", variant);
-	}
-	
 	void create_ui () {
 		int val;
 		
@@ -250,19 +231,6 @@ public class PowerPlug : Pantheon.Switchboard.Plug {
 		but_slp.changed.connect (update_but_slp);
 		
 		add_label_widget (content_area, "When the sleep button is pressed:",but_slp);
-
-		lock_dis = new Gtk.ComboBox.with_model (liststore_time);
-		cell = new Gtk.CellRendererText();
-		lock_dis.pack_start( cell, false );
-		lock_dis.set_attributes( cell, "text", 0 );
-		
-		var i = session.get_value ("idle-delay").get_uint32 ();
-		set_value_for_combo (lock_dis, (int)i);
-		lock_dis.changed.connect (update_lock_dis);
-		
-		check_lock = add_label_widget (vbox, "Lock screen after:",lock_dis,true);
-		settings.bind ("idle-dim-ac", check_lock, "active", SettingsBindFlags.DEFAULT);
-		settings.bind ("idle-dim-ac", lock_dis, "sensitive", SettingsBindFlags.DEFAULT);
 		
 		content_area.show_all ();
 		var hbox = new Gtk.HBox (true, 0);
