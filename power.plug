@@ -1,6 +1,0 @@
-[power.plug]
-exec=power
-icon=gnome-power-manager
-title=Power
-category=hardware
-
