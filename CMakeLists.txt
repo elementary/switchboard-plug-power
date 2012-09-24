@@ -44,7 +44,7 @@ vala_precompile (VALA_C
 PACKAGES
     ${PLUG_DEPS}
 OPTIONS
-    --thread
+
 )
 
 # Traslation stuff
