@@ -20,6 +20,28 @@
       </row>
     </data>
   </object>
+  <object class="GtkListStore" id="liststore_lid_close">
+    <columns>
+      <!-- column-name name -->
+      <column type="gchararray"/>
+      <!-- column-name value -->
+      <column type="gint"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes">Suspend</col>
+        <col id="1">1</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Hibernate</col>
+        <col id="1">3</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Do nothing</col>
+        <col id="1">5</col>
+      </row>
+    </data>
+  </object>
   <object class="GtkListStore" id="liststore_power">
     <columns>
       <!-- column-name name -->
@@ -51,24 +73,6 @@
     </data>
   </object>
   <object class="GtkListStore" id="liststore_sleep">
-    <columns>
-      <!-- column-name name -->
-      <column type="gchararray"/>
-      <!-- column-name value -->
-      <column type="gint"/>
-    </columns>
-    <data>
-      <row>
-        <col id="0" translatable="yes">Suspend</col>
-        <col id="1">1</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">Hibernate</col>
-        <col id="1">3</col>
-      </row>
-    </data>
-  </object>
-  <object class="GtkListStore" id="liststore_sleep1">
     <columns>
       <!-- column-name name -->
       <column type="gchararray"/>

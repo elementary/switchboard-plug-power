@@ -31,7 +31,7 @@ public class PowerPlug : Pantheon.Switchboard.Plug {
 		liststore_power = builder.get_object ("liststore_power") as Gtk.ListStore;
 		liststore_critical = builder.get_object ("liststore_critical") as Gtk.ListStore;
 		liststore_time = builder.get_object ("liststore_time") as Gtk.ListStore;
-	    liststore_lid_close = builder.get_object ("liststore_sleep1") as Gtk.ListStore;
+	    liststore_lid_close = builder.get_object ("liststore_lid_close") as Gtk.ListStore;
 		
 		create_ui ();
 		
