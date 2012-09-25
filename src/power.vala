@@ -236,6 +236,7 @@ public class PowerPlug : Pantheon.Switchboard.Plug {
 		
 		/*Third row*/
 		var pow_crit_label = new Gtk.Label ("When power is critically low:");
+		pow_crit_label.halign = Gtk.Align.START;
 		
 		pow_crit = new Gtk.ComboBox.with_model (liststore_critical);
 		cell = new Gtk.CellRendererText();
@@ -248,6 +249,7 @@ public class PowerPlug : Pantheon.Switchboard.Plug {
 		
 		/*Fourth row*/
 		var lid_closed_label = new Gtk.Label ("When the lid is closed:");
+		lid_closed_label.halign = Gtk.Align.START;
 		
 		lid_closed_ac = new Gtk.ComboBox.with_model (liststore_lid);
 		cell = new Gtk.CellRendererText();
@@ -272,6 +274,7 @@ public class PowerPlug : Pantheon.Switchboard.Plug {
 		
 		/*Sixth row*/
 		var but_pow_label = new Gtk.Label ("When the power button is pressed:");
+		but_pow_label.halign = Gtk.Align.START;
 		
 		but_pow = new Gtk.ComboBox.with_model (liststore_power);
 		cell = new Gtk.CellRendererText();
@@ -284,6 +287,7 @@ public class PowerPlug : Pantheon.Switchboard.Plug {
 		
         /*Seventh row*/
         var but_slp_label = new Gtk.Label ("When the sleep button is pressed:");
+        but_slp_label.halign = Gtk.Align.START;
 
 		but_slp = new Gtk.ComboBox.with_model (liststore_sleep);
 		cell = new Gtk.CellRendererText();
