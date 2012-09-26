@@ -210,7 +210,7 @@ public class PowerPlug : Pantheon.Switchboard.Plug {
 		
 		/*First row*/
 		var on_ac_label = new Gtk.Label ("When Plugged In");
-		var on_bat_label = new Gtk.Label ("On battery power");
+		var on_bat_label = new Gtk.Label ("On Battery Power");
 		
 		/*Second row*/
 		var slp_label = new Gtk.Label ("Put the computer to sleep when inactive:");
