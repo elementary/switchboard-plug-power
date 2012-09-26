@@ -1,0 +1,29 @@
+Source: switchboard-plug-power
+Section: x11
+Priority: optional
+Maintainer: Cody Garver <cody@elementaryos.org>
+Build-Depends: cmake,
+               debhelper (>= 7.0.50~),
+               libgranite-dev,
+               libpantheon-dev,
+               valac-0.16 | valac (>= 0.16)
+Standards-Version: 3.9.2
+Homepage: https://launchpad.net/pantheon-plugs
+
+Package: switchboard-plug-power
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Enhances: switchboard
+Description: Power plug for Switchboard
+ This plug configures system power consumption.
+
+Package: switchboard-plug-power-dbg
+Architecture: any
+Section: debug
+Priority: extra
+Depends: switchboard-plug-power (= ${binary:Version}), ${misc:Depends}
+Enhances: switchboard-plug-power
+Description: Power plug for Switchboard (debugging symbols)
+ This plug configures system power consumption.
+ .
+ This package contains debugging symbols for switchboard-plug-power.
