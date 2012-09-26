@@ -1,6 +1,6 @@
 [power.plug]
 exec=power
-icon=gnome-power-manager
+icon=preferences-system-power
 title=Power
 category=hardware
 
