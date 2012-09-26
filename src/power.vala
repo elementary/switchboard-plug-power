@@ -209,7 +209,7 @@ public class PowerPlug : Pantheon.Switchboard.Plug {
 		int val;
 		
 		/*First row*/
-		var on_ac_label = new Gtk.Label ("On AC power");
+		var on_ac_label = new Gtk.Label ("When Plugged In");
 		var on_bat_label = new Gtk.Label ("On battery power");
 		
 		/*Second row*/
