@@ -209,11 +209,11 @@ public class PowerPlug : Pantheon.Switchboard.Plug {
 		int val;
 		
 		/*First row*/
-		var on_ac_label = new Gtk.Label ("When Plugged In");
-		var on_bat_label = new Gtk.Label ("On Battery Power");
+		var on_ac_label = new Gtk.Label (_("When Plugged In"));
+		var on_bat_label = new Gtk.Label (_("On Battery Power"));
 		
 		/*Second row*/
-		var slp_label = new Gtk.Label ("Put the computer to sleep when inactive:");
+		var slp_label = new Gtk.Label (_("Put the computer to sleep when inactive:"));
 		
 		ac_pow = new Gtk.ComboBox.with_model (liststore_time);
 		var cell = new Gtk.CellRendererText();
@@ -235,7 +235,7 @@ public class PowerPlug : Pantheon.Switchboard.Plug {
 		bat_pow.changed.connect (update_bat_pow);
 		
 		/*Third row*/
-		var pow_crit_label = new Gtk.Label ("When power is critically low:");
+		var pow_crit_label = new Gtk.Label (_("When power is critically low:"));
 		pow_crit_label.halign = Gtk.Align.END;
 		
 		pow_crit = new Gtk.ComboBox.with_model (liststore_critical);
@@ -248,7 +248,7 @@ public class PowerPlug : Pantheon.Switchboard.Plug {
 		pow_crit.changed.connect (update_pow_crit);
 		
 		/*Fourth row*/
-		var lid_closed_label = new Gtk.Label ("When the lid is closed:");
+		var lid_closed_label = new Gtk.Label (_("When the lid is closed:"));
 		lid_closed_label.halign = Gtk.Align.END;
 		
 		lid_closed_ac = new Gtk.ComboBox.with_model (liststore_lid);
@@ -273,7 +273,7 @@ public class PowerPlug : Pantheon.Switchboard.Plug {
 		var separator = new Gtk.HSeparator ();
 		
 		/*Sixth row*/
-		var but_pow_label = new Gtk.Label ("When the power button is pressed:");
+		var but_pow_label = new Gtk.Label (_("When the power button is pressed:"));
 		but_pow_label.halign = Gtk.Align.END;
 		
 		but_pow = new Gtk.ComboBox.with_model (liststore_power);
@@ -286,7 +286,7 @@ public class PowerPlug : Pantheon.Switchboard.Plug {
 		but_pow.changed.connect (update_but_pow);
 		
         /*Seventh row*/
-        var but_slp_label = new Gtk.Label ("When the sleep button is pressed:");
+        var but_slp_label = new Gtk.Label (_("When the sleep button is pressed:"));
         but_slp_label.halign = Gtk.Align.END;
 
 		but_slp = new Gtk.ComboBox.with_model (liststore_sleep);
