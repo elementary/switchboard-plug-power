@@ -1,4 +1,4 @@
-public class PowerPlug : Pantheon.Switchboard.Plug {
+public class PowerPlug.PowerPlug : Pantheon.Switchboard.Plug {
 
 	Gtk.ListStore liststore_sleep;
 	Gtk.ListStore liststore_power;
@@ -15,12 +15,16 @@ public class PowerPlug : Pantheon.Switchboard.Plug {
 	Gtk.ComboBox but_slp;
 	Gtk.ComboBox lid_closed_ac;
 	Gtk.ComboBox lid_closed_pow;
+	
+	Gtk.CellRendererText cell;
 
 	GLib.Settings settings;
+	Granite.Widgets.StaticNotebook staticnotebook;
 	Gtk.Grid grid;
 
 	public PowerPlug () {
 		settings = new GLib.Settings ("org.gnome.settings-daemon.plugins.power");
+        int val;
 
 	    /***********************/
 	    
@@ -79,6 +83,7 @@ public class PowerPlug : Pantheon.Switchboard.Plug {
 		liststore_lid.set (iter, 0, "Do nothing", 1, 0);
 		
 		/***********************/
+		
 		create_ui ();
 		
 		add (grid);
@@ -208,11 +213,14 @@ public class PowerPlug : Pantheon.Switchboard.Plug {
 	void create_ui () {
 		int val;
 		
-		/*First row*/
+		
+		
+		/*
+		//First row
 		var on_ac_label = new Gtk.Label (_("When Plugged In"));
 		var on_bat_label = new Gtk.Label (_("On Battery Power"));
 		
-		/*Second row*/
+		//Second row
 		var slp_label = new Gtk.Label (_("Put the computer to sleep when inactive:"));
 		
 		ac_pow = new Gtk.ComboBox.with_model (liststore_time);
@@ -234,7 +242,7 @@ public class PowerPlug : Pantheon.Switchboard.Plug {
 		set_value_for_combo (bat_pow, val);
 		bat_pow.changed.connect (update_bat_pow);
 		
-		/*Third row*/
+		//Third row
 		var pow_crit_label = new Gtk.Label (_("When power is critically low:"));
 		pow_crit_label.halign = Gtk.Align.END;
 		
@@ -247,7 +255,7 @@ public class PowerPlug : Pantheon.Switchboard.Plug {
 		set_value_for_combo (pow_crit, val);
 		pow_crit.changed.connect (update_pow_crit);
 		
-		/*Fourth row*/
+		//Fourth row
 		var lid_closed_label = new Gtk.Label (_("When the lid is closed:"));
 		lid_closed_label.halign = Gtk.Align.END;
 		
@@ -269,10 +277,10 @@ public class PowerPlug : Pantheon.Switchboard.Plug {
 		set_value_for_combo (lid_closed_pow, val);
 		lid_closed_pow.changed.connect (update_lid_closed_pow);
 		
-		/*Fifth row - Separator*/
+		//Fifth row - Separator
 		var separator = new Gtk.HSeparator ();
-		
-		/*Sixth row*/
+		*/
+		//Sixth row
 		var but_pow_label = new Gtk.Label (_("When the power button is pressed:"));
 		but_pow_label.halign = Gtk.Align.END;
 		
@@ -285,7 +293,7 @@ public class PowerPlug : Pantheon.Switchboard.Plug {
 		set_value_for_combo (but_pow, val);
 		but_pow.changed.connect (update_but_pow);
 		
-        /*Seventh row*/
+        //Seventh row
         var but_slp_label = new Gtk.Label (_("When the sleep button is pressed:"));
         but_slp_label.halign = Gtk.Align.END;
 
@@ -298,7 +306,7 @@ public class PowerPlug : Pantheon.Switchboard.Plug {
 		set_value_for_combo (but_slp, val);
 		but_slp.changed.connect (update_but_slp);
 		
-		/**/
+		/*
 	    grid = new Gtk.Grid ();
 		grid.margin_bottom = grid.margin_top = 64;
 		grid.margin_left = grid.margin_right = 256;
@@ -314,11 +322,18 @@ public class PowerPlug : Pantheon.Switchboard.Plug {
 		grid.attach (lid_closed_label, 0, 3, 1, 1);
 		grid.attach (lid_closed_pow, 1, 3, 1, 1);
 		grid.attach (lid_closed_ac, 2, 3, 1, 1);
-		grid.attach (separator, 0, 4, 3, 1);
+		grid.attach (separator, 0, 4, 3, 1); 
 		grid.attach (but_pow_label, 0, 5, 1, 1);
 		grid.attach (but_pow, 1, 5, 1, 1);
 		grid.attach (but_slp_label, 0, 6, 1, 1);
-		grid.attach (but_slp, 1, 6, 1, 1);
+		grid.attach (but_slp, 1, 6, 1, 1); */
+		
+		grid.attach (staticnotebook, 0, 0, 1, 1);
+		grid.attach (but_pow_label, 0, 1, 1, 1);
+		grid.attach (but_pow, 1, 1, 1, 1);
+		grid.attach (but_slp_label, 0, 2, 1, 1);
+		grid.attach (but_slp, 1, 2, 1, 1);
+		
 		
 	}
 }
@@ -326,7 +341,7 @@ public class PowerPlug : Pantheon.Switchboard.Plug {
 public static int main (string[] args) {
 
 	Gtk.init (ref args);
-	var plug = new PowerPlug ();
+	var plug = new PowerPlug.PowerPlug ();
 	plug.register ("Power");
 	plug.show_all ();
 	Gtk.main ();
