@@ -213,7 +213,9 @@ public class PowerPlug.PowerPlug : Pantheon.Switchboard.Plug {
 	void create_ui () {
 		int val;
 		
+		staticnotebook = new Granite.Widgets.StaticNotebook ();
 		
+		staticnotebook.append_page (new BatteryView (), new Gtk.Label (_("Battery")));
 		
 		/*
 		//First row
