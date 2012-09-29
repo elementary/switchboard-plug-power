@@ -2,9 +2,9 @@ public class PowerPlug.PowerPlug : Pantheon.Switchboard.Plug {
 
 	Gtk.ListStore liststore_sleep;
 	Gtk.ListStore liststore_power;
-	Gtk.ListStore liststore_critical;
+	public Gtk.ListStore liststore_critical;
 	Gtk.ListStore liststore_time;
-	Gtk.ListStore liststore_lid;
+	public Gtk.ListStore liststore_lid;
 	
 	Gtk.TreeIter iter;
 	
@@ -16,11 +16,15 @@ public class PowerPlug.PowerPlug : Pantheon.Switchboard.Plug {
 	Gtk.ComboBox lid_closed_ac;
 	Gtk.ComboBox lid_closed_pow;
 	
+	Gtk.Scale battery_slp_scale;
+	Gtk.Scale plug_slp_scale;
+	
 	Gtk.CellRendererText cell;
 
 	GLib.Settings settings;
 	Granite.Widgets.StaticNotebook staticnotebook;
-	Gtk.Grid grid;
+	
+	Gtk.VBox vbox;
 
 	public PowerPlug () {
 		settings = new GLib.Settings ("org.gnome.settings-daemon.plugins.power");
@@ -86,7 +90,7 @@ public class PowerPlug.PowerPlug : Pantheon.Switchboard.Plug {
 		
 		create_ui ();
 		
-		add (grid);
+		add (vbox);
 		
 	}
 	
@@ -215,73 +219,78 @@ public class PowerPlug.PowerPlug : Pantheon.Switchboard.Plug {
 		
 		staticnotebook = new Granite.Widgets.StaticNotebook ();
 		
-		staticnotebook.append_page (new BatteryView (), new Gtk.Label (_("Battery")));
+		//staticnotebook.append_page (new BatteryView (), new Gtk.Label (_("Battery")));
 		
-		/*
-		//First row
-		var on_ac_label = new Gtk.Label (_("When Plugged In"));
-		var on_bat_label = new Gtk.Label (_("On Battery Power"));
+		// Battery page
+		var bgrid = new Gtk.Grid ();
 		
-		//Second row
 		var slp_label = new Gtk.Label (_("Put the computer to sleep when inactive:"));
-		
-		ac_pow = new Gtk.ComboBox.with_model (liststore_time);
-		var cell = new Gtk.CellRendererText();
-		ac_pow.pack_start( cell, false );
-		ac_pow.set_attributes( cell, "text", 0 );
-		ac_pow.set_data ("gsettings_key", "sleep-inactive-ac-timeout");
-		
-		val = settings.get_int ("sleep-inactive-ac-timeout");
-		set_value_for_combo (ac_pow, val);
-		ac_pow.changed.connect (update_ac_pow);
-		
-		bat_pow = new Gtk.ComboBox.with_model (liststore_time);
-		cell = new Gtk.CellRendererText();
-		bat_pow.pack_start( cell, false );
-		bat_pow.set_attributes( cell, "text", 0 );
-		
-		val = settings.get_int ("sleep-inactive-battery-timeout");
-		set_value_for_combo (bat_pow, val);
-		bat_pow.changed.connect (update_bat_pow);
-		
-		//Third row
-		var pow_crit_label = new Gtk.Label (_("When power is critically low:"));
-		pow_crit_label.halign = Gtk.Align.END;
-		
-		pow_crit = new Gtk.ComboBox.with_model (liststore_critical);
-		cell = new Gtk.CellRendererText();
-		pow_crit.pack_start( cell, false );
-		pow_crit.set_attributes( cell, "text", 0 );
-		
-		val = settings.get_enum ("critical-battery-action");
-		set_value_for_combo (pow_crit, val);
-		pow_crit.changed.connect (update_pow_crit);
-		
-		//Fourth row
+        bgrid.attach (slp_label, 0, 0, 1, 1);
+        bgrid.margin = 32;
+            
+        battery_slp_scale = new Gtk.Scale (Gtk.Orientation.HORIZONTAL,new Gtk.Adjustment(1800, 0, 3600, 300, 5, 0));
+        battery_slp_scale.set_draw_value (false);
+        battery_slp_scale.add_mark (300, Gtk.PositionType.BOTTOM, _("5 minutes"));
+        battery_slp_scale.add_mark (600, Gtk.PositionType.BOTTOM, _("10 minutes"));
+        battery_slp_scale.add_mark (1800, Gtk.PositionType.BOTTOM, _("30 minutes"));
+        //battery_slp_scale.add_mark (300, Gtk.PositionType.LEFT, _("1 Hour"));
+        battery_slp_scale.set_hexpand (true);
+		bgrid.attach (battery_slp_scale, 1, 0, 1, 4);
+		var battery_slp_label = new Gtk.Label (_("1 hour"));
+		bgrid.attach (battery_slp_label, 2, 0, 1, 1);
+				
 		var lid_closed_label = new Gtk.Label (_("When the lid is closed:"));
-		lid_closed_label.halign = Gtk.Align.END;
+        lid_closed_label.halign = Gtk.Align.END;
+        bgrid.attach (lid_closed_label, 0, 4, 1, 1);
+            
+        lid_closed_pow = new Gtk.ComboBox.with_model (liststore_lid);
+        cell = new Gtk.CellRendererText();
+        lid_closed_pow.pack_start( cell, false );
+	    lid_closed_pow.set_attributes( cell, "text", 0 );
+	    bgrid.attach (lid_closed_pow, 1, 4, 2, 1);
+		    
+	    var pow_crit_label = new Gtk.Label (_("When power is critically low:"));
+	    pow_crit_label.halign = Gtk.Align.END;
+	    bgrid.attach (pow_crit_label, 0, 5, 1, 1);
 		
-		lid_closed_ac = new Gtk.ComboBox.with_model (liststore_lid);
+	    pow_crit = new Gtk.ComboBox.with_model (liststore_critical);
+	    cell = new Gtk.CellRendererText();
+	    pow_crit.pack_start( cell, false );
+	    pow_crit.set_attributes( cell, "text", 0 );
+        bgrid.attach (pow_crit, 1, 5, 2, 1);
+        
+        // Plug in Page
+        var pgrid = new Gtk.Grid ();
+        pgrid.margin = 32;
+        
+        var p_slp_label = new Gtk.Label (_("Put the computer to sleep when inactive:"));
+        pgrid.attach (p_slp_label, 0, 0, 1, 1);
+        
+        plug_slp_scale = new Gtk.Scale (Gtk.Orientation.HORIZONTAL,new Gtk.Adjustment(1800, 0, 3600, 300, 5, 0));
+        plug_slp_scale.set_draw_value (false);
+        plug_slp_scale.add_mark (300, Gtk.PositionType.BOTTOM, _("5 Minutes"));
+        plug_slp_scale.add_mark (600, Gtk.PositionType.BOTTOM, _("10 Minutes"));
+        plug_slp_scale.add_mark (1800, Gtk.PositionType.BOTTOM, _("30 Minutes"));
+        //plug_slp_scale.add_mark (300, Gtk.PositionType.RIGHT, _("1 Hour"));
+        plug_slp_scale.set_hexpand (true);
+        pgrid.attach (plug_slp_scale, 1, 0, 1, 4);
+        
+        var plug_hour_label = new Gtk.Label (_("1 Hour"));
+        pgrid.attach (plug_hour_label, 2, 0, 1, 1);
+        
+        var p_lid_closed_label = new Gtk.Label (_("When the lid is closed:"));
+        pgrid.attach (p_lid_closed_label, 0, 4, 1, 1);
+        
+        lid_closed_ac = new Gtk.ComboBox.with_model (liststore_lid);
 		cell = new Gtk.CellRendererText();
 		lid_closed_ac.pack_start( cell, false );
 		lid_closed_ac.set_attributes( cell, "text", 0 );
-		
-		val = settings.get_enum ("lid-close-ac-action");
-		set_value_for_combo (lid_closed_ac, val);
-		lid_closed_ac.changed.connect (update_lid_closed_ac);
-		
-		lid_closed_pow = new Gtk.ComboBox.with_model (liststore_lid);
-		cell = new Gtk.CellRendererText();
-		lid_closed_pow.pack_start( cell, false );
-		lid_closed_pow.set_attributes( cell, "text", 0 );
-		
-		val = settings.get_enum ("lid-close-battery-action");
-		set_value_for_combo (lid_closed_pow, val);
-		lid_closed_pow.changed.connect (update_lid_closed_pow);
-		
-		//Fifth row - Separator
-		var separator = new Gtk.HSeparator ();
-		*/
+		pgrid.attach (lid_closed_ac, 1, 4, 2, 1);
+        
+        staticnotebook.append_page (pgrid, new Gtk.Label (_("Plug in")));
+        staticnotebook.append_page (bgrid, new Gtk.Label (_("Battery")));
+        
+        
 		//Sixth row
 		var but_pow_label = new Gtk.Label (_("When the power button is pressed:"));
 		but_pow_label.halign = Gtk.Align.END;
@@ -290,6 +299,7 @@ public class PowerPlug.PowerPlug : Pantheon.Switchboard.Plug {
 		cell = new Gtk.CellRendererText();
 		but_pow.pack_start( cell, false );
 		but_pow.set_attributes( cell, "text", 0 );
+		but_pow.hexpand = true;
 		
 		val = settings.get_enum ("button-power");
 		set_value_for_combo (but_pow, val);
@@ -303,10 +313,18 @@ public class PowerPlug.PowerPlug : Pantheon.Switchboard.Plug {
 		cell = new Gtk.CellRendererText();
 		but_slp.pack_start( cell, false );
 		but_slp.set_attributes( cell, "text", 0 );
+		but_slp.hexpand = true;
 		
 		val = settings.get_enum ("button-sleep");
 		set_value_for_combo (but_slp, val);
 		but_slp.changed.connect (update_but_slp);
+		
+		var grid = new Gtk.Grid ();
+		grid.margin = 32;
+		grid.attach (but_pow_label, 0, 0, 1, 1);
+		grid.attach (but_pow, 1, 0, 1, 1);
+		grid.attach (but_slp_label, 0, 1, 1, 1);
+		grid.attach (but_slp, 1, 1, 1, 1);
 		
 		/*
 	    grid = new Gtk.Grid ();
@@ -330,12 +348,16 @@ public class PowerPlug.PowerPlug : Pantheon.Switchboard.Plug {
 		grid.attach (but_slp_label, 0, 6, 1, 1);
 		grid.attach (but_slp, 1, 6, 1, 1); */
 		
-		grid.attach (staticnotebook, 0, 0, 1, 1);
+		/*grid.attach (staticnotebook, 0, 0, 1, 1);
 		grid.attach (but_pow_label, 0, 1, 1, 1);
 		grid.attach (but_pow, 1, 1, 1, 1);
 		grid.attach (but_slp_label, 0, 2, 1, 1);
 		grid.attach (but_slp, 1, 2, 1, 1);
+		*/
 		
+		vbox = new Gtk.VBox (false, 4);
+		vbox.pack_start (staticnotebook, true, true, 0);
+		vbox.pack_start (grid, true, true, 0);
 		
 	}
 }
