@@ -25,7 +25,7 @@ file (GLOB resources "${CMAKE_CURRENT_SOURCE_DIR}/data/*")
 
 # power-plug
 
-set (PLUG_DEPS "gtk+-3.0;pantheon")
+set (PLUG_DEPS "gtk+-3.0;pantheon;granite")
 
 find_package (PkgConfig)
 pkg_check_modules (DEPS REQUIRED ${PLUG_DEPS})
@@ -41,6 +41,8 @@ ensure_vala_version ("0.12.0" MINIMUM)
 include (ValaPrecompile)
 vala_precompile (VALA_C
     src/power.vala
+    #src/BatteryView.vala
+    #src/PlugView.vala
 PACKAGES
     ${PLUG_DEPS}
 OPTIONS
