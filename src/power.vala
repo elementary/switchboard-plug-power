@@ -14,8 +14,6 @@ public class PowerPlug.PowerPlug : Pantheon.Switchboard.Plug {
 	Gtk.ComboBox lid_closed_battery;
 	Gtk.ComboBox lid_closed_ac;
 	
-	Gtk.Scale scale;
-	
 	Gtk.CellRendererText cell;
 
 	GLib.Settings settings;
@@ -234,7 +232,7 @@ public class PowerPlug.PowerPlug : Pantheon.Switchboard.Plug {
 		var scale_label = new Gtk.Label (_("Put the computer to sleep when inactive:"));
 		grid.attach (scale_label, 0, 0, 1, 1);
 
-		scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 4000, 300);
+		var scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 4000, 300);
 		scale.set_draw_value (false);
 		scale.add_mark (300, Gtk.PositionType.BOTTOM, _("5 min"));
 		scale.add_mark (600, Gtk.PositionType.BOTTOM, _("10 min"));
