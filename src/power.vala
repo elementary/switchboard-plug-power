@@ -171,7 +171,7 @@ public class PowerPlug.PowerPlug : Pantheon.Switchboard.Plug {
 	void create_ui () {
 		int val;
 
-		staticnotebook = new Granite.Widgets.StaticNotebook ();
+		staticnotebook = new Granite.Widgets.StaticNotebook (false);
 		var plug_grid = create_notebook_pages ("ac");
 		var battery_grid = create_notebook_pages ("battery");
 		
