@@ -225,6 +225,7 @@ public class PowerPlug.PowerPlug : Pantheon.Switchboard.Plug {
 	Gtk.Grid create_notebook_pages (string type) 
 	{
 		int val;
+		double dval;
 	
 		var grid = new Gtk.Grid ();
 		grid.margin = 32;
@@ -242,7 +243,14 @@ public class PowerPlug.PowerPlug : Pantheon.Switchboard.Plug {
 		scale.add_mark (4000, Gtk.PositionType.BOTTOM, _("Never"));
 		scale.hexpand = true;
 		grid.attach (scale, 1, 0, 1, 4);
-
+		
+		dval = (double) settings.get_int ("sleep-inactive-"+type+"-timeout");
+		if (dval == 0) {
+			scale.set_value (4000);
+		} else {
+			scale.set_value (dval);
+		}
+		
 		scale.value_changed.connect (() => {
 			int vale = (int)scale.get_value ();
 			if (vale <= 3600) {
