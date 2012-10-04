@@ -240,6 +240,7 @@ public class PowerPlug.PowerPlug : Pantheon.Switchboard.Plug {
 		scale.add_mark (3600, Gtk.PositionType.BOTTOM, _("1 hour"));
 		scale.add_mark (4000, Gtk.PositionType.BOTTOM, _("Never"));
 		scale.hexpand = true;
+		scale.width_request = 480;
 		grid.attach (scale, 1, 0, 1, 4);
 		
 		dval = (double) settings.get_int ("sleep-inactive-"+type+"-timeout");
