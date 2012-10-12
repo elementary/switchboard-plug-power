@@ -175,8 +175,8 @@ public class PowerPlug.PowerPlug : Pantheon.Switchboard.Plug {
 		var plug_grid = create_notebook_pages ("ac");
 		var battery_grid = create_notebook_pages ("battery");
 		
-		staticnotebook.append_page (plug_grid, new Gtk.Label(_("Plug in")));
-		staticnotebook.append_page (battery_grid, new Gtk.Label(_("Battery")));
+		staticnotebook.append_page (plug_grid, new Gtk.Label(_("Plugged In")));
+		staticnotebook.append_page (battery_grid, new Gtk.Label(_("Battery Power")));
 		
 		// Power button row
 		var power_button_label = new Gtk.Label (_("When the power button is pressed:"));
