@@ -28,55 +28,55 @@ public class PowerPlug.PowerPlug : Pantheon.Switchboard.Plug {
 		liststore_sleep = new Gtk.ListStore (2, typeof (string), typeof (int));
 		
 		liststore_sleep.append (out iter);
-		liststore_sleep.set (iter, 0, "Suspend", 1, 1);
+		liststore_sleep.set (iter, 0, _("Suspend"), 1, 1);
 		liststore_sleep.append (out iter);
-		liststore_sleep.set (iter, 0, "Hibernate", 1, 3);
+		liststore_sleep.set (iter, 0, _("Hibernate"), 1, 3);
 		
 		/*ListStore Power*/
 		liststore_power = new Gtk.ListStore (2, typeof (string), typeof (int));
 		
 		liststore_power.append (out iter);
-		liststore_power.set (iter, 0, "Suspend", 1, 1);
+		liststore_power.set (iter, 0, _("Suspend"), 1, 1);
 		liststore_power.append (out iter);
-		liststore_power.set (iter, 0, "Hibernate", 1, 3);
+		liststore_power.set (iter, 0, _("Hibernate"), 1, 3);
 		liststore_power.append (out iter);
-		liststore_power.set (iter, 0, "Do nothing", 1, 5);
+		liststore_power.set (iter, 0, _("Do nothing"), 1, 5);
 		liststore_power.append (out iter);
-		liststore_power.set (iter, 0, "Ask me", 1, 4);
+		liststore_power.set (iter, 0, _("Ask me"), 1, 4);
 		liststore_power.append (out iter);
-		liststore_power.set (iter, 0, "Shutdown", 1, 2);
+		liststore_power.set (iter, 0, _("Shutdown"), 1, 2);
 		
 		/*ListStore Critical*/
 		liststore_critical = new Gtk.ListStore (2, typeof (string), typeof (int));
 		
 		liststore_critical.append (out iter);
-		liststore_critical.set (iter, 0, "Hibernate", 1, 3);
+		liststore_critical.set (iter, 0, _("Hibernate"), 1, 3);
 		liststore_critical.append (out iter);
-		liststore_critical.set (iter, 0, "Shutdown", 1, 2);
+		liststore_critical.set (iter, 0, _("Shutdown"), 1, 2);
 		
 		/*ListStore Time*/
 		liststore_time = new Gtk.ListStore (2, typeof (string), typeof (int));
 		
 		liststore_time.append (out iter);
-		liststore_time.set (iter, 0, "5 minutes", 1, 300);
+		liststore_time.set (iter, 0, _("5 minutes"), 1, 300);
 		liststore_time.append (out iter);
-		liststore_time.set (iter, 0, "10 minutes", 1, 500);
+		liststore_time.set (iter, 0, _("10 minutes"), 1, 500);
 		liststore_time.append (out iter);
-		liststore_time.set (iter, 0, "30 minutes", 1, 1800);
+		liststore_time.set (iter, 0, _("30 minutes"), 1, 1800);
 		liststore_time.append (out iter);
-		liststore_time.set (iter, 0, "1 hour", 1, 3600);
+		liststore_time.set (iter, 0, _("1 hour"), 1, 3600);
 		liststore_time.append (out iter);
-		liststore_time.set (iter, 0, "Don't suspend", 1, 0);
+		liststore_time.set (iter, 0, _("Don't suspend"), 1, 0);
 		
 		/*ListStore Lid closed*/
 		liststore_lid = new Gtk.ListStore (2, typeof (string), typeof (int));
 		
 		liststore_lid.append (out iter);
-		liststore_lid.set (iter, 0, "Suspend", 1, 1);
+		liststore_lid.set (iter, 0, _("Suspend"), 1, 1);
 		liststore_lid.append (out iter);
-		liststore_lid.set (iter, 0, "Hibernate", 1, 3);
+		liststore_lid.set (iter, 0, _("Hibernate"), 1, 3);
 		liststore_lid.append (out iter);
-		liststore_lid.set (iter, 0, "Do nothing", 1, 0);
+		liststore_lid.set (iter, 0, _("Do nothing"), 1, 0);
 		
 		/***********************/
 		
@@ -313,7 +313,7 @@ public static int main (string[] args) {
 
 	Gtk.init (ref args);
 	var plug = new PowerPlug.PowerPlug ();
-	plug.register ("Power");
+	plug.register (_("Power"));
 	plug.show_all ();
 	Gtk.main ();
 	return 0;

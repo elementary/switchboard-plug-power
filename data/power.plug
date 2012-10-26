@@ -3,4 +3,4 @@ exec=power
 icon=preferences-system-power
 title=Power
 category=hardware
-
+X-GNOME-Gettext-Domain=power-plug
