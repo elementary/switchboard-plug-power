@@ -7,16 +7,113 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-11 21:29+0200\n"
-"PO-Revision-Date: 2012-04-06 16:04+0000\n"
+"POT-Creation-Date: 2012-10-26 19:59+0200\n"
+"PO-Revision-Date: 2012-10-27 02:16+0000\n"
 "Last-Translator: Çağatay Çöl <cagataycol@post.com>\n"
 "Language-Team: Turkish <tr@li.org>\n"
-"Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-04-07 05:06+0000\n"
-"X-Generator: Launchpad (build 15060)\n"
+"X-Launchpad-Export-Date: 2012-10-27 05:28+0000\n"
+"X-Generator: Launchpad (build 16194)\n"
+"Language: tr\n"
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:31
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:39
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:75
+msgid "Suspend"
+msgstr "Askıya Al"
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:33
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:41
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:53
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:77
+msgid "Hibernate"
+msgstr "Uykuya Al"
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:43
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:79
+msgid "Do nothing"
+msgstr "Hiçbir şey yapma"
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:45
+msgid "Ask me"
+msgstr "Bana sor"
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:47
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:55
+msgid "Shutdown"
+msgstr "Kapat"
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:61
+msgid "5 minutes"
+msgstr "5 dakika"
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:63
+msgid "10 minutes"
+msgstr "10 dakika"
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:65
+msgid "30 minutes"
+msgstr "30 dakika"
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:67
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:240
+msgid "1 hour"
+msgstr "1 saat"
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:69
+msgid "Don't suspend"
+msgstr "Askıya alma"
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:178
+msgid "Plugged In"
+msgstr "Fişe Takılı"
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:179
+msgid "Battery Power"
+msgstr "Pil Gücü"
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:182
+msgid "When the power button is pressed:"
+msgstr "Güç düğmesine basıldığında:"
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:196
+msgid "When the sleep button is pressed:"
+msgstr "Uyku düğmesine basıldığında:"
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:232
+msgid "Put the computer to sleep when inactive:"
+msgstr "Bilgisayar kullanılmadığında uyku moduna geç:"
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:237
+msgid "5 min"
+msgstr "5 dak"
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:238
+msgid "10 min"
+msgstr "10 dak"
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:239
+msgid "30 min"
+msgstr "30 dak"
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:241
+msgid "Never"
+msgstr "Hiçbir Zaman"
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:263
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:277
+msgid "When the lid is closed:"
+msgstr "Dizüstü ekranı kapatıldığında:"
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:293
+msgid "When the power is critically low:"
+msgstr "Güç kritik seviyede düşük olduğunda:"
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:316
+msgid "Power"
+msgstr "Güç"
 
 #~ msgid "%H:%M"
 #~ msgstr "%H:%M"
@@ -99,10 +196,6 @@ msgstr ""
 #~ msgstr ""
 #~ "Etkinlikler için bir tarih seçtiğinizde, gelecek etkinlikleriniz burada "
 #~ "gösterilecek."
-
-#, fuzzy
-#~ msgid "all day"
-#~ msgstr "Tüm gün:"
 
 #~ msgid "all the day"
 #~ msgstr "bütün gün"

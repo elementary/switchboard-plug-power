@@ -7,16 +7,113 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-11 21:29+0200\n"
-"PO-Revision-Date: 2012-03-18 00:22+0000\n"
-"Last-Translator: Niels Avonds <Unknown>\n"
+"POT-Creation-Date: 2012-10-26 19:59+0200\n"
+"PO-Revision-Date: 2012-10-27 02:17+0000\n"
+"Last-Translator: Corentin Noël <tintou@mailoo.org>\n"
 "Language-Team: Italian <it@li.org>\n"
-"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-03-19 04:56+0000\n"
-"X-Generator: Launchpad (build 14969)\n"
+"X-Launchpad-Export-Date: 2012-10-27 05:28+0000\n"
+"X-Generator: Launchpad (build 16194)\n"
+"Language: it\n"
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:31
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:39
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:75
+msgid "Suspend"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:33
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:41
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:53
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:77
+msgid "Hibernate"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:43
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:79
+msgid "Do nothing"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:45
+msgid "Ask me"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:47
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:55
+msgid "Shutdown"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:61
+msgid "5 minutes"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:63
+msgid "10 minutes"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:65
+msgid "30 minutes"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:67
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:240
+msgid "1 hour"
+msgstr "1 ora"
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:69
+msgid "Don't suspend"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:178
+msgid "Plugged In"
+msgstr "Collegato alla rete"
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:179
+msgid "Battery Power"
+msgstr "A batteria"
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:182
+msgid "When the power button is pressed:"
+msgstr "Quando il pulsante di accensione viene premuto:"
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:196
+msgid "When the sleep button is pressed:"
+msgstr "Quando il pulsante di sospensione viene premuto:"
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:232
+msgid "Put the computer to sleep when inactive:"
+msgstr "Sospendi il computer quando inattivo per:"
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:237
+msgid "5 min"
+msgstr "5 min"
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:238
+msgid "10 min"
+msgstr "10 min"
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:239
+msgid "30 min"
+msgstr "30 min"
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:241
+msgid "Never"
+msgstr "Mai"
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:263
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:277
+msgid "When the lid is closed:"
+msgstr "Quando il coperchio viene chiuso:"
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:293
+msgid "When the power is critically low:"
+msgstr "Quando la carica è quasi esaurita:"
+
+#: /home/noelco/switchboard-plug-power/po/../src//power.vala:316
+msgid "Power"
+msgstr ""
 
 #~ msgid ""
 #~ "Your upcoming events will be displayed here when you select a date with "
