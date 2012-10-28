@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-10-26 19:59+0200\n"
-"PO-Revision-Date: 2012-10-27 02:16+0000\n"
+"PO-Revision-Date: 2012-10-27 08:42+0000\n"
 "Last-Translator: Corentin Noël <tintou@mailoo.org>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-10-27 05:28+0000\n"
+"X-Launchpad-Export-Date: 2012-10-28 05:03+0000\n"
 "X-Generator: Launchpad (build 16194)\n"
 "Language: fr\n"
 
@@ -68,23 +68,23 @@ msgstr "Ne pas mettre en veille"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:178
 msgid "Plugged In"
-msgstr "Branché"
+msgstr "Sous secteur"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:179
 msgid "Battery Power"
-msgstr "Sous Batterie"
+msgstr "Sous batterie"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:182
 msgid "When the power button is pressed:"
-msgstr "Quand le bouton de mise en route est appuyé"
+msgstr "Quand le boutton d'alimentation est appuyé :"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:196
 msgid "When the sleep button is pressed:"
-msgstr "Quand le bouton de mise en veille est appuyé"
+msgstr "Quand le boutton de mise en veille est appuyé :"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:232
 msgid "Put the computer to sleep when inactive:"
-msgstr "Mettre l’ordinateur en veille quand inactif :"
+msgstr "Mettre l'ordinateur en veille quand inactif depuis :"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:237
 msgid "5 min"
@@ -114,30 +114,3 @@ msgstr "Quand la charge est à un niveau critique :"
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:316
 msgid "Power"
 msgstr "Alimentation"
-
-#~ msgid "Web Browser:"
-#~ msgstr "Navigateur :"
-
-#~ msgid "Email Client:"
-#~ msgstr "Messagerie :"
-
-#~ msgid "Calendar:"
-#~ msgstr "Calendrier :"
-
-#~ msgid "Video Player:"
-#~ msgstr "Lecteur vidéo :"
-
-#~ msgid "Music Player:"
-#~ msgstr "Lecteur audio :"
-
-#~ msgid "Image Viewer:"
-#~ msgstr "Visionneur d'images :"
-
-#~ msgid "Text Editor:"
-#~ msgstr "Éditeur de texte :"
-
-#~ msgid "File Browser:"
-#~ msgstr "Explorateur de fichiers :"
-
-#~ msgid "Defaults"
-#~ msgstr "Applications par défaut"
