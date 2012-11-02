@@ -8,54 +8,54 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-10-26 19:59+0200\n"
-"PO-Revision-Date: 2012-10-27 02:17+0000\n"
+"PO-Revision-Date: 2012-11-01 12:15+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-10-28 05:03+0000\n"
-"X-Generator: Launchpad (build 16194)\n"
+"X-Launchpad-Export-Date: 2012-11-02 05:35+0000\n"
+"X-Generator: Launchpad (build 16218)\n"
 "Language: \n"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:31
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:39
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:75
 msgid "Suspend"
-msgstr ""
+msgstr "暫停"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:33
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:41
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:53
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:77
 msgid "Hibernate"
-msgstr ""
+msgstr "休眠"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:43
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:79
 msgid "Do nothing"
-msgstr ""
+msgstr "什麼都不做"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:45
 msgid "Ask me"
-msgstr ""
+msgstr "詢問我"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:47
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:55
 msgid "Shutdown"
-msgstr ""
+msgstr "關機"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:61
 msgid "5 minutes"
-msgstr ""
+msgstr "5 分鐘"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:63
 msgid "10 minutes"
-msgstr ""
+msgstr "10 分鐘"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:65
 msgid "30 minutes"
-msgstr ""
+msgstr "30 分鐘"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:67
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:240
@@ -64,7 +64,7 @@ msgstr "1 小時"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:69
 msgid "Don't suspend"
-msgstr ""
+msgstr "不要暫停"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:178
 msgid "Plugged In"
@@ -113,4 +113,4 @@ msgstr "當電量極低時："
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:316
 msgid "Power"
-msgstr ""
+msgstr "電源"
