@@ -8,27 +8,31 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-10-26 19:59+0200\n"
-"PO-Revision-Date: 2012-11-14 21:01+0000\n"
+"PO-Revision-Date: 2012-11-15 07:37+0000\n"
 "Last-Translator: Kristjan Vool <Unknown>\n"
 "Language-Team: Estonian <et@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-11-15 05:18+0000\n"
-"X-Generator: Launchpad (build 16265)\n"
+"X-Launchpad-Export-Date: 2012-11-16 05:01+0000\n"
+"X-Generator: Launchpad (build 16272)\n"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:31
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:39
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:75
 msgid "Suspend"
-msgstr "Seiska"
+msgstr ""
+"Puhkerežiim (Andmed kirjutatakse mällu, arvuti käivitamine võtab "
+"minimaalselt aega)"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:33
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:41
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:53
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:77
 msgid "Hibernate"
-msgstr "Talveunne"
+msgstr ""
+"Unerežiim (Andmed kirjutatakse kõvakettale, arvuti käivitamine võtab  natuke "
+"aega)"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:43
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:79
@@ -42,7 +46,7 @@ msgstr "Küsitakse mida teha"
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:47
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:55
 msgid "Shutdown"
-msgstr "Lülita välja"
+msgstr "Lülitatakse välja"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:61
 msgid "5 minutes"
@@ -67,7 +71,7 @@ msgstr "Ei seisata"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:178
 msgid "Plugged In"
-msgstr "Elektrivõrku ühendatud"
+msgstr "Aku laadimisel"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:179
 msgid "Battery Power"
@@ -79,7 +83,7 @@ msgstr "Toitenupu vajutamisel:"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:196
 msgid "When the sleep button is pressed:"
-msgstr "Magamisnupu vajutamisel:"
+msgstr "Puhkenupu vajutamisel:"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:232
 msgid "Put the computer to sleep when inactive:"
@@ -99,7 +103,7 @@ msgstr "30 min"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:241
 msgid "Never"
-msgstr "Mitte kunagi"
+msgstr "kunagi"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:263
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:277
