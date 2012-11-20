@@ -8,79 +8,79 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-10-26 19:59+0200\n"
-"PO-Revision-Date: 2012-10-27 02:16+0000\n"
-"Last-Translator: Corentin Noël <tintou@mailoo.org>\n"
+"PO-Revision-Date: 2012-11-19 08:26+0000\n"
+"Last-Translator: Martin Myrvold <Unknown>\n"
 "Language-Team: Norwegian Nynorsk <nn@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-10-28 05:03+0000\n"
-"X-Generator: Launchpad (build 16194)\n"
+"X-Launchpad-Export-Date: 2012-11-20 05:20+0000\n"
+"X-Generator: Launchpad (build 16286)\n"
 "Language: nn\n"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:31
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:39
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:75
 msgid "Suspend"
-msgstr ""
+msgstr "Gå i kvilemodus"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:33
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:41
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:53
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:77
 msgid "Hibernate"
-msgstr ""
+msgstr "Gå i dvalemodus"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:43
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:79
 msgid "Do nothing"
-msgstr ""
+msgstr "Ikkje gjer noko"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:45
 msgid "Ask me"
-msgstr ""
+msgstr "Spør meg"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:47
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:55
 msgid "Shutdown"
-msgstr ""
+msgstr "Slå av"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:61
 msgid "5 minutes"
-msgstr ""
+msgstr "5 minutt"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:63
 msgid "10 minutes"
-msgstr ""
+msgstr "10 minutt"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:65
 msgid "30 minutes"
-msgstr ""
+msgstr "30 minutt"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:67
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:240
 msgid "1 hour"
-msgstr ""
+msgstr "Ein time"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:69
 msgid "Don't suspend"
-msgstr ""
+msgstr "Ikkje gå i dvalemodus"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:178
 msgid "Plugged In"
-msgstr ""
+msgstr "Kopla til"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:179
 msgid "Battery Power"
-msgstr ""
+msgstr "Batteristrøm"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:182
 msgid "When the power button is pressed:"
-msgstr ""
+msgstr "Når ein trykkar på av/på-knappen:"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:196
 msgid "When the sleep button is pressed:"
-msgstr ""
+msgstr "Når ein trykkar på soveknappen:"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:232
 msgid "Put the computer to sleep when inactive:"
