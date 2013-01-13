@@ -8,109 +8,109 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-10-26 19:59+0200\n"
-"PO-Revision-Date: 2012-10-27 02:16+0000\n"
-"Last-Translator: Kirill Ivaha <kirill.ivaha@gmail.com>\n"
+"PO-Revision-Date: 2013-01-12 21:06+0000\n"
+"Last-Translator: Mukusev Vladimir <damon95@yandex.ru>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-10-28 05:03+0000\n"
-"X-Generator: Launchpad (build 16194)\n"
+"X-Launchpad-Export-Date: 2013-01-13 05:10+0000\n"
+"X-Generator: Launchpad (build 16420)\n"
 "Language: ru\n"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:31
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:39
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:75
 msgid "Suspend"
-msgstr ""
+msgstr "Ждущий режим"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:33
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:41
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:53
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:77
 msgid "Hibernate"
-msgstr ""
+msgstr "Спящий режим"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:43
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:79
 msgid "Do nothing"
-msgstr ""
+msgstr "Ничего не делать"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:45
 msgid "Ask me"
-msgstr ""
+msgstr "Спрашивать меня"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:47
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:55
 msgid "Shutdown"
-msgstr ""
+msgstr "Выключение"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:61
 msgid "5 minutes"
-msgstr ""
+msgstr "5 минут"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:63
 msgid "10 minutes"
-msgstr ""
+msgstr "10 минут"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:65
 msgid "30 minutes"
-msgstr ""
+msgstr "30 минут"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:67
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:240
 msgid "1 hour"
-msgstr ""
+msgstr "1 час"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:69
 msgid "Don't suspend"
-msgstr ""
+msgstr "Не переходить в ждущий режим"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:178
 msgid "Plugged In"
-msgstr ""
+msgstr "На зарядке"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:179
 msgid "Battery Power"
-msgstr ""
+msgstr "Заряд батареи"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:182
 msgid "When the power button is pressed:"
-msgstr ""
+msgstr "При нажатии кнопки питания:"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:196
 msgid "When the sleep button is pressed:"
-msgstr ""
+msgstr "При нажатии кнопки сна:"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:232
 msgid "Put the computer to sleep when inactive:"
-msgstr ""
+msgstr "Переводить компьютер в спящий режим, когда он неактивен:"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:237
 msgid "5 min"
-msgstr ""
+msgstr "5 минут"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:238
 msgid "10 min"
-msgstr ""
+msgstr "10 минут"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:239
 msgid "30 min"
-msgstr ""
+msgstr "30 минут"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:241
 msgid "Never"
-msgstr ""
+msgstr "Никогда"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:263
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:277
 msgid "When the lid is closed:"
-msgstr ""
+msgstr "Когда крышка опущена:"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:293
 msgid "When the power is critically low:"
-msgstr ""
+msgstr "Когда питание критически низкое:"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:316
 msgid "Power"
-msgstr ""
+msgstr "Питание"
