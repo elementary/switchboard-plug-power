@@ -9,7 +9,9 @@ namespace Power
 		public Gtk.Label label;
 		private string  key;
 		
+		// this maps combobox indices to gsettings enums
 		private int[] map_to_sett = {1, 2, 3, 4, 5};
+		// and vice-versa
 		private int[] map_to_list = {4, 0, 1, 2, 3, 4};
 		
 		public ComboBox (string label, string key)
@@ -24,15 +26,15 @@ namespace Power
 			liststore = new Gtk.ListStore (1, typeof (string));
 		
 			liststore.append (out iter);
-			liststore.set (iter, 0, _("Suspend"), 1);
+			liststore.set (iter, 0, _("Suspend"));
 			liststore.append (out iter);
-			liststore.set (iter, 0, _("Shutdown"), 1);
+			liststore.set (iter, 0, _("Shutdown"));
 			liststore.append (out iter);
-			liststore.set (iter, 0, _("Hibernate"), 1);
+			liststore.set (iter, 0, _("Hibernate"));
 			liststore.append (out iter);
-			liststore.set (iter, 0, _("Ask me"), 1);
+			liststore.set (iter, 0, _("Ask me"));
 			liststore.append (out iter);
-			liststore.set (iter, 0, _("Do nothing"), 1);
+			liststore.set (iter, 0, _("Do nothing"));
 		
 			model = liststore;
 			
@@ -45,20 +47,12 @@ namespace Power
 			this.changed.connect (update_settings);
 			settings.changed[key].connect (update_combo);
 		}
-		
-		private bool synched () {
-			return active == settings.get_enum (key);
-		}
-		
+
 		private void update_settings () {
-			if (synched ())
-				return;
 			settings.set_enum (key, map_to_sett[active]);
 		}
 	
 		private void update_combo () {
-			if (synched ())
-				return;
 			int val = settings.get_enum (key);
 			active = map_to_list [val];
 		}
@@ -66,8 +60,6 @@ namespace Power
 	
 	public class PowerPlug : Pantheon.Switchboard.Plug
 	{
-		Gtk.TreeIter  iter;
-
 		public PowerPlug ()
 		{
 			settings  = new GLib.Settings ("org.gnome.settings-daemon.plugins.power");
@@ -84,10 +76,6 @@ namespace Power
 	
 		private Gtk.Grid create_notebook_pages (string type) 
 		{
-			double dval;
-	
-			var cell = new Gtk.CellRendererText();
-	
 			var grid = new Gtk.Grid ();
 			grid.margin = 12;
 			grid.column_spacing = grid.row_spacing = 12;
@@ -104,7 +92,7 @@ namespace Power
 			scale.hexpand = true;
 			scale.width_request = 480;
 		
-			dval = (double) settings.get_int ("sleep-inactive-"+type+"-timeout");
+			var dval = (double) settings.get_int ("sleep-inactive-"+type+"-timeout");
 		
 			if (dval == 0)
 				scale.set_value (4000);
@@ -127,20 +115,19 @@ namespace Power
 			grid.attach (lid_closed_box.label, 0, 1, 1, 1);
 			grid.attach (lid_closed_box,       1, 1, 1, 1);
 			
-
-			var critical_box = new ComboBox (_("When the power is critically low:"), "critical-battery-action");
-			grid.attach (critical_box.label, 0, 2, 1, 1);
-			grid.attach (critical_box,       1, 2, 1, 1);
-			
-			if (type == "ac") {
-				critical_box.sensitive = false;
-				critical_box.label.sensitive = false;
+			if (type != "ac") {
+				var critical_box = new ComboBox (_("When the battery power is critically low:"), "critical-battery-action");
+				grid.attach (critical_box.label, 0, 2, 1, 1);
+				grid.attach (critical_box,       1, 2, 1, 1);
 			}
 			
-			grid.attach (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), 0, 3, 2, 1);
+			var separator = new Gtk.Separator (Gtk.Orientation.HORIZONTAL);
+			separator.vexpand = true;
+			separator.valign = Gtk.Align.END;
+			grid.attach (separator, 0, 3, 2, 1);
 			
 			string[] labels = {_("Sleep button:"), _("Suspend button:"), _("Hibernate button:"), _("Power button:")};
-			string[] keys   = {  "button-sleep",    "button-suspend",    "button-hibernate",    "button-power"};
+			string[] keys   = {  "button-sleep",     "button-suspend",     "button-hibernate",     "button-power"};
 
 			for (int i = 0; i < labels.length; i++) {
 				var box = new Power.ComboBox (labels[i], keys[i]);
