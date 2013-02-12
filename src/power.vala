@@ -1,9 +1,9 @@
-namespace Power
-{
+namespace Power {
+
     GLib.Settings settings;
     
-    class ComboBox : Gtk.ComboBox
-    {
+    class ComboBox : Gtk.ComboBox {
+    
         private Gtk.ListStore liststore;
         
         public Gtk.Label label;
@@ -14,8 +14,8 @@ namespace Power
         // and vice-versa
         private int[] map_to_list = {4, 0, 1, 2, 3, 4};
         
-        public ComboBox (string label, string key)
-        {
+        public ComboBox (string label, string key) {
+        
             this.key   = key;
             this.label = new Gtk.Label (label);
             this.label.halign = Gtk.Align.END;
@@ -58,10 +58,10 @@ namespace Power
         }
     }
     
-    public class PowerPlug : Pantheon.Switchboard.Plug
-    {
-        public PowerPlug ()
-        {
+    public class PowerPlug : Pantheon.Switchboard.Plug {
+    
+        public PowerPlug () {
+        
             settings  = new GLib.Settings ("org.gnome.settings-daemon.plugins.power");
 
             var staticnotebook = new Granite.Widgets.StaticNotebook (false);
@@ -74,8 +74,8 @@ namespace Power
             add (staticnotebook);
         }
     
-        private Gtk.Grid create_notebook_pages (string type) 
-        {
+        private Gtk.Grid create_notebook_pages (string type) {
+        
             var grid = new Gtk.Grid ();
             grid.margin = 12;
             grid.column_spacing = grid.row_spacing = 12;
@@ -139,8 +139,8 @@ namespace Power
         }
     }
 
-    public static int main (string[] args)
-    {
+    public static int main (string[] args) {
+    
         Gtk.init (ref args);
         var plug = new Power.PowerPlug ();
         plug.register (_("Power"));
