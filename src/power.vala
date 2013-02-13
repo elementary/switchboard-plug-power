@@ -2,12 +2,10 @@ namespace Power {
 
     GLib.Settings settings;
     
-    class ComboBox : Gtk.ComboBox {
+    class ComboBox : Gtk.ComboBoxText {
     
-        private Gtk.ListStore liststore;
-        
         public Gtk.Label label;
-        private string  key;
+        private string key;
         
         // this maps combobox indices to gsettings enums
         private int[] map_to_sett = {1, 2, 3, 4, 5};
@@ -19,27 +17,13 @@ namespace Power {
             this.key   = key;
             this.label = new Gtk.Label (label);
             this.label.halign = Gtk.Align.END;
-            
-            Gtk.TreeIter iter;
-            var cell = new Gtk.CellRendererText();
-            
-            liststore = new Gtk.ListStore (1, typeof (string));
+
+            this.append_text (_("Suspend"));
+            this.append_text (_("Shutdown"));
+            this.append_text (_("Hibernate"));
+            this.append_text (_("Ask me"));
+            this.append_text (_("Do nothing"));
         
-            liststore.append (out iter);
-            liststore.set (iter, 0, _("Suspend"));
-            liststore.append (out iter);
-            liststore.set (iter, 0, _("Shutdown"));
-            liststore.append (out iter);
-            liststore.set (iter, 0, _("Hibernate"));
-            liststore.append (out iter);
-            liststore.set (iter, 0, _("Ask me"));
-            liststore.append (out iter);
-            liststore.set (iter, 0, _("Do nothing"));
-        
-            model = liststore;
-            
-            this.pack_start (cell, false);
-            this.set_attributes (cell, "text", 0);
             this.hexpand = true;
         
             update_combo ();
@@ -77,11 +61,13 @@ namespace Power {
         private Gtk.Grid create_notebook_pages (string type) {
         
             var grid = new Gtk.Grid ();
-            grid.margin = 12;
-            grid.column_spacing = grid.row_spacing = 12;
+            grid.margin         = 12;
+            grid.column_spacing = 12;
+            grid.row_spacing    = 12;
 
             var scale_label = new Gtk.Label (_("Put the computer to sleep when inactive:"));
-
+            var scale_settings = "sleep-inactive-"+type+"-timeout";
+            
             var scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 4000, 300);
             scale.set_draw_value (false);
             scale.add_mark (300,  Gtk.PositionType.BOTTOM, _("5 min"));
@@ -92,7 +78,7 @@ namespace Power {
             scale.hexpand = true;
             scale.width_request = 480;
         
-            var dval = (double) settings.get_int ("sleep-inactive-"+type+"-timeout");
+            var dval = (double) settings.get_int (scale_settings);
         
             if (dval == 0)
                 scale.set_value (4000);
@@ -100,12 +86,11 @@ namespace Power {
                 scale.set_value (dval);
         
             scale.value_changed.connect (() => {
-                int vale = (int)scale.get_value ();
-                if (vale <= 3600)
-                    settings.set_int ("sleep-inactive-"+type+"-timeout", vale);
-                else if (vale == 4000)
-                    settings.set_int ("sleep-inactive-"+type+"-timeout", 0);
-
+                var val = (int) scale.get_value ();
+                if (val <= 3600)
+                    settings.set_int (scale_settings, val);
+                else if (val == 4000)
+                    settings.set_int (scale_settings, 0);
             });
         
             grid.attach (scale_label, 0, 0, 1, 1);
@@ -127,7 +112,7 @@ namespace Power {
             grid.attach (separator, 0, 3, 2, 1);
             
             string[] labels = {_("Sleep button:"), _("Suspend button:"), _("Hibernate button:"), _("Power button:")};
-            string[] keys   = {  "button-sleep",    "button-suspend",    "button-hibernate",    "button-power"};
+            string[] keys   = {  "button-sleep",     "button-suspend",     "button-hibernate",     "button-power"};
 
             for (int i = 0; i < labels.length; i++) {
                 var box = new Power.ComboBox (labels[i], keys[i]);
