@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-10-26 19:59+0200\n"
-"PO-Revision-Date: 2012-10-27 02:17+0000\n"
-"Last-Translator: Yaron <sh.yaron@gmail.com>\n"
+"PO-Revision-Date: 2013-02-25 20:13+0000\n"
+"Last-Translator: Danny Damsky <dannydamsky99@gmail.com>\n"
 "Language-Team: Hebrew <he@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-10-28 05:03+0000\n"
-"X-Generator: Launchpad (build 16194)\n"
+"X-Launchpad-Export-Date: 2013-02-26 05:23+0000\n"
+"X-Generator: Launchpad (build 16506)\n"
 "Language: he\n"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:31
@@ -29,88 +29,88 @@ msgstr ""
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:53
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:77
 msgid "Hibernate"
-msgstr ""
+msgstr "תרדמת"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:43
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:79
 msgid "Do nothing"
-msgstr ""
+msgstr "אל תעשה דבר"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:45
 msgid "Ask me"
-msgstr ""
+msgstr "שאל אותי"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:47
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:55
 msgid "Shutdown"
-msgstr ""
+msgstr "כיבוי"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:61
 msgid "5 minutes"
-msgstr ""
+msgstr "5 דקות"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:63
 msgid "10 minutes"
-msgstr ""
+msgstr "10 דקות"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:65
 msgid "30 minutes"
-msgstr ""
+msgstr "30 דקות"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:67
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:240
 msgid "1 hour"
-msgstr ""
+msgstr "שעה"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:69
 msgid "Don't suspend"
-msgstr ""
+msgstr "אל תשעה"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:178
 msgid "Plugged In"
-msgstr ""
+msgstr "התחבר"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:179
 msgid "Battery Power"
-msgstr ""
+msgstr "כח סוללה"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:182
 msgid "When the power button is pressed:"
-msgstr ""
+msgstr "כאשר כפתור הכח נלחץ:"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:196
 msgid "When the sleep button is pressed:"
-msgstr ""
+msgstr "כאשר כפתור השינה נלחץ:"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:232
 msgid "Put the computer to sleep when inactive:"
-msgstr ""
+msgstr "הרדם את המחשב כאשר לא פעיל:"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:237
 msgid "5 min"
-msgstr ""
+msgstr "5 דקות"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:238
 msgid "10 min"
-msgstr ""
+msgstr "10 דקות"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:239
 msgid "30 min"
-msgstr ""
+msgstr "30 דקות"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:241
 msgid "Never"
-msgstr ""
+msgstr "אף פעם"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:263
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:277
 msgid "When the lid is closed:"
-msgstr ""
+msgstr "כאשר המכסה סגור:"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:293
 msgid "When the power is critically low:"
-msgstr ""
+msgstr "כאשר הכח נמוך באופן קריטי:"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:316
 msgid "Power"
-msgstr ""
+msgstr "כח"
