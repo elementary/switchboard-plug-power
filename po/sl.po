@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-10-26 19:59+0200\n"
-"PO-Revision-Date: 2012-10-21 17:38+0000\n"
-"Last-Translator: Valentin Hegediš <valentin.hegedis@gmail.com>\n"
+"PO-Revision-Date: 2013-04-06 21:22+0000\n"
+"Last-Translator: MarkoD <Unknown>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-10-27 05:28+0000\n"
-"X-Generator: Launchpad (build 16194)\n"
+"X-Launchpad-Export-Date: 2013-04-07 05:33+0000\n"
+"X-Generator: Launchpad (build 16550)\n"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:31
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:39
@@ -33,16 +33,16 @@ msgstr ""
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:43
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:79
 msgid "Do nothing"
-msgstr ""
+msgstr "Ne stori ničesar"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:45
 msgid "Ask me"
-msgstr ""
+msgstr "Vprašaj me"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:47
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:55
 msgid "Shutdown"
-msgstr ""
+msgstr "Ugasni"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:61
 msgid "5 minutes"
@@ -50,16 +50,16 @@ msgstr ""
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:63
 msgid "10 minutes"
-msgstr ""
+msgstr "10 minut"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:65
 msgid "30 minutes"
-msgstr ""
+msgstr "30 minut"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:67
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:240
 msgid "1 hour"
-msgstr "1 uri"
+msgstr "1 uro"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:69
 msgid "Don't suspend"
@@ -71,7 +71,7 @@ msgstr "Priključeno"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:179
 msgid "Battery Power"
-msgstr "Polnost baterije"
+msgstr "Baterijsko napajanje"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:182
 msgid "When the power button is pressed:"
@@ -112,4 +112,4 @@ msgstr "Ko je raven polnost baterije kritično nizka:"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:316
 msgid "Power"
-msgstr ""
+msgstr "Napajanje"
