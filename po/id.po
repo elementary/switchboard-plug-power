@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-10-26 19:59+0200\n"
-"PO-Revision-Date: 2013-03-13 10:25+0000\n"
+"PO-Revision-Date: 2013-04-07 12:37+0000\n"
 "Last-Translator: Dani Pratomo <Unknown>\n"
 "Language-Team: Indonesian <id@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-03-14 05:23+0000\n"
-"X-Generator: Launchpad (build 16532)\n"
+"X-Launchpad-Export-Date: 2013-04-08 05:43+0000\n"
+"X-Generator: Launchpad (build 16550)\n"
 "Language: id\n"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:31
@@ -72,19 +72,19 @@ msgstr "Tersambung ke Listrik"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:179
 msgid "Battery Power"
-msgstr "Memakai Baterai"
+msgstr "Pakai Baterai"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:182
 msgid "When the power button is pressed:"
-msgstr "Saat tombol 'power' ditekan:"
+msgstr "Saat tombol power ditekan:"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:196
 msgid "When the sleep button is pressed:"
-msgstr "Saat tombol 'sleep' ditekan:"
+msgstr "Saat tombol sleep ditekan:"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:232
 msgid "Put the computer to sleep when inactive:"
-msgstr "Tidurkan komputer ketika tidak aktif selama:"
+msgstr "Tidurkan komputer jika tidak aktif selama:"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:237
 msgid "5 min"
