@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-10-26 19:59+0200\n"
-"PO-Revision-Date: 2012-12-06 13:40+0000\n"
+"PO-Revision-Date: 2013-04-17 15:26+0000\n"
 "Last-Translator: Piotr Sokół <Unknown>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-12-07 05:17+0000\n"
-"X-Generator: Launchpad (build 16341)\n"
+"X-Launchpad-Export-Date: 2013-04-18 05:52+0000\n"
+"X-Generator: Launchpad (build 16567)\n"
 "Language: pl\n"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:31
@@ -34,7 +34,7 @@ msgstr "Zahibernowanie"
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:43
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:79
 msgid "Do nothing"
-msgstr "Brak"
+msgstr "Brak czynności"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:45
 msgid "Ask me"
