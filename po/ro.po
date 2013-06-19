@@ -14,8 +14,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-03-18 05:04+0000\n"
-"X-Generator: Launchpad (build 16532)\n"
+"X-Launchpad-Export-Date: 2013-06-19 05:46+0000\n"
+"X-Generator: Launchpad (build 16673)\n"
 "Language: ro\n"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:31
