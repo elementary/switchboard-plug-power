@@ -1,116 +1,115 @@
-# Serbian translation for maya
-# Copyright (c) 2011 Rosetta Contributors and Canonical Ltd 2011
-# This file is distributed under the same license as the maya package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2011.
+# Serbian Latin translation for switchboard-plug-power
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# This file is distributed under the same license as the switchboard-plug-power package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: maya\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: switchboard-plug-power\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-10-26 19:59+0200\n"
-"PO-Revision-Date: 2013-06-21 09:11+0000\n"
+"PO-Revision-Date: 2013-06-21 09:09+0000\n"
 "Last-Translator: IvanBlago <ivan_blagojevic@mail.com>\n"
-"Language-Team: Serbian <sr@li.org>\n"
+"Language-Team: Serbian Latin <sr@latin@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2013-06-22 06:01+0000\n"
 "X-Generator: Launchpad (build 16677)\n"
-"Language: sr\n"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:31
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:39
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:75
 msgid "Suspend"
-msgstr "Суспендуј"
+msgstr "Suspenduj"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:33
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:41
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:53
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:77
 msgid "Hibernate"
-msgstr "Примени хибернацију"
+msgstr "Primeni hibernaciju"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:43
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:79
 msgid "Do nothing"
-msgstr "Не ради ништа"
+msgstr "Ne radi ništa"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:45
 msgid "Ask me"
-msgstr "Питај ме"
+msgstr "Pitaj me"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:47
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:55
 msgid "Shutdown"
-msgstr "Искључи"
+msgstr "Isključi"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:61
 msgid "5 minutes"
-msgstr "5 минута"
+msgstr "5 minuta"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:63
 msgid "10 minutes"
-msgstr "10 минута"
+msgstr "10 minuta"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:65
 msgid "30 minutes"
-msgstr "30 минута"
+msgstr "30 minuta"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:67
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:240
 msgid "1 hour"
-msgstr "1 сат"
+msgstr "1 sat"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:69
 msgid "Don't suspend"
-msgstr "Немој да суспендујеш"
+msgstr "Nemoj da suspenduješ"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:178
 msgid "Plugged In"
-msgstr "Прикопчан"
+msgstr "Prikopčan"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:179
 msgid "Battery Power"
-msgstr "Снага  батерије"
+msgstr "Snaga baterije"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:182
 msgid "When the power button is pressed:"
-msgstr "Када је дугме за укључивање притиснуто:"
+msgstr "Kada je dugme za uključivanje pritisnuto:"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:196
 msgid "When the sleep button is pressed:"
-msgstr "Када је дугме за спавање притиснуто:"
+msgstr "Kada je dugme za spavanje pritisnuto:"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:232
 msgid "Put the computer to sleep when inactive:"
-msgstr "Пошаљи рачунар на спавање када је неактиван:"
+msgstr "Pošalji računar na spavanje kada je neaktivan:"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:237
 msgid "5 min"
-msgstr "5 мин."
+msgstr "5 min."
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:238
 msgid "10 min"
-msgstr "10 мин."
+msgstr "10 min"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:239
 msgid "30 min"
-msgstr "30 мин."
+msgstr "30 min"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:241
 msgid "Never"
-msgstr "Никад"
+msgstr "Nikada"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:263
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:277
 msgid "When the lid is closed:"
-msgstr "Када је поклопац затворен:"
+msgstr "Kada je poklopac zatvoren:"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:293
 msgid "When the power is critically low:"
-msgstr "Када је снага критично ниска:"
+msgstr "Kada je snaga kritično niska:"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:316
 msgid "Power"
-msgstr "Снага"
+msgstr "Snaga"
