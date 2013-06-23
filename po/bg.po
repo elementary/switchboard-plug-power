@@ -8,54 +8,54 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-10-26 19:59+0200\n"
-"PO-Revision-Date: 2012-10-27 02:17+0000\n"
-"Last-Translator: Corentin Noël <tintou@mailoo.org>\n"
+"PO-Revision-Date: 2013-06-22 17:37+0000\n"
+"Last-Translator: Veselin Trakiyski <Unknown>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-06-19 05:46+0000\n"
-"X-Generator: Launchpad (build 16673)\n"
+"X-Launchpad-Export-Date: 2013-06-23 05:25+0000\n"
+"X-Generator: Launchpad (build 16677)\n"
 "Language: bg\n"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:31
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:39
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:75
 msgid "Suspend"
-msgstr ""
+msgstr "Приспиване"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:33
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:41
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:53
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:77
 msgid "Hibernate"
-msgstr ""
+msgstr "Дълбоко приспиване"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:43
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:79
 msgid "Do nothing"
-msgstr ""
+msgstr "Не прави нищо"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:45
 msgid "Ask me"
-msgstr ""
+msgstr "Попитай ме"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:47
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:55
 msgid "Shutdown"
-msgstr ""
+msgstr "Изключване"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:61
 msgid "5 minutes"
-msgstr ""
+msgstr "5 минути"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:63
 msgid "10 minutes"
-msgstr ""
+msgstr "10 минути"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:65
 msgid "30 minutes"
-msgstr ""
+msgstr "30 минути"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:67
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:240
@@ -64,23 +64,23 @@ msgstr "1 час"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:69
 msgid "Don't suspend"
-msgstr ""
+msgstr "Да не се приспива"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:178
 msgid "Plugged In"
-msgstr ""
+msgstr "Зарядно включено"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:179
 msgid "Battery Power"
-msgstr ""
+msgstr "На батерия"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:182
 msgid "When the power button is pressed:"
-msgstr ""
+msgstr "Когато бутона за изключване е натиснат:"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:196
 msgid "When the sleep button is pressed:"
-msgstr ""
+msgstr "Когато бутона за заспиване е натиснат:"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:232
 msgid "Put the computer to sleep when inactive:"
@@ -109,8 +109,8 @@ msgstr "При затваряне на екрана:"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:293
 msgid "When the power is critically low:"
-msgstr ""
+msgstr "При критично нисък заряд:"
 
 #: /home/noelco/switchboard-plug-power/po/../src//power.vala:316
 msgid "Power"
-msgstr ""
+msgstr "Захранване"
