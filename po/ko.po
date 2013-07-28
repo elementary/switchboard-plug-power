@@ -7,109 +7,92 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2012-10-26 19:59+0200\n"
+"POT-Creation-Date: 2013-07-27 12:39-0500\n"
 "PO-Revision-Date: 2013-07-02 06:57+0000\n"
 "Last-Translator: LeeHoseok <neochain@naver.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-07-03 05:45+0000\n"
-"X-Generator: Launchpad (build 16692)\n"
+"X-Launchpad-Export-Date: 2013-07-28 06:32+0000\n"
+"X-Generator: Launchpad (build 16700)\n"
 
-#: /home/noelco/switchboard-plug-power/po/../src//power.vala:31
-#: /home/noelco/switchboard-plug-power/po/../src//power.vala:39
-#: /home/noelco/switchboard-plug-power/po/../src//power.vala:75
+#: /home/codygarver/p/po/../src//power.vala:20
 msgid "Suspend"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-power/po/../src//power.vala:33
-#: /home/noelco/switchboard-plug-power/po/../src//power.vala:41
-#: /home/noelco/switchboard-plug-power/po/../src//power.vala:53
-#: /home/noelco/switchboard-plug-power/po/../src//power.vala:77
-msgid "Hibernate"
-msgstr ""
-
-#: /home/noelco/switchboard-plug-power/po/../src//power.vala:43
-#: /home/noelco/switchboard-plug-power/po/../src//power.vala:79
-msgid "Do nothing"
-msgstr "아무것도 안 함"
-
-#: /home/noelco/switchboard-plug-power/po/../src//power.vala:45
-msgid "Ask me"
-msgstr "물어보기"
-
-#: /home/noelco/switchboard-plug-power/po/../src//power.vala:47
-#: /home/noelco/switchboard-plug-power/po/../src//power.vala:55
+#: /home/codygarver/p/po/../src//power.vala:21
 msgid "Shutdown"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-power/po/../src//power.vala:61
-msgid "5 minutes"
-msgstr "5분"
-
-#: /home/noelco/switchboard-plug-power/po/../src//power.vala:63
-msgid "10 minutes"
-msgstr "10분"
-
-#: /home/noelco/switchboard-plug-power/po/../src//power.vala:65
-msgid "30 minutes"
-msgstr "30분"
-
-#: /home/noelco/switchboard-plug-power/po/../src//power.vala:67
-#: /home/noelco/switchboard-plug-power/po/../src//power.vala:240
-msgid "1 hour"
-msgstr "1시간"
-
-#: /home/noelco/switchboard-plug-power/po/../src//power.vala:69
-msgid "Don't suspend"
+#: /home/codygarver/p/po/../src//power.vala:22
+msgid "Hibernate"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-power/po/../src//power.vala:178
+#: /home/codygarver/p/po/../src//power.vala:23
+msgid "Ask me"
+msgstr "물어보기"
+
+#: /home/codygarver/p/po/../src//power.vala:24
+msgid "Do nothing"
+msgstr "아무것도 안 함"
+
+#: /home/codygarver/p/po/../src//power.vala:53
 msgid "Plugged In"
 msgstr "연결됨"
 
-#: /home/noelco/switchboard-plug-power/po/../src//power.vala:179
+#: /home/codygarver/p/po/../src//power.vala:54
 msgid "Battery Power"
 msgstr "배터리 전원"
 
-#: /home/noelco/switchboard-plug-power/po/../src//power.vala:182
-msgid "When the power button is pressed:"
-msgstr "전원 단추가 눌러졌을 때 동작:"
-
-#: /home/noelco/switchboard-plug-power/po/../src//power.vala:196
-msgid "When the sleep button is pressed:"
-msgstr "절전 단추가 눌러졌을 때 동작:"
-
-#: /home/noelco/switchboard-plug-power/po/../src//power.vala:232
+#: /home/codygarver/p/po/../src//power.vala:66
 msgid "Put the computer to sleep when inactive:"
 msgstr "컴퓨터를 사용하지 않을 때 절전 모드로 돌아갈 시간:"
 
-#: /home/noelco/switchboard-plug-power/po/../src//power.vala:237
+#: /home/codygarver/p/po/../src//power.vala:71
 msgid "5 min"
 msgstr "5 분"
 
-#: /home/noelco/switchboard-plug-power/po/../src//power.vala:238
+#: /home/codygarver/p/po/../src//power.vala:72
 msgid "10 min"
 msgstr "10 분"
 
-#: /home/noelco/switchboard-plug-power/po/../src//power.vala:239
+#: /home/codygarver/p/po/../src//power.vala:73
 msgid "30 min"
 msgstr "30 분"
 
-#: /home/noelco/switchboard-plug-power/po/../src//power.vala:241
+#: /home/codygarver/p/po/../src//power.vala:74
+msgid "1 hour"
+msgstr "1시간"
+
+#: /home/codygarver/p/po/../src//power.vala:75
 msgid "Never"
 msgstr "절전하지 않음"
 
-#: /home/noelco/switchboard-plug-power/po/../src//power.vala:263
-#: /home/noelco/switchboard-plug-power/po/../src//power.vala:277
+#: /home/codygarver/p/po/../src//power.vala:97
 msgid "When the lid is closed:"
 msgstr "화면을 닫았을 때 동작:"
 
-#: /home/noelco/switchboard-plug-power/po/../src//power.vala:293
-msgid "When the power is critically low:"
-msgstr "남은 배터리 용량이 치명적으로 낮을 때 동작 :"
+#: /home/codygarver/p/po/../src//power.vala:102
+msgid "When battery power is critically low:"
+msgstr ""
 
-#: /home/noelco/switchboard-plug-power/po/../src//power.vala:316
+#: /home/codygarver/p/po/../src//power.vala:112
+msgid "Sleep button:"
+msgstr ""
+
+#: /home/codygarver/p/po/../src//power.vala:112
+msgid "Suspend button:"
+msgstr ""
+
+#: /home/codygarver/p/po/../src//power.vala:112
+msgid "Hibernate button:"
+msgstr ""
+
+#: /home/codygarver/p/po/../src//power.vala:112
+msgid "Power button:"
+msgstr ""
+
+#: /home/codygarver/p/po/../src//power.vala:128
 msgid "Power"
 msgstr "전원"
