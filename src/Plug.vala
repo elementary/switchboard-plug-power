@@ -42,7 +42,7 @@ namespace Power {
 		}
 	}
 	
-	public class Power.Plug : Switchboard.Plug {
+	public class Plug : Switchboard.Plug {
 	
 		public Plug () {
 			Object (category: Category.HARDWARE,
@@ -53,15 +53,12 @@ namespace Power {
 
 			settings = new GLib.Settings ("org.gnome.settings-daemon.plugins.power");
 
-			
-			
-			add (staticnotebook);
 		}
 
 		public override Gtk.Widget get_widget () {
 			if (staticnotebook == null) {
-				setup_info ();
-				//setup_ui ();
+				//setup_info ();
+				setup_ui ();
 			}
 			return staticnotebook;
 		}
@@ -91,6 +88,7 @@ namespace Power {
 			staticnotebook.append_page (plug_grid, new Gtk.Label(_("Plugged In")));
 			staticnotebook.append_page (battery_grid, new Gtk.Label(_("Battery Power")));
 			staticnotebook.margin = 12;
+			staticnotebook.show_all ();
 		}
 	
 		private Gtk.Grid create_notebook_pages (string type) {
