@@ -157,10 +157,10 @@ namespace Power {
 			return grid;
 		}
 	}
+}
 
-	public Switchboard.Plug get_plug (Module module) {
-	    debug ("Activating Power plug");
-	    var plug = new Power.Plug ();
-	    return plug;
-	}
+public Switchboard.Plug get_plug (Module module) {
+    debug ("Activating Power plug");
+    var plug = new Power.Plug ();
+    return plug;
 }
