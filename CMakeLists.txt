@@ -1,59 +1,50 @@
-# This is the CMakeLists.txt for power-plug, based on the
-# sample CMakeLists.txt for compiling plug for Switchboard
-# For more information, look at elementary cmake reference: 
-#         http://elementaryos.org/docs/developer-guide/cmake 
+# This a sample CMakeLists.txt for compiling plug for Switchboard
+# http://elementaryos.org/docs/developer-guide/cmake 
 
 cmake_minimum_required (VERSION 2.6)
 cmake_policy (VERSION 2.6)
 
+# Set the Properties of your Plug
+
+# Set the Name of the plug, should be an executable command, lowercase, no spaces 
 set (PLUGNAME "power")
+# Set the Category of the Plug, one of:
+# personal, hardware, network, system
+set (PLUGCATEGORY "hardware")
+# Set the Title to use for the Plug in the Overview and in the Titlebar
+set (PLUGTITLE "Power")
+set (PLUGDESCRIPTION "Power")
+# The symbolic name of the Icon to use for the plug
+set (PLUGICON "preferences-system-power")
 
 project (${PLUGNAME})
 
-set (DATADIR "${CMAKE_INSTALL_PREFIX}/lib/plugs")
-set (PKGDATADIR "${DATADIR}/pantheon/${PLUGNAME}")
+#########################################################
+# Only alter stuff below if you know what you are doing #
+#########################################################
+
+include (GNUInstallDirs)
+set (DATADIR "${CMAKE_INSTALL_FULL_LIBDIR}/switchboard")
+set (PKGDATADIR "${DATADIR}/${PLUGCATEGORY}/pantheon-${PLUGNAME}")
 set (GETTEXT_PACKAGE "${PLUGNAME}-plug")
 
 list (APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 
 # Configure file
-configure_file (${CMAKE_SOURCE_DIR}/config.vala.cmake ${CMAKE_SOURCE_DIR}/src/config.vala)
+configure_file (plug.plugin ${CMAKE_BINARY_DIR}/${PLUGNAME}.plugin)
+install (FILES ${CMAKE_BINARY_DIR}/${PLUGNAME}.plugin DESTINATION ${PKGDATADIR})
+configure_file (${CMAKE_SOURCE_DIR}/config.vala.cmake ${CMAKE_BINARY_DIR}/src/config.vala)
 add_definitions (-DGETTEXT_PACKAGE=\"${GETTEXT_PACKAGE}\")
+
+# Comment this out to enable C compiler warnings
+add_definitions (-w)
 
 # Files
 file (GLOB resources "${CMAKE_CURRENT_SOURCE_DIR}/data/*")
 
-# power-plug
-
-set (PLUG_DEPS "gtk+-3.0;pantheon;granite")
-
-find_package (PkgConfig)
-pkg_check_modules (DEPS REQUIRED ${PLUG_DEPS})
-
-add_definitions (${DEPS_CFLAGS})
-link_libraries (${DEPS_LIBRARIES})
-link_directories (${DEPS_LIBRARY_DIRS})
-
-find_package (Vala REQUIRED)
-include (ValaVersion)
-ensure_vala_version ("0.12.0" MINIMUM)
-
-include (ValaPrecompile)
-vala_precompile (VALA_C
-    src/power.vala
-    #src/BatteryView.vala
-    #src/PlugView.vala
-PACKAGES
-    ${PLUG_DEPS}
-OPTIONS
-
-)
-
 # Traslation stuff
 add_subdirectory (po)
-
-add_executable (${PLUGNAME} ${VALA_C})
-
-# Installation
-install (TARGETS ${PLUGNAME} DESTINATION ${PKGDATADIR})
+# Info-plug
 install (FILES ${resources} DESTINATION ${PKGDATADIR})
+
+add_subdirectory(src)
