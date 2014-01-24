@@ -8,92 +8,92 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-27 12:39-0500\n"
-"PO-Revision-Date: 2012-10-27 02:16+0000\n"
-"Last-Translator: Corentin Noël <tintou@mailoo.org>\n"
+"PO-Revision-Date: 2014-01-23 18:23+0000\n"
+"Last-Translator: Alex Toorchyn <ilex@mail.ua>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-07-28 06:32+0000\n"
-"X-Generator: Launchpad (build 16700)\n"
+"X-Launchpad-Export-Date: 2014-01-24 06:23+0000\n"
+"X-Generator: Launchpad (build 16914)\n"
 "Language: uk\n"
 
 #: /home/codygarver/p/po/../src//power.vala:20
 msgid "Suspend"
-msgstr ""
+msgstr "Призупинити"
 
 #: /home/codygarver/p/po/../src//power.vala:21
 msgid "Shutdown"
-msgstr ""
+msgstr "Вимкнути"
 
 #: /home/codygarver/p/po/../src//power.vala:22
 msgid "Hibernate"
-msgstr ""
+msgstr "Приспати"
 
 #: /home/codygarver/p/po/../src//power.vala:23
 msgid "Ask me"
-msgstr ""
+msgstr "Запитувати"
 
 #: /home/codygarver/p/po/../src//power.vala:24
 msgid "Do nothing"
-msgstr ""
+msgstr "Нічого не робити"
 
 #: /home/codygarver/p/po/../src//power.vala:53
 msgid "Plugged In"
-msgstr ""
+msgstr "Живлення від електромережі"
 
 #: /home/codygarver/p/po/../src//power.vala:54
 msgid "Battery Power"
-msgstr ""
+msgstr "Живлення від акамулятора"
 
 #: /home/codygarver/p/po/../src//power.vala:66
 msgid "Put the computer to sleep when inactive:"
-msgstr ""
+msgstr "Заснути, коли комп'ютер неактивний протягом:"
 
 #: /home/codygarver/p/po/../src//power.vala:71
 msgid "5 min"
-msgstr ""
+msgstr "5 хв"
 
 #: /home/codygarver/p/po/../src//power.vala:72
 msgid "10 min"
-msgstr ""
+msgstr "10 хв"
 
 #: /home/codygarver/p/po/../src//power.vala:73
 msgid "30 min"
-msgstr ""
+msgstr "30 хв"
 
 #: /home/codygarver/p/po/../src//power.vala:74
 msgid "1 hour"
-msgstr ""
+msgstr "1 год"
 
 #: /home/codygarver/p/po/../src//power.vala:75
 msgid "Never"
-msgstr ""
+msgstr "Ніколи"
 
 #: /home/codygarver/p/po/../src//power.vala:97
 msgid "When the lid is closed:"
-msgstr ""
+msgstr "Коли кришка закрита:"
 
 #: /home/codygarver/p/po/../src//power.vala:102
 msgid "When battery power is critically low:"
-msgstr ""
+msgstr "Коли заряд акумулятора критично низький:"
 
 #: /home/codygarver/p/po/../src//power.vala:112
 msgid "Sleep button:"
-msgstr ""
+msgstr "Кнопка сну:"
 
 #: /home/codygarver/p/po/../src//power.vala:112
 msgid "Suspend button:"
-msgstr ""
+msgstr "Кнопка призупинення:"
 
 #: /home/codygarver/p/po/../src//power.vala:112
 msgid "Hibernate button:"
-msgstr ""
+msgstr "Кнопка гібернації:"
 
 #: /home/codygarver/p/po/../src//power.vala:112
 msgid "Power button:"
-msgstr ""
+msgstr "Кнопка живлення:"
 
 #: /home/codygarver/p/po/../src//power.vala:128
 msgid "Power"
-msgstr ""
+msgstr "Живлення"
