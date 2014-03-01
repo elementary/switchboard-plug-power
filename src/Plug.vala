@@ -128,10 +128,6 @@ namespace Power {
 			grid.attach (scale_label, 0, 0, 1, 1);
 			grid.attach (scale, 1, 0, 1, 1);
 		
-			var lid_closed_box = new ComboBox (_("When the lid is closed:"), @"lid-close-$type-action");
-			grid.attach (lid_closed_box.label, 0, 1, 1, 1);
-			grid.attach (lid_closed_box, 1, 1, 1, 1);
-			
 			if (type != "ac") {
 				var critical_box = new ComboBox (_("When battery power is critically low:"), "critical-battery-action");
 				grid.attach (critical_box.label, 0, 2, 1, 1);
