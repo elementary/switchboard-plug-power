@@ -1,7 +1,7 @@
 namespace Power {
 
 	GLib.Settings settings;
-	Granite.Widgets.StaticNotebook staticnotebook;
+	Gtk.Box stack_container;
 	
 	class ComboBox : Gtk.ComboBoxText {
 	
@@ -56,11 +56,11 @@ namespace Power {
 		}
 
 		public override Gtk.Widget get_widget () {
-			if (staticnotebook == null) {
+			if (stack_container == null) {
 				//setup_info ();
 				setup_ui ();
 			}
-			return staticnotebook;
+			return stack_container;
 		}
 
 		public override void shown () {
@@ -81,14 +81,19 @@ namespace Power {
 		}
 
 		void setup_ui () {
-			staticnotebook = new Granite.Widgets.StaticNotebook (false);
+			stack_container = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
 			var plug_grid = create_notebook_pages ("ac");
 			var battery_grid = create_notebook_pages ("battery");
-		
-			staticnotebook.append_page (plug_grid, new Gtk.Label(_("Plugged In")));
-			staticnotebook.append_page (battery_grid, new Gtk.Label(_("Battery Power")));
-			staticnotebook.margin = 12;
-			staticnotebook.show_all ();
+			var stack = new Gtk.Stack ();
+			var stack_switcher = new Gtk.StackSwitcher ();
+			stack_switcher.halign = Gtk.Align.CENTER;
+			stack_switcher.stack = stack;
+			stack.add_titled (plug_grid, "ac", _("Plugged In"));
+			stack.add_titled (battery_grid, "battery", _("Battery Power"));
+			stack_container.pack_start(stack_switcher, false, false, 0);
+			stack_container.pack_start(stack, true, true, 0);
+			stack_container.margin = 12;
+			stack_container.show_all ();
 		}
 	
 		private Gtk.Grid create_notebook_pages (string type) {
