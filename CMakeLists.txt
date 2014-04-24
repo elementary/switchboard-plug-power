@@ -42,9 +42,11 @@ add_definitions (-w)
 # Files
 file (GLOB resources "${CMAKE_CURRENT_SOURCE_DIR}/data/*")
 
+install (FILES "${CMAKE_CURRENT_SOURCE_DIR}/data/pantheon-plug-power.desktop" DESTINATION "${CMAKE_INSTALL_FULL_DATAROOTDIR}/applications")
+
 # Traslation stuff
 add_subdirectory (po)
 # Info-plug
-install (FILES ${resources} DESTINATION ${PKGDATADIR})
+#install (FILES ${resources} DESTINATION ${PKGDATADIR})
 
 add_subdirectory(src)

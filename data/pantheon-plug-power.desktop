@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Power
+Comment=Shows Power Settings…
+Exec=switchboard -o system-pantheon-power
+Icon=preferences-system-power
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=X-PANTHEON-Switchboard-Plugs;
+OnlyShowIn=Pantheon;
+Keywords=Power;Energy;Battery
+X-GNOME-Gettext-Domain=switchboard
