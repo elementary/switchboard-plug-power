@@ -47,6 +47,6 @@ install (FILES "${CMAKE_CURRENT_SOURCE_DIR}/data/pantheon-plug-power.desktop" DE
 # Traslation stuff
 add_subdirectory (po)
 # Info-plug
-install (FILES ${resources} DESTINATION ${PKGDATADIR})
+#install (FILES ${resources} DESTINATION ${PKGDATADIR})
 
 add_subdirectory(src)
