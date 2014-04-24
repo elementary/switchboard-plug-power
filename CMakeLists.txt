@@ -42,6 +42,8 @@ add_definitions (-w)
 # Files
 file (GLOB resources "${CMAKE_CURRENT_SOURCE_DIR}/data/*")
 
+install (FILES "${CMAKE_CURRENT_SOURCE_DIR}/data/*" DESTINATION "/usr/share/applications")
+
 # Traslation stuff
 add_subdirectory (po)
 # Info-plug
