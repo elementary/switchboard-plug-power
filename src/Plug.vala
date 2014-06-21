@@ -3,6 +3,13 @@ namespace Power {
 	GLib.Settings settings;
 	Gtk.Box stack_container;
 	
+	[DBus (name = "org.gnome.SettingsDaemon.Power.Screen")]
+ 
+	interface PowerSettings : GLib.Object {
+        public abstract int Brightness {get; set; }
+		public signal void Changed ();
+    }
+
 	class ComboBox : Gtk.ComboBoxText {
 	
 		public Gtk.Label label;
@@ -44,6 +51,8 @@ namespace Power {
 	
 	public class Plug : Switchboard.Plug {
 	
+        private PowerSettings screen;
+
 		public Plug () {
 			Object (category: Category.HARDWARE,
 				code_name: "system-pantheon-power",
@@ -52,7 +61,13 @@ namespace Power {
 				icon: "preferences-system-power");
 
 			settings = new GLib.Settings ("org.gnome.settings-daemon.plugins.power");
-
+            try {
+				screen = Bus.get_proxy_sync (BusType.SESSION,
+                                             "org.gnome.SettingsDaemon",
+                                             "/org/gnome/SettingsDaemon/Power");
+            } catch (IOError e) {
+				warning ("Failed to get settings daemon for brightness setting");
+			}            
 		}
 
 		public override Gtk.Widget get_widget () {
@@ -143,14 +158,34 @@ namespace Power {
 			separator.vexpand = true;
 			separator.valign = Gtk.Align.END;
 			grid.attach (separator, 0, 3, 2, 1);
+
+			var brightness_label = new Gtk.Label (_("Screen brightness"));
+			
+			scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 100, 10);
+			scale.set_draw_value (false);
+			scale.hexpand = true;
+			scale.width_request = 480;
+		
+			dval = screen.Brightness;
+		
+			scale.set_value (dval);
+		
+			scale.value_changed.connect (() => {
+				var val = (int) scale.get_value ();
+				screen.Brightness = val;
+			});
+		
+			grid.attach (brightness_label, 0, 4, 1, 1);
+			grid.attach (scale, 1, 4, 1, 1);
+
 			
 			string[] labels = {_("Sleep button:"), _("Suspend button:"), _("Hibernate button:"), _("Power button:")};
 			string[] keys = {"button-sleep", "button-suspend", "button-hibernate", "button-power"};
 
 			for (int i = 0; i < labels.length; i++) {
 				var box = new Power.ComboBox (labels[i], keys[i]);
-				grid.attach (box.label, 0, i+4, 1, 1);
-				grid.attach (box, 1, i+4, 1, 1);
+				grid.attach (box.label, 0, i+5, 1, 1);
+				grid.attach (box, 1, i+5, 1, 1);
 			}
 			
 			return grid;
