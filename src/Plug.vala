@@ -51,7 +51,8 @@ namespace Power {
 	
 	public class Plug : Switchboard.Plug {
 	
-        private PowerSettings screen;
+		private PowerSettings screen;
+		private Gtk.SizeGroup label_size;
 
 		public Plug () {
 			Object (category: Category.HARDWARE,
@@ -97,8 +98,11 @@ namespace Power {
 
 		void setup_ui () {
 			stack_container = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+			label_size = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
+
 			var plug_grid = create_notebook_pages ("ac");
 			var battery_grid = create_notebook_pages ("battery");
+			var common_settings = create_common_settings ();
 			var stack = new Gtk.Stack ();
 			var stack_switcher = new Gtk.StackSwitcher ();
 			stack_switcher.halign = Gtk.Align.CENTER;
@@ -107,8 +111,52 @@ namespace Power {
 			stack.add_titled (battery_grid, "battery", _("Battery Power"));
 			stack_container.pack_start(stack_switcher, false, false, 0);
 			stack_container.pack_start(stack, true, true, 0);
+			stack_container.pack_end (common_settings);
 			stack_container.margin = 12;
 			stack_container.show_all ();
+		}
+
+		private Gtk.Grid create_common_settings () {
+			var grid = new Gtk.Grid ();
+			grid.margin = 12;
+			grid.column_spacing = 12;
+			grid.row_spacing = 12;
+
+			var separator = new Gtk.Separator (Gtk.Orientation.HORIZONTAL);
+			separator.vexpand = true;
+			separator.valign = Gtk.Align.END;
+			grid.attach (separator, 0, 0, 2, 1);
+
+			var brightness_label = new Gtk.Label (_("Screen brightness:"));
+			label_size.add_widget (brightness_label);
+			brightness_label.halign = Gtk.Align.END;
+
+			var scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 100, 10);
+			scale.set_draw_value (false);
+			scale.hexpand = true;
+			scale.width_request = 480;
+		
+			scale.set_value (screen.Brightness);
+		
+			scale.value_changed.connect (() => {
+				var val = (int) scale.get_value ();
+				screen.Brightness = val;
+			});
+		
+			grid.attach (brightness_label, 0, 1, 1, 1);
+			grid.attach (scale, 1, 1, 1, 1);
+			
+			string[] labels = {_("Sleep button:"), _("Suspend button:"), _("Hibernate button:"), _("Power button:")};
+			string[] keys = {"button-sleep", "button-suspend", "button-hibernate", "button-power"};
+
+			for (int i = 0; i < labels.length; i++) {
+				var box = new Power.ComboBox (labels[i], keys[i]);
+				grid.attach (box.label, 0, i+3, 1, 1);
+				label_size.add_widget (box.label);
+				grid.attach (box, 1, i+3, 1, 1);
+			}
+			
+			return grid;
 		}
 	
 		private Gtk.Grid create_notebook_pages (string type) {
@@ -118,6 +166,7 @@ namespace Power {
 			grid.row_spacing = 12;
 
 			var scale_label = new Gtk.Label (_("Put the computer to sleep when inactive:"));
+			label_size.add_widget (scale_label);
 			var scale_settings = @"sleep-inactive-$type-timeout";
 			
 			var scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 4000, 300);
@@ -151,41 +200,8 @@ namespace Power {
 			if (type != "ac") {
 				var critical_box = new ComboBox (_("When battery power is critically low:"), "critical-battery-action");
 				grid.attach (critical_box.label, 0, 2, 1, 1);
+				label_size.add_widget (critical_box.label);
 				grid.attach (critical_box, 1, 2, 1, 1);
-			}
-			
-			var separator = new Gtk.Separator (Gtk.Orientation.HORIZONTAL);
-			separator.vexpand = true;
-			separator.valign = Gtk.Align.END;
-			grid.attach (separator, 0, 3, 2, 1);
-
-			var brightness_label = new Gtk.Label (_("Screen brightness"));
-			
-			scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 100, 10);
-			scale.set_draw_value (false);
-			scale.hexpand = true;
-			scale.width_request = 480;
-		
-			dval = screen.Brightness;
-		
-			scale.set_value (dval);
-		
-			scale.value_changed.connect (() => {
-				var val = (int) scale.get_value ();
-				screen.Brightness = val;
-			});
-		
-			grid.attach (brightness_label, 0, 4, 1, 1);
-			grid.attach (scale, 1, 4, 1, 1);
-
-			
-			string[] labels = {_("Sleep button:"), _("Suspend button:"), _("Hibernate button:"), _("Power button:")};
-			string[] keys = {"button-sleep", "button-suspend", "button-hibernate", "button-power"};
-
-			for (int i = 0; i < labels.length; i++) {
-				var box = new Power.ComboBox (labels[i], keys[i]);
-				grid.attach (box.label, 0, i+5, 1, 1);
-				grid.attach (box, 1, i+5, 1, 1);
 			}
 			
 			return grid;
