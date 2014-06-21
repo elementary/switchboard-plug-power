@@ -146,6 +146,15 @@ namespace Power {
 			grid.attach (brightness_label, 0, 1, 1, 1);
 			grid.attach (scale, 1, 1, 1, 1);
 			
+			var dim_label = new Gtk.Label (_("Dim screen when inactive:"));
+			var dim_switch = new Gtk.Switch ();
+			dim_switch.halign = Gtk.Align.END;
+
+			settings.bind ("idle-dim", dim_switch, "active", SettingsBindFlags.DEFAULT);
+
+			grid.attach (dim_label, 0, 2, 1, 1);
+			grid.attach (dim_switch, 1, 2, 1, 1);
+
 			string[] labels = {_("Sleep button:"), _("Suspend button:"), _("Hibernate button:"), _("Power button:")};
 			string[] keys = {"button-sleep", "button-suspend", "button-hibernate", "button-power"};
 
