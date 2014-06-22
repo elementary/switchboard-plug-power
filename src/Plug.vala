@@ -6,8 +6,10 @@ namespace Power {
 	[DBus (name = "org.gnome.SettingsDaemon.Power.Screen")]
  
 	interface PowerSettings : GLib.Object {
-        public abstract int Brightness {get; set; }
-		public signal void Changed ();
+        public abstract uint GetPercentage () throws IOError;
+        public abstract uint SetPercentage (uint percentage) throws IOError;
+        // use the Brightness property after updateing g-s-d to 3.10 or above
+        // public abstract int Brightness {get; set; }
     }
 
 	class ComboBox : Gtk.ComboBoxText {
@@ -135,23 +137,41 @@ namespace Power {
 			scale.set_draw_value (false);
 			scale.hexpand = true;
 			scale.width_request = 480;
-		
-			scale.set_value (screen.Brightness);
-		
-			scale.value_changed.connect (() => {
-				var val = (int) scale.get_value ();
-				screen.Brightness = val;
-			});
-		
-			grid.attach (brightness_label, 0, 1, 1, 1);
-			grid.attach (scale, 1, 1, 1, 1);
-			
+
 			var dim_label = new Gtk.Label (_("Dim screen when inactive:"));
 			var dim_switch = new Gtk.Switch ();
 			dim_switch.halign = Gtk.Align.END;
 
 			settings.bind ("idle-dim", dim_switch, "active", SettingsBindFlags.DEFAULT);
 
+			try {
+			// scale.set_value (screen.Brightness);
+				scale.set_value (screen.GetPercentage ());
+			} catch (Error e) {
+				warning ("Brightness setter not available, hiding brightness settings");
+				brightness_label.visible = false;
+				scale.visible = false;
+				dim_label.visible = false;
+				dim_switch.visible = false;
+				brightness_label.no_show_all = true;
+				scale.no_show_all = true;
+				dim_label.no_show_all = true;
+				dim_switch.no_show_all = true;
+			}
+			scale.value_changed.connect (() => {
+				var val = (int) scale.get_value ();
+				try {
+					// screen.Brightness = val;
+					screen.SetPercentage (val);
+				} catch (IOError ioe) {
+					// ignore, because if we have GetPercentage, we have SetPercentage
+					// otherwise the scale won't be visible to change
+				}
+			});
+		
+			grid.attach (brightness_label, 0, 1, 1, 1);
+			grid.attach (scale, 1, 1, 1, 1);
+			
 			grid.attach (dim_label, 0, 2, 1, 1);
 			grid.attach (dim_switch, 1, 2, 1, 1);
 
