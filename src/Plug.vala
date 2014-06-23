@@ -4,13 +4,13 @@ namespace Power {
 	Gtk.Box stack_container;
 	
 	[DBus (name = "org.gnome.SettingsDaemon.Power.Screen")]
- 
+
 	interface PowerSettings : GLib.Object {
-        public abstract uint GetPercentage () throws IOError;
-        public abstract uint SetPercentage (uint percentage) throws IOError;
-        // use the Brightness property after updateing g-s-d to 3.10 or above
-        // public abstract int Brightness {get; set; }
-    }
+		public abstract uint GetPercentage () throws IOError;
+		public abstract uint SetPercentage (uint percentage) throws IOError;
+		// use the Brightness property after updateing g-s-d to 3.10 or above
+		// public abstract int Brightness {get; set; }
+	}
 
 	class ComboBox : Gtk.ComboBoxText {
 	
@@ -67,11 +67,11 @@ namespace Power {
 			settings = new GLib.Settings ("org.gnome.settings-daemon.plugins.power");
 			try {
 				screen = Bus.get_proxy_sync (BusType.SESSION,
-                                             "org.gnome.SettingsDaemon",
-                                             "/org/gnome/SettingsDaemon/Power");
+											"org.gnome.SettingsDaemon",
+											"/org/gnome/SettingsDaemon/Power");
 			} catch (IOError e) {
 				warning ("Failed to get settings daemon for brightness setting");
-			}            
+			}
 		}
 
 		public override Gtk.Widget get_widget () {
@@ -239,7 +239,7 @@ namespace Power {
 }
 
 public Switchboard.Plug get_plug (Module module) {
-    debug ("Activating Power plug");
-    var plug = new Power.Plug ();
-    return plug;
+	debug ("Activating Power plug");
+	var plug = new Power.Plug ();
+	return plug;
 }
