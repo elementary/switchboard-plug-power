@@ -3,6 +3,15 @@ namespace Power {
 	GLib.Settings settings;
 	Gtk.Box stack_container;
 	
+	[DBus (name = "org.gnome.SettingsDaemon.Power.Screen")]
+
+	interface PowerSettings : GLib.Object {
+		public abstract uint GetPercentage () throws IOError;
+		public abstract uint SetPercentage (uint percentage) throws IOError;
+		// use the Brightness property after updateing g-s-d to 3.10 or above
+		// public abstract int Brightness {get; set; }
+	}
+
 	class ComboBox : Gtk.ComboBoxText {
 	
 		public Gtk.Label label;
@@ -17,6 +26,7 @@ namespace Power {
 			this.key = key;
 			this.label = new Gtk.Label (label);
 			this.label.halign = Gtk.Align.END;
+			this.label.xalign = 1.0f;
 
 			this.append_text (_("Suspend"));
 			this.append_text (_("Shutdown"));
@@ -44,6 +54,9 @@ namespace Power {
 	
 	public class Plug : Switchboard.Plug {
 	
+		private PowerSettings screen;
+		private Gtk.SizeGroup label_size;
+
 		public Plug () {
 			Object (category: Category.HARDWARE,
 				code_name: "system-pantheon-power",
@@ -52,7 +65,13 @@ namespace Power {
 				icon: "preferences-system-power");
 
 			settings = new GLib.Settings ("org.gnome.settings-daemon.plugins.power");
-
+			try {
+				screen = Bus.get_proxy_sync (BusType.SESSION,
+								"org.gnome.SettingsDaemon",
+								"/org/gnome/SettingsDaemon/Power");
+			} catch (IOError e) {
+				warning ("Failed to get settings daemon for brightness setting");
+			}
 		}
 
 		public override Gtk.Widget get_widget () {
@@ -82,8 +101,11 @@ namespace Power {
 
 		void setup_ui () {
 			stack_container = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+			label_size = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
+
 			var plug_grid = create_notebook_pages ("ac");
 			var battery_grid = create_notebook_pages ("battery");
+			var common_settings = create_common_settings ();
 			var stack = new Gtk.Stack ();
 			var stack_switcher = new Gtk.StackSwitcher ();
 			stack_switcher.halign = Gtk.Align.CENTER;
@@ -92,8 +114,77 @@ namespace Power {
 			stack.add_titled (battery_grid, "battery", _("Battery Power"));
 			stack_container.pack_start(stack_switcher, false, false, 0);
 			stack_container.pack_start(stack, true, true, 0);
+			stack_container.pack_end (common_settings);
 			stack_container.margin = 12;
 			stack_container.show_all ();
+		}
+
+		private Gtk.Grid create_common_settings () {
+			var grid = new Gtk.Grid ();
+			grid.margin = 12;
+			grid.column_spacing = 12;
+			grid.row_spacing = 12;
+
+			var separator = new Gtk.Separator (Gtk.Orientation.HORIZONTAL);
+			separator.vexpand = true;
+			separator.valign = Gtk.Align.END;
+			grid.attach (separator, 0, 0, 2, 1);
+
+			var brightness_label = new Gtk.Label (_("Screen brightness:"));
+			brightness_label.xalign = 1.0f;
+			label_size.add_widget (brightness_label);
+			brightness_label.halign = Gtk.Align.END;
+
+			var scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 100, 10);
+			scale.set_draw_value (false);
+			scale.hexpand = true;
+			scale.width_request = 480;
+
+			var dim_label = new Gtk.Label (_("Dim screen when inactive:"));
+			dim_label.xalign = 1.0f;
+			var dim_switch = new Gtk.Switch ();
+			dim_switch.halign = Gtk.Align.START;
+
+			settings.bind ("idle-dim", dim_switch, "active", SettingsBindFlags.DEFAULT);
+
+			try {
+				// scale.set_value (screen.Brightness);
+				scale.set_value (screen.GetPercentage ());
+			} catch (Error e) {
+				warning ("Brightness setter not available, hiding brightness settings");
+				brightness_label.no_show_all = true;
+				scale.no_show_all = true;
+				dim_label.no_show_all = true;
+				dim_switch.no_show_all = true;
+			}
+			scale.value_changed.connect (() => {
+				var val = (int) scale.get_value ();
+				try {
+					// screen.Brightness = val;
+					screen.SetPercentage (val);
+				} catch (IOError ioe) {
+					// ignore, because if we have GetPercentage, we have SetPercentage
+					// otherwise the scale won't be visible to change
+				}
+			});
+		
+			grid.attach (brightness_label, 0, 1, 1, 1);
+			grid.attach (scale, 1, 1, 1, 1);
+			
+			grid.attach (dim_label, 0, 2, 1, 1);
+			grid.attach (dim_switch, 1, 2, 1, 1);
+
+			string[] labels = {_("Sleep button:"), _("Suspend button:"), _("Hibernate button:"), _("Power button:")};
+			string[] keys = {"button-sleep", "button-suspend", "button-hibernate", "button-power"};
+
+			for (int i = 0; i < labels.length; i++) {
+				var box = new Power.ComboBox (labels[i], keys[i]);
+				grid.attach (box.label, 0, i+3, 1, 1);
+				label_size.add_widget (box.label);
+				grid.attach (box, 1, i+3, 1, 1);
+			}
+			
+			return grid;
 		}
 	
 		private Gtk.Grid create_notebook_pages (string type) {
@@ -103,6 +194,8 @@ namespace Power {
 			grid.row_spacing = 12;
 
 			var scale_label = new Gtk.Label (_("Put the computer to sleep when inactive:"));
+			scale_label.xalign = 1.0f;
+			label_size.add_widget (scale_label);
 			var scale_settings = @"sleep-inactive-$type-timeout";
 			
 			var scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 4000, 300);
@@ -136,21 +229,8 @@ namespace Power {
 			if (type != "ac") {
 				var critical_box = new ComboBox (_("When battery power is critically low:"), "critical-battery-action");
 				grid.attach (critical_box.label, 0, 2, 1, 1);
+				label_size.add_widget (critical_box.label);
 				grid.attach (critical_box, 1, 2, 1, 1);
-			}
-			
-			var separator = new Gtk.Separator (Gtk.Orientation.HORIZONTAL);
-			separator.vexpand = true;
-			separator.valign = Gtk.Align.END;
-			grid.attach (separator, 0, 3, 2, 1);
-			
-			string[] labels = {_("Sleep button:"), _("Suspend button:"), _("Hibernate button:"), _("Power button:")};
-			string[] keys = {"button-sleep", "button-suspend", "button-hibernate", "button-power"};
-
-			for (int i = 0; i < labels.length; i++) {
-				var box = new Power.ComboBox (labels[i], keys[i]);
-				grid.attach (box.label, 0, i+4, 1, 1);
-				grid.attach (box, 1, i+4, 1, 1);
 			}
 			
 			return grid;
@@ -159,7 +239,7 @@ namespace Power {
 }
 
 public Switchboard.Plug get_plug (Module module) {
-    debug ("Activating Power plug");
-    var plug = new Power.Plug ();
-    return plug;
+	debug ("Activating Power plug");
+	var plug = new Power.Plug ();
+	return plug;
 }
