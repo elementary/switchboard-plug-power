@@ -26,6 +26,7 @@ namespace Power {
 			this.key = key;
 			this.label = new Gtk.Label (label);
 			this.label.halign = Gtk.Align.END;
+			this.label.xalign = 1.0f;
 
 			this.append_text (_("Suspend"));
 			this.append_text (_("Shutdown"));
@@ -130,6 +131,7 @@ namespace Power {
 			grid.attach (separator, 0, 0, 2, 1);
 
 			var brightness_label = new Gtk.Label (_("Screen brightness:"));
+			brightness_label.xalign = 1.0f;
 			label_size.add_widget (brightness_label);
 			brightness_label.halign = Gtk.Align.END;
 
@@ -139,8 +141,9 @@ namespace Power {
 			scale.width_request = 480;
 
 			var dim_label = new Gtk.Label (_("Dim screen when inactive:"));
+			dim_label.xalign = 1.0f;
 			var dim_switch = new Gtk.Switch ();
-			dim_switch.halign = Gtk.Align.END;
+			dim_switch.halign = Gtk.Align.START;
 
 			settings.bind ("idle-dim", dim_switch, "active", SettingsBindFlags.DEFAULT);
 
@@ -149,10 +152,6 @@ namespace Power {
 				scale.set_value (screen.GetPercentage ());
 			} catch (Error e) {
 				warning ("Brightness setter not available, hiding brightness settings");
-				brightness_label.visible = false;
-				scale.visible = false;
-				dim_label.visible = false;
-				dim_switch.visible = false;
 				brightness_label.no_show_all = true;
 				scale.no_show_all = true;
 				dim_label.no_show_all = true;
@@ -195,6 +194,7 @@ namespace Power {
 			grid.row_spacing = 12;
 
 			var scale_label = new Gtk.Label (_("Put the computer to sleep when inactive:"));
+			scale_label.xalign = 1.0f;
 			label_size.add_widget (scale_label);
 			var scale_settings = @"sleep-inactive-$type-timeout";
 			
