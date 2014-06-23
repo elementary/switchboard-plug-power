@@ -148,7 +148,7 @@ namespace Power {
 			settings.bind ("idle-dim", dim_switch, "active", SettingsBindFlags.DEFAULT);
 
 			try {
-			// scale.set_value (screen.Brightness);
+				// scale.set_value (screen.Brightness);
 				scale.set_value (screen.GetPercentage ());
 			} catch (Error e) {
 				warning ("Brightness setter not available, hiding brightness settings");
