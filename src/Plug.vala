@@ -67,8 +67,8 @@ namespace Power {
 			settings = new GLib.Settings ("org.gnome.settings-daemon.plugins.power");
 			try {
 				screen = Bus.get_proxy_sync (BusType.SESSION,
-											"org.gnome.SettingsDaemon",
-											"/org/gnome/SettingsDaemon/Power");
+								"org.gnome.SettingsDaemon",
+								"/org/gnome/SettingsDaemon/Power");
 			} catch (IOError e) {
 				warning ("Failed to get settings daemon for brightness setting");
 			}
