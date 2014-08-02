@@ -7,92 +7,100 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-07-27 12:39-0500\n"
+"POT-Creation-Date: 2014-08-01 14:42-0500\n"
 "PO-Revision-Date: 2013-08-03 06:30+0000\n"
 "Last-Translator: Kyu-Seok Yang <lklk9110@gmail.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-06-02 06:07+0000\n"
-"X-Generator: Launchpad (build 17031)\n"
+"X-Launchpad-Export-Date: 2014-08-02 06:31+0000\n"
+"X-Generator: Launchpad (build 17147)\n"
 
-#: /home/codygarver/p/po/../src//power.vala:20
+#: ../src//Plug.vala:31
 msgid "Suspend"
 msgstr "절전"
 
-#: /home/codygarver/p/po/../src//power.vala:21
+#: ../src//Plug.vala:32
 msgid "Shutdown"
 msgstr "시스템 종료"
 
-#: /home/codygarver/p/po/../src//power.vala:22
+#: ../src//Plug.vala:33
 msgid "Hibernate"
 msgstr "최대 절전 모드"
 
-#: /home/codygarver/p/po/../src//power.vala:23
+#: ../src//Plug.vala:34
 msgid "Ask me"
 msgstr "물어보기"
 
-#: /home/codygarver/p/po/../src//power.vala:24
+#: ../src//Plug.vala:35
 msgid "Do nothing"
 msgstr "아무것도 안 함"
 
-#: /home/codygarver/p/po/../src//power.vala:53
+#: ../src//Plug.vala:63
+msgid "Power"
+msgstr "전원"
+
+#: ../src//Plug.vala:64
+msgid "Shows Power Settings…"
+msgstr ""
+
+#: ../src//Plug.vala:113
 msgid "Plugged In"
 msgstr "연결됨"
 
-#: /home/codygarver/p/po/../src//power.vala:54
+#: ../src//Plug.vala:114
 msgid "Battery Power"
 msgstr "배터리 전원"
 
-#: /home/codygarver/p/po/../src//power.vala:66
-msgid "Put the computer to sleep when inactive:"
-msgstr "컴퓨터를 사용하지 않을 때 절전 모드로 돌아갈 시간:"
+#: ../src//Plug.vala:133
+msgid "Screen brightness:"
+msgstr ""
 
-#: /home/codygarver/p/po/../src//power.vala:71
-msgid "5 min"
-msgstr "5 분"
+#: ../src//Plug.vala:143
+msgid "Dim screen when inactive:"
+msgstr ""
 
-#: /home/codygarver/p/po/../src//power.vala:72
-msgid "10 min"
-msgstr "10 분"
-
-#: /home/codygarver/p/po/../src//power.vala:73
-msgid "30 min"
-msgstr "30 분"
-
-#: /home/codygarver/p/po/../src//power.vala:74
-msgid "1 hour"
-msgstr "1시간"
-
-#: /home/codygarver/p/po/../src//power.vala:75
-msgid "Never"
-msgstr "절전하지 않음"
-
-#: /home/codygarver/p/po/../src//power.vala:97
-msgid "When the lid is closed:"
-msgstr "화면을 닫았을 때 동작:"
-
-#: /home/codygarver/p/po/../src//power.vala:102
-msgid "When battery power is critically low:"
-msgstr "배터리 전원이 심각하게 낮을 때:"
-
-#: /home/codygarver/p/po/../src//power.vala:112
+#: ../src//Plug.vala:177
 msgid "Sleep button:"
 msgstr "대기 버튼:"
 
-#: /home/codygarver/p/po/../src//power.vala:112
+#: ../src//Plug.vala:177
 msgid "Suspend button:"
 msgstr "절전 버튼:"
 
-#: /home/codygarver/p/po/../src//power.vala:112
+#: ../src//Plug.vala:177
 msgid "Hibernate button:"
 msgstr "최대 절전 모드 버튼:"
 
-#: /home/codygarver/p/po/../src//power.vala:112
+#: ../src//Plug.vala:177
 msgid "Power button:"
 msgstr "전원 버튼:"
 
-#: /home/codygarver/p/po/../src//power.vala:128
-msgid "Power"
-msgstr "전원"
+#: ../src//Plug.vala:196
+msgid "Put the computer to sleep when inactive:"
+msgstr "컴퓨터를 사용하지 않을 때 절전 모드로 돌아갈 시간:"
+
+#: ../src//Plug.vala:203
+msgid "5 min"
+msgstr "5 분"
+
+#: ../src//Plug.vala:204
+msgid "10 min"
+msgstr "10 분"
+
+#: ../src//Plug.vala:205
+msgid "30 min"
+msgstr "30 분"
+
+#: ../src//Plug.vala:206
+msgid "1 hour"
+msgstr "1시간"
+
+#: ../src//Plug.vala:207
+msgid "Never"
+msgstr "절전하지 않음"
+
+#: ../src//Plug.vala:230
+msgid "When battery power is critically low:"
+msgstr "배터리 전원이 심각하게 낮을 때:"

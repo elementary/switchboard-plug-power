@@ -7,93 +7,101 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-27 12:39-0500\n"
+"POT-Creation-Date: 2014-08-01 14:42-0500\n"
 "PO-Revision-Date: 2014-04-19 00:42+0000\n"
 "Last-Translator: ITPROJECTS <Unknown>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-06-02 06:06+0000\n"
-"X-Generator: Launchpad (build 17031)\n"
+"X-Launchpad-Export-Date: 2014-08-02 06:31+0000\n"
+"X-Generator: Launchpad (build 17147)\n"
 "Language: bg\n"
 
-#: /home/codygarver/p/po/../src//power.vala:20
+#: ../src//Plug.vala:31
 msgid "Suspend"
 msgstr "Приспиване"
 
-#: /home/codygarver/p/po/../src//power.vala:21
+#: ../src//Plug.vala:32
 msgid "Shutdown"
 msgstr "Изключване"
 
-#: /home/codygarver/p/po/../src//power.vala:22
+#: ../src//Plug.vala:33
 msgid "Hibernate"
 msgstr "Дълбоко приспиване"
 
-#: /home/codygarver/p/po/../src//power.vala:23
+#: ../src//Plug.vala:34
 msgid "Ask me"
 msgstr "Попитай ме"
 
-#: /home/codygarver/p/po/../src//power.vala:24
+#: ../src//Plug.vala:35
 msgid "Do nothing"
 msgstr "Не прави нищо"
 
-#: /home/codygarver/p/po/../src//power.vala:53
+#: ../src//Plug.vala:63
+msgid "Power"
+msgstr "Захранване"
+
+#: ../src//Plug.vala:64
+msgid "Shows Power Settings…"
+msgstr ""
+
+#: ../src//Plug.vala:113
 msgid "Plugged In"
 msgstr "Зарядно включено"
 
-#: /home/codygarver/p/po/../src//power.vala:54
+#: ../src//Plug.vala:114
 msgid "Battery Power"
 msgstr "На батерия"
 
-#: /home/codygarver/p/po/../src//power.vala:66
-msgid "Put the computer to sleep when inactive:"
-msgstr "Приспиване на компютъра при неактивност:"
+#: ../src//Plug.vala:133
+msgid "Screen brightness:"
+msgstr ""
 
-#: /home/codygarver/p/po/../src//power.vala:71
-msgid "5 min"
-msgstr "5 мин"
+#: ../src//Plug.vala:143
+msgid "Dim screen when inactive:"
+msgstr ""
 
-#: /home/codygarver/p/po/../src//power.vala:72
-msgid "10 min"
-msgstr "10 мин"
-
-#: /home/codygarver/p/po/../src//power.vala:73
-msgid "30 min"
-msgstr "30 мин"
-
-#: /home/codygarver/p/po/../src//power.vala:74
-msgid "1 hour"
-msgstr "1 час"
-
-#: /home/codygarver/p/po/../src//power.vala:75
-msgid "Never"
-msgstr "Никога"
-
-#: /home/codygarver/p/po/../src//power.vala:97
-msgid "When the lid is closed:"
-msgstr "При затваряне на екрана:"
-
-#: /home/codygarver/p/po/../src//power.vala:102
-msgid "When battery power is critically low:"
-msgstr "Когато мощността на батерията е опасно ниско:"
-
-#: /home/codygarver/p/po/../src//power.vala:112
+#: ../src//Plug.vala:177
 msgid "Sleep button:"
 msgstr "Приспиващ копче:"
 
-#: /home/codygarver/p/po/../src//power.vala:112
+#: ../src//Plug.vala:177
 msgid "Suspend button:"
 msgstr "Доспиващ копче:"
 
-#: /home/codygarver/p/po/../src//power.vala:112
+#: ../src//Plug.vala:177
 msgid "Hibernate button:"
 msgstr "Зазимуващо копче:"
 
-#: /home/codygarver/p/po/../src//power.vala:112
+#: ../src//Plug.vala:177
 msgid "Power button:"
 msgstr "Мощностно копче:"
 
-#: /home/codygarver/p/po/../src//power.vala:128
-msgid "Power"
-msgstr "Захранване"
+#: ../src//Plug.vala:196
+msgid "Put the computer to sleep when inactive:"
+msgstr "Приспиване на компютъра при неактивност:"
+
+#: ../src//Plug.vala:203
+msgid "5 min"
+msgstr "5 мин"
+
+#: ../src//Plug.vala:204
+msgid "10 min"
+msgstr "10 мин"
+
+#: ../src//Plug.vala:205
+msgid "30 min"
+msgstr "30 мин"
+
+#: ../src//Plug.vala:206
+msgid "1 hour"
+msgstr "1 час"
+
+#: ../src//Plug.vala:207
+msgid "Never"
+msgstr "Никога"
+
+#: ../src//Plug.vala:230
+msgid "When battery power is critically low:"
+msgstr "Когато мощността на батерията е опасно ниско:"
