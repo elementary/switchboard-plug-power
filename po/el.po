@@ -8,19 +8,19 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-01 14:42-0500\n"
-"PO-Revision-Date: 2013-10-26 10:08+0000\n"
-"Last-Translator: Filippos Kolyvas <Unknown>\n"
+"PO-Revision-Date: 2014-08-02 19:25+0000\n"
+"Last-Translator: Nikos Raptopoulos <nraptopoulos@gmail.com>\n"
 "Language-Team: Greek <el@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-02 06:31+0000\n"
+"X-Launchpad-Export-Date: 2014-08-03 06:06+0000\n"
 "X-Generator: Launchpad (build 17147)\n"
 "Language: el\n"
 
 #: ../src//Plug.vala:31
 msgid "Suspend"
-msgstr "Αναστολή λειτουργίας"
+msgstr "Aναστολή"
 
 #: ../src//Plug.vala:32
 msgid "Shutdown"
@@ -40,27 +40,27 @@ msgstr "Καμία ενέργεια"
 
 #: ../src//Plug.vala:63
 msgid "Power"
-msgstr "Ισχύς"
+msgstr "Ισχύς"
 
 #: ../src//Plug.vala:64
 msgid "Shows Power Settings…"
-msgstr ""
+msgstr "Εμφανίζει Ρυθμίσεις Ισχύος..."
 
 #: ../src//Plug.vala:113
 msgid "Plugged In"
-msgstr "Σε σύνδεση"
+msgstr "Στην πρίζα"
 
 #: ../src//Plug.vala:114
 msgid "Battery Power"
-msgstr "Ισχύς μπαταρίας"
+msgstr "Ισχύς Μπαταρίας"
 
 #: ../src//Plug.vala:133
 msgid "Screen brightness:"
-msgstr ""
+msgstr "Φωτεινότητα οθόνης:"
 
 #: ../src//Plug.vala:143
 msgid "Dim screen when inactive:"
-msgstr ""
+msgstr "Μείωση φωτεινότητας σε αδράνεια:"
 
 #: ../src//Plug.vala:177
 msgid "Sleep button:"
@@ -68,7 +68,7 @@ msgstr "Κουμπί αναμονής:"
 
 #: ../src//Plug.vala:177
 msgid "Suspend button:"
-msgstr "Κουμπί αναστολής λειτουργίας:"
+msgstr "Κουμπί αναστολής:"
 
 #: ../src//Plug.vala:177
 msgid "Hibernate button:"
@@ -76,7 +76,7 @@ msgstr "Κουμπί αδρανοποίησης:"
 
 #: ../src//Plug.vala:177
 msgid "Power button:"
-msgstr "Κουμπί λειτουργίας:"
+msgstr "Κουμπί τροφοδοσίας:"
 
 #: ../src//Plug.vala:196
 msgid "Put the computer to sleep when inactive:"
@@ -104,4 +104,4 @@ msgstr "Ποτέ"
 
 #: ../src//Plug.vala:230
 msgid "When battery power is critically low:"
-msgstr "Όταν η ισχύς της μπαταρίας είναι χαμηλή:"
+msgstr "Όταν η ισχύς της μπαταρίας είναι πολύ χαμηλή:"
