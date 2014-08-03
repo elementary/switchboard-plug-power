@@ -227,7 +227,7 @@ namespace Power {
 			grid.attach (scale, 1, 0, 1, 1);
 		
 			if (type != "ac") {
-				var critical_box = new ComboBox (_("When battery power is critically low:"), "critical-battery-action");
+				var critical_box = new ComboBox (_("When power is critically low:"), "critical-battery-action");
 				grid.attach (critical_box.label, 0, 2, 1, 1);
 				label_size.add_widget (critical_box.label);
 				grid.attach (critical_box, 1, 2, 1, 1);
