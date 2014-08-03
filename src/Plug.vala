@@ -103,6 +103,10 @@ namespace Power {
 			stack_container = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
 			label_size = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
 
+			var separator = new Gtk.Separator (Gtk.Orientation.HORIZONTAL);
+			separator.vexpand = true;
+			separator.valign = Gtk.Align.START;
+
 			var plug_grid = create_notebook_pages ("ac");
 			var battery_grid = create_notebook_pages ("battery");
 			var common_settings = create_common_settings ();
@@ -112,9 +116,10 @@ namespace Power {
 			stack_switcher.stack = stack;
 			stack.add_titled (plug_grid, "ac", _("Plugged In"));
 			stack.add_titled (battery_grid, "battery", _("Battery Power"));
+			stack_container.pack_start (common_settings);
+			stack_container.pack_start (separator);
 			stack_container.pack_start(stack_switcher, false, false, 0);
 			stack_container.pack_start(stack, true, true, 0);
-			stack_container.pack_end (common_settings);
 			stack_container.margin = 12;
 			stack_container.show_all ();
 		}
@@ -124,11 +129,6 @@ namespace Power {
 			grid.margin = 12;
 			grid.column_spacing = 12;
 			grid.row_spacing = 12;
-
-			var separator = new Gtk.Separator (Gtk.Orientation.HORIZONTAL);
-			separator.vexpand = true;
-			separator.valign = Gtk.Align.END;
-			grid.attach (separator, 0, 0, 2, 1);
 
 			var brightness_label = new Gtk.Label (_("Screen brightness:"));
 			brightness_label.xalign = 1.0f;
