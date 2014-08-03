@@ -115,7 +115,7 @@ namespace Power {
 			stack_switcher.halign = Gtk.Align.CENTER;
 			stack_switcher.stack = stack;
 			stack.add_titled (plug_grid, "ac", _("Plugged In"));
-			stack.add_titled (battery_grid, "battery", _("Battery Power"));
+			stack.add_titled (battery_grid, "battery", _("On Battery"));
 			stack_container.pack_start (common_settings);
 			stack_container.pack_start (separator);
 			stack_container.pack_start(stack_switcher, false, false, 0);
