@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-03 16:56-0500\n"
+"POT-Creation-Date: 2014-08-04 12:00-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -78,7 +78,7 @@ msgid "Power button:"
 msgstr ""
 
 #: ../src//Plug.vala:196
-msgid "Sleep when inactive:"
+msgid "Sleep when inactive after:"
 msgstr ""
 
 #: ../src//Plug.vala:203
