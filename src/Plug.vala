@@ -193,7 +193,7 @@ namespace Power {
 			grid.column_spacing = 12;
 			grid.row_spacing = 12;
 
-			var scale_label = new Gtk.Label (_("Sleep when inactive:"));
+			var scale_label = new Gtk.Label (_("Sleep when inactive after:"));
 			scale_label.xalign = 1.0f;
 			label_size.add_widget (scale_label);
 			var scale_settings = @"sleep-inactive-$type-timeout";
