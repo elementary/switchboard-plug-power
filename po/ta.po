@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-08-01 14:42-0500\n"
+"POT-Creation-Date: 2014-08-03 16:56-0500\n"
 "PO-Revision-Date: 2014-03-23 17:34+0000\n"
 "Last-Translator: SyedKhaleel Jageer <jskcse4@gmail.com>\n"
 "Language-Team: Tamil <ta@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-02 06:31+0000\n"
+"X-Launchpad-Export-Date: 2014-08-04 06:24+0000\n"
 "X-Generator: Launchpad (build 17147)\n"
 
 #: ../src//Plug.vala:31
@@ -45,13 +45,13 @@ msgstr "திறன்"
 msgid "Shows Power Settings…"
 msgstr ""
 
-#: ../src//Plug.vala:113
+#: ../src//Plug.vala:117
 msgid "Plugged In"
 msgstr "பொருத்தப்பட்டுள்ளது"
 
-#: ../src//Plug.vala:114
-msgid "Battery Power"
-msgstr "மின்கல சக்தி"
+#: ../src//Plug.vala:118
+msgid "On Battery"
+msgstr ""
 
 #: ../src//Plug.vala:133
 msgid "Screen brightness:"
@@ -78,8 +78,8 @@ msgid "Power button:"
 msgstr "பவர் பொத்தான்:"
 
 #: ../src//Plug.vala:196
-msgid "Put the computer to sleep when inactive:"
-msgstr "செயலற்றுள்ள போது கணினியை தூங்கும் நிலைக்கு வைக்க:"
+msgid "Sleep when inactive:"
+msgstr ""
 
 #: ../src//Plug.vala:203
 msgid "5 min"
@@ -102,5 +102,5 @@ msgid "Never"
 msgstr "எப்போதுமில்லை"
 
 #: ../src//Plug.vala:230
-msgid "When battery power is critically low:"
-msgstr "பேட்டரி சக்தி மிகக்குறைவாக உள்ளபோது:"
+msgid "When power is critically low:"
+msgstr ""

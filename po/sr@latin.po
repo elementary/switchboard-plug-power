@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-08-01 14:42-0500\n"
+"POT-Creation-Date: 2014-08-03 16:56-0500\n"
 "PO-Revision-Date: 2013-08-19 09:36+0000\n"
 "Last-Translator: Иван Благојевић <ivan_blagojevic@mail.com>\n"
 "Language-Team: Serbian Latin <sr@latin@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-02 06:32+0000\n"
+"X-Launchpad-Export-Date: 2014-08-04 06:24+0000\n"
 "X-Generator: Launchpad (build 17147)\n"
 
 #: ../src//Plug.vala:31
@@ -45,13 +45,13 @@ msgstr "Snaga"
 msgid "Shows Power Settings…"
 msgstr ""
 
-#: ../src//Plug.vala:113
+#: ../src//Plug.vala:117
 msgid "Plugged In"
 msgstr "Prikopčan"
 
-#: ../src//Plug.vala:114
-msgid "Battery Power"
-msgstr "Snaga baterije"
+#: ../src//Plug.vala:118
+msgid "On Battery"
+msgstr ""
 
 #: ../src//Plug.vala:133
 msgid "Screen brightness:"
@@ -78,8 +78,8 @@ msgid "Power button:"
 msgstr "Дугме за укључивање:"
 
 #: ../src//Plug.vala:196
-msgid "Put the computer to sleep when inactive:"
-msgstr "Pošalji računar na spavanje kada je neaktivan:"
+msgid "Sleep when inactive:"
+msgstr ""
 
 #: ../src//Plug.vala:203
 msgid "5 min"
@@ -102,5 +102,5 @@ msgid "Never"
 msgstr "Nikada"
 
 #: ../src//Plug.vala:230
-msgid "When battery power is critically low:"
-msgstr "Када је снага батерије критично ниска:"
+msgid "When power is critically low:"
+msgstr ""

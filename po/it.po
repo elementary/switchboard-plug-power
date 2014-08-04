@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-01 14:42-0500\n"
+"POT-Creation-Date: 2014-08-03 16:56-0500\n"
 "PO-Revision-Date: 2014-01-25 10:49+0000\n"
 "Last-Translator: Bennici Piercarlo <Unknown>\n"
 "Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-02 06:31+0000\n"
+"X-Launchpad-Export-Date: 2014-08-04 06:24+0000\n"
 "X-Generator: Launchpad (build 17147)\n"
 "Language: it\n"
 
@@ -46,13 +46,13 @@ msgstr "Alimentazione"
 msgid "Shows Power Settings…"
 msgstr ""
 
-#: ../src//Plug.vala:113
+#: ../src//Plug.vala:117
 msgid "Plugged In"
 msgstr "Collegato alla rete"
 
-#: ../src//Plug.vala:114
-msgid "Battery Power"
-msgstr "Alimentazione a batteria"
+#: ../src//Plug.vala:118
+msgid "On Battery"
+msgstr ""
 
 #: ../src//Plug.vala:133
 msgid "Screen brightness:"
@@ -79,8 +79,8 @@ msgid "Power button:"
 msgstr "Pulsante di accensione:"
 
 #: ../src//Plug.vala:196
-msgid "Put the computer to sleep when inactive:"
-msgstr "Sospendi il computer quando inattivo per:"
+msgid "Sleep when inactive:"
+msgstr ""
 
 #: ../src//Plug.vala:203
 msgid "5 min"
@@ -103,5 +103,5 @@ msgid "Never"
 msgstr "Mai"
 
 #: ../src//Plug.vala:230
-msgid "When battery power is critically low:"
-msgstr "Quando la batteria è quasi scarica:"
+msgid "When power is critically low:"
+msgstr ""

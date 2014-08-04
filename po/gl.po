@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-08-01 14:42-0500\n"
+"POT-Creation-Date: 2014-08-03 16:56-0500\n"
 "PO-Revision-Date: 2013-08-09 15:55+0000\n"
 "Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>\n"
 "Language-Team: Galician <gl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-02 06:31+0000\n"
+"X-Launchpad-Export-Date: 2014-08-04 06:24+0000\n"
 "X-Generator: Launchpad (build 17147)\n"
 
 #: ../src//Plug.vala:31
@@ -45,13 +45,13 @@ msgstr "Carga"
 msgid "Shows Power Settings…"
 msgstr ""
 
-#: ../src//Plug.vala:113
+#: ../src//Plug.vala:117
 msgid "Plugged In"
 msgstr "Enchufado"
 
-#: ../src//Plug.vala:114
-msgid "Battery Power"
-msgstr "Carga da batería"
+#: ../src//Plug.vala:118
+msgid "On Battery"
+msgstr ""
 
 #: ../src//Plug.vala:133
 msgid "Screen brightness:"
@@ -78,8 +78,8 @@ msgid "Power button:"
 msgstr "Botón de apagado"
 
 #: ../src//Plug.vala:196
-msgid "Put the computer to sleep when inactive:"
-msgstr "Poñer o computador en repouso cando estea inactivo:"
+msgid "Sleep when inactive:"
+msgstr ""
 
 #: ../src//Plug.vala:203
 msgid "5 min"
@@ -102,5 +102,5 @@ msgid "Never"
 msgstr "Nunca"
 
 #: ../src//Plug.vala:230
-msgid "When battery power is critically low:"
-msgstr "Cando a batería está demasiado baixa:"
+msgid "When power is critically low:"
+msgstr ""
