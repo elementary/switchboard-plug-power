@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-03 16:56-0500\n"
-"PO-Revision-Date: 2013-08-22 21:04+0000\n"
-"Last-Translator: Adrian Widerski <Unknown>\n"
+"POT-Creation-Date: 2014-08-04 12:00-0500\n"
+"PO-Revision-Date: 2014-08-04 10:28+0000\n"
+"Last-Translator: Piotr Strębski <strebski@o2.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-04 06:24+0000\n"
+"X-Launchpad-Export-Date: 2014-08-05 06:37+0000\n"
 "X-Generator: Launchpad (build 17147)\n"
 "Language: pl\n"
 
@@ -44,7 +44,7 @@ msgstr "Zasilanie"
 
 #: ../src//Plug.vala:64
 msgid "Shows Power Settings…"
-msgstr ""
+msgstr "Pokazuje ustawienia zasilania..."
 
 #: ../src//Plug.vala:117
 msgid "Plugged In"
@@ -52,15 +52,15 @@ msgstr "Zasilacz sieciowy"
 
 #: ../src//Plug.vala:118
 msgid "On Battery"
-msgstr ""
+msgstr "Na baterii"
 
 #: ../src//Plug.vala:133
 msgid "Screen brightness:"
-msgstr ""
+msgstr "Jasność ekranu:"
 
 #: ../src//Plug.vala:143
 msgid "Dim screen when inactive:"
-msgstr ""
+msgstr "Przyciemnij ekran, gdy nieaktywny:"
 
 #: ../src//Plug.vala:177
 msgid "Sleep button:"
@@ -79,7 +79,7 @@ msgid "Power button:"
 msgstr "Przycisk zasilania:"
 
 #: ../src//Plug.vala:196
-msgid "Sleep when inactive:"
+msgid "Sleep when inactive after:"
 msgstr ""
 
 #: ../src//Plug.vala:203
@@ -104,4 +104,4 @@ msgstr "Nigdy"
 
 #: ../src//Plug.vala:230
 msgid "When power is critically low:"
-msgstr ""
+msgstr "Przy krytycznie niskim stanie zasilania:"
