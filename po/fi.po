@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-04 12:00-0500\n"
-"PO-Revision-Date: 2014-08-02 19:18+0000\n"
+"PO-Revision-Date: 2014-08-05 06:54+0000\n"
 "Last-Translator: Jiri Grönroos <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-05 06:37+0000\n"
+"X-Launchpad-Export-Date: 2014-08-06 06:49+0000\n"
 "X-Generator: Launchpad (build 17147)\n"
 "Language: fi\n"
 
@@ -52,7 +52,7 @@ msgstr "Liitetty"
 
 #: ../src//Plug.vala:118
 msgid "On Battery"
-msgstr ""
+msgstr "Akkuvirralla"
 
 #: ../src//Plug.vala:133
 msgid "Screen brightness:"
@@ -80,7 +80,7 @@ msgstr "Virtapainike:"
 
 #: ../src//Plug.vala:196
 msgid "Sleep when inactive after:"
-msgstr ""
+msgstr "Siirry lepotilaan käyttämättömänä ollessa:"
 
 #: ../src//Plug.vala:203
 msgid "5 min"
@@ -104,4 +104,4 @@ msgstr "Ei koskaan"
 
 #: ../src//Plug.vala:230
 msgid "When power is critically low:"
-msgstr ""
+msgstr "Virtaa ollessa kriittisen vähän:"
