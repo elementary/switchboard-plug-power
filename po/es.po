@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-04 12:00-0500\n"
-"PO-Revision-Date: 2013-08-14 22:10+0000\n"
-"Last-Translator: Alfredo Hernández <Unknown>\n"
+"PO-Revision-Date: 2014-08-07 05:36+0000\n"
+"Last-Translator: Raymundo <yotihuanatili@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-05 06:37+0000\n"
+"X-Launchpad-Export-Date: 2014-08-07 06:21+0000\n"
 "X-Generator: Launchpad (build 17147)\n"
 "Language: es\n"
 
@@ -44,7 +44,7 @@ msgstr "Energía"
 
 #: ../src//Plug.vala:64
 msgid "Shows Power Settings…"
-msgstr ""
+msgstr "Mostrar configuraciones de energía..."
 
 #: ../src//Plug.vala:117
 msgid "Plugged In"
@@ -56,11 +56,11 @@ msgstr ""
 
 #: ../src//Plug.vala:133
 msgid "Screen brightness:"
-msgstr ""
+msgstr "Brillo de la pantalla:"
 
 #: ../src//Plug.vala:143
 msgid "Dim screen when inactive:"
-msgstr ""
+msgstr "Oscurecer pantalla cuando esté inactiva:"
 
 #: ../src//Plug.vala:177
 msgid "Sleep button:"
@@ -80,19 +80,19 @@ msgstr "Botón de encendido:"
 
 #: ../src//Plug.vala:196
 msgid "Sleep when inactive after:"
-msgstr ""
+msgstr "Suspender cuando se esté inactivo después de:"
 
 #: ../src//Plug.vala:203
 msgid "5 min"
-msgstr "5 min"
+msgstr "5 m"
 
 #: ../src//Plug.vala:204
 msgid "10 min"
-msgstr "10 min"
+msgstr "10 m"
 
 #: ../src//Plug.vala:205
 msgid "30 min"
-msgstr "30 min"
+msgstr "30 m"
 
 #: ../src//Plug.vala:206
 msgid "1 hour"
@@ -104,4 +104,4 @@ msgstr "Nunca"
 
 #: ../src//Plug.vala:230
 msgid "When power is critically low:"
-msgstr ""
+msgstr "Cuando la energía está a punto de agotarse:"

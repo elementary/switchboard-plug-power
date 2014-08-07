@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-04 12:00-0500\n"
-"PO-Revision-Date: 2013-08-30 09:26+0000\n"
-"Last-Translator: Zoltan Faludi <Unknown>\n"
+"PO-Revision-Date: 2014-08-06 21:10+0000\n"
+"Last-Translator: Mark Lutring <marcus@elitemail.hu>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-05 06:37+0000\n"
+"X-Launchpad-Export-Date: 2014-08-07 06:21+0000\n"
 "X-Generator: Launchpad (build 17147)\n"
 "Language: hu\n"
 
@@ -44,7 +44,7 @@ msgstr "Energiagazdálkodás"
 
 #: ../src//Plug.vala:64
 msgid "Shows Power Settings…"
-msgstr ""
+msgstr "Megjeleníti az Energia-beállításokat"
 
 #: ../src//Plug.vala:117
 msgid "Plugged In"
@@ -52,11 +52,11 @@ msgstr "Csatlakoztatva"
 
 #: ../src//Plug.vala:118
 msgid "On Battery"
-msgstr ""
+msgstr "Akkumulátorról"
 
 #: ../src//Plug.vala:133
 msgid "Screen brightness:"
-msgstr ""
+msgstr "Képernyő fényerő:"
 
 #: ../src//Plug.vala:143
 msgid "Dim screen when inactive:"
