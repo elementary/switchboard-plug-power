@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-04 12:00-0500\n"
-"PO-Revision-Date: 2013-06-21 09:11+0000\n"
+"PO-Revision-Date: 2014-08-19 21:16+0000\n"
 "Last-Translator: Иван Благојевић <ivan_blagojevic@mail.com>\n"
 "Language-Team: Serbian <sr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-05 06:37+0000\n"
-"X-Generator: Launchpad (build 17147)\n"
+"X-Launchpad-Export-Date: 2014-08-20 06:13+0000\n"
+"X-Generator: Launchpad (build 17163)\n"
 "Language: sr\n"
 
 #: ../src//Plug.vala:31
@@ -44,7 +44,7 @@ msgstr "Снага"
 
 #: ../src//Plug.vala:64
 msgid "Shows Power Settings…"
-msgstr ""
+msgstr "Приказује поставке снаге"
 
 #: ../src//Plug.vala:117
 msgid "Plugged In"
@@ -52,35 +52,35 @@ msgstr "Прикопчан"
 
 #: ../src//Plug.vala:118
 msgid "On Battery"
-msgstr ""
+msgstr "На батерији"
 
 #: ../src//Plug.vala:133
 msgid "Screen brightness:"
-msgstr ""
+msgstr "Осветљеност екрана"
 
 #: ../src//Plug.vala:143
 msgid "Dim screen when inactive:"
-msgstr ""
+msgstr "Затамни екран када је неактиван"
 
 #: ../src//Plug.vala:177
 msgid "Sleep button:"
-msgstr ""
+msgstr "Дугме за спавање:"
 
 #: ../src//Plug.vala:177
 msgid "Suspend button:"
-msgstr ""
+msgstr "Дугме за суспендовање:"
 
 #: ../src//Plug.vala:177
 msgid "Hibernate button:"
-msgstr ""
+msgstr "Дугме за хибернацију:"
 
 #: ../src//Plug.vala:177
 msgid "Power button:"
-msgstr ""
+msgstr "Дугме за напон:"
 
 #: ../src//Plug.vala:196
 msgid "Sleep when inactive after:"
-msgstr ""
+msgstr "Успавај када је неактиван након:"
 
 #: ../src//Plug.vala:203
 msgid "5 min"
@@ -96,7 +96,7 @@ msgstr "30 мин."
 
 #: ../src//Plug.vala:206
 msgid "1 hour"
-msgstr "1 сат"
+msgstr "1 сата"
 
 #: ../src//Plug.vala:207
 msgid "Never"
@@ -104,4 +104,4 @@ msgstr "Никад"
 
 #: ../src//Plug.vala:230
 msgid "When power is critically low:"
-msgstr ""
+msgstr "Када је напод критично низак:"
