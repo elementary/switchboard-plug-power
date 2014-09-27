@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Power
-Comment=Shows Power Settings…
+Comment=Set display brightness, power button behavior, and sleep preferences
 Exec=switchboard -o system-pantheon-power
 Icon=preferences-system-power
 Terminal=false
