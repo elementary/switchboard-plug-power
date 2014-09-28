@@ -61,7 +61,7 @@ namespace Power {
 			Object (category: Category.HARDWARE,
 				code_name: "system-pantheon-power",
 				display_name: _("Power"),
-				description: _("Shows Power Settings…"),
+				description: _("Set display brightness, power button behavior, and sleep preferences"),
 				icon: "preferences-system-power");
 
 			settings = new GLib.Settings ("org.gnome.settings-daemon.plugins.power");
@@ -130,7 +130,7 @@ namespace Power {
 			grid.column_spacing = 12;
 			grid.row_spacing = 12;
 
-			var brightness_label = new Gtk.Label (_("Screen brightness:"));
+			var brightness_label = new Gtk.Label (_("Display brightness:"));
 			brightness_label.xalign = 1.0f;
 			label_size.add_widget (brightness_label);
 			brightness_label.halign = Gtk.Align.END;
