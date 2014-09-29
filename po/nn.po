@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-04 12:00-0500\n"
+"POT-Creation-Date: 2014-09-28 05:03-0500\n"
 "PO-Revision-Date: 2012-11-20 11:30+0000\n"
 "Last-Translator: Martin Myrvold <Unknown>\n"
 "Language-Team: Norwegian Nynorsk <nn@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-05 06:37+0000\n"
-"X-Generator: Launchpad (build 17147)\n"
+"X-Launchpad-Export-Date: 2014-09-29 05:13+0000\n"
+"X-Generator: Launchpad (build 17196)\n"
 "Language: nn\n"
 
 #: ../src//Plug.vala:31
@@ -43,7 +43,7 @@ msgid "Power"
 msgstr "Straum"
 
 #: ../src//Plug.vala:64
-msgid "Shows Power Settings…"
+msgid "Set display brightness, power button behavior, and sleep preferences"
 msgstr ""
 
 #: ../src//Plug.vala:117
@@ -55,7 +55,7 @@ msgid "On Battery"
 msgstr ""
 
 #: ../src//Plug.vala:133
-msgid "Screen brightness:"
+msgid "Display brightness:"
 msgstr ""
 
 #: ../src//Plug.vala:143
