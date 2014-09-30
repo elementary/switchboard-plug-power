@@ -108,14 +108,18 @@ namespace Power {
 			separator.valign = Gtk.Align.START;
 
 			var plug_grid = create_notebook_pages ("ac");
-			var battery_grid = create_notebook_pages ("battery");
 			var common_settings = create_common_settings ();
 			var stack = new Gtk.Stack ();
 			var stack_switcher = new Gtk.StackSwitcher ();
 			stack_switcher.halign = Gtk.Align.CENTER;
 			stack_switcher.stack = stack;
 			stack.add_titled (plug_grid, "ac", _("Plugged In"));
-			stack.add_titled (battery_grid, "battery", _("On Battery"));
+
+			if (detect_laptop ()) {
+				var battery_grid = create_notebook_pages ("battery");
+				stack.add_titled (battery_grid, "battery", _("On Battery"));
+			}
+
 			stack_container.pack_start (common_settings);
 			stack_container.pack_start (separator);
 			stack_container.pack_start(stack_switcher, false, false, 0);
@@ -234,6 +238,36 @@ namespace Power {
 			}
 			
 			return grid;
+		}
+
+		private bool detect_laptop () {
+			string test_laptop_detect = Environment.find_program_in_path("laptop-detect");
+			if (test_laptop_detect != null) {
+				int exit_status;
+				string standard_output, standard_error;
+				try {
+					Process.spawn_command_line_sync ("laptop-detect", out standard_output,
+																	out standard_error,
+																	out exit_status);
+					if (exit_status == 0) {
+						debug ("Laptop detect return true");
+						return true;
+					}
+					else {
+						debug ("Laptop detect return false");
+						return false;
+					}
+				}
+				catch (SpawnError err) {
+					warning (err.message);
+					return false;
+				}
+			}
+			else {
+				warning ("Laptop detect not find");
+				/* TODO check upower, and /proc files like laptop-detect to find bateries */
+				return false;
+			}
 		}
 	}
 }
