@@ -126,12 +126,13 @@ namespace Power {
 			separator.vexpand = true;
 			separator.valign = Gtk.Align.START;
 
-			var plug_grid = create_notebook_pages ("ac");
 			var common_settings = create_common_settings ();
 			var stack = new Gtk.Stack ();
 			var stack_switcher = new Gtk.StackSwitcher ();
 			stack_switcher.halign = Gtk.Align.CENTER;
 			stack_switcher.stack = stack;
+
+			var plug_grid = create_notebook_pages ("ac");
 			stack.add_titled (plug_grid, "ac", _("Plugged In"));
 
 			if (detect_laptop () || have_ups ()) { // when its not laptop, we check for ups
@@ -145,6 +146,9 @@ namespace Power {
 			stack_container.pack_start(stack, true, true, 0);
 			stack_container.margin = 12;
 			stack_container.show_all ();
+
+			// hide stack switcher we only have ac line
+			stack_switcher.set_visible (stack.get_children ().length () > 1);
 		}
 
 		private Gtk.Grid create_common_settings () {
