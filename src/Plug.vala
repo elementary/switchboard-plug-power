@@ -135,7 +135,7 @@ namespace Power {
 			var plug_grid = create_notebook_pages ("ac");
 			stack.add_titled (plug_grid, "ac", _("Plugged In"));
 
-			if (detect_laptop () || have_ups ()) { // when its not laptop, we check for ups
+			if (laptop_detect () || have_ups ()) { // when its not laptop, we check for ups
 				var battery_grid = create_notebook_pages ("battery");
 				stack.add_titled (battery_grid, "battery", _("On Battery"));
 			}
@@ -264,7 +264,7 @@ namespace Power {
 			return grid;
 		}
 
-		private bool detect_laptop () {
+		private bool laptop_detect () {
 			string test_laptop_detect = Environment.find_program_in_path("laptop-detect");
 			if (test_laptop_detect != null) {
 				int exit_status;
