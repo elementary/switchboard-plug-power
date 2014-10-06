@@ -12,7 +12,7 @@ Homepage: https://launchpad.net/switchboard-plug-power
 
 Package: switchboard-plug-power
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}, laptop-detect
 Enhances: switchboard
 Description: Power plug for Switchboard
  This plug configures system power consumption.
@@ -27,4 +27,3 @@ Description: Power plug for Switchboard (debugging symbols)
  This plug configures system power consumption.
  .
  This package contains debugging symbols for switchboard-plug-power.
-
