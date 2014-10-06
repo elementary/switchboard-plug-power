@@ -149,6 +149,7 @@ namespace Power {
 
 			// hide stack switcher we only have ac line
 			stack_switcher.set_visible (stack.get_children ().length () > 1);
+			separator.set_visible (stack.get_children ().length () > 1);
 		}
 
 		private Gtk.Grid create_common_settings () {
