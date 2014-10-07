@@ -12,6 +12,15 @@ namespace Power {
 		// public abstract int Brightness {get; set; }
 	}
 
+	[DBus (name = "org.freedesktop.UPower")]
+	interface UPowerSettings : GLib.Object {
+		public abstract string[] EnumerateDevices () throws IOError;
+	}
+
+	[DBus (name = "org.freedesktop.UPower.Device")]
+	interface UPowerDevice : GLib.Object {
+		public abstract uint Type {get; set;}
+	}
 	class ComboBox : Gtk.ComboBoxText {
 	
 		public Gtk.Label label;
@@ -55,6 +64,7 @@ namespace Power {
 	public class Plug : Switchboard.Plug {
 	
 		private PowerSettings screen;
+		private UPowerSettings upower;
 		private Gtk.SizeGroup label_size;
 
 		public Plug () {
@@ -72,6 +82,15 @@ namespace Power {
 			} catch (IOError e) {
 				warning ("Failed to get settings daemon for brightness setting");
 			}
+
+			try {
+				upower = Bus.get_proxy_sync (BusType.SYSTEM,
+								"org.freedesktop.UPower",
+								"/org/freedesktop/UPower");
+			} catch (IOError e) {
+				warning ("Failed to get settings daemon for brightness setting");
+			}
+
 		}
 
 		public override Gtk.Widget get_widget () {
@@ -107,21 +126,30 @@ namespace Power {
 			separator.vexpand = true;
 			separator.valign = Gtk.Align.START;
 
-			var plug_grid = create_notebook_pages ("ac");
-			var battery_grid = create_notebook_pages ("battery");
 			var common_settings = create_common_settings ();
 			var stack = new Gtk.Stack ();
 			var stack_switcher = new Gtk.StackSwitcher ();
 			stack_switcher.halign = Gtk.Align.CENTER;
 			stack_switcher.stack = stack;
+
+			var plug_grid = create_notebook_pages ("ac");
 			stack.add_titled (plug_grid, "ac", _("Plugged In"));
-			stack.add_titled (battery_grid, "battery", _("On Battery"));
+
+			if (laptop_detect () || have_ups ()) { // when its not laptop, we check for ups
+				var battery_grid = create_notebook_pages ("battery");
+				stack.add_titled (battery_grid, "battery", _("On Battery"));
+			}
+
 			stack_container.pack_start (common_settings);
 			stack_container.pack_start (separator);
 			stack_container.pack_start(stack_switcher, false, false, 0);
 			stack_container.pack_start(stack, true, true, 0);
 			stack_container.margin = 12;
 			stack_container.show_all ();
+
+			// hide stack switcher we only have ac line
+			stack_switcher.set_visible (stack.get_children ().length () > 1);
+			separator.set_visible (stack.get_children ().length () > 1);
 		}
 
 		private Gtk.Grid create_common_settings () {
@@ -234,6 +262,73 @@ namespace Power {
 			}
 			
 			return grid;
+		}
+
+		private bool laptop_detect () {
+			string test_laptop_detect = Environment.find_program_in_path ("laptop-detect");
+			if (test_laptop_detect != null) {
+				int exit_status;
+				string standard_output, standard_error;
+				try {
+					Process.spawn_command_line_sync ("laptop-detect", out standard_output,
+																	out standard_error,
+																	out exit_status);
+					if (exit_status == 0) {
+						debug ("Laptop detect return true");
+						return true;
+					} else {
+						debug ("Laptop detect return false");
+						return false;
+					}
+				}
+				catch (SpawnError err) {
+					warning (err.message);
+					return false;
+				}
+			} else {
+				warning ("Laptop detect not find");
+				/* TODO check upower, and /proc files as laptop-detect does to find batteries */
+				return false;
+			}
+		}
+
+	enum Type {
+		UNKNOWN = 0,
+		LINE_POWER,
+		BATTERY,
+		UPS,
+		MONITOR,
+		MOUSE,
+		KEYBOARD,
+		PDA
+	}
+
+	private bool have_ups () {
+		/* TODO:check for ups using upower */
+		string[] devices;
+
+		try {
+			devices = upower.EnumerateDevices ();
+		} catch (Error e) {
+			message (e.message);
+			return false;
+		}
+
+		foreach (var device in devices) {
+			try {
+				UPowerDevice upower_device = Bus.get_proxy_sync (BusType.SYSTEM,
+								"org.freedesktop.UPower",
+								device);
+				if (upower_device.Type == Type.UPS) {
+					debug ("found UPS in %s", device);
+					return true;
+				}
+			} catch (Error e) {
+				debug (e.message);
+			}
+		}
+
+		return false;
 		}
 	}
 }
