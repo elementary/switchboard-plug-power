@@ -3,7 +3,7 @@ namespace Power {
 	
 		private string key;
 		
-		private int[] timeout = {0, 5*60, 10*60,15*60, 30*60, 60*60};
+		private int[] timeout = {0, 5*60, 10*60,15*60, 30*60, 45*60, 60*60};
 		
 		public TimeoutComboBox (string key) {
 			this.key = key;
@@ -13,6 +13,7 @@ namespace Power {
 			this.append_text (_("10 min"));
 			this.append_text (_("15 min"));
 			this.append_text (_("30 min"));
+			this.append_text (_("45 min"));
 			this.append_text (_("1 hour"));
 		
 			this.hexpand = true;
