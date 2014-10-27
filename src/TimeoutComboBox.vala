@@ -24,7 +24,6 @@ namespace Power {
 		}
 
 		private void update_settings () {
-			message (timeout[active].to_string());
 			settings.set_int (key, timeout[active]);
 		}
 		
