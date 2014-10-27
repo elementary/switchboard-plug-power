@@ -61,6 +61,52 @@ namespace Power {
 		}
 	}
 	
+	class TimeoutComboBox : Gtk.ComboBoxText {
+	
+		private string key;
+		
+		private int[] timeout = {0, 5*60, 10*60,15*60, 30*60, 60*60};
+		
+		public TimeoutComboBox (string key) {
+			this.key = key;
+
+			this.append_text (_("Never"));
+			this.append_text (_("5 min"));
+			this.append_text (_("10 min"));
+			this.append_text (_("15 min"));
+			this.append_text (_("30 min"));
+			this.append_text (_("1 hour"));
+		
+			this.hexpand = true;
+		
+			update_combo ();
+		
+			this.changed.connect (update_settings);
+			settings.changed[key].connect (update_combo);
+		}
+
+		private void update_settings () {
+			message (timeout[active].to_string());
+			settings.set_int (key, timeout[active]);
+		}
+		
+		private int find_closest (int second) {
+			int key = 0;
+			foreach (int i in timeout) {
+				if (second > i)
+					key++;
+				else
+					break;
+			}
+			return key;
+		}
+	
+		private void update_combo () {
+			int val = settings.get_int (key);
+			active = find_closest (val);
+		}
+	}
+	
 	public class Plug : Switchboard.Plug {
 	
 		private PowerSettings screen;
@@ -221,38 +267,15 @@ namespace Power {
 			grid.column_spacing = 12;
 			grid.row_spacing = 12;
 
-			var scale_label = new Gtk.Label (_("Sleep when inactive after:"));
-			scale_label.xalign = 1.0f;
-			label_size.add_widget (scale_label);
+			var timeout_label = new Gtk.Label (_("Sleep when inactive after:"));
+			timeout_label.xalign = 1.0f;
+			label_size.add_widget (timeout_label);
+
 			var scale_settings = @"sleep-inactive-$type-timeout";
-			
-			var scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 4000, 300);
-			scale.set_draw_value (false);
-			scale.add_mark (300, Gtk.PositionType.BOTTOM, _("5 min"));
-			scale.add_mark (600, Gtk.PositionType.BOTTOM, _("10 min"));
-			scale.add_mark (1800, Gtk.PositionType.BOTTOM, _("30 min"));
-			scale.add_mark (3600, Gtk.PositionType.BOTTOM, _("1 hour"));
-			scale.add_mark (4000, Gtk.PositionType.BOTTOM, _("Never"));
-			scale.hexpand = true;
-			scale.width_request = 480;
+			var timeout = new TimeoutComboBox(scale_settings);
 		
-			var dval = (double) settings.get_int (scale_settings);
-		
-			if (dval == 0)
-				scale.set_value (4000);
-			else
-				scale.set_value (dval);
-		
-			scale.value_changed.connect (() => {
-				var val = (int) scale.get_value ();
-				if (val <= 3600)
-					settings.set_int (scale_settings, val);
-				else if (val == 4000)
-					settings.set_int (scale_settings, 0);
-			});
-		
-			grid.attach (scale_label, 0, 0, 1, 1);
-			grid.attach (scale, 1, 0, 1, 1);
+			grid.attach (timeout_label, 0, 0, 1, 1);
+			grid.attach (timeout, 1, 0, 1, 1);
 		
 			if (type != "ac") {
 				var critical_box = new ComboBox (_("When power is critically low:"), "critical-battery-action");
