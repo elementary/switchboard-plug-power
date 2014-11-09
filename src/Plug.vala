@@ -168,7 +168,7 @@ namespace Power {
 			string[] keys = {"button-sleep", "button-suspend", "button-hibernate", "button-power"};
 
 			for (int i = 0; i < labels.length; i++) {
-				var box = new Power.ComboBox (labels[i], keys[i]);
+				var box = new ActionComboBox (labels[i], keys[i]);
 				grid.attach (box.label, 0, i+3, 1, 1);
 				label_size.add_widget (box.label);
 				grid.attach (box, 1, i+3, 1, 1);
@@ -194,7 +194,7 @@ namespace Power {
 			grid.attach (timeout, 1, 0, 1, 1);
 		
 			if (type != "ac") {
-				var critical_box = new ComboBox (_("When power is critically low:"), "critical-battery-action");
+				var critical_box = new ActionComboBox (_("When power is critically low:"), "critical-battery-action");
 				grid.attach (critical_box.label, 0, 2, 1, 1);
 				label_size.add_widget (critical_box.label);
 				grid.attach (critical_box, 1, 2, 1, 1);

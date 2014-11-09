@@ -1,5 +1,5 @@
 namespace Power {
-	class ComboBox : Gtk.ComboBoxText {
+	class ActionComboBox : Gtk.ComboBoxText {
 	
 		public Gtk.Label label;
 		private string key;
@@ -9,7 +9,7 @@ namespace Power {
 		// and vice-versa
 		private int[] map_to_list = {4, 0, 1, 2, 3, 4};
 		
-		public ComboBox (string label, string key) {
+		public ActionComboBox (string label, string key) {
 			this.key = key;
 			this.label = new Gtk.Label (label);
 			this.label.halign = Gtk.Align.END;
