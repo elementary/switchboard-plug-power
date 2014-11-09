@@ -52,7 +52,8 @@ namespace Power {
 	
 		private void update_combo () {
 			int val = settings.get_int (key);
-			active = find_closest (val);
+			// find closest timeout level in case gsettings changed elsewhere
+			this.active = find_closest (val);
 		}
 	}
 }
