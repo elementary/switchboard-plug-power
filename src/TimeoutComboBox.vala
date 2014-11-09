@@ -37,6 +37,7 @@ namespace Power {
 			settings.set_int (key, timeout[active]);
 		}
 		
+		// find closest timeout to our level
 		private int find_closest (int second) {
 			int key = 0;
 			
@@ -52,7 +53,8 @@ namespace Power {
 	
 		private void update_combo () {
 			int val = settings.get_int (key);
-			// find closest timeout level in case gsettings changed elsewhere
+			
+			// need to process value to comply our timeout level
 			this.active = find_closest (val);
 		}
 	}
