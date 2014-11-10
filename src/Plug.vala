@@ -21,45 +21,7 @@ namespace Power {
 	interface UPowerDevice : GLib.Object {
 		public abstract uint Type {get; set;}
 	}
-	class ComboBox : Gtk.ComboBoxText {
 	
-		public Gtk.Label label;
-		private string key;
-		
-		// this maps combobox indices to gsettings enums
-		private int[] map_to_sett = {1, 2, 3, 4, 5};
-		// and vice-versa
-		private int[] map_to_list = {4, 0, 1, 2, 3, 4};
-		
-		public ComboBox (string label, string key) {
-			this.key = key;
-			this.label = new Gtk.Label (label);
-			this.label.halign = Gtk.Align.END;
-			this.label.xalign = 1.0f;
-
-			this.append_text (_("Suspend"));
-			this.append_text (_("Shutdown"));
-			this.append_text (_("Hibernate"));
-			this.append_text (_("Ask me"));
-			this.append_text (_("Do nothing"));
-		
-			this.hexpand = true;
-		
-			update_combo ();
-		
-			this.changed.connect (update_settings);
-			settings.changed[key].connect (update_combo);
-		}
-
-		private void update_settings () {
-			settings.set_enum (key, map_to_sett[active]);
-		}
-	
-		private void update_combo () {
-			int val = settings.get_enum (key);
-			active = map_to_list [val];
-		}
-	}
 	
 	public class Plug : Switchboard.Plug {
 	
@@ -206,7 +168,7 @@ namespace Power {
 			string[] keys = {"button-sleep", "button-suspend", "button-hibernate", "button-power"};
 
 			for (int i = 0; i < labels.length; i++) {
-				var box = new Power.ComboBox (labels[i], keys[i]);
+				var box = new ActionComboBox (labels[i], keys[i]);
 				grid.attach (box.label, 0, i+3, 1, 1);
 				label_size.add_widget (box.label);
 				grid.attach (box, 1, i+3, 1, 1);
@@ -221,41 +183,18 @@ namespace Power {
 			grid.column_spacing = 12;
 			grid.row_spacing = 12;
 
-			var scale_label = new Gtk.Label (_("Sleep when inactive after:"));
-			scale_label.xalign = 1.0f;
-			label_size.add_widget (scale_label);
+			var timeout_label = new Gtk.Label (_("Sleep when inactive after:"));
+			timeout_label.xalign = 1.0f;
+			label_size.add_widget (timeout_label);
+
 			var scale_settings = @"sleep-inactive-$type-timeout";
-			
-			var scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 4000, 300);
-			scale.set_draw_value (false);
-			scale.add_mark (300, Gtk.PositionType.BOTTOM, _("5 min"));
-			scale.add_mark (600, Gtk.PositionType.BOTTOM, _("10 min"));
-			scale.add_mark (1800, Gtk.PositionType.BOTTOM, _("30 min"));
-			scale.add_mark (3600, Gtk.PositionType.BOTTOM, _("1 hour"));
-			scale.add_mark (4000, Gtk.PositionType.BOTTOM, _("Never"));
-			scale.hexpand = true;
-			scale.width_request = 480;
+			var timeout = new TimeoutComboBox(scale_settings);
 		
-			var dval = (double) settings.get_int (scale_settings);
-		
-			if (dval == 0)
-				scale.set_value (4000);
-			else
-				scale.set_value (dval);
-		
-			scale.value_changed.connect (() => {
-				var val = (int) scale.get_value ();
-				if (val <= 3600)
-					settings.set_int (scale_settings, val);
-				else if (val == 4000)
-					settings.set_int (scale_settings, 0);
-			});
-		
-			grid.attach (scale_label, 0, 0, 1, 1);
-			grid.attach (scale, 1, 0, 1, 1);
+			grid.attach (timeout_label, 0, 0, 1, 1);
+			grid.attach (timeout, 1, 0, 1, 1);
 		
 			if (type != "ac") {
-				var critical_box = new ComboBox (_("When power is critically low:"), "critical-battery-action");
+				var critical_box = new ActionComboBox (_("When power is critically low:"), "critical-battery-action");
 				grid.attach (critical_box.label, 0, 2, 1, 1);
 				label_size.add_widget (critical_box.label);
 				grid.attach (critical_box, 1, 2, 1, 1);
