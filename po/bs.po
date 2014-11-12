@@ -8,100 +8,102 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-09-28 05:03-0500\n"
-"PO-Revision-Date: 2012-10-27 02:16+0000\n"
-"Last-Translator: Corentin Noël <corentin@elementaryos.org>\n"
+"PO-Revision-Date: 2014-11-11 13:00+0000\n"
+"Last-Translator: Coa_brate <aleksandar.todorovic@mail.ru>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-09-29 05:12+0000\n"
-"X-Generator: Launchpad (build 17196)\n"
+"X-Launchpad-Export-Date: 2014-11-12 06:41+0000\n"
+"X-Generator: Launchpad (build 17241)\n"
 "Language: bs\n"
 
 #: ../src//Plug.vala:31
 msgid "Suspend"
-msgstr ""
+msgstr "Suspenduj"
 
 #: ../src//Plug.vala:32
 msgid "Shutdown"
-msgstr ""
+msgstr "Ugasi"
 
 #: ../src//Plug.vala:33
 msgid "Hibernate"
-msgstr ""
+msgstr "Hibernacija"
 
 #: ../src//Plug.vala:34
 msgid "Ask me"
-msgstr ""
+msgstr "Pitaj me"
 
 #: ../src//Plug.vala:35
 msgid "Do nothing"
-msgstr ""
+msgstr "Ne radi ništa"
 
 #: ../src//Plug.vala:63
 msgid "Power"
-msgstr ""
+msgstr "Napajanje"
 
 #: ../src//Plug.vala:64
 msgid "Set display brightness, power button behavior, and sleep preferences"
 msgstr ""
+"Postavite svjetlinu displeja, podešavanje tastera za gašenje i postavke "
+"prelaska u fazu sna"
 
 #: ../src//Plug.vala:117
 msgid "Plugged In"
-msgstr ""
+msgstr "Na punjenju"
 
 #: ../src//Plug.vala:118
 msgid "On Battery"
-msgstr ""
+msgstr "Na bateriji"
 
 #: ../src//Plug.vala:133
 msgid "Display brightness:"
-msgstr ""
+msgstr "Prikaži svjetlinu:"
 
 #: ../src//Plug.vala:143
 msgid "Dim screen when inactive:"
-msgstr ""
+msgstr "Smanji svjetlinu ekrana kada se ne koristi:"
 
 #: ../src//Plug.vala:177
 msgid "Sleep button:"
-msgstr ""
+msgstr "Taster za prelazak u fazu sna:"
 
 #: ../src//Plug.vala:177
 msgid "Suspend button:"
-msgstr ""
+msgstr "Taster za suspenziju:"
 
 #: ../src//Plug.vala:177
 msgid "Hibernate button:"
-msgstr ""
+msgstr "Taster za hibernaciju:"
 
 #: ../src//Plug.vala:177
 msgid "Power button:"
-msgstr ""
+msgstr "Taster za gašenje:"
 
 #: ../src//Plug.vala:196
 msgid "Sleep when inactive after:"
-msgstr ""
+msgstr "Pređi u fazu sna ukoliko je prošlo:"
 
 #: ../src//Plug.vala:203
 msgid "5 min"
-msgstr ""
+msgstr "5 min"
 
 #: ../src//Plug.vala:204
 msgid "10 min"
-msgstr ""
+msgstr "10 min"
 
 #: ../src//Plug.vala:205
 msgid "30 min"
-msgstr ""
+msgstr "30 min"
 
 #: ../src//Plug.vala:206
 msgid "1 hour"
-msgstr ""
+msgstr "1 sat"
 
 #: ../src//Plug.vala:207
 msgid "Never"
-msgstr ""
+msgstr "Nikada"
 
 #: ../src//Plug.vala:230
 msgid "When power is critically low:"
-msgstr ""
+msgstr "Kada je baterija prazna:"
