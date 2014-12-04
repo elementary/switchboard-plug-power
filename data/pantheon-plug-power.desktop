@@ -9,4 +9,4 @@ StartupNotify=true
 Categories=X-PANTHEON-Switchboard-Plugs;
 OnlyShowIn=Pantheon;
 Keywords=Power;Energy;Battery
-X-GNOME-Gettext-Domain=switchboard
+X-GNOME-Gettext-Domain=pantheon-power-plug

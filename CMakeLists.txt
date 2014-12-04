@@ -6,8 +6,6 @@ cmake_policy (VERSION 2.6)
 
 # Set the Properties of your Plug
 
-# Set the Name of the plug, should be an executable command, lowercase, no spaces 
-set (PLUGNAME "power")
 # Set the Category of the Plug, one of:
 # personal, hardware, network, system
 set (PLUGCATEGORY "hardware")
@@ -17,7 +15,7 @@ set (PLUGDESCRIPTION "Power")
 # The symbolic name of the Icon to use for the plug
 set (PLUGICON "preferences-system-power")
 
-project (${PLUGNAME})
+project (pantheon-power)
 
 #########################################################
 # Only alter stuff below if you know what you are doing #
@@ -25,14 +23,12 @@ project (${PLUGNAME})
 
 include (GNUInstallDirs)
 set (DATADIR "${CMAKE_INSTALL_FULL_LIBDIR}/switchboard")
-set (PKGDATADIR "${DATADIR}/${PLUGCATEGORY}/pantheon-${PLUGNAME}")
-set (GETTEXT_PACKAGE "${PLUGNAME}-plug")
+set (PKGDATADIR "${DATADIR}/${PLUGCATEGORY}/${CMAKE_PROJECT_NAME}")
+set (GETTEXT_PACKAGE "${CMAKE_PROJECT_NAME}-plug")
 
 list (APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 
 # Configure file
-configure_file (plug.plugin ${CMAKE_BINARY_DIR}/${PLUGNAME}.plugin)
-install (FILES ${CMAKE_BINARY_DIR}/${PLUGNAME}.plugin DESTINATION ${PKGDATADIR})
 configure_file (${CMAKE_SOURCE_DIR}/config.vala.cmake ${CMAKE_BINARY_DIR}/src/config.vala)
 add_definitions (-DGETTEXT_PACKAGE=\"${GETTEXT_PACKAGE}\")
 

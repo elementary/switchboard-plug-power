@@ -12,7 +12,7 @@ ensure_vala_version ("0.22.0" MINIMUM)
 
 include (ValaPrecompile)
 # Add all your vala files and requires packages to the List below to include them in the build
-vala_precompile (VALA_C ${PLUGNAME}
+vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Plug.vala
     ActionComboBox.vala
     TimeoutComboBox.vala
@@ -25,8 +25,8 @@ OPTIONS
     --thread
 )
 
-add_library (${PLUGNAME} MODULE ${VALA_C})
-target_link_libraries(${PLUGNAME} ${DEPS_LIBRARIES})
+add_library (${CMAKE_PROJECT_NAME} MODULE ${VALA_C})
+target_link_libraries(${CMAKE_PROJECT_NAME} ${DEPS_LIBRARIES})
 
 # Installation
-install (TARGETS ${PLUGNAME} DESTINATION ${PKGDATADIR})
+install (TARGETS ${CMAKE_PROJECT_NAME} DESTINATION ${PKGDATADIR})
