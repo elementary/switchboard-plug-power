@@ -7,103 +7,111 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-28 05:03-0500\n"
+"POT-Creation-Date: 2014-12-04 16:05+0100\n"
 "PO-Revision-Date: 2014-10-23 20:07+0000\n"
 "Last-Translator: Andru <razandale@gmail.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-10-24 06:33+0000\n"
-"X-Generator: Launchpad (build 17203)\n"
+"X-Launchpad-Export-Date: 2014-12-05 06:19+0000\n"
+"X-Generator: Launchpad (build 17274)\n"
 "Language: ru\n"
 
-#: ../src//Plug.vala:31
-msgid "Suspend"
-msgstr "Ждущий режим"
+#: ../src//TimeoutComboBox.vala:20
+msgid "Never"
+msgstr "Никогда"
 
-#: ../src//Plug.vala:32
-msgid "Shutdown"
-msgstr "Выключение"
+#: ../src//TimeoutComboBox.vala:21
+msgid "5 min"
+msgstr "5 минут"
 
-#: ../src//Plug.vala:33
-msgid "Hibernate"
-msgstr "Спящий режим"
+#: ../src//TimeoutComboBox.vala:22
+msgid "10 min"
+msgstr "10 минут"
 
-#: ../src//Plug.vala:34
-msgid "Ask me"
-msgstr "Спрашивать меня"
+#: ../src//TimeoutComboBox.vala:23
+msgid "15 min"
+msgstr ""
+
+#: ../src//TimeoutComboBox.vala:24
+msgid "30 min"
+msgstr "30 минут"
+
+#: ../src//TimeoutComboBox.vala:25
+msgid "45 min"
+msgstr ""
+
+#: ../src//TimeoutComboBox.vala:26
+msgid "1 hour"
+msgstr "1 час"
 
 #: ../src//Plug.vala:35
-msgid "Do nothing"
-msgstr "Ничего не делать"
-
-#: ../src//Plug.vala:63
 msgid "Power"
 msgstr "Питание"
 
-#: ../src//Plug.vala:64
+#: ../src//Plug.vala:36
 msgid "Set display brightness, power button behavior, and sleep preferences"
 msgstr ""
 "Настроить яркость экрана, поведение кнопки питания, и предпочтения спящего "
 "режима"
 
-#: ../src//Plug.vala:117
+#: ../src//Plug.vala:98
 msgid "Plugged In"
 msgstr "На зарядке"
 
-#: ../src//Plug.vala:118
+#: ../src//Plug.vala:102
 msgid "On Battery"
 msgstr "От батареи"
 
-#: ../src//Plug.vala:133
+#: ../src//Plug.vala:123
 msgid "Display brightness:"
 msgstr "Яркость экрана:"
 
-#: ../src//Plug.vala:143
+#: ../src//Plug.vala:133
 msgid "Dim screen when inactive:"
 msgstr "Убавить яркость экрана при бездействие:"
 
-#: ../src//Plug.vala:177
+#: ../src//Plug.vala:167
 msgid "Sleep button:"
 msgstr "Клавиша сна:"
 
-#: ../src//Plug.vala:177
+#: ../src//Plug.vala:167
 msgid "Suspend button:"
 msgstr "Клавиша приостановки:"
 
-#: ../src//Plug.vala:177
+#: ../src//Plug.vala:167
 msgid "Hibernate button:"
 msgstr "Клавиша гибернации:"
 
-#: ../src//Plug.vala:177
+#: ../src//Plug.vala:167
 msgid "Power button:"
 msgstr "Кнопка питания:"
 
-#: ../src//Plug.vala:196
+#: ../src//Plug.vala:186
 msgid "Sleep when inactive after:"
 msgstr "Спящий режим после:"
 
-#: ../src//Plug.vala:203
-msgid "5 min"
-msgstr "5 минут"
-
-#: ../src//Plug.vala:204
-msgid "10 min"
-msgstr "10 минут"
-
-#: ../src//Plug.vala:205
-msgid "30 min"
-msgstr "30 минут"
-
-#: ../src//Plug.vala:206
-msgid "1 hour"
-msgstr "1 час"
-
-#: ../src//Plug.vala:207
-msgid "Never"
-msgstr "Никогда"
-
-#: ../src//Plug.vala:230
+#: ../src//Plug.vala:197
 msgid "When power is critically low:"
 msgstr "При критическом питание:"
+
+#: ../src//ActionComboBox.vala:18
+msgid "Suspend"
+msgstr "Ждущий режим"
+
+#: ../src//ActionComboBox.vala:19
+msgid "Shutdown"
+msgstr "Выключение"
+
+#: ../src//ActionComboBox.vala:20
+msgid "Hibernate"
+msgstr "Спящий режим"
+
+#: ../src//ActionComboBox.vala:21
+msgid "Ask me"
+msgstr "Спрашивать меня"
+
+#: ../src//ActionComboBox.vala:22
+msgid "Do nothing"
+msgstr "Ничего не делать"

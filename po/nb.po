@@ -7,103 +7,111 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-28 05:03-0500\n"
+"POT-Creation-Date: 2014-12-04 16:05+0100\n"
 "PO-Revision-Date: 2014-10-29 07:17+0000\n"
 "Last-Translator: ProsjektX <Unknown>\n"
 "Language-Team: Norwegian Bokmal <nb@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-10-30 06:31+0000\n"
-"X-Generator: Launchpad (build 17203)\n"
+"X-Launchpad-Export-Date: 2014-12-05 06:19+0000\n"
+"X-Generator: Launchpad (build 17274)\n"
 "Language: nb\n"
 
-#: ../src//Plug.vala:31
-msgid "Suspend"
-msgstr "Hvilemodus"
+#: ../src//TimeoutComboBox.vala:20
+msgid "Never"
+msgstr "Aldri"
 
-#: ../src//Plug.vala:32
-msgid "Shutdown"
-msgstr "Slå av"
+#: ../src//TimeoutComboBox.vala:21
+msgid "5 min"
+msgstr "5 min"
 
-#: ../src//Plug.vala:33
-msgid "Hibernate"
-msgstr "Dvalemodus"
+#: ../src//TimeoutComboBox.vala:22
+msgid "10 min"
+msgstr "10 min"
 
-#: ../src//Plug.vala:34
-msgid "Ask me"
-msgstr "Spør meg"
+#: ../src//TimeoutComboBox.vala:23
+msgid "15 min"
+msgstr ""
+
+#: ../src//TimeoutComboBox.vala:24
+msgid "30 min"
+msgstr "30 min"
+
+#: ../src//TimeoutComboBox.vala:25
+msgid "45 min"
+msgstr ""
+
+#: ../src//TimeoutComboBox.vala:26
+msgid "1 hour"
+msgstr "1 time"
 
 #: ../src//Plug.vala:35
-msgid "Do nothing"
-msgstr "Ikke gjør noe"
-
-#: ../src//Plug.vala:63
 msgid "Power"
 msgstr "Energistyring"
 
-#: ../src//Plug.vala:64
+#: ../src//Plug.vala:36
 msgid "Set display brightness, power button behavior, and sleep preferences"
 msgstr ""
 "Sett lysstyrke på skjerm, av/på-knapp funksjon og innstillinger for "
 "hvilemodus"
 
-#: ../src//Plug.vala:117
+#: ../src//Plug.vala:98
 msgid "Plugged In"
 msgstr "Tilkoblet nettspenning"
 
-#: ../src//Plug.vala:118
+#: ../src//Plug.vala:102
 msgid "On Battery"
 msgstr "På batteri"
 
-#: ../src//Plug.vala:133
+#: ../src//Plug.vala:123
 msgid "Display brightness:"
 msgstr "Lyssytyrke på skjerm:"
 
-#: ../src//Plug.vala:143
+#: ../src//Plug.vala:133
 msgid "Dim screen when inactive:"
 msgstr "Demp skjermen når inaktiv:"
 
-#: ../src//Plug.vala:177
+#: ../src//Plug.vala:167
 msgid "Sleep button:"
 msgstr "Slumre-knapp:"
 
-#: ../src//Plug.vala:177
+#: ../src//Plug.vala:167
 msgid "Suspend button:"
 msgstr "Hvile-knapp:"
 
-#: ../src//Plug.vala:177
+#: ../src//Plug.vala:167
 msgid "Hibernate button:"
 msgstr "Dvale-knapp"
 
-#: ../src//Plug.vala:177
+#: ../src//Plug.vala:167
 msgid "Power button:"
 msgstr "Av/på-knapp"
 
-#: ../src//Plug.vala:196
+#: ../src//Plug.vala:186
 msgid "Sleep when inactive after:"
 msgstr "Sov når inaktiv etter:"
 
-#: ../src//Plug.vala:203
-msgid "5 min"
-msgstr "5 min"
-
-#: ../src//Plug.vala:204
-msgid "10 min"
-msgstr "10 min"
-
-#: ../src//Plug.vala:205
-msgid "30 min"
-msgstr "30 min"
-
-#: ../src//Plug.vala:206
-msgid "1 hour"
-msgstr "1 time"
-
-#: ../src//Plug.vala:207
-msgid "Never"
-msgstr "Aldri"
-
-#: ../src//Plug.vala:230
+#: ../src//Plug.vala:197
 msgid "When power is critically low:"
 msgstr "Når strømnivået er kritisk lavt:"
+
+#: ../src//ActionComboBox.vala:18
+msgid "Suspend"
+msgstr "Hvilemodus"
+
+#: ../src//ActionComboBox.vala:19
+msgid "Shutdown"
+msgstr "Slå av"
+
+#: ../src//ActionComboBox.vala:20
+msgid "Hibernate"
+msgstr "Dvalemodus"
+
+#: ../src//ActionComboBox.vala:21
+msgid "Ask me"
+msgstr "Spør meg"
+
+#: ../src//ActionComboBox.vala:22
+msgid "Do nothing"
+msgstr "Ikke gjør noe"

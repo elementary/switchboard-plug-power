@@ -7,101 +7,109 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-28 05:03-0500\n"
+"POT-Creation-Date: 2014-12-04 16:05+0100\n"
 "PO-Revision-Date: 2014-08-07 05:36+0000\n"
 "Last-Translator: Raymundo <yotihuanatili@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-09-29 05:13+0000\n"
-"X-Generator: Launchpad (build 17196)\n"
+"X-Launchpad-Export-Date: 2014-12-05 06:19+0000\n"
+"X-Generator: Launchpad (build 17274)\n"
 "Language: es\n"
 
-#: ../src//Plug.vala:31
-msgid "Suspend"
-msgstr "Suspender"
-
-#: ../src//Plug.vala:32
-msgid "Shutdown"
-msgstr "Apagar"
-
-#: ../src//Plug.vala:33
-msgid "Hibernate"
-msgstr "Hibernar"
-
-#: ../src//Plug.vala:34
-msgid "Ask me"
-msgstr "Preguntarme"
-
-#: ../src//Plug.vala:35
-msgid "Do nothing"
-msgstr "No hacer nada"
-
-#: ../src//Plug.vala:63
-msgid "Power"
-msgstr "Energía"
-
-#: ../src//Plug.vala:64
-msgid "Set display brightness, power button behavior, and sleep preferences"
-msgstr ""
-
-#: ../src//Plug.vala:117
-msgid "Plugged In"
-msgstr "Conectado"
-
-#: ../src//Plug.vala:118
-msgid "On Battery"
-msgstr ""
-
-#: ../src//Plug.vala:133
-msgid "Display brightness:"
-msgstr ""
-
-#: ../src//Plug.vala:143
-msgid "Dim screen when inactive:"
-msgstr "Oscurecer pantalla cuando esté inactiva:"
-
-#: ../src//Plug.vala:177
-msgid "Sleep button:"
-msgstr "Botón de dormir:"
-
-#: ../src//Plug.vala:177
-msgid "Suspend button:"
-msgstr "Botón de suspensión:"
-
-#: ../src//Plug.vala:177
-msgid "Hibernate button:"
-msgstr "Botón de hibernación:"
-
-#: ../src//Plug.vala:177
-msgid "Power button:"
-msgstr "Botón de encendido:"
-
-#: ../src//Plug.vala:196
-msgid "Sleep when inactive after:"
-msgstr "Suspender cuando se esté inactivo después de:"
-
-#: ../src//Plug.vala:203
-msgid "5 min"
-msgstr "5 m"
-
-#: ../src//Plug.vala:204
-msgid "10 min"
-msgstr "10 m"
-
-#: ../src//Plug.vala:205
-msgid "30 min"
-msgstr "30 m"
-
-#: ../src//Plug.vala:206
-msgid "1 hour"
-msgstr "1 hora"
-
-#: ../src//Plug.vala:207
+#: ../src//TimeoutComboBox.vala:20
 msgid "Never"
 msgstr "Nunca"
 
-#: ../src//Plug.vala:230
+#: ../src//TimeoutComboBox.vala:21
+msgid "5 min"
+msgstr "5 m"
+
+#: ../src//TimeoutComboBox.vala:22
+msgid "10 min"
+msgstr "10 m"
+
+#: ../src//TimeoutComboBox.vala:23
+msgid "15 min"
+msgstr ""
+
+#: ../src//TimeoutComboBox.vala:24
+msgid "30 min"
+msgstr "30 m"
+
+#: ../src//TimeoutComboBox.vala:25
+msgid "45 min"
+msgstr ""
+
+#: ../src//TimeoutComboBox.vala:26
+msgid "1 hour"
+msgstr "1 hora"
+
+#: ../src//Plug.vala:35
+msgid "Power"
+msgstr "Energía"
+
+#: ../src//Plug.vala:36
+msgid "Set display brightness, power button behavior, and sleep preferences"
+msgstr ""
+
+#: ../src//Plug.vala:98
+msgid "Plugged In"
+msgstr "Conectado"
+
+#: ../src//Plug.vala:102
+msgid "On Battery"
+msgstr ""
+
+#: ../src//Plug.vala:123
+msgid "Display brightness:"
+msgstr ""
+
+#: ../src//Plug.vala:133
+msgid "Dim screen when inactive:"
+msgstr "Oscurecer pantalla cuando esté inactiva:"
+
+#: ../src//Plug.vala:167
+msgid "Sleep button:"
+msgstr "Botón de dormir:"
+
+#: ../src//Plug.vala:167
+msgid "Suspend button:"
+msgstr "Botón de suspensión:"
+
+#: ../src//Plug.vala:167
+msgid "Hibernate button:"
+msgstr "Botón de hibernación:"
+
+#: ../src//Plug.vala:167
+msgid "Power button:"
+msgstr "Botón de encendido:"
+
+#: ../src//Plug.vala:186
+msgid "Sleep when inactive after:"
+msgstr "Suspender cuando se esté inactivo después de:"
+
+#: ../src//Plug.vala:197
 msgid "When power is critically low:"
 msgstr "Cuando la energía está a punto de agotarse:"
+
+#: ../src//ActionComboBox.vala:18
+msgid "Suspend"
+msgstr "Suspender"
+
+#: ../src//ActionComboBox.vala:19
+msgid "Shutdown"
+msgstr "Apagar"
+
+#: ../src//ActionComboBox.vala:20
+msgid "Hibernate"
+msgstr "Hibernar"
+
+#: ../src//ActionComboBox.vala:21
+msgid "Ask me"
+msgstr "Preguntarme"
+
+#: ../src//ActionComboBox.vala:22
+msgid "Do nothing"
+msgstr "No hacer nada"

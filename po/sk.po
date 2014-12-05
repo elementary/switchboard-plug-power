@@ -7,102 +7,110 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-28 05:03-0500\n"
+"POT-Creation-Date: 2014-12-04 16:05+0100\n"
 "PO-Revision-Date: 2014-11-24 07:56+0000\n"
 "Last-Translator: Marian IVAN <marian.r.ivan@gmail.com>\n"
 "Language-Team: Slovak <sk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-11-25 07:04+0000\n"
-"X-Generator: Launchpad (build 17252)\n"
+"X-Launchpad-Export-Date: 2014-12-05 06:19+0000\n"
+"X-Generator: Launchpad (build 17274)\n"
 "Language: sk\n"
 
-#: ../src//Plug.vala:31
-msgid "Suspend"
-msgstr "Uspať"
+#: ../src//TimeoutComboBox.vala:20
+msgid "Never"
+msgstr "Nikdy"
 
-#: ../src//Plug.vala:32
-msgid "Shutdown"
-msgstr "Vypnúť"
+#: ../src//TimeoutComboBox.vala:21
+msgid "5 min"
+msgstr "5 min"
 
-#: ../src//Plug.vala:33
-msgid "Hibernate"
-msgstr "Režim spánku"
+#: ../src//TimeoutComboBox.vala:22
+msgid "10 min"
+msgstr "10 min"
 
-#: ../src//Plug.vala:34
-msgid "Ask me"
-msgstr "Spýtať sa"
+#: ../src//TimeoutComboBox.vala:23
+msgid "15 min"
+msgstr ""
+
+#: ../src//TimeoutComboBox.vala:24
+msgid "30 min"
+msgstr "30 min"
+
+#: ../src//TimeoutComboBox.vala:25
+msgid "45 min"
+msgstr ""
+
+#: ../src//TimeoutComboBox.vala:26
+msgid "1 hour"
+msgstr "1 hodina"
 
 #: ../src//Plug.vala:35
-msgid "Do nothing"
-msgstr "Nerobiť nič"
-
-#: ../src//Plug.vala:63
 msgid "Power"
 msgstr "Napájanie"
 
-#: ../src//Plug.vala:64
+#: ../src//Plug.vala:36
 msgid "Set display brightness, power button behavior, and sleep preferences"
 msgstr ""
 "Nastaviť jas displeja, správanie tlačidla napájania a nastavení spánku"
 
-#: ../src//Plug.vala:117
+#: ../src//Plug.vala:98
 msgid "Plugged In"
 msgstr "Pripojené"
 
-#: ../src//Plug.vala:118
+#: ../src//Plug.vala:102
 msgid "On Battery"
 msgstr ""
 
-#: ../src//Plug.vala:133
+#: ../src//Plug.vala:123
 msgid "Display brightness:"
 msgstr "Jas displeja:"
 
-#: ../src//Plug.vala:143
+#: ../src//Plug.vala:133
 msgid "Dim screen when inactive:"
 msgstr "Vypnúť obrazovku pri neaktivite"
 
-#: ../src//Plug.vala:177
+#: ../src//Plug.vala:167
 msgid "Sleep button:"
 msgstr "Tlačidlo uspania:"
 
-#: ../src//Plug.vala:177
+#: ../src//Plug.vala:167
 msgid "Suspend button:"
 msgstr "Tlačidlo uspania:"
 
-#: ../src//Plug.vala:177
+#: ../src//Plug.vala:167
 msgid "Hibernate button:"
 msgstr "Tlačidlo hibernácie:"
 
-#: ../src//Plug.vala:177
+#: ../src//Plug.vala:167
 msgid "Power button:"
 msgstr "Tlačidlo napájania:"
 
-#: ../src//Plug.vala:196
+#: ../src//Plug.vala:186
 msgid "Sleep when inactive after:"
 msgstr "Prejsť do režimu spánku pri neaktivite dlhšej ako:"
 
-#: ../src//Plug.vala:203
-msgid "5 min"
-msgstr "5 min"
-
-#: ../src//Plug.vala:204
-msgid "10 min"
-msgstr "10 min"
-
-#: ../src//Plug.vala:205
-msgid "30 min"
-msgstr "30 min"
-
-#: ../src//Plug.vala:206
-msgid "1 hour"
-msgstr "1 hodina"
-
-#: ../src//Plug.vala:207
-msgid "Never"
-msgstr "Nikdy"
-
-#: ../src//Plug.vala:230
+#: ../src//Plug.vala:197
 msgid "When power is critically low:"
 msgstr "Pri vybití batérie:"
+
+#: ../src//ActionComboBox.vala:18
+msgid "Suspend"
+msgstr "Uspať"
+
+#: ../src//ActionComboBox.vala:19
+msgid "Shutdown"
+msgstr "Vypnúť"
+
+#: ../src//ActionComboBox.vala:20
+msgid "Hibernate"
+msgstr "Režim spánku"
+
+#: ../src//ActionComboBox.vala:21
+msgid "Ask me"
+msgstr "Spýtať sa"
+
+#: ../src//ActionComboBox.vala:22
+msgid "Do nothing"
+msgstr "Nerobiť nič"

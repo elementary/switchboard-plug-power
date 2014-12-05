@@ -7,100 +7,108 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-09-28 05:03-0500\n"
+"POT-Creation-Date: 2014-12-04 16:05+0100\n"
 "PO-Revision-Date: 2014-09-18 23:18+0000\n"
 "Last-Translator: MinSik CHO <Unknown>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-09-29 05:12+0000\n"
-"X-Generator: Launchpad (build 17196)\n"
+"X-Launchpad-Export-Date: 2014-12-05 06:19+0000\n"
+"X-Generator: Launchpad (build 17274)\n"
 
-#: ../src//Plug.vala:31
-msgid "Suspend"
-msgstr "절전"
-
-#: ../src//Plug.vala:32
-msgid "Shutdown"
-msgstr "시스템 종료"
-
-#: ../src//Plug.vala:33
-msgid "Hibernate"
-msgstr "최대 절전 모드"
-
-#: ../src//Plug.vala:34
-msgid "Ask me"
-msgstr "물어보기"
-
-#: ../src//Plug.vala:35
-msgid "Do nothing"
-msgstr "아무것도 안 함"
-
-#: ../src//Plug.vala:63
-msgid "Power"
-msgstr "전원"
-
-#: ../src//Plug.vala:64
-msgid "Set display brightness, power button behavior, and sleep preferences"
-msgstr ""
-
-#: ../src//Plug.vala:117
-msgid "Plugged In"
-msgstr "연결됨"
-
-#: ../src//Plug.vala:118
-msgid "On Battery"
-msgstr "배터리 사용 시"
-
-#: ../src//Plug.vala:133
-msgid "Display brightness:"
-msgstr ""
-
-#: ../src//Plug.vala:143
-msgid "Dim screen when inactive:"
-msgstr "사용하지 않으면 화면을 어둡게 함:"
-
-#: ../src//Plug.vala:177
-msgid "Sleep button:"
-msgstr "대기 버튼:"
-
-#: ../src//Plug.vala:177
-msgid "Suspend button:"
-msgstr "절전 버튼:"
-
-#: ../src//Plug.vala:177
-msgid "Hibernate button:"
-msgstr "최대 절전 모드 버튼:"
-
-#: ../src//Plug.vala:177
-msgid "Power button:"
-msgstr "전원 버튼:"
-
-#: ../src//Plug.vala:196
-msgid "Sleep when inactive after:"
-msgstr "다음 시간 후에 절전 모드로 전환:"
-
-#: ../src//Plug.vala:203
-msgid "5 min"
-msgstr "5 분"
-
-#: ../src//Plug.vala:204
-msgid "10 min"
-msgstr "10 분"
-
-#: ../src//Plug.vala:205
-msgid "30 min"
-msgstr "30 분"
-
-#: ../src//Plug.vala:206
-msgid "1 hour"
-msgstr "1시간"
-
-#: ../src//Plug.vala:207
+#: ../src//TimeoutComboBox.vala:20
 msgid "Never"
 msgstr "절전하지 않음"
 
-#: ../src//Plug.vala:230
+#: ../src//TimeoutComboBox.vala:21
+msgid "5 min"
+msgstr "5 분"
+
+#: ../src//TimeoutComboBox.vala:22
+msgid "10 min"
+msgstr "10 분"
+
+#: ../src//TimeoutComboBox.vala:23
+msgid "15 min"
+msgstr ""
+
+#: ../src//TimeoutComboBox.vala:24
+msgid "30 min"
+msgstr "30 분"
+
+#: ../src//TimeoutComboBox.vala:25
+msgid "45 min"
+msgstr ""
+
+#: ../src//TimeoutComboBox.vala:26
+msgid "1 hour"
+msgstr "1시간"
+
+#: ../src//Plug.vala:35
+msgid "Power"
+msgstr "전원"
+
+#: ../src//Plug.vala:36
+msgid "Set display brightness, power button behavior, and sleep preferences"
+msgstr ""
+
+#: ../src//Plug.vala:98
+msgid "Plugged In"
+msgstr "연결됨"
+
+#: ../src//Plug.vala:102
+msgid "On Battery"
+msgstr "배터리 사용 시"
+
+#: ../src//Plug.vala:123
+msgid "Display brightness:"
+msgstr ""
+
+#: ../src//Plug.vala:133
+msgid "Dim screen when inactive:"
+msgstr "사용하지 않으면 화면을 어둡게 함:"
+
+#: ../src//Plug.vala:167
+msgid "Sleep button:"
+msgstr "대기 버튼:"
+
+#: ../src//Plug.vala:167
+msgid "Suspend button:"
+msgstr "절전 버튼:"
+
+#: ../src//Plug.vala:167
+msgid "Hibernate button:"
+msgstr "최대 절전 모드 버튼:"
+
+#: ../src//Plug.vala:167
+msgid "Power button:"
+msgstr "전원 버튼:"
+
+#: ../src//Plug.vala:186
+msgid "Sleep when inactive after:"
+msgstr "다음 시간 후에 절전 모드로 전환:"
+
+#: ../src//Plug.vala:197
 msgid "When power is critically low:"
 msgstr "배터리가 심각하게 부족하면:"
+
+#: ../src//ActionComboBox.vala:18
+msgid "Suspend"
+msgstr "절전"
+
+#: ../src//ActionComboBox.vala:19
+msgid "Shutdown"
+msgstr "시스템 종료"
+
+#: ../src//ActionComboBox.vala:20
+msgid "Hibernate"
+msgstr "최대 절전 모드"
+
+#: ../src//ActionComboBox.vala:21
+msgid "Ask me"
+msgstr "물어보기"
+
+#: ../src//ActionComboBox.vala:22
+msgid "Do nothing"
+msgstr "아무것도 안 함"

@@ -7,101 +7,109 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-28 05:03-0500\n"
+"POT-Creation-Date: 2014-12-04 16:05+0100\n"
 "PO-Revision-Date: 2012-11-20 11:30+0000\n"
 "Last-Translator: Martin Myrvold <Unknown>\n"
 "Language-Team: Norwegian Nynorsk <nn@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-09-29 05:13+0000\n"
-"X-Generator: Launchpad (build 17196)\n"
+"X-Launchpad-Export-Date: 2014-12-05 06:19+0000\n"
+"X-Generator: Launchpad (build 17274)\n"
 "Language: nn\n"
 
-#: ../src//Plug.vala:31
-msgid "Suspend"
-msgstr "Gå i kvilemodus"
-
-#: ../src//Plug.vala:32
-msgid "Shutdown"
-msgstr "Slå av"
-
-#: ../src//Plug.vala:33
-msgid "Hibernate"
-msgstr "Gå i dvalemodus"
-
-#: ../src//Plug.vala:34
-msgid "Ask me"
-msgstr "Spør meg"
-
-#: ../src//Plug.vala:35
-msgid "Do nothing"
-msgstr "Ikkje gjer noko"
-
-#: ../src//Plug.vala:63
-msgid "Power"
-msgstr "Straum"
-
-#: ../src//Plug.vala:64
-msgid "Set display brightness, power button behavior, and sleep preferences"
-msgstr ""
-
-#: ../src//Plug.vala:117
-msgid "Plugged In"
-msgstr "Kopla til"
-
-#: ../src//Plug.vala:118
-msgid "On Battery"
-msgstr ""
-
-#: ../src//Plug.vala:133
-msgid "Display brightness:"
-msgstr ""
-
-#: ../src//Plug.vala:143
-msgid "Dim screen when inactive:"
-msgstr ""
-
-#: ../src//Plug.vala:177
-msgid "Sleep button:"
-msgstr ""
-
-#: ../src//Plug.vala:177
-msgid "Suspend button:"
-msgstr ""
-
-#: ../src//Plug.vala:177
-msgid "Hibernate button:"
-msgstr ""
-
-#: ../src//Plug.vala:177
-msgid "Power button:"
-msgstr ""
-
-#: ../src//Plug.vala:196
-msgid "Sleep when inactive after:"
-msgstr ""
-
-#: ../src//Plug.vala:203
-msgid "5 min"
-msgstr "5 minutt"
-
-#: ../src//Plug.vala:204
-msgid "10 min"
-msgstr "10 minutt"
-
-#: ../src//Plug.vala:205
-msgid "30 min"
-msgstr "30 minutt"
-
-#: ../src//Plug.vala:206
-msgid "1 hour"
-msgstr "Ein time"
-
-#: ../src//Plug.vala:207
+#: ../src//TimeoutComboBox.vala:20
 msgid "Never"
 msgstr "Aldri"
 
-#: ../src//Plug.vala:230
+#: ../src//TimeoutComboBox.vala:21
+msgid "5 min"
+msgstr "5 minutt"
+
+#: ../src//TimeoutComboBox.vala:22
+msgid "10 min"
+msgstr "10 minutt"
+
+#: ../src//TimeoutComboBox.vala:23
+msgid "15 min"
+msgstr ""
+
+#: ../src//TimeoutComboBox.vala:24
+msgid "30 min"
+msgstr "30 minutt"
+
+#: ../src//TimeoutComboBox.vala:25
+msgid "45 min"
+msgstr ""
+
+#: ../src//TimeoutComboBox.vala:26
+msgid "1 hour"
+msgstr "Ein time"
+
+#: ../src//Plug.vala:35
+msgid "Power"
+msgstr "Straum"
+
+#: ../src//Plug.vala:36
+msgid "Set display brightness, power button behavior, and sleep preferences"
+msgstr ""
+
+#: ../src//Plug.vala:98
+msgid "Plugged In"
+msgstr "Kopla til"
+
+#: ../src//Plug.vala:102
+msgid "On Battery"
+msgstr ""
+
+#: ../src//Plug.vala:123
+msgid "Display brightness:"
+msgstr ""
+
+#: ../src//Plug.vala:133
+msgid "Dim screen when inactive:"
+msgstr ""
+
+#: ../src//Plug.vala:167
+msgid "Sleep button:"
+msgstr ""
+
+#: ../src//Plug.vala:167
+msgid "Suspend button:"
+msgstr ""
+
+#: ../src//Plug.vala:167
+msgid "Hibernate button:"
+msgstr ""
+
+#: ../src//Plug.vala:167
+msgid "Power button:"
+msgstr ""
+
+#: ../src//Plug.vala:186
+msgid "Sleep when inactive after:"
+msgstr ""
+
+#: ../src//Plug.vala:197
 msgid "When power is critically low:"
 msgstr ""
+
+#: ../src//ActionComboBox.vala:18
+msgid "Suspend"
+msgstr "Gå i kvilemodus"
+
+#: ../src//ActionComboBox.vala:19
+msgid "Shutdown"
+msgstr "Slå av"
+
+#: ../src//ActionComboBox.vala:20
+msgid "Hibernate"
+msgstr "Gå i dvalemodus"
+
+#: ../src//ActionComboBox.vala:21
+msgid "Ask me"
+msgstr "Spør meg"
+
+#: ../src//ActionComboBox.vala:22
+msgid "Do nothing"
+msgstr "Ikkje gjer noko"

@@ -7,103 +7,111 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-28 05:03-0500\n"
+"POT-Creation-Date: 2014-12-04 16:05+0100\n"
 "PO-Revision-Date: 2014-09-28 10:46+0000\n"
 "Last-Translator: Fabio Zaramella <FFabio.96.X@Gmail.com>\n"
 "Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-09-29 05:12+0000\n"
-"X-Generator: Launchpad (build 17196)\n"
+"X-Launchpad-Export-Date: 2014-12-05 06:19+0000\n"
+"X-Generator: Launchpad (build 17274)\n"
 "Language: it\n"
 
-#: ../src//Plug.vala:31
-msgid "Suspend"
-msgstr "Sospendere"
+#: ../src//TimeoutComboBox.vala:20
+msgid "Never"
+msgstr "Mai"
 
-#: ../src//Plug.vala:32
-msgid "Shutdown"
-msgstr "Spegnere"
+#: ../src//TimeoutComboBox.vala:21
+msgid "5 min"
+msgstr "5 min"
 
-#: ../src//Plug.vala:33
-msgid "Hibernate"
-msgstr "Ibernare"
+#: ../src//TimeoutComboBox.vala:22
+msgid "10 min"
+msgstr "10 min"
 
-#: ../src//Plug.vala:34
-msgid "Ask me"
-msgstr "Chiedimi"
+#: ../src//TimeoutComboBox.vala:23
+msgid "15 min"
+msgstr ""
+
+#: ../src//TimeoutComboBox.vala:24
+msgid "30 min"
+msgstr "30 min"
+
+#: ../src//TimeoutComboBox.vala:25
+msgid "45 min"
+msgstr ""
+
+#: ../src//TimeoutComboBox.vala:26
+msgid "1 hour"
+msgstr "1 ora"
 
 #: ../src//Plug.vala:35
-msgid "Do nothing"
-msgstr "Non fare nulla"
-
-#: ../src//Plug.vala:63
 msgid "Power"
 msgstr "Alimentazione"
 
-#: ../src//Plug.vala:64
+#: ../src//Plug.vala:36
 msgid "Set display brightness, power button behavior, and sleep preferences"
 msgstr ""
 "Imposta la luminosità del display , il comportamento del pulsante di "
 "accensione , e le preferenze della sospensione"
 
-#: ../src//Plug.vala:117
+#: ../src//Plug.vala:98
 msgid "Plugged In"
 msgstr "Collegato alla rete"
 
-#: ../src//Plug.vala:118
+#: ../src//Plug.vala:102
 msgid "On Battery"
 msgstr "Batteria"
 
-#: ../src//Plug.vala:133
+#: ../src//Plug.vala:123
 msgid "Display brightness:"
 msgstr "Luminosità Display:"
 
-#: ../src//Plug.vala:143
+#: ../src//Plug.vala:133
 msgid "Dim screen when inactive:"
 msgstr "Oscura schermo quando inattivo:"
 
-#: ../src//Plug.vala:177
+#: ../src//Plug.vala:167
 msgid "Sleep button:"
 msgstr "Pulsante di sospensione:"
 
-#: ../src//Plug.vala:177
+#: ../src//Plug.vala:167
 msgid "Suspend button:"
 msgstr "Pulsante di sospensione:"
 
-#: ../src//Plug.vala:177
+#: ../src//Plug.vala:167
 msgid "Hibernate button:"
 msgstr "Pulsante di ibernazione:"
 
-#: ../src//Plug.vala:177
+#: ../src//Plug.vala:167
 msgid "Power button:"
 msgstr "Pulsante di accensione:"
 
-#: ../src//Plug.vala:196
+#: ../src//Plug.vala:186
 msgid "Sleep when inactive after:"
 msgstr "Sospensione quando inattivo dopo:"
 
-#: ../src//Plug.vala:203
-msgid "5 min"
-msgstr "5 min"
-
-#: ../src//Plug.vala:204
-msgid "10 min"
-msgstr "10 min"
-
-#: ../src//Plug.vala:205
-msgid "30 min"
-msgstr "30 min"
-
-#: ../src//Plug.vala:206
-msgid "1 hour"
-msgstr "1 ora"
-
-#: ../src//Plug.vala:207
-msgid "Never"
-msgstr "Mai"
-
-#: ../src//Plug.vala:230
+#: ../src//Plug.vala:197
 msgid "When power is critically low:"
 msgstr "Quando la carica è criticalmente bassa:"
+
+#: ../src//ActionComboBox.vala:18
+msgid "Suspend"
+msgstr "Sospendere"
+
+#: ../src//ActionComboBox.vala:19
+msgid "Shutdown"
+msgstr "Spegnere"
+
+#: ../src//ActionComboBox.vala:20
+msgid "Hibernate"
+msgstr "Ibernare"
+
+#: ../src//ActionComboBox.vala:21
+msgid "Ask me"
+msgstr "Chiedimi"
+
+#: ../src//ActionComboBox.vala:22
+msgid "Do nothing"
+msgstr "Non fare nulla"
