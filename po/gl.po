@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-12-04 16:05+0100\n"
-"PO-Revision-Date: 2013-08-09 15:55+0000\n"
+"PO-Revision-Date: 2014-12-11 07:12+0000\n"
 "Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>\n"
 "Language-Team: Galician <gl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-12-05 06:19+0000\n"
-"X-Generator: Launchpad (build 17274)\n"
+"X-Launchpad-Export-Date: 2014-12-11 08:05+0000\n"
+"X-Generator: Launchpad (build 17283)\n"
 
 #: ../src//TimeoutComboBox.vala:20
 msgid "Never"
@@ -31,7 +31,7 @@ msgstr "10 min"
 
 #: ../src//TimeoutComboBox.vala:23
 msgid "15 min"
-msgstr ""
+msgstr "15 min"
 
 #: ../src//TimeoutComboBox.vala:24
 msgid "30 min"
@@ -39,7 +39,7 @@ msgstr "30 min"
 
 #: ../src//TimeoutComboBox.vala:25
 msgid "45 min"
-msgstr ""
+msgstr "45 min"
 
 #: ../src//TimeoutComboBox.vala:26
 msgid "1 hour"
@@ -52,6 +52,8 @@ msgstr "Carga"
 #: ../src//Plug.vala:36
 msgid "Set display brightness, power button behavior, and sleep preferences"
 msgstr ""
+"Estabelece o brillo da pantalla, o comportamento do botón de apagado e as "
+"preferencias de durmido."
 
 #: ../src//Plug.vala:98
 msgid "Plugged In"
@@ -59,15 +61,15 @@ msgstr "Enchufado"
 
 #: ../src//Plug.vala:102
 msgid "On Battery"
-msgstr ""
+msgstr "Con batería"
 
 #: ../src//Plug.vala:123
 msgid "Display brightness:"
-msgstr ""
+msgstr "Brillo da pantalla:"
 
 #: ../src//Plug.vala:133
 msgid "Dim screen when inactive:"
-msgstr ""
+msgstr "Escurecer pantalla cando leve inactiva:"
 
 #: ../src//Plug.vala:167
 msgid "Sleep button:"
@@ -87,11 +89,11 @@ msgstr "Botón de apagado"
 
 #: ../src//Plug.vala:186
 msgid "Sleep when inactive after:"
-msgstr ""
+msgstr "Durmir cando leve inactivo:"
 
 #: ../src//Plug.vala:197
 msgid "When power is critically low:"
-msgstr ""
+msgstr "Cando a carga sexa criticamente baixa:"
 
 #: ../src//ActionComboBox.vala:18
 msgid "Suspend"
