@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-12-04 16:05+0100\n"
-"PO-Revision-Date: 2014-04-19 00:42+0000\n"
+"PO-Revision-Date: 2014-12-11 15:56+0000\n"
 "Last-Translator: ITPROJECTS <Unknown>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-12-05 06:19+0000\n"
-"X-Generator: Launchpad (build 17274)\n"
+"X-Launchpad-Export-Date: 2014-12-12 06:32+0000\n"
+"X-Generator: Launchpad (build 17286)\n"
 "Language: bg\n"
 
 #: ../src//TimeoutComboBox.vala:20
@@ -32,7 +32,7 @@ msgstr "10 мин"
 
 #: ../src//TimeoutComboBox.vala:23
 msgid "15 min"
-msgstr ""
+msgstr "15 мин"
 
 #: ../src//TimeoutComboBox.vala:24
 msgid "30 min"
@@ -40,7 +40,7 @@ msgstr "30 мин"
 
 #: ../src//TimeoutComboBox.vala:25
 msgid "45 min"
-msgstr ""
+msgstr "45 мин"
 
 #: ../src//TimeoutComboBox.vala:26
 msgid "1 hour"
@@ -53,6 +53,8 @@ msgstr "Захранване"
 #: ../src//Plug.vala:36
 msgid "Set display brightness, power button behavior, and sleep preferences"
 msgstr ""
+"Нагласи екранната яркост, поведението на изключващото копче, и приспивните "
+"настройки"
 
 #: ../src//Plug.vala:98
 msgid "Plugged In"
@@ -60,15 +62,15 @@ msgstr "Зарядно включено"
 
 #: ../src//Plug.vala:102
 msgid "On Battery"
-msgstr ""
+msgstr "На Батерия"
 
 #: ../src//Plug.vala:123
 msgid "Display brightness:"
-msgstr ""
+msgstr "Екранна яркост:"
 
 #: ../src//Plug.vala:133
 msgid "Dim screen when inactive:"
-msgstr ""
+msgstr "Затъмни екрана при бездействие:"
 
 #: ../src//Plug.vala:167
 msgid "Sleep button:"
@@ -88,11 +90,11 @@ msgstr "Мощностно копче:"
 
 #: ../src//Plug.vala:186
 msgid "Sleep when inactive after:"
-msgstr ""
+msgstr "Приспи при бездействие след:"
 
 #: ../src//Plug.vala:197
 msgid "When power is critically low:"
-msgstr ""
+msgstr "Когато енергията е опасно малко:"
 
 #: ../src//ActionComboBox.vala:18
 msgid "Suspend"
