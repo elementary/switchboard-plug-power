@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-12-04 16:05+0100\n"
-"PO-Revision-Date: 2013-04-07 12:37+0000\n"
-"Last-Translator: Dani Pratomo <Unknown>\n"
+"PO-Revision-Date: 2014-12-17 04:56+0000\n"
+"Last-Translator: Yudha Yudhistira <yudhayudhistira94@yahoo.co.id>\n"
 "Language-Team: Indonesian <id@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-12-05 06:19+0000\n"
-"X-Generator: Launchpad (build 17274)\n"
+"X-Launchpad-Export-Date: 2014-12-17 07:00+0000\n"
+"X-Generator: Launchpad (build 17286)\n"
 "Language: id\n"
 
 #: ../src//TimeoutComboBox.vala:20
@@ -52,7 +52,7 @@ msgstr "Daya"
 
 #: ../src//Plug.vala:36
 msgid "Set display brightness, power button behavior, and sleep preferences"
-msgstr ""
+msgstr "Atur kecerahan layar, fungsi tombol power, dan mode tidur"
 
 #: ../src//Plug.vala:98
 msgid "Plugged In"
@@ -64,11 +64,11 @@ msgstr ""
 
 #: ../src//Plug.vala:123
 msgid "Display brightness:"
-msgstr ""
+msgstr "Kecerahan layar:"
 
 #: ../src//Plug.vala:133
 msgid "Dim screen when inactive:"
-msgstr ""
+msgstr "Redupkan layar ketika tidak aktif:"
 
 #: ../src//Plug.vala:167
 msgid "Sleep button:"
@@ -84,15 +84,15 @@ msgstr ""
 
 #: ../src//Plug.vala:167
 msgid "Power button:"
-msgstr ""
+msgstr "Tombol power:"
 
 #: ../src//Plug.vala:186
 msgid "Sleep when inactive after:"
-msgstr ""
+msgstr "Masuk ke mode tidur ketika tidak aktif setelah:"
 
 #: ../src//Plug.vala:197
 msgid "When power is critically low:"
-msgstr ""
+msgstr "Ketika sumber daya sangat lemah:"
 
 #: ../src//ActionComboBox.vala:18
 msgid "Suspend"
