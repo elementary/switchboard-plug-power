@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-12-04 16:05+0100\n"
-"PO-Revision-Date: 2014-12-26 22:53+0000\n"
+"PO-Revision-Date: 2014-12-27 12:06+0000\n"
 "Last-Translator: Max_ym <b.maxym.naumtchyk@gmail.com>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-12-27 06:04+0000\n"
+"X-Launchpad-Export-Date: 2014-12-28 06:03+0000\n"
 "X-Generator: Launchpad (build 17286)\n"
 "Language: uk\n"
 
@@ -56,11 +56,11 @@ msgstr ""
 
 #: ../src//Plug.vala:98
 msgid "Plugged In"
-msgstr "Живлення від електромережі"
+msgstr "Живлення"
 
 #: ../src//Plug.vala:102
 msgid "On Battery"
-msgstr ""
+msgstr "Акумулятор"
 
 #: ../src//Plug.vala:123
 msgid "Display brightness:"
@@ -88,11 +88,11 @@ msgstr "Кнопка живлення:"
 
 #: ../src//Plug.vala:186
 msgid "Sleep when inactive after:"
-msgstr ""
+msgstr "Заснути, якщо неактивний:"
 
 #: ../src//Plug.vala:197
 msgid "When power is critically low:"
-msgstr ""
+msgstr "Коли заряд критично низький:"
 
 #: ../src//ActionComboBox.vala:18
 msgid "Suspend"
@@ -108,7 +108,7 @@ msgstr "Приспати"
 
 #: ../src//ActionComboBox.vala:21
 msgid "Ask me"
-msgstr "Запитувати"
+msgstr "Запитати в мене"
 
 #: ../src//ActionComboBox.vala:22
 msgid "Do nothing"
