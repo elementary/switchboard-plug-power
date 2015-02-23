@@ -3,42 +3,42 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-12-04 16:05+0100\n"
-"PO-Revision-Date: 2014-12-05 05:08+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2015-02-22 09:59+0000\n"
+"Last-Translator: Indrit Bashkimi <indrit.bashkimi@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-12-06 06:31+0000\n"
-"X-Generator: Launchpad (build 17274)\n"
+"X-Launchpad-Export-Date: 2015-02-23 05:31+0000\n"
+"X-Generator: Launchpad (build 17355)\n"
 
 #: ../src//TimeoutComboBox.vala:20
 msgid "Never"
-msgstr ""
+msgstr "Kurrë"
 
 #: ../src//TimeoutComboBox.vala:21
 msgid "5 min"
-msgstr ""
+msgstr "5 min"
 
 #: ../src//TimeoutComboBox.vala:22
 msgid "10 min"
-msgstr ""
+msgstr "10 min"
 
 #: ../src//TimeoutComboBox.vala:23
 msgid "15 min"
-msgstr ""
+msgstr "15 min"
 
 #: ../src//TimeoutComboBox.vala:24
 msgid "30 min"
-msgstr ""
+msgstr "30 min"
 
 #: ../src//TimeoutComboBox.vala:25
 msgid "45 min"
-msgstr ""
+msgstr "45 min"
 
 #: ../src//TimeoutComboBox.vala:26
 msgid "1 hour"
-msgstr ""
+msgstr "1 orë"
 
 #: ../src//Plug.vala:35
 msgid "Power"
@@ -47,22 +47,24 @@ msgstr ""
 #: ../src//Plug.vala:36
 msgid "Set display brightness, power button behavior, and sleep preferences"
 msgstr ""
+"Vendos ndriçimin e ekranit, sjelljen e butonin të ndezjes, dhe parapëlqimet "
+"e pezullimit"
 
 #: ../src//Plug.vala:98
 msgid "Plugged In"
-msgstr ""
+msgstr "I lidhur"
 
 #: ../src//Plug.vala:102
 msgid "On Battery"
-msgstr ""
+msgstr "Me bateri"
 
 #: ../src//Plug.vala:123
 msgid "Display brightness:"
-msgstr ""
+msgstr "Ndriçimi i ekranit:"
 
 #: ../src//Plug.vala:133
 msgid "Dim screen when inactive:"
-msgstr ""
+msgstr "Errëso ekranin kur je joaktiv:"
 
 #: ../src//Plug.vala:167
 msgid "Sleep button:"
@@ -70,7 +72,7 @@ msgstr ""
 
 #: ../src//Plug.vala:167
 msgid "Suspend button:"
-msgstr ""
+msgstr "Butoni i pezullimit:"
 
 #: ../src//Plug.vala:167
 msgid "Hibernate button:"
@@ -78,7 +80,7 @@ msgstr ""
 
 #: ../src//Plug.vala:167
 msgid "Power button:"
-msgstr ""
+msgstr "Butoni i ndezjes:"
 
 #: ../src//Plug.vala:186
 msgid "Sleep when inactive after:"
@@ -90,7 +92,7 @@ msgstr ""
 
 #: ../src//ActionComboBox.vala:18
 msgid "Suspend"
-msgstr ""
+msgstr "Pezullo"
 
 #: ../src//ActionComboBox.vala:19
 msgid "Shutdown"
@@ -102,8 +104,8 @@ msgstr ""
 
 #: ../src//ActionComboBox.vala:21
 msgid "Ask me"
-msgstr ""
+msgstr "Më pyet"
 
 #: ../src//ActionComboBox.vala:22
 msgid "Do nothing"
-msgstr ""
+msgstr "Mos bëj gjë"
