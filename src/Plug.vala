@@ -245,8 +245,9 @@ namespace Power {
 			Settings.sync ();
 
 			try {
-				Process.spawn_async (null, { "elementary-dpms-helper" },
-				                     Environ.get (), SpawnFlags.SEARCH_PATH, null, null);
+				Process.spawn_async (null, { "elementary-dpms-helper" }, Environ.get (),
+				    SpawnFlags.SEARCH_PATH|SpawnFlags.STDERR_TO_DEV_NULL|SpawnFlags.STDOUT_TO_DEV_NULL,
+				    null, null);
 			} catch (SpawnError e) {
 				warning ("Failed to reset dpms settings: %s", e.message);
 			}
