@@ -1,6 +1,7 @@
 namespace Power {
 	class TimeoutComboBox : Gtk.ComboBoxText {
 	
+		private GLib.Settings schema;
 		private string key;
 		
 		private const int SECS_IN_MINUTE = 60;
@@ -11,11 +12,13 @@ namespace Power {
 			15 * SECS_IN_MINUTE,
 			30 * SECS_IN_MINUTE,
 			45 * SECS_IN_MINUTE,
-			60 * SECS_IN_MINUTE
+			60 * SECS_IN_MINUTE,
+			120 * SECS_IN_MINUTE
 		};
 		
-		public TimeoutComboBox (string key) {
+		public TimeoutComboBox (GLib.Settings schema, string key) {
 			this.key = key;
+			this.schema = schema;
 			
 			this.append_text (_("Never"));
 			this.append_text (_("5 min"));
@@ -24,17 +27,18 @@ namespace Power {
 			this.append_text (_("30 min"));
 			this.append_text (_("45 min"));
 			this.append_text (_("1 hour"));
+			this.append_text (_("2 hours"));
 			
 			this.hexpand = true;
 			
 			update_combo ();
 			
 			this.changed.connect (update_settings);
-			settings.changed[key].connect (update_combo);
+			this.schema.changed[key].connect (update_combo);
 		}
 		
 		private void update_settings () {
-			settings.set_int (key, timeout[active]);
+			schema.set_int (key, timeout[active]);
 		}
 		
 		// find closest timeout to our level
@@ -52,7 +56,7 @@ namespace Power {
 		}
 	
 		private void update_combo () {
-			int val = settings.get_int (key);
+			int val = schema.get_int (key);
 			
 			// need to process value to comply our timeout level
 			this.active = find_closest (val);
