@@ -28,6 +28,7 @@ namespace Power {
 		private PowerSettings screen;
 		private UPowerSettings upower;
 		private Gtk.SizeGroup label_size;
+		private GLib.Settings pantheon_dpms_settings;
 
 		public Plug () {
 			Object (category: Category.HARDWARE,
@@ -37,6 +38,7 @@ namespace Power {
 				icon: "preferences-system-power");
 
 			settings = new GLib.Settings ("org.gnome.settings-daemon.plugins.power");
+			pantheon_dpms_settings = new GLib.Settings ("org.pantheon.dpms");
 			try {
 				screen = Bus.get_proxy_sync (BusType.SESSION,
 								"org.gnome.SettingsDaemon",
@@ -183,21 +185,29 @@ namespace Power {
 			grid.column_spacing = 12;
 			grid.row_spacing = 12;
 
-			var timeout_label = new Gtk.Label (_("Sleep when inactive after:"));
-			timeout_label.xalign = 1.0f;
-			label_size.add_widget (timeout_label);
+			var sleep_timeout_label = new Gtk.Label (_("Sleep when inactive after:"));
+			sleep_timeout_label.xalign = 1.0f;
+			label_size.add_widget (sleep_timeout_label);
+
+			var screen_timeout_label = new Gtk.Label (_("Turn off screen when inactive after:"));
+			screen_timeout_label.xalign = 1.0f;
+			label_size.add_widget (screen_timeout_label);
 
 			var scale_settings = @"sleep-inactive-$type-timeout";
-			var timeout = new TimeoutComboBox(scale_settings);
+			var sleep_timeout = new TimeoutComboBox (settings, scale_settings);
+			var screen_timeout = new TimeoutComboBox (pantheon_dpms_settings, "standby-time");
+			screen_timeout.changed.connect (run_dpms_helper);
 		
-			grid.attach (timeout_label, 0, 0, 1, 1);
-			grid.attach (timeout, 1, 0, 1, 1);
+			grid.attach (sleep_timeout_label, 0, 0, 1, 1);
+			grid.attach (sleep_timeout, 1, 0, 1, 1);
+			grid.attach (screen_timeout_label, 0, 2, 1, 1);
+			grid.attach (screen_timeout, 1, 2, 1, 1);
 		
 			if (type != "ac") {
 				var critical_box = new ActionComboBox (_("When power is critically low:"), "critical-battery-action");
-				grid.attach (critical_box.label, 0, 2, 1, 1);
+				grid.attach (critical_box.label, 0, 4, 1, 1);
 				label_size.add_widget (critical_box.label);
-				grid.attach (critical_box, 1, 2, 1, 1);
+				grid.attach (critical_box, 1, 4, 1, 1);
 			}
 			
 			return grid;
@@ -228,6 +238,18 @@ namespace Power {
 				warning ("Laptop detect not find");
 				/* TODO check upower, and /proc files as laptop-detect does to find batteries */
 				return false;
+			}
+		}
+
+		private void run_dpms_helper () {
+			Settings.sync ();
+
+			try {
+				Process.spawn_async (null, { "elementary-dpms-helper" }, Environ.get (),
+				    SpawnFlags.SEARCH_PATH|SpawnFlags.STDERR_TO_DEV_NULL|SpawnFlags.STDOUT_TO_DEV_NULL,
+				    null, null);
+			} catch (SpawnError e) {
+				warning ("Failed to reset dpms settings: %s", e.message);
 			}
 		}
 
