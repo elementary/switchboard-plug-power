@@ -7,94 +7,48 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-04 16:05+0100\n"
-"PO-Revision-Date: 2015-01-07 16:10+0000\n"
+"POT-Creation-Date: 2015-03-03 08:44-0600\n"
+"PO-Revision-Date: 2015-03-04 03:03+0000\n"
 "Last-Translator: Adolfo Jayme <fitoschido@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-01-08 07:01+0000\n"
-"X-Generator: Launchpad (build 17298)\n"
+"X-Launchpad-Export-Date: 2015-03-04 05:46+0000\n"
+"X-Generator: Launchpad (build 17361)\n"
 "Language: es\n"
 
-#: ../src//TimeoutComboBox.vala:20
+#: ../src//TimeoutComboBox.vala:23
 msgid "Never"
 msgstr "Nunca"
 
-#: ../src//TimeoutComboBox.vala:21
+#: ../src//TimeoutComboBox.vala:24
 msgid "5 min"
 msgstr "5 min"
 
-#: ../src//TimeoutComboBox.vala:22
+#: ../src//TimeoutComboBox.vala:25
 msgid "10 min"
 msgstr "10 min"
 
-#: ../src//TimeoutComboBox.vala:23
+#: ../src//TimeoutComboBox.vala:26
 msgid "15 min"
 msgstr "15 min"
 
-#: ../src//TimeoutComboBox.vala:24
+#: ../src//TimeoutComboBox.vala:27
 msgid "30 min"
 msgstr "30 min"
 
-#: ../src//TimeoutComboBox.vala:25
+#: ../src//TimeoutComboBox.vala:28
 msgid "45 min"
 msgstr "45 min"
 
-#: ../src//TimeoutComboBox.vala:26
+#: ../src//TimeoutComboBox.vala:29
 msgid "1 hour"
 msgstr "1 hora"
 
-#: ../src//Plug.vala:35
-msgid "Power"
-msgstr "Energía"
-
-#: ../src//Plug.vala:36
-msgid "Set display brightness, power button behavior, and sleep preferences"
-msgstr ""
-"Ajustar el brillo de la pantalla, el comportamiento del botón de encendido y "
-"las preferencias de suspensión"
-
-#: ../src//Plug.vala:98
-msgid "Plugged In"
-msgstr "Conectado"
-
-#: ../src//Plug.vala:102
-msgid "On Battery"
-msgstr "Con batería"
-
-#: ../src//Plug.vala:123
-msgid "Display brightness:"
-msgstr "Brillo de la pantalla:"
-
-#: ../src//Plug.vala:133
-msgid "Dim screen when inactive:"
-msgstr "Oscurecer pantalla cuando esté inactiva:"
-
-#: ../src//Plug.vala:167
-msgid "Sleep button:"
-msgstr "Botón de suspensión:"
-
-#: ../src//Plug.vala:167
-msgid "Suspend button:"
-msgstr "Botón de suspensión:"
-
-#: ../src//Plug.vala:167
-msgid "Hibernate button:"
-msgstr "Botón de hibernación:"
-
-#: ../src//Plug.vala:167
-msgid "Power button:"
-msgstr "Botón de encendido:"
-
-#: ../src//Plug.vala:186
-msgid "Sleep when inactive after:"
-msgstr "Suspender cuando se esté inactivo después de:"
-
-#: ../src//Plug.vala:197
-msgid "When power is critically low:"
-msgstr "Cuando la energía esté a punto de agotarse:"
+#: ../src//TimeoutComboBox.vala:30
+msgid "2 hours"
+msgstr "2 horas"
 
 #: ../src//ActionComboBox.vala:18
 msgid "Suspend"
@@ -115,3 +69,57 @@ msgstr "Preguntarme"
 #: ../src//ActionComboBox.vala:22
 msgid "Do nothing"
 msgstr "No hacer nada"
+
+#: ../src//Plug.vala:36
+msgid "Power"
+msgstr "Energía"
+
+#: ../src//Plug.vala:37
+msgid "Set display brightness, power button behavior, and sleep preferences"
+msgstr ""
+"Ajustar el brillo de la pantalla, el comportamiento del botón de encendido y "
+"las preferencias de suspensión"
+
+#: ../src//Plug.vala:100
+msgid "Plugged In"
+msgstr "Conectado"
+
+#: ../src//Plug.vala:104
+msgid "On Battery"
+msgstr "Con batería"
+
+#: ../src//Plug.vala:125
+msgid "Display brightness:"
+msgstr "Brillo de la pantalla:"
+
+#: ../src//Plug.vala:135
+msgid "Dim screen when inactive:"
+msgstr "Oscurecer pantalla cuando esté inactiva:"
+
+#: ../src//Plug.vala:169
+msgid "Sleep button:"
+msgstr "Botón de suspensión:"
+
+#: ../src//Plug.vala:169
+msgid "Suspend button:"
+msgstr "Botón de suspensión:"
+
+#: ../src//Plug.vala:169
+msgid "Hibernate button:"
+msgstr "Botón de hibernación:"
+
+#: ../src//Plug.vala:169
+msgid "Power button:"
+msgstr "Botón de encendido:"
+
+#: ../src//Plug.vala:188
+msgid "Sleep when inactive after:"
+msgstr "Suspender cuando se esté inactivo después de:"
+
+#: ../src//Plug.vala:192
+msgid "Turn off screen when inactive after:"
+msgstr "Apagar la pantalla si está inactiva por:"
+
+#: ../src//Plug.vala:207
+msgid "When power is critically low:"
+msgstr "Cuando la energía esté a punto de agotarse:"
