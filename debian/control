@@ -14,6 +14,7 @@ Package: switchboard-plug-power
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}, laptop-detect
 Enhances: switchboard
+Recommends: elementary-dpms-helper
 Description: Power plug for Switchboard
  This plug configures system power consumption.
 
