@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-03-03 08:44-0600\n"
-"PO-Revision-Date: 2015-03-06 14:43+0000\n"
-"Last-Translator: Phillip Sz <Unknown>\n"
+"PO-Revision-Date: 2015-03-08 19:38+0000\n"
+"Last-Translator: UweS <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-03-07 05:40+0000\n"
+"X-Launchpad-Export-Date: 2015-03-09 05:54+0000\n"
 "X-Generator: Launchpad (build 17383)\n"
 "Language: de\n"
 
@@ -118,7 +118,7 @@ msgstr "Bei Inaktivität schlafen legen nach:"
 
 #: ../src//Plug.vala:192
 msgid "Turn off screen when inactive after:"
-msgstr ""
+msgstr "Bildschirm ausschalten nach einer Inaktivität von:"
 
 #: ../src//Plug.vala:207
 msgid "When power is critically low:"
