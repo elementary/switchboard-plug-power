@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-03-03 08:44-0600\n"
-"PO-Revision-Date: 2014-09-18 23:18+0000\n"
-"Last-Translator: MinSik CHO <Unknown>\n"
+"PO-Revision-Date: 2015-03-21 19:13+0000\n"
+"Last-Translator: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-03-04 05:46+0000\n"
-"X-Generator: Launchpad (build 17361)\n"
+"X-Launchpad-Export-Date: 2015-03-22 05:26+0000\n"
+"X-Generator: Launchpad (build 17405)\n"
 
 #: ../src//TimeoutComboBox.vala:23
 msgid "Never"
@@ -31,7 +31,7 @@ msgstr "10 분"
 
 #: ../src//TimeoutComboBox.vala:26
 msgid "15 min"
-msgstr ""
+msgstr "15 분"
 
 #: ../src//TimeoutComboBox.vala:27
 msgid "30 min"
@@ -39,7 +39,7 @@ msgstr "30 분"
 
 #: ../src//TimeoutComboBox.vala:28
 msgid "45 min"
-msgstr ""
+msgstr "45 분"
 
 #: ../src//TimeoutComboBox.vala:29
 msgid "1 hour"
@@ -47,7 +47,7 @@ msgstr "1시간"
 
 #: ../src//TimeoutComboBox.vala:30
 msgid "2 hours"
-msgstr ""
+msgstr "2 시간"
 
 #: ../src//ActionComboBox.vala:18
 msgid "Suspend"
@@ -75,7 +75,7 @@ msgstr "전원"
 
 #: ../src//Plug.vala:37
 msgid "Set display brightness, power button behavior, and sleep preferences"
-msgstr ""
+msgstr "화면 밝기, 파워 버튼  동작, 슬립모드 설정하기"
 
 #: ../src//Plug.vala:100
 msgid "Plugged In"
@@ -87,7 +87,7 @@ msgstr "배터리 사용 시"
 
 #: ../src//Plug.vala:125
 msgid "Display brightness:"
-msgstr ""
+msgstr "화면 밝기:"
 
 #: ../src//Plug.vala:135
 msgid "Dim screen when inactive:"
@@ -115,7 +115,7 @@ msgstr "다음 시간 후에 절전 모드로 전환:"
 
 #: ../src//Plug.vala:192
 msgid "Turn off screen when inactive after:"
-msgstr ""
+msgstr "활동이 없고 얼마 후 화면을 끌 시간:"
 
 #: ../src//Plug.vala:207
 msgid "When power is critically low:"
