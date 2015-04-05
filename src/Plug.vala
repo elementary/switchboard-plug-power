@@ -175,6 +175,15 @@ namespace Power {
 				label_size.add_widget (box.label);
 				grid.attach (box, 1, i+3, 1, 1);
 			}
+
+                        var screen_timeout_label = new Gtk.Label (_("Turn off screen when inactive after:"));
+                        label_size.add_widget (screen_timeout_label);
+                        screen_timeout_label.xalign = 1.0f;
+                        var screen_timeout = new TimeoutComboBox (pantheon_dpms_settings, "standby-time");
+                        screen_timeout.changed.connect (run_dpms_helper);
+
+                        grid.attach (screen_timeout_label, 0, labels.length+3, 1, 1);
+                        grid.attach (screen_timeout, 1, labels.length+3, 1, 1);
 			
 			return grid;
 		}
@@ -189,25 +198,17 @@ namespace Power {
 			sleep_timeout_label.xalign = 1.0f;
 			label_size.add_widget (sleep_timeout_label);
 
-			var screen_timeout_label = new Gtk.Label (_("Turn off screen when inactive after:"));
-			screen_timeout_label.xalign = 1.0f;
-			label_size.add_widget (screen_timeout_label);
-
 			var scale_settings = @"sleep-inactive-$type-timeout";
 			var sleep_timeout = new TimeoutComboBox (settings, scale_settings);
-			var screen_timeout = new TimeoutComboBox (pantheon_dpms_settings, "standby-time");
-			screen_timeout.changed.connect (run_dpms_helper);
 		
 			grid.attach (sleep_timeout_label, 0, 0, 1, 1);
 			grid.attach (sleep_timeout, 1, 0, 1, 1);
-			grid.attach (screen_timeout_label, 0, 2, 1, 1);
-			grid.attach (screen_timeout, 1, 2, 1, 1);
 		
 			if (type != "ac") {
 				var critical_box = new ActionComboBox (_("When power is critically low:"), "critical-battery-action");
-				grid.attach (critical_box.label, 0, 4, 1, 1);
+				grid.attach (critical_box.label, 0, 2, 1, 1);
 				label_size.add_widget (critical_box.label);
-				grid.attach (critical_box, 1, 4, 1, 1);
+				grid.attach (critical_box, 1, 2, 1, 1);
 			}
 			
 			return grid;
