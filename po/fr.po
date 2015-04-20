@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-03-03 08:44-0600\n"
-"PO-Revision-Date: 2015-03-26 18:28+0000\n"
-"Last-Translator: TcodingT <TcodingT@gmail.com>\n"
+"PO-Revision-Date: 2015-04-19 09:52+0000\n"
+"Last-Translator: Corentin Noël <corentin@elementaryos.org>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-03-27 05:30+0000\n"
-"X-Generator: Launchpad (build 17413)\n"
+"X-Launchpad-Export-Date: 2015-04-20 06:05+0000\n"
+"X-Generator: Launchpad (build 17430)\n"
 "Language: fr\n"
 
 #: ../src//TimeoutComboBox.vala:23
@@ -98,7 +98,7 @@ msgstr "Réduire la luminosité si inactif :"
 
 #: ../src//Plug.vala:169
 msgid "Sleep button:"
-msgstr "Bouton de mise en veille :"
+msgstr "Bouton d'arrêt :"
 
 #: ../src//Plug.vala:169
 msgid "Suspend button:"
@@ -114,11 +114,11 @@ msgstr "Bouton power :"
 
 #: ../src//Plug.vala:188
 msgid "Sleep when inactive after:"
-msgstr "Hiberner si inactif après :"
+msgstr "Hiberner si inactif depuis :"
 
 #: ../src//Plug.vala:192
 msgid "Turn off screen when inactive after:"
-msgstr ""
+msgstr "Éteindre l'écran si inactif depuis :"
 
 #: ../src//Plug.vala:207
 msgid "When power is critically low:"
