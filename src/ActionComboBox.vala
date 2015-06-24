@@ -13,7 +13,7 @@ namespace Power {
 			this.key = key;
 			this.label = new Gtk.Label (label);
 			this.label.halign = Gtk.Align.END;
-			this.label.xalign = 1.0f;
+			((Gtk.Misc) this.label).xalign = 1.0f;
 
 			this.append_text (_("Suspend"));
 			this.append_text (_("Shutdown"));
