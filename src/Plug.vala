@@ -123,7 +123,7 @@ namespace Power {
 			grid.row_spacing = 12;
 
 			var brightness_label = new Gtk.Label (_("Display brightness:"));
-			brightness_label.xalign = 1.0f;
+			((Gtk.Misc) brightness_label).xalign = 1.0f;
 			label_size.add_widget (brightness_label);
 			brightness_label.halign = Gtk.Align.END;
 
@@ -133,7 +133,7 @@ namespace Power {
 			scale.width_request = 480;
 
 			var dim_label = new Gtk.Label (_("Dim screen when inactive:"));
-			dim_label.xalign = 1.0f;
+			((Gtk.Misc) dim_label).xalign = 1.0f;
 			var dim_switch = new Gtk.Switch ();
 			dim_switch.halign = Gtk.Align.START;
 
@@ -178,7 +178,7 @@ namespace Power {
 
                         var screen_timeout_label = new Gtk.Label (_("Turn off screen when inactive after:"));
                         label_size.add_widget (screen_timeout_label);
-                        screen_timeout_label.xalign = 1.0f;
+                        ((Gtk.Misc) screen_timeout_label).xalign = 1.0f;
                         var screen_timeout = new TimeoutComboBox (pantheon_dpms_settings, "standby-time");
                         screen_timeout.changed.connect (run_dpms_helper);
 
@@ -195,7 +195,7 @@ namespace Power {
 			grid.row_spacing = 12;
 
 			var sleep_timeout_label = new Gtk.Label (_("Sleep when inactive after:"));
-			sleep_timeout_label.xalign = 1.0f;
+			((Gtk.Misc) sleep_timeout_label).xalign = 1.0f;
 			label_size.add_widget (sleep_timeout_label);
 
 			var scale_settings = @"sleep-inactive-$type-timeout";
