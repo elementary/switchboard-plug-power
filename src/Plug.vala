@@ -139,16 +139,35 @@ namespace Power {
 
 			settings.bind ("idle-dim", dim_switch, "active", SettingsBindFlags.DEFAULT);
 
+			// Checking if device is a laptop or desktop. If it's a desktop, hide the brightness scale
+			// Prevents plug freezing on desktops.
+			bool show_brightness = false;
 			try {
-				// scale.set_value (screen.Brightness);
-				scale.set_value (screen.GetPercentage ());
+				var power_devices = upower.EnumerateDevices ();
+				foreach (string device in power_devices) {
+					if (device.contains ("battery")) {
+						show_brightness = true;
+					}
+				}
+
+				if (show_brightness) {
+					scale.set_value (screen.GetPercentage ());
+				} else {
+					warning ("No battery found, hiding brightness settings");
+				}
+
 			} catch (Error e) {
 				warning ("Brightness setter not available, hiding brightness settings");
+				show_brightness = false;
+			}
+
+			if (show_brightness == false) {
 				brightness_label.no_show_all = true;
 				scale.no_show_all = true;
 				dim_label.no_show_all = true;
 				dim_switch.no_show_all = true;
 			}
+
 			scale.value_changed.connect (() => {
 				var val = (int) scale.get_value ();
 				try {
