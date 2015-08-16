@@ -14,6 +14,8 @@ set (PLUGTITLE "Power")
 set (PLUGDESCRIPTION "Power")
 # The symbolic name of the Icon to use for the plug
 set (PLUGICON "preferences-system-power")
+# Set the version for the plug
+set (VERSION "0.2.1")
 
 project (pantheon-power)
 
