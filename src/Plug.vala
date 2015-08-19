@@ -235,13 +235,19 @@ namespace Power {
 
 		private bool laptop_detect () {
 			string test_laptop_detect = Environment.find_program_in_path ("laptop-detect");
+			if (test_laptop_detect == null && 
+				FileUtils.test ("/usr/sbin/laptop-detect", FileTest.EXISTS) &&
+				FileUtils.test ("/usr/sbin/laptop-detect", FileTest.IS_REGULAR) &&
+				FileUtils.test ("/usr/sbin/laptop-detect", FileTest.IS_EXECUTABLE)) {
+				test_laptop_detect = "/usr/sbin/laptop-detect";
+			}
 			if (test_laptop_detect != null) {
 				int exit_status;
 				string standard_output, standard_error;
 				try {
-					Process.spawn_command_line_sync ("laptop-detect", out standard_output,
-																	out standard_error,
-																	out exit_status);
+					Process.spawn_command_line_sync (test_laptop_detect, out standard_output,
+																		 out standard_error,
+																		 out exit_status);
 					if (exit_status == 0) {
 						debug ("Laptop detect return true");
 						return true;
