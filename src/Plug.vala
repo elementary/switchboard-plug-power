@@ -4,12 +4,14 @@ namespace Power {
 	Gtk.Box stack_container;
 	
 	[DBus (name = "org.gnome.SettingsDaemon.Power.Screen")]
-
 	interface PowerSettings : GLib.Object {
+#if OLD_GSD
 		public abstract uint GetPercentage () throws IOError;
 		public abstract uint SetPercentage (uint percentage) throws IOError;
+#else
 		// use the Brightness property after updateing g-s-d to 3.10 or above
-		// public abstract int Brightness {get; set; }
+		public abstract int Brightness {get; set; }
+#endif
 	}
 
 	[DBus (name = "org.freedesktop.UPower")]
@@ -151,7 +153,11 @@ namespace Power {
 				}
 
 				if (show_brightness) {
+#if OLD_GSD
 					scale.set_value (screen.GetPercentage ());
+#else
+					scale.set_value (screen.Brightness);
+#endif
 				} else {
 					warning ("No battery found, hiding brightness settings");
 				}
@@ -171,8 +177,11 @@ namespace Power {
 			scale.value_changed.connect (() => {
 				var val = (int) scale.get_value ();
 				try {
-					// screen.Brightness = val;
+#if OLD_GSD
 					screen.SetPercentage (val);
+#else
+					screen.Brightness = val;
+#endif
 				} catch (IOError ioe) {
 					// ignore, because if we have GetPercentage, we have SetPercentage
 					// otherwise the scale won't be visible to change
