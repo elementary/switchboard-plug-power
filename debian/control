@@ -6,7 +6,8 @@ Build-Depends: cmake,
                debhelper (>= 9),
                libgranite-dev,
                libswitchboard-2.0-dev,
-               valac (>= 0.22)
+               valac (>= 0.22),
+               gnome-settings-daemon-dev
 Standards-Version: 3.9.2
 Homepage: https://launchpad.net/switchboard-plug-power
 
