@@ -1,41 +1,60 @@
+/*
+ *   Copyright (C)  2015 Pantheon Developers (http://launchpad.net/switchboard-plug-power)
+ *
+ *  This program or library is free software; you can redistribute it
+ *  and/or modify it under the terms of the GNU Lesser General Public
+ *  License as published by the Free Software Foundation; either
+ *  version 3 of the License, or (at your option) any later version.
+ *
+ *  This library is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ *  Lesser General Public License for more details.
+ *
+ *  You should have received a copy of the GNU Lesser General
+ *  Public License along with this library; if not, write to the
+ *  Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+ *  Boston, MA 02110-1301 USA.
+ */
+
 namespace Power {
-	class ActionComboBox : Gtk.ComboBoxText {
-	
-		public Gtk.Label label;
-		private string key;
-		
-		// this maps combobox indices to gsettings enums
-		private int[] map_to_sett = {1, 2, 3, 4, 5};
-		// and vice-versa
-		private int[] map_to_list = {4, 0, 1, 2, 3, 4};
-		
-		public ActionComboBox (string label, string key) {
-			this.key = key;
-			this.label = new Gtk.Label (label);
-			this.label.halign = Gtk.Align.END;
-			((Gtk.Misc) this.label).xalign = 1.0f;
+    class ActionComboBox : Gtk.ComboBoxText {
 
-			this.append_text (_("Suspend"));
-			this.append_text (_("Shutdown"));
-			this.append_text (_("Hibernate"));
-			this.append_text (_("Ask me"));
-			this.append_text (_("Do nothing"));
-		
-			this.hexpand = true;
-		
-			update_combo ();
-		
-			this.changed.connect (update_settings);
-			settings.changed[key].connect (update_combo);
-		}
+        public Gtk.Label label;
+        private string key;
 
-		private void update_settings () {
-			settings.set_enum (key, map_to_sett[active]);
-		}
-	
-		private void update_combo () {
-			int val = settings.get_enum (key);
-			active = map_to_list [val];
-		}
-	}
+        // this maps combobox indices to gsettings enums
+        private int[] map_to_sett = {1, 2, 3, 4, 5};
+        // and vice-versa
+        private int[] map_to_list = {4, 0, 1, 2, 3, 4};
+
+        public ActionComboBox (string label_name, string key_value) {
+            key = key_value;
+            label = new Gtk.Label (label_name);
+            label.halign = Gtk.Align.END;
+            ((Gtk.Misc) label).xalign = 1.0f;
+
+            append_text (_("Suspend"));
+            append_text (_("Shutdown"));
+            append_text (_("Hibernate"));
+            append_text (_("Ask me"));
+            append_text (_("Do nothing"));
+
+            hexpand = true;
+
+            update_combo ();
+
+            changed.connect (update_settings);
+            settings.changed[key].connect (update_combo);
+        }
+
+        private void update_settings () {
+            settings.set_enum (key, map_to_sett[active]);
+        }
+
+        private void update_combo () {
+            int val = settings.get_enum (key);
+            active = map_to_list [val];
+        }
+    }
 }
