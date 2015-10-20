@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-03-03 08:44-0600\n"
-"PO-Revision-Date: 2015-03-16 18:19+0000\n"
-"Last-Translator: ProsjektX <Unknown>\n"
+"PO-Revision-Date: 2015-10-19 17:59+0000\n"
+"Last-Translator: Mathias Bynke <Unknown>\n"
 "Language-Team: Norwegian Bokmal <nb@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-09-22 05:56+0000\n"
-"X-Generator: Launchpad (build 17749)\n"
+"X-Launchpad-Export-Date: 2015-10-20 05:38+0000\n"
+"X-Generator: Launchpad (build 17812)\n"
 "Language: nb\n"
 
 #: ../src//TimeoutComboBox.vala:23
@@ -72,7 +72,7 @@ msgstr "Ikke gjør noe"
 
 #: ../src//Plug.vala:36
 msgid "Power"
-msgstr "Energistyring"
+msgstr "Strøm"
 
 #: ../src//Plug.vala:37
 msgid "Set display brightness, power button behavior, and sleep preferences"
