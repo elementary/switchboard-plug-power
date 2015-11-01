@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-03-03 08:44-0600\n"
-"PO-Revision-Date: 2015-07-21 23:14+0000\n"
-"Last-Translator: Leandro Vital <Unknown>\n"
+"PO-Revision-Date: 2015-10-31 22:20+0000\n"
+"Last-Translator: Júlio Virgínio <juliomatheus@outlook.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-09-22 05:56+0000\n"
-"X-Generator: Launchpad (build 17749)\n"
+"X-Launchpad-Export-Date: 2015-11-01 05:32+0000\n"
+"X-Generator: Launchpad (build 17838)\n"
 "Language: pt_BR\n"
 
 #: ../src//TimeoutComboBox.vala:23
@@ -78,7 +78,7 @@ msgstr "Energia"
 msgid "Set display brightness, power button behavior, and sleep preferences"
 msgstr ""
 "Definir brilho da tela, comportamento do botão de energia e preferências de "
-"dormir"
+"suspensão"
 
 #: ../src//Plug.vala:100
 msgid "Plugged In"
@@ -114,7 +114,7 @@ msgstr "Botão liga/desliga:"
 
 #: ../src//Plug.vala:188
 msgid "Sleep when inactive after:"
-msgstr "Dormir quando inativo depois que:"
+msgstr "Suspender quando inativo após:"
 
 #: ../src//Plug.vala:192
 msgid "Turn off screen when inactive after:"
