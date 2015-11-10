@@ -1,3 +1,9 @@
+switchboard-plug-power (0.2.2) trusty; urgency=medium
+
+  * New upstream release.
+
+ -- Cody Garver <cody@elementary.io>  Tue, 10 Nov 2015 06:58:38 -0600
+
 switchboard-plug-power (0.2.1) trusty; urgency=medium
 
   * New upstream release.
