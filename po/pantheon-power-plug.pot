@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-03 08:44-0600\n"
+"POT-Creation-Date: 2015-11-15 15:18+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,106 +17,134 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src//TimeoutComboBox.vala:23
-msgid "Never"
-msgstr ""
-
-#: ../src//TimeoutComboBox.vala:24
-msgid "5 min"
-msgstr ""
-
-#: ../src//TimeoutComboBox.vala:25
-msgid "10 min"
-msgstr ""
-
-#: ../src//TimeoutComboBox.vala:26
-msgid "15 min"
-msgstr ""
-
-#: ../src//TimeoutComboBox.vala:27
-msgid "30 min"
-msgstr ""
-
-#: ../src//TimeoutComboBox.vala:28
-msgid "45 min"
-msgstr ""
-
-#: ../src//TimeoutComboBox.vala:29
-msgid "1 hour"
-msgstr ""
-
-#: ../src//TimeoutComboBox.vala:30
-msgid "2 hours"
-msgstr ""
-
-#: ../src//ActionComboBox.vala:18
-msgid "Suspend"
-msgstr ""
-
-#: ../src//ActionComboBox.vala:19
-msgid "Shutdown"
-msgstr ""
-
-#: ../src//ActionComboBox.vala:20
-msgid "Hibernate"
-msgstr ""
-
-#: ../src//ActionComboBox.vala:21
-msgid "Ask me"
-msgstr ""
-
-#: ../src//ActionComboBox.vala:22
-msgid "Do nothing"
-msgstr ""
-
-#: ../src//Plug.vala:36
+#: ../src//Plug.vala:39
 msgid "Power"
 msgstr ""
 
-#: ../src//Plug.vala:37
+#: ../src//Plug.vala:40
 msgid "Set display brightness, power button behavior, and sleep preferences"
 msgstr ""
 
-#: ../src//Plug.vala:100
+#: ../src//Plug.vala:93
 msgid "Plugged In"
 msgstr ""
 
-#: ../src//Plug.vala:104
+#: ../src//Plug.vala:99
 msgid "On Battery"
 msgstr ""
 
-#: ../src//Plug.vala:125
+#: ../src//Plug.vala:133
+msgid "Some changes will not take effect until you restart this pc"
+msgstr ""
+
+#: ../src//Plug.vala:151
+msgid "Some settings require administrator rights to be changed"
+msgstr ""
+
+#: ../src//Plug.vala:186
 msgid "Display brightness:"
 msgstr ""
 
-#: ../src//Plug.vala:135
+#: ../src//Plug.vala:196
 msgid "Dim screen when inactive:"
 msgstr ""
 
-#: ../src//Plug.vala:169
+#: ../src//Plug.vala:237
 msgid "Sleep button:"
 msgstr ""
 
-#: ../src//Plug.vala:169
+#: ../src//Plug.vala:237
 msgid "Suspend button:"
 msgstr ""
 
-#: ../src//Plug.vala:169
+#: ../src//Plug.vala:237
 msgid "Hibernate button:"
 msgstr ""
 
-#: ../src//Plug.vala:169
+#: ../src//Plug.vala:237
 msgid "Power button:"
 msgstr ""
 
-#: ../src//Plug.vala:188
-msgid "Sleep when inactive after:"
-msgstr ""
-
-#: ../src//Plug.vala:192
+#: ../src//Plug.vala:249
 msgid "Turn off screen when inactive after:"
 msgstr ""
 
-#: ../src//Plug.vala:207
+#: ../src//Plug.vala:277
+msgid "Sleep when inactive after:"
+msgstr ""
+
+#: ../src//Plug.vala:287
+msgid "When docked and lid is closed:"
+msgstr ""
+
+#: ../src//Plug.vala:288
+msgid "When lid is closed:"
+msgstr ""
+
+#: ../src//Plug.vala:291
 msgid "When power is critically low:"
+msgstr ""
+
+#: ../src//TimeoutComboBox.vala:42
+msgid "Never"
+msgstr ""
+
+#: ../src//TimeoutComboBox.vala:43
+msgid "5 min"
+msgstr ""
+
+#: ../src//TimeoutComboBox.vala:44
+msgid "10 min"
+msgstr ""
+
+#: ../src//TimeoutComboBox.vala:45
+msgid "15 min"
+msgstr ""
+
+#: ../src//TimeoutComboBox.vala:46
+msgid "30 min"
+msgstr ""
+
+#: ../src//TimeoutComboBox.vala:47
+msgid "45 min"
+msgstr ""
+
+#: ../src//TimeoutComboBox.vala:48
+msgid "1 hour"
+msgstr ""
+
+#: ../src//TimeoutComboBox.vala:49
+msgid "2 hours"
+msgstr ""
+
+#: ../src//LidCloseActionComboBox.vala:32 ../src//ActionComboBox.vala:37
+msgid "Suspend"
+msgstr ""
+
+#: ../src//LidCloseActionComboBox.vala:33 ../src//ActionComboBox.vala:38
+msgid "Shutdown"
+msgstr ""
+
+#: ../src//LidCloseActionComboBox.vala:34
+msgid "Lock"
+msgstr ""
+
+#: ../src//LidCloseActionComboBox.vala:35
+msgid "Halt"
+msgstr ""
+
+#: ../src//LidCloseActionComboBox.vala:36 ../src//ActionComboBox.vala:41
+msgid "Do nothing"
+msgstr ""
+
+#: ../src//LidCloseActionComboBox.vala:38
+msgid "Not supported"
+msgstr ""
+
+#: ../src//ActionComboBox.vala:39
+msgid "Hibernate"
+msgstr ""
+
+#: ../src//ActionComboBox.vala:40
+msgid "Ask me"
 msgstr ""

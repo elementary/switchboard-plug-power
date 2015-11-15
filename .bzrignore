@@ -1,0 +1,9 @@
+build
+build/cli
+build/CMakeCache.txt
+build/CMakeFiles
+build/cmake_install.cmake
+build/data
+build/Makefile
+build/po
+build/src
