@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-03-03 08:44-0600\n"
-"PO-Revision-Date: 2014-12-09 19:53+0000\n"
-"Last-Translator: Long Do Hai <mailbox@thinky.cz>\n"
+"PO-Revision-Date: 2015-11-24 09:49+0000\n"
+"Last-Translator: Limeth <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-09-22 05:55+0000\n"
-"X-Generator: Launchpad (build 17749)\n"
+"X-Launchpad-Export-Date: 2015-11-25 05:30+0000\n"
+"X-Generator: Launchpad (build 17850)\n"
 
 #: ../src//TimeoutComboBox.vala:23
 msgid "Never"
@@ -47,7 +47,7 @@ msgstr "1 hod"
 
 #: ../src//TimeoutComboBox.vala:30
 msgid "2 hours"
-msgstr ""
+msgstr "2 hodiny"
 
 #: ../src//ActionComboBox.vala:18
 msgid "Suspend"
@@ -116,7 +116,7 @@ msgstr "Uspat při  nečinnosti po:"
 
 #: ../src//Plug.vala:192
 msgid "Turn off screen when inactive after:"
-msgstr ""
+msgstr "Vypnout obrazovku po neaktivitě delší než:"
 
 #: ../src//Plug.vala:207
 msgid "When power is critically low:"
