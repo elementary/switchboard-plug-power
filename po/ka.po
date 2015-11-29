@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-03-03 08:44-0600\n"
-"PO-Revision-Date: 2015-11-14 14:18+0000\n"
+"PO-Revision-Date: 2015-11-28 12:26+0000\n"
 "Last-Translator: Beqa Arabuli <arabulibeqa@yahoo.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-15 05:27+0000\n"
-"X-Generator: Launchpad (build 17845)\n"
+"X-Launchpad-Export-Date: 2015-11-29 05:25+0000\n"
+"X-Generator: Launchpad (build 17850)\n"
 
 #: ../src//TimeoutComboBox.vala:23
 msgid "Never"
@@ -54,7 +54,7 @@ msgstr "გამორთვა"
 
 #: ../src//ActionComboBox.vala:20
 msgid "Hibernate"
-msgstr "ძილის რეჟიმი"
+msgstr "გაქვავება"
 
 #: ../src//ActionComboBox.vala:21
 msgid "Ask me"
@@ -100,7 +100,7 @@ msgstr "შეჩერების ღილაკი:"
 
 #: ../src//Plug.vala:169
 msgid "Hibernate button:"
-msgstr "ძილის რეჟიმის ღილაკი:"
+msgstr "გაქვავების ღილაკი"
 
 #: ../src//Plug.vala:169
 msgid "Power button:"
