@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-03-03 08:44-0600\n"
-"PO-Revision-Date: 2015-01-03 14:11+0000\n"
-"Last-Translator: Piotr Strębski <strebski@o2.pl>\n"
+"PO-Revision-Date: 2015-12-07 11:52+0000\n"
+"Last-Translator: WuPe <wojtek2s@wp.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-09-22 05:56+0000\n"
-"X-Generator: Launchpad (build 17749)\n"
+"X-Launchpad-Export-Date: 2015-12-08 05:42+0000\n"
+"X-Generator: Launchpad (build 17862)\n"
 "Language: pl\n"
 
 #: ../src//TimeoutComboBox.vala:23
@@ -48,7 +48,7 @@ msgstr "1 godz."
 
 #: ../src//TimeoutComboBox.vala:30
 msgid "2 hours"
-msgstr ""
+msgstr "2 godziny"
 
 #: ../src//ActionComboBox.vala:18
 msgid "Suspend"
@@ -117,7 +117,7 @@ msgstr "Uśpij, gdy nieaktywny przez:"
 
 #: ../src//Plug.vala:192
 msgid "Turn off screen when inactive after:"
-msgstr ""
+msgstr "Wyłącz ekran, gdy jest nieaktywny przez:"
 
 #: ../src//Plug.vala:207
 msgid "When power is critically low:"
