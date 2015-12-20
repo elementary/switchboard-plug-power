@@ -54,7 +54,7 @@ namespace Power {
             Object (category: Category.HARDWARE,
                 code_name: "system-pantheon-power",
                 display_name: _("Power"),
-                description: _("Set display brightness, power button behavior, and sleep preferences"),
+                description: _("Configure display brightness, power buttons, and sleep behavior"),
                 icon: "preferences-system-power");
 
             settings = new GLib.Settings ("org.gnome.settings-daemon.plugins.power");
