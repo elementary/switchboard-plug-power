@@ -149,6 +149,13 @@ namespace Power {
             scale.hexpand = true;
             scale.width_request = 480;
 
+            var als_label = new Gtk.Label (_("Automatically adjust brightness:"));
+            ((Gtk.Misc) als_label).xalign = 1.0f;
+            var als_switch = new Gtk.Switch ();
+            als_switch.halign = Gtk.Align.START;
+
+            settings.bind ("ambient-enabled", als_switch, "active", SettingsBindFlags.DEFAULT);
+
             var dim_label = new Gtk.Label (_("Dim screen when inactive:"));
             ((Gtk.Misc) dim_label).xalign = 1.0f;
             var dim_switch = new Gtk.Switch ();
@@ -187,6 +194,8 @@ namespace Power {
                 scale.no_show_all = true;
                 dim_label.no_show_all = true;
                 dim_switch.no_show_all = true;
+                als_label.no_show_all = true;
+                als_switch.no_show_all = true;
             }
 
             scale.value_changed.connect (() => {
@@ -205,18 +214,19 @@ namespace Power {
 
             grid.attach (brightness_label, 0, 1, 1, 1);
             grid.attach (scale, 1, 1, 1, 1);
-
-            grid.attach (dim_label, 0, 2, 1, 1);
-            grid.attach (dim_switch, 1, 2, 1, 1);
+            grid.attach (als_label, 0, 2, 1, 1);
+            grid.attach (als_switch, 1, 2, 1, 1);
+            grid.attach (dim_label, 0, 3, 1, 1);
+            grid.attach (dim_switch, 1, 3, 1, 1);
 
             string[] labels = {_("Sleep button:"), _("Suspend button:"), _("Hibernate button:"), _("Power button:")};
             string[] keys = {"button-sleep", "button-suspend", "button-hibernate", "button-power"};
 
             for (int i = 0; i < labels.length; i++) {
                 var box = new ActionComboBox (labels[i], keys[i]);
-                grid.attach (box.label, 0, i+3, 1, 1);
+                grid.attach (box.label, 0, i+4, 1, 1);
                 label_size.add_widget (box.label);
-                grid.attach (box, 1, i+3, 1, 1);
+                grid.attach (box, 1, i+4, 1, 1);
             }
 
             var screen_timeout_label = new Gtk.Label (_("Turn off screen when inactive after:"));
@@ -225,8 +235,8 @@ namespace Power {
             var screen_timeout = new TimeoutComboBox (pantheon_dpms_settings, "standby-time");
             screen_timeout.changed.connect (run_dpms_helper);
 
-            grid.attach (screen_timeout_label, 0, labels.length+3, 1, 1);
-            grid.attach (screen_timeout, 1, labels.length+3, 1, 1);
+            grid.attach (screen_timeout_label, 0, labels.length+4, 1, 1);
+            grid.attach (screen_timeout, 1, labels.length+4, 1, 1);
 
             return grid;
         }
