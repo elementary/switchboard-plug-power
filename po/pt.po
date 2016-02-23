@@ -7,119 +7,121 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-03 08:44-0600\n"
+"POT-Creation-Date: 2016-02-22 13:55-0600\n"
 "PO-Revision-Date: 2015-03-16 00:13+0000\n"
 "Last-Translator: Pedro Monteiro <Unknown>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-09-22 05:56+0000\n"
-"X-Generator: Launchpad (build 17749)\n"
+"X-Launchpad-Export-Date: 2016-02-23 06:00+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
 "Language: pt\n"
 
-#: ../src//TimeoutComboBox.vala:23
-msgid "Never"
-msgstr "Nunca"
-
-#: ../src//TimeoutComboBox.vala:24
-msgid "5 min"
-msgstr "5 min."
-
-#: ../src//TimeoutComboBox.vala:25
-msgid "10 min"
-msgstr "10 min."
-
-#: ../src//TimeoutComboBox.vala:26
-msgid "15 min"
-msgstr "15 min"
-
-#: ../src//TimeoutComboBox.vala:27
-msgid "30 min"
-msgstr "30 min."
-
-#: ../src//TimeoutComboBox.vala:28
-msgid "45 min"
-msgstr "45 min"
-
-#: ../src//TimeoutComboBox.vala:29
-msgid "1 hour"
-msgstr "1 hora"
-
-#: ../src//TimeoutComboBox.vala:30
-msgid "2 hours"
-msgstr "2 horas"
-
-#: ../src//ActionComboBox.vala:18
+#: ../src/ActionComboBox.vala:37
 msgid "Suspend"
 msgstr "Suspender"
 
-#: ../src//ActionComboBox.vala:19
+#: ../src/ActionComboBox.vala:38
 msgid "Shutdown"
 msgstr "Encerrar"
 
-#: ../src//ActionComboBox.vala:20
+#: ../src/ActionComboBox.vala:39
 msgid "Hibernate"
 msgstr "Hibernar"
 
-#: ../src//ActionComboBox.vala:21
+#: ../src/ActionComboBox.vala:40
 msgid "Ask me"
 msgstr "Perguntar"
 
-#: ../src//ActionComboBox.vala:22
+#: ../src/ActionComboBox.vala:41
 msgid "Do nothing"
 msgstr "Não fazer nada"
 
-#: ../src//Plug.vala:36
+#: ../src/TimeoutComboBox.vala:42
+msgid "Never"
+msgstr "Nunca"
+
+#: ../src/TimeoutComboBox.vala:43
+msgid "5 min"
+msgstr "5 min."
+
+#: ../src/TimeoutComboBox.vala:44
+msgid "10 min"
+msgstr "10 min."
+
+#: ../src/TimeoutComboBox.vala:45
+msgid "15 min"
+msgstr "15 min"
+
+#: ../src/TimeoutComboBox.vala:46
+msgid "30 min"
+msgstr "30 min."
+
+#: ../src/TimeoutComboBox.vala:47
+msgid "45 min"
+msgstr "45 min"
+
+#: ../src/TimeoutComboBox.vala:48
+msgid "1 hour"
+msgstr "1 hora"
+
+#: ../src/TimeoutComboBox.vala:49
+msgid "2 hours"
+msgstr "2 horas"
+
+#: ../src/Plug.vala:56
 msgid "Power"
 msgstr "Energia"
 
-#: ../src//Plug.vala:37
-msgid "Set display brightness, power button behavior, and sleep preferences"
+#: ../src/Plug.vala:57
+msgid "Configure display brightness, power buttons, and sleep behavior"
 msgstr ""
-"Muda o brilho do ecrã, o comportamento do botão ligar/desligar e "
-"preferências de suspensão."
 
-#: ../src//Plug.vala:100
+#: ../src/Plug.vala:117
 msgid "Plugged In"
 msgstr "Ligado"
 
-#: ../src//Plug.vala:104
+#: ../src/Plug.vala:121
 msgid "On Battery"
 msgstr "Bateria"
 
-#: ../src//Plug.vala:125
+#: ../src/Plug.vala:142
 msgid "Display brightness:"
 msgstr "Brilho do Ecrã:"
 
-#: ../src//Plug.vala:135
+#: ../src/Plug.vala:152
+msgid "Automatically adjust brightness:"
+msgstr ""
+
+#: ../src/Plug.vala:159
 msgid "Dim screen when inactive:"
 msgstr "Escurecer ecrã quando inactivo:"
 
-#: ../src//Plug.vala:169
+#: ../src/Plug.vala:222
 msgid "Sleep button:"
 msgstr "Botão de dormir:"
 
-#: ../src//Plug.vala:169
+#: ../src/Plug.vala:222
 msgid "Suspend button:"
 msgstr "Botão de suspensão:"
 
-#: ../src//Plug.vala:169
+#: ../src/Plug.vala:222
 msgid "Hibernate button:"
 msgstr "Botão de hibernação:"
 
-#: ../src//Plug.vala:169
+#: ../src/Plug.vala:222
 msgid "Power button:"
 msgstr "Botão liga/desliga:"
 
-#: ../src//Plug.vala:188
-msgid "Sleep when inactive after:"
-msgstr "Suspender quando inativo por:"
-
-#: ../src//Plug.vala:192
+#: ../src/Plug.vala:232
 msgid "Turn off screen when inactive after:"
 msgstr "Apagar ecrã quando inativo por:"
 
-#: ../src//Plug.vala:207
+#: ../src/Plug.vala:250
+msgid "Sleep when inactive after:"
+msgstr "Suspender quando inativo por:"
+
+#: ../src/Plug.vala:261
 msgid "When power is critically low:"
 msgstr "Bateria no nível crítico:"

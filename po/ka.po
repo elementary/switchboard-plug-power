@@ -2,118 +2,120 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-03 08:44-0600\n"
+"POT-Creation-Date: 2016-02-22 13:55-0600\n"
 "PO-Revision-Date: 2015-11-28 12:26+0000\n"
 "Last-Translator: Beqa Arabuli <arabulibeqa@yahoo.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-29 05:25+0000\n"
-"X-Generator: Launchpad (build 17850)\n"
+"X-Launchpad-Export-Date: 2016-02-23 05:59+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
 
-#: ../src//TimeoutComboBox.vala:23
-msgid "Never"
-msgstr "არასოდეს"
-
-#: ../src//TimeoutComboBox.vala:24
-msgid "5 min"
-msgstr "5 წუთი"
-
-#: ../src//TimeoutComboBox.vala:25
-msgid "10 min"
-msgstr "10 წუთი"
-
-#: ../src//TimeoutComboBox.vala:26
-msgid "15 min"
-msgstr "15 წუთი"
-
-#: ../src//TimeoutComboBox.vala:27
-msgid "30 min"
-msgstr "30 წუთი"
-
-#: ../src//TimeoutComboBox.vala:28
-msgid "45 min"
-msgstr "45 წუთი"
-
-#: ../src//TimeoutComboBox.vala:29
-msgid "1 hour"
-msgstr "1 საათი"
-
-#: ../src//TimeoutComboBox.vala:30
-msgid "2 hours"
-msgstr "2 საათი"
-
-#: ../src//ActionComboBox.vala:18
+#: ../src/ActionComboBox.vala:37
 msgid "Suspend"
 msgstr "შეჩერება"
 
-#: ../src//ActionComboBox.vala:19
+#: ../src/ActionComboBox.vala:38
 msgid "Shutdown"
 msgstr "გამორთვა"
 
-#: ../src//ActionComboBox.vala:20
+#: ../src/ActionComboBox.vala:39
 msgid "Hibernate"
 msgstr "გაქვავება"
 
-#: ../src//ActionComboBox.vala:21
+#: ../src/ActionComboBox.vala:40
 msgid "Ask me"
 msgstr "მკითხე"
 
-#: ../src//ActionComboBox.vala:22
+#: ../src/ActionComboBox.vala:41
 msgid "Do nothing"
 msgstr "უქმად ყოფნა"
 
-#: ../src//Plug.vala:36
+#: ../src/TimeoutComboBox.vala:42
+msgid "Never"
+msgstr "არასოდეს"
+
+#: ../src/TimeoutComboBox.vala:43
+msgid "5 min"
+msgstr "5 წუთი"
+
+#: ../src/TimeoutComboBox.vala:44
+msgid "10 min"
+msgstr "10 წუთი"
+
+#: ../src/TimeoutComboBox.vala:45
+msgid "15 min"
+msgstr "15 წუთი"
+
+#: ../src/TimeoutComboBox.vala:46
+msgid "30 min"
+msgstr "30 წუთი"
+
+#: ../src/TimeoutComboBox.vala:47
+msgid "45 min"
+msgstr "45 წუთი"
+
+#: ../src/TimeoutComboBox.vala:48
+msgid "1 hour"
+msgstr "1 საათი"
+
+#: ../src/TimeoutComboBox.vala:49
+msgid "2 hours"
+msgstr "2 საათი"
+
+#: ../src/Plug.vala:56
 msgid "Power"
 msgstr "ელექტროენერგია"
 
-#: ../src//Plug.vala:37
-msgid "Set display brightness, power button behavior, and sleep preferences"
+#: ../src/Plug.vala:57
+msgid "Configure display brightness, power buttons, and sleep behavior"
 msgstr ""
-"ეკრანის სიკაშკაშის, ენერგიის ღილაკის მოქმედების და ძილის პარამეტრების "
-"მითითება"
 
-#: ../src//Plug.vala:100
+#: ../src/Plug.vala:117
 msgid "Plugged In"
 msgstr "შეერთებული"
 
-#: ../src//Plug.vala:104
+#: ../src/Plug.vala:121
 msgid "On Battery"
 msgstr "ბატარეაზე"
 
-#: ../src//Plug.vala:125
+#: ../src/Plug.vala:142
 msgid "Display brightness:"
 msgstr "ეკრანის სიკაშკაშე:"
 
-#: ../src//Plug.vala:135
+#: ../src/Plug.vala:152
+msgid "Automatically adjust brightness:"
+msgstr ""
+
+#: ../src/Plug.vala:159
 msgid "Dim screen when inactive:"
 msgstr "უმოქმედობისას ეკრანის დაბნელება:"
 
-#: ../src//Plug.vala:169
+#: ../src/Plug.vala:222
 msgid "Sleep button:"
 msgstr "ძილის ღილაკი:"
 
-#: ../src//Plug.vala:169
+#: ../src/Plug.vala:222
 msgid "Suspend button:"
 msgstr "შეჩერების ღილაკი:"
 
-#: ../src//Plug.vala:169
+#: ../src/Plug.vala:222
 msgid "Hibernate button:"
 msgstr "გაქვავების ღილაკი"
 
-#: ../src//Plug.vala:169
+#: ../src/Plug.vala:222
 msgid "Power button:"
 msgstr "ენერგიის ღილაკი:"
 
-#: ../src//Plug.vala:188
-msgid "Sleep when inactive after:"
-msgstr "ძილი მოცემულდროიანი უმოქმედობის შემდეგ:"
-
-#: ../src//Plug.vala:192
+#: ../src/Plug.vala:232
 msgid "Turn off screen when inactive after:"
 msgstr "ეკრანის გამორთვა მოცემულდროიანი უმოქმედობის შემდეგ:"
 
-#: ../src//Plug.vala:207
+#: ../src/Plug.vala:250
+msgid "Sleep when inactive after:"
+msgstr "ძილი მოცემულდროიანი უმოქმედობის შემდეგ:"
+
+#: ../src/Plug.vala:261
 msgid "When power is critically low:"
 msgstr "როდესაც ენერგია კრიტიკულად დაბალია:"

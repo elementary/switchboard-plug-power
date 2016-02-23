@@ -7,117 +7,121 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-03 08:44-0600\n"
+"POT-Creation-Date: 2016-02-22 13:55-0600\n"
 "PO-Revision-Date: 2015-04-12 02:12+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-09-22 05:56+0000\n"
-"X-Generator: Launchpad (build 17749)\n"
+"X-Launchpad-Export-Date: 2016-02-23 06:00+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
 "Language: \n"
 
-#: ../src//TimeoutComboBox.vala:23
-msgid "Never"
-msgstr "永不"
-
-#: ../src//TimeoutComboBox.vala:24
-msgid "5 min"
-msgstr "5 分鐘"
-
-#: ../src//TimeoutComboBox.vala:25
-msgid "10 min"
-msgstr "10 分鐘"
-
-#: ../src//TimeoutComboBox.vala:26
-msgid "15 min"
-msgstr "15 分鐘"
-
-#: ../src//TimeoutComboBox.vala:27
-msgid "30 min"
-msgstr "30 分鐘"
-
-#: ../src//TimeoutComboBox.vala:28
-msgid "45 min"
-msgstr "45 分鐘"
-
-#: ../src//TimeoutComboBox.vala:29
-msgid "1 hour"
-msgstr "1 小時"
-
-#: ../src//TimeoutComboBox.vala:30
-msgid "2 hours"
-msgstr "2 小時"
-
-#: ../src//ActionComboBox.vala:18
+#: ../src/ActionComboBox.vala:37
 msgid "Suspend"
 msgstr "暫停"
 
-#: ../src//ActionComboBox.vala:19
+#: ../src/ActionComboBox.vala:38
 msgid "Shutdown"
 msgstr "關機"
 
-#: ../src//ActionComboBox.vala:20
+#: ../src/ActionComboBox.vala:39
 msgid "Hibernate"
 msgstr "休眠"
 
-#: ../src//ActionComboBox.vala:21
+#: ../src/ActionComboBox.vala:40
 msgid "Ask me"
 msgstr "詢問我"
 
-#: ../src//ActionComboBox.vala:22
+#: ../src/ActionComboBox.vala:41
 msgid "Do nothing"
 msgstr "什麼都不做"
 
-#: ../src//Plug.vala:36
+#: ../src/TimeoutComboBox.vala:42
+msgid "Never"
+msgstr "永不"
+
+#: ../src/TimeoutComboBox.vala:43
+msgid "5 min"
+msgstr "5 分鐘"
+
+#: ../src/TimeoutComboBox.vala:44
+msgid "10 min"
+msgstr "10 分鐘"
+
+#: ../src/TimeoutComboBox.vala:45
+msgid "15 min"
+msgstr "15 分鐘"
+
+#: ../src/TimeoutComboBox.vala:46
+msgid "30 min"
+msgstr "30 分鐘"
+
+#: ../src/TimeoutComboBox.vala:47
+msgid "45 min"
+msgstr "45 分鐘"
+
+#: ../src/TimeoutComboBox.vala:48
+msgid "1 hour"
+msgstr "1 小時"
+
+#: ../src/TimeoutComboBox.vala:49
+msgid "2 hours"
+msgstr "2 小時"
+
+#: ../src/Plug.vala:56
 msgid "Power"
 msgstr "電源"
 
-#: ../src//Plug.vala:37
-msgid "Set display brightness, power button behavior, and sleep preferences"
-msgstr "設定顯示器亮度、電源按鈕行為、睡眠的偏好設定"
+#: ../src/Plug.vala:57
+msgid "Configure display brightness, power buttons, and sleep behavior"
+msgstr ""
 
-#: ../src//Plug.vala:100
+#: ../src/Plug.vala:117
 msgid "Plugged In"
 msgstr "插入電源線"
 
-#: ../src//Plug.vala:104
+#: ../src/Plug.vala:121
 msgid "On Battery"
 msgstr "使用電池"
 
-#: ../src//Plug.vala:125
+#: ../src/Plug.vala:142
 msgid "Display brightness:"
 msgstr "顯示器亮度："
 
-#: ../src//Plug.vala:135
+#: ../src/Plug.vala:152
+msgid "Automatically adjust brightness:"
+msgstr ""
+
+#: ../src/Plug.vala:159
 msgid "Dim screen when inactive:"
 msgstr "當不使用時讓螢幕逐漸變暗："
 
-#: ../src//Plug.vala:169
+#: ../src/Plug.vala:222
 msgid "Sleep button:"
 msgstr "睡眠按鈕："
 
-#: ../src//Plug.vala:169
+#: ../src/Plug.vala:222
 msgid "Suspend button:"
 msgstr "暫停按鈕："
 
-#: ../src//Plug.vala:169
+#: ../src/Plug.vala:222
 msgid "Hibernate button:"
 msgstr "休眠按鈕："
 
-#: ../src//Plug.vala:169
+#: ../src/Plug.vala:222
 msgid "Power button:"
 msgstr "電源按鈕："
 
-#: ../src//Plug.vala:188
-msgid "Sleep when inactive after:"
-msgstr "當不使用後過多久時間進入睡眠："
-
-#: ../src//Plug.vala:192
+#: ../src/Plug.vala:232
 msgid "Turn off screen when inactive after:"
 msgstr "關閉螢幕當不活動時間達："
 
-#: ../src//Plug.vala:207
+#: ../src/Plug.vala:250
+msgid "Sleep when inactive after:"
+msgstr "當不使用後過多久時間進入睡眠："
+
+#: ../src/Plug.vala:261
 msgid "When power is critically low:"
 msgstr "當電量極低時："
