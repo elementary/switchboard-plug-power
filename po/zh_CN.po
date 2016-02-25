@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-22 13:55-0600\n"
-"PO-Revision-Date: 2015-04-26 08:43+0000\n"
-"Last-Translator: 鸿盟-行道树 <Unknown>\n"
+"PO-Revision-Date: 2016-02-24 08:29+0000\n"
+"Last-Translator: colindemian <dengmengpc@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-23 06:00+0000\n"
+"X-Launchpad-Export-Date: 2016-02-25 05:18+0000\n"
 "X-Generator: Launchpad (build 17925)\n"
 "Language: \n"
 
@@ -76,7 +76,7 @@ msgstr "电源"
 
 #: ../src/Plug.vala:57
 msgid "Configure display brightness, power buttons, and sleep behavior"
-msgstr ""
+msgstr "配置显示器亮度、电源按键和睡眠方式"
 
 #: ../src/Plug.vala:117
 msgid "Plugged In"
@@ -92,7 +92,7 @@ msgstr "屏幕亮度："
 
 #: ../src/Plug.vala:152
 msgid "Automatically adjust brightness:"
-msgstr ""
+msgstr "自动调整亮度："
 
 #: ../src/Plug.vala:159
 msgid "Dim screen when inactive:"
