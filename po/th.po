@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-22 13:55-0600\n"
-"PO-Revision-Date: 2015-10-14 16:54+0000\n"
-"Last-Translator: ABCDEFGH <aefgh7233@gmail.com>\n"
+"PO-Revision-Date: 2016-03-06 06:42+0000\n"
+"Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: Thai <th@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-23 06:00+0000\n"
-"X-Generator: Launchpad (build 17925)\n"
+"X-Launchpad-Export-Date: 2016-03-07 05:54+0000\n"
+"X-Generator: Launchpad (build 17936)\n"
 "Language: th\n"
 
 #: ../src/ActionComboBox.vala:37
@@ -76,7 +76,7 @@ msgstr "พลังงาน"
 
 #: ../src/Plug.vala:57
 msgid "Configure display brightness, power buttons, and sleep behavior"
-msgstr ""
+msgstr "ตั้งค่าความสว่างในการแสดงผล ปุ่มเปิด/ปิด และโหมดสลีป"
 
 #: ../src/Plug.vala:117
 msgid "Plugged In"
@@ -92,7 +92,7 @@ msgstr "ความสว่างขอจอแสดงผล:"
 
 #: ../src/Plug.vala:152
 msgid "Automatically adjust brightness:"
-msgstr ""
+msgstr "ปรับความสว่างอัตโนมัติ:"
 
 #: ../src/Plug.vala:159
 msgid "Dim screen when inactive:"
