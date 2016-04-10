@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-22 13:55-0600\n"
-"PO-Revision-Date: 2015-05-19 04:27+0000\n"
-"Last-Translator: Sadık Poyraz <sadikpoyraz01@gmail.com>\n"
+"PO-Revision-Date: 2016-04-09 13:00+0000\n"
+"Last-Translator: Taha KONUK <Unknown>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-23 06:00+0000\n"
-"X-Generator: Launchpad (build 17925)\n"
+"X-Launchpad-Export-Date: 2016-04-10 05:36+0000\n"
+"X-Generator: Launchpad (build 17990)\n"
 "Language: tr\n"
 
 #: ../src/ActionComboBox.vala:37
@@ -76,7 +76,7 @@ msgstr "Güç"
 
 #: ../src/Plug.vala:57
 msgid "Configure display brightness, power buttons, and sleep behavior"
-msgstr ""
+msgstr "Ekran parlaklığı, güç düğmeleri ve uyku davranışını ayarla"
 
 #: ../src/Plug.vala:117
 msgid "Plugged In"
@@ -92,7 +92,7 @@ msgstr "Ekran parlaklığı:"
 
 #: ../src/Plug.vala:152
 msgid "Automatically adjust brightness:"
-msgstr ""
+msgstr "Parlaklığı otomatik olarak ayarla:"
 
 #: ../src/Plug.vala:159
 msgid "Dim screen when inactive:"
@@ -116,11 +116,11 @@ msgstr "Güç tuşu:"
 
 #: ../src/Plug.vala:232
 msgid "Turn off screen when inactive after:"
-msgstr "Bu dakikadan sonra ekranı kapat:"
+msgstr "Şu süre sonunda ekranı kapat:"
 
 #: ../src/Plug.vala:250
 msgid "Sleep when inactive after:"
-msgstr "Kullanılmıyorken uykuya geçme süresi:"
+msgstr "Şu süre sonunda uykuya geç:"
 
 #: ../src/Plug.vala:261
 msgid "When power is critically low:"
