@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-22 13:55-0600\n"
-"PO-Revision-Date: 2016-03-22 17:34+0000\n"
-"Last-Translator: Rodrigo Nunes de Castro <rodrigondec@gmail.com>\n"
+"PO-Revision-Date: 2016-04-14 17:43+0000\n"
+"Last-Translator: Leonardo Lemos <Unknown>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-23 05:59+0000\n"
-"X-Generator: Launchpad (build 17958)\n"
+"X-Launchpad-Export-Date: 2016-04-15 06:06+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 "Language: pt_BR\n"
 
 #: ../src/ActionComboBox.vala:37
@@ -97,7 +97,7 @@ msgstr "Ajuste automático de brilho:"
 
 #: ../src/Plug.vala:159
 msgid "Dim screen when inactive:"
-msgstr "Escurecer a tela quando inativo:"
+msgstr "Escurecer tela quando inativo:"
 
 #: ../src/Plug.vala:222
 msgid "Sleep button:"
