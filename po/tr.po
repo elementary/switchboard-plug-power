@@ -7,118 +7,121 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-03 08:44-0600\n"
-"PO-Revision-Date: 2015-05-19 04:27+0000\n"
-"Last-Translator: Sadık Poyraz <sadikpoyraz01@gmail.com>\n"
+"POT-Creation-Date: 2016-02-22 13:55-0600\n"
+"PO-Revision-Date: 2016-04-09 13:00+0000\n"
+"Last-Translator: Taha KONUK <Unknown>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-09-22 05:56+0000\n"
-"X-Generator: Launchpad (build 17749)\n"
+"X-Launchpad-Export-Date: 2016-04-10 05:36+0000\n"
+"X-Generator: Launchpad (build 17990)\n"
 "Language: tr\n"
 
-#: ../src//TimeoutComboBox.vala:23
-msgid "Never"
-msgstr "Hiçbir zaman"
-
-#: ../src//TimeoutComboBox.vala:24
-msgid "5 min"
-msgstr "5 dak"
-
-#: ../src//TimeoutComboBox.vala:25
-msgid "10 min"
-msgstr "10 dak"
-
-#: ../src//TimeoutComboBox.vala:26
-msgid "15 min"
-msgstr "15 dak"
-
-#: ../src//TimeoutComboBox.vala:27
-msgid "30 min"
-msgstr "30 dak"
-
-#: ../src//TimeoutComboBox.vala:28
-msgid "45 min"
-msgstr "45 dak"
-
-#: ../src//TimeoutComboBox.vala:29
-msgid "1 hour"
-msgstr "1 saat"
-
-#: ../src//TimeoutComboBox.vala:30
-msgid "2 hours"
-msgstr "2 saat"
-
-#: ../src//ActionComboBox.vala:18
+#: ../src/ActionComboBox.vala:37
 msgid "Suspend"
 msgstr "Askıya Al"
 
-#: ../src//ActionComboBox.vala:19
+#: ../src/ActionComboBox.vala:38
 msgid "Shutdown"
 msgstr "Kapat"
 
-#: ../src//ActionComboBox.vala:20
+#: ../src/ActionComboBox.vala:39
 msgid "Hibernate"
 msgstr "Uykuya Al"
 
-#: ../src//ActionComboBox.vala:21
+#: ../src/ActionComboBox.vala:40
 msgid "Ask me"
 msgstr "Bana sor"
 
-#: ../src//ActionComboBox.vala:22
+#: ../src/ActionComboBox.vala:41
 msgid "Do nothing"
 msgstr "Hiçbir şey yapma"
 
-#: ../src//Plug.vala:36
+#: ../src/TimeoutComboBox.vala:42
+msgid "Never"
+msgstr "Hiçbir zaman"
+
+#: ../src/TimeoutComboBox.vala:43
+msgid "5 min"
+msgstr "5 dak"
+
+#: ../src/TimeoutComboBox.vala:44
+msgid "10 min"
+msgstr "10 dak"
+
+#: ../src/TimeoutComboBox.vala:45
+msgid "15 min"
+msgstr "15 dak"
+
+#: ../src/TimeoutComboBox.vala:46
+msgid "30 min"
+msgstr "30 dak"
+
+#: ../src/TimeoutComboBox.vala:47
+msgid "45 min"
+msgstr "45 dak"
+
+#: ../src/TimeoutComboBox.vala:48
+msgid "1 hour"
+msgstr "1 saat"
+
+#: ../src/TimeoutComboBox.vala:49
+msgid "2 hours"
+msgstr "2 saat"
+
+#: ../src/Plug.vala:56
 msgid "Power"
 msgstr "Güç"
 
-#: ../src//Plug.vala:37
-msgid "Set display brightness, power button behavior, and sleep preferences"
-msgstr ""
-"Ekran parlaklığını, güç düğmesi davranışını ve uyku tercihlerini ayarlayın"
+#: ../src/Plug.vala:57
+msgid "Configure display brightness, power buttons, and sleep behavior"
+msgstr "Ekran parlaklığı, güç düğmeleri ve uyku davranışını ayarla"
 
-#: ../src//Plug.vala:100
+#: ../src/Plug.vala:117
 msgid "Plugged In"
 msgstr "Fişe Takılı"
 
-#: ../src//Plug.vala:104
+#: ../src/Plug.vala:121
 msgid "On Battery"
 msgstr "Pilde"
 
-#: ../src//Plug.vala:125
+#: ../src/Plug.vala:142
 msgid "Display brightness:"
 msgstr "Ekran parlaklığı:"
 
-#: ../src//Plug.vala:135
+#: ../src/Plug.vala:152
+msgid "Automatically adjust brightness:"
+msgstr "Parlaklığı otomatik olarak ayarla:"
+
+#: ../src/Plug.vala:159
 msgid "Dim screen when inactive:"
 msgstr "Kullanılmıyorken ekranı sönükleştir:"
 
-#: ../src//Plug.vala:169
+#: ../src/Plug.vala:222
 msgid "Sleep button:"
 msgstr "Uyku tuşu:"
 
-#: ../src//Plug.vala:169
+#: ../src/Plug.vala:222
 msgid "Suspend button:"
 msgstr "Askıya alma tuşu:"
 
-#: ../src//Plug.vala:169
+#: ../src/Plug.vala:222
 msgid "Hibernate button:"
 msgstr "Hazırda bekletme tuşu:"
 
-#: ../src//Plug.vala:169
+#: ../src/Plug.vala:222
 msgid "Power button:"
 msgstr "Güç tuşu:"
 
-#: ../src//Plug.vala:188
-msgid "Sleep when inactive after:"
-msgstr "Kullanılmıyorken uykuya geçme süresi:"
-
-#: ../src//Plug.vala:192
+#: ../src/Plug.vala:232
 msgid "Turn off screen when inactive after:"
-msgstr "Bu dakikadan sonra ekranı kapat:"
+msgstr "Şu süre sonunda ekranı kapat:"
 
-#: ../src//Plug.vala:207
+#: ../src/Plug.vala:250
+msgid "Sleep when inactive after:"
+msgstr "Şu süre sonunda uykuya geç:"
+
+#: ../src/Plug.vala:261
 msgid "When power is critically low:"
 msgstr "Güç ciddi derecede düştüğünde:"

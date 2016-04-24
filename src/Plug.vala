@@ -32,12 +32,16 @@ namespace Power {
         private Battery battery;
         private PowerSupply power_supply;
         private CliCommunicator cli_communicator;
+        private Gtk.Image lock_image;
+        private Gtk.Image lock_image2;
+
+        private const string no_permission_string   = _("You do not have permission to change this");
 
         public Plug () {
             Object (category: Category.HARDWARE,
                 code_name: "system-pantheon-power",
                 display_name: _("Power"),
-                description: _("Set display brightness, power button behavior, and sleep preferences"),
+                description: _("Configure display brightness, power buttons, and sleep behavior"),
                 icon: "preferences-system-power");
 
             settings = new GLib.Settings ("org.gnome.settings-daemon.plugins.power");
@@ -130,7 +134,7 @@ namespace Power {
             infobar.message_type = Gtk.MessageType.WARNING;
             infobar.no_show_all = true;
             var content = infobar.get_content_area () as Gtk.Container;
-            Gtk.Label label = new Gtk.Label (_("Some changes will not take effect until you restart this pc"));
+            Gtk.Label label = new Gtk.Label (_("Some changes will not take effect until you restart this computer"));
             content.add (label);
             infobar.hide ();
 
@@ -179,6 +183,13 @@ namespace Power {
             items_grid.margin = 12;
             items_grid.column_spacing = 12;
             items_grid.row_spacing = 12;
+
+            lock_image = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
+            lock_image.set_tooltip_text (no_permission_string);
+            lock_image.set_opacity (0.5);
+            lock_image2 = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
+            lock_image2.set_tooltip_text (no_permission_string);
+            lock_image2.set_opacity (0.5);
             
             int index = 0;
             
@@ -270,6 +281,7 @@ namespace Power {
 
         private Gtk.Grid create_notebook_pages (string type) {
             var grid = new Gtk.Grid ();
+            int grid_x_index = 0;
             grid.margin = 12;
             grid.column_spacing = 12;
             grid.row_spacing = 12;
@@ -281,36 +293,48 @@ namespace Power {
             var scale_settings = @"sleep-inactive-$type-timeout";
             var sleep_timeout = new TimeoutComboBox (settings, scale_settings);
 
-            grid.attach (sleep_timeout_label, 0, 0, 1, 1);
-            grid.attach (sleep_timeout, 1, 0, 1, 1);
+            grid.attach (sleep_timeout_label, 0, grid_x_index, 1, 1);
+            grid.attach (sleep_timeout, 1, grid_x_index, 1, 1);
+            grid_x_index++;
 
             var lid_dock_box = new LidCloseActionComboBox (_("When docked and lid is closed:"), cli_communicator);
             var lid_closed_box = new LidCloseActionComboBox (_("When lid is closed:"), cli_communicator);
 
             if (type != "ac") {
                 var critical_box = new ActionComboBox (_("When power is critically low:"), "critical-battery-action");
-                grid.attach (critical_box.label, 0, 2, 1, 1);
+                grid.attach (critical_box.label, 0, grid_x_index, 1, 1);
                 label_size.add_widget (critical_box.label);
-                grid.attach (critical_box, 1, 2, 1, 1);
+                grid.attach (critical_box, 1, grid_x_index, 1, 1);
+                grid_x_index++;
 
                 lid_closed_box.set_sensitive (false);
-                grid.attach (lid_closed_box.label, 0, 3, 1, 1);
+                grid.attach (lid_closed_box.label, 0, grid_x_index, 1, 1);
                 label_size.add_widget (lid_closed_box.label);
-                grid.attach (lid_closed_box, 1, 3, 1, 1);
+                grid.attach (lid_closed_box, 1, grid_x_index, 1, 1);
+
+                grid.attach (lock_image2, 2, grid_x_index, 1, 1);
+                grid_x_index++;
+
             } else if (battery.laptop) {
                 lid_dock_box.set_sensitive (false);
-                grid.attach (lid_dock_box.label, 0, 2, 1, 1);
+                grid.attach (lid_dock_box.label, 0, grid_x_index, 1, 1);
                 label_size.add_widget (lid_dock_box.label);
-                grid.attach (lid_dock_box, 1, 2, 1, 1);
+                grid.attach (lid_dock_box, 1, grid_x_index, 1, 1);
+                grid.attach (lock_image, 2, grid_x_index, 1, 1);
+                grid_x_index++;
             }
 
             get_permission ().notify["allowed"].connect (() => {
                 if (get_permission ().allowed) {
                     lid_closed_box.set_sensitive (true);
                     lid_dock_box.set_sensitive (true);
+                    lock_image.set_opacity (0);
+                    lock_image2.set_opacity (0);
                 } else {
                     lid_closed_box.set_sensitive (false);
                     lid_dock_box.set_sensitive (false);
+                    lock_image.set_opacity (0.5);
+                    lock_image2.set_opacity (0.5);
                 }
             });
 

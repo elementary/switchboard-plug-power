@@ -7,118 +7,121 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-03 08:44-0600\n"
-"PO-Revision-Date: 2015-03-04 07:59+0000\n"
+"POT-Creation-Date: 2016-02-22 13:55-0600\n"
+"PO-Revision-Date: 2016-02-28 15:08+0000\n"
 "Last-Translator: Jiri Grönroos <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-09-22 05:55+0000\n"
-"X-Generator: Launchpad (build 17749)\n"
+"X-Launchpad-Export-Date: 2016-02-29 05:54+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
 "Language: fi\n"
 
-#: ../src//TimeoutComboBox.vala:23
-msgid "Never"
-msgstr "Ei koskaan"
-
-#: ../src//TimeoutComboBox.vala:24
-msgid "5 min"
-msgstr "5 min"
-
-#: ../src//TimeoutComboBox.vala:25
-msgid "10 min"
-msgstr "10 min"
-
-#: ../src//TimeoutComboBox.vala:26
-msgid "15 min"
-msgstr "15 min"
-
-#: ../src//TimeoutComboBox.vala:27
-msgid "30 min"
-msgstr "30 min"
-
-#: ../src//TimeoutComboBox.vala:28
-msgid "45 min"
-msgstr "45 min"
-
-#: ../src//TimeoutComboBox.vala:29
-msgid "1 hour"
-msgstr "1 tunti"
-
-#: ../src//TimeoutComboBox.vala:30
-msgid "2 hours"
-msgstr "2 tuntia"
-
-#: ../src//ActionComboBox.vala:18
+#: ../src/ActionComboBox.vala:37
 msgid "Suspend"
 msgstr "Valmiustila"
 
-#: ../src//ActionComboBox.vala:19
+#: ../src/ActionComboBox.vala:38
 msgid "Shutdown"
 msgstr "Sammuta"
 
-#: ../src//ActionComboBox.vala:20
+#: ../src/ActionComboBox.vala:39
 msgid "Hibernate"
 msgstr "Lepotila"
 
-#: ../src//ActionComboBox.vala:21
+#: ../src/ActionComboBox.vala:40
 msgid "Ask me"
 msgstr "Kysy"
 
-#: ../src//ActionComboBox.vala:22
+#: ../src/ActionComboBox.vala:41
 msgid "Do nothing"
 msgstr "Älä tee mitään"
 
-#: ../src//Plug.vala:36
+#: ../src/TimeoutComboBox.vala:42
+msgid "Never"
+msgstr "Ei koskaan"
+
+#: ../src/TimeoutComboBox.vala:43
+msgid "5 min"
+msgstr "5 min"
+
+#: ../src/TimeoutComboBox.vala:44
+msgid "10 min"
+msgstr "10 min"
+
+#: ../src/TimeoutComboBox.vala:45
+msgid "15 min"
+msgstr "15 min"
+
+#: ../src/TimeoutComboBox.vala:46
+msgid "30 min"
+msgstr "30 min"
+
+#: ../src/TimeoutComboBox.vala:47
+msgid "45 min"
+msgstr "45 min"
+
+#: ../src/TimeoutComboBox.vala:48
+msgid "1 hour"
+msgstr "1 tunti"
+
+#: ../src/TimeoutComboBox.vala:49
+msgid "2 hours"
+msgstr "2 tuntia"
+
+#: ../src/Plug.vala:56
 msgid "Power"
 msgstr "Virransäästö"
 
-#: ../src//Plug.vala:37
-msgid "Set display brightness, power button behavior, and sleep preferences"
-msgstr ""
-"Aseta näytön kirkkaus, virtapainikkeen toiminta ja lepotilan asetukset"
+#: ../src/Plug.vala:57
+msgid "Configure display brightness, power buttons, and sleep behavior"
+msgstr "Määritä näytön kirkkaus, virtapainikkeet ja lepotilan toiminta"
 
-#: ../src//Plug.vala:100
+#: ../src/Plug.vala:117
 msgid "Plugged In"
 msgstr "Verkkovirralla"
 
-#: ../src//Plug.vala:104
+#: ../src/Plug.vala:121
 msgid "On Battery"
 msgstr "Akkuvirralla"
 
-#: ../src//Plug.vala:125
+#: ../src/Plug.vala:142
 msgid "Display brightness:"
 msgstr "Näytön kirkkaus:"
 
-#: ../src//Plug.vala:135
+#: ../src/Plug.vala:152
+msgid "Automatically adjust brightness:"
+msgstr "Säädä valoisuutta automaattisesti:"
+
+#: ../src/Plug.vala:159
 msgid "Dim screen when inactive:"
 msgstr "Himmennä näyttö käyttämättömänä ollessa:"
 
-#: ../src//Plug.vala:169
+#: ../src/Plug.vala:222
 msgid "Sleep button:"
 msgstr "Siirry virransäästötilaan -painike:"
 
-#: ../src//Plug.vala:169
+#: ../src/Plug.vala:222
 msgid "Suspend button:"
 msgstr "Siirry valmiustilaan -painike:"
 
-#: ../src//Plug.vala:169
+#: ../src/Plug.vala:222
 msgid "Hibernate button:"
 msgstr "Siirry lepotilaan -painike:"
 
-#: ../src//Plug.vala:169
+#: ../src/Plug.vala:222
 msgid "Power button:"
 msgstr "Virtapainike:"
 
-#: ../src//Plug.vala:188
-msgid "Sleep when inactive after:"
-msgstr "Siirry lepotilaan käyttämättömänä ollessa:"
-
-#: ../src//Plug.vala:192
+#: ../src/Plug.vala:232
 msgid "Turn off screen when inactive after:"
 msgstr "Sammuta näyttö koneen ollessa jouten:"
 
-#: ../src//Plug.vala:207
+#: ../src/Plug.vala:250
+msgid "Sleep when inactive after:"
+msgstr "Siirry lepotilaan käyttämättömänä ollessa:"
+
+#: ../src/Plug.vala:261
 msgid "When power is critically low:"
 msgstr "Virtaa ollessa kriittisen vähän:"

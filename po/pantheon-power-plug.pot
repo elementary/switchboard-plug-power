@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-15 15:18+0100\n"
+"POT-Creation-Date: 2016-04-24 10:30+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,71 +17,75 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src//Plug.vala:39
+#: ../src//Plug.vala:38
+msgid "You do not have permission to change this"
+msgstr ""
+
+#: ../src//Plug.vala:43
 msgid "Power"
 msgstr ""
 
-#: ../src//Plug.vala:40
-msgid "Set display brightness, power button behavior, and sleep preferences"
+#: ../src//Plug.vala:44
+msgid "Configure display brightness, power buttons, and sleep behavior"
 msgstr ""
 
-#: ../src//Plug.vala:93
+#: ../src//Plug.vala:97
 msgid "Plugged In"
 msgstr ""
 
-#: ../src//Plug.vala:99
+#: ../src//Plug.vala:103
 msgid "On Battery"
 msgstr ""
 
-#: ../src//Plug.vala:133
-msgid "Some changes will not take effect until you restart this pc"
+#: ../src//Plug.vala:137
+msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
 
-#: ../src//Plug.vala:151
+#: ../src//Plug.vala:155
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 
-#: ../src//Plug.vala:186
+#: ../src//Plug.vala:197
 msgid "Display brightness:"
 msgstr ""
 
-#: ../src//Plug.vala:196
+#: ../src//Plug.vala:207
 msgid "Dim screen when inactive:"
 msgstr ""
 
-#: ../src//Plug.vala:237
+#: ../src//Plug.vala:248
 msgid "Sleep button:"
 msgstr ""
 
-#: ../src//Plug.vala:237
+#: ../src//Plug.vala:248
 msgid "Suspend button:"
 msgstr ""
 
-#: ../src//Plug.vala:237
+#: ../src//Plug.vala:248
 msgid "Hibernate button:"
 msgstr ""
 
-#: ../src//Plug.vala:237
+#: ../src//Plug.vala:248
 msgid "Power button:"
 msgstr ""
 
-#: ../src//Plug.vala:249
+#: ../src//Plug.vala:260
 msgid "Turn off screen when inactive after:"
 msgstr ""
 
-#: ../src//Plug.vala:277
+#: ../src//Plug.vala:289
 msgid "Sleep when inactive after:"
 msgstr ""
 
-#: ../src//Plug.vala:287
+#: ../src//Plug.vala:300
 msgid "When docked and lid is closed:"
 msgstr ""
 
-#: ../src//Plug.vala:288
+#: ../src//Plug.vala:301
 msgid "When lid is closed:"
 msgstr ""
 
-#: ../src//Plug.vala:291
+#: ../src//Plug.vala:304
 msgid "When power is critically low:"
 msgstr ""
 

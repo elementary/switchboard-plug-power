@@ -4,7 +4,7 @@
  "http://www.freedesktop.org/standards/PolicyKit/1.0/policyconfig.dtd">
 <policyconfig>
   <vendor>elementary</vendor>
-  <vendor_url>http://elementaryos.io/</vendor_url>
+  <vendor_url>https://elementary.io/</vendor_url>
 
   <action id="org.pantheon.switchboard.power.administration">
     <description gettext-domain="@GETTEXT_PACKAGE@">Manage power settings </description>
