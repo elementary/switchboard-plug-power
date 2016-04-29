@@ -21,29 +21,23 @@ namespace Power {
     public class PowerSupply {
         private Upower? upower;
         private UpowerDevice? upower_device;
-        private UpowerProperties? device_properties;
 
         private const string dbus_upower_name = "org.freedesktop.UPower";
         private const string dbus_upower_root_path = "/org/freedesktop/UPower";
         private string dbus_upower_ac_path;
         
         public PowerSupply () {
-            debug ("power supply init start");
             connect_dbus ();
-            debug ("power supply init done");
         }
 
 
         public bool check_present () {
             bool return_value = false;
-            bool supply = false;
-            bool online = false;
+
             try {
                 upower_device.Refresh ();
-                supply = device_properties.Get (dbus_upower_ac_path, "PowerSupply").get_boolean ();
-                online = device_properties.Get (dbus_upower_ac_path, "Online").get_boolean ();
 
-                if (online && supply) {
+                if (upower_device.Online && upower_device.PowerSupply) {
                     return_value = true;
                 }
             } catch (Error e) {
@@ -54,17 +48,16 @@ namespace Power {
 
         private void connect_dbus() {
             try{
-                upower = Bus.get_proxy_sync (BusType.SYSTEM, dbus_upower_name, dbus_upower_root_path);
+                upower = Bus.get_proxy_sync (BusType.SYSTEM, dbus_upower_name, dbus_upower_root_path, DBusProxyFlags.NONE);
                 dbus_upower_ac_path = get_dbus_path(upower);
-                debug ("power supply path:%s", dbus_upower_ac_path);
+
                 if (dbus_upower_ac_path != "" && dbus_upower_ac_path != null) {
-                    upower_device = Bus.get_proxy_sync (BusType.SYSTEM, dbus_upower_name, dbus_upower_ac_path);
-                    device_properties = Bus.get_proxy_sync (BusType.SYSTEM, dbus_upower_name, dbus_upower_ac_path);
+                    upower_device = Bus.get_proxy_sync (BusType.SYSTEM, dbus_upower_name, dbus_upower_ac_path, DBusProxyFlags.GET_INVALIDATED_PROPERTIES);
                 }
             } catch (Error e) {
                 critical ("power supply dbus connection to upower fault");
             }
-            debug ("power supply connected dbus connections done");
+            debug ("power supply path:%s  dbus connected", dbus_upower_ac_path);
         }
 
         private string get_dbus_path(Upower upow) {
@@ -72,7 +65,7 @@ namespace Power {
             try {
                 ObjectPath[] devs = upow.EnumerateDevices();
                 for(int i =0; i<devs.length; i++) {
-                    if(devs[i].contains("AC")) {
+                    if(devs[i].contains("line_power")) {
                         return_value = devs[i].to_string();
                     }
                 }

@@ -34,6 +34,9 @@ namespace Power {
 	interface UpowerDevice : Object {
 		public signal void Changed ();
 		public abstract void Refresh () throws IOError;
+		public abstract bool Online { owned get; private set; }
+		public abstract bool PowerSupply { owned get; private set; }
+		public abstract bool IsPresent { owned get; private set; }
 	}
 
 
