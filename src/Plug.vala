@@ -63,9 +63,9 @@ namespace Power {
 
         public override void shown () {
             if (power_supply.check_present ()) {
-                stack_switcher.get_stack ().set_visible_child_name ("ac");
+                stack_switcher.get_stack ().visible_child_name = "ac";
             } else {
-                stack_switcher.get_stack ().set_visible_child_name ("battery");
+                stack_switcher.get_stack ().visible_child_name = "battery";
             }
         }
 
@@ -120,7 +120,7 @@ namespace Power {
             stack_container.margin_bottom = 12;
             stack_container.show_all ();
             // hide stack switcher we only have ac line
-            stack_switcher.set_visible (stack.get_children ().length () > 1);
+            stack_switcher.visible = stack.get_children ().length () > 1;
         }
 
         private void connect_dbus () {
@@ -184,10 +184,10 @@ namespace Power {
 
         private Gtk.Grid create_common_settings () {
             lock_image = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-            lock_image.set_tooltip_text (no_permission_string);
+            lock_image.tooltip_text = no_permission_string;
             lock_image.sensitive = false;
             lock_image2 = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-            lock_image2.set_tooltip_text (no_permission_string);
+            lock_image2.tooltip_text = no_permission_string;
             lock_image2.sensitive = false;
 
             if (battery.laptop) {
@@ -197,7 +197,7 @@ namespace Power {
                 brightness_label.halign = Gtk.Align.END;
 
                 var scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 100, 10);
-                scale.set_draw_value (false);
+                scale.draw_value = false;
                 scale.hexpand = true;
                 scale.width_request = 480;
 
