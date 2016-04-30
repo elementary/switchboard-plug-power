@@ -208,30 +208,11 @@ namespace Power {
 
                 settings.bind ("idle-dim", dim_switch, "active", SettingsBindFlags.DEFAULT);
 
-
-                try {
-                    #if OLD_GSD
-                    scale.set_value (screen.GetPercentage ());
-                    #else
-                    scale.set_value (screen.Brightness);
-                    #endif
-                } catch (IOError ioe) {
-                    // ignore, because if we have GetPercentage, we have SetPercentage
-                    // otherwise the scale won't be visible to change
-                }
+                scale.set_value (screen.Brightness);
 
                 scale.value_changed.connect (() => {
                     var val = (int) scale.get_value ();
-                    try {
-                        #if OLD_GSD
-                        screen.SetPercentage (val);
-                        #else
-                        screen.Brightness = val;
-                        #endif
-                    } catch (IOError ioe) {
-                        // ignore, because if we have GetPercentage, we have SetPercentage
-                        // otherwise the scale won't be visible to change
-                    }
+                    screen.Brightness = val;
                 });
 
                 main_grid.attach (brightness_label, 0, 0, 1, 1);
