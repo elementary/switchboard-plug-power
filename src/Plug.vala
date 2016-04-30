@@ -20,7 +20,8 @@
 namespace Power {
 
     GLib.Settings settings;
-    Gtk.Box stack_container;
+    Gtk.Grid stack_container;
+    Gtk.Grid main_grid;
 
     public class Plug : Switchboard.Plug {
 
@@ -82,39 +83,44 @@ namespace Power {
         }
 
         private void setup_ui () {
-            stack_container = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+            stack_container = new Gtk.Grid ();
+            stack_container.orientation = Gtk.Orientation.VERTICAL;
+
             label_size = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
 
             Gtk.Grid info_bars = create_info_bars ();
 
-            Gtk.Grid common_settings = create_common_settings ();
+            main_grid = new Gtk.Grid ();
+            main_grid.margin = 24;
+            main_grid.column_spacing = 12;
+            main_grid.row_spacing = 12;
+
+            create_common_settings ();
+
             Gtk.Stack stack = new Gtk.Stack ();
-            stack_switcher = new Gtk.StackSwitcher ();
-            stack_switcher.halign = Gtk.Align.CENTER;
-            stack_switcher.stack = stack;
 
             Gtk.Grid plug_grid = create_notebook_pages ("ac");
             stack.add_titled (plug_grid, "ac", _("Plugged In"));
 
-            stack_container.pack_start (info_bars ,false ,false ,0);
+            stack_container.add (info_bars);
 
             if (laptop_detect () || battery.laptop) {
                 Gtk.Grid battery_grid = create_notebook_pages ("battery");
                 stack.add_titled (battery_grid, "battery", _("On Battery"));
 
-                stack_container.pack_start (common_settings);
-                stack_container.pack_start (stack_switcher, false, false, 0);
-                stack_container.pack_start (stack, true, true, 0);
-            } else {
-                stack_container.pack_start (common_settings, false, false, 0);
-                stack_container.pack_start (stack, true, true, 0);
+                stack_switcher = new Gtk.StackSwitcher ();
+                stack_switcher.halign = Gtk.Align.CENTER;
+                stack_switcher.stack = stack;
+                main_grid.attach (stack_switcher, 0, 6, 2, 1);
             }
+
+            main_grid.attach (stack, 0, 7, 2, 1);
+            stack_container.add (main_grid);
 
             stack_container.margin_bottom = 12;
             stack_container.show_all ();
             // hide stack switcher we only have ac line
             stack_switcher.set_visible (stack.get_children ().length () > 1);
-            //
         }
 
         private void connect_dbus () {
@@ -177,11 +183,6 @@ namespace Power {
         }
 
         private Gtk.Grid create_common_settings () {
-            Gtk.Grid main_grid = new Gtk.Grid ();
-            main_grid.margin = 12;
-            main_grid.column_spacing = 12;
-            main_grid.row_spacing = 12;
-
             lock_image = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
             lock_image.set_tooltip_text (no_permission_string);
             lock_image.sensitive = false;
@@ -272,8 +273,6 @@ namespace Power {
 
         private Gtk.Grid create_notebook_pages (string type) {
             var grid = new Gtk.Grid ();
-            int grid_x_index = 0;
-            grid.margin = 12;
             grid.column_spacing = 12;
             grid.row_spacing = 12;
 
@@ -284,48 +283,51 @@ namespace Power {
             var scale_settings = @"sleep-inactive-$type-timeout";
             var sleep_timeout = new TimeoutComboBox (settings, scale_settings);
 
-            grid.attach (sleep_timeout_label, 0, grid_x_index, 1, 1);
-            grid.attach (sleep_timeout, 1, grid_x_index, 1, 1);
-            grid_x_index++;
+            grid.attach (sleep_timeout_label, 0, 0, 1, 1);
+            grid.attach (sleep_timeout, 1, 0, 1, 1);
 
             var lid_dock_box = new LidCloseActionComboBox (_("When docked and lid is closed:"), cli_communicator);
             var lid_closed_box = new LidCloseActionComboBox (_("When lid is closed:"), cli_communicator);
 
             if (type != "ac") {
                 var critical_box = new ActionComboBox (_("When power is critically low:"), "critical-battery-action");
-                grid.attach (critical_box.label, 0, grid_x_index, 1, 1);
                 label_size.add_widget (critical_box.label);
-                grid.attach (critical_box, 1, grid_x_index, 1, 1);
-                grid_x_index++;
 
-                lid_closed_box.set_sensitive (false);
-                grid.attach (lid_closed_box.label, 0, grid_x_index, 1, 1);
+                lid_closed_box.sensitive = false;
+                lid_closed_box.label.sensitive = false;
                 label_size.add_widget (lid_closed_box.label);
-                grid.attach (lid_closed_box, 1, grid_x_index, 1, 1);
 
-                grid.attach (lock_image2, 2, grid_x_index, 1, 1);
-                grid_x_index++;
+                grid.attach (critical_box.label, 0, 1, 1, 1);
+                grid.attach (critical_box, 1, 1, 1, 1);
+                grid.attach (lid_closed_box.label, 0, 2, 1, 1);
+                grid.attach (lid_closed_box, 1, 2, 1, 1);
+                grid.attach (lock_image2, 2, 2, 1, 1);
 
             } else if (battery.laptop) {
-                lid_dock_box.set_sensitive (false);
-                grid.attach (lid_dock_box.label, 0, grid_x_index, 1, 1);
+                lid_dock_box.sensitive = false;
+                lid_dock_box.label.sensitive = false;
                 label_size.add_widget (lid_dock_box.label);
-                grid.attach (lid_dock_box, 1, grid_x_index, 1, 1);
-                grid.attach (lock_image, 2, grid_x_index, 1, 1);
-                grid_x_index++;
+
+                grid.attach (lid_dock_box.label, 0, 1, 1, 1);
+                grid.attach (lid_dock_box, 1, 1, 1, 1);
+                grid.attach (lock_image, 2, 1, 1, 1);
             }
 
             get_permission ().notify["allowed"].connect (() => {
                 if (get_permission ().allowed) {
-                    lid_closed_box.set_sensitive (true);
-                    lid_dock_box.set_sensitive (true);
-                    lock_image.set_opacity (0);
-                    lock_image2.set_opacity (0);
+                    lid_closed_box.sensitive = true;
+                    lid_closed_box.label.sensitive = true;
+                    lid_dock_box.sensitive = true;
+                    lid_dock_box.label.sensitive = true;
+                    lock_image.visible = false;
+                    lock_image2.visible = false;
                 } else {
-                    lid_closed_box.set_sensitive (false);
-                    lid_dock_box.set_sensitive (false);
-                    lock_image.set_opacity (0.5);
-                    lock_image2.set_opacity (0.5);
+                    lid_closed_box.sensitive = false;
+                    lid_closed_box.label.sensitive = false;
+                    lid_dock_box.sensitive = false;
+                    lid_dock_box.label.sensitive = false;
+                    lock_image.visible = true;
+                    lock_image2.visible = true;
                 }
             });
 
