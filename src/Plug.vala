@@ -216,7 +216,6 @@ namespace Power {
                 als_switch.halign = Gtk.Align.START;
 
                 settings.bind ("ambient-enabled", als_switch, "active", SettingsBindFlags.DEFAULT);
- 
 
                 var scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 100, 10);
                 scale.draw_value = false;
@@ -236,7 +235,6 @@ namespace Power {
                     var val = (int) scale.get_value ();
                     screen.Brightness = val;
                 });
-
 
                 main_grid.attach (brightness_label, 0, 0, 1, 1);
                 main_grid.attach (scale, 1, 0, 1, 1);
