@@ -124,7 +124,7 @@ namespace Power {
                 switcher_grid.add (stack_switcher);
                 switcher_grid.add (right_sep);
 
-                main_grid.attach (switcher_grid, 0, 5, 2, 1);
+                main_grid.attach (switcher_grid, 0, 6, 2, 1);
             }
 
             main_grid.attach (stack, 0, 7, 2, 1);
@@ -209,6 +209,15 @@ namespace Power {
                 label_size.add_widget (brightness_label);
                 brightness_label.halign = Gtk.Align.END;
 
+                var als_label = new Gtk.Label (_("Automatically adjust brightness:"));
+                ((Gtk.Misc) als_label).xalign = 1.0f;
+                label_size.add_widget (als_label);
+                var als_switch = new Gtk.Switch ();
+                als_switch.halign = Gtk.Align.START;
+
+                settings.bind ("ambient-enabled", als_switch, "active", SettingsBindFlags.DEFAULT);
+ 
+
                 var scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 100, 10);
                 scale.draw_value = false;
                 scale.hexpand = true;
@@ -228,10 +237,13 @@ namespace Power {
                     screen.Brightness = val;
                 });
 
+
                 main_grid.attach (brightness_label, 0, 0, 1, 1);
                 main_grid.attach (scale, 1, 0, 1, 1);
-                main_grid.attach (dim_label, 0, 1, 1, 1);
-                main_grid.attach (dim_switch, 1, 1, 1, 1);
+                main_grid.attach (als_label, 0, 1, 1, 1);
+                main_grid.attach (als_switch, 1, 1, 1, 1);
+                main_grid.attach (dim_label, 0, 2, 1, 1);
+                main_grid.attach (dim_switch, 1, 2, 1, 1);
             }
 
             var screen_timeout_label = new Gtk.Label (_("Turn off display when inactive for:"));
@@ -247,12 +259,12 @@ namespace Power {
             var power_combobox = new ActionComboBox (_("Power button:"), "button-power");
             label_size.add_widget (power_combobox.label);
 
-            main_grid.attach (screen_timeout_label, 0, 2, 1, 1);
-            main_grid.attach (screen_timeout, 1, 2, 1, 1);
-            main_grid.attach (sleep_combobox.label, 0, 3, 1, 1);
-            main_grid.attach (sleep_combobox, 1, 3, 1, 1);
-            main_grid.attach (power_combobox.label, 0, 4, 1, 1);
-            main_grid.attach (power_combobox, 1, 4, 1, 1);
+            main_grid.attach (screen_timeout_label, 0, 3, 1, 1);
+            main_grid.attach (screen_timeout, 1, 3, 1, 1);
+            main_grid.attach (sleep_combobox.label, 0, 4, 1, 1);
+            main_grid.attach (sleep_combobox, 1, 4, 1, 1);
+            main_grid.attach (power_combobox.label, 0, 5, 1, 1);
+            main_grid.attach (power_combobox, 1, 5, 1, 1);
 
             return main_grid;
         }
