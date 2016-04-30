@@ -108,10 +108,23 @@ namespace Power {
                 Gtk.Grid battery_grid = create_notebook_pages ("battery");
                 stack.add_titled (battery_grid, "battery", _("On Battery"));
 
+                var left_sep = new Gtk.Separator (Gtk.Orientation.HORIZONTAL);
+                left_sep.hexpand = true;    
+
+                var right_sep = new Gtk.Separator (Gtk.Orientation.HORIZONTAL);
+                right_sep.hexpand = true;
+
                 stack_switcher = new Gtk.StackSwitcher ();
-                stack_switcher.halign = Gtk.Align.CENTER;
                 stack_switcher.stack = stack;
-                main_grid.attach (stack_switcher, 0, 6, 2, 1);
+
+                var switcher_grid = new Gtk.Grid ();
+                switcher_grid.margin_top = 24;
+                switcher_grid.margin_bottom = 12;
+                switcher_grid.add (left_sep);
+                switcher_grid.add (stack_switcher);
+                switcher_grid.add (right_sep);
+
+                main_grid.attach (switcher_grid, 0, 5, 2, 1);
             }
 
             main_grid.attach (stack, 0, 7, 2, 1);
@@ -161,7 +174,7 @@ namespace Power {
             Gtk.Label label_infobar = new Gtk.Label (_("Some settings require administrator rights to be changed"));
             content_infobar.add (label_infobar);
 
-            if (battery.laptop) {
+            if (laptop_detect () || battery.laptop) {
                 permission_infobar.show_all ();
             } else {
                 permission_infobar.no_show_all = true;
@@ -190,7 +203,7 @@ namespace Power {
             lock_image2.tooltip_text = no_permission_string;
             lock_image2.sensitive = false;
 
-            if (battery.laptop) {
+            if (laptop_detect () || battery.laptop) {
                 var brightness_label = new Gtk.Label (_("Display brightness:"));
                 ((Gtk.Misc) brightness_label).xalign = 1.0f;
                 label_size.add_widget (brightness_label);
@@ -240,14 +253,6 @@ namespace Power {
             main_grid.attach (sleep_combobox, 1, 3, 1, 1);
             main_grid.attach (power_combobox.label, 0, 4, 1, 1);
             main_grid.attach (power_combobox, 1, 4, 1, 1);
-
-            if (battery.laptop) {
-                Gtk.Separator separator = new Gtk.Separator (Gtk.Orientation.HORIZONTAL);
-                separator.margin_top = 12;
-                separator.margin_bottom = 12;
-
-                main_grid.attach (separator, 0, 5, 2, 1);
-            }
 
             return main_grid;
         }
