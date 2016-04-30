@@ -178,21 +178,17 @@ namespace Power {
 
         private Gtk.Grid create_common_settings () {
             Gtk.Grid main_grid = new Gtk.Grid ();
-            Gtk.Grid items_grid = new Gtk.Grid ();
-
-            items_grid.margin = 12;
-            items_grid.column_spacing = 12;
-            items_grid.row_spacing = 12;
+            main_grid.margin = 12;
+            main_grid.column_spacing = 12;
+            main_grid.row_spacing = 12;
 
             lock_image = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
             lock_image.set_tooltip_text (no_permission_string);
-            lock_image.set_opacity (0.5);
+            lock_image.sensitive = false;
             lock_image2 = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
             lock_image2.set_tooltip_text (no_permission_string);
-            lock_image2.set_opacity (0.5);
-            
-            int index = 0;
-            
+            lock_image2.sensitive = false;
+
             if (battery.laptop) {
                 var brightness_label = new Gtk.Label (_("Display brightness:"));
                 ((Gtk.Misc) brightness_label).xalign = 1.0f;
@@ -204,7 +200,7 @@ namespace Power {
                 scale.hexpand = true;
                 scale.width_request = 480;
 
-                var dim_label = new Gtk.Label (_("Dim screen when inactive:"));
+                var dim_label = new Gtk.Label (_("Dim display when inactive:"));
                 ((Gtk.Misc) dim_label).xalign = 1.0f;
                 var dim_switch = new Gtk.Switch ();
                 dim_switch.halign = Gtk.Align.START;
@@ -237,43 +233,38 @@ namespace Power {
                     }
                 });
 
-                items_grid.attach (brightness_label, 0, 0, 1, 1);
-                items_grid.attach (scale, 1, 0, 1, 1);
-
-                items_grid.attach (dim_label, 0, 1, 1, 1);
-                items_grid.attach (dim_switch, 1, 1, 1, 1);
-                index = 2;
+                main_grid.attach (brightness_label, 0, 0, 1, 1);
+                main_grid.attach (scale, 1, 0, 1, 1);
+                main_grid.attach (dim_label, 0, 1, 1, 1);
+                main_grid.attach (dim_switch, 1, 1, 1, 1);
             }
 
-            var sleep_combobox = new ActionComboBox (_("Sleep button:"), "button-sleep");
-            items_grid.attach (sleep_combobox.label, 0, index, 1, 1);
-            label_size.add_widget (sleep_combobox.label);
-            items_grid.attach (sleep_combobox, 1, index, 1, 1);
-
-            var power_combobox = new ActionComboBox (_("Power button:"), "button-power");
-            items_grid.attach (power_combobox.label, 0, index + 1, 1, 1);
-            label_size.add_widget (power_combobox.label);
-            items_grid.attach (power_combobox, 1, index + 1, 1, 1);
-
-            index +=  2;
-
-            var screen_timeout_label = new Gtk.Label (_("Turn off screen when inactive after:"));
+            var screen_timeout_label = new Gtk.Label (_("Turn off display when inactive for:"));
+            screen_timeout_label.halign = Gtk.Align.END;
             label_size.add_widget (screen_timeout_label);
-            ((Gtk.Misc) screen_timeout_label).xalign = 1.0f;
+
             var screen_timeout = new TimeoutComboBox (pantheon_dpms_settings, "standby-time");
             screen_timeout.changed.connect (run_dpms_helper);
 
-            items_grid.attach (screen_timeout_label, 0, index, 1, 1);
-            items_grid.attach (screen_timeout, 1, index, 1, 1);
-            main_grid.attach (items_grid,0 ,0 ,1 ,1);
+            var sleep_combobox = new ActionComboBox (_("Sleep button:"), "button-sleep");
+            label_size.add_widget (sleep_combobox.label);
+
+            var power_combobox = new ActionComboBox (_("Power button:"), "button-power");
+            label_size.add_widget (power_combobox.label);
+
+            main_grid.attach (screen_timeout_label, 0, 2, 1, 1);
+            main_grid.attach (screen_timeout, 1, 2, 1, 1);
+            main_grid.attach (sleep_combobox.label, 0, 3, 1, 1);
+            main_grid.attach (sleep_combobox, 1, 3, 1, 1);
+            main_grid.attach (power_combobox.label, 0, 4, 1, 1);
+            main_grid.attach (power_combobox, 1, 4, 1, 1);
 
             if (battery.laptop) {
                 Gtk.Separator separator = new Gtk.Separator (Gtk.Orientation.HORIZONTAL);
-                separator.vexpand = true;
-                separator.valign = Gtk.Align.START;
-                separator.set_visible (true);
+                separator.margin_top = 12;
+                separator.margin_bottom = 12;
 
-                main_grid.attach (separator,0 ,1 ,1 ,1);
+                main_grid.attach (separator, 0, 5, 2, 1);
             }
 
             return main_grid;
@@ -286,7 +277,7 @@ namespace Power {
             grid.column_spacing = 12;
             grid.row_spacing = 12;
 
-            var sleep_timeout_label = new Gtk.Label (_("Sleep when inactive after:"));
+            var sleep_timeout_label = new Gtk.Label (_("Sleep when inactive for:"));
             ((Gtk.Misc) sleep_timeout_label).xalign = 1.0f;
             label_size.add_widget (sleep_timeout_label);
 
