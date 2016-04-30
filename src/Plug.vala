@@ -245,17 +245,17 @@ namespace Power {
                 index = 2;
             }
 
-            string[] labels = {_("Sleep button:"), _("Suspend button:"), _("Hibernate button:"), _("Power button:")};
-            string[] keys = {"button-sleep", "button-suspend", "button-hibernate", "button-power"};
+            var sleep_combobox = new ActionComboBox (_("Sleep button:"), "button-sleep");
+            items_grid.attach (sleep_combobox.label, 0, index, 1, 1);
+            label_size.add_widget (sleep_combobox.label);
+            items_grid.attach (sleep_combobox, 1, index, 1, 1);
 
-            for (int i = 0; i < labels.length; i++) {
-                var box = new ActionComboBox (labels[i], keys[i]);
-                items_grid.attach (box.label, 0, i + index, 1, 1);
-                label_size.add_widget (box.label);
-                items_grid.attach (box, 1, i + index, 1, 1);
-            }
+            var power_combobox = new ActionComboBox (_("Power button:"), "button-power");
+            items_grid.attach (power_combobox.label, 0, index + 1, 1, 1);
+            label_size.add_widget (power_combobox.label);
+            items_grid.attach (power_combobox, 1, index + 1, 1, 1);
 
-            index +=  labels.length;
+            index +=  2;
 
             var screen_timeout_label = new Gtk.Label (_("Turn off screen when inactive after:"));
             label_size.add_widget (screen_timeout_label);
