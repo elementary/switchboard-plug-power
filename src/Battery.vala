@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2015 elementary Developers (https://launchpad.net/elementary)
+ * Copyright (c) 2011-2016 elementary LLC. (https://launchpad.net/switchboard-plug-power)
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -37,15 +37,11 @@ namespace Power {
         public bool check_present () {
             bool return_value = false;
             if (laptop) {
-                try {
-                    if (upower.OnBattery) {
-                        return_value = true;
-                    }  else if (upower_device.IsPresent) {
-                        return_value = true;
-                    }
-                } catch (Error e) {
-                    warning ("battery:%s", e.message);
-                }   
+                if (upower.OnBattery) {
+                    return_value = true;
+                }  else if (upower_device.IsPresent) {
+                    return_value = true;
+                } 
             }         
             return return_value;
         }

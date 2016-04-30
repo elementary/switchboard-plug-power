@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2015 elementary Developers (https://launchpad.net/elementary)
+ * Copyright (c) 2011-2016 elementary LLC. (https://launchpad.net/switchboard-plug-power)
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -20,7 +20,8 @@
 namespace Power {
 
     GLib.Settings settings;
-    Gtk.Box stack_container;
+    Gtk.Grid stack_container;
+    Gtk.Grid main_grid;
 
     public class Plug : Switchboard.Plug {
 
@@ -62,9 +63,9 @@ namespace Power {
 
         public override void shown () {
             if (power_supply.check_present ()) {
-                stack_switcher.get_stack ().set_visible_child_name ("ac");
+                stack_switcher.get_stack ().visible_child_name = "ac";
             } else {
-                stack_switcher.get_stack ().set_visible_child_name ("battery");
+                stack_switcher.get_stack ().visible_child_name = "battery";
             }
         }
 
@@ -82,39 +83,57 @@ namespace Power {
         }
 
         private void setup_ui () {
-            stack_container = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+            stack_container = new Gtk.Grid ();
+            stack_container.orientation = Gtk.Orientation.VERTICAL;
+
             label_size = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
 
             Gtk.Grid info_bars = create_info_bars ();
 
-            Gtk.Grid common_settings = create_common_settings ();
+            main_grid = new Gtk.Grid ();
+            main_grid.margin = 24;
+            main_grid.column_spacing = 12;
+            main_grid.row_spacing = 12;
+
+            create_common_settings ();
+
             Gtk.Stack stack = new Gtk.Stack ();
-            stack_switcher = new Gtk.StackSwitcher ();
-            stack_switcher.halign = Gtk.Align.CENTER;
-            stack_switcher.stack = stack;
 
             Gtk.Grid plug_grid = create_notebook_pages ("ac");
             stack.add_titled (plug_grid, "ac", _("Plugged In"));
 
-            stack_container.pack_start (info_bars ,false ,false ,0);
+            stack_container.add (info_bars);
 
             if (laptop_detect () || battery.laptop) {
                 Gtk.Grid battery_grid = create_notebook_pages ("battery");
                 stack.add_titled (battery_grid, "battery", _("On Battery"));
 
-                stack_container.pack_start (common_settings);
-                stack_container.pack_start (stack_switcher, false, false, 0);
-                stack_container.pack_start (stack, true, true, 0);
-            } else {
-                stack_container.pack_start (common_settings, false, false, 0);
-                stack_container.pack_start (stack, true, true, 0);
+                var left_sep = new Gtk.Separator (Gtk.Orientation.HORIZONTAL);
+                left_sep.hexpand = true;    
+
+                var right_sep = new Gtk.Separator (Gtk.Orientation.HORIZONTAL);
+                right_sep.hexpand = true;
+
+                stack_switcher = new Gtk.StackSwitcher ();
+                stack_switcher.stack = stack;
+
+                var switcher_grid = new Gtk.Grid ();
+                switcher_grid.margin_top = 24;
+                switcher_grid.margin_bottom = 12;
+                switcher_grid.add (left_sep);
+                switcher_grid.add (stack_switcher);
+                switcher_grid.add (right_sep);
+
+                main_grid.attach (switcher_grid, 0, 6, 2, 1);
             }
+
+            main_grid.attach (stack, 0, 7, 2, 1);
+            stack_container.add (main_grid);
 
             stack_container.margin_bottom = 12;
             stack_container.show_all ();
             // hide stack switcher we only have ac line
-            stack_switcher.set_visible (stack.get_children ().length () > 1);
-            //
+            stack_switcher.visible = stack.get_children ().length () > 1;
         }
 
         private void connect_dbus () {
@@ -155,7 +174,7 @@ namespace Power {
             Gtk.Label label_infobar = new Gtk.Label (_("Some settings require administrator rights to be changed"));
             content_infobar.add (label_infobar);
 
-            if (battery.laptop) {
+            if (laptop_detect () || battery.laptop) {
                 permission_infobar.show_all ();
             } else {
                 permission_infobar.no_show_all = true;
@@ -177,164 +196,134 @@ namespace Power {
         }
 
         private Gtk.Grid create_common_settings () {
-            Gtk.Grid main_grid = new Gtk.Grid ();
-            Gtk.Grid items_grid = new Gtk.Grid ();
-
-            items_grid.margin = 12;
-            items_grid.column_spacing = 12;
-            items_grid.row_spacing = 12;
-
             lock_image = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-            lock_image.set_tooltip_text (no_permission_string);
-            lock_image.set_opacity (0.5);
+            lock_image.tooltip_text = no_permission_string;
+            lock_image.sensitive = false;
             lock_image2 = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-            lock_image2.set_tooltip_text (no_permission_string);
-            lock_image2.set_opacity (0.5);
-            
-            int index = 0;
-            
-            if (battery.laptop) {
+            lock_image2.tooltip_text = no_permission_string;
+            lock_image2.sensitive = false;
+
+            if (laptop_detect () || battery.laptop) {
                 var brightness_label = new Gtk.Label (_("Display brightness:"));
                 ((Gtk.Misc) brightness_label).xalign = 1.0f;
                 label_size.add_widget (brightness_label);
                 brightness_label.halign = Gtk.Align.END;
 
+                var als_label = new Gtk.Label (_("Automatically adjust brightness:"));
+                ((Gtk.Misc) als_label).xalign = 1.0f;
+                label_size.add_widget (als_label);
+                var als_switch = new Gtk.Switch ();
+                als_switch.halign = Gtk.Align.START;
+
+                settings.bind ("ambient-enabled", als_switch, "active", SettingsBindFlags.DEFAULT);
+
                 var scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 100, 10);
-                scale.set_draw_value (false);
+                scale.draw_value = false;
                 scale.hexpand = true;
                 scale.width_request = 480;
 
-                var dim_label = new Gtk.Label (_("Dim screen when inactive:"));
+                var dim_label = new Gtk.Label (_("Dim display when inactive:"));
                 ((Gtk.Misc) dim_label).xalign = 1.0f;
                 var dim_switch = new Gtk.Switch ();
                 dim_switch.halign = Gtk.Align.START;
 
                 settings.bind ("idle-dim", dim_switch, "active", SettingsBindFlags.DEFAULT);
 
-
-                try {
-                    #if OLD_GSD
-                    scale.set_value (screen.GetPercentage ());
-                    #else
-                    scale.set_value (screen.Brightness);
-                    #endif
-                } catch (IOError ioe) {
-                    // ignore, because if we have GetPercentage, we have SetPercentage
-                    // otherwise the scale won't be visible to change
-                }
+                scale.set_value (screen.Brightness);
 
                 scale.value_changed.connect (() => {
                     var val = (int) scale.get_value ();
-                    try {
-                        #if OLD_GSD
-                        screen.SetPercentage (val);
-                        #else
-                        screen.Brightness = val;
-                        #endif
-                    } catch (IOError ioe) {
-                        // ignore, because if we have GetPercentage, we have SetPercentage
-                        // otherwise the scale won't be visible to change
-                    }
+                    screen.Brightness = val;
                 });
 
-                items_grid.attach (brightness_label, 0, 0, 1, 1);
-                items_grid.attach (scale, 1, 0, 1, 1);
-
-                items_grid.attach (dim_label, 0, 1, 1, 1);
-                items_grid.attach (dim_switch, 1, 1, 1, 1);
-                index = 2;
+                main_grid.attach (brightness_label, 0, 0, 1, 1);
+                main_grid.attach (scale, 1, 0, 1, 1);
+                main_grid.attach (als_label, 0, 1, 1, 1);
+                main_grid.attach (als_switch, 1, 1, 1, 1);
+                main_grid.attach (dim_label, 0, 2, 1, 1);
+                main_grid.attach (dim_switch, 1, 2, 1, 1);
             }
 
-            string[] labels = {_("Sleep button:"), _("Suspend button:"), _("Hibernate button:"), _("Power button:")};
-            string[] keys = {"button-sleep", "button-suspend", "button-hibernate", "button-power"};
-
-            for (int i = 0; i < labels.length; i++) {
-                var box = new ActionComboBox (labels[i], keys[i]);
-                items_grid.attach (box.label, 0, i + index, 1, 1);
-                label_size.add_widget (box.label);
-                items_grid.attach (box, 1, i + index, 1, 1);
-            }
-
-            index +=  labels.length;
-
-            var screen_timeout_label = new Gtk.Label (_("Turn off screen when inactive after:"));
+            var screen_timeout_label = new Gtk.Label (_("Turn off display when inactive for:"));
+            screen_timeout_label.halign = Gtk.Align.END;
             label_size.add_widget (screen_timeout_label);
-            ((Gtk.Misc) screen_timeout_label).xalign = 1.0f;
+
             var screen_timeout = new TimeoutComboBox (pantheon_dpms_settings, "standby-time");
             screen_timeout.changed.connect (run_dpms_helper);
 
-            items_grid.attach (screen_timeout_label, 0, index, 1, 1);
-            items_grid.attach (screen_timeout, 1, index, 1, 1);
-            main_grid.attach (items_grid,0 ,0 ,1 ,1);
+            var sleep_combobox = new ActionComboBox (_("Sleep button:"), "button-sleep");
+            label_size.add_widget (sleep_combobox.label);
 
-            if (battery.laptop) {
-                Gtk.Separator separator = new Gtk.Separator (Gtk.Orientation.HORIZONTAL);
-                separator.vexpand = true;
-                separator.valign = Gtk.Align.START;
-                separator.set_visible (true);
+            var power_combobox = new ActionComboBox (_("Power button:"), "button-power");
+            label_size.add_widget (power_combobox.label);
 
-                main_grid.attach (separator,0 ,1 ,1 ,1);
-            }
+            main_grid.attach (screen_timeout_label, 0, 3, 1, 1);
+            main_grid.attach (screen_timeout, 1, 3, 1, 1);
+            main_grid.attach (sleep_combobox.label, 0, 4, 1, 1);
+            main_grid.attach (sleep_combobox, 1, 4, 1, 1);
+            main_grid.attach (power_combobox.label, 0, 5, 1, 1);
+            main_grid.attach (power_combobox, 1, 5, 1, 1);
 
             return main_grid;
         }
 
         private Gtk.Grid create_notebook_pages (string type) {
             var grid = new Gtk.Grid ();
-            int grid_x_index = 0;
-            grid.margin = 12;
             grid.column_spacing = 12;
             grid.row_spacing = 12;
 
-            var sleep_timeout_label = new Gtk.Label (_("Sleep when inactive after:"));
+            var sleep_timeout_label = new Gtk.Label (_("Sleep when inactive for:"));
             ((Gtk.Misc) sleep_timeout_label).xalign = 1.0f;
             label_size.add_widget (sleep_timeout_label);
 
             var scale_settings = @"sleep-inactive-$type-timeout";
             var sleep_timeout = new TimeoutComboBox (settings, scale_settings);
 
-            grid.attach (sleep_timeout_label, 0, grid_x_index, 1, 1);
-            grid.attach (sleep_timeout, 1, grid_x_index, 1, 1);
-            grid_x_index++;
+            grid.attach (sleep_timeout_label, 0, 0, 1, 1);
+            grid.attach (sleep_timeout, 1, 0, 1, 1);
 
             var lid_dock_box = new LidCloseActionComboBox (_("When docked and lid is closed:"), cli_communicator);
             var lid_closed_box = new LidCloseActionComboBox (_("When lid is closed:"), cli_communicator);
 
             if (type != "ac") {
                 var critical_box = new ActionComboBox (_("When power is critically low:"), "critical-battery-action");
-                grid.attach (critical_box.label, 0, grid_x_index, 1, 1);
                 label_size.add_widget (critical_box.label);
-                grid.attach (critical_box, 1, grid_x_index, 1, 1);
-                grid_x_index++;
 
-                lid_closed_box.set_sensitive (false);
-                grid.attach (lid_closed_box.label, 0, grid_x_index, 1, 1);
+                lid_closed_box.sensitive = false;
+                lid_closed_box.label.sensitive = false;
                 label_size.add_widget (lid_closed_box.label);
-                grid.attach (lid_closed_box, 1, grid_x_index, 1, 1);
 
-                grid.attach (lock_image2, 2, grid_x_index, 1, 1);
-                grid_x_index++;
+                grid.attach (critical_box.label, 0, 1, 1, 1);
+                grid.attach (critical_box, 1, 1, 1, 1);
+                grid.attach (lid_closed_box.label, 0, 2, 1, 1);
+                grid.attach (lid_closed_box, 1, 2, 1, 1);
+                grid.attach (lock_image2, 2, 2, 1, 1);
 
             } else if (battery.laptop) {
-                lid_dock_box.set_sensitive (false);
-                grid.attach (lid_dock_box.label, 0, grid_x_index, 1, 1);
+                lid_dock_box.sensitive = false;
+                lid_dock_box.label.sensitive = false;
                 label_size.add_widget (lid_dock_box.label);
-                grid.attach (lid_dock_box, 1, grid_x_index, 1, 1);
-                grid.attach (lock_image, 2, grid_x_index, 1, 1);
-                grid_x_index++;
+
+                grid.attach (lid_dock_box.label, 0, 1, 1, 1);
+                grid.attach (lid_dock_box, 1, 1, 1, 1);
+                grid.attach (lock_image, 2, 1, 1, 1);
             }
 
             get_permission ().notify["allowed"].connect (() => {
                 if (get_permission ().allowed) {
-                    lid_closed_box.set_sensitive (true);
-                    lid_dock_box.set_sensitive (true);
-                    lock_image.set_opacity (0);
-                    lock_image2.set_opacity (0);
+                    lid_closed_box.sensitive = true;
+                    lid_closed_box.label.sensitive = true;
+                    lid_dock_box.sensitive = true;
+                    lid_dock_box.label.sensitive = true;
+                    lock_image.visible = false;
+                    lock_image2.visible = false;
                 } else {
-                    lid_closed_box.set_sensitive (false);
-                    lid_dock_box.set_sensitive (false);
-                    lock_image.set_opacity (0.5);
-                    lock_image2.set_opacity (0.5);
+                    lid_closed_box.sensitive = false;
+                    lid_closed_box.label.sensitive = false;
+                    lid_dock_box.sensitive = false;
+                    lid_dock_box.label.sensitive = false;
+                    lock_image.visible = true;
+                    lock_image2.visible = true;
                 }
             });
 

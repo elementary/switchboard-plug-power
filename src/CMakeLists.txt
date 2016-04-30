@@ -3,12 +3,6 @@ find_package (PkgConfig)
 # Add all your dependencies to the list below
 pkg_check_modules (DEPS REQUIRED polkit-gobject-1 gthread-2.0 gtk+-3.0 switchboard-2.0 granite gnome-settings-daemon)
 
-if(${DEPS_gnome-settings-daemon_VERSION} VERSION_GREATER 3.10 OR ${DEPS_gnome-settings-daemon_VERSION} VERSION_EQUAL 3.10)
-	set(VALA_DEFINED_VAR "")
-else()
-	set(VALA_DEFINED_VAR "--define=OLD_GSD")
-endif()
-
 add_definitions (${DEPS_CFLAGS})
 
 link_directories (${DEPS_LIBRARY_DIRS})
