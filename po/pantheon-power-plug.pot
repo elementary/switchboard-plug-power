@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-24 10:30+0200\n"
+"POT-Creation-Date: 2016-04-30 17:06-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,138 +17,134 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src//Plug.vala:38
+#: ../src/Plug.vala:39
 msgid "You do not have permission to change this"
 msgstr ""
 
-#: ../src//Plug.vala:43
+#: ../src/Plug.vala:44
 msgid "Power"
 msgstr ""
 
-#: ../src//Plug.vala:44
+#: ../src/Plug.vala:45
 msgid "Configure display brightness, power buttons, and sleep behavior"
 msgstr ""
 
-#: ../src//Plug.vala:97
+#: ../src/Plug.vala:103
 msgid "Plugged In"
 msgstr ""
 
-#: ../src//Plug.vala:103
+#: ../src/Plug.vala:109
 msgid "On Battery"
 msgstr ""
 
-#: ../src//Plug.vala:137
+#: ../src/Plug.vala:156
 msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
 
-#: ../src//Plug.vala:155
+#: ../src/Plug.vala:174
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 
-#: ../src//Plug.vala:197
+#: ../src/Plug.vala:207
 msgid "Display brightness:"
 msgstr ""
 
-#: ../src//Plug.vala:207
-msgid "Dim screen when inactive:"
+#: ../src/Plug.vala:212
+msgid "Automatically adjust brightness:"
 msgstr ""
 
-#: ../src//Plug.vala:248
+#: ../src/Plug.vala:225
+msgid "Dim display when inactive:"
+msgstr ""
+
+#: ../src/Plug.vala:247
+msgid "Turn off display when inactive for:"
+msgstr ""
+
+#: ../src/Plug.vala:254
 msgid "Sleep button:"
 msgstr ""
 
-#: ../src//Plug.vala:248
-msgid "Suspend button:"
-msgstr ""
-
-#: ../src//Plug.vala:248
-msgid "Hibernate button:"
-msgstr ""
-
-#: ../src//Plug.vala:248
+#: ../src/Plug.vala:257
 msgid "Power button:"
 msgstr ""
 
-#: ../src//Plug.vala:260
-msgid "Turn off screen when inactive after:"
+#: ../src/Plug.vala:275
+msgid "Sleep when inactive for:"
 msgstr ""
 
-#: ../src//Plug.vala:289
-msgid "Sleep when inactive after:"
-msgstr ""
-
-#: ../src//Plug.vala:300
+#: ../src/Plug.vala:285
 msgid "When docked and lid is closed:"
 msgstr ""
 
-#: ../src//Plug.vala:301
+#: ../src/Plug.vala:286
 msgid "When lid is closed:"
 msgstr ""
 
-#: ../src//Plug.vala:304
+#: ../src/Plug.vala:289
 msgid "When power is critically low:"
 msgstr ""
 
-#: ../src//TimeoutComboBox.vala:42
+#: ../src/TimeoutComboBox.vala:42
 msgid "Never"
 msgstr ""
 
-#: ../src//TimeoutComboBox.vala:43
+#: ../src/TimeoutComboBox.vala:43
 msgid "5 min"
 msgstr ""
 
-#: ../src//TimeoutComboBox.vala:44
+#: ../src/TimeoutComboBox.vala:44
 msgid "10 min"
 msgstr ""
 
-#: ../src//TimeoutComboBox.vala:45
+#: ../src/TimeoutComboBox.vala:45
 msgid "15 min"
 msgstr ""
 
-#: ../src//TimeoutComboBox.vala:46
+#: ../src/TimeoutComboBox.vala:46
 msgid "30 min"
 msgstr ""
 
-#: ../src//TimeoutComboBox.vala:47
+#: ../src/TimeoutComboBox.vala:47
 msgid "45 min"
 msgstr ""
 
-#: ../src//TimeoutComboBox.vala:48
+#: ../src/TimeoutComboBox.vala:48
 msgid "1 hour"
 msgstr ""
 
-#: ../src//TimeoutComboBox.vala:49
+#: ../src/TimeoutComboBox.vala:49
 msgid "2 hours"
 msgstr ""
 
-#: ../src//LidCloseActionComboBox.vala:32 ../src//ActionComboBox.vala:37
+#: ../src/ActionComboBox.vala:37 ../src/LidCloseActionComboBox.vala:33
 msgid "Suspend"
 msgstr ""
 
-#: ../src//LidCloseActionComboBox.vala:33 ../src//ActionComboBox.vala:38
+#: ../src/ActionComboBox.vala:38 ../src/LidCloseActionComboBox.vala:34
 msgid "Shutdown"
 msgstr ""
 
-#: ../src//LidCloseActionComboBox.vala:34
-msgid "Lock"
-msgstr ""
-
-#: ../src//LidCloseActionComboBox.vala:35
-msgid "Halt"
-msgstr ""
-
-#: ../src//LidCloseActionComboBox.vala:36 ../src//ActionComboBox.vala:41
-msgid "Do nothing"
-msgstr ""
-
-#: ../src//LidCloseActionComboBox.vala:38
-msgid "Not supported"
-msgstr ""
-
-#: ../src//ActionComboBox.vala:39
+#: ../src/ActionComboBox.vala:39
 msgid "Hibernate"
 msgstr ""
 
-#: ../src//ActionComboBox.vala:40
+#: ../src/ActionComboBox.vala:40
 msgid "Ask me"
+msgstr ""
+
+#: ../src/ActionComboBox.vala:41 ../src/LidCloseActionComboBox.vala:37
+msgid "Do nothing"
+msgstr ""
+
+#: ../src/LidCloseActionComboBox.vala:35
+msgid "Lock"
+msgstr ""
+
+#: ../src/LidCloseActionComboBox.vala:36
+msgid "Halt"
+msgstr ""
+
+#: ../src/LidCloseActionComboBox.vala:39
+msgid "Not supported"
 msgstr ""
