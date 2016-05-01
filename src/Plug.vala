@@ -222,13 +222,6 @@ namespace Power {
                 scale.hexpand = true;
                 scale.width_request = 480;
 
-                var dim_label = new Gtk.Label (_("Dim display when inactive:"));
-                ((Gtk.Misc) dim_label).xalign = 1.0f;
-                var dim_switch = new Gtk.Switch ();
-                dim_switch.halign = Gtk.Align.START;
-
-                settings.bind ("idle-dim", dim_switch, "active", SettingsBindFlags.DEFAULT);
-
                 scale.set_value (screen.Brightness);
 
                 scale.value_changed.connect (() => {
@@ -240,8 +233,6 @@ namespace Power {
                 main_grid.attach (scale, 1, 0, 1, 1);
                 main_grid.attach (als_label, 0, 1, 1, 1);
                 main_grid.attach (als_switch, 1, 1, 1, 1);
-                main_grid.attach (dim_label, 0, 2, 1, 1);
-                main_grid.attach (dim_switch, 1, 2, 1, 1);
             }
 
             var screen_timeout_label = new Gtk.Label (_("Turn off display when inactive for:"));
@@ -279,13 +270,21 @@ namespace Power {
             var scale_settings = @"sleep-inactive-$type-timeout";
             var sleep_timeout = new TimeoutComboBox (settings, scale_settings);
 
-            grid.attach (sleep_timeout_label, 0, 0, 1, 1);
-            grid.attach (sleep_timeout, 1, 0, 1, 1);
+            grid.attach (sleep_timeout_label, 0, 1, 1, 1);
+            grid.attach (sleep_timeout, 1, 1, 1, 1);
 
             var lid_dock_box = new LidCloseActionComboBox (_("When docked and lid is closed:"), cli_communicator);
             var lid_closed_box = new LidCloseActionComboBox (_("When lid is closed:"), cli_communicator);
 
             if (type != "ac") {
+                var dim_label = new Gtk.Label (_("Dim display when inactive:"));
+                ((Gtk.Misc) dim_label).xalign = 1.0f;
+                label_size.add_widget (dim_label);
+                var dim_switch = new Gtk.Switch ();
+                dim_switch.halign = Gtk.Align.START;
+
+                settings.bind ("idle-dim", dim_switch, "active", SettingsBindFlags.DEFAULT);
+
                 var critical_box = new ActionComboBox (_("When power is critically low:"), "critical-battery-action");
                 label_size.add_widget (critical_box.label);
 
@@ -293,20 +292,22 @@ namespace Power {
                 lid_closed_box.label.sensitive = false;
                 label_size.add_widget (lid_closed_box.label);
 
-                grid.attach (critical_box.label, 0, 1, 1, 1);
-                grid.attach (critical_box, 1, 1, 1, 1);
-                grid.attach (lid_closed_box.label, 0, 2, 1, 1);
-                grid.attach (lid_closed_box, 1, 2, 1, 1);
-                grid.attach (lock_image2, 2, 2, 1, 1);
+                grid.attach (dim_label, 0, 0, 1, 1);
+                grid.attach (dim_switch, 1, 0, 1, 1);
+                grid.attach (critical_box.label, 0, 2, 1, 1);
+                grid.attach (critical_box, 1, 2, 1, 1);
+                grid.attach (lid_closed_box.label, 0, 3, 1, 1);
+                grid.attach (lid_closed_box, 1, 3, 1, 1);
+                grid.attach (lock_image2, 2, 3, 1, 1);
 
             } else if (battery.laptop) {
                 lid_dock_box.sensitive = false;
                 lid_dock_box.label.sensitive = false;
                 label_size.add_widget (lid_dock_box.label);
 
-                grid.attach (lid_dock_box.label, 0, 1, 1, 1);
-                grid.attach (lid_dock_box, 1, 1, 1, 1);
-                grid.attach (lock_image, 2, 1, 1, 1);
+                grid.attach (lid_dock_box.label, 0, 2, 1, 1);
+                grid.attach (lid_dock_box, 1, 2, 1, 1);
+                grid.attach (lock_image, 2, 2, 1, 1);
             }
 
             get_permission ().notify["allowed"].connect (() => {
