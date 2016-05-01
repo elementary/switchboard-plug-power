@@ -7,151 +7,160 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-15 15:18+0100\n"
-"PO-Revision-Date: 2016-02-22 20:37+0000\n"
+"POT-Creation-Date: 2016-04-30 17:06-0700\n"
+"PO-Revision-Date: 2016-04-30 18:03+0000\n"
 "Last-Translator: Yuly Nesterov <crow@rikka.io>\n"
 "Language-Team: Russian <ru@li.org>\n"
-"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-23 06:00+0000\n"
-"X-Generator: Launchpad (build 17925)\n"
+"X-Launchpad-Export-Date: 2016-05-01 05:35+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
+"Language: ru\n"
 
-#: ../src//Plug.vala:39
+#: ../src/Plug.vala:39
+msgid "You do not have permission to change this"
+msgstr "У вас недостаточно прав для изменения"
+
+#: ../src/Plug.vala:44
 msgid "Power"
 msgstr "Питание"
 
-#: ../src//Plug.vala:40
-msgid "Set display brightness, power button behavior, and sleep preferences"
-msgstr "Настройка яркости экрана, поведения кнопки питания, и спящего режима"
+#: ../src/Plug.vala:45
+msgid "Configure display brightness, power buttons, and sleep behavior"
+msgstr "Настройка яркости дисплея, сна и кнопок питания"
 
-#: ../src//Plug.vala:93
+#: ../src/Plug.vala:103
 msgid "Plugged In"
 msgstr "На зарядке"
 
-#: ../src//Plug.vala:99
+#: ../src/Plug.vala:109
 msgid "On Battery"
 msgstr "От батареи"
 
-#: ../src//Plug.vala:133
-msgid "Some changes will not take effect until you restart this pc"
-msgstr ""
+#: ../src/Plug.vala:156
+msgid "Some changes will not take effect until you restart this computer"
+msgstr "Некоторые изменения вступят в силу после перезагрузки компьютера"
 
-#: ../src//Plug.vala:151
+#: ../src/Plug.vala:174
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "Для изменения некоторых настроек требуются права администратора"
 
-#: ../src//Plug.vala:186
+#: ../src/Plug.vala:207
 msgid "Display brightness:"
 msgstr "Яркость экрана:"
 
-#: ../src//Plug.vala:196
-msgid "Dim screen when inactive:"
-msgstr "Убавить яркость экрана при бездействии:"
+#: ../src/Plug.vala:212
+msgid "Automatically adjust brightness:"
+msgstr ""
 
-#: ../src//Plug.vala:237
+#: ../src/Plug.vala:225
+msgid "Dim display when inactive:"
+msgstr ""
+
+#: ../src/Plug.vala:247
+msgid "Turn off display when inactive for:"
+msgstr ""
+
+#: ../src/Plug.vala:254
 msgid "Sleep button:"
 msgstr "Кнопка сна:"
 
-#: ../src//Plug.vala:237
-msgid "Suspend button:"
-msgstr "Кнопка ждущего режима:"
-
-#: ../src//Plug.vala:237
-msgid "Hibernate button:"
-msgstr "Кнопка гибернации:"
-
-#: ../src//Plug.vala:237
+#: ../src/Plug.vala:257
 msgid "Power button:"
 msgstr "Кнопка питания:"
 
-#: ../src//Plug.vala:249
-msgid "Turn off screen when inactive after:"
-msgstr "Выключать экран при бездействии в течение:"
+#: ../src/Plug.vala:275
+msgid "Sleep when inactive for:"
+msgstr ""
 
-#: ../src//Plug.vala:277
-msgid "Sleep when inactive after:"
-msgstr "Спящий режим при бездействии в течение:"
-
-#: ../src//Plug.vala:287
+#: ../src/Plug.vala:285
 msgid "When docked and lid is closed:"
 msgstr ""
 
-#: ../src//Plug.vala:288
+#: ../src/Plug.vala:286
 msgid "When lid is closed:"
-msgstr ""
+msgstr "Когда крышка закрыта:"
 
-#: ../src//Plug.vala:291
+#: ../src/Plug.vala:289
 msgid "When power is critically low:"
 msgstr "Действие при критическом заряде:"
 
-#: ../src//TimeoutComboBox.vala:42
+#: ../src/TimeoutComboBox.vala:42
 msgid "Never"
 msgstr "Никогда"
 
-#: ../src//TimeoutComboBox.vala:43
+#: ../src/TimeoutComboBox.vala:43
 msgid "5 min"
 msgstr "5 минут"
 
-#: ../src//TimeoutComboBox.vala:44
+#: ../src/TimeoutComboBox.vala:44
 msgid "10 min"
 msgstr "10 минут"
 
-#: ../src//TimeoutComboBox.vala:45
+#: ../src/TimeoutComboBox.vala:45
 msgid "15 min"
 msgstr "15 минут"
 
-#: ../src//TimeoutComboBox.vala:46
+#: ../src/TimeoutComboBox.vala:46
 msgid "30 min"
 msgstr "30 минут"
 
-#: ../src//TimeoutComboBox.vala:47
+#: ../src/TimeoutComboBox.vala:47
 msgid "45 min"
 msgstr "45 минут"
 
-#: ../src//TimeoutComboBox.vala:48
+#: ../src/TimeoutComboBox.vala:48
 msgid "1 hour"
 msgstr "1 часа"
 
-#: ../src//TimeoutComboBox.vala:49
+#: ../src/TimeoutComboBox.vala:49
 msgid "2 hours"
 msgstr "2 часов"
 
-#: ../src//LidCloseActionComboBox.vala:32 ../src//ActionComboBox.vala:37
+#: ../src/ActionComboBox.vala:37 ../src/LidCloseActionComboBox.vala:33
 msgid "Suspend"
 msgstr "Ждущий режим"
 
-#: ../src//LidCloseActionComboBox.vala:33 ../src//ActionComboBox.vala:38
+#: ../src/ActionComboBox.vala:38 ../src/LidCloseActionComboBox.vala:34
 msgid "Shutdown"
 msgstr "Выключение"
 
-#: ../src//LidCloseActionComboBox.vala:34
-msgid "Lock"
-msgstr ""
-
-#: ../src//LidCloseActionComboBox.vala:35
-msgid "Halt"
-msgstr ""
-
-#: ../src//LidCloseActionComboBox.vala:36 ../src//ActionComboBox.vala:41
-msgid "Do nothing"
-msgstr "Ничего не делать"
-
-#: ../src//LidCloseActionComboBox.vala:38
-msgid "Not supported"
-msgstr ""
-
-#: ../src//ActionComboBox.vala:39
+#: ../src/ActionComboBox.vala:39
 msgid "Hibernate"
 msgstr "Спящий режим"
 
-#: ../src//ActionComboBox.vala:40
+#: ../src/ActionComboBox.vala:40
 msgid "Ask me"
 msgstr "Спрашивать меня"
 
-#~ msgid "Configure display brightness, power buttons, and sleep behavior"
-#~ msgstr "Настройка яркости дисплея, сна и кнопок питания"
+#: ../src/ActionComboBox.vala:41 ../src/LidCloseActionComboBox.vala:37
+msgid "Do nothing"
+msgstr "Ничего не делать"
 
-#~ msgid "Automatically adjust brightness:"
-#~ msgstr "Автоматическая регулировка яркости:"
+#: ../src/LidCloseActionComboBox.vala:35
+msgid "Lock"
+msgstr "Заблокировать"
+
+#: ../src/LidCloseActionComboBox.vala:36
+msgid "Halt"
+msgstr "Завершить работу"
+
+#: ../src/LidCloseActionComboBox.vala:39
+msgid "Not supported"
+msgstr "Не поддерживается"
+
+#~ msgid "Hibernate button:"
+#~ msgstr "Кнопка гибернации:"
+
+#~ msgid "Dim screen when inactive:"
+#~ msgstr "Убавить яркость экрана при бездействии:"
+
+#~ msgid "Suspend button:"
+#~ msgstr "Кнопка ждущего режима:"
+
+#~ msgid "Turn off screen when inactive after:"
+#~ msgstr "Выключать экран при бездействии в течение:"
+
+#~ msgid "Sleep when inactive after:"
+#~ msgstr "Спящий режим при бездействии в течение:"

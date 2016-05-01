@@ -7,36 +7,84 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-22 13:55-0600\n"
+"POT-Creation-Date: 2016-04-30 17:06-0700\n"
 "PO-Revision-Date: 2016-02-28 15:08+0000\n"
 "Last-Translator: Jiri Grönroos <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-29 05:54+0000\n"
-"X-Generator: Launchpad (build 17925)\n"
+"X-Launchpad-Export-Date: 2016-05-01 05:35+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 "Language: fi\n"
 
-#: ../src/ActionComboBox.vala:37
-msgid "Suspend"
-msgstr "Valmiustila"
+#: ../src/Plug.vala:39
+msgid "You do not have permission to change this"
+msgstr ""
 
-#: ../src/ActionComboBox.vala:38
-msgid "Shutdown"
-msgstr "Sammuta"
+#: ../src/Plug.vala:44
+msgid "Power"
+msgstr "Virransäästö"
 
-#: ../src/ActionComboBox.vala:39
-msgid "Hibernate"
-msgstr "Lepotila"
+#: ../src/Plug.vala:45
+msgid "Configure display brightness, power buttons, and sleep behavior"
+msgstr "Määritä näytön kirkkaus, virtapainikkeet ja lepotilan toiminta"
 
-#: ../src/ActionComboBox.vala:40
-msgid "Ask me"
-msgstr "Kysy"
+#: ../src/Plug.vala:103
+msgid "Plugged In"
+msgstr "Verkkovirralla"
 
-#: ../src/ActionComboBox.vala:41
-msgid "Do nothing"
-msgstr "Älä tee mitään"
+#: ../src/Plug.vala:109
+msgid "On Battery"
+msgstr "Akkuvirralla"
+
+#: ../src/Plug.vala:156
+msgid "Some changes will not take effect until you restart this computer"
+msgstr ""
+
+#: ../src/Plug.vala:174
+msgid "Some settings require administrator rights to be changed"
+msgstr ""
+
+#: ../src/Plug.vala:207
+msgid "Display brightness:"
+msgstr "Näytön kirkkaus:"
+
+#: ../src/Plug.vala:212
+msgid "Automatically adjust brightness:"
+msgstr ""
+
+#: ../src/Plug.vala:225
+msgid "Dim display when inactive:"
+msgstr ""
+
+#: ../src/Plug.vala:247
+msgid "Turn off display when inactive for:"
+msgstr ""
+
+#: ../src/Plug.vala:254
+msgid "Sleep button:"
+msgstr "Siirry virransäästötilaan -painike:"
+
+#: ../src/Plug.vala:257
+msgid "Power button:"
+msgstr "Virtapainike:"
+
+#: ../src/Plug.vala:275
+msgid "Sleep when inactive for:"
+msgstr ""
+
+#: ../src/Plug.vala:285
+msgid "When docked and lid is closed:"
+msgstr ""
+
+#: ../src/Plug.vala:286
+msgid "When lid is closed:"
+msgstr ""
+
+#: ../src/Plug.vala:289
+msgid "When power is critically low:"
+msgstr "Virtaa ollessa kriittisen vähän:"
 
 #: ../src/TimeoutComboBox.vala:42
 msgid "Never"
@@ -70,58 +118,49 @@ msgstr "1 tunti"
 msgid "2 hours"
 msgstr "2 tuntia"
 
-#: ../src/Plug.vala:56
-msgid "Power"
-msgstr "Virransäästö"
+#: ../src/ActionComboBox.vala:37 ../src/LidCloseActionComboBox.vala:33
+msgid "Suspend"
+msgstr "Valmiustila"
 
-#: ../src/Plug.vala:57
-msgid "Configure display brightness, power buttons, and sleep behavior"
-msgstr "Määritä näytön kirkkaus, virtapainikkeet ja lepotilan toiminta"
+#: ../src/ActionComboBox.vala:38 ../src/LidCloseActionComboBox.vala:34
+msgid "Shutdown"
+msgstr "Sammuta"
 
-#: ../src/Plug.vala:117
-msgid "Plugged In"
-msgstr "Verkkovirralla"
+#: ../src/ActionComboBox.vala:39
+msgid "Hibernate"
+msgstr "Lepotila"
 
-#: ../src/Plug.vala:121
-msgid "On Battery"
-msgstr "Akkuvirralla"
+#: ../src/ActionComboBox.vala:40
+msgid "Ask me"
+msgstr "Kysy"
 
-#: ../src/Plug.vala:142
-msgid "Display brightness:"
-msgstr "Näytön kirkkaus:"
+#: ../src/ActionComboBox.vala:41 ../src/LidCloseActionComboBox.vala:37
+msgid "Do nothing"
+msgstr "Älä tee mitään"
 
-#: ../src/Plug.vala:152
-msgid "Automatically adjust brightness:"
-msgstr "Säädä valoisuutta automaattisesti:"
+#: ../src/LidCloseActionComboBox.vala:35
+msgid "Lock"
+msgstr ""
 
-#: ../src/Plug.vala:159
-msgid "Dim screen when inactive:"
-msgstr "Himmennä näyttö käyttämättömänä ollessa:"
+#: ../src/LidCloseActionComboBox.vala:36
+msgid "Halt"
+msgstr ""
 
-#: ../src/Plug.vala:222
-msgid "Sleep button:"
-msgstr "Siirry virransäästötilaan -painike:"
+#: ../src/LidCloseActionComboBox.vala:39
+msgid "Not supported"
+msgstr ""
 
-#: ../src/Plug.vala:222
-msgid "Suspend button:"
-msgstr "Siirry valmiustilaan -painike:"
+#~ msgid "Hibernate button:"
+#~ msgstr "Siirry lepotilaan -painike:"
 
-#: ../src/Plug.vala:222
-msgid "Hibernate button:"
-msgstr "Siirry lepotilaan -painike:"
+#~ msgid "Suspend button:"
+#~ msgstr "Siirry valmiustilaan -painike:"
 
-#: ../src/Plug.vala:222
-msgid "Power button:"
-msgstr "Virtapainike:"
+#~ msgid "Dim screen when inactive:"
+#~ msgstr "Himmennä näyttö käyttämättömänä ollessa:"
 
-#: ../src/Plug.vala:232
-msgid "Turn off screen when inactive after:"
-msgstr "Sammuta näyttö koneen ollessa jouten:"
+#~ msgid "Sleep when inactive after:"
+#~ msgstr "Siirry lepotilaan käyttämättömänä ollessa:"
 
-#: ../src/Plug.vala:250
-msgid "Sleep when inactive after:"
-msgstr "Siirry lepotilaan käyttämättömänä ollessa:"
-
-#: ../src/Plug.vala:261
-msgid "When power is critically low:"
-msgstr "Virtaa ollessa kriittisen vähän:"
+#~ msgid "Turn off screen when inactive after:"
+#~ msgstr "Sammuta näyttö koneen ollessa jouten:"

@@ -7,145 +7,151 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-15 15:18+0100\n"
+"POT-Creation-Date: 2016-04-30 17:06-0700\n"
 "PO-Revision-Date: 2015-09-05 08:41+0000\n"
 "Last-Translator: Uri Damsker  אורי דמסקר <ud1955@gmail.com>\n"
 "Language-Team: Hebrew <he@li.org>\n"
-"Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-23 06:00+0000\n"
-"X-Generator: Launchpad (build 17925)\n"
+"X-Launchpad-Export-Date: 2016-05-01 05:35+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
+"Language: he\n"
 
-#: ../src//Plug.vala:39
+#: ../src/Plug.vala:39
+msgid "You do not have permission to change this"
+msgstr ""
+
+#: ../src/Plug.vala:44
 msgid "Power"
 msgstr "כח"
 
-#: ../src//Plug.vala:40
-msgid "Set display brightness, power button behavior, and sleep preferences"
+#: ../src/Plug.vala:45
+msgid "Configure display brightness, power buttons, and sleep behavior"
 msgstr ""
 
-#: ../src//Plug.vala:93
+#: ../src/Plug.vala:103
 msgid "Plugged In"
 msgstr "התחבר"
 
-#: ../src//Plug.vala:99
+#: ../src/Plug.vala:109
 msgid "On Battery"
 msgstr ""
 
-#: ../src//Plug.vala:133
-msgid "Some changes will not take effect until you restart this pc"
+#: ../src/Plug.vala:156
+msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
 
-#: ../src//Plug.vala:151
+#: ../src/Plug.vala:174
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 
-#: ../src//Plug.vala:186
+#: ../src/Plug.vala:207
 msgid "Display brightness:"
 msgstr ""
 
-#: ../src//Plug.vala:196
-msgid "Dim screen when inactive:"
+#: ../src/Plug.vala:212
+msgid "Automatically adjust brightness:"
 msgstr ""
 
-#: ../src//Plug.vala:237
+#: ../src/Plug.vala:225
+msgid "Dim display when inactive:"
+msgstr ""
+
+#: ../src/Plug.vala:247
+msgid "Turn off display when inactive for:"
+msgstr ""
+
+#: ../src/Plug.vala:254
 msgid "Sleep button:"
 msgstr ""
 
-#: ../src//Plug.vala:237
-msgid "Suspend button:"
-msgstr "כפתור השהייה:"
-
-#: ../src//Plug.vala:237
-msgid "Hibernate button:"
-msgstr "כפתור מצב שינה:"
-
-#: ../src//Plug.vala:237
+#: ../src/Plug.vala:257
 msgid "Power button:"
 msgstr "כפתור הפעלה:"
 
-#: ../src//Plug.vala:249
-msgid "Turn off screen when inactive after:"
+#: ../src/Plug.vala:275
+msgid "Sleep when inactive for:"
 msgstr ""
 
-#: ../src//Plug.vala:277
-msgid "Sleep when inactive after:"
-msgstr ""
-
-#: ../src//Plug.vala:287
+#: ../src/Plug.vala:285
 msgid "When docked and lid is closed:"
 msgstr ""
 
-#: ../src//Plug.vala:288
+#: ../src/Plug.vala:286
 msgid "When lid is closed:"
 msgstr ""
 
-#: ../src//Plug.vala:291
+#: ../src/Plug.vala:289
 msgid "When power is critically low:"
 msgstr ""
 
-#: ../src//TimeoutComboBox.vala:42
+#: ../src/TimeoutComboBox.vala:42
 msgid "Never"
 msgstr "אף פעם"
 
-#: ../src//TimeoutComboBox.vala:43
+#: ../src/TimeoutComboBox.vala:43
 msgid "5 min"
 msgstr "5 דקות"
 
-#: ../src//TimeoutComboBox.vala:44
+#: ../src/TimeoutComboBox.vala:44
 msgid "10 min"
 msgstr "10 דקות"
 
-#: ../src//TimeoutComboBox.vala:45
+#: ../src/TimeoutComboBox.vala:45
 msgid "15 min"
 msgstr ""
 
-#: ../src//TimeoutComboBox.vala:46
+#: ../src/TimeoutComboBox.vala:46
 msgid "30 min"
 msgstr "30 דקות"
 
-#: ../src//TimeoutComboBox.vala:47
+#: ../src/TimeoutComboBox.vala:47
 msgid "45 min"
 msgstr ""
 
-#: ../src//TimeoutComboBox.vala:48
+#: ../src/TimeoutComboBox.vala:48
 msgid "1 hour"
 msgstr "שעה"
 
-#: ../src//TimeoutComboBox.vala:49
+#: ../src/TimeoutComboBox.vala:49
 msgid "2 hours"
 msgstr ""
 
-#: ../src//LidCloseActionComboBox.vala:32 ../src//ActionComboBox.vala:37
+#: ../src/ActionComboBox.vala:37 ../src/LidCloseActionComboBox.vala:33
 msgid "Suspend"
 msgstr "השהה"
 
-#: ../src//LidCloseActionComboBox.vala:33 ../src//ActionComboBox.vala:38
+#: ../src/ActionComboBox.vala:38 ../src/LidCloseActionComboBox.vala:34
 msgid "Shutdown"
 msgstr "כיבוי"
 
-#: ../src//LidCloseActionComboBox.vala:34
-msgid "Lock"
-msgstr ""
-
-#: ../src//LidCloseActionComboBox.vala:35
-msgid "Halt"
-msgstr ""
-
-#: ../src//LidCloseActionComboBox.vala:36 ../src//ActionComboBox.vala:41
-msgid "Do nothing"
-msgstr "אל תעשה דבר"
-
-#: ../src//LidCloseActionComboBox.vala:38
-msgid "Not supported"
-msgstr ""
-
-#: ../src//ActionComboBox.vala:39
+#: ../src/ActionComboBox.vala:39
 msgid "Hibernate"
 msgstr "תרדמת"
 
-#: ../src//ActionComboBox.vala:40
+#: ../src/ActionComboBox.vala:40
 msgid "Ask me"
 msgstr "שאל אותי"
+
+#: ../src/ActionComboBox.vala:41 ../src/LidCloseActionComboBox.vala:37
+msgid "Do nothing"
+msgstr "אל תעשה דבר"
+
+#: ../src/LidCloseActionComboBox.vala:35
+msgid "Lock"
+msgstr ""
+
+#: ../src/LidCloseActionComboBox.vala:36
+msgid "Halt"
+msgstr ""
+
+#: ../src/LidCloseActionComboBox.vala:39
+msgid "Not supported"
+msgstr ""
+
+#~ msgid "Hibernate button:"
+#~ msgstr "כפתור מצב שינה:"
+
+#~ msgid "Suspend button:"
+#~ msgstr "כפתור השהייה:"
