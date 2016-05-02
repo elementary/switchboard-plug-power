@@ -14,7 +14,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-05-01 05:35+0000\n"
+"X-Launchpad-Export-Date: 2016-05-02 05:41+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "Language: nl\n"
 
@@ -149,18 +149,3 @@ msgstr ""
 #: ../src/LidCloseActionComboBox.vala:39
 msgid "Not supported"
 msgstr ""
-
-#~ msgid "Hibernate button:"
-#~ msgstr "Slaapstand-knop:"
-
-#~ msgid "Suspend button:"
-#~ msgstr "Pauzestand-knop:"
-
-#~ msgid "Dim screen when inactive:"
-#~ msgstr "Beeldscherm dimmen wanneer computer inactief is:"
-
-#~ msgid "Sleep when inactive after:"
-#~ msgstr "Slaapstand wanneer inactief voor:"
-
-#~ msgid "Turn off screen when inactive after:"
-#~ msgstr "Schakel scherm uit wanneer inactief voor:"

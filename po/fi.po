@@ -8,19 +8,19 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-30 17:06-0700\n"
-"PO-Revision-Date: 2016-02-28 15:08+0000\n"
+"PO-Revision-Date: 2016-05-01 11:23+0000\n"
 "Last-Translator: Jiri Grönroos <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-05-01 05:35+0000\n"
+"X-Launchpad-Export-Date: 2016-05-02 05:41+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "Language: fi\n"
 
 #: ../src/Plug.vala:39
 msgid "You do not have permission to change this"
-msgstr ""
+msgstr "Oikeutesi eivät riitä tämän kohdan muuttamiseen"
 
 #: ../src/Plug.vala:44
 msgid "Power"
@@ -41,10 +41,12 @@ msgstr "Akkuvirralla"
 #: ../src/Plug.vala:156
 msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
+"Jotkin asetukset tulevat voimaan vasta tietokoneen uudelleenkäynniostyksen "
+"myötä"
 
 #: ../src/Plug.vala:174
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "Jotkin asetukset vaativat muutoksia varten ylläpitäjän oikeuksia"
 
 #: ../src/Plug.vala:207
 msgid "Display brightness:"
@@ -52,15 +54,15 @@ msgstr "Näytön kirkkaus:"
 
 #: ../src/Plug.vala:212
 msgid "Automatically adjust brightness:"
-msgstr ""
+msgstr "Säädä valoisuutta automaattisesti:"
 
 #: ../src/Plug.vala:225
 msgid "Dim display when inactive:"
-msgstr ""
+msgstr "Himmennä näyttö kun käyttämättä:"
 
 #: ../src/Plug.vala:247
 msgid "Turn off display when inactive for:"
-msgstr ""
+msgstr "Sammuta näyttö kun käyttämättä:"
 
 #: ../src/Plug.vala:254
 msgid "Sleep button:"
@@ -76,11 +78,11 @@ msgstr ""
 
 #: ../src/Plug.vala:285
 msgid "When docked and lid is closed:"
-msgstr ""
+msgstr "Telakoituna ja kansi suljettuna:"
 
 #: ../src/Plug.vala:286
 msgid "When lid is closed:"
-msgstr ""
+msgstr "Kansi suljettuna:"
 
 #: ../src/Plug.vala:289
 msgid "When power is critically low:"
@@ -140,7 +142,7 @@ msgstr "Älä tee mitään"
 
 #: ../src/LidCloseActionComboBox.vala:35
 msgid "Lock"
-msgstr ""
+msgstr "Lukitse"
 
 #: ../src/LidCloseActionComboBox.vala:36
 msgid "Halt"
@@ -148,19 +150,4 @@ msgstr ""
 
 #: ../src/LidCloseActionComboBox.vala:39
 msgid "Not supported"
-msgstr ""
-
-#~ msgid "Hibernate button:"
-#~ msgstr "Siirry lepotilaan -painike:"
-
-#~ msgid "Suspend button:"
-#~ msgstr "Siirry valmiustilaan -painike:"
-
-#~ msgid "Dim screen when inactive:"
-#~ msgstr "Himmennä näyttö käyttämättömänä ollessa:"
-
-#~ msgid "Sleep when inactive after:"
-#~ msgstr "Siirry lepotilaan käyttämättömänä ollessa:"
-
-#~ msgid "Turn off screen when inactive after:"
-#~ msgstr "Sammuta näyttö koneen ollessa jouten:"
+msgstr "Ei tuettu"
