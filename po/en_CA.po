@@ -8,19 +8,19 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-30 17:06-0700\n"
-"PO-Revision-Date: 2016-03-19 19:29+0000\n"
-"Last-Translator: chilledfrogs <Unknown>\n"
+"PO-Revision-Date: 2016-05-04 16:05+0000\n"
+"Last-Translator: Giovanni Caligaris <giovannicaligaris@gmail.com>\n"
 "Language-Team: English (Canada) <en_CA@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-05-02 05:42+0000\n"
+"X-Launchpad-Export-Date: 2016-05-05 05:34+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 "Language: \n"
 
 #: ../src/Plug.vala:39
 msgid "You do not have permission to change this"
-msgstr ""
+msgstr "You do not have permission to change this"
 
 #: ../src/Plug.vala:44
 msgid "Power"
@@ -40,11 +40,11 @@ msgstr "On Battery"
 
 #: ../src/Plug.vala:156
 msgid "Some changes will not take effect until you restart this computer"
-msgstr ""
+msgstr "Some changes will not take effect until you restart this computer"
 
 #: ../src/Plug.vala:174
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "Some settings require administrator rights to be changed"
 
 #: ../src/Plug.vala:207
 msgid "Display brightness:"
@@ -52,15 +52,15 @@ msgstr "Display brightness:"
 
 #: ../src/Plug.vala:212
 msgid "Automatically adjust brightness:"
-msgstr ""
+msgstr "Automatically adjust brightness:"
 
 #: ../src/Plug.vala:225
 msgid "Dim display when inactive:"
-msgstr ""
+msgstr "Dim display when inactive:"
 
 #: ../src/Plug.vala:247
 msgid "Turn off display when inactive for:"
-msgstr ""
+msgstr "Turn off display when inactive for:"
 
 #: ../src/Plug.vala:254
 msgid "Sleep button:"
@@ -72,15 +72,15 @@ msgstr "Power button:"
 
 #: ../src/Plug.vala:275
 msgid "Sleep when inactive for:"
-msgstr ""
+msgstr "Sleep when inactive for:"
 
 #: ../src/Plug.vala:285
 msgid "When docked and lid is closed:"
-msgstr ""
+msgstr "When docked and lid is closed:"
 
 #: ../src/Plug.vala:286
 msgid "When lid is closed:"
-msgstr ""
+msgstr "When lid is closed:"
 
 #: ../src/Plug.vala:289
 msgid "When power is critically low:"
@@ -140,12 +140,12 @@ msgstr "Do nothing"
 
 #: ../src/LidCloseActionComboBox.vala:35
 msgid "Lock"
-msgstr ""
+msgstr "Lock"
 
 #: ../src/LidCloseActionComboBox.vala:36
 msgid "Halt"
-msgstr ""
+msgstr "Halt"
 
 #: ../src/LidCloseActionComboBox.vala:39
 msgid "Not supported"
-msgstr ""
+msgstr "Not supported"
