@@ -8,19 +8,19 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-30 17:06-0700\n"
-"PO-Revision-Date: 2016-04-14 17:43+0000\n"
+"PO-Revision-Date: 2016-05-11 12:52+0000\n"
 "Last-Translator: Leonardo Lemos <Unknown>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-05-02 05:41+0000\n"
-"X-Generator: Launchpad (build 17995)\n"
+"X-Launchpad-Export-Date: 2016-05-12 05:34+0000\n"
+"X-Generator: Launchpad (build 18025)\n"
 "Language: pt_BR\n"
 
 #: ../src/Plug.vala:39
 msgid "You do not have permission to change this"
-msgstr ""
+msgstr "Você não possui permissões para mudar isto"
 
 #: ../src/Plug.vala:44
 msgid "Power"
@@ -42,10 +42,13 @@ msgstr "Na bateria"
 #: ../src/Plug.vala:156
 msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
+"Algumas alterações não serão aplicadas até que você reinicie este computador"
 
 #: ../src/Plug.vala:174
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
+"Algumas configurações precisam de direitos administrativos para serem "
+"modificadas"
 
 #: ../src/Plug.vala:207
 msgid "Display brightness:"
@@ -53,15 +56,15 @@ msgstr "Brilho da tela:"
 
 #: ../src/Plug.vala:212
 msgid "Automatically adjust brightness:"
-msgstr ""
+msgstr "Ajustar brilho automaticamente:"
 
 #: ../src/Plug.vala:225
 msgid "Dim display when inactive:"
-msgstr ""
+msgstr "Escurecer o monitor quando inativo:"
 
 #: ../src/Plug.vala:247
 msgid "Turn off display when inactive for:"
-msgstr ""
+msgstr "Desligar o monitor quando inativo por:"
 
 #: ../src/Plug.vala:254
 msgid "Sleep button:"
@@ -73,15 +76,15 @@ msgstr "Botão liga/desliga:"
 
 #: ../src/Plug.vala:275
 msgid "Sleep when inactive for:"
-msgstr ""
+msgstr "Dormir quando inativo por:"
 
 #: ../src/Plug.vala:285
 msgid "When docked and lid is closed:"
-msgstr ""
+msgstr "Quando plugado e a tampa estiver fechada:"
 
 #: ../src/Plug.vala:286
 msgid "When lid is closed:"
-msgstr ""
+msgstr "Quando a tampa estiver fechada:"
 
 #: ../src/Plug.vala:289
 msgid "When power is critically low:"
@@ -141,12 +144,12 @@ msgstr "Fazer nada"
 
 #: ../src/LidCloseActionComboBox.vala:35
 msgid "Lock"
-msgstr ""
+msgstr "Bloquear"
 
 #: ../src/LidCloseActionComboBox.vala:36
 msgid "Halt"
-msgstr ""
+msgstr "Parar"
 
 #: ../src/LidCloseActionComboBox.vala:39
 msgid "Not supported"
-msgstr ""
+msgstr "Não suportado"
