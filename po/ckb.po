@@ -2,15 +2,72 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-30 17:06-0700\n"
+"POT-Creation-Date: 2016-05-07 17:29+0400\n"
 "PO-Revision-Date: 2014-12-05 05:08+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-05-02 05:42+0000\n"
-"X-Generator: Launchpad (build 17995)\n"
+"X-Launchpad-Export-Date: 2016-05-17 05:56+0000\n"
+"X-Generator: Launchpad (build 18025)\n"
+
+#. //launchpad.net/switchboard-plug-power)
+#. *
+#. * This program is free software; you can redistribute it and/or
+#. * modify it under the terms of the GNU General Public
+#. * License as published by the Free Software Foundation; either
+#. * version 2 of the License, or (at your option) any later version.
+#. *
+#. * This program is distributed in the hope that it will be useful,
+#. * but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+#. * General Public License for more details.
+#. *
+#. * You should have received a copy of the GNU General Public
+#. * License along with this program; if not, write to the
+#. * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+#. * Boston, MA 02111-1307, USA.
+#. 
+#: ../src/Translations.vala:20
+msgid "Manage power settings "
+msgstr ""
+
+#: ../src/Translations.vala:21
+msgid "Authentication is required to manage power settings"
+msgstr ""
+
+#: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:37
+msgid "Suspend"
+msgstr ""
+
+#: ../src/LidCloseActionComboBox.vala:34 ../src/ActionComboBox.vala:38
+msgid "Shutdown"
+msgstr ""
+
+#: ../src/LidCloseActionComboBox.vala:35
+msgid "Lock"
+msgstr ""
+
+#: ../src/LidCloseActionComboBox.vala:36
+msgid "Halt"
+msgstr ""
+
+#: ../src/LidCloseActionComboBox.vala:37 ../src/ActionComboBox.vala:41
+msgid "Do nothing"
+msgstr ""
+
+#: ../src/LidCloseActionComboBox.vala:39
+msgid "Not supported"
+msgstr ""
+
+#: ../src/ActionComboBox.vala:39
+msgid "Hibernate"
+msgstr ""
+
+#: ../src/ActionComboBox.vala:40
+msgid "Ask me"
+msgstr ""
 
 #: ../src/Plug.vala:39
 msgid "You do not have permission to change this"
@@ -48,35 +105,35 @@ msgstr ""
 msgid "Automatically adjust brightness:"
 msgstr ""
 
-#: ../src/Plug.vala:225
-msgid "Dim display when inactive:"
-msgstr ""
-
-#: ../src/Plug.vala:247
+#: ../src/Plug.vala:238
 msgid "Turn off display when inactive for:"
 msgstr ""
 
-#: ../src/Plug.vala:254
+#: ../src/Plug.vala:245
 msgid "Sleep button:"
 msgstr ""
 
-#: ../src/Plug.vala:257
+#: ../src/Plug.vala:248
 msgid "Power button:"
 msgstr ""
 
-#: ../src/Plug.vala:275
+#: ../src/Plug.vala:266
 msgid "Sleep when inactive for:"
 msgstr ""
 
-#: ../src/Plug.vala:285
+#: ../src/Plug.vala:276
 msgid "When docked and lid is closed:"
 msgstr ""
 
-#: ../src/Plug.vala:286
+#: ../src/Plug.vala:277
 msgid "When lid is closed:"
 msgstr ""
 
-#: ../src/Plug.vala:289
+#: ../src/Plug.vala:280
+msgid "Dim display when inactive:"
+msgstr ""
+
+#: ../src/Plug.vala:288
 msgid "When power is critically low:"
 msgstr ""
 
@@ -110,36 +167,4 @@ msgstr ""
 
 #: ../src/TimeoutComboBox.vala:49
 msgid "2 hours"
-msgstr ""
-
-#: ../src/ActionComboBox.vala:37 ../src/LidCloseActionComboBox.vala:33
-msgid "Suspend"
-msgstr ""
-
-#: ../src/ActionComboBox.vala:38 ../src/LidCloseActionComboBox.vala:34
-msgid "Shutdown"
-msgstr ""
-
-#: ../src/ActionComboBox.vala:39
-msgid "Hibernate"
-msgstr ""
-
-#: ../src/ActionComboBox.vala:40
-msgid "Ask me"
-msgstr ""
-
-#: ../src/ActionComboBox.vala:41 ../src/LidCloseActionComboBox.vala:37
-msgid "Do nothing"
-msgstr ""
-
-#: ../src/LidCloseActionComboBox.vala:35
-msgid "Lock"
-msgstr ""
-
-#: ../src/LidCloseActionComboBox.vala:36
-msgid "Halt"
-msgstr ""
-
-#: ../src/LidCloseActionComboBox.vala:39
-msgid "Not supported"
 msgstr ""
