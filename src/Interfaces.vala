@@ -37,6 +37,7 @@ namespace Power {
 		public abstract bool Online { owned get; private set; }
 		public abstract bool PowerSupply { owned get; private set; }
 		public abstract bool IsPresent { owned get; private set; }
+		public abstract uint Type { owned get; private set; }
 	}
 
 

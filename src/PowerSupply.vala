@@ -24,6 +24,7 @@ namespace Power {
 
         private const string dbus_upower_name = "org.freedesktop.UPower";
         private const string dbus_upower_root_path = "/org/freedesktop/UPower";
+        private const uint LINE_POWER_TYPE = 1;
         private string dbus_upower_ac_path;
         
         public PowerSupply () {
@@ -46,33 +47,29 @@ namespace Power {
             return return_value;
         }
 
-        private void connect_dbus() {
+        private void connect_dbus () {
             try{
                 upower = Bus.get_proxy_sync (BusType.SYSTEM, dbus_upower_name, dbus_upower_root_path, DBusProxyFlags.NONE);
-                dbus_upower_ac_path = get_dbus_path(upower);
-
-                if (dbus_upower_ac_path != "" && dbus_upower_ac_path != null) {
-                    upower_device = Bus.get_proxy_sync (BusType.SYSTEM, dbus_upower_name, dbus_upower_ac_path, DBusProxyFlags.GET_INVALIDATED_PROPERTIES);
-                }
+                get_upower_ac_device (upower);
             } catch (Error e) {
                 critical ("power supply dbus connection to upower fault");
             }
             debug ("power supply path:%s  dbus connected", dbus_upower_ac_path);
         }
 
-        private string get_dbus_path(Upower upow) {
-            string return_value = "";
+        private void get_upower_ac_device (Upower upow) {
             try {
-                ObjectPath[] devs = upow.EnumerateDevices();
-                for(int i =0; i<devs.length; i++) {
-                    if(devs[i].contains("line_power")) {
-                        return_value = devs[i].to_string();
+                ObjectPath[] devs = upow.EnumerateDevices ();
+                for (int i = 0; i < devs.length; i++) {
+                    UpowerDevice dev = Bus.get_proxy_sync (BusType.SYSTEM, dbus_upower_name, devs[i], DBusProxyFlags.GET_INVALIDATED_PROPERTIES);
+                    if (dev.Type == LINE_POWER_TYPE) {
+                        upower_device = dev;
+                        return;
                     }
                 }
             } catch (Error e) {
                 critical("power supply couldn't get upower devices");
             }
-            return return_value;
         }
     }
 }
