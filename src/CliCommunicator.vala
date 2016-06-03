@@ -40,51 +40,53 @@ namespace Power {
         }
 
         private string action_to_string (Action value) {
-            string return_val = "NOT_SUPPORTED";
+            string str = "NOT_SUPPORTED";
             switch (value) {
                 case Action.IGNORE:
-                    return_val = "ignore";
+                    str = "ignore";
                     break;
                 case Action.POWEROFF:
-                    return_val = "poweroff";
+                    str = "poweroff";
                     break;
                 case Action.LOCK:
-                    return_val = "lock";
+                    str = "lock";
                     break;
                 case Action.SUSPEND:
-                    return_val = "suspend";
+                    str = "suspend";
                     break;
                 case Action.HALT:
-                    return_val = "halt";
+                    str = "halt";
                     break;
                 default:
                     break;
             }
-            return return_val;
+
+            return str;
         }
 
         private Action string_to_action (string value) {
-            Action return_val = Action.NOT_SUPPORTED;
+            Action action = Action.NOT_SUPPORTED;
             switch (value) {
                 case "ignore":
-                    return_val = Action.IGNORE;
+                    action = Action.IGNORE;
                     break;
                 case "poweroff":
-                    return_val = Action.POWEROFF;
+                    action = Action.POWEROFF;
                     break;
                 case "lock":
-                    return_val = Action.LOCK;
+                    action = Action.LOCK;
                     break;
                 case "suspend":
-                    return_val = Action.SUSPEND;
+                    action = Action.SUSPEND;
                     break;
                 case "halt":
-                    return_val = Action.HALT;
+                    action = Action.HALT;
                     break;
                 default:
                     break;
             }
-            return return_val;
+            
+            return action;
         }
 
         private void seperate_string (string value) {

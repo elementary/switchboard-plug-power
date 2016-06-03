@@ -24,7 +24,6 @@ namespace Power {
     Gtk.Grid main_grid;
 
     public class Plug : Switchboard.Plug {
-
         private Gtk.SizeGroup label_size;
         private Gtk.StackSwitcher stack_switcher;
         private GLib.Settings pantheon_dpms_settings;
@@ -36,7 +35,8 @@ namespace Power {
         private Gtk.Image lock_image;
         private Gtk.Image lock_image2;
 
-        private const string no_permission_string   = _("You do not have permission to change this");
+        private const string NO_PERMISSION_STRING  = _("You do not have permission to change this");
+        private const string LAPTOP_DETECT_BINARY = "/usr/sbin/laptop-detect";
 
         public Plug () {
             Object (category: Category.HARDWARE,
@@ -62,10 +62,10 @@ namespace Power {
         }
 
         public override void shown () {
-            if (power_supply.check_present ()) {
-                stack_switcher.get_stack ().visible_child_name = "ac";
-            } else {
+            if (battery.check_present ()) {
                 stack_switcher.get_stack ().visible_child_name = "battery";
+            } else {
+                stack_switcher.get_stack ().visible_child_name = "ac";
             }
         }
 
@@ -99,13 +99,16 @@ namespace Power {
 
             Gtk.Stack stack = new Gtk.Stack ();
 
-            Gtk.Grid plug_grid = create_notebook_pages ("ac");
+            Gtk.Grid plug_grid = create_notebook_pages (true);
             stack.add_titled (plug_grid, "ac", _("Plugged In"));
 
             stack_container.add (info_bars);
 
+            stack_switcher = new Gtk.StackSwitcher ();
+            stack_switcher.stack = stack;
+
             if (laptop_detect () || battery.laptop) {
-                Gtk.Grid battery_grid = create_notebook_pages ("battery");
+                Gtk.Grid battery_grid = create_notebook_pages (false);
                 stack.add_titled (battery_grid, "battery", _("On Battery"));
 
                 var left_sep = new Gtk.Separator (Gtk.Orientation.HORIZONTAL);
@@ -113,9 +116,6 @@ namespace Power {
 
                 var right_sep = new Gtk.Separator (Gtk.Orientation.HORIZONTAL);
                 right_sep.hexpand = true;
-
-                stack_switcher = new Gtk.StackSwitcher ();
-                stack_switcher.stack = stack;
 
                 var switcher_grid = new Gtk.Grid ();
                 switcher_grid.margin_top = 24;
@@ -132,8 +132,10 @@ namespace Power {
 
             stack_container.margin_bottom = 12;
             stack_container.show_all ();
-            // hide stack switcher we only have ac line
+
+            // hide stack switcher if we only have ac line
             stack_switcher.visible = stack.get_children ().length () > 1;
+
         }
 
         private void connect_dbus () {
@@ -197,10 +199,10 @@ namespace Power {
 
         private Gtk.Grid create_common_settings () {
             lock_image = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-            lock_image.tooltip_text = no_permission_string;
+            lock_image.tooltip_text = NO_PERMISSION_STRING;
             lock_image.sensitive = false;
             lock_image2 = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-            lock_image2.tooltip_text = no_permission_string;
+            lock_image2.tooltip_text = NO_PERMISSION_STRING;
             lock_image2.sensitive = false;
 
             if (laptop_detect () || battery.laptop) {
@@ -258,7 +260,7 @@ namespace Power {
             return main_grid;
         }
 
-        private Gtk.Grid create_notebook_pages (string type) {
+        private Gtk.Grid create_notebook_pages (bool ac) {
             var grid = new Gtk.Grid ();
             grid.column_spacing = 12;
             grid.row_spacing = 12;
@@ -266,6 +268,11 @@ namespace Power {
             var sleep_timeout_label = new Gtk.Label (_("Sleep when inactive for:"));
             ((Gtk.Misc) sleep_timeout_label).xalign = 1.0f;
             label_size.add_widget (sleep_timeout_label);
+
+            string type = "battery";
+            if (ac) {
+                type = "ac";
+            }
 
             var scale_settings = @"sleep-inactive-$type-timeout";
             var sleep_timeout = new TimeoutComboBox (settings, scale_settings);
@@ -276,7 +283,7 @@ namespace Power {
             var lid_dock_box = new LidCloseActionComboBox (_("When docked and lid is closed:"), cli_communicator);
             var lid_closed_box = new LidCloseActionComboBox (_("When lid is closed:"), cli_communicator);
 
-            if (type != "ac") {
+            if (!ac) {
                 var dim_label = new Gtk.Label (_("Dim display when inactive:"));
                 ((Gtk.Misc) dim_label).xalign = 1.0f;
                 label_size.add_widget (dim_label);
@@ -332,35 +339,30 @@ namespace Power {
         }
 
         private bool laptop_detect () {
-            string test_laptop_detect = Environment.find_program_in_path ("laptop-detect");
-            if (test_laptop_detect == null && 
-                FileUtils.test ("/usr/sbin/laptop-detect", FileTest.EXISTS) &&
-                FileUtils.test ("/usr/sbin/laptop-detect", FileTest.IS_REGULAR) &&
-                FileUtils.test ("/usr/sbin/laptop-detect", FileTest.IS_EXECUTABLE)) {
-                test_laptop_detect = "/usr/sbin/laptop-detect";
-            }
-
-            if (test_laptop_detect != null) {
-                int exit_status;
-                string standard_output, standard_error;
-                try {
-                    Process.spawn_command_line_sync (test_laptop_detect, out standard_output,
-                        out standard_error, out exit_status);
-                    if (exit_status == 0) {
-                        debug ("Laptop detect return true");
-                        return true;
-                    } else {
-                        debug ("Laptop detect return false");
-                        return false;
-                    }
-                } catch (SpawnError err) {
-                    warning (err.message);
-                    return false;
-                }
-            } else {
-                warning ("Laptop detect not find");
+            string? laptop_detect_executable = Environment.find_program_in_path ("laptop-detect");
+            if (laptop_detect_executable == null || 
+                !FileUtils.test (laptop_detect_executable, FileTest.IS_EXECUTABLE) ||
+                !FileUtils.test (LAPTOP_DETECT_BINARY, FileTest.IS_EXECUTABLE)) {
+                warning ("Laptop detect not found");
                 return false;
             }
+
+            int exit_status;
+            string standard_output, standard_error;
+            try {
+                Process.spawn_command_line_sync (laptop_detect_executable, out standard_output,
+                    out standard_error, out exit_status);
+                if (exit_status == 0) {
+                    debug ("Laptop detect returned true");
+                    return true;
+                }
+            } catch (SpawnError err) {
+                warning (err.message);
+                return false;
+            }
+
+            debug ("Laptop detect returned false");
+            return false;
         }
 
         private void run_dpms_helper () {

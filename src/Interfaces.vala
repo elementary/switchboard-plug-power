@@ -18,6 +18,8 @@
  */
 
 namespace Power {
+    public const string DBUS_UPOWER_NAME = "org.freedesktop.UPower";
+    public const string DBUS_UPOWER_PATH = "/org/freedesktop/UPower";
 
  [DBus (name = "org.gnome.SettingsDaemon.Power.Screen")]
     interface PowerSettings : GLib.Object {

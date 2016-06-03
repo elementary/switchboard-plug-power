@@ -21,9 +21,6 @@ namespace Power {
     public class PowerSupply {
         private Upower? upower;
         private UpowerDevice? upower_device;
-
-        private const string dbus_upower_name = "org.freedesktop.UPower";
-        private const string dbus_upower_root_path = "/org/freedesktop/UPower";
         private const uint LINE_POWER_TYPE = 1;
         private string dbus_upower_ac_path;
         
@@ -31,30 +28,34 @@ namespace Power {
             connect_dbus ();
         }
 
-
         public bool check_present () {
-            bool return_value = false;
+            bool present = false;
+            if (upower_device == null) {
+                return false;
+            }
 
             try {
                 upower_device.Refresh ();
 
                 if (upower_device.Online && upower_device.PowerSupply) {
-                    return_value = true;
+                    present = true;
                 }
             } catch (Error e) {
-                warning ("power supply:%s", e.message);
+                warning ("power supply: %s", e.message);
             }
-            return return_value;
+
+            return present;
         }
 
         private void connect_dbus () {
-            try{
-                upower = Bus.get_proxy_sync (BusType.SYSTEM, dbus_upower_name, dbus_upower_root_path, DBusProxyFlags.NONE);
+            try {
+                upower = Bus.get_proxy_sync (BusType.SYSTEM, DBUS_UPOWER_NAME, DBUS_UPOWER_PATH, DBusProxyFlags.NONE);
                 get_upower_ac_device (upower);
             } catch (Error e) {
                 critical ("power supply dbus connection to upower fault");
             }
-            debug ("power supply path:%s  dbus connected", dbus_upower_ac_path);
+
+            debug ("power supply path: %s dbus connected", dbus_upower_ac_path);
         }
 
         private void get_upower_ac_device (Upower upow) {
