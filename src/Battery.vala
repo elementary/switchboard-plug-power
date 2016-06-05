@@ -33,11 +33,9 @@ namespace Power {
         public bool check_present () {
             bool present = false;
             if (laptop) {
-                if (upower.OnBattery) {
+                if (upower.OnBattery || upower_device.IsPresent) {
                     present = true;
-                }  else if (upower_device.IsPresent) {
-                    present = true;
-                } 
+                }
             }  
 
             return present;
