@@ -135,7 +135,6 @@ namespace Power {
 
             // hide stack switcher if we only have ac line
             stack_switcher.visible = stack.get_children ().length () > 1;
-
         }
 
         private void connect_dbus () {
