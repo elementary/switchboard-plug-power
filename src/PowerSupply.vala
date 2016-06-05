@@ -62,7 +62,7 @@ namespace Power {
             try {
                 ObjectPath[] devs = upow.EnumerateDevices ();
                 for (int i = 0; i < devs.length; i++) {
-                    UpowerDevice dev = Bus.get_proxy_sync (BusType.SYSTEM, dbus_upower_name, devs[i], DBusProxyFlags.GET_INVALIDATED_PROPERTIES);
+                    UpowerDevice dev = Bus.get_proxy_sync (BusType.SYSTEM, DBUS_UPOWER_NAME, devs[i], DBusProxyFlags.GET_INVALIDATED_PROPERTIES);
                     if (dev.Type == LINE_POWER_TYPE) {
                         upower_device = dev;
                         return;
