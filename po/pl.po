@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-07 17:29+0400\n"
-"PO-Revision-Date: 2016-02-23 15:12+0000\n"
-"Last-Translator: Damian Woźniak <fiszet@gmail.com>\n"
+"PO-Revision-Date: 2016-06-14 21:37+0000\n"
+"Last-Translator: Piotr Strębski <strebski@o2.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-05-17 05:55+0000\n"
-"X-Generator: Launchpad (build 18025)\n"
+"X-Launchpad-Export-Date: 2016-06-15 06:14+0000\n"
+"X-Generator: Launchpad (build 18097)\n"
 "Language: pl\n"
 
 #. //launchpad.net/switchboard-plug-power)
@@ -37,15 +37,15 @@ msgstr ""
 #. 
 #: ../src/Translations.vala:20
 msgid "Manage power settings "
-msgstr ""
+msgstr "Zarządzaj ustawieniami zasilania "
 
 #: ../src/Translations.vala:21
 msgid "Authentication is required to manage power settings"
-msgstr ""
+msgstr "Wymagane jest uwierzytelnienie, aby zmienić ustawienia zasilania"
 
 #: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:37
 msgid "Suspend"
-msgstr "Wstrzymanie"
+msgstr "Uśpij"
 
 #: ../src/LidCloseActionComboBox.vala:34 ../src/ActionComboBox.vala:38
 msgid "Shutdown"
@@ -53,11 +53,11 @@ msgstr "Wyłączenie"
 
 #: ../src/LidCloseActionComboBox.vala:35
 msgid "Lock"
-msgstr ""
+msgstr "Zablokuj"
 
 #: ../src/LidCloseActionComboBox.vala:36
 msgid "Halt"
-msgstr ""
+msgstr "Wstrzymaj"
 
 #: ../src/LidCloseActionComboBox.vala:37 ../src/ActionComboBox.vala:41
 msgid "Do nothing"
@@ -65,7 +65,7 @@ msgstr "Brak czynności"
 
 #: ../src/LidCloseActionComboBox.vala:39
 msgid "Not supported"
-msgstr ""
+msgstr "Nieobsługiwane"
 
 #: ../src/ActionComboBox.vala:39
 msgid "Hibernate"
@@ -73,11 +73,11 @@ msgstr "Zahibernowanie"
 
 #: ../src/ActionComboBox.vala:40
 msgid "Ask me"
-msgstr "Zapytaj mnie"
+msgstr "Zapytaj"
 
 #: ../src/Plug.vala:39
 msgid "You do not have permission to change this"
-msgstr ""
+msgstr "Nie masz uprawnień, aby to zmienić"
 
 #: ../src/Plug.vala:44
 msgid "Power"
@@ -86,7 +86,7 @@ msgstr "Zasilanie"
 #: ../src/Plug.vala:45
 msgid "Configure display brightness, power buttons, and sleep behavior"
 msgstr ""
-"Konfiguruj jasność ekranu, przyciski zasilania i zachowanie trybu usypiania"
+"Konfiguruj jasność ekranu, zachowanie przycisków zasilania i trybu usypiania"
 
 #: ../src/Plug.vala:103
 msgid "Plugged In"
@@ -99,10 +99,11 @@ msgstr "Na baterii"
 #: ../src/Plug.vala:156
 msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
+"Niektóre ustawienia zaczną obowiązywać po ponownym uruchomieniu komputera"
 
 #: ../src/Plug.vala:174
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "Zmiana niektórych ustawień wymaga uprawnień administratora"
 
 #: ../src/Plug.vala:207
 msgid "Display brightness:"
@@ -110,11 +111,11 @@ msgstr "Jasność ekranu:"
 
 #: ../src/Plug.vala:212
 msgid "Automatically adjust brightness:"
-msgstr ""
+msgstr "Automatyczne dostosowanie jasności:"
 
 #: ../src/Plug.vala:238
 msgid "Turn off display when inactive for:"
-msgstr ""
+msgstr "Wyłącz ekran, gdy bezczynny przez:"
 
 #: ../src/Plug.vala:245
 msgid "Sleep button:"
@@ -126,19 +127,19 @@ msgstr "Przycisk zasilania:"
 
 #: ../src/Plug.vala:266
 msgid "Sleep when inactive for:"
-msgstr ""
+msgstr "Uśpij, gdy bezczynny przez:"
 
 #: ../src/Plug.vala:276
 msgid "When docked and lid is closed:"
-msgstr ""
+msgstr "Gdy komputer jest w stacji dokującej, a pokrywa jest zamknięta:"
 
 #: ../src/Plug.vala:277
 msgid "When lid is closed:"
-msgstr ""
+msgstr "Gdy pokrywa jest zamknięta:"
 
 #: ../src/Plug.vala:280
 msgid "Dim display when inactive:"
-msgstr ""
+msgstr "Wygaś ekran, gdy bezczynny:"
 
 #: ../src/Plug.vala:288
 msgid "When power is critically low:"
