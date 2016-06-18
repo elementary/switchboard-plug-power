@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-07 17:29+0400\n"
-"PO-Revision-Date: 2016-05-01 11:59+0000\n"
-"Last-Translator: Nikos <Unknown>\n"
+"PO-Revision-Date: 2016-06-17 11:53+0000\n"
+"Last-Translator: Corentin Noël <corentin@elementaryos.org>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-05-17 05:55+0000\n"
-"X-Generator: Launchpad (build 18025)\n"
+"X-Launchpad-Export-Date: 2016-06-18 05:58+0000\n"
+"X-Generator: Launchpad (build 18097)\n"
 "Language: fr\n"
 
 #. //launchpad.net/switchboard-plug-power)
@@ -37,11 +37,13 @@ msgstr ""
 #. 
 #: ../src/Translations.vala:20
 msgid "Manage power settings "
-msgstr ""
+msgstr "Gestion des paramètres d'alimentation "
 
 #: ../src/Translations.vala:21
 msgid "Authentication is required to manage power settings"
 msgstr ""
+"Il est nécessaire d'être authentifié pour modifier les paramètres "
+"d'alimentation"
 
 #: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:37
 msgid "Suspend"
@@ -53,11 +55,11 @@ msgstr "Éteindre"
 
 #: ../src/LidCloseActionComboBox.vala:35
 msgid "Lock"
-msgstr ""
+msgstr "Verrouiller"
 
 #: ../src/LidCloseActionComboBox.vala:36
 msgid "Halt"
-msgstr ""
+msgstr "Arrêter"
 
 #: ../src/LidCloseActionComboBox.vala:37 ../src/ActionComboBox.vala:41
 msgid "Do nothing"
@@ -65,7 +67,7 @@ msgstr "Ne rien faire"
 
 #: ../src/LidCloseActionComboBox.vala:39
 msgid "Not supported"
-msgstr ""
+msgstr "Non pris en charge"
 
 #: ../src/ActionComboBox.vala:39
 msgid "Hibernate"
@@ -118,7 +120,7 @@ msgstr "Ajuster automatiquement la luminosité"
 
 #: ../src/Plug.vala:238
 msgid "Turn off display when inactive for:"
-msgstr ""
+msgstr "Eteindre l'écran lors d'une inactivité supérieure à :"
 
 #: ../src/Plug.vala:245
 msgid "Sleep button:"
@@ -130,19 +132,19 @@ msgstr "Bouton power :"
 
 #: ../src/Plug.vala:266
 msgid "Sleep when inactive for:"
-msgstr ""
+msgstr "Mettre en veille lors d'une inactivité supérieure à :"
 
 #: ../src/Plug.vala:276
 msgid "When docked and lid is closed:"
-msgstr ""
+msgstr "Lorsque branché et que l'écran du portable est fermé :"
 
 #: ../src/Plug.vala:277
 msgid "When lid is closed:"
-msgstr ""
+msgstr "Lorsque l'écran du portable est fermé :"
 
 #: ../src/Plug.vala:280
 msgid "Dim display when inactive:"
-msgstr ""
+msgstr "Réduire la luminosité après une longue période d'inactivité :"
 
 #: ../src/Plug.vala:288
 msgid "When power is critically low:"
