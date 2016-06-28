@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-07 17:29+0400\n"
-"PO-Revision-Date: 2016-06-25 00:21+0000\n"
+"PO-Revision-Date: 2016-06-28 00:53+0000\n"
 "Last-Translator: Melih Güçlü <melihguclu@hotmail.com>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-26 05:55+0000\n"
-"X-Generator: Launchpad (build 18111)\n"
+"X-Launchpad-Export-Date: 2016-06-28 05:36+0000\n"
+"X-Generator: Launchpad (build 18115)\n"
 "Language: tr\n"
 
 #. //launchpad.net/switchboard-plug-power)
@@ -57,7 +57,7 @@ msgstr "Kilitle"
 
 #: ../src/LidCloseActionComboBox.vala:36
 msgid "Halt"
-msgstr ""
+msgstr "Durdur"
 
 #: ../src/LidCloseActionComboBox.vala:37 ../src/ActionComboBox.vala:41
 msgid "Do nothing"
@@ -116,7 +116,7 @@ msgstr "Parlaklığı otomatik ayarla:"
 
 #: ../src/Plug.vala:238
 msgid "Turn off display when inactive for:"
-msgstr ""
+msgstr "Kullanılmıyorken, ekranı şu süre sonunda kapat:"
 
 #: ../src/Plug.vala:245
 msgid "Sleep button:"
@@ -128,15 +128,15 @@ msgstr "Güç tuşu:"
 
 #: ../src/Plug.vala:266
 msgid "Sleep when inactive for:"
-msgstr ""
+msgstr "Kullanılmıyorken, şu süre sonunda uykuya geç:"
 
 #: ../src/Plug.vala:276
 msgid "When docked and lid is closed:"
-msgstr ""
+msgstr "Şarjdayken ve kapak kapalıyken:"
 
 #: ../src/Plug.vala:277
 msgid "When lid is closed:"
-msgstr ""
+msgstr "Kapak kapalıyken:"
 
 #: ../src/Plug.vala:280
 msgid "Dim display when inactive:"
