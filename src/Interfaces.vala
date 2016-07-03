@@ -21,7 +21,7 @@ namespace Power {
     public const string DBUS_UPOWER_NAME = "org.freedesktop.UPower";
     public const string DBUS_UPOWER_PATH = "/org/freedesktop/UPower";
 
- [DBus (name = "org.gnome.SettingsDaemon.Power.Screen")]
+    [DBus (name = "org.gnome.SettingsDaemon.Power.Screen")]
     interface PowerSettings : GLib.Object {
 #if OLD_GSD
         public abstract uint GetPercentage () throws IOError;
@@ -53,7 +53,9 @@ namespace Power {
 
 	[DBus (name = "org.freedesktop.DBus.Properties")]
 	public interface UpowerProperties : Object {
-		public abstract Variant Get (string interface, string propname) throws IOError;
+	    public abstract Variant Get (string interface, string propname) throws IOError;
 		public abstract void Set (string interface, string propname, Variant value) throws IOError;
+		public signal void PropertiesChanged (string interface_name, HashTable <string, Variant> changed_properties,
+                                              string [] invalidated_properties);
 	}
 }
