@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-05-07 17:29+0400\n"
-"PO-Revision-Date: 2015-03-27 08:02+0000\n"
-"Last-Translator: Ivan Vrljić <vrlja92@gmail.com>\n"
+"PO-Revision-Date: 2016-07-03 19:51+0000\n"
+"Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <hr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-05-17 05:56+0000\n"
-"X-Generator: Launchpad (build 18025)\n"
+"X-Launchpad-Export-Date: 2016-07-04 06:06+0000\n"
+"X-Generator: Launchpad (build 18115)\n"
 
 #. //launchpad.net/switchboard-plug-power)
 #. *
@@ -36,27 +36,27 @@ msgstr ""
 #. 
 #: ../src/Translations.vala:20
 msgid "Manage power settings "
-msgstr ""
+msgstr "Upravljanje postavkama energije "
 
 #: ../src/Translations.vala:21
 msgid "Authentication is required to manage power settings"
-msgstr ""
+msgstr "Potrebna je ovjera za upravljanje postavkama energije"
 
 #: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:37
 msgid "Suspend"
-msgstr "Suspenzija"
+msgstr "Suspendiraj"
 
 #: ../src/LidCloseActionComboBox.vala:34 ../src/ActionComboBox.vala:38
 msgid "Shutdown"
-msgstr "Isključivanje"
+msgstr "Isključi"
 
 #: ../src/LidCloseActionComboBox.vala:35
 msgid "Lock"
-msgstr ""
+msgstr "Zaključaj"
 
 #: ../src/LidCloseActionComboBox.vala:36
 msgid "Halt"
-msgstr ""
+msgstr "Zaustavi"
 
 #: ../src/LidCloseActionComboBox.vala:37 ../src/ActionComboBox.vala:41
 msgid "Do nothing"
@@ -64,11 +64,11 @@ msgstr "Ne čini ništa"
 
 #: ../src/LidCloseActionComboBox.vala:39
 msgid "Not supported"
-msgstr ""
+msgstr "Nije podržano"
 
 #: ../src/ActionComboBox.vala:39
 msgid "Hibernate"
-msgstr "Hibernacija"
+msgstr "Hiberniraj"
 
 #: ../src/ActionComboBox.vala:40
 msgid "Ask me"
@@ -76,7 +76,7 @@ msgstr "Pitaj me"
 
 #: ../src/Plug.vala:39
 msgid "You do not have permission to change this"
-msgstr ""
+msgstr "Nemate dozvolu za ovu promjenu"
 
 #: ../src/Plug.vala:44
 msgid "Power"
@@ -85,6 +85,7 @@ msgstr "Energija"
 #: ../src/Plug.vala:45
 msgid "Configure display brightness, power buttons, and sleep behavior"
 msgstr ""
+"Prilagodi svjetlinu zaslona, tipku isključivanja i ponašanje spavanja"
 
 #: ../src/Plug.vala:103
 msgid "Plugged In"
@@ -97,50 +98,51 @@ msgstr "Na bateriji"
 #: ../src/Plug.vala:156
 msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
+"Neke promjene neće biti primijenjene dok ponovno ne pokrenete računalo"
 
 #: ../src/Plug.vala:174
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "Neke postavke zahtijevaju administratorske ovlasti"
 
 #: ../src/Plug.vala:207
 msgid "Display brightness:"
-msgstr "Intenzitet svjetla"
+msgstr "Svjetlina zaslona:"
 
 #: ../src/Plug.vala:212
 msgid "Automatically adjust brightness:"
-msgstr ""
+msgstr "Automatski prilagodi svjetlinu:"
 
 #: ../src/Plug.vala:238
 msgid "Turn off display when inactive for:"
-msgstr ""
+msgstr "Isključi zaslon kada je neaktivan:"
 
 #: ../src/Plug.vala:245
 msgid "Sleep button:"
-msgstr "Tipka za spavanje:"
+msgstr "Tipka spavanja:"
 
 #: ../src/Plug.vala:248
 msgid "Power button:"
-msgstr "Power tipka"
+msgstr "Tipka isključivanja:"
 
 #: ../src/Plug.vala:266
 msgid "Sleep when inactive for:"
-msgstr ""
+msgstr "Spavaj kada je neaktivno:"
 
 #: ../src/Plug.vala:276
 msgid "When docked and lid is closed:"
-msgstr ""
+msgstr "Kada je priključen i zaslon spušten:"
 
 #: ../src/Plug.vala:277
 msgid "When lid is closed:"
-msgstr ""
+msgstr "Kada se zaslon spusti:"
 
 #: ../src/Plug.vala:280
 msgid "Dim display when inactive:"
-msgstr ""
+msgstr "Zatamni zaslon kada je neaktivno:"
 
 #: ../src/Plug.vala:288
 msgid "When power is critically low:"
-msgstr "Kod kritično niske energije:"
+msgstr "Kada je energija kritično nisko:"
 
 #: ../src/TimeoutComboBox.vala:42
 msgid "Never"
