@@ -29,7 +29,7 @@ namespace Power {
         private GLib.Settings pantheon_dpms_settings;
 
         private PowerSettings screen;
-        private UpowerProperties screen_signal;
+        private UpowerProperties upower_properties;
         private Battery battery;
         private PowerSupply power_supply;
         private CliCommunicator cli_communicator;
@@ -143,7 +143,7 @@ namespace Power {
             try {
                 screen = Bus.get_proxy_sync (BusType.SESSION,
                     "org.gnome.SettingsDaemon", "/org/gnome/SettingsDaemon/Power");
-                screen_signal = Bus.get_proxy_sync (BusType.SESSION,
+                upower_properties = Bus.get_proxy_sync (BusType.SESSION,
                     "org.freedesktop.DBus.Properties", "/org/gnome/SettingsDaemon/Power");
             } catch (IOError e) {
                 warning ("Failed to get settings daemon for brightness setting");
@@ -230,9 +230,11 @@ namespace Power {
                 scale.set_value (screen.Brightness);
 
                 scale.value_changed.connect (on_scale_value_changed);
-                screen_signal.PropertiesChanged.connect ((interface_name, changed_properties, invalidated_properties) => 
-                                                           on_screen_signal_PropertiesChanged (interface_name,
-                                                           changed_properties, invalidated_properties));
+                //upower_properties.PropertiesChanged.connect ((interface_name, changed_properties, invalidated_properties) => 
+                //                                             on_upower_properties_changed (interface_name,
+                //                                             changed_properties, invalidated_properties));
+                
+                upower_properties.PropertiesChanged.connect (on_upower_properties_changed);
 
                 main_grid.attach (brightness_label, 0, 0, 1, 1);
                 main_grid.attach (scale, 1, 0, 1, 1);
@@ -265,21 +267,19 @@ namespace Power {
         
         private void on_scale_value_changed () {
             var val = (int) scale.get_value ();
-            screen_signal.PropertiesChanged.disconnect (on_screen_signal_PropertiesChanged);
+            upower_properties.PropertiesChanged.disconnect (on_upower_properties_changed);
             screen.Brightness = val;
-            screen_signal.PropertiesChanged.connect ((interface_name, changed_properties, invalidated_properties) => 
-                                                      on_screen_signal_PropertiesChanged (interface_name,
-                                                      changed_properties, invalidated_properties));
-            debug ("Brightness SCALE VALUE CHANGED detected %d",val);
+            upower_properties.PropertiesChanged.connect (on_upower_properties_changed);
         }
         
-        private void on_screen_signal_PropertiesChanged (string interface_name, HashTable <string,
-                                                         Variant> changed_properties, string [] invalidated_properties) {
-            var val = changed_properties["Brightness"];
-            scale.value_changed.disconnect (on_scale_value_changed);
-            scale.set_value (val.get_int32());
-            scale.value_changed.connect (on_scale_value_changed);
-            debug ("Brightness PROPERTIES CHANGED detected %d",val.get_int32());
+        private void on_upower_properties_changed (string interface_name, HashTable <string,
+                                                   Variant> changed_properties, string [] invalidated_properties) {
+            if (changed_properties.contains ("Brightness")) {
+                var val = changed_properties["Brightness"];
+                scale.value_changed.disconnect (on_scale_value_changed);
+                scale.set_value (val.get_int32());
+                scale.value_changed.connect (on_scale_value_changed);
+            }
         }
 
         private Gtk.Grid create_notebook_pages (bool ac) {
