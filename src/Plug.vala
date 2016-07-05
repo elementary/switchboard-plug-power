@@ -230,10 +230,6 @@ namespace Power {
                 scale.set_value (screen.Brightness);
 
                 scale.value_changed.connect (on_scale_value_changed);
-                //upower_properties.PropertiesChanged.connect ((interface_name, changed_properties, invalidated_properties) => 
-                //                                             on_upower_properties_changed (interface_name,
-                //                                             changed_properties, invalidated_properties));
-                
                 upower_properties.PropertiesChanged.connect (on_upower_properties_changed);
 
                 main_grid.attach (brightness_label, 0, 0, 1, 1);
