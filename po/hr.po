@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-05-07 17:29+0400\n"
-"PO-Revision-Date: 2016-07-03 19:51+0000\n"
+"PO-Revision-Date: 2016-07-04 11:46+0000\n"
 "Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <hr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-04 06:06+0000\n"
+"X-Launchpad-Export-Date: 2016-07-05 05:55+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 
 #. //launchpad.net/switchboard-plug-power)
@@ -72,7 +72,7 @@ msgstr "Hiberniraj"
 
 #: ../src/ActionComboBox.vala:40
 msgid "Ask me"
-msgstr "Pitaj me"
+msgstr "Upitaj me"
 
 #: ../src/Plug.vala:39
 msgid "You do not have permission to change this"
@@ -89,7 +89,7 @@ msgstr ""
 
 #: ../src/Plug.vala:103
 msgid "Plugged In"
-msgstr "Priključeno"
+msgstr "Na napajanju"
 
 #: ../src/Plug.vala:109
 msgid "On Battery"
@@ -138,7 +138,7 @@ msgstr "Kada se zaslon spusti:"
 
 #: ../src/Plug.vala:280
 msgid "Dim display when inactive:"
-msgstr "Zatamni zaslon kada je neaktivno:"
+msgstr "Zatamni zaslon kada je neaktivan:"
 
 #: ../src/Plug.vala:288
 msgid "When power is critically low:"
