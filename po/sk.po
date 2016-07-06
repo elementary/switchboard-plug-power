@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-07 17:29+0400\n"
-"PO-Revision-Date: 2016-05-08 22:05+0000\n"
-"Last-Translator: Ľubomír Hlavko <5lubo555@azet.sk>\n"
+"PO-Revision-Date: 2016-07-05 18:49+0000\n"
+"Last-Translator: Lukáš Papík <stereo839@gmail.com>\n"
 "Language-Team: Slovak <sk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-05-17 05:56+0000\n"
-"X-Generator: Launchpad (build 18025)\n"
+"X-Launchpad-Export-Date: 2016-07-06 05:36+0000\n"
+"X-Generator: Launchpad (build 18115)\n"
 "Language: sk\n"
 
 #. //launchpad.net/switchboard-plug-power)
@@ -41,7 +41,7 @@ msgstr ""
 
 #: ../src/Translations.vala:21
 msgid "Authentication is required to manage power settings"
-msgstr ""
+msgstr "Autentifikácia je potrebná pre správu nastavenia napájania"
 
 #: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:37
 msgid "Suspend"
