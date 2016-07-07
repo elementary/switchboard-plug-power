@@ -55,7 +55,5 @@ namespace Power {
     public interface UpowerProperties : Object {
         public abstract Variant Get (string interface, string propname) throws IOError;
         public abstract void Set (string interface, string propname, Variant value) throws IOError;
-        public signal void PropertiesChanged (string interface_name, HashTable <string, Variant> changed_properties,
-                                              string[] invalidated_properties);
     }
 }

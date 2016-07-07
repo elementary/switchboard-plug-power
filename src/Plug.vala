@@ -29,7 +29,6 @@ namespace Power {
         private GLib.Settings pantheon_dpms_settings;
 
         private PowerSettings screen;
-        private UpowerProperties upower_properties;
         private Battery battery;
         private PowerSupply power_supply;
         private CliCommunicator cli_communicator;
@@ -141,10 +140,8 @@ namespace Power {
 
         private void connect_dbus () {
             try {
-                screen = Bus.get_proxy_sync (BusType.SESSION,
-                    "org.gnome.SettingsDaemon", "/org/gnome/SettingsDaemon/Power");
-                upower_properties = Bus.get_proxy_sync (BusType.SESSION,
-                    "org.freedesktop.DBus.Properties", "/org/gnome/SettingsDaemon/Power");
+                screen = Bus.get_proxy_sync (BusType.SESSION, "org.gnome.SettingsDaemon",
+                    "/org/gnome/SettingsDaemon/Power", DBusProxyFlags.GET_INVALIDATED_PROPERTIES);
             } catch (IOError e) {
                 warning ("Failed to get settings daemon for brightness setting");
             }
@@ -230,7 +227,7 @@ namespace Power {
                 scale.set_value (screen.Brightness);
 
                 scale.value_changed.connect (on_scale_value_changed);
-                upower_properties.PropertiesChanged.connect (on_upower_properties_changed);
+                (screen as DBusProxy).g_properties_changed.connect (on_screen_properties_changed);
 
                 main_grid.attach (brightness_label, 0, 0, 1, 1);
                 main_grid.attach (scale, 1, 0, 1, 1);
@@ -263,17 +260,17 @@ namespace Power {
         
         private void on_scale_value_changed () {
             var val = (int) scale.get_value ();
-            upower_properties.PropertiesChanged.disconnect (on_upower_properties_changed);
+            (screen as DBusProxy).g_properties_changed.disconnect (on_screen_properties_changed);
             screen.Brightness = val;
-            upower_properties.PropertiesChanged.connect (on_upower_properties_changed);
+            (screen as DBusProxy).g_properties_changed.connect (on_screen_properties_changed);
         }
         
-        private void on_upower_properties_changed (string interface_name, HashTable <string,
-                                                   Variant> changed_properties, string [] invalidated_properties) {
-            if (changed_properties.contains ("Brightness")) {
-                var val = changed_properties["Brightness"];
+        private void on_screen_properties_changed (Variant changed_properties, string[] invalidated_properties) {
+            var changed_brightness = changed_properties.lookup_value("Brightness", new VariantType("i"));
+            if (changed_brightness != null) {
+                var val = screen.Brightness;
                 scale.value_changed.disconnect (on_scale_value_changed);
-                scale.set_value (val.get_int32());
+                scale.set_value (val);
                 scale.value_changed.connect (on_scale_value_changed);
             }
         }
