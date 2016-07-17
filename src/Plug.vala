@@ -242,18 +242,13 @@ namespace Power {
             var screen_timeout = new TimeoutComboBox (pantheon_dpms_settings, "standby-time");
             screen_timeout.changed.connect (run_dpms_helper);
 
-            var sleep_combobox = new ActionComboBox (_("Sleep button:"), "button-sleep");
-            label_size.add_widget (sleep_combobox.label);
-
-            var power_combobox = new ActionComboBox (_("Power button:"), "button-power");
+            var power_combobox = new ActionComboBox (_("Power button:"), "power-button-action");
             label_size.add_widget (power_combobox.label);
 
             main_grid.attach (screen_timeout_label, 0, 3, 1, 1);
             main_grid.attach (screen_timeout, 1, 3, 1, 1);
-            main_grid.attach (sleep_combobox.label, 0, 4, 1, 1);
-            main_grid.attach (sleep_combobox, 1, 4, 1, 1);
-            main_grid.attach (power_combobox.label, 0, 5, 1, 1);
-            main_grid.attach (power_combobox, 1, 5, 1, 1);
+            main_grid.attach (power_combobox.label, 0, 4, 1, 1);
+            main_grid.attach (power_combobox, 1, 4, 1, 1);
 
             return main_grid;
         }
@@ -307,20 +302,15 @@ namespace Power {
 
                 settings.bind ("idle-dim", dim_switch, "active", SettingsBindFlags.DEFAULT);
 
-                var critical_box = new ActionComboBox (_("When power is critically low:"), "critical-battery-action");
-                label_size.add_widget (critical_box.label);
-
                 lid_closed_box.sensitive = false;
                 lid_closed_box.label.sensitive = false;
                 label_size.add_widget (lid_closed_box.label);
 
                 grid.attach (dim_label, 0, 0, 1, 1);
                 grid.attach (dim_switch, 1, 0, 1, 1);
-                grid.attach (critical_box.label, 0, 2, 1, 1);
-                grid.attach (critical_box, 1, 2, 1, 1);
-                grid.attach (lid_closed_box.label, 0, 3, 1, 1);
-                grid.attach (lid_closed_box, 1, 3, 1, 1);
-                grid.attach (lock_image2, 2, 3, 1, 1);
+                grid.attach (lid_closed_box.label, 0, 2, 1, 1);
+                grid.attach (lid_closed_box, 1, 2, 1, 1);
+                grid.attach (lock_image2, 2, 2, 1, 1);
 
             } else if (battery.laptop) {
                 lid_dock_box.sensitive = false;

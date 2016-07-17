@@ -24,9 +24,9 @@ namespace Power {
         private string key;
 
         // this maps combobox indices to gsettings enums
-        private int[] map_to_sett = {1, 2, 3, 4, 5};
+        private int[] map_to_sett = {0, 1, 2};
         // and vice-versa
-        private int[] map_to_list = {4, 0, 1, 2, 3, 4};
+        private int[] map_to_list = {0, 1, 2};
 
         public ActionComboBox (string label_name, string key_value) {
             key = key_value;
@@ -34,11 +34,9 @@ namespace Power {
             label.halign = Gtk.Align.END;
             ((Gtk.Misc) label).xalign = 1.0f;
 
-            append_text (_("Suspend"));
-            append_text (_("Shutdown"));
-            append_text (_("Hibernate"));
-            append_text (_("Ask me"));
             append_text (_("Do nothing"));
+            append_text (_("Suspend"));
+            append_text (_("Hibernate"));
 
             hexpand = true;
 
