@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-07 17:29+0400\n"
-"PO-Revision-Date: 2016-08-02 16:47+0000\n"
+"PO-Revision-Date: 2016-08-03 22:12+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-08-03 05:52+0000\n"
+"X-Launchpad-Export-Date: 2016-08-04 05:39+0000\n"
 "X-Generator: Launchpad (build 18169)\n"
 
 #. //launchpad.net/switchboard-plug-power)
@@ -72,11 +72,11 @@ msgstr "Klausti manęs"
 
 #: ../src/Plug.vala:39
 msgid "You do not have permission to change this"
-msgstr ""
+msgstr "Jūs neturite leidimų, kad tai pakeistumėte"
 
 #: ../src/Plug.vala:44
 msgid "Power"
-msgstr ""
+msgstr "Maitinimas"
 
 #: ../src/Plug.vala:45
 msgid "Configure display brightness, power buttons, and sleep behavior"
@@ -93,22 +93,24 @@ msgstr ""
 #: ../src/Plug.vala:156
 msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
+"Kai kurie pakeitimai neįsigalios tol, kol iš naujo nepaleisite šio "
+"kompiuterio"
 
 #: ../src/Plug.vala:174
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "Kai kurių nustatymų pakeitimui reikia administratoriaus teisių"
 
 #: ../src/Plug.vala:207
 msgid "Display brightness:"
-msgstr ""
+msgstr "Ekrano ryškumas:"
 
 #: ../src/Plug.vala:212
 msgid "Automatically adjust brightness:"
-msgstr ""
+msgstr "Automatiškai reguliuoti ryškumą:"
 
 #: ../src/Plug.vala:238
 msgid "Turn off display when inactive for:"
-msgstr ""
+msgstr "Išjungti ekraną, kai jis neaktyvus:"
 
 #: ../src/Plug.vala:245
 msgid "Sleep button:"
@@ -116,7 +118,7 @@ msgstr ""
 
 #: ../src/Plug.vala:248
 msgid "Power button:"
-msgstr ""
+msgstr "Maitinimo mygtukas:"
 
 #: ../src/Plug.vala:266
 msgid "Sleep when inactive for:"
@@ -140,32 +142,32 @@ msgstr ""
 
 #: ../src/TimeoutComboBox.vala:42
 msgid "Never"
-msgstr ""
+msgstr "Niekada"
 
 #: ../src/TimeoutComboBox.vala:43
 msgid "5 min"
-msgstr ""
+msgstr "5 min."
 
 #: ../src/TimeoutComboBox.vala:44
 msgid "10 min"
-msgstr ""
+msgstr "10 min."
 
 #: ../src/TimeoutComboBox.vala:45
 msgid "15 min"
-msgstr ""
+msgstr "15 min."
 
 #: ../src/TimeoutComboBox.vala:46
 msgid "30 min"
-msgstr ""
+msgstr "30 min."
 
 #: ../src/TimeoutComboBox.vala:47
 msgid "45 min"
-msgstr ""
+msgstr "45 min."
 
 #: ../src/TimeoutComboBox.vala:48
 msgid "1 hour"
-msgstr ""
+msgstr "1 valanda"
 
 #: ../src/TimeoutComboBox.vala:49
 msgid "2 hours"
-msgstr ""
+msgstr "2 valandos"
