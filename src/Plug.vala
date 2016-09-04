@@ -80,7 +80,18 @@ namespace Power {
 
         // 'search' returns results like ("Keyboard → Behavior → Duration", "keyboard<sep>behavior")
         public override async Gee.TreeMap<string, string> search (string search) {
-            return new Gee.TreeMap<string, string> (null, null);
+            var search_results = new Gee.TreeMap<string, string> ((GLib.CompareDataFunc<string>)strcmp, (Gee.EqualDataFunc<string>)str_equal);
+            search_results.set ("%s → %s".printf (display_name, _("Sleep button")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Power button")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Display inactive")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Dim display")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Lid close")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Display brightness")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Automatic brightness adjustment")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Inactive display off")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Docked lid close")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Sleep inactive")), "");
+            return search_results;;
         }
 
         private void setup_ui () {
