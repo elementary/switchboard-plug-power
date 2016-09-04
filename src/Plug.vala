@@ -136,10 +136,10 @@ namespace Power {
                 switcher_grid.add (stack_switcher);
                 switcher_grid.add (right_sep);
 
-                main_grid.attach (switcher_grid, 0, 6, 2, 1);
+                main_grid.attach (switcher_grid, 0, 7, 2, 1);
             }
 
-            main_grid.attach (stack, 0, 7, 2, 1);
+            main_grid.attach (stack, 0, 8, 2, 1);
             stack_container.add (main_grid);
 
             stack_container.margin_bottom = 12;
@@ -240,14 +240,50 @@ namespace Power {
                 scale.value_changed.connect (on_scale_value_changed);
                 (screen as DBusProxy).g_properties_changed.connect (on_screen_properties_changed);
 
+                var lid_closed_box = new LidCloseActionComboBox (_("When lid is closed:"), cli_communicator);
+                lid_closed_box.sensitive = false;
+                lid_closed_box.label.sensitive = false;
+                label_size.add_widget (lid_closed_box.label);
+
+                var lid_dock_box = new LidCloseActionComboBox (_("When lid is closed with external monitor:"), cli_communicator);
+                lid_dock_box.sensitive = false;
+                lid_dock_box.label.sensitive = false;
+                label_size.add_widget (lid_dock_box.label);
+
+                // lock and UI visible that settings are locked and unlocked
+                get_permission ().notify["allowed"].connect (() => {
+                    if (get_permission ().allowed) {
+                        lid_closed_box.sensitive = true;
+                        lid_closed_box.label.sensitive = true;
+                        lid_dock_box.sensitive = true;
+                        lid_dock_box.label.sensitive = true;
+                        lock_image.visible = false;
+                        lock_image2.visible = false;
+                    } else {
+                        lid_closed_box.sensitive = false;
+                        lid_closed_box.label.sensitive = false;
+                        lid_dock_box.sensitive = false;
+                        lid_dock_box.label.sensitive = false;
+                        lock_image.visible = true;
+                        lock_image2.visible = true;
+                    }
+                });
+
                 main_grid.attach (brightness_label, 0, 0, 1, 1);
                 main_grid.attach (scale, 1, 0, 1, 1);
                 main_grid.attach (als_label, 0, 1, 1, 1);
                 main_grid.attach (als_switch, 1, 1, 1, 1);
+                main_grid.attach (lid_closed_box.label, 0, 5, 1, 1);
+                main_grid.attach (lid_closed_box, 1, 5, 1, 1);
+                main_grid.attach (lock_image2, 2, 5, 1, 1);
+                main_grid.attach (lid_dock_box.label, 0, 6, 1, 1);
+                main_grid.attach (lid_dock_box, 1, 6, 1, 1);
+                main_grid.attach (lock_image, 2, 6, 1, 1);
             }
 
             var screen_timeout_label = new Gtk.Label (_("Turn off display when inactive for:"));
             screen_timeout_label.halign = Gtk.Align.END;
+            screen_timeout_label.xalign = 1.0f;
             label_size.add_widget (screen_timeout_label);
 
             var screen_timeout = new TimeoutComboBox (pantheon_dpms_settings, "standby-time");
@@ -301,9 +337,6 @@ namespace Power {
             grid.attach (sleep_timeout_label, 0, 1, 1, 1);
             grid.attach (sleep_timeout, 1, 1, 1, 1);
 
-            var lid_dock_box = new LidCloseActionComboBox (_("When docked and lid is closed:"), cli_communicator);
-            var lid_closed_box = new LidCloseActionComboBox (_("When lid is closed:"), cli_communicator);
-
             if (!ac) {
                 var dim_label = new Gtk.Label (_("Dim display when inactive:"));
                 ((Gtk.Misc) dim_label).xalign = 1.0f;
@@ -313,43 +346,12 @@ namespace Power {
 
                 settings.bind ("idle-dim", dim_switch, "active", SettingsBindFlags.DEFAULT);
 
-                lid_closed_box.sensitive = false;
-                lid_closed_box.label.sensitive = false;
-                label_size.add_widget (lid_closed_box.label);
-
                 grid.attach (dim_label, 0, 0, 1, 1);
                 grid.attach (dim_switch, 1, 0, 1, 1);
-                grid.attach (lid_closed_box.label, 0, 2, 1, 1);
-                grid.attach (lid_closed_box, 1, 2, 1, 1);
-                grid.attach (lock_image2, 2, 2, 1, 1);
 
             } else if (battery.laptop) {
-                lid_dock_box.sensitive = false;
-                lid_dock_box.label.sensitive = false;
-                label_size.add_widget (lid_dock_box.label);
 
-                grid.attach (lid_dock_box.label, 0, 2, 1, 1);
-                grid.attach (lid_dock_box, 1, 2, 1, 1);
-                grid.attach (lock_image, 2, 2, 1, 1);
             }
-
-            get_permission ().notify["allowed"].connect (() => {
-                if (get_permission ().allowed) {
-                    lid_closed_box.sensitive = true;
-                    lid_closed_box.label.sensitive = true;
-                    lid_dock_box.sensitive = true;
-                    lid_dock_box.label.sensitive = true;
-                    lock_image.visible = false;
-                    lock_image2.visible = false;
-                } else {
-                    lid_closed_box.sensitive = false;
-                    lid_closed_box.label.sensitive = false;
-                    lid_dock_box.sensitive = false;
-                    lid_dock_box.label.sensitive = false;
-                    lock_image.visible = true;
-                    lock_image2.visible = true;
-                }
-            });
 
             return grid;
         }
