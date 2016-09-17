@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-07 17:29+0400\n"
-"PO-Revision-Date: 2016-08-06 09:04+0000\n"
+"PO-Revision-Date: 2016-09-16 09:18+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-09-12 06:02+0000\n"
+"X-Launchpad-Export-Date: 2016-09-17 07:08+0000\n"
 "X-Generator: Launchpad (build 18186)\n"
 "Language: \n"
 
@@ -113,7 +113,7 @@ msgstr "自動調整亮度："
 
 #: ../src/Plug.vala:238
 msgid "Turn off display when inactive for:"
-msgstr "不使用時間達多久便關閉顯示器："
+msgstr "關閉顯示器前的不使用時間："
 
 #: ../src/Plug.vala:245
 msgid "Sleep button:"
@@ -125,7 +125,7 @@ msgstr "電源按鈕："
 
 #: ../src/Plug.vala:266
 msgid "Sleep when inactive for:"
-msgstr "不使用時間達多久便進入睡眠："
+msgstr "進入睡眠前的不使用時間："
 
 #: ../src/Plug.vala:276
 msgid "When docked and lid is closed:"
@@ -137,7 +137,7 @@ msgstr "當闔起上蓋時："
 
 #: ../src/Plug.vala:280
 msgid "Dim display when inactive:"
-msgstr "不使用時間達多久後轉暗亮度："
+msgstr "不使用時便轉暗顯示器："
 
 #: ../src/Plug.vala:288
 msgid "When power is critically low:"
