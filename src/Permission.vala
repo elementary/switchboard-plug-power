@@ -26,7 +26,7 @@ namespace Power {
         }
 
         try {
-            permission = new Polkit.Permission.sync ("org.pantheon.switchboard.power.administration", Polkit.UnixProcess.new (Posix.getpid ()));
+            permission = new Polkit.Permission.sync ("org.pantheon.switchboard.power.administration", new Polkit.UnixProcess (Posix.getpid ()));
             return permission;
         } catch (Error e) {
             critical (e.message);

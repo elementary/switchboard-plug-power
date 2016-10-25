@@ -8,7 +8,7 @@ Build-Depends: cmake,
                libgranite-dev,
                libpolkit-gobject-1-dev,
                libswitchboard-2.0-dev,
-               valac (>= 0.22)
+               valac (>= 0.34.1)
 Standards-Version: 3.9.2
 Homepage: https://launchpad.net/switchboard-plug-power
 
