@@ -7,16 +7,40 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-07 17:29+0400\n"
+"POT-Creation-Date: 2016-10-26 14:47-0700\n"
 "PO-Revision-Date: 2016-09-16 09:18+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-09-17 07:08+0000\n"
-"X-Generator: Launchpad (build 18186)\n"
+"X-Launchpad-Export-Date: 2016-10-27 06:16+0000\n"
+"X-Generator: Launchpad (build 18246)\n"
 "Language: \n"
+
+#: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:38
+msgid "Suspend"
+msgstr "暫停"
+
+#: ../src/LidCloseActionComboBox.vala:34
+msgid "Shutdown"
+msgstr "關機"
+
+#: ../src/LidCloseActionComboBox.vala:35
+msgid "Lock"
+msgstr "鎖定"
+
+#: ../src/LidCloseActionComboBox.vala:36
+msgid "Halt"
+msgstr "停機"
+
+#: ../src/LidCloseActionComboBox.vala:37 ../src/ActionComboBox.vala:37
+msgid "Do nothing"
+msgstr "什麼都不做"
+
+#: ../src/LidCloseActionComboBox.vala:39
+msgid "Not supported"
+msgstr "未支援"
 
 #. //launchpad.net/switchboard-plug-power)
 #. *
@@ -43,105 +67,109 @@ msgstr "管理電源設定值 "
 msgid "Authentication is required to manage power settings"
 msgstr "需要核對身份才能管理電源設定值"
 
-#: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:37
-msgid "Suspend"
-msgstr "暫停"
-
-#: ../src/LidCloseActionComboBox.vala:34 ../src/ActionComboBox.vala:38
-msgid "Shutdown"
-msgstr "關機"
-
-#: ../src/LidCloseActionComboBox.vala:35
-msgid "Lock"
-msgstr "鎖定"
-
-#: ../src/LidCloseActionComboBox.vala:36
-msgid "Halt"
-msgstr "停機"
-
-#: ../src/LidCloseActionComboBox.vala:37 ../src/ActionComboBox.vala:41
-msgid "Do nothing"
-msgstr "什麼都不做"
-
-#: ../src/LidCloseActionComboBox.vala:39
-msgid "Not supported"
-msgstr "未支援"
-
-#: ../src/ActionComboBox.vala:39
-msgid "Hibernate"
-msgstr "休眠"
-
-#: ../src/ActionComboBox.vala:40
-msgid "Ask me"
-msgstr "詢問我"
-
 #: ../src/Plug.vala:39
 msgid "You do not have permission to change this"
 msgstr "您無權更改此設定"
 
-#: ../src/Plug.vala:44
+#: ../src/Plug.vala:45
 msgid "Power"
 msgstr "電源"
 
-#: ../src/Plug.vala:45
+#: ../src/Plug.vala:46
 msgid "Configure display brightness, power buttons, and sleep behavior"
 msgstr "調整顯示器亮度、電源按鈕和睡眠行為"
 
-#: ../src/Plug.vala:103
+#: ../src/Plug.vala:84
+msgid "Sleep button"
+msgstr ""
+
+#: ../src/Plug.vala:85
+msgid "Power button"
+msgstr ""
+
+#: ../src/Plug.vala:86
+msgid "Display inactive"
+msgstr ""
+
+#: ../src/Plug.vala:87
+msgid "Dim display"
+msgstr ""
+
+#: ../src/Plug.vala:88
+msgid "Lid close"
+msgstr ""
+
+#: ../src/Plug.vala:89
+msgid "Display brightness"
+msgstr ""
+
+#: ../src/Plug.vala:90
+msgid "Automatic brightness adjustment"
+msgstr ""
+
+#: ../src/Plug.vala:91
+msgid "Inactive display off"
+msgstr ""
+
+#: ../src/Plug.vala:92
+msgid "Docked lid close"
+msgstr ""
+
+#: ../src/Plug.vala:93
+msgid "Sleep inactive"
+msgstr ""
+
+#: ../src/Plug.vala:115
 msgid "Plugged In"
 msgstr "插入電源線"
 
-#: ../src/Plug.vala:109
+#: ../src/Plug.vala:124
 msgid "On Battery"
 msgstr "使用電池"
 
-#: ../src/Plug.vala:156
+#: ../src/Plug.vala:169
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "有些更改在您重新啟動電腦之前還不會生效"
 
-#: ../src/Plug.vala:174
+#: ../src/Plug.vala:187
 msgid "Some settings require administrator rights to be changed"
 msgstr "有些設定值需要有管理員權利才能變更"
 
-#: ../src/Plug.vala:207
+#: ../src/Plug.vala:220
 msgid "Display brightness:"
 msgstr "顯示器亮度："
 
-#: ../src/Plug.vala:212
+#: ../src/Plug.vala:225
 msgid "Automatically adjust brightness:"
 msgstr "自動調整亮度："
 
-#: ../src/Plug.vala:238
+#: ../src/Plug.vala:249
 msgid "Turn off display when inactive for:"
 msgstr "關閉顯示器前的不使用時間："
 
-#: ../src/Plug.vala:245
-msgid "Sleep button:"
-msgstr "睡眠按鈕："
-
-#: ../src/Plug.vala:248
+#: ../src/Plug.vala:256
 msgid "Power button:"
 msgstr "電源按鈕："
 
-#: ../src/Plug.vala:266
-msgid "Sleep when inactive for:"
-msgstr "進入睡眠前的不使用時間："
+#: ../src/Plug.vala:289
+msgid "Suspend when inactive for:"
+msgstr ""
 
-#: ../src/Plug.vala:276
+#: ../src/Plug.vala:304
 msgid "When docked and lid is closed:"
 msgstr "當插入底座或闔起上蓋時："
 
-#: ../src/Plug.vala:277
+#: ../src/Plug.vala:305
 msgid "When lid is closed:"
 msgstr "當闔起上蓋時："
 
-#: ../src/Plug.vala:280
+#: ../src/Plug.vala:308
 msgid "Dim display when inactive:"
 msgstr "不使用時便轉暗顯示器："
 
-#: ../src/Plug.vala:288
-msgid "When power is critically low:"
-msgstr "當電量極低時："
+#: ../src/ActionComboBox.vala:39
+msgid "Hibernate"
+msgstr "休眠"
 
 #: ../src/TimeoutComboBox.vala:42
 msgid "Never"
@@ -174,3 +202,15 @@ msgstr "1 小時"
 #: ../src/TimeoutComboBox.vala:49
 msgid "2 hours"
 msgstr "2 小時"
+
+#~ msgid "Ask me"
+#~ msgstr "詢問我"
+
+#~ msgid "Sleep button:"
+#~ msgstr "睡眠按鈕："
+
+#~ msgid "When power is critically low:"
+#~ msgstr "當電量極低時："
+
+#~ msgid "Sleep when inactive for:"
+#~ msgstr "進入睡眠前的不使用時間："

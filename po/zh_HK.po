@@ -2,15 +2,39 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-07 17:29+0400\n"
+"POT-Creation-Date: 2016-10-26 14:47-0700\n"
 "PO-Revision-Date: 2014-12-05 05:08+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-09-12 06:02+0000\n"
-"X-Generator: Launchpad (build 18186)\n"
+"X-Launchpad-Export-Date: 2016-10-27 06:16+0000\n"
+"X-Generator: Launchpad (build 18246)\n"
+
+#: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:38
+msgid "Suspend"
+msgstr ""
+
+#: ../src/LidCloseActionComboBox.vala:34
+msgid "Shutdown"
+msgstr ""
+
+#: ../src/LidCloseActionComboBox.vala:35
+msgid "Lock"
+msgstr ""
+
+#: ../src/LidCloseActionComboBox.vala:36
+msgid "Halt"
+msgstr ""
+
+#: ../src/LidCloseActionComboBox.vala:37 ../src/ActionComboBox.vala:37
+msgid "Do nothing"
+msgstr ""
+
+#: ../src/LidCloseActionComboBox.vala:39
+msgid "Not supported"
+msgstr ""
 
 #. //launchpad.net/switchboard-plug-power)
 #. *
@@ -37,104 +61,108 @@ msgstr ""
 msgid "Authentication is required to manage power settings"
 msgstr ""
 
-#: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:37
-msgid "Suspend"
-msgstr ""
-
-#: ../src/LidCloseActionComboBox.vala:34 ../src/ActionComboBox.vala:38
-msgid "Shutdown"
-msgstr ""
-
-#: ../src/LidCloseActionComboBox.vala:35
-msgid "Lock"
-msgstr ""
-
-#: ../src/LidCloseActionComboBox.vala:36
-msgid "Halt"
-msgstr ""
-
-#: ../src/LidCloseActionComboBox.vala:37 ../src/ActionComboBox.vala:41
-msgid "Do nothing"
-msgstr ""
-
-#: ../src/LidCloseActionComboBox.vala:39
-msgid "Not supported"
-msgstr ""
-
-#: ../src/ActionComboBox.vala:39
-msgid "Hibernate"
-msgstr ""
-
-#: ../src/ActionComboBox.vala:40
-msgid "Ask me"
-msgstr ""
-
 #: ../src/Plug.vala:39
 msgid "You do not have permission to change this"
 msgstr ""
 
-#: ../src/Plug.vala:44
+#: ../src/Plug.vala:45
 msgid "Power"
 msgstr ""
 
-#: ../src/Plug.vala:45
+#: ../src/Plug.vala:46
 msgid "Configure display brightness, power buttons, and sleep behavior"
 msgstr ""
 
-#: ../src/Plug.vala:103
+#: ../src/Plug.vala:84
+msgid "Sleep button"
+msgstr ""
+
+#: ../src/Plug.vala:85
+msgid "Power button"
+msgstr ""
+
+#: ../src/Plug.vala:86
+msgid "Display inactive"
+msgstr ""
+
+#: ../src/Plug.vala:87
+msgid "Dim display"
+msgstr ""
+
+#: ../src/Plug.vala:88
+msgid "Lid close"
+msgstr ""
+
+#: ../src/Plug.vala:89
+msgid "Display brightness"
+msgstr ""
+
+#: ../src/Plug.vala:90
+msgid "Automatic brightness adjustment"
+msgstr ""
+
+#: ../src/Plug.vala:91
+msgid "Inactive display off"
+msgstr ""
+
+#: ../src/Plug.vala:92
+msgid "Docked lid close"
+msgstr ""
+
+#: ../src/Plug.vala:93
+msgid "Sleep inactive"
+msgstr ""
+
+#: ../src/Plug.vala:115
 msgid "Plugged In"
 msgstr ""
 
-#: ../src/Plug.vala:109
+#: ../src/Plug.vala:124
 msgid "On Battery"
 msgstr ""
 
-#: ../src/Plug.vala:156
+#: ../src/Plug.vala:169
 msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
 
-#: ../src/Plug.vala:174
+#: ../src/Plug.vala:187
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 
-#: ../src/Plug.vala:207
+#: ../src/Plug.vala:220
 msgid "Display brightness:"
 msgstr ""
 
-#: ../src/Plug.vala:212
+#: ../src/Plug.vala:225
 msgid "Automatically adjust brightness:"
 msgstr ""
 
-#: ../src/Plug.vala:238
+#: ../src/Plug.vala:249
 msgid "Turn off display when inactive for:"
 msgstr ""
 
-#: ../src/Plug.vala:245
-msgid "Sleep button:"
-msgstr ""
-
-#: ../src/Plug.vala:248
+#: ../src/Plug.vala:256
 msgid "Power button:"
 msgstr ""
 
-#: ../src/Plug.vala:266
-msgid "Sleep when inactive for:"
+#: ../src/Plug.vala:289
+msgid "Suspend when inactive for:"
 msgstr ""
 
-#: ../src/Plug.vala:276
+#: ../src/Plug.vala:304
 msgid "When docked and lid is closed:"
 msgstr ""
 
-#: ../src/Plug.vala:277
+#: ../src/Plug.vala:305
 msgid "When lid is closed:"
 msgstr ""
 
-#: ../src/Plug.vala:280
+#: ../src/Plug.vala:308
 msgid "Dim display when inactive:"
 msgstr ""
 
-#: ../src/Plug.vala:288
-msgid "When power is critically low:"
+#: ../src/ActionComboBox.vala:39
+msgid "Hibernate"
 msgstr ""
 
 #: ../src/TimeoutComboBox.vala:42
