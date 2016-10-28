@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-10-26 14:47-0700\n"
-"PO-Revision-Date: 2016-08-17 08:31+0000\n"
+"PO-Revision-Date: 2016-10-27 07:08+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-10-27 06:16+0000\n"
+"X-Launchpad-Export-Date: 2016-10-28 05:46+0000\n"
 "X-Generator: Launchpad (build 18246)\n"
 
 #: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:38
@@ -80,43 +80,43 @@ msgstr "디스플레이 밝기, 전원 버튼, 잠자기 작동 방식 설정하
 
 #: ../src/Plug.vala:84
 msgid "Sleep button"
-msgstr ""
+msgstr "잠자기 버튼"
 
 #: ../src/Plug.vala:85
 msgid "Power button"
-msgstr ""
+msgstr "전원 버튼"
 
 #: ../src/Plug.vala:86
 msgid "Display inactive"
-msgstr ""
+msgstr "화면 끄기"
 
 #: ../src/Plug.vala:87
 msgid "Dim display"
-msgstr ""
+msgstr "화면 어둡게하기"
 
 #: ../src/Plug.vala:88
 msgid "Lid close"
-msgstr ""
+msgstr "덮개 덮기"
 
 #: ../src/Plug.vala:89
 msgid "Display brightness"
-msgstr ""
+msgstr "화면 밝기"
 
 #: ../src/Plug.vala:90
 msgid "Automatic brightness adjustment"
-msgstr ""
+msgstr "화면 밝기 자동 조정"
 
 #: ../src/Plug.vala:91
 msgid "Inactive display off"
-msgstr ""
+msgstr "사용하지 않는 디스플레이 끄기"
 
 #: ../src/Plug.vala:92
 msgid "Docked lid close"
-msgstr ""
+msgstr "고정 덮개 닫기"
 
 #: ../src/Plug.vala:93
 msgid "Sleep inactive"
-msgstr ""
+msgstr "사용하지 않을 땐 잠자기"
 
 #: ../src/Plug.vala:115
 msgid "Plugged In"
@@ -152,7 +152,7 @@ msgstr "전원 버튼:"
 
 #: ../src/Plug.vala:289
 msgid "Suspend when inactive for:"
-msgstr ""
+msgstr "다음 시간 동안 활동이 없으면 잠자기:"
 
 #: ../src/Plug.vala:304
 msgid "When docked and lid is closed:"
@@ -201,15 +201,3 @@ msgstr "1 시간"
 #: ../src/TimeoutComboBox.vala:49
 msgid "2 hours"
 msgstr "2 시간"
-
-#~ msgid "Ask me"
-#~ msgstr "물어보기"
-
-#~ msgid "When power is critically low:"
-#~ msgstr "배터리가 심각하게 부족하면:"
-
-#~ msgid "Sleep when inactive for:"
-#~ msgstr "다음 시간 동안 활동이 없으면 잠자기:"
-
-#~ msgid "Sleep button:"
-#~ msgstr "잠자기 버튼:"
