@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-10-26 14:47-0700\n"
-"PO-Revision-Date: 2016-09-29 07:50+0000\n"
+"PO-Revision-Date: 2016-10-29 19:25+0000\n"
 "Last-Translator: UweS <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-10-27 06:15+0000\n"
+"X-Launchpad-Export-Date: 2016-10-30 06:04+0000\n"
 "X-Generator: Launchpad (build 18246)\n"
 "Language: de\n"
 
@@ -84,43 +84,43 @@ msgstr ""
 
 #: ../src/Plug.vala:84
 msgid "Sleep button"
-msgstr ""
+msgstr "Bereitschaftsknopf"
 
 #: ../src/Plug.vala:85
 msgid "Power button"
-msgstr ""
+msgstr "Einschaltknopf"
 
 #: ../src/Plug.vala:86
 msgid "Display inactive"
-msgstr ""
+msgstr "Bildschirm nicht aktiv"
 
 #: ../src/Plug.vala:87
 msgid "Dim display"
-msgstr ""
+msgstr "Bildschirm abgedunkelt"
 
 #: ../src/Plug.vala:88
 msgid "Lid close"
-msgstr ""
+msgstr "Deckel geschlossen"
 
 #: ../src/Plug.vala:89
 msgid "Display brightness"
-msgstr ""
+msgstr "Bildschirmhelligkeit"
 
 #: ../src/Plug.vala:90
 msgid "Automatic brightness adjustment"
-msgstr ""
+msgstr "Automatische Helligkeitseinstellung"
 
 #: ../src/Plug.vala:91
 msgid "Inactive display off"
-msgstr ""
+msgstr "Keine Bildschirmdeaktivierung"
 
 #: ../src/Plug.vala:92
 msgid "Docked lid close"
-msgstr ""
+msgstr "Am Dock Deckel geschlossen"
 
 #: ../src/Plug.vala:93
 msgid "Sleep inactive"
-msgstr ""
+msgstr "Kein Bereitschaftsmodus"
 
 #: ../src/Plug.vala:115
 msgid "Plugged In"
@@ -159,7 +159,7 @@ msgstr "Ein-/Ausschalter:"
 
 #: ../src/Plug.vala:289
 msgid "Suspend when inactive for:"
-msgstr ""
+msgstr "In Bereitschaft versetzen, wenn inaktiv seit:"
 
 #: ../src/Plug.vala:304
 msgid "When docked and lid is closed:"
@@ -208,15 +208,3 @@ msgstr "1 Stunde"
 #: ../src/TimeoutComboBox.vala:49
 msgid "2 hours"
 msgstr "2 Stunden"
-
-#~ msgid "Ask me"
-#~ msgstr "Nachfragen"
-
-#~ msgid "When power is critically low:"
-#~ msgstr "Wenn der Akku sehr schwach ist:"
-
-#~ msgid "Sleep when inactive for:"
-#~ msgstr "Bereitschaftsmodus, wenn inaktiv für:"
-
-#~ msgid "Sleep button:"
-#~ msgstr "Bereitschaftsknopf:"
