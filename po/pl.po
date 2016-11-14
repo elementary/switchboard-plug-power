@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-10-26 14:47-0700\n"
-"PO-Revision-Date: 2016-06-14 21:37+0000\n"
+"PO-Revision-Date: 2016-11-13 17:41+0000\n"
 "Last-Translator: Piotr Strębski <strebski@o2.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-10-27 06:16+0000\n"
-"X-Generator: Launchpad (build 18246)\n"
+"X-Launchpad-Export-Date: 2016-11-14 06:05+0000\n"
+"X-Generator: Launchpad (build 18255)\n"
 "Language: pl\n"
 
 #: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:38
@@ -82,43 +82,43 @@ msgstr ""
 
 #: ../src/Plug.vala:84
 msgid "Sleep button"
-msgstr ""
+msgstr "Przycisk uśpienia"
 
 #: ../src/Plug.vala:85
 msgid "Power button"
-msgstr ""
+msgstr "Przycisk zasilania"
 
 #: ../src/Plug.vala:86
 msgid "Display inactive"
-msgstr ""
+msgstr "Nieaktywność wyświetlacza"
 
 #: ../src/Plug.vala:87
 msgid "Dim display"
-msgstr ""
+msgstr "Przyciemnienie ekranu"
 
 #: ../src/Plug.vala:88
 msgid "Lid close"
-msgstr ""
+msgstr "Zamknięcie pokrywy"
 
 #: ../src/Plug.vala:89
 msgid "Display brightness"
-msgstr ""
+msgstr "Jasność wyświetlacza"
 
 #: ../src/Plug.vala:90
 msgid "Automatic brightness adjustment"
-msgstr ""
+msgstr "Automatyczne dostosowanie jasności"
 
 #: ../src/Plug.vala:91
 msgid "Inactive display off"
-msgstr ""
+msgstr "Wyłączenie czasu nieaktywności ekranu"
 
 #: ../src/Plug.vala:92
 msgid "Docked lid close"
-msgstr ""
+msgstr "Zamknięcie pokrywy w doku"
 
 #: ../src/Plug.vala:93
 msgid "Sleep inactive"
-msgstr ""
+msgstr "Nieaktywność usypiania"
 
 #: ../src/Plug.vala:115
 msgid "Plugged In"
@@ -155,7 +155,7 @@ msgstr "Przycisk zasilania:"
 
 #: ../src/Plug.vala:289
 msgid "Suspend when inactive for:"
-msgstr ""
+msgstr "Uśpienie po nieaktywności przez:"
 
 #: ../src/Plug.vala:304
 msgid "When docked and lid is closed:"
@@ -204,15 +204,3 @@ msgstr "1 godz."
 #: ../src/TimeoutComboBox.vala:49
 msgid "2 hours"
 msgstr "2 godziny"
-
-#~ msgid "Sleep button:"
-#~ msgstr "Przycisk uśpienia:"
-
-#~ msgid "When power is critically low:"
-#~ msgstr "Przy krytycznie niskim stanie zasilania:"
-
-#~ msgid "Ask me"
-#~ msgstr "Zapytaj"
-
-#~ msgid "Sleep when inactive for:"
-#~ msgstr "Uśpij, gdy bezczynny przez:"
