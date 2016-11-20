@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-26 14:47-0700\n"
+"POT-Creation-Date: 2016-11-20 16:38-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,6 +39,42 @@ msgstr ""
 
 #: ../src/LidCloseActionComboBox.vala:39
 msgid "Not supported"
+msgstr ""
+
+#: ../src/ActionComboBox.vala:39
+msgid "Hibernate"
+msgstr ""
+
+#: ../src/TimeoutComboBox.vala:42
+msgid "Never"
+msgstr ""
+
+#: ../src/TimeoutComboBox.vala:43
+msgid "5 min"
+msgstr ""
+
+#: ../src/TimeoutComboBox.vala:44
+msgid "10 min"
+msgstr ""
+
+#: ../src/TimeoutComboBox.vala:45
+msgid "15 min"
+msgstr ""
+
+#: ../src/TimeoutComboBox.vala:46
+msgid "30 min"
+msgstr ""
+
+#: ../src/TimeoutComboBox.vala:47
+msgid "45 min"
+msgstr ""
+
+#: ../src/TimeoutComboBox.vala:48
+msgid "1 hour"
+msgstr ""
+
+#: ../src/TimeoutComboBox.vala:49
+msgid "2 hours"
 msgstr ""
 
 #. //launchpad.net/switchboard-plug-power)
@@ -142,62 +178,26 @@ msgstr ""
 msgid "Automatically adjust brightness:"
 msgstr ""
 
-#: ../src/Plug.vala:249
-msgid "Turn off display when inactive for:"
-msgstr ""
-
-#: ../src/Plug.vala:256
-msgid "Power button:"
-msgstr ""
-
-#: ../src/Plug.vala:289
-msgid "Suspend when inactive for:"
-msgstr ""
-
-#: ../src/Plug.vala:304
-msgid "When docked and lid is closed:"
-msgstr ""
-
-#: ../src/Plug.vala:305
+#: ../src/Plug.vala:243
 msgid "When lid is closed:"
 msgstr ""
 
-#: ../src/Plug.vala:308
+#: ../src/Plug.vala:248
+msgid "When lid is closed with external monitor:"
+msgstr ""
+
+#: ../src/Plug.vala:284
+msgid "Turn off display when inactive for:"
+msgstr ""
+
+#: ../src/Plug.vala:292
+msgid "Power button:"
+msgstr ""
+
+#: ../src/Plug.vala:325
+msgid "Suspend when inactive for:"
+msgstr ""
+
+#: ../src/Plug.vala:341
 msgid "Dim display when inactive:"
-msgstr ""
-
-#: ../src/ActionComboBox.vala:39
-msgid "Hibernate"
-msgstr ""
-
-#: ../src/TimeoutComboBox.vala:42
-msgid "Never"
-msgstr ""
-
-#: ../src/TimeoutComboBox.vala:43
-msgid "5 min"
-msgstr ""
-
-#: ../src/TimeoutComboBox.vala:44
-msgid "10 min"
-msgstr ""
-
-#: ../src/TimeoutComboBox.vala:45
-msgid "15 min"
-msgstr ""
-
-#: ../src/TimeoutComboBox.vala:46
-msgid "30 min"
-msgstr ""
-
-#: ../src/TimeoutComboBox.vala:47
-msgid "45 min"
-msgstr ""
-
-#: ../src/TimeoutComboBox.vala:48
-msgid "1 hour"
-msgstr ""
-
-#: ../src/TimeoutComboBox.vala:49
-msgid "2 hours"
 msgstr ""
