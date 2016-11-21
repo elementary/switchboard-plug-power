@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-26 14:47-0700\n"
+"POT-Creation-Date: 2016-11-20 16:38-0600\n"
 "PO-Revision-Date: 2015-12-07 14:34+0000\n"
 "Last-Translator: Jonatan Nordentoft <lo@cercus.net>\n"
 "Language-Team: Danish <da@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-10-27 06:15+0000\n"
-"X-Generator: Launchpad (build 18246)\n"
+"X-Launchpad-Export-Date: 2016-11-21 05:42+0000\n"
+"X-Generator: Launchpad (build 18269)\n"
 "Language: da\n"
 
 #: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:38
@@ -41,6 +41,42 @@ msgstr "Gør intet"
 #: ../src/LidCloseActionComboBox.vala:39
 msgid "Not supported"
 msgstr ""
+
+#: ../src/ActionComboBox.vala:39
+msgid "Hibernate"
+msgstr "Dvale"
+
+#: ../src/TimeoutComboBox.vala:42
+msgid "Never"
+msgstr "Aldrig"
+
+#: ../src/TimeoutComboBox.vala:43
+msgid "5 min"
+msgstr "5 min"
+
+#: ../src/TimeoutComboBox.vala:44
+msgid "10 min"
+msgstr "10 min"
+
+#: ../src/TimeoutComboBox.vala:45
+msgid "15 min"
+msgstr "15 min"
+
+#: ../src/TimeoutComboBox.vala:46
+msgid "30 min"
+msgstr "30 min"
+
+#: ../src/TimeoutComboBox.vala:47
+msgid "45 min"
+msgstr "45 min"
+
+#: ../src/TimeoutComboBox.vala:48
+msgid "1 hour"
+msgstr "1 time"
+
+#: ../src/TimeoutComboBox.vala:49
+msgid "2 hours"
+msgstr "2 timer"
 
 #. //launchpad.net/switchboard-plug-power)
 #. *
@@ -143,71 +179,26 @@ msgstr "Lysstyrke:"
 msgid "Automatically adjust brightness:"
 msgstr ""
 
-#: ../src/Plug.vala:249
-msgid "Turn off display when inactive for:"
-msgstr ""
-
-#: ../src/Plug.vala:256
-msgid "Power button:"
-msgstr "Tænd/sluk-knap:"
-
-#: ../src/Plug.vala:289
-msgid "Suspend when inactive for:"
-msgstr ""
-
-#: ../src/Plug.vala:304
-msgid "When docked and lid is closed:"
-msgstr ""
-
-#: ../src/Plug.vala:305
+#: ../src/Plug.vala:243
 msgid "When lid is closed:"
 msgstr ""
 
-#: ../src/Plug.vala:308
-msgid "Dim display when inactive:"
+#: ../src/Plug.vala:248
+msgid "When lid is closed with external monitor:"
 msgstr ""
 
-#: ../src/ActionComboBox.vala:39
-msgid "Hibernate"
-msgstr "Dvale"
+#: ../src/Plug.vala:284
+msgid "Turn off display when inactive for:"
+msgstr ""
 
-#: ../src/TimeoutComboBox.vala:42
-msgid "Never"
-msgstr "Aldrig"
+#: ../src/Plug.vala:292
+msgid "Power button:"
+msgstr "Tænd/sluk-knap:"
 
-#: ../src/TimeoutComboBox.vala:43
-msgid "5 min"
-msgstr "5 min"
+#: ../src/Plug.vala:325
+msgid "Suspend when inactive for:"
+msgstr ""
 
-#: ../src/TimeoutComboBox.vala:44
-msgid "10 min"
-msgstr "10 min"
-
-#: ../src/TimeoutComboBox.vala:45
-msgid "15 min"
-msgstr "15 min"
-
-#: ../src/TimeoutComboBox.vala:46
-msgid "30 min"
-msgstr "30 min"
-
-#: ../src/TimeoutComboBox.vala:47
-msgid "45 min"
-msgstr "45 min"
-
-#: ../src/TimeoutComboBox.vala:48
-msgid "1 hour"
-msgstr "1 time"
-
-#: ../src/TimeoutComboBox.vala:49
-msgid "2 hours"
-msgstr "2 timer"
-
-#~ msgid "Ask me"
-#~ msgstr "Spørg mig"
-
-#~ msgid "Sleep button:"
-#~ msgstr "Hvileknap:"
-
-#~ msgid "When power is critically low:"
-#~ msgstr "Når strømniveauet er kritisk lav:"
+#: ../src/Plug.vala:341
+msgid "Dim display when inactive:"
+msgstr ""

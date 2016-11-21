@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-26 14:47-0700\n"
+"POT-Creation-Date: 2016-11-20 16:38-0600\n"
 "PO-Revision-Date: 2016-11-13 17:41+0000\n"
 "Last-Translator: Piotr Strębski <strebski@o2.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-14 06:05+0000\n"
-"X-Generator: Launchpad (build 18255)\n"
+"X-Launchpad-Export-Date: 2016-11-21 05:42+0000\n"
+"X-Generator: Launchpad (build 18269)\n"
 "Language: pl\n"
 
 #: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:38
@@ -41,6 +41,42 @@ msgstr "Brak czynności"
 #: ../src/LidCloseActionComboBox.vala:39
 msgid "Not supported"
 msgstr "Nieobsługiwane"
+
+#: ../src/ActionComboBox.vala:39
+msgid "Hibernate"
+msgstr "Zahibernowanie"
+
+#: ../src/TimeoutComboBox.vala:42
+msgid "Never"
+msgstr "Nigdy"
+
+#: ../src/TimeoutComboBox.vala:43
+msgid "5 min"
+msgstr "5 min"
+
+#: ../src/TimeoutComboBox.vala:44
+msgid "10 min"
+msgstr "10 min"
+
+#: ../src/TimeoutComboBox.vala:45
+msgid "15 min"
+msgstr "15 min."
+
+#: ../src/TimeoutComboBox.vala:46
+msgid "30 min"
+msgstr "30 min"
+
+#: ../src/TimeoutComboBox.vala:47
+msgid "45 min"
+msgstr "45 min."
+
+#: ../src/TimeoutComboBox.vala:48
+msgid "1 hour"
+msgstr "1 godz."
+
+#: ../src/TimeoutComboBox.vala:49
+msgid "2 hours"
+msgstr "2 godziny"
 
 #. //launchpad.net/switchboard-plug-power)
 #. *
@@ -145,62 +181,26 @@ msgstr "Jasność ekranu:"
 msgid "Automatically adjust brightness:"
 msgstr "Automatyczne dostosowanie jasności:"
 
-#: ../src/Plug.vala:249
-msgid "Turn off display when inactive for:"
-msgstr "Wyłącz ekran, gdy bezczynny przez:"
-
-#: ../src/Plug.vala:256
-msgid "Power button:"
-msgstr "Przycisk zasilania:"
-
-#: ../src/Plug.vala:289
-msgid "Suspend when inactive for:"
-msgstr "Uśpienie po nieaktywności przez:"
-
-#: ../src/Plug.vala:304
-msgid "When docked and lid is closed:"
-msgstr "Gdy komputer jest w stacji dokującej, a pokrywa jest zamknięta:"
-
-#: ../src/Plug.vala:305
+#: ../src/Plug.vala:243
 msgid "When lid is closed:"
 msgstr "Gdy pokrywa jest zamknięta:"
 
-#: ../src/Plug.vala:308
+#: ../src/Plug.vala:248
+msgid "When lid is closed with external monitor:"
+msgstr ""
+
+#: ../src/Plug.vala:284
+msgid "Turn off display when inactive for:"
+msgstr "Wyłącz ekran, gdy bezczynny przez:"
+
+#: ../src/Plug.vala:292
+msgid "Power button:"
+msgstr "Przycisk zasilania:"
+
+#: ../src/Plug.vala:325
+msgid "Suspend when inactive for:"
+msgstr "Uśpienie po nieaktywności przez:"
+
+#: ../src/Plug.vala:341
 msgid "Dim display when inactive:"
 msgstr "Wygaś ekran, gdy bezczynny:"
-
-#: ../src/ActionComboBox.vala:39
-msgid "Hibernate"
-msgstr "Zahibernowanie"
-
-#: ../src/TimeoutComboBox.vala:42
-msgid "Never"
-msgstr "Nigdy"
-
-#: ../src/TimeoutComboBox.vala:43
-msgid "5 min"
-msgstr "5 min"
-
-#: ../src/TimeoutComboBox.vala:44
-msgid "10 min"
-msgstr "10 min"
-
-#: ../src/TimeoutComboBox.vala:45
-msgid "15 min"
-msgstr "15 min."
-
-#: ../src/TimeoutComboBox.vala:46
-msgid "30 min"
-msgstr "30 min"
-
-#: ../src/TimeoutComboBox.vala:47
-msgid "45 min"
-msgstr "45 min."
-
-#: ../src/TimeoutComboBox.vala:48
-msgid "1 hour"
-msgstr "1 godz."
-
-#: ../src/TimeoutComboBox.vala:49
-msgid "2 hours"
-msgstr "2 godziny"
