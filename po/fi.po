@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-20 16:38-0600\n"
-"PO-Revision-Date: 2016-10-30 16:27+0000\n"
+"PO-Revision-Date: 2016-11-21 09:47+0000\n"
 "Last-Translator: Jiri Grönroos <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-21 05:42+0000\n"
+"X-Launchpad-Export-Date: 2016-11-22 06:03+0000\n"
 "X-Generator: Launchpad (build 18269)\n"
 "Language: fi\n"
 
@@ -130,7 +130,7 @@ msgstr ""
 
 #: ../src/Plug.vala:87
 msgid "Dim display"
-msgstr ""
+msgstr "Himmennä näyttö"
 
 #: ../src/Plug.vala:88
 msgid "Lid close"
@@ -188,7 +188,7 @@ msgstr "Kansi suljettuna:"
 
 #: ../src/Plug.vala:248
 msgid "When lid is closed with external monitor:"
-msgstr ""
+msgstr "Kun kansi on suljettu ulkoisen näytön kanssa:"
 
 #: ../src/Plug.vala:284
 msgid "Turn off display when inactive for:"
