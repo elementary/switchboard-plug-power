@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-20 16:38-0600\n"
-"PO-Revision-Date: 2016-08-06 01:36+0000\n"
-"Last-Translator: Kenneth Mauricio Acuña Lago <kmal.kenneth@live.com>\n"
+"PO-Revision-Date: 2016-12-08 20:43+0000\n"
+"Last-Translator: Mihai <malexandru_70@hotmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-21 05:42+0000\n"
-"X-Generator: Launchpad (build 18269)\n"
+"X-Launchpad-Export-Date: 2016-12-09 05:34+0000\n"
+"X-Generator: Launchpad (build 18292)\n"
 "Language: es\n"
 
 #: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:38
@@ -32,7 +32,7 @@ msgstr "Bloquear"
 
 #: ../src/LidCloseActionComboBox.vala:36
 msgid "Halt"
-msgstr ""
+msgstr "Interrumpir"
 
 #: ../src/LidCloseActionComboBox.vala:37 ../src/ActionComboBox.vala:37
 msgid "Do nothing"
@@ -40,7 +40,7 @@ msgstr "No hacer nada"
 
 #: ../src/LidCloseActionComboBox.vala:39
 msgid "Not supported"
-msgstr ""
+msgstr "No soportado"
 
 #: ../src/ActionComboBox.vala:39
 msgid "Hibernate"
@@ -97,15 +97,16 @@ msgstr "2 horas"
 #. 
 #: ../src/Translations.vala:20
 msgid "Manage power settings "
-msgstr ""
+msgstr "Administrar la configuración de energía "
 
 #: ../src/Translations.vala:21
 msgid "Authentication is required to manage power settings"
 msgstr ""
+"Se requiere autenticación para administrar la configuración de energía"
 
 #: ../src/Plug.vala:39
 msgid "You do not have permission to change this"
-msgstr ""
+msgstr "No tienes permisos para realizar estos cambios"
 
 #: ../src/Plug.vala:45
 msgid "Power"
@@ -114,14 +115,16 @@ msgstr "Energía"
 #: ../src/Plug.vala:46
 msgid "Configure display brightness, power buttons, and sleep behavior"
 msgstr ""
+"Configurar el brillo de pantalla, los botones de encendido y las opciones de "
+"suspensión"
 
 #: ../src/Plug.vala:84
 msgid "Sleep button"
-msgstr ""
+msgstr "Botón de suspensión"
 
 #: ../src/Plug.vala:85
 msgid "Power button"
-msgstr ""
+msgstr "Botón de energía"
 
 #: ../src/Plug.vala:86
 msgid "Display inactive"
@@ -133,15 +136,15 @@ msgstr ""
 
 #: ../src/Plug.vala:88
 msgid "Lid close"
-msgstr ""
+msgstr "Tapa cerrada"
 
 #: ../src/Plug.vala:89
 msgid "Display brightness"
-msgstr ""
+msgstr "Brillo de pantalla"
 
 #: ../src/Plug.vala:90
 msgid "Automatic brightness adjustment"
-msgstr ""
+msgstr "Ajuste automático de brillo"
 
 #: ../src/Plug.vala:91
 msgid "Inactive display off"
@@ -165,31 +168,32 @@ msgstr "Con batería"
 
 #: ../src/Plug.vala:169
 msgid "Some changes will not take effect until you restart this computer"
-msgstr ""
+msgstr "Algunos cambios no tendrán efecto hasta que reinicies el equipo"
 
 #: ../src/Plug.vala:187
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
+"Algunos ajustes requieren privilegios de administrador para ser modificados"
 
 #: ../src/Plug.vala:220
 msgid "Display brightness:"
-msgstr "Brillo de la pantalla:"
+msgstr "Brillo de pantalla:"
 
 #: ../src/Plug.vala:225
 msgid "Automatically adjust brightness:"
-msgstr ""
+msgstr "Ajustar brillo automáticamente:"
 
 #: ../src/Plug.vala:243
 msgid "When lid is closed:"
-msgstr ""
+msgstr "Cuando la tapa está cerrada:"
 
 #: ../src/Plug.vala:248
 msgid "When lid is closed with external monitor:"
-msgstr ""
+msgstr "Cuanda la tapa está cerrada conectada a un monitor externo"
 
 #: ../src/Plug.vala:284
 msgid "Turn off display when inactive for:"
-msgstr ""
+msgstr "Apagar la pantalla cuando esté inactivo durante:"
 
 #: ../src/Plug.vala:292
 msgid "Power button:"
@@ -197,8 +201,8 @@ msgstr "Botón de encendido:"
 
 #: ../src/Plug.vala:325
 msgid "Suspend when inactive for:"
-msgstr ""
+msgstr "Suspender al estar inactivo por:"
 
 #: ../src/Plug.vala:341
 msgid "Dim display when inactive:"
-msgstr ""
+msgstr "Atenuar pantalla cuando está inactivo:"
