@@ -1,0 +1,206 @@
+# Uyghur translation for switchboard-plug-power
+# Copyright (c) 2016 Rosetta Contributors and Canonical Ltd 2016
+# This file is distributed under the same license as the switchboard-plug-power package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: switchboard-plug-power\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2016-11-20 16:38-0600\n"
+"PO-Revision-Date: 2016-12-10 05:00+0000\n"
+"Last-Translator: ablimet <Unknown>\n"
+"Language-Team: Uyghur <ug@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2016-12-10 05:24+0000\n"
+"X-Generator: Launchpad (build 18292)\n"
+"Language: ug\n"
+
+#: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:38
+msgid "Suspend"
+msgstr "توڭلىتىش"
+
+#: ../src/LidCloseActionComboBox.vala:34
+msgid "Shutdown"
+msgstr "ئىتىش"
+
+#: ../src/LidCloseActionComboBox.vala:35
+msgid "Lock"
+msgstr "قۇلۇپلاش"
+
+#: ../src/LidCloseActionComboBox.vala:36
+msgid "Halt"
+msgstr "توختىتىش"
+
+#: ../src/LidCloseActionComboBox.vala:37 ../src/ActionComboBox.vala:37
+msgid "Do nothing"
+msgstr "ھېچنىمە قىلمىدى"
+
+#: ../src/LidCloseActionComboBox.vala:39
+msgid "Not supported"
+msgstr "قوللىمايدۇ"
+
+#: ../src/ActionComboBox.vala:39
+msgid "Hibernate"
+msgstr "ئۇخلتىش"
+
+#: ../src/TimeoutComboBox.vala:42
+msgid "Never"
+msgstr "ئەسلا"
+
+#: ../src/TimeoutComboBox.vala:43
+msgid "5 min"
+msgstr "5 مىنۇت"
+
+#: ../src/TimeoutComboBox.vala:44
+msgid "10 min"
+msgstr "10 مىنۇت"
+
+#: ../src/TimeoutComboBox.vala:45
+msgid "15 min"
+msgstr "15مىنۇت"
+
+#: ../src/TimeoutComboBox.vala:46
+msgid "30 min"
+msgstr "30مىنۇت"
+
+#: ../src/TimeoutComboBox.vala:47
+msgid "45 min"
+msgstr "45مىنۇت"
+
+#: ../src/TimeoutComboBox.vala:48
+msgid "1 hour"
+msgstr "1سائەت"
+
+#: ../src/TimeoutComboBox.vala:49
+msgid "2 hours"
+msgstr "2سائەت"
+
+#. //launchpad.net/switchboard-plug-power)
+#. *
+#. * This program is free software; you can redistribute it and/or
+#. * modify it under the terms of the GNU General Public
+#. * License as published by the Free Software Foundation; either
+#. * version 2 of the License, or (at your option) any later version.
+#. *
+#. * This program is distributed in the hope that it will be useful,
+#. * but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+#. * General Public License for more details.
+#. *
+#. * You should have received a copy of the GNU General Public
+#. * License along with this program; if not, write to the
+#. * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+#. * Boston, MA 02111-1307, USA.
+#. 
+#: ../src/Translations.vala:20
+msgid "Manage power settings "
+msgstr "توك مەنبەسى تەڭشىكىنى باشقۇرۇش "
+
+#: ../src/Translations.vala:21
+msgid "Authentication is required to manage power settings"
+msgstr "توك مەنبەسى تەڭشىكىنى باشقۇرۇش ئۈچۈن سالاھىيەت دەلىللەش زۆرۈر"
+
+#: ../src/Plug.vala:39
+msgid "You do not have permission to change this"
+msgstr "سىزنىڭ بۇنى ئۆزگەرتىش سالاھىيىتىڭىز يوق"
+
+#: ../src/Plug.vala:45
+msgid "Power"
+msgstr "توك مەنبەسى"
+
+#: ../src/Plug.vala:46
+msgid "Configure display brightness, power buttons, and sleep behavior"
+msgstr ""
+"ئىكران يورۇقلۇقىنى، توك مەنبەسى كۇنۇپكىسىنى ۋە ئۇخلىتىش شەكلىنى تەڭشەش"
+
+#: ../src/Plug.vala:84
+msgid "Sleep button"
+msgstr "ئۇخلىتىش كۇنۇپكىسى"
+
+#: ../src/Plug.vala:85
+msgid "Power button"
+msgstr "توك مەنبەسى كۇنۇپكىسى"
+
+#: ../src/Plug.vala:86
+msgid "Display inactive"
+msgstr "ئىكران قوزغىتىلمىغان"
+
+#: ../src/Plug.vala:87
+msgid "Dim display"
+msgstr "ئىكراننى خىرەلەشتۈرۈش"
+
+#: ../src/Plug.vala:88
+msgid "Lid close"
+msgstr "قاپقاقنى ئىتىش"
+
+#: ../src/Plug.vala:89
+msgid "Display brightness"
+msgstr "ئىكران يورۇقلۇقى"
+
+#: ../src/Plug.vala:90
+msgid "Automatic brightness adjustment"
+msgstr "ئىكران يورۇقلۇقىنى ئاپتوماتىك تەڭشەش"
+
+#: ../src/Plug.vala:91
+msgid "Inactive display off"
+msgstr "ئىكراننى ئۆچۈرۈش"
+
+#: ../src/Plug.vala:92
+msgid "Docked lid close"
+msgstr "Docked ستونىنى تاقاش"
+
+#: ../src/Plug.vala:93
+msgid "Sleep inactive"
+msgstr "ئۇخلاش ھالىتىگە كىردى"
+
+#: ../src/Plug.vala:115
+msgid "Plugged In"
+msgstr "توك مەنبەسىگە چىتىلدى"
+
+#: ../src/Plug.vala:124
+msgid "On Battery"
+msgstr "باتارىيەنى ئىشلىتىۋاتىدۇ"
+
+#: ../src/Plug.vala:169
+msgid "Some changes will not take effect until you restart this computer"
+msgstr "بەزى تەڭشەكلەر كومپىيۇتىرنى قايتا قوزغاتقاندىن كىيىن ئىشلەيدۇ."
+
+#: ../src/Plug.vala:187
+msgid "Some settings require administrator rights to be changed"
+msgstr ""
+"بەزى تەڭشەكلەرنى ئۆزگەرتىش ئۈچۈن باشقۇرغۇچىلىق سالاھىيىتى بولىشى كىرەك"
+
+#: ../src/Plug.vala:220
+msgid "Display brightness:"
+msgstr "ئىكران يورۇقلىقى:"
+
+#: ../src/Plug.vala:225
+msgid "Automatically adjust brightness:"
+msgstr "ئىكران يورۇقلۇقىنى ئاپتوماتىك تەڭشەش"
+
+#: ../src/Plug.vala:243
+msgid "When lid is closed:"
+msgstr "قاپقاق تاقالغان ۋاقىتتا:"
+
+#: ../src/Plug.vala:248
+msgid "When lid is closed with external monitor:"
+msgstr "تاشقى كۆزەتكۈچى ئارقىلىق قاپقاق تاقالغان ۋاقىتتا:"
+
+#: ../src/Plug.vala:284
+msgid "Turn off display when inactive for:"
+msgstr "مەشغۇلات قىلمىغان ۋاقىتتا ئىكراننى ئۆچۈرۈش"
+
+#: ../src/Plug.vala:292
+msgid "Power button:"
+msgstr "توك مەنبەسى كۇنۇپكىسى"
+
+#: ../src/Plug.vala:325
+msgid "Suspend when inactive for:"
+msgstr "مەشغۇلات قىلمىغان ۋاقىتتا كومپىيۇتىرنى توڭلىتىش"
+
+#: ../src/Plug.vala:341
+msgid "Dim display when inactive:"
+msgstr "مەشغۇلات قىلمىغان ۋاقىتتا ئىكراننى خىرەلەشتۈرۈش"
