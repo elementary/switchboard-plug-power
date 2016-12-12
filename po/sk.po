@@ -2,20 +2,21 @@
 # Copyright (c) 2011 Rosetta Contributors and Canonical Ltd 2011
 # This file is distributed under the same license as the maya package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2011.
+# Martin Korpala <korpyk@gmail.com>, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-20 16:38-0600\n"
-"PO-Revision-Date: 2016-07-05 18:49+0000\n"
-"Last-Translator: Lukáš Papík <stereo839@gmail.com>\n"
-"Language-Team: Slovak <sk@li.org>\n"
+"PO-Revision-Date: 2016-12-11 20:57+0000\n"
+"Last-Translator: Martin Korpala <Unknown>\n"
+"Language-Team: Slovak <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-21 05:42+0000\n"
-"X-Generator: Launchpad (build 18269)\n"
+"X-Launchpad-Export-Date: 2016-12-12 05:18+0000\n"
+"X-Generator: Launchpad (build 18292)\n"
 "Language: sk\n"
 
 #: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:38
@@ -97,7 +98,7 @@ msgstr "2 hodiny"
 #. 
 #: ../src/Translations.vala:20
 msgid "Manage power settings "
-msgstr ""
+msgstr "Spravovať nastavenia napájania "
 
 #: ../src/Translations.vala:21
 msgid "Authentication is required to manage power settings"
@@ -118,43 +119,43 @@ msgstr ""
 
 #: ../src/Plug.vala:84
 msgid "Sleep button"
-msgstr ""
+msgstr "Tlačidlo uspania"
 
 #: ../src/Plug.vala:85
 msgid "Power button"
-msgstr ""
+msgstr "Tlačidlo napájania"
 
 #: ../src/Plug.vala:86
 msgid "Display inactive"
-msgstr ""
+msgstr "Zobraz neaktívne"
 
 #: ../src/Plug.vala:87
 msgid "Dim display"
-msgstr ""
+msgstr "Stlmiť displej"
 
 #: ../src/Plug.vala:88
 msgid "Lid close"
-msgstr ""
+msgstr "Uzavretie veka"
 
 #: ../src/Plug.vala:89
 msgid "Display brightness"
-msgstr ""
+msgstr "Jas displeja"
 
 #: ../src/Plug.vala:90
 msgid "Automatic brightness adjustment"
-msgstr ""
+msgstr "Automatická úprava jasu"
 
 #: ../src/Plug.vala:91
 msgid "Inactive display off"
-msgstr ""
+msgstr "Vypnutie neaktívneho displeja"
 
 #: ../src/Plug.vala:92
 msgid "Docked lid close"
-msgstr ""
+msgstr "Zavreté veko v doku"
 
 #: ../src/Plug.vala:93
 msgid "Sleep inactive"
-msgstr ""
+msgstr "Neaktívne uspanie"
 
 #: ../src/Plug.vala:115
 msgid "Plugged In"
@@ -178,7 +179,7 @@ msgstr "Jas displeja:"
 
 #: ../src/Plug.vala:225
 msgid "Automatically adjust brightness:"
-msgstr "Automatické nastavenie jasu"
+msgstr "Automatická úprava jasu:"
 
 #: ../src/Plug.vala:243
 msgid "When lid is closed:"
@@ -186,7 +187,7 @@ msgstr "Ak je zatvorený kryt:"
 
 #: ../src/Plug.vala:248
 msgid "When lid is closed with external monitor:"
-msgstr ""
+msgstr "Keď je veko zavreté v pripojení s externým monitorom:"
 
 #: ../src/Plug.vala:284
 msgid "Turn off display when inactive for:"
@@ -198,7 +199,7 @@ msgstr "Tlačidlo napájania:"
 
 #: ../src/Plug.vala:325
 msgid "Suspend when inactive for:"
-msgstr ""
+msgstr "Odložiť ak neaktívny počas:"
 
 #: ../src/Plug.vala:341
 msgid "Dim display when inactive:"
