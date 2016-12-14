@@ -40,11 +40,14 @@ namespace Power {
         private const string LAPTOP_DETECT_BINARY = "/usr/sbin/laptop-detect";
 
         public Plug () {
+            var switchboard_settings = new Gee.TreeMap<string, string?> (null, null);
+            switchboard_settings.set ("power", "null");
             Object (category: Category.HARDWARE,
                 code_name: "system-pantheon-power",
                 display_name: _("Power"),
                 description: _("Configure display brightness, power buttons, and sleep behavior"),
-                icon: "preferences-system-power");
+                icon: "preferences-system-power",
+                supported_settings: switchboard_settings);
 
             settings = new GLib.Settings ("org.gnome.settings-daemon.plugins.power");
             pantheon_dpms_settings = new GLib.Settings ("org.pantheon.dpms");
