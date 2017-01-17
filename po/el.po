@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-20 16:38-0600\n"
-"PO-Revision-Date: 2015-02-10 23:17+0000\n"
-"Last-Translator: gkffzs <Unknown>\n"
+"PO-Revision-Date: 2017-01-16 16:58+0000\n"
+"Last-Translator: Christos Iatropoulos <Unknown>\n"
 "Language-Team: Greek <el@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-21 05:42+0000\n"
-"X-Generator: Launchpad (build 18269)\n"
+"X-Launchpad-Export-Date: 2017-01-17 06:52+0000\n"
+"X-Generator: Launchpad (build 18302)\n"
 "Language: el\n"
 
 #: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:38
@@ -125,7 +125,7 @@ msgstr ""
 
 #: ../src/Plug.vala:86
 msgid "Display inactive"
-msgstr ""
+msgstr "Αδρανής οθόνη"
 
 #: ../src/Plug.vala:87
 msgid "Dim display"
@@ -141,7 +141,7 @@ msgstr ""
 
 #: ../src/Plug.vala:90
 msgid "Automatic brightness adjustment"
-msgstr ""
+msgstr "Αυτόματη ρύθμιση φωτεινότητας"
 
 #: ../src/Plug.vala:91
 msgid "Inactive display off"
@@ -166,6 +166,8 @@ msgstr "Με μπαταρία"
 #: ../src/Plug.vala:169
 msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
+"Κάποιες αλλαγές δεν θα τεθούν σε ισχύ μέχρι να επανεκκινήσετε αυτόν τον "
+"υπολογιστή"
 
 #: ../src/Plug.vala:187
 msgid "Some settings require administrator rights to be changed"
@@ -177,19 +179,19 @@ msgstr "Φωτεινότητα οθόνης:"
 
 #: ../src/Plug.vala:225
 msgid "Automatically adjust brightness:"
-msgstr ""
+msgstr "Προσαρμογή φωτεινότητας αυτόματα:"
 
 #: ../src/Plug.vala:243
 msgid "When lid is closed:"
-msgstr ""
+msgstr "Όταν το καπάκι είναι κλειστό:"
 
 #: ../src/Plug.vala:248
 msgid "When lid is closed with external monitor:"
-msgstr ""
+msgstr "Όταν το καπάκι είναι κλειστό με εξωτερική οθόνη"
 
 #: ../src/Plug.vala:284
 msgid "Turn off display when inactive for:"
-msgstr ""
+msgstr "Απενεργοποίηση οθόνης  όταν βρίσκεται σε αδράνεια για:"
 
 #: ../src/Plug.vala:292
 msgid "Power button:"
