@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-20 16:38-0600\n"
-"PO-Revision-Date: 2017-02-26 10:26+0000\n"
-"Last-Translator: ShintakuNobuhiro <Unknown>\n"
+"PO-Revision-Date: 2017-03-01 12:44+0000\n"
+"Last-Translator: Ryo Nakano <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-02-27 05:45+0000\n"
-"X-Generator: Launchpad (build 18328)\n"
+"X-Launchpad-Export-Date: 2017-03-02 05:49+0000\n"
+"X-Generator: Launchpad (build 18329)\n"
 
 #: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:38
 msgid "Suspend"
@@ -179,7 +179,7 @@ msgstr "閉じた時:"
 
 #: ../src/Plug.vala:248
 msgid "When lid is closed with external monitor:"
-msgstr ""
+msgstr "外部モニターとカバーが閉じられた時:"
 
 #: ../src/Plug.vala:284
 msgid "Turn off display when inactive for:"
