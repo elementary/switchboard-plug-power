@@ -33,7 +33,7 @@ namespace Power {
         public bool check_present () {
             bool present = false;
             if (laptop) {
-                if (upower.OnBattery || upower_device.IsPresent) {
+                if (upower.on_battery || upower_device.is_present) {
                     present = true;
                 }
             }  
@@ -44,7 +44,7 @@ namespace Power {
         private string get_dbus_path (Upower upow) {
             string path = "";
             try {
-                ObjectPath[] devs = upow.EnumerateDevices();
+                ObjectPath[] devs = upow.enumerate_devices();
                 for (int i = 0; i < devs.length; i++) {
                     if (devs[i].contains ("BAT0")) {
                         path = devs[i].to_string();

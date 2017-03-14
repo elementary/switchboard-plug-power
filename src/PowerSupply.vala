@@ -35,9 +35,9 @@ namespace Power {
             }
 
             try {
-                upower_device.Refresh ();
+                upower_device.refresh ();
 
-                if (upower_device.Online && upower_device.PowerSupply) {
+                if (upower_device.online && upower_device.power_supply) {
                     present = true;
                 }
             } catch (Error e) {
@@ -60,10 +60,10 @@ namespace Power {
 
         private void get_upower_ac_device (Upower upow) {
             try {
-                ObjectPath[] devs = upow.EnumerateDevices ();
+                ObjectPath[] devs = upow.enumerate_devices ();
                 for (int i = 0; i < devs.length; i++) {
                     UpowerDevice dev = Bus.get_proxy_sync (BusType.SYSTEM, DBUS_UPOWER_NAME, devs[i], DBusProxyFlags.GET_INVALIDATED_PROPERTIES);
-                    if (dev.Type == LINE_POWER_TYPE) {
+                    if (dev.device_type == LINE_POWER_TYPE) {
                         upower_device = dev;
                         return;
                     }

@@ -238,7 +238,7 @@ namespace Power {
                 scale.hexpand = true;
                 scale.width_request = 480;
 
-                scale.set_value (screen.Brightness);
+                scale.set_value (screen.brightness);
 
                 scale.value_changed.connect (on_scale_value_changed);
                 (screen as DBusProxy).g_properties_changed.connect (on_screen_properties_changed);
@@ -306,14 +306,14 @@ namespace Power {
         private void on_scale_value_changed () {
             var val = (int) scale.get_value ();
             (screen as DBusProxy).g_properties_changed.disconnect (on_screen_properties_changed);
-            screen.Brightness = val;
+            screen.brightness = val;
             (screen as DBusProxy).g_properties_changed.connect (on_screen_properties_changed);
         }
         
         private void on_screen_properties_changed (Variant changed_properties, string[] invalidated_properties) {
             var changed_brightness = changed_properties.lookup_value("Brightness", new VariantType("i"));
             if (changed_brightness != null) {
-                var val = screen.Brightness;
+                var val = screen.brightness;
                 scale.value_changed.disconnect (on_scale_value_changed);
                 scale.set_value (val);
                 scale.value_changed.connect (on_scale_value_changed);
