@@ -24,36 +24,31 @@ namespace Power {
     [DBus (name = "org.gnome.SettingsDaemon.Power.Screen")]
     interface PowerSettings : GLib.Object {
 #if OLD_GSD
-        public abstract uint GetPercentage () throws IOError;
-        public abstract uint SetPercentage (uint percentage) throws IOError;
+        public abstract uint get_percentage () throws IOError;
+        public abstract uint set_percentage (uint percentage) throws IOError;
 #else
         // use the Brightness property after updateing g-s-d to 3.10 or above
-        public abstract int Brightness {get; set; }
+        public abstract int brightness {get; set; }
 #endif
     }
 
     [DBus (name = "org.freedesktop.UPower.Device")]
     interface UpowerDevice : Object {
-        public signal void Changed ();
-        public abstract void Refresh () throws IOError;
-        public abstract bool Online { owned get; }
-        public abstract bool PowerSupply { owned get; }
-        public abstract bool IsPresent { owned get; }
-        public abstract uint Type { owned get; }
+        public signal void changed ();
+        public abstract void refresh () throws IOError;
+        public abstract bool online { owned get; }
+        public abstract bool power_supply { owned get; }
+        public abstract bool is_present { owned get; }
+        [DBus (name = "Type")]
+        public abstract uint device_type { owned get; }
     }
 
 
     [DBus (name = "org.freedesktop.UPower")]
     interface Upower : Object {
-        public signal void Changed ();
-        public abstract bool OnBattery { owned get; }
-        public abstract bool LowOnBattery { owned get; }
-        public abstract ObjectPath[] EnumerateDevices () throws IOError;
-    }
-
-    [DBus (name = "org.freedesktop.DBus.Properties")]
-    public interface UpowerProperties : Object {
-        public abstract Variant Get (string interface, string propname) throws IOError;
-        public abstract void Set (string interface, string propname, Variant value) throws IOError;
+        public signal void changed ();
+        public abstract bool on_battery { owned get; }
+        public abstract bool low_on_battery { owned get; }
+        public abstract ObjectPath[] enumerate_devices () throws IOError;
     }
 }
