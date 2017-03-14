@@ -36,18 +36,18 @@ namespace Power {
     interface UpowerDevice : Object {
         public signal void Changed ();
         public abstract void Refresh () throws IOError;
-        public abstract bool Online { owned get; private set; }
-        public abstract bool PowerSupply { owned get; private set; }
-        public abstract bool IsPresent { owned get; private set; }
-        public abstract uint Type { owned get; private set; }
+        public abstract bool Online { owned get; }
+        public abstract bool PowerSupply { owned get; }
+        public abstract bool IsPresent { owned get; }
+        public abstract uint Type { owned get; }
     }
 
 
     [DBus (name = "org.freedesktop.UPower")]
     interface Upower : Object {
         public signal void Changed ();
-        public abstract bool OnBattery { owned get; private set; }
-        public abstract bool LowOnBattery { owned get; private set; }
+        public abstract bool OnBattery { owned get; }
+        public abstract bool LowOnBattery { owned get; }
         public abstract ObjectPath[] EnumerateDevices () throws IOError;
     }
 
