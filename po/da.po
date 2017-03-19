@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-20 16:38-0600\n"
-"PO-Revision-Date: 2017-03-14 17:34+0000\n"
+"PO-Revision-Date: 2017-03-17 15:01+0000\n"
 "Last-Translator: scootergrisen <scootergrisen@gmail.com>\n"
 "Language-Team: Danish <da@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-03-15 06:42+0000\n"
-"X-Generator: Launchpad (build 18331)\n"
+"X-Launchpad-Export-Date: 2017-03-19 06:31+0000\n"
+"X-Generator: Launchpad (build 18332)\n"
 "Language: da\n"
 
 #: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:38
@@ -32,7 +32,7 @@ msgstr "Lås"
 
 #: ../src/LidCloseActionComboBox.vala:36
 msgid "Halt"
-msgstr ""
+msgstr "Stop"
 
 #: ../src/LidCloseActionComboBox.vala:37 ../src/ActionComboBox.vala:37
 msgid "Do nothing"
@@ -97,7 +97,7 @@ msgstr "2 timer"
 #. 
 #: ../src/Translations.vala:20
 msgid "Manage power settings "
-msgstr ""
+msgstr "Håndter strømindstillinger "
 
 #: ../src/Translations.vala:21
 msgid "Authentication is required to manage power settings"
@@ -113,15 +113,15 @@ msgstr "Strøm"
 
 #: ../src/Plug.vala:46
 msgid "Configure display brightness, power buttons, and sleep behavior"
-msgstr ""
+msgstr "Konfigurer skærmens lysstyrke, strømknapper og soveopførsel"
 
 #: ../src/Plug.vala:84
 msgid "Sleep button"
-msgstr ""
+msgstr "Soveknap"
 
 #: ../src/Plug.vala:85
 msgid "Power button"
-msgstr ""
+msgstr "Strømknap"
 
 #: ../src/Plug.vala:86
 msgid "Display inactive"
@@ -129,11 +129,11 @@ msgstr "Skærmen er inaktiv"
 
 #: ../src/Plug.vala:87
 msgid "Dim display"
-msgstr ""
+msgstr "Nedton skærm"
 
 #: ../src/Plug.vala:88
 msgid "Lid close"
-msgstr ""
+msgstr "Låg lukning"
 
 #: ../src/Plug.vala:89
 msgid "Display brightness"
@@ -145,15 +145,15 @@ msgstr "Automatisk justering af lysstyrke"
 
 #: ../src/Plug.vala:91
 msgid "Inactive display off"
-msgstr ""
+msgstr "Inaktiv skærm fra"
 
 #: ../src/Plug.vala:92
 msgid "Docked lid close"
-msgstr ""
+msgstr "Dokket låg lukket"
 
 #: ../src/Plug.vala:93
 msgid "Sleep inactive"
-msgstr ""
+msgstr "Sove inaktiv"
 
 #: ../src/Plug.vala:115
 msgid "Plugged In"
@@ -182,11 +182,11 @@ msgstr "Juster lysstyrke automatisk:"
 
 #: ../src/Plug.vala:243
 msgid "When lid is closed:"
-msgstr ""
+msgstr "Når låget er lukket:"
 
 #: ../src/Plug.vala:248
 msgid "When lid is closed with external monitor:"
-msgstr ""
+msgstr "Når låget er lukket med ekstern skærm:"
 
 #: ../src/Plug.vala:284
 msgid "Turn off display when inactive for:"
@@ -202,4 +202,4 @@ msgstr "Sæt i hvile ved inaktivitet i:"
 
 #: ../src/Plug.vala:341
 msgid "Dim display when inactive:"
-msgstr ""
+msgstr "Nedton skærm når inaktiv:"
