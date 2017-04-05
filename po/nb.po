@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-20 16:38-0600\n"
-"PO-Revision-Date: 2016-03-12 15:26+0000\n"
-"Last-Translator: ProsjektX <Unknown>\n"
+"PO-Revision-Date: 2017-04-01 22:56+0000\n"
+"Last-Translator: Allan Nordhøy <comradekingu@gmail.com>\n"
 "Language-Team: Norwegian Bokmal <nb@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-11-21 05:42+0000\n"
-"X-Generator: Launchpad (build 18269)\n"
+"X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
+"X-Generator: Launchpad (build 18335)\n"
 "Language: nb\n"
 
 #: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:38
@@ -28,11 +28,11 @@ msgstr "Slå av"
 
 #: ../src/LidCloseActionComboBox.vala:35
 msgid "Lock"
-msgstr ""
+msgstr "Lås"
 
 #: ../src/LidCloseActionComboBox.vala:36
 msgid "Halt"
-msgstr ""
+msgstr "Stans"
 
 #: ../src/LidCloseActionComboBox.vala:37 ../src/ActionComboBox.vala:37
 msgid "Do nothing"
@@ -40,7 +40,7 @@ msgstr "Ikke gjør noe"
 
 #: ../src/LidCloseActionComboBox.vala:39
 msgid "Not supported"
-msgstr ""
+msgstr "Ikke støttet"
 
 #: ../src/ActionComboBox.vala:39
 msgid "Hibernate"
@@ -97,15 +97,15 @@ msgstr "2 timer"
 #. 
 #: ../src/Translations.vala:20
 msgid "Manage power settings "
-msgstr ""
+msgstr "Behandle strøm-innstillinger "
 
 #: ../src/Translations.vala:21
 msgid "Authentication is required to manage power settings"
-msgstr ""
+msgstr "Godkjennelse kreves for å behandle strøm-innstillinger"
 
 #: ../src/Plug.vala:39
 msgid "You do not have permission to change this"
-msgstr ""
+msgstr "Du har ikke rettigheter til å endre dette"
 
 #: ../src/Plug.vala:45
 msgid "Power"
@@ -117,35 +117,35 @@ msgstr "Konfigurer lysstyrke, strømknapper og strømsparing"
 
 #: ../src/Plug.vala:84
 msgid "Sleep button"
-msgstr ""
+msgstr "Dvale-knapp"
 
 #: ../src/Plug.vala:85
 msgid "Power button"
-msgstr ""
+msgstr "På-knapp"
 
 #: ../src/Plug.vala:86
 msgid "Display inactive"
-msgstr ""
+msgstr "Skjerm inaktiv"
 
 #: ../src/Plug.vala:87
 msgid "Dim display"
-msgstr ""
+msgstr "Senk lysstyrke på skjerm"
 
 #: ../src/Plug.vala:88
 msgid "Lid close"
-msgstr ""
+msgstr "Lukk lokket"
 
 #: ../src/Plug.vala:89
 msgid "Display brightness"
-msgstr ""
+msgstr "Skjermlysstyrke"
 
 #: ../src/Plug.vala:90
 msgid "Automatic brightness adjustment"
-msgstr ""
+msgstr "Automatisk justering av lysstyrke"
 
 #: ../src/Plug.vala:91
 msgid "Inactive display off"
-msgstr ""
+msgstr "Avslag av inaktiv skjerm"
 
 #: ../src/Plug.vala:92
 msgid "Docked lid close"
@@ -165,11 +165,11 @@ msgstr "På batteri"
 
 #: ../src/Plug.vala:169
 msgid "Some changes will not take effect until you restart this computer"
-msgstr ""
+msgstr "Noen endringer trår ikke i kraft før omstart av maskinen"
 
 #: ../src/Plug.vala:187
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "Noen innstillinger krever administrasjonsrettigheter for å endres"
 
 #: ../src/Plug.vala:220
 msgid "Display brightness:"
@@ -177,19 +177,19 @@ msgstr "Lysstyrke på skjerm:"
 
 #: ../src/Plug.vala:225
 msgid "Automatically adjust brightness:"
-msgstr ""
+msgstr "Juster lysstyrken automatisk:"
 
 #: ../src/Plug.vala:243
 msgid "When lid is closed:"
-msgstr ""
+msgstr "Når lokket lukkes:"
 
 #: ../src/Plug.vala:248
 msgid "When lid is closed with external monitor:"
-msgstr ""
+msgstr "Når lokket lukkes med ekstern skjerm:"
 
 #: ../src/Plug.vala:284
 msgid "Turn off display when inactive for:"
-msgstr ""
+msgstr "Skru av skjerm når inaktiv i:"
 
 #: ../src/Plug.vala:292
 msgid "Power button:"
@@ -197,8 +197,8 @@ msgstr "Av/på-knapp"
 
 #: ../src/Plug.vala:325
 msgid "Suspend when inactive for:"
-msgstr ""
+msgstr "Hvilemodus ved inaktivitet i:"
 
 #: ../src/Plug.vala:341
 msgid "Dim display when inactive:"
-msgstr ""
+msgstr "Senk lysstyrke på skjerm når inaktiv i:"
