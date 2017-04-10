@@ -24,9 +24,9 @@ project (pantheon-power)
 #########################################################
 
 include (GNUInstallDirs)
-set (DATADIR "${CMAKE_INSTALL_FULL_LIBDIR}/switchboard")
-set (PKGDATADIR "${DATADIR}/${PLUGCATEGORY}/${CMAKE_PROJECT_NAME}")
-set (GETTEXT_PACKAGE "${CMAKE_PROJECT_NAME}-plug")
+set (DATADIR ${CMAKE_INSTALL_FULL_LIBDIR}/switchboard)
+set (PKGDATADIR ${DATADIR}/${PLUGCATEGORY}/${CMAKE_PROJECT_NAME})
+set (GETTEXT_PACKAGE ${CMAKE_PROJECT_NAME}-plug)
 
 list (APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 
