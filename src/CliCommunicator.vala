@@ -111,8 +111,8 @@ namespace Power {
         }
 
         public void get_state () {
-            string output;
-            int status;
+            string output = "";
+            int status = 255; //no error
 
             try {
                 var cli = "%s/systemd".printf (Build.PKGDATADIR);
@@ -155,7 +155,7 @@ namespace Power {
                                         null,
                                         out status);
 
-                    if (output.contains("succes")) {
+                    if (output.contains("success")) {
 
                         if (lid_dock) {
                             lid_close_dock = new_state;

@@ -36,8 +36,8 @@ namespace systemd {
                 
         if (args[1] == "show") {
             print_supported ();
-            print ("dock:"+systemd.get_current_lid_close_dock_action ()+":\n");
-            print ("lid:"+systemd.get_current_lid_close_action ()+":\n");
+            print ("dock:"+systemd.get_key ("HandleLidSwitchDocked")+":\n");
+            print ("lid:"+systemd.get_key ("HandleLidSwitch")+":\n");
         } else if (args.length > 2) {
             var uid = Posix.getuid ();
 
@@ -47,13 +47,11 @@ namespace systemd {
             }
 
             if (args[1] == "lid_action") {
-                if(systemd.set_lid_close_action (args[2])) {
-                    print ("succes\n");
-                }
+                systemd.set_key ("HandleLidSwitch", args[2]);
+                print ("success\n");
             } else if (args[1] == "dock_action") {
-                if(systemd.set_lid_close_dock_action (args[2])) {
-                    print ("succes\n");
-                } 
+                systemd.set_key ("HandleLidSwitchDocked", args[2]);
+                print ("success\n");
             }
         }
 

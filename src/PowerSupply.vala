@@ -22,7 +22,7 @@ namespace Power {
         private Upower? upower;
         private UpowerDevice? upower_device;
         private const uint LINE_POWER_TYPE = 1;
-        private string dbus_upower_ac_path;
+        private bool dbus_upower_power_supply = false;
         
         public PowerSupply () {
             connect_dbus ();
@@ -30,18 +30,16 @@ namespace Power {
 
         public bool check_present () {
             bool present = false;
-            if (upower_device == null) {
-                return false;
-            }
+            if (dbus_upower_power_supply && upower_device != null) {
+                try {
+                    upower_device.refresh ();
 
-            try {
-                upower_device.refresh ();
-
-                if (upower_device.online && upower_device.power_supply) {
-                    present = true;
+                    if (upower_device.online && upower_device.power_supply) {
+                        present = true;
+                    }
+                } catch (Error e) {
+                    warning ("Error recieved from upower: %s", e.message);
                 }
-            } catch (Error e) {
-                warning ("power supply: %s", e.message);
             }
 
             return present;
@@ -54,8 +52,6 @@ namespace Power {
             } catch (Error e) {
                 critical ("power supply dbus connection to upower fault");
             }
-
-            debug ("power supply path: %s dbus connected", dbus_upower_ac_path);
         }
 
         private void get_upower_ac_device (Upower upow) {
@@ -65,6 +61,7 @@ namespace Power {
                     UpowerDevice dev = Bus.get_proxy_sync (BusType.SYSTEM, DBUS_UPOWER_NAME, devs[i], DBusProxyFlags.GET_INVALIDATED_PROPERTIES);
                     if (dev.device_type == LINE_POWER_TYPE) {
                         upower_device = dev;
+                        dbus_upower_power_supply = true;
                         return;
                     }
                 }
