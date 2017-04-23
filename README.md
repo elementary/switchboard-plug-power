@@ -8,6 +8,7 @@ You'll need the following dependencies:
 * cmake
 * libswitchboard-2.0-dev
 * libgtk-3-dev
+* libpolkit-gobject-1-dev
 * valac
 
 It's recommended to create a clean build environment
