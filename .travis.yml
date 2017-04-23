@@ -4,7 +4,7 @@ services:
  - docker
 
 env:
- - DEPENDENCY_PACKAGES="cmake libswitchboard-2.0-dev libgtk-3-dev libpolkit-gobject-1-dev valac"
+ - DEPENDENCY_PACKAGES="cmake gnome-settings-daemon-dev libswitchboard-2.0-dev libgranite-dev libpolkit-gobject-1-dev valac"
 
 install:
  - docker pull elementary/docker:loki
