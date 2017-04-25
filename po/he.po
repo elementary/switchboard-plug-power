@@ -7,16 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-20 16:38-0600\n"
-"PO-Revision-Date: 2015-09-05 08:41+0000\n"
-"Last-Translator: Uri Damsker  אורי דמסקר <ud1955@gmail.com>\n"
-"Language-Team: Hebrew <he@li.org>\n"
+"POT-Creation-Date: 2017-04-23 07:34-0500\n"
+"PO-Revision-Date: 2017-04-25 21:47+0000\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard"
+"/switchboard-plug-power/he/>\n"
+"Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=plural=n==1 ? 0 : (n>2||n==0) ? 1 : 2;\n"
+"X-Generator: Weblate 2.13-dev\n"
 "X-Launchpad-Export-Date: 2016-11-21 05:42+0000\n"
-"X-Generator: Launchpad (build 18269)\n"
-"Language: he\n"
 
 #: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:38
 msgid "Suspend"
@@ -28,11 +30,11 @@ msgstr "כיבוי"
 
 #: ../src/LidCloseActionComboBox.vala:35
 msgid "Lock"
-msgstr ""
+msgstr "נעילה"
 
 #: ../src/LidCloseActionComboBox.vala:36
 msgid "Halt"
-msgstr ""
+msgstr "עצירה"
 
 #: ../src/LidCloseActionComboBox.vala:37 ../src/ActionComboBox.vala:37
 msgid "Do nothing"
@@ -40,7 +42,7 @@ msgstr "אל תעשה דבר"
 
 #: ../src/LidCloseActionComboBox.vala:39
 msgid "Not supported"
-msgstr ""
+msgstr "אין תמיכה"
 
 #: ../src/ActionComboBox.vala:39
 msgid "Hibernate"
@@ -60,7 +62,7 @@ msgstr "10 דקות"
 
 #: ../src/TimeoutComboBox.vala:45
 msgid "15 min"
-msgstr ""
+msgstr "רבע שעה"
 
 #: ../src/TimeoutComboBox.vala:46
 msgid "30 min"
@@ -68,7 +70,7 @@ msgstr "30 דקות"
 
 #: ../src/TimeoutComboBox.vala:47
 msgid "45 min"
-msgstr ""
+msgstr "45 דקות"
 
 #: ../src/TimeoutComboBox.vala:48
 msgid "1 hour"
@@ -76,7 +78,7 @@ msgstr "שעה"
 
 #: ../src/TimeoutComboBox.vala:49
 msgid "2 hours"
-msgstr ""
+msgstr "שעתיים"
 
 #. //launchpad.net/switchboard-plug-power)
 #. *
@@ -94,111 +96,111 @@ msgstr ""
 #. * License along with this program; if not, write to the
 #. * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
 #. * Boston, MA 02111-1307, USA.
-#. 
+#.
 #: ../src/Translations.vala:20
 msgid "Manage power settings "
-msgstr ""
+msgstr "ניהול הגדרות צריכת חשמל "
 
 #: ../src/Translations.vala:21
 msgid "Authentication is required to manage power settings"
-msgstr ""
+msgstr "נדרש אימות כדי לנהל הגדרות צריכת חשמל"
 
 #: ../src/Plug.vala:39
 msgid "You do not have permission to change this"
-msgstr ""
+msgstr "אין לך הרשאה לשנות את זה"
 
-#: ../src/Plug.vala:45
+#: ../src/Plug.vala:47
 msgid "Power"
 msgstr "כח"
 
-#: ../src/Plug.vala:46
+#: ../src/Plug.vala:48
 msgid "Configure display brightness, power buttons, and sleep behavior"
-msgstr ""
-
-#: ../src/Plug.vala:84
-msgid "Sleep button"
-msgstr ""
-
-#: ../src/Plug.vala:85
-msgid "Power button"
-msgstr ""
-
-#: ../src/Plug.vala:86
-msgid "Display inactive"
-msgstr ""
+msgstr "הגדרת בהירות התצוגה, לחצני הכיבוי וההדלקה והתנהגות השינה"
 
 #: ../src/Plug.vala:87
-msgid "Dim display"
-msgstr ""
+msgid "Sleep button"
+msgstr "כפתור שינה"
 
 #: ../src/Plug.vala:88
-msgid "Lid close"
-msgstr ""
+msgid "Power button"
+msgstr "כפתור ראשי"
 
 #: ../src/Plug.vala:89
-msgid "Display brightness"
-msgstr ""
+msgid "Display inactive"
+msgstr "תצוגה בלתי פעילה"
 
 #: ../src/Plug.vala:90
-msgid "Automatic brightness adjustment"
-msgstr ""
+msgid "Dim display"
+msgstr "עמעום התצוגה"
 
 #: ../src/Plug.vala:91
-msgid "Inactive display off"
-msgstr ""
+msgid "Lid close"
+msgstr "סגירת המסך"
 
 #: ../src/Plug.vala:92
-msgid "Docked lid close"
-msgstr ""
+msgid "Display brightness"
+msgstr "בהירות התצוגה"
 
 #: ../src/Plug.vala:93
-msgid "Sleep inactive"
-msgstr ""
+msgid "Automatic brightness adjustment"
+msgstr "התאמת הבהירות באופן אוטומטי"
 
-#: ../src/Plug.vala:115
+#: ../src/Plug.vala:94
+msgid "Inactive display off"
+msgstr "כיבוי תצוגה בלתי פעילה"
+
+#: ../src/Plug.vala:95
+msgid "Docked lid close"
+msgstr "סגירה של מסך בחיבור לתחנת עגינה"
+
+#: ../src/Plug.vala:96
+msgid "Sleep inactive"
+msgstr "שינה בלתי פעילה"
+
+#: ../src/Plug.vala:118
 msgid "Plugged In"
 msgstr "התחבר"
 
-#: ../src/Plug.vala:124
+#: ../src/Plug.vala:127
 msgid "On Battery"
-msgstr ""
+msgstr "על סוללה"
 
-#: ../src/Plug.vala:169
+#: ../src/Plug.vala:172
 msgid "Some changes will not take effect until you restart this computer"
-msgstr ""
+msgstr "חלק מהשינויים לא ייכנסו לתוקף עד להפעלת המחשב מחדש"
 
-#: ../src/Plug.vala:187
+#: ../src/Plug.vala:190
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "לצורך שינוי של חלק מההגדרות נדרשות הרשאות ניהול"
 
-#: ../src/Plug.vala:220
+#: ../src/Plug.vala:223
 msgid "Display brightness:"
-msgstr ""
+msgstr "בהירות התצוגה:"
 
-#: ../src/Plug.vala:225
+#: ../src/Plug.vala:228
 msgid "Automatically adjust brightness:"
-msgstr ""
+msgstr "התאמת הבהירות אוטומטית:"
 
-#: ../src/Plug.vala:243
+#: ../src/Plug.vala:246
 msgid "When lid is closed:"
-msgstr ""
+msgstr "כאשר המסך סגור:"
 
-#: ../src/Plug.vala:248
+#: ../src/Plug.vala:251
 msgid "When lid is closed with external monitor:"
-msgstr ""
+msgstr "כאשר המסך סגור עם צג חיצוני:"
 
-#: ../src/Plug.vala:284
+#: ../src/Plug.vala:287
 msgid "Turn off display when inactive for:"
-msgstr ""
+msgstr "יש לכבות את התצוגה כאשר אין פעילות במשך:"
 
-#: ../src/Plug.vala:292
+#: ../src/Plug.vala:295
 msgid "Power button:"
 msgstr "כפתור הפעלה:"
 
-#: ../src/Plug.vala:325
-msgid "Suspend when inactive for:"
-msgstr ""
+#: ../src/Plug.vala:328
+msgid "Sleep when inactive for:"
+msgstr "שינה כאשר אין פעילות במשך:"
 
-#: ../src/Plug.vala:341
+#: ../src/Plug.vala:344
 msgid "Dim display when inactive:"
-msgstr ""
+msgstr "לעמעם את התצוגה כאשר אין פעילות במשך:"
