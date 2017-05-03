@@ -8,15 +8,17 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-23 07:34-0500\n"
-"PO-Revision-Date: 2016-12-14 17:52+0000\n"
-"Last-Translator: Davidmp <rbndavid@gmail.com>\n"
-"Language-Team: Catalan <ca@li.org>\n"
+"PO-Revision-Date: 2017-05-03 14:07+0000\n"
+"Last-Translator: David M <rbndavid@gmail.com>\n"
+"Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard"
+"/switchboard-plug-power/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.13-dev\n"
 "X-Launchpad-Export-Date: 2016-12-15 04:52+0000\n"
-"X-Generator: Launchpad (build 18293)\n"
 
 #: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:38
 msgid "Suspend"
@@ -60,7 +62,7 @@ msgstr "10 min"
 
 #: ../src/TimeoutComboBox.vala:45
 msgid "15 min"
-msgstr "15 mins."
+msgstr "15 min"
 
 #: ../src/TimeoutComboBox.vala:46
 msgid "30 min"
@@ -68,7 +70,7 @@ msgstr "30 min"
 
 #: ../src/TimeoutComboBox.vala:47
 msgid "45 min"
-msgstr "45 mins."
+msgstr "45 min"
 
 #: ../src/TimeoutComboBox.vala:48
 msgid "1 hour"
@@ -105,7 +107,7 @@ msgstr "Cal autenticació per gestionar els paràmetres de l'energia"
 
 #: ../src/Plug.vala:39
 msgid "You do not have permission to change this"
-msgstr "No teniu permís per canviar això."
+msgstr "No teniu permís per canviar-ho"
 
 #: ../src/Plug.vala:47
 msgid "Power"
@@ -115,7 +117,7 @@ msgstr "Energia"
 msgid "Configure display brightness, power buttons, and sleep behavior"
 msgstr ""
 "Configureu la brillantor de la pantalla, els botons d'engegar i el "
-"comportament de l'aturada temporal."
+"comportament de l'aturada temporal"
 
 #: ../src/Plug.vala:87
 msgid "Sleep button"
@@ -167,16 +169,16 @@ msgstr "Amb la bateria"
 
 #: ../src/Plug.vala:172
 msgid "Some changes will not take effect until you restart this computer"
-msgstr "Alguns canvis no tindran efecte fins que reinicieu l'ordinador."
+msgstr "Alguns canvis no tindran efecte fins que reinicieu l'ordinador"
 
 #: ../src/Plug.vala:190
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
-"Alguns paràmetres necessiten permisos d'administrador per ser modificats."
+"Alguns paràmetres necessiten permisos d'administrador per ser modificats"
 
 #: ../src/Plug.vala:223
 msgid "Display brightness:"
-msgstr "Brillantor de la pantalla"
+msgstr "Brillantor de la pantalla:"
 
 #: ../src/Plug.vala:228
 msgid "Automatically adjust brightness:"
@@ -199,9 +201,8 @@ msgid "Power button:"
 msgstr "Botó d'engegada:"
 
 #: ../src/Plug.vala:328
-#, fuzzy
 msgid "Sleep when inactive for:"
-msgstr "Atura temporalment quan estigui inactiu durant:"
+msgstr "Atura temporalment quan estigui inactiu durant..."
 
 #: ../src/Plug.vala:344
 msgid "Dim display when inactive:"
