@@ -8,15 +8,17 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-23 07:34-0500\n"
-"PO-Revision-Date: 2017-01-08 04:59+0000\n"
-"Last-Translator: Félix Brezo <felixbrezo@gmail.com>\n"
-"Language-Team: Spanish <es@li.org>\n"
+"PO-Revision-Date: 2017-05-04 15:47+0000\n"
+"Last-Translator: Daniel Foré <daniel@elementary.io>\n"
+"Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard"
+"/switchboard-plug-power/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.13-dev\n"
 "X-Launchpad-Export-Date: 2017-01-09 05:39+0000\n"
-"X-Generator: Launchpad (build 18302)\n"
 
 #: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:38
 msgid "Suspend"
@@ -188,7 +190,7 @@ msgstr "Cuando la tapa está cerrada:"
 
 #: ../src/Plug.vala:251
 msgid "When lid is closed with external monitor:"
-msgstr "Cuanda la tapa está cerrada conectada a un monitor externo"
+msgstr "Cuanda la tapa está cerrada conectada a un monitor externo:"
 
 #: ../src/Plug.vala:287
 msgid "Turn off display when inactive for:"
