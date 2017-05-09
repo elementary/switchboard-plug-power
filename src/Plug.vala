@@ -11,10 +11,10 @@
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * General Public License for more details.
  *
- * You should have received a copy of the GNU General Public
- * License along with this program; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
- * Boston, MA 02111-1307, USA.
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor,
+ * Boston, MA  02110-1301, USA.
  */
 
 namespace Power {
@@ -127,7 +127,7 @@ namespace Power {
                 stack.add_titled (battery_grid, "battery", _("On Battery"));
 
                 var left_sep = new Gtk.Separator (Gtk.Orientation.HORIZONTAL);
-                left_sep.hexpand = true;    
+                left_sep.hexpand = true;
 
                 var right_sep = new Gtk.Separator (Gtk.Orientation.HORIZONTAL);
                 right_sep.hexpand = true;
@@ -302,14 +302,14 @@ namespace Power {
 
             return main_grid;
         }
-        
+
         private void on_scale_value_changed () {
             var val = (int) scale.get_value ();
             (screen as DBusProxy).g_properties_changed.disconnect (on_screen_properties_changed);
             screen.brightness = val;
             (screen as DBusProxy).g_properties_changed.connect (on_screen_properties_changed);
         }
-        
+
         private void on_screen_properties_changed (Variant changed_properties, string[] invalidated_properties) {
             var changed_brightness = changed_properties.lookup_value("Brightness", new VariantType("i"));
             if (changed_brightness != null) {
@@ -361,7 +361,7 @@ namespace Power {
 
         private bool laptop_detect () {
             string? laptop_detect_executable = Environment.find_program_in_path ("laptop-detect");
-            if (laptop_detect_executable == null || 
+            if (laptop_detect_executable == null ||
                 !FileUtils.test (laptop_detect_executable, FileTest.IS_EXECUTABLE) ||
                 !FileUtils.test (LAPTOP_DETECT_BINARY, FileTest.IS_EXECUTABLE)) {
                 warning ("Laptop detect not found");

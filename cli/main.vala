@@ -11,10 +11,10 @@
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * General Public License for more details.
  *
- * You should have received a copy of the GNU General Public
- * License along with this program; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
- * Boston, MA 02111-1307, USA.
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor,
+ * Boston, MA  02110-1301, USA.
  */
 
 namespace systemd {
@@ -23,7 +23,7 @@ namespace systemd {
 
     public static int main (string[] args) {
         systemd = new Systemd ();
-        
+
         if (!systemd.present) {
             printerr ("Systemd is not present\n");
             return Posix.EXIT_FAILURE;
@@ -33,7 +33,7 @@ namespace systemd {
             printerr ("command are needed: show / lid_action <action> / dock_action <action>\n");
             return Posix.EXIT_FAILURE;
         }
-                
+
         if (args[1] == "show") {
             print_supported ();
             print ("dock:"+systemd.get_key ("HandleLidSwitchDocked")+":\n");
