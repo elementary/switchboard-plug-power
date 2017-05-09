@@ -11,10 +11,10 @@
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * General Public License for more details.
  *
- * You should have received a copy of the GNU General Public
- * License along with this program; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
- * Boston, MA 02111-1307, USA.
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor,
+ * Boston, MA  02110-1301, USA.
  */
 
 namespace Power {
@@ -25,7 +25,7 @@ namespace Power {
         public Action lid_close_dock { get; private set; }
 
         public signal void changed ();
- 
+
         public enum Action {
             IGNORE,
             POWEROFF,
@@ -85,7 +85,7 @@ namespace Power {
                 default:
                     break;
             }
-            
+
             return action;
         }
 
@@ -101,7 +101,7 @@ namespace Power {
             if (arg[1].contains("dock")) {
                 debug ("lid_close_dock:%s",arg[2]);
                 lid_close_dock = string_to_action (arg[2]);
-            } 
+            }
 
             if (arg[3].contains("lid")) {
                 debug ("lid_close:%s",arg[4]);
@@ -116,7 +116,7 @@ namespace Power {
 
             try {
                 var cli = "%s/systemd".printf (Build.PKGDATADIR);
-                Process.spawn_sync (null, {cli, "show"}, 
+                Process.spawn_sync (null, {cli, "show"},
                                     Environ.get (),
                                     SpawnFlags.SEARCH_PATH,
                                     null,
@@ -147,7 +147,7 @@ namespace Power {
                 try {
                     string cli = "%s/systemd".printf (Build.PKGDATADIR);
                     debug (cli + lid_keyword + arg);
-                    Process.spawn_sync (null, {"pkexec", cli, lid_keyword, arg}, 
+                    Process.spawn_sync (null, {"pkexec", cli, lid_keyword, arg},
                                         Environ.get (),
                                         SpawnFlags.SEARCH_PATH,
                                         null,
@@ -166,7 +166,7 @@ namespace Power {
                         changed ();
                     }  else {
                         warning ("setting new state not succeded output:%s", output);
-                    }                      
+                    }
                 } catch (Error e) {
                     warning (e.message);
                 }
