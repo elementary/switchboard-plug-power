@@ -8,15 +8,17 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-23 07:34-0500\n"
-"PO-Revision-Date: 2016-07-17 14:07+0000\n"
-"Last-Translator: kay van der Zander <Unknown>\n"
-"Language-Team: Dutch <nl@li.org>\n"
+"PO-Revision-Date: 2017-05-12 16:03+0000\n"
+"Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
+"Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard"
+"/switchboard-plug-power/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.13-dev\n"
 "X-Launchpad-Export-Date: 2016-11-21 05:42+0000\n"
-"X-Generator: Launchpad (build 18269)\n"
 
 #: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:38
 msgid "Suspend"
@@ -172,9 +174,7 @@ msgstr ""
 
 #: ../src/Plug.vala:190
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
-"Voor sommige instellingen zijn administrator bevoegdheden nodig om ze te "
-"verranderen"
+msgstr "Sommige instellingen vereisen beheerdersrechten om te worden gewijzigd"
 
 #: ../src/Plug.vala:223
 msgid "Display brightness:"
@@ -186,7 +186,7 @@ msgstr "Pas de helderheid automatisch aan:"
 
 #: ../src/Plug.vala:246
 msgid "When lid is closed:"
-msgstr "wanneer laptop is dicht geklapt"
+msgstr "Wanneer het deksel dichtgeklapt is:"
 
 #: ../src/Plug.vala:251
 msgid "When lid is closed with external monitor:"
@@ -201,9 +201,8 @@ msgid "Power button:"
 msgstr "Aan-/uit-knop:"
 
 #: ../src/Plug.vala:328
-#, fuzzy
 msgid "Sleep when inactive for:"
-msgstr "Schakel het scherm uit wanneer het inactief is voor:"
+msgstr "Zet computer in slaapstand wanneer het inactief is voor:"
 
 #: ../src/Plug.vala:344
 msgid "Dim display when inactive:"
