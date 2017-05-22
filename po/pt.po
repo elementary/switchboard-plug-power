@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-23 07:34-0500\n"
-"PO-Revision-Date: 2017-05-21 19:45+0000\n"
+"PO-Revision-Date: 2017-05-22 08:24+0000\n"
 "Last-Translator: Luís Lima <geral@liqensoft.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-power/pt/>\n"
@@ -107,7 +107,7 @@ msgstr "É necessário autenticação para modificar as definições de energia"
 
 #: ../src/Plug.vala:39
 msgid "You do not have permission to change this"
-msgstr "Não tem permissão para modificar esta opção"
+msgstr "Não tem permissão para modificar isto"
 
 #: ../src/Plug.vala:47
 msgid "Power"
