@@ -17,5 +17,7 @@
  * Boston, MA  02110-1301, USA.
  */
 
-_("Manage power settings ");
-_("Authentication is required to manage power settings");
+namespace Translations {
+    const string pow1 = _("Manage power settings ");
+    const string pow2 = _("Authentication is required to manage power settings");
+}
