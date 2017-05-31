@@ -43,10 +43,12 @@ namespace Power {
         construct {
             settings = new GLib.Settings ("org.gnome.settings-daemon.plugins.power");
             pantheon_dpms_settings = new GLib.Settings ("org.pantheon.dpms");
+
             battery = new Battery ();
             power_supply = new PowerSupply ();
             cli_communicator = new CliCommunicator ();
-            connect_dbus ();            
+
+            connect_to_settings_daemon ();            
         }
 
         public Plug () {
@@ -121,10 +123,15 @@ namespace Power {
         }
 
         public override void shown () {
+            var stack = stack_switcher.get_stack ();
+            if (stack == null) {
+                return;
+            }
+
             if (battery.check_present ()) {
-                stack_switcher.get_stack ().visible_child_name = "battery";
+                stack.visible_child_name = "battery";
             } else {
-                stack_switcher.get_stack ().visible_child_name = "ac";
+                stack.visible_child_name = "ac";
             }
         }
 
@@ -152,7 +159,7 @@ namespace Power {
             return search_results;;
         }
 
-        private void connect_dbus () {
+        private void connect_to_settings_daemon () {
             try {
                 screen = Bus.get_proxy_sync (BusType.SESSION, SETTINGS_DAEMON_NAME,
                     SETTINGS_DAEMON_PATH, DBusProxyFlags.GET_INVALIDATED_PROPERTIES);
@@ -194,6 +201,7 @@ namespace Power {
             content_infobar.add (label_infobar);
 
             if (laptop_detect () || battery.laptop) {
+                permission_infobar.no_show_all = false;
                 permission_infobar.show_all ();
             } else {
                 permission_infobar.no_show_all = true;
@@ -339,7 +347,7 @@ namespace Power {
                 type = "ac";
             }
 
-            var scale_settings = @"sleep-inactive-$type-timeout";
+            var scale_settings = @"sleep-inactive-%s-timeout".printf (type);
             var sleep_timeout = new TimeoutComboBox (settings, scale_settings);
 
             grid.attach (sleep_timeout_label, 0, 1, 1, 1);
@@ -356,7 +364,6 @@ namespace Power {
 
                 grid.attach (dim_label, 0, 0, 1, 1);
                 grid.attach (dim_switch, 1, 0, 1, 1);
-
             }
 
             return grid;
