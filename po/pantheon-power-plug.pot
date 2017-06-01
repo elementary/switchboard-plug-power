@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-23 07:34-0500\n"
+"POT-Creation-Date: 2017-06-01 12:28-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,42 +41,6 @@ msgstr ""
 msgid "Not supported"
 msgstr ""
 
-#: ../src/ActionComboBox.vala:39
-msgid "Hibernate"
-msgstr ""
-
-#: ../src/TimeoutComboBox.vala:42
-msgid "Never"
-msgstr ""
-
-#: ../src/TimeoutComboBox.vala:43
-msgid "5 min"
-msgstr ""
-
-#: ../src/TimeoutComboBox.vala:44
-msgid "10 min"
-msgstr ""
-
-#: ../src/TimeoutComboBox.vala:45
-msgid "15 min"
-msgstr ""
-
-#: ../src/TimeoutComboBox.vala:46
-msgid "30 min"
-msgstr ""
-
-#: ../src/TimeoutComboBox.vala:47
-msgid "45 min"
-msgstr ""
-
-#: ../src/TimeoutComboBox.vala:48
-msgid "1 hour"
-msgstr ""
-
-#: ../src/TimeoutComboBox.vala:49
-msgid "2 hours"
-msgstr ""
-
 #. //launchpad.net/switchboard-plug-power)
 #. *
 #. * This program is free software; you can redistribute it and/or
@@ -89,10 +53,10 @@ msgstr ""
 #. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
 #. * General Public License for more details.
 #. *
-#. * You should have received a copy of the GNU General Public
-#. * License along with this program; if not, write to the
-#. * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
-#. * Boston, MA 02111-1307, USA.
+#. * You should have received a copy of the GNU General Public License
+#. * along with this program; if not, write to the Free Software
+#. * Foundation, Inc., 51 Franklin Street, Fifth Floor,
+#. * Boston, MA  02110-1301, USA.
 #.
 #: ../src/Translations.vala:20
 msgid "Manage power settings "
@@ -200,4 +164,40 @@ msgstr ""
 
 #: ../src/Plug.vala:344
 msgid "Dim display when inactive:"
+msgstr ""
+
+#: ../src/ActionComboBox.vala:39
+msgid "Hibernate"
+msgstr ""
+
+#: ../src/TimeoutComboBox.vala:42
+msgid "Never"
+msgstr ""
+
+#: ../src/TimeoutComboBox.vala:43
+msgid "5 min"
+msgstr ""
+
+#: ../src/TimeoutComboBox.vala:44
+msgid "10 min"
+msgstr ""
+
+#: ../src/TimeoutComboBox.vala:45
+msgid "15 min"
+msgstr ""
+
+#: ../src/TimeoutComboBox.vala:46
+msgid "30 min"
+msgstr ""
+
+#: ../src/TimeoutComboBox.vala:47
+msgid "45 min"
+msgstr ""
+
+#: ../src/TimeoutComboBox.vala:48
+msgid "1 hour"
+msgstr ""
+
+#: ../src/TimeoutComboBox.vala:49
+msgid "2 hours"
 msgstr ""
