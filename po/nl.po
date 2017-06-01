@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-23 07:34-0500\n"
-"PO-Revision-Date: 2017-06-01 20:17+0000\n"
-"Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
+"PO-Revision-Date: 2017-06-01 20:18+0000\n"
+"Last-Translator: Kay van der Zander <kay20@hotmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-power/nl/>\n"
 "Language: nl\n"
@@ -128,19 +128,19 @@ msgstr "Stroomknop"
 
 #: ../src/Plug.vala:89
 msgid "Display inactive"
-msgstr ""
+msgstr "Scherm inactief"
 
 #: ../src/Plug.vala:90
 msgid "Dim display"
-msgstr ""
+msgstr "Verduister beeldscherm"
 
 #: ../src/Plug.vala:91
 msgid "Lid close"
-msgstr ""
+msgstr "Deksel gesloten"
 
 #: ../src/Plug.vala:92
 msgid "Display brightness"
-msgstr ""
+msgstr "Beeldscherm helderheid"
 
 #: ../src/Plug.vala:93
 msgid "Automatic brightness adjustment"
