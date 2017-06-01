@@ -6,20 +6,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-23 07:34-0500\n"
-"PO-Revision-Date: 2017-05-31 21:23+0000\n"
-"Last-Translator: Jernej Virag <jernej@virag.si>\n"
-"Language-Team: Slovenian <https://l10n.elementary.io/projects/switchboard"
-"/switchboard-plug-power/sl/>\n"
-"Language: sl\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2016-11-20 16:38-0600\n"
+"PO-Revision-Date: 2016-12-10 08:14+0000\n"
+"Last-Translator: Jernej Virag <Unknown>\n"
+"Language-Team: Slovenian <sl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
-"n%100==4 ? 2 : 3;\n"
-"X-Generator: Weblate 2.14\n"
 "X-Launchpad-Export-Date: 2016-12-11 05:17+0000\n"
+"X-Generator: Launchpad (build 18292)\n"
 
 #: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:38
 msgid "Suspend"
@@ -97,7 +93,7 @@ msgstr "2 urah"
 #. * License along with this program; if not, write to the
 #. * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
 #. * Boston, MA 02111-1307, USA.
-#.
+#. 
 #: ../src/Translations.vala:20
 msgid "Manage power settings "
 msgstr "Upravljajte nastavitve napajanja "
@@ -110,166 +106,98 @@ msgstr "Skrbniške pravice so potrebne za spreminjanje vseh nastavitev"
 msgid "You do not have permission to change this"
 msgstr "Nimate dovoljenja za spreminjanje teh nastavitev"
 
-#: ../src/Plug.vala:47
+#: ../src/Plug.vala:45
 msgid "Power"
 msgstr "Napajanje"
 
-#: ../src/Plug.vala:48
+#: ../src/Plug.vala:46
 msgid "Configure display brightness, power buttons, and sleep behavior"
 msgstr "Nastavitve svetlosti, gumbov za napajanje in spanja"
 
-#: ../src/Plug.vala:87
+#: ../src/Plug.vala:84
 msgid "Sleep button"
 msgstr "Gumb za spanje"
 
-#: ../src/Plug.vala:88
+#: ../src/Plug.vala:85
 msgid "Power button"
 msgstr "Gumb za vklop"
 
-#: ../src/Plug.vala:89
+#: ../src/Plug.vala:86
 msgid "Display inactive"
 msgstr "Zaslon neaktiven"
 
-#: ../src/Plug.vala:90
+#: ../src/Plug.vala:87
 msgid "Dim display"
 msgstr "Zatemni zaslon"
 
-#: ../src/Plug.vala:91
+#: ../src/Plug.vala:88
 msgid "Lid close"
 msgstr "Zaprtje pokrova"
 
-#: ../src/Plug.vala:92
+#: ../src/Plug.vala:89
 msgid "Display brightness"
 msgstr "Svetlost zaslona"
 
-#: ../src/Plug.vala:93
+#: ../src/Plug.vala:90
 msgid "Automatic brightness adjustment"
 msgstr "Samodejno nastavljanje svetlosti"
 
-#: ../src/Plug.vala:94
+#: ../src/Plug.vala:91
 msgid "Inactive display off"
 msgstr "Izklop neaktivnega zaslona"
 
-#: ../src/Plug.vala:95
+#: ../src/Plug.vala:92
 msgid "Docked lid close"
-msgstr "Zaprtje pokrova na postaji"
+msgstr "Zaprtje pokrova na postaji:"
 
-#: ../src/Plug.vala:96
+#: ../src/Plug.vala:93
 msgid "Sleep inactive"
 msgstr "Spanje neaktivno"
 
-#: ../src/Plug.vala:118
+#: ../src/Plug.vala:115
 msgid "Plugged In"
 msgstr "Priključeno"
 
-#: ../src/Plug.vala:127
+#: ../src/Plug.vala:124
 msgid "On Battery"
 msgstr "Na bateriji"
 
-#: ../src/Plug.vala:172
+#: ../src/Plug.vala:169
 msgid "Some changes will not take effect until you restart this computer"
-msgstr "Nekatere spremembe bodo vidne samo po ponovnem zagonu sistema"
+msgstr "Nekatere spremembe bodo vidne samo po ponovnem zagonu sistema."
 
-#: ../src/Plug.vala:190
+#: ../src/Plug.vala:187
 msgid "Some settings require administrator rights to be changed"
 msgstr "Za spreminjanje nekaterih nastavitev so potrebne skrbniške pravice"
 
-#: ../src/Plug.vala:223
+#: ../src/Plug.vala:220
 msgid "Display brightness:"
-msgstr "Svetlost zaslona:"
+msgstr "Svetlost zaslona"
 
-#: ../src/Plug.vala:228
+#: ../src/Plug.vala:225
 msgid "Automatically adjust brightness:"
 msgstr "Samodejno prilagajanje svetlosti:"
 
-#: ../src/Plug.vala:246
+#: ../src/Plug.vala:243
 msgid "When lid is closed:"
 msgstr "Ko je pokrov zaprt:"
 
-#: ../src/Plug.vala:251
+#: ../src/Plug.vala:248
 msgid "When lid is closed with external monitor:"
 msgstr "Ko je pokrov zaprt, zunanji zaslon:"
 
-#: ../src/Plug.vala:287
+#: ../src/Plug.vala:284
 msgid "Turn off display when inactive for:"
 msgstr "Ob nedejavnosti izklopi zaslon po:"
 
-#: ../src/Plug.vala:295
+#: ../src/Plug.vala:292
 msgid "Power button:"
 msgstr "Gumb za vklop:"
 
-#: ../src/Plug.vala:328
-msgid "Sleep when inactive for:"
+#: ../src/Plug.vala:325
+msgid "Suspend when inactive for:"
 msgstr "Pošlji v pripravljenost ob nedejavnosti:"
 
-#: ../src/Plug.vala:344
+#: ../src/Plug.vala:341
 msgid "Dim display when inactive:"
 msgstr "Zatemni zaslon pri nedejavnosti:"
-
-#: ../src/Translations.vala:21
-msgid "Manage power settings "
-msgstr "Upravljajte nastavitve napajanja "
-
-#: ../src/Translations.vala:22
-msgid "Authentication is required to manage power settings"
-msgstr "Skrbniške pravice so potrebne za spreminjanje vseh nastavitev"
-
-#: ../src/TimeoutComboBox.vala:42
-msgid "Never"
-msgstr "Nikoli"
-
-#: ../src/TimeoutComboBox.vala:43
-msgid "5 min"
-msgstr "5 minutah"
-
-#: ../src/TimeoutComboBox.vala:44
-msgid "10 min"
-msgstr "10 minutah"
-
-#: ../src/TimeoutComboBox.vala:45
-msgid "15 min"
-msgstr "15 minutah"
-
-#: ../src/TimeoutComboBox.vala:46
-msgid "30 min"
-msgstr "30 minutah"
-
-#: ../src/TimeoutComboBox.vala:47
-msgid "45 min"
-msgstr "45 minutah"
-
-#: ../src/TimeoutComboBox.vala:48
-msgid "1 hour"
-msgstr "1 uri"
-
-#: ../src/TimeoutComboBox.vala:49
-msgid "2 hours"
-msgstr "2 urah"
-
-#: ../src/ActionComboBox.vala:37 ../src/LidCloseActionComboBox.vala:37
-msgid "Do nothing"
-msgstr "Ne stori ničesar"
-
-#: ../src/ActionComboBox.vala:38 ../src/LidCloseActionComboBox.vala:33
-msgid "Suspend"
-msgstr "V pripravljenost"
-
-#: ../src/ActionComboBox.vala:39
-msgid "Hibernate"
-msgstr "V mirovanje"
-
-#: ../src/LidCloseActionComboBox.vala:34
-msgid "Shutdown"
-msgstr "Ugasni"
-
-#: ../src/LidCloseActionComboBox.vala:35
-msgid "Lock"
-msgstr "Zakleni"
-
-#: ../src/LidCloseActionComboBox.vala:36
-msgid "Halt"
-msgstr "Izklop"
-
-#: ../src/LidCloseActionComboBox.vala:39
-msgid "Not supported"
-msgstr "Ni podprto"

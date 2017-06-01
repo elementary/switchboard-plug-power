@@ -6,19 +6,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-23 07:34-0500\n"
-"PO-Revision-Date: 2017-04-22 07:30+0000\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2016-11-20 16:38-0600\n"
+"PO-Revision-Date: 2016-11-22 19:27+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
-"Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
-"switchboard-plug-power/ko/>\n"
-"Language: ko\n"
+"Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.13-dev\n"
 "X-Launchpad-Export-Date: 2016-11-23 06:29+0000\n"
+"X-Generator: Launchpad (build 18269)\n"
 
 #: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:38
 msgid "Suspend"
@@ -96,7 +93,7 @@ msgstr "2 시간"
 #. * License along with this program; if not, write to the
 #. * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
 #. * Boston, MA 02111-1307, USA.
-#.
+#. 
 #: ../src/Translations.vala:20
 msgid "Manage power settings "
 msgstr "전원 설정 관리 "
@@ -109,167 +106,98 @@ msgstr "전원 설정 관리에는 인증이 필요합니다"
 msgid "You do not have permission to change this"
 msgstr "이 설정을 바꿀 권한이 없습니다"
 
-#: ../src/Plug.vala:47
+#: ../src/Plug.vala:45
 msgid "Power"
 msgstr "전력"
 
-#: ../src/Plug.vala:48
+#: ../src/Plug.vala:46
 msgid "Configure display brightness, power buttons, and sleep behavior"
 msgstr "디스플레이 밝기, 전원 버튼, 잠자기 작동 방식 설정하기"
 
-#: ../src/Plug.vala:87
+#: ../src/Plug.vala:84
 msgid "Sleep button"
 msgstr "잠자기 버튼"
 
-#: ../src/Plug.vala:88
+#: ../src/Plug.vala:85
 msgid "Power button"
 msgstr "전원 버튼"
 
-#: ../src/Plug.vala:89
+#: ../src/Plug.vala:86
 msgid "Display inactive"
 msgstr "화면 끄기"
 
-#: ../src/Plug.vala:90
+#: ../src/Plug.vala:87
 msgid "Dim display"
 msgstr "화면 어둡게하기"
 
-#: ../src/Plug.vala:91
+#: ../src/Plug.vala:88
 msgid "Lid close"
 msgstr "덮개 덮기"
 
-#: ../src/Plug.vala:92
+#: ../src/Plug.vala:89
 msgid "Display brightness"
 msgstr "화면 밝기"
 
-#: ../src/Plug.vala:93
+#: ../src/Plug.vala:90
 msgid "Automatic brightness adjustment"
 msgstr "화면 밝기 자동 조정"
 
-#: ../src/Plug.vala:94
+#: ../src/Plug.vala:91
 msgid "Inactive display off"
 msgstr "사용하지 않는 디스플레이 끄기"
 
-#: ../src/Plug.vala:95
+#: ../src/Plug.vala:92
 msgid "Docked lid close"
 msgstr "고정 덮개 닫기"
 
-#: ../src/Plug.vala:96
+#: ../src/Plug.vala:93
 msgid "Sleep inactive"
 msgstr "사용하지 않을 땐 잠자기"
 
-#: ../src/Plug.vala:118
+#: ../src/Plug.vala:115
 msgid "Plugged In"
 msgstr "연결됨"
 
-#: ../src/Plug.vala:127
+#: ../src/Plug.vala:124
 msgid "On Battery"
 msgstr "배터리 사용 시"
 
-#: ../src/Plug.vala:172
+#: ../src/Plug.vala:169
 msgid "Some changes will not take effect until you restart this computer"
-msgstr "몇 가지 바뀐 설정은 이 컴퓨터를 다시 시작해야 적용됩니다"
+msgstr "몇 가지 바뀐 설정은 이 컴퓨터를 다시 시작해야 적용됩니다."
 
-#: ../src/Plug.vala:190
+#: ../src/Plug.vala:187
 msgid "Some settings require administrator rights to be changed"
-msgstr "일부 설정은 바꾸려면 관리자 권한이 있어야 합니다"
+msgstr "일부 설정은 변경할 때 관리자 권한이 필요합니다."
 
-#: ../src/Plug.vala:223
+#: ../src/Plug.vala:220
 msgid "Display brightness:"
 msgstr "화면 밝기:"
 
-#: ../src/Plug.vala:228
+#: ../src/Plug.vala:225
 msgid "Automatically adjust brightness:"
 msgstr "밝기 자동 조절:"
 
-#: ../src/Plug.vala:246
+#: ../src/Plug.vala:243
 msgid "When lid is closed:"
 msgstr "덮개가 닫혀있을 때:"
 
-#: ../src/Plug.vala:251
+#: ../src/Plug.vala:248
 msgid "When lid is closed with external monitor:"
 msgstr "외부 모니터에 연결된 덮개가 닫혀있을 때:"
 
-#: ../src/Plug.vala:287
+#: ../src/Plug.vala:284
 msgid "Turn off display when inactive for:"
 msgstr "다음 시간 동안 활동이 없으면 화면 끄기:"
 
-#: ../src/Plug.vala:295
+#: ../src/Plug.vala:292
 msgid "Power button:"
 msgstr "전원 버튼:"
 
-#: ../src/Plug.vala:328
-#, fuzzy
-msgid "Sleep when inactive for:"
+#: ../src/Plug.vala:325
+msgid "Suspend when inactive for:"
 msgstr "다음 시간 동안 활동이 없으면 잠자기:"
 
-#: ../src/Plug.vala:344
+#: ../src/Plug.vala:341
 msgid "Dim display when inactive:"
 msgstr "화면 점점 흐리게:"
-
-#: ../src/Translations.vala:21
-msgid "Manage power settings "
-msgstr "전원 설정 관리 "
-
-#: ../src/Translations.vala:22
-msgid "Authentication is required to manage power settings"
-msgstr "전원 설정 관리에는 인증이 필요합니다"
-
-#: ../src/TimeoutComboBox.vala:42
-msgid "Never"
-msgstr "안 함"
-
-#: ../src/TimeoutComboBox.vala:43
-msgid "5 min"
-msgstr "5 분"
-
-#: ../src/TimeoutComboBox.vala:44
-msgid "10 min"
-msgstr "10 분"
-
-#: ../src/TimeoutComboBox.vala:45
-msgid "15 min"
-msgstr "15 분"
-
-#: ../src/TimeoutComboBox.vala:46
-msgid "30 min"
-msgstr "30 분"
-
-#: ../src/TimeoutComboBox.vala:47
-msgid "45 min"
-msgstr "45 분"
-
-#: ../src/TimeoutComboBox.vala:48
-msgid "1 hour"
-msgstr "1 시간"
-
-#: ../src/TimeoutComboBox.vala:49
-msgid "2 hours"
-msgstr "2 시간"
-
-#: ../src/ActionComboBox.vala:37 ../src/LidCloseActionComboBox.vala:37
-msgid "Do nothing"
-msgstr "아무것도 안 함"
-
-#: ../src/ActionComboBox.vala:38 ../src/LidCloseActionComboBox.vala:33
-msgid "Suspend"
-msgstr "절전"
-
-#: ../src/ActionComboBox.vala:39
-msgid "Hibernate"
-msgstr "잠자기"
-
-#: ../src/LidCloseActionComboBox.vala:34
-msgid "Shutdown"
-msgstr "시스템 종료"
-
-#: ../src/LidCloseActionComboBox.vala:35
-msgid "Lock"
-msgstr "잠그기"
-
-#: ../src/LidCloseActionComboBox.vala:36
-msgid "Halt"
-msgstr "컴퓨터 끄기"
-
-#: ../src/LidCloseActionComboBox.vala:39
-msgid "Not supported"
-msgstr "지원하지 않음"

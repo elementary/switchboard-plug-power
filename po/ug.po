@@ -6,17 +6,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-23 07:34-0500\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2016-11-20 16:38-0600\n"
 "PO-Revision-Date: 2016-12-10 05:00+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
-"Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2016-12-11 05:17+0000\n"
 "X-Generator: Launchpad (build 18292)\n"
+"Language: ug\n"
 
 #: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:38
 msgid "Suspend"
@@ -94,7 +94,7 @@ msgstr "2سائەت"
 #. * License along with this program; if not, write to the
 #. * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
 #. * Boston, MA 02111-1307, USA.
-#.
+#. 
 #: ../src/Translations.vala:20
 msgid "Manage power settings "
 msgstr "توك مەنبەسى تەڭشىكىنى باشقۇرۇش "
@@ -107,167 +107,100 @@ msgstr "توك مەنبەسى تەڭشىكىنى باشقۇرۇش ئۈچۈن س�
 msgid "You do not have permission to change this"
 msgstr "سىزنىڭ بۇنى ئۆزگەرتىش سالاھىيىتىڭىز يوق"
 
-#: ../src/Plug.vala:47
+#: ../src/Plug.vala:45
 msgid "Power"
 msgstr "توك مەنبەسى"
 
-#: ../src/Plug.vala:48
+#: ../src/Plug.vala:46
 msgid "Configure display brightness, power buttons, and sleep behavior"
-msgstr "ئىكران يورۇقلۇقىنى، توك مەنبەسى كۇنۇپكىسىنى ۋە ئۇخلىتىش شەكلىنى تەڭشەش"
+msgstr ""
+"ئىكران يورۇقلۇقىنى، توك مەنبەسى كۇنۇپكىسىنى ۋە ئۇخلىتىش شەكلىنى تەڭشەش"
 
-#: ../src/Plug.vala:87
+#: ../src/Plug.vala:84
 msgid "Sleep button"
 msgstr "ئۇخلىتىش كۇنۇپكىسى"
 
-#: ../src/Plug.vala:88
+#: ../src/Plug.vala:85
 msgid "Power button"
 msgstr "توك مەنبەسى كۇنۇپكىسى"
 
-#: ../src/Plug.vala:89
+#: ../src/Plug.vala:86
 msgid "Display inactive"
 msgstr "ئىكران قوزغىتىلمىغان"
 
-#: ../src/Plug.vala:90
+#: ../src/Plug.vala:87
 msgid "Dim display"
 msgstr "ئىكراننى خىرەلەشتۈرۈش"
 
-#: ../src/Plug.vala:91
+#: ../src/Plug.vala:88
 msgid "Lid close"
 msgstr "قاپقاقنى ئىتىش"
 
-#: ../src/Plug.vala:92
+#: ../src/Plug.vala:89
 msgid "Display brightness"
 msgstr "ئىكران يورۇقلۇقى"
 
-#: ../src/Plug.vala:93
+#: ../src/Plug.vala:90
 msgid "Automatic brightness adjustment"
 msgstr "ئىكران يورۇقلۇقىنى ئاپتوماتىك تەڭشەش"
 
-#: ../src/Plug.vala:94
+#: ../src/Plug.vala:91
 msgid "Inactive display off"
 msgstr "ئىكراننى ئۆچۈرۈش"
 
-#: ../src/Plug.vala:95
+#: ../src/Plug.vala:92
 msgid "Docked lid close"
 msgstr "Docked ستونىنى تاقاش"
 
-#: ../src/Plug.vala:96
+#: ../src/Plug.vala:93
 msgid "Sleep inactive"
 msgstr "ئۇخلاش ھالىتىگە كىردى"
 
-#: ../src/Plug.vala:118
+#: ../src/Plug.vala:115
 msgid "Plugged In"
 msgstr "توك مەنبەسىگە چىتىلدى"
 
-#: ../src/Plug.vala:127
+#: ../src/Plug.vala:124
 msgid "On Battery"
 msgstr "باتارىيەنى ئىشلىتىۋاتىدۇ"
 
-#: ../src/Plug.vala:172
+#: ../src/Plug.vala:169
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "بەزى تەڭشەكلەر كومپىيۇتىرنى قايتا قوزغاتقاندىن كىيىن ئىشلەيدۇ."
 
-#: ../src/Plug.vala:190
+#: ../src/Plug.vala:187
 msgid "Some settings require administrator rights to be changed"
-msgstr "بەزى تەڭشەكلەرنى ئۆزگەرتىش ئۈچۈن باشقۇرغۇچىلىق سالاھىيىتى بولىشى كىرەك"
+msgstr ""
+"بەزى تەڭشەكلەرنى ئۆزگەرتىش ئۈچۈن باشقۇرغۇچىلىق سالاھىيىتى بولىشى كىرەك"
 
-#: ../src/Plug.vala:223
+#: ../src/Plug.vala:220
 msgid "Display brightness:"
 msgstr "ئىكران يورۇقلىقى:"
 
-#: ../src/Plug.vala:228
+#: ../src/Plug.vala:225
 msgid "Automatically adjust brightness:"
 msgstr "ئىكران يورۇقلۇقىنى ئاپتوماتىك تەڭشەش"
 
-#: ../src/Plug.vala:246
+#: ../src/Plug.vala:243
 msgid "When lid is closed:"
 msgstr "قاپقاق تاقالغان ۋاقىتتا:"
 
-#: ../src/Plug.vala:251
+#: ../src/Plug.vala:248
 msgid "When lid is closed with external monitor:"
 msgstr "تاشقى كۆزەتكۈچى ئارقىلىق قاپقاق تاقالغان ۋاقىتتا:"
 
-#: ../src/Plug.vala:287
+#: ../src/Plug.vala:284
 msgid "Turn off display when inactive for:"
 msgstr "مەشغۇلات قىلمىغان ۋاقىتتا ئىكراننى ئۆچۈرۈش"
 
-#: ../src/Plug.vala:295
+#: ../src/Plug.vala:292
 msgid "Power button:"
 msgstr "توك مەنبەسى كۇنۇپكىسى"
 
-#: ../src/Plug.vala:328
-#, fuzzy
-msgid "Sleep when inactive for:"
+#: ../src/Plug.vala:325
+msgid "Suspend when inactive for:"
 msgstr "مەشغۇلات قىلمىغان ۋاقىتتا كومپىيۇتىرنى توڭلىتىش"
 
-#: ../src/Plug.vala:344
+#: ../src/Plug.vala:341
 msgid "Dim display when inactive:"
 msgstr "مەشغۇلات قىلمىغان ۋاقىتتا ئىكراننى خىرەلەشتۈرۈش"
-
-#: ../src/Translations.vala:21
-msgid "Manage power settings "
-msgstr "توك مەنبەسى تەڭشىكىنى باشقۇرۇش "
-
-#: ../src/Translations.vala:22
-msgid "Authentication is required to manage power settings"
-msgstr "توك مەنبەسى تەڭشىكىنى باشقۇرۇش ئۈچۈن سالاھىيەت دەلىللەش زۆرۈر"
-
-#: ../src/TimeoutComboBox.vala:42
-msgid "Never"
-msgstr "ئەسلا"
-
-#: ../src/TimeoutComboBox.vala:43
-msgid "5 min"
-msgstr "5 مىنۇت"
-
-#: ../src/TimeoutComboBox.vala:44
-msgid "10 min"
-msgstr "10 مىنۇت"
-
-#: ../src/TimeoutComboBox.vala:45
-msgid "15 min"
-msgstr "15مىنۇت"
-
-#: ../src/TimeoutComboBox.vala:46
-msgid "30 min"
-msgstr "30مىنۇت"
-
-#: ../src/TimeoutComboBox.vala:47
-msgid "45 min"
-msgstr "45مىنۇت"
-
-#: ../src/TimeoutComboBox.vala:48
-msgid "1 hour"
-msgstr "1سائەت"
-
-#: ../src/TimeoutComboBox.vala:49
-msgid "2 hours"
-msgstr "2سائەت"
-
-#: ../src/ActionComboBox.vala:37 ../src/LidCloseActionComboBox.vala:37
-msgid "Do nothing"
-msgstr "ھېچنىمە قىلمىدى"
-
-#: ../src/ActionComboBox.vala:38 ../src/LidCloseActionComboBox.vala:33
-msgid "Suspend"
-msgstr "توڭلىتىش"
-
-#: ../src/ActionComboBox.vala:39
-msgid "Hibernate"
-msgstr "ئۇخلتىش"
-
-#: ../src/LidCloseActionComboBox.vala:34
-msgid "Shutdown"
-msgstr "ئىتىش"
-
-#: ../src/LidCloseActionComboBox.vala:35
-msgid "Lock"
-msgstr "قۇلۇپلاش"
-
-#: ../src/LidCloseActionComboBox.vala:36
-msgid "Halt"
-msgstr "توختىتىش"
-
-#: ../src/LidCloseActionComboBox.vala:39
-msgid "Not supported"
-msgstr "قوللىمايدۇ"
