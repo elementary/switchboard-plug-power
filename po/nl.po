@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-23 07:34-0500\n"
-"PO-Revision-Date: 2017-06-01 20:18+0000\n"
-"Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
+"PO-Revision-Date: 2017-06-01 20:20+0000\n"
+"Last-Translator: Kay van der Zander <kay20@hotmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-power/nl/>\n"
 "Language: nl\n"
@@ -144,15 +144,15 @@ msgstr "Helderheid beeldscherm"
 
 #: ../src/Plug.vala:93
 msgid "Automatic brightness adjustment"
-msgstr ""
+msgstr "Automatisch helderheid aanpassen"
 
 #: ../src/Plug.vala:94
 msgid "Inactive display off"
-msgstr ""
+msgstr "Inactief beeldscherm uit"
 
 #: ../src/Plug.vala:95
 msgid "Docked lid close"
-msgstr ""
+msgstr "in standaard met deksel dicht"
 
 #: ../src/Plug.vala:96
 msgid "Sleep inactive"
