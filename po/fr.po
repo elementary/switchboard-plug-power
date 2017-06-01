@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-23 07:34-0500\n"
-"PO-Revision-Date: 2017-06-01 21:13+0000\n"
+"PO-Revision-Date: 2017-06-01 21:16+0000\n"
 "Last-Translator: Corentin Noël <corentin@elementary.io>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-power/fr/>\n"
@@ -127,7 +127,7 @@ msgstr "Boutton veille"
 
 #: ../src/Plug.vala:88
 msgid "Power button"
-msgstr "Bouton d'alimentation"
+msgstr "Bouton de mise sous tension"
 
 #: ../src/Plug.vala:89
 msgid "Display inactive"
@@ -202,7 +202,7 @@ msgstr "Eteindre l'écran lors d'une inactivité supérieure à :"
 
 #: ../src/Plug.vala:295
 msgid "Power button:"
-msgstr "Bouton power :"
+msgstr "Bouton de mise sous tension :"
 
 #: ../src/Plug.vala:328
 msgid "Sleep when inactive for:"
