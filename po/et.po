@@ -204,3 +204,72 @@ msgstr "Ekraani väljalülitamime, kui ollakse eemal:"
 #: ../src/Plug.vala:344
 msgid "Dim display when inactive:"
 msgstr "Ekraani tumendamine, kui ollakse eemal:"
+
+#: ../src/Translations.vala:21
+msgid "Manage power settings "
+msgstr "Toite seadete haldamime "
+
+#: ../src/Translations.vala:22
+msgid "Authentication is required to manage power settings"
+msgstr "Toite seadete muutmiseks on vajalik autentimine"
+
+#: ../src/TimeoutComboBox.vala:42
+msgid "Never"
+msgstr "Kunagi"
+
+#: ../src/TimeoutComboBox.vala:43
+msgid "5 min"
+msgstr "5 minutit"
+
+#: ../src/TimeoutComboBox.vala:44
+msgid "10 min"
+msgstr "10 minutit"
+
+#: ../src/TimeoutComboBox.vala:45
+msgid "15 min"
+msgstr "15 minutit"
+
+#: ../src/TimeoutComboBox.vala:46
+msgid "30 min"
+msgstr "30 minutit"
+
+#: ../src/TimeoutComboBox.vala:47
+msgid "45 min"
+msgstr "45 minutit"
+
+#: ../src/TimeoutComboBox.vala:48
+msgid "1 hour"
+msgstr "1h"
+
+#: ../src/TimeoutComboBox.vala:49
+msgid "2 hours"
+msgstr "2 tundi"
+
+#: ../src/ActionComboBox.vala:37 ../src/LidCloseActionComboBox.vala:37
+msgid "Do nothing"
+msgstr "Ei tehta midagi"
+
+#: ../src/ActionComboBox.vala:38 ../src/LidCloseActionComboBox.vala:33
+msgid "Suspend"
+msgstr "Puhkerežiim (kasutatakse mälu, kiire oleku taastamine, säästab vähem)"
+
+#: ../src/ActionComboBox.vala:39
+msgid "Hibernate"
+msgstr ""
+"Unerežiim (kasutatakse kõvaketast, aeglane oleku taastamine, säästab rohkem)"
+
+#: ../src/LidCloseActionComboBox.vala:34
+msgid "Shutdown"
+msgstr "Lülitatakse arvuti välja"
+
+#: ../src/LidCloseActionComboBox.vala:35
+msgid "Lock"
+msgstr "Ekraani lukustamine"
+
+#: ../src/LidCloseActionComboBox.vala:36
+msgid "Halt"
+msgstr "Seiskamine"
+
+#: ../src/LidCloseActionComboBox.vala:39
+msgid "Not supported"
+msgstr "Pole toetatud"

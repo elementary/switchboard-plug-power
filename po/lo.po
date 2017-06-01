@@ -18,64 +18,64 @@ msgstr ""
 "X-Launchpad-Export-Date: 2016-11-21 05:42+0000\n"
 "X-Generator: Launchpad (build 18269)\n"
 
-#: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:38
-msgid "Suspend"
+#: ../src/Plug.vala:39
+msgid "You do not have permission to change this"
 msgstr ""
 
-#: ../src/LidCloseActionComboBox.vala:34
-msgid "Shutdown"
+#: ../src/Plug.vala:47
+msgid "Power"
 msgstr ""
 
-#: ../src/LidCloseActionComboBox.vala:35
-msgid "Lock"
+#: ../src/Plug.vala:48
+msgid "Configure display brightness, power buttons, and sleep behavior"
 msgstr ""
 
-#: ../src/LidCloseActionComboBox.vala:36
-msgid "Halt"
+#: ../src/Plug.vala:87
+msgid "Sleep button"
 msgstr ""
 
-#: ../src/LidCloseActionComboBox.vala:37 ../src/ActionComboBox.vala:37
-msgid "Do nothing"
+#: ../src/Plug.vala:88
+msgid "Power button"
 msgstr ""
 
-#: ../src/LidCloseActionComboBox.vala:39
-msgid "Not supported"
+#: ../src/Plug.vala:89
+msgid "Display inactive"
 msgstr ""
 
-#: ../src/ActionComboBox.vala:39
-msgid "Hibernate"
+#: ../src/Plug.vala:90
+msgid "Dim display"
 msgstr ""
 
-#: ../src/TimeoutComboBox.vala:42
-msgid "Never"
+#: ../src/Plug.vala:91
+msgid "Lid close"
 msgstr ""
 
-#: ../src/TimeoutComboBox.vala:43
-msgid "5 min"
+#: ../src/Plug.vala:92
+msgid "Display brightness"
 msgstr ""
 
-#: ../src/TimeoutComboBox.vala:44
-msgid "10 min"
+#: ../src/Plug.vala:93
+msgid "Automatic brightness adjustment"
 msgstr ""
 
-#: ../src/TimeoutComboBox.vala:45
-msgid "15 min"
+#: ../src/Plug.vala:94
+msgid "Inactive display off"
 msgstr ""
 
-#: ../src/TimeoutComboBox.vala:46
-msgid "30 min"
+#: ../src/Plug.vala:95
+msgid "Docked lid close"
 msgstr ""
 
-#: ../src/TimeoutComboBox.vala:47
-msgid "45 min"
+#: ../src/Plug.vala:96
+msgid "Sleep inactive"
 msgstr ""
 
-#: ../src/TimeoutComboBox.vala:48
-msgid "1 hour"
+#: ../src/Plug.vala:118
+msgid "Plugged In"
 msgstr ""
 
-#: ../src/TimeoutComboBox.vala:49
-msgid "2 hours"
+#: ../src/Plug.vala:127
+msgid "On Battery"
 msgstr ""
 
 #. //launchpad.net/switchboard-plug-power)
@@ -99,12 +99,12 @@ msgstr ""
 msgid "Manage power settings "
 msgstr ""
 
-#: ../src/Translations.vala:21
-msgid "Authentication is required to manage power settings"
+#: ../src/Plug.vala:190
+msgid "Some settings require administrator rights to be changed"
 msgstr ""
 
-#: ../src/Plug.vala:39
-msgid "You do not have permission to change this"
+#: ../src/Plug.vala:223
+msgid "Display brightness:"
 msgstr ""
 
 #: ../src/Plug.vala:47

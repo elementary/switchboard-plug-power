@@ -202,3 +202,71 @@ msgstr ""
 #: ../src/Plug.vala:344
 msgid "Dim display when inactive:"
 msgstr ""
+
+#: ../src/Translations.vala:21
+msgid "Manage power settings "
+msgstr ""
+
+#: ../src/Translations.vala:22
+msgid "Authentication is required to manage power settings"
+msgstr ""
+
+#: ../src/TimeoutComboBox.vala:42
+msgid "Never"
+msgstr "কখনো না"
+
+#: ../src/TimeoutComboBox.vala:43
+msgid "5 min"
+msgstr "৫ মিনিট"
+
+#: ../src/TimeoutComboBox.vala:44
+msgid "10 min"
+msgstr "১০ মিনিট"
+
+#: ../src/TimeoutComboBox.vala:45
+msgid "15 min"
+msgstr ""
+
+#: ../src/TimeoutComboBox.vala:46
+msgid "30 min"
+msgstr "৩০ মিনিট"
+
+#: ../src/TimeoutComboBox.vala:47
+msgid "45 min"
+msgstr ""
+
+#: ../src/TimeoutComboBox.vala:48
+msgid "1 hour"
+msgstr "১ ঘণ্টা"
+
+#: ../src/TimeoutComboBox.vala:49
+msgid "2 hours"
+msgstr ""
+
+#: ../src/ActionComboBox.vala:37 ../src/LidCloseActionComboBox.vala:37
+msgid "Do nothing"
+msgstr "কিছুই করো না"
+
+#: ../src/ActionComboBox.vala:38 ../src/LidCloseActionComboBox.vala:33
+msgid "Suspend"
+msgstr "স্থগিত"
+
+#: ../src/ActionComboBox.vala:39
+msgid "Hibernate"
+msgstr "হাইবারনেট"
+
+#: ../src/LidCloseActionComboBox.vala:34
+msgid "Shutdown"
+msgstr "বন্ধ"
+
+#: ../src/LidCloseActionComboBox.vala:35
+msgid "Lock"
+msgstr ""
+
+#: ../src/LidCloseActionComboBox.vala:36
+msgid "Halt"
+msgstr ""
+
+#: ../src/LidCloseActionComboBox.vala:39
+msgid "Not supported"
+msgstr ""

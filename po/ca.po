@@ -207,3 +207,71 @@ msgstr "Atura temporalment quan estigui inactiu durant..."
 #: ../src/Plug.vala:344
 msgid "Dim display when inactive:"
 msgstr "Atenua la pantalla quan estigui inactiva:"
+
+#: ../src/Translations.vala:21
+msgid "Manage power settings "
+msgstr "Gestioneu els paràmetres de l'energia "
+
+#: ../src/Translations.vala:22
+msgid "Authentication is required to manage power settings"
+msgstr "Cal autenticació per gestionar els paràmetres de l'energia"
+
+#: ../src/TimeoutComboBox.vala:42
+msgid "Never"
+msgstr "Mai"
+
+#: ../src/TimeoutComboBox.vala:43
+msgid "5 min"
+msgstr "5 min"
+
+#: ../src/TimeoutComboBox.vala:44
+msgid "10 min"
+msgstr "10 min"
+
+#: ../src/TimeoutComboBox.vala:45
+msgid "15 min"
+msgstr "15 mins."
+
+#: ../src/TimeoutComboBox.vala:46
+msgid "30 min"
+msgstr "30 min"
+
+#: ../src/TimeoutComboBox.vala:47
+msgid "45 min"
+msgstr "45 mins."
+
+#: ../src/TimeoutComboBox.vala:48
+msgid "1 hour"
+msgstr "1 hora"
+
+#: ../src/TimeoutComboBox.vala:49
+msgid "2 hours"
+msgstr "2 hores"
+
+#: ../src/ActionComboBox.vala:37 ../src/LidCloseActionComboBox.vala:37
+msgid "Do nothing"
+msgstr "No facis res"
+
+#: ../src/ActionComboBox.vala:38 ../src/LidCloseActionComboBox.vala:33
+msgid "Suspend"
+msgstr "Suspèn"
+
+#: ../src/ActionComboBox.vala:39
+msgid "Hibernate"
+msgstr "Hiberna"
+
+#: ../src/LidCloseActionComboBox.vala:34
+msgid "Shutdown"
+msgstr "Apaga"
+
+#: ../src/LidCloseActionComboBox.vala:35
+msgid "Lock"
+msgstr "Bloqueja"
+
+#: ../src/LidCloseActionComboBox.vala:36
+msgid "Halt"
+msgstr "Atura"
+
+#: ../src/LidCloseActionComboBox.vala:39
+msgid "Not supported"
+msgstr "No s'admet"

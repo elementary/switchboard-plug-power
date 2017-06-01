@@ -203,3 +203,71 @@ msgstr "Stäng av skärm vid inaktivitet i:"
 #: ../src/Plug.vala:344
 msgid "Dim display when inactive:"
 msgstr "Dämpa skärmens ljusstyrka vid inaktivitet:"
+
+#: ../src/Translations.vala:21
+msgid "Manage power settings "
+msgstr "Hantera ströminställningar "
+
+#: ../src/Translations.vala:22
+msgid "Authentication is required to manage power settings"
+msgstr "autentisering krävs för att hantera ströminställningar"
+
+#: ../src/TimeoutComboBox.vala:42
+msgid "Never"
+msgstr "Aldrig"
+
+#: ../src/TimeoutComboBox.vala:43
+msgid "5 min"
+msgstr "Fem minuter"
+
+#: ../src/TimeoutComboBox.vala:44
+msgid "10 min"
+msgstr "Tio minuter"
+
+#: ../src/TimeoutComboBox.vala:45
+msgid "15 min"
+msgstr "15 minuter"
+
+#: ../src/TimeoutComboBox.vala:46
+msgid "30 min"
+msgstr "30 minuter"
+
+#: ../src/TimeoutComboBox.vala:47
+msgid "45 min"
+msgstr "45 minuter"
+
+#: ../src/TimeoutComboBox.vala:48
+msgid "1 hour"
+msgstr "En timme"
+
+#: ../src/TimeoutComboBox.vala:49
+msgid "2 hours"
+msgstr "2 timmar"
+
+#: ../src/ActionComboBox.vala:37 ../src/LidCloseActionComboBox.vala:37
+msgid "Do nothing"
+msgstr "Gör ingenting"
+
+#: ../src/ActionComboBox.vala:38 ../src/LidCloseActionComboBox.vala:33
+msgid "Suspend"
+msgstr "Vänteläge"
+
+#: ../src/ActionComboBox.vala:39
+msgid "Hibernate"
+msgstr "Djupvila"
+
+#: ../src/LidCloseActionComboBox.vala:34
+msgid "Shutdown"
+msgstr "Stäng av"
+
+#: ../src/LidCloseActionComboBox.vala:35
+msgid "Lock"
+msgstr "Lås"
+
+#: ../src/LidCloseActionComboBox.vala:36
+msgid "Halt"
+msgstr ""
+
+#: ../src/LidCloseActionComboBox.vala:39
+msgid "Not supported"
+msgstr "Stöds ej"

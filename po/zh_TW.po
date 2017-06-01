@@ -203,3 +203,71 @@ msgstr "關閉顯示器前的不使用時間："
 #: ../src/Plug.vala:344
 msgid "Dim display when inactive:"
 msgstr "不使用時便轉暗顯示器："
+
+#: ../src/Translations.vala:21
+msgid "Manage power settings "
+msgstr "管理電源設定值 "
+
+#: ../src/Translations.vala:22
+msgid "Authentication is required to manage power settings"
+msgstr "需要核對身份才能管理電源設定值"
+
+#: ../src/TimeoutComboBox.vala:42
+msgid "Never"
+msgstr "永不"
+
+#: ../src/TimeoutComboBox.vala:43
+msgid "5 min"
+msgstr "5 分鐘"
+
+#: ../src/TimeoutComboBox.vala:44
+msgid "10 min"
+msgstr "10 分鐘"
+
+#: ../src/TimeoutComboBox.vala:45
+msgid "15 min"
+msgstr "15 分鐘"
+
+#: ../src/TimeoutComboBox.vala:46
+msgid "30 min"
+msgstr "30 分鐘"
+
+#: ../src/TimeoutComboBox.vala:47
+msgid "45 min"
+msgstr "45 分鐘"
+
+#: ../src/TimeoutComboBox.vala:48
+msgid "1 hour"
+msgstr "1 小時"
+
+#: ../src/TimeoutComboBox.vala:49
+msgid "2 hours"
+msgstr "2 小時"
+
+#: ../src/ActionComboBox.vala:37 ../src/LidCloseActionComboBox.vala:37
+msgid "Do nothing"
+msgstr "什麼都不做"
+
+#: ../src/ActionComboBox.vala:38 ../src/LidCloseActionComboBox.vala:33
+msgid "Suspend"
+msgstr "暫停"
+
+#: ../src/ActionComboBox.vala:39
+msgid "Hibernate"
+msgstr "休眠"
+
+#: ../src/LidCloseActionComboBox.vala:34
+msgid "Shutdown"
+msgstr "關機"
+
+#: ../src/LidCloseActionComboBox.vala:35
+msgid "Lock"
+msgstr "鎖定"
+
+#: ../src/LidCloseActionComboBox.vala:36
+msgid "Halt"
+msgstr "停機"
+
+#: ../src/LidCloseActionComboBox.vala:39
+msgid "Not supported"
+msgstr "未支援"

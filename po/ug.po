@@ -203,3 +203,71 @@ msgstr "مەشغۇلات قىلمىغان ۋاقىتتا كومپىيۇتىرن�
 #: ../src/Plug.vala:344
 msgid "Dim display when inactive:"
 msgstr "مەشغۇلات قىلمىغان ۋاقىتتا ئىكراننى خىرەلەشتۈرۈش"
+
+#: ../src/Translations.vala:21
+msgid "Manage power settings "
+msgstr "توك مەنبەسى تەڭشىكىنى باشقۇرۇش "
+
+#: ../src/Translations.vala:22
+msgid "Authentication is required to manage power settings"
+msgstr "توك مەنبەسى تەڭشىكىنى باشقۇرۇش ئۈچۈن سالاھىيەت دەلىللەش زۆرۈر"
+
+#: ../src/TimeoutComboBox.vala:42
+msgid "Never"
+msgstr "ئەسلا"
+
+#: ../src/TimeoutComboBox.vala:43
+msgid "5 min"
+msgstr "5 مىنۇت"
+
+#: ../src/TimeoutComboBox.vala:44
+msgid "10 min"
+msgstr "10 مىنۇت"
+
+#: ../src/TimeoutComboBox.vala:45
+msgid "15 min"
+msgstr "15مىنۇت"
+
+#: ../src/TimeoutComboBox.vala:46
+msgid "30 min"
+msgstr "30مىنۇت"
+
+#: ../src/TimeoutComboBox.vala:47
+msgid "45 min"
+msgstr "45مىنۇت"
+
+#: ../src/TimeoutComboBox.vala:48
+msgid "1 hour"
+msgstr "1سائەت"
+
+#: ../src/TimeoutComboBox.vala:49
+msgid "2 hours"
+msgstr "2سائەت"
+
+#: ../src/ActionComboBox.vala:37 ../src/LidCloseActionComboBox.vala:37
+msgid "Do nothing"
+msgstr "ھېچنىمە قىلمىدى"
+
+#: ../src/ActionComboBox.vala:38 ../src/LidCloseActionComboBox.vala:33
+msgid "Suspend"
+msgstr "توڭلىتىش"
+
+#: ../src/ActionComboBox.vala:39
+msgid "Hibernate"
+msgstr "ئۇخلتىش"
+
+#: ../src/LidCloseActionComboBox.vala:34
+msgid "Shutdown"
+msgstr "ئىتىش"
+
+#: ../src/LidCloseActionComboBox.vala:35
+msgid "Lock"
+msgstr "قۇلۇپلاش"
+
+#: ../src/LidCloseActionComboBox.vala:36
+msgid "Halt"
+msgstr "توختىتىش"
+
+#: ../src/LidCloseActionComboBox.vala:39
+msgid "Not supported"
+msgstr "قوللىمايدۇ"
