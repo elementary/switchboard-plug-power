@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-23 07:34-0500\n"
-"PO-Revision-Date: 2017-06-01 13:46+0000\n"
+"PO-Revision-Date: 2017-06-01 13:59+0000\n"
 "Last-Translator: Jonathan GN <jonathan@jamdigitalstudio.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-power/es/>\n"
@@ -174,7 +174,7 @@ msgstr "Algunos cambios no tendrán efecto hasta que reinicies el equipo"
 #: ../src/Plug.vala:190
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
-"Algunos ajustes requieren privilegios de administrador para ser modificados"
+"Algunos ajustes requieren permisos de administrador para ser modificados"
 
 #: ../src/Plug.vala:223
 msgid "Display brightness:"
