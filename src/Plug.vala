@@ -230,7 +230,7 @@ namespace Power {
             lock_image2.tooltip_text = NO_PERMISSION_STRING;
             lock_image2.sensitive = false;
 
-            if (laptop_detect () || battery.laptop) {
+            //if (laptop_detect () || battery.laptop) {
                 var brightness_label = new Gtk.Label (_("Display brightness:"));
                 ((Gtk.Misc) brightness_label).xalign = 1.0f;
                 label_size.add_widget (brightness_label);
@@ -254,12 +254,12 @@ namespace Power {
                 scale.value_changed.connect (on_scale_value_changed);
                 (screen as DBusProxy).g_properties_changed.connect (on_screen_properties_changed);
 
-                var lid_closed_box = new LidCloseActionComboBox (_("When lid is closed:"), cli_communicator);
+                var lid_closed_box = new LidCloseActionComboBox (_("When lid is closed:"), cli_communicator, false);
                 lid_closed_box.sensitive = false;
                 lid_closed_box.label.sensitive = false;
                 label_size.add_widget (lid_closed_box.label);
 
-                var lid_dock_box = new LidCloseActionComboBox (_("When lid is closed with external monitor:"), cli_communicator);
+                var lid_dock_box = new LidCloseActionComboBox (_("When lid is closed with external monitor:"), cli_communicator, true);
                 lid_dock_box.sensitive = false;
                 lid_dock_box.label.sensitive = false;
                 label_size.add_widget (lid_dock_box.label);
@@ -295,7 +295,7 @@ namespace Power {
                 main_grid.attach (lid_dock_box.label, 0, 6, 1, 1);
                 main_grid.attach (lid_dock_box, 1, 6, 1, 1);
                 main_grid.attach (lock_image, 2, 6, 1, 1);
-            }
+            //}
 
             var screen_timeout_label = new Gtk.Label (_("Turn off display when inactive for:"));
             screen_timeout_label.halign = Gtk.Align.END;
