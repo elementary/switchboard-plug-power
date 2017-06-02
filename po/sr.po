@@ -7,19 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-power-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-23 07:34-0500\n"
-"PO-Revision-Date: 2017-05-06 09:14+0000\n"
+"POT-Creation-Date: 2016-11-20 16:38-0600\n"
+"PO-Revision-Date: 2017-01-08 09:21+0000\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
-"Language-Team: Serbian <https://l10n.elementary.io/projects/switchboard"
-"/switchboard-plug-power/sr/>\n"
-"Language: sr\n"
+"Language-Team: Serbian <(nothing)>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=nplurals=3; plural=(n%10==1 && n%100!=11 ? "
-"0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);;\n"
-"X-Generator: Weblate 2.13-dev\n"
 "X-Launchpad-Export-Date: 2017-01-09 05:39+0000\n"
+"X-Generator: Launchpad (build 18302)\n"
+"Language: sr\n"
 
 #: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:38
 msgid "Suspend"
@@ -97,7 +94,7 @@ msgstr "2 сата"
 #. * License along with this program; if not, write to the
 #. * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
 #. * Boston, MA 02111-1307, USA.
-#.
+#. 
 #: ../src/Translations.vala:20
 msgid "Manage power settings "
 msgstr "Уредите подешавања напајања "
@@ -110,166 +107,99 @@ msgstr "Потребно је потврђивање идентитета за �
 msgid "You do not have permission to change this"
 msgstr "Немате овлашћење да измените ово"
 
-#: ../src/Plug.vala:47
+#: ../src/Plug.vala:45
 msgid "Power"
 msgstr "Напајање"
 
-#: ../src/Plug.vala:48
+#: ../src/Plug.vala:46
 msgid "Configure display brightness, power buttons, and sleep behavior"
 msgstr "Подесите осветљеност екрана, дугмад напајања и понашање спавања"
 
-#: ../src/Plug.vala:87
+#: ../src/Plug.vala:84
 msgid "Sleep button"
 msgstr "Дугме спавања"
 
-#: ../src/Plug.vala:88
+#: ../src/Plug.vala:85
 msgid "Power button"
 msgstr "Дугме напајања"
 
-#: ../src/Plug.vala:89
+#: ../src/Plug.vala:86
 msgid "Display inactive"
 msgstr "Екран је нерадан"
 
-#: ../src/Plug.vala:90
+#: ../src/Plug.vala:87
 msgid "Dim display"
 msgstr "Затамни екран"
 
-#: ../src/Plug.vala:91
+#: ../src/Plug.vala:88
 msgid "Lid close"
 msgstr "Поклопац је спуштен"
 
-#: ../src/Plug.vala:92
+#: ../src/Plug.vala:89
 msgid "Display brightness"
 msgstr "Осветљеност екрана"
 
-#: ../src/Plug.vala:93
+#: ../src/Plug.vala:90
 msgid "Automatic brightness adjustment"
 msgstr "Самостално подешавање осветљености"
 
-#: ../src/Plug.vala:94
+#: ../src/Plug.vala:91
 msgid "Inactive display off"
 msgstr "Нерадан екран је искључен"
 
-#: ../src/Plug.vala:95
+#: ../src/Plug.vala:92
 msgid "Docked lid close"
 msgstr "Затвори прикачени поклопац"
 
-#: ../src/Plug.vala:96
+#: ../src/Plug.vala:93
 msgid "Sleep inactive"
 msgstr "Спавање није радно"
 
-#: ../src/Plug.vala:118
+#: ../src/Plug.vala:115
 msgid "Plugged In"
 msgstr "На ел. мрежи"
 
-#: ../src/Plug.vala:127
+#: ../src/Plug.vala:124
 msgid "On Battery"
 msgstr "На батерији"
 
-#: ../src/Plug.vala:172
+#: ../src/Plug.vala:169
 msgid "Some changes will not take effect until you restart this computer"
-msgstr "Неке промене неће ступити на снагу све док поново не покренете рачунар"
+msgstr ""
+"Неке промене неће ступити на снагу све док поново не покренете рачунар"
 
-#: ../src/Plug.vala:190
+#: ../src/Plug.vala:187
 msgid "Some settings require administrator rights to be changed"
-msgstr "За измену неких подешавања потребна су администраторска права"
+msgstr "Нека подешавања захтевају администраторска права да би се изменила"
 
-#: ../src/Plug.vala:223
+#: ../src/Plug.vala:220
 msgid "Display brightness:"
 msgstr "Осветљеност екрана:"
 
-#: ../src/Plug.vala:228
+#: ../src/Plug.vala:225
 msgid "Automatically adjust brightness:"
 msgstr "Самостално подеси осветљеност:"
 
-#: ../src/Plug.vala:246
+#: ../src/Plug.vala:243
 msgid "When lid is closed:"
 msgstr "Кад је поклопац спуштен:"
 
-#: ../src/Plug.vala:251
+#: ../src/Plug.vala:248
 msgid "When lid is closed with external monitor:"
 msgstr "Када је поклопац спуштен са спољним монитором:"
 
-#: ../src/Plug.vala:287
+#: ../src/Plug.vala:284
 msgid "Turn off display when inactive for:"
 msgstr "Искључи екран када је нерадан након:"
 
-#: ../src/Plug.vala:295
+#: ../src/Plug.vala:292
 msgid "Power button:"
 msgstr "Дугме напајања:"
 
-#: ../src/Plug.vala:328
-msgid "Sleep when inactive for:"
-msgstr "Обустави након неактивности од:"
+#: ../src/Plug.vala:325
+msgid "Suspend when inactive for:"
+msgstr "Обустави када је нерадан након:"
 
-#: ../src/Plug.vala:344
+#: ../src/Plug.vala:341
 msgid "Dim display when inactive:"
 msgstr "Затамни екран када је нерадан:"
-
-#: ../src/Translations.vala:21
-msgid "Manage power settings "
-msgstr "Уредите подешавања напајања "
-
-#: ../src/Translations.vala:22
-msgid "Authentication is required to manage power settings"
-msgstr "Потребно је потврђивање идентитета за уређивање подешавања напајања"
-
-#: ../src/TimeoutComboBox.vala:42
-msgid "Never"
-msgstr "Никада"
-
-#: ../src/TimeoutComboBox.vala:43
-msgid "5 min"
-msgstr "5 мин."
-
-#: ../src/TimeoutComboBox.vala:44
-msgid "10 min"
-msgstr "10 мин."
-
-#: ../src/TimeoutComboBox.vala:45
-msgid "15 min"
-msgstr "15 мин."
-
-#: ../src/TimeoutComboBox.vala:46
-msgid "30 min"
-msgstr "30 мин."
-
-#: ../src/TimeoutComboBox.vala:47
-msgid "45 min"
-msgstr "45 мин."
-
-#: ../src/TimeoutComboBox.vala:48
-msgid "1 hour"
-msgstr "1 сат"
-
-#: ../src/TimeoutComboBox.vala:49
-msgid "2 hours"
-msgstr "2 сата"
-
-#: ../src/ActionComboBox.vala:37 ../src/LidCloseActionComboBox.vala:37
-msgid "Do nothing"
-msgstr "Не ради ништа"
-
-#: ../src/ActionComboBox.vala:38 ../src/LidCloseActionComboBox.vala:33
-msgid "Suspend"
-msgstr "Обустави"
-
-#: ../src/ActionComboBox.vala:39
-msgid "Hibernate"
-msgstr "Замрзни"
-
-#: ../src/LidCloseActionComboBox.vala:34
-msgid "Shutdown"
-msgstr "Угаси"
-
-#: ../src/LidCloseActionComboBox.vala:35
-msgid "Lock"
-msgstr "Закључај"
-
-#: ../src/LidCloseActionComboBox.vala:36
-msgid "Halt"
-msgstr "Заустави"
-
-#: ../src/LidCloseActionComboBox.vala:39
-msgid "Not supported"
-msgstr "Није подржано"

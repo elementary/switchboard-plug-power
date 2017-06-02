@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-23 07:34-0500\n"
+"POT-Creation-Date: 2016-11-20 16:38-0600\n"
 "PO-Revision-Date: 2017-03-17 15:01+0000\n"
 "Last-Translator: scootergrisen <scootergrisen@gmail.com>\n"
 "Language-Team: Danish <da@li.org>\n"
-"Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2017-03-19 06:31+0000\n"
 "X-Generator: Launchpad (build 18332)\n"
+"Language: da\n"
 
 #: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:38
 msgid "Suspend"
@@ -94,7 +94,7 @@ msgstr "2 timer"
 #. * License along with this program; if not, write to the
 #. * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
 #. * Boston, MA 02111-1307, USA.
-#.
+#. 
 #: ../src/Translations.vala:20
 msgid "Manage power settings "
 msgstr "Håndter strømindstillinger "
@@ -107,168 +107,99 @@ msgstr "Godkendelse er påkrævet for at administrere strømindstillinger"
 msgid "You do not have permission to change this"
 msgstr "Du har ikke rettigheder til at ændre dette"
 
-#: ../src/Plug.vala:47
+#: ../src/Plug.vala:45
 msgid "Power"
 msgstr "Strøm"
 
-#: ../src/Plug.vala:48
+#: ../src/Plug.vala:46
 msgid "Configure display brightness, power buttons, and sleep behavior"
 msgstr "Konfigurer skærmens lysstyrke, strømknapper og soveopførsel"
 
-#: ../src/Plug.vala:87
+#: ../src/Plug.vala:84
 msgid "Sleep button"
 msgstr "Soveknap"
 
-#: ../src/Plug.vala:88
+#: ../src/Plug.vala:85
 msgid "Power button"
 msgstr "Strømknap"
 
-#: ../src/Plug.vala:89
+#: ../src/Plug.vala:86
 msgid "Display inactive"
 msgstr "Skærmen er inaktiv"
 
-#: ../src/Plug.vala:90
+#: ../src/Plug.vala:87
 msgid "Dim display"
 msgstr "Nedton skærm"
 
-#: ../src/Plug.vala:91
+#: ../src/Plug.vala:88
 msgid "Lid close"
 msgstr "Låg lukning"
 
-#: ../src/Plug.vala:92
+#: ../src/Plug.vala:89
 msgid "Display brightness"
 msgstr "Skærmens lysstyrke"
 
-#: ../src/Plug.vala:93
+#: ../src/Plug.vala:90
 msgid "Automatic brightness adjustment"
 msgstr "Automatisk justering af lysstyrke"
 
-#: ../src/Plug.vala:94
+#: ../src/Plug.vala:91
 msgid "Inactive display off"
 msgstr "Inaktiv skærm fra"
 
-#: ../src/Plug.vala:95
+#: ../src/Plug.vala:92
 msgid "Docked lid close"
 msgstr "Dokket låg lukket"
 
-#: ../src/Plug.vala:96
+#: ../src/Plug.vala:93
 msgid "Sleep inactive"
 msgstr "Sove inaktiv"
 
-#: ../src/Plug.vala:118
+#: ../src/Plug.vala:115
 msgid "Plugged In"
 msgstr "Tilsluttet"
 
-#: ../src/Plug.vala:127
+#: ../src/Plug.vala:124
 msgid "On Battery"
 msgstr "På batteri"
 
-#: ../src/Plug.vala:172
+#: ../src/Plug.vala:169
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Nogle ændringer vil ikke træde i kræft før du genstarter computeren"
 
-#: ../src/Plug.vala:190
+#: ../src/Plug.vala:187
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Nogle indstillinger kræver administratorrettigheder for at blive ændret"
 
-#: ../src/Plug.vala:223
+#: ../src/Plug.vala:220
 msgid "Display brightness:"
 msgstr "Lysstyrke:"
 
-#: ../src/Plug.vala:228
+#: ../src/Plug.vala:225
 msgid "Automatically adjust brightness:"
 msgstr "Juster lysstyrke automatisk:"
 
-#: ../src/Plug.vala:246
+#: ../src/Plug.vala:243
 msgid "When lid is closed:"
 msgstr "Når låget er lukket:"
 
-#: ../src/Plug.vala:251
+#: ../src/Plug.vala:248
 msgid "When lid is closed with external monitor:"
 msgstr "Når låget er lukket med ekstern skærm:"
 
-#: ../src/Plug.vala:287
+#: ../src/Plug.vala:284
 msgid "Turn off display when inactive for:"
 msgstr "Sluk skærmen ved inaktivitet i:"
 
-#: ../src/Plug.vala:295
+#: ../src/Plug.vala:292
 msgid "Power button:"
 msgstr "Tænd/sluk-knap:"
 
-#: ../src/Plug.vala:328
-#, fuzzy
-msgid "Sleep when inactive for:"
+#: ../src/Plug.vala:325
+msgid "Suspend when inactive for:"
 msgstr "Sæt i hvile ved inaktivitet i:"
 
-#: ../src/Plug.vala:344
+#: ../src/Plug.vala:341
 msgid "Dim display when inactive:"
 msgstr "Nedton skærm når inaktiv:"
-
-#: ../src/Translations.vala:21
-msgid "Manage power settings "
-msgstr "Håndter strømindstillinger "
-
-#: ../src/Translations.vala:22
-msgid "Authentication is required to manage power settings"
-msgstr "Godkendelse er påkrævet for at administrere strømindstillinger"
-
-#: ../src/TimeoutComboBox.vala:42
-msgid "Never"
-msgstr "Aldrig"
-
-#: ../src/TimeoutComboBox.vala:43
-msgid "5 min"
-msgstr "5 min"
-
-#: ../src/TimeoutComboBox.vala:44
-msgid "10 min"
-msgstr "10 min"
-
-#: ../src/TimeoutComboBox.vala:45
-msgid "15 min"
-msgstr "15 min"
-
-#: ../src/TimeoutComboBox.vala:46
-msgid "30 min"
-msgstr "30 min"
-
-#: ../src/TimeoutComboBox.vala:47
-msgid "45 min"
-msgstr "45 min"
-
-#: ../src/TimeoutComboBox.vala:48
-msgid "1 hour"
-msgstr "1 time"
-
-#: ../src/TimeoutComboBox.vala:49
-msgid "2 hours"
-msgstr "2 timer"
-
-#: ../src/ActionComboBox.vala:37 ../src/LidCloseActionComboBox.vala:37
-msgid "Do nothing"
-msgstr "Gør intet"
-
-#: ../src/ActionComboBox.vala:38 ../src/LidCloseActionComboBox.vala:33
-msgid "Suspend"
-msgstr "Slumre"
-
-#: ../src/ActionComboBox.vala:39
-msgid "Hibernate"
-msgstr "Dvale"
-
-#: ../src/LidCloseActionComboBox.vala:34
-msgid "Shutdown"
-msgstr "Luk ned"
-
-#: ../src/LidCloseActionComboBox.vala:35
-msgid "Lock"
-msgstr "Lås"
-
-#: ../src/LidCloseActionComboBox.vala:36
-msgid "Halt"
-msgstr "Stop"
-
-#: ../src/LidCloseActionComboBox.vala:39
-msgid "Not supported"
-msgstr "Ikke understøttet"

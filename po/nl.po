@@ -19,6 +19,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.14\n"
 "X-Launchpad-Export-Date: 2016-11-21 05:42+0000\n"
+"X-Generator: Launchpad (build 18269)\n"
+"Language: nl\n"
 
 #: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:38
 msgid "Suspend"
@@ -96,7 +98,7 @@ msgstr "2 uur"
 #. * License along with this program; if not, write to the
 #. * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
 #. * Boston, MA 02111-1307, USA.
-#.
+#. 
 #: ../src/Translations.vala:20
 msgid "Manage power settings "
 msgstr "Beheer stroom instellingen "
@@ -110,169 +112,102 @@ msgstr ""
 msgid "You do not have permission to change this"
 msgstr "U heeft geen rechten om dit te veranderen"
 
-#: ../src/Plug.vala:47
+#: ../src/Plug.vala:45
 msgid "Power"
 msgstr "Energie"
 
-#: ../src/Plug.vala:48
+#: ../src/Plug.vala:46
 msgid "Configure display brightness, power buttons, and sleep behavior"
 msgstr "configureren van beeldcherm helderheid, aan/uit knop en slaap gedrag"
 
-#: ../src/Plug.vala:87
+#: ../src/Plug.vala:84
 msgid "Sleep button"
 msgstr "Slaapstandknop"
 
-#: ../src/Plug.vala:88
+#: ../src/Plug.vala:85
 msgid "Power button"
 msgstr "Stroomknop"
 
-#: ../src/Plug.vala:89
+#: ../src/Plug.vala:86
 msgid "Display inactive"
 msgstr "Scherm inactief"
 
-#: ../src/Plug.vala:90
+#: ../src/Plug.vala:87
 msgid "Dim display"
 msgstr "Verduister beeldscherm"
 
-#: ../src/Plug.vala:91
+#: ../src/Plug.vala:88
 msgid "Lid close"
 msgstr "Deksel gesloten"
 
-#: ../src/Plug.vala:92
+#: ../src/Plug.vala:89
 msgid "Display brightness"
 msgstr "Helderheid beeldscherm"
 
-#: ../src/Plug.vala:93
+#: ../src/Plug.vala:90
 msgid "Automatic brightness adjustment"
 msgstr "Automatisch helderheid aanpassen"
 
-#: ../src/Plug.vala:94
+#: ../src/Plug.vala:91
 msgid "Inactive display off"
 msgstr "Inactief beeldscherm uit"
 
-#: ../src/Plug.vala:95
+#: ../src/Plug.vala:92
 msgid "Docked lid close"
 msgstr "In standaard gesloten deksel"
 
-#: ../src/Plug.vala:96
+#: ../src/Plug.vala:93
 msgid "Sleep inactive"
 msgstr "Slaapstand inactiviteit"
 
-#: ../src/Plug.vala:118
+#: ../src/Plug.vala:115
 msgid "Plugged In"
 msgstr "Aangesloten"
 
-#: ../src/Plug.vala:127
+#: ../src/Plug.vala:124
 msgid "On Battery"
 msgstr "Op accustroom"
 
-#: ../src/Plug.vala:172
+#: ../src/Plug.vala:169
 msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
 "sommige verraderingen zijn pas van kracht nadat deze computer opnieuw is "
 "opgestart"
 
-#: ../src/Plug.vala:190
+#: ../src/Plug.vala:187
 msgid "Some settings require administrator rights to be changed"
-msgstr "Sommige instellingen vereisen beheerdersrechten om te worden gewijzigd"
+msgstr ""
+"Voor sommige instellingen zijn administrator bevoegdheden nodig om ze te "
+"verranderen"
 
-#: ../src/Plug.vala:223
+#: ../src/Plug.vala:220
 msgid "Display brightness:"
 msgstr "Helderheid:"
 
-#: ../src/Plug.vala:228
+#: ../src/Plug.vala:225
 msgid "Automatically adjust brightness:"
 msgstr "Pas de helderheid automatisch aan:"
 
-#: ../src/Plug.vala:246
+#: ../src/Plug.vala:243
 msgid "When lid is closed:"
-msgstr "Wanneer het deksel dichtgeklapt is:"
+msgstr "wanneer laptop is dicht geklapt"
 
-#: ../src/Plug.vala:251
+#: ../src/Plug.vala:248
 msgid "When lid is closed with external monitor:"
 msgstr "Wanneer deksel dicht is met extern beeldscherm aangesloten:"
 
-#: ../src/Plug.vala:287
+#: ../src/Plug.vala:284
 msgid "Turn off display when inactive for:"
 msgstr "Schakel het scherm uit wanneer het inactief is voor:"
 
-#: ../src/Plug.vala:295
+#: ../src/Plug.vala:292
 msgid "Power button:"
 msgstr "Aan-/uit-knop:"
 
-#: ../src/Plug.vala:328
-msgid "Sleep when inactive for:"
-msgstr "Zet computer in slaapstand wanneer het inactief is voor:"
+#: ../src/Plug.vala:325
+msgid "Suspend when inactive for:"
+msgstr ""
 
-#: ../src/Plug.vala:344
+#: ../src/Plug.vala:341
 msgid "Dim display when inactive:"
 msgstr "Dim het scherm wanneer het inactief is:"
-
-#: ../src/Translations.vala:21
-msgid "Manage power settings "
-msgstr "Beheer stroom instellingen "
-
-#: ../src/Translations.vala:22
-msgid "Authentication is required to manage power settings"
-msgstr ""
-"administrator rechten zijn nodig voor het beheren van stroom instellingen"
-
-#: ../src/TimeoutComboBox.vala:42
-msgid "Never"
-msgstr "Nooit"
-
-#: ../src/TimeoutComboBox.vala:43
-msgid "5 min"
-msgstr "5 min"
-
-#: ../src/TimeoutComboBox.vala:44
-msgid "10 min"
-msgstr "10 min"
-
-#: ../src/TimeoutComboBox.vala:45
-msgid "15 min"
-msgstr "15 min"
-
-#: ../src/TimeoutComboBox.vala:46
-msgid "30 min"
-msgstr "30 min"
-
-#: ../src/TimeoutComboBox.vala:47
-msgid "45 min"
-msgstr "45 min"
-
-#: ../src/TimeoutComboBox.vala:48
-msgid "1 hour"
-msgstr "1 uur"
-
-#: ../src/TimeoutComboBox.vala:49
-msgid "2 hours"
-msgstr "2 uur"
-
-#: ../src/ActionComboBox.vala:37 ../src/LidCloseActionComboBox.vala:37
-msgid "Do nothing"
-msgstr "Doe niets"
-
-#: ../src/ActionComboBox.vala:38 ../src/LidCloseActionComboBox.vala:33
-msgid "Suspend"
-msgstr "Pauzestand"
-
-#: ../src/ActionComboBox.vala:39
-msgid "Hibernate"
-msgstr "Slaapstand"
-
-#: ../src/LidCloseActionComboBox.vala:34
-msgid "Shutdown"
-msgstr "Afsluiten"
-
-#: ../src/LidCloseActionComboBox.vala:35
-msgid "Lock"
-msgstr "Vergrendelen"
-
-#: ../src/LidCloseActionComboBox.vala:36
-msgid "Halt"
-msgstr "Stoppen"
-
-#: ../src/LidCloseActionComboBox.vala:39
-msgid "Not supported"
-msgstr "Niet ondersteund"
