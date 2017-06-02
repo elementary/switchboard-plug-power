@@ -18,10 +18,9 @@
  */
 
 namespace Power {
-
-    GLib.Settings settings;
-    Gtk.Grid stack_container;
-    Gtk.Grid main_grid;
+    private GLib.Settings settings;
+    private Gtk.Grid stack_container;
+    private Gtk.Grid main_grid;
 
     public class Plug : Switchboard.Plug {
         private Gtk.SizeGroup label_size;
@@ -37,39 +36,102 @@ namespace Power {
         private Gtk.Scale scale;
 
         private const string NO_PERMISSION_STRING  = _("You do not have permission to change this");
-        private const string LAPTOP_DETECT_BINARY = "/usr/sbin/laptop-detect";
+        private const string LAPTOP_DETECT_NAME = "laptop-detect";
+        private const string SETTINGS_DAEMON_NAME = "org.gnome.SettingsDaemon";
+        private const string SETTINGS_DAEMON_PATH = "/org/gnome/SettingsDaemon/Power";
+
+        construct {
+            settings = new GLib.Settings ("org.gnome.settings-daemon.plugins.power");
+            pantheon_dpms_settings = new GLib.Settings ("org.pantheon.dpms");
+
+            battery = new Battery ();
+            power_supply = new PowerSupply ();
+            cli_communicator = new CliCommunicator ();
+
+            connect_to_settings_daemon ();            
+        }
 
         public Plug () {
-            var switchboard_settings = new Gee.TreeMap<string, string?> (null, null);
-            switchboard_settings.set ("power", "null");
+            var supported_settings = new Gee.TreeMap<string, string?> (null, null);
+            supported_settings["power"] = null;
+
             Object (category: Category.HARDWARE,
                 code_name: "system-pantheon-power",
                 display_name: _("Power"),
                 description: _("Configure display brightness, power buttons, and sleep behavior"),
                 icon: "preferences-system-power",
-                supported_settings: switchboard_settings);
-
-            settings = new GLib.Settings ("org.gnome.settings-daemon.plugins.power");
-            pantheon_dpms_settings = new GLib.Settings ("org.pantheon.dpms");
-            battery = new Battery ();
-            power_supply = new PowerSupply ();
-            cli_communicator = new CliCommunicator ();
-            connect_dbus ();
+                supported_settings: supported_settings);
         }
 
         public override Gtk.Widget get_widget () {
             if (stack_container == null) {
-                setup_ui ();
+                stack_container = new Gtk.Grid ();
+                stack_container.orientation = Gtk.Orientation.VERTICAL;
+
+                label_size = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
+
+                var info_bars = create_info_bars ();
+
+                main_grid = new Gtk.Grid ();
+                main_grid.margin = 24;
+                main_grid.column_spacing = 12;
+                main_grid.row_spacing = 12;
+
+                create_common_settings ();
+
+                var stack = new Gtk.Stack ();
+
+                var plug_grid = create_notebook_pages (true);
+                stack.add_titled (plug_grid, "ac", _("Plugged In"));
+
+                stack_container.add (info_bars);
+
+                stack_switcher = new Gtk.StackSwitcher ();
+                stack_switcher.stack = stack;
+
+                if (laptop_detect () || battery.laptop) {
+                    Gtk.Grid battery_grid = create_notebook_pages (false);
+                    stack.add_titled (battery_grid, "battery", _("On Battery"));
+
+                    var left_sep = new Gtk.Separator (Gtk.Orientation.HORIZONTAL);
+                    left_sep.hexpand = true;
+
+                    var right_sep = new Gtk.Separator (Gtk.Orientation.HORIZONTAL);
+                    right_sep.hexpand = true;
+
+                    var switcher_grid = new Gtk.Grid ();
+                    switcher_grid.margin_top = 24;
+                    switcher_grid.margin_bottom = 12;
+                    switcher_grid.add (left_sep);
+                    switcher_grid.add (stack_switcher);
+                    switcher_grid.add (right_sep);
+
+                    main_grid.attach (switcher_grid, 0, 7, 2, 1);
+                }
+
+                main_grid.attach (stack, 0, 8, 2, 1);
+                stack_container.add (main_grid);
+
+                stack_container.margin_bottom = 12;
+                stack_container.show_all ();
+
+                // hide stack switcher if we only have ac line
+                stack_switcher.visible = stack.get_children ().length () > 1;
             }
 
             return stack_container;
         }
 
         public override void shown () {
+            var stack = stack_switcher.get_stack ();
+            if (stack == null) {
+                return;
+            }
+
             if (battery.check_present ()) {
-                stack_switcher.get_stack ().visible_child_name = "battery";
+                stack.visible_child_name = "battery";
             } else {
-                stack_switcher.get_stack ().visible_child_name = "ac";
+                stack.visible_child_name = "ac";
             }
         }
 
@@ -97,100 +159,49 @@ namespace Power {
             return search_results;;
         }
 
-        private void setup_ui () {
-            stack_container = new Gtk.Grid ();
-            stack_container.orientation = Gtk.Orientation.VERTICAL;
-
-            label_size = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
-
-            Gtk.Grid info_bars = create_info_bars ();
-
-            main_grid = new Gtk.Grid ();
-            main_grid.margin = 24;
-            main_grid.column_spacing = 12;
-            main_grid.row_spacing = 12;
-
-            create_common_settings ();
-
-            Gtk.Stack stack = new Gtk.Stack ();
-
-            Gtk.Grid plug_grid = create_notebook_pages (true);
-            stack.add_titled (plug_grid, "ac", _("Plugged In"));
-
-            stack_container.add (info_bars);
-
-            stack_switcher = new Gtk.StackSwitcher ();
-            stack_switcher.stack = stack;
-
-            if (laptop_detect () || battery.laptop) {
-                Gtk.Grid battery_grid = create_notebook_pages (false);
-                stack.add_titled (battery_grid, "battery", _("On Battery"));
-
-                var left_sep = new Gtk.Separator (Gtk.Orientation.HORIZONTAL);
-                left_sep.hexpand = true;
-
-                var right_sep = new Gtk.Separator (Gtk.Orientation.HORIZONTAL);
-                right_sep.hexpand = true;
-
-                var switcher_grid = new Gtk.Grid ();
-                switcher_grid.margin_top = 24;
-                switcher_grid.margin_bottom = 12;
-                switcher_grid.add (left_sep);
-                switcher_grid.add (stack_switcher);
-                switcher_grid.add (right_sep);
-
-                main_grid.attach (switcher_grid, 0, 7, 2, 1);
-            }
-
-            main_grid.attach (stack, 0, 8, 2, 1);
-            stack_container.add (main_grid);
-
-            stack_container.margin_bottom = 12;
-            stack_container.show_all ();
-
-            // hide stack switcher if we only have ac line
-            stack_switcher.visible = stack.get_children ().length () > 1;
-        }
-
-        private void connect_dbus () {
+        private void connect_to_settings_daemon () {
             try {
-                screen = Bus.get_proxy_sync (BusType.SESSION, "org.gnome.SettingsDaemon",
-                    "/org/gnome/SettingsDaemon/Power", DBusProxyFlags.GET_INVALIDATED_PROPERTIES);
+                screen = Bus.get_proxy_sync (BusType.SESSION, SETTINGS_DAEMON_NAME,
+                    SETTINGS_DAEMON_PATH, DBusProxyFlags.GET_INVALIDATED_PROPERTIES);
             } catch (IOError e) {
                 warning ("Failed to get settings daemon for brightness setting");
             }
         }
 
         private Gtk.Grid create_info_bars () {
-            Gtk.Grid info_grid = new Gtk.Grid ();
+            var info_grid = new Gtk.Grid ();
             info_grid.column_homogeneous = true;
 
-            Gtk.InfoBar infobar = new Gtk.InfoBar ();
+            var infobar = new Gtk.InfoBar ();
             infobar.message_type = Gtk.MessageType.WARNING;
             infobar.no_show_all = true;
-            var content = infobar.get_content_area () as Gtk.Container;
-            Gtk.Label label = new Gtk.Label (_("Some changes will not take effect until you restart this computer"));
-            content.add (label);
             infobar.hide ();
+
+            var label = new Gtk.Label (_("Some changes will not take effect until you restart this computer"));
+
+            var content = infobar.get_content_area () as Gtk.Container;
+            content.add (label);
 
             cli_communicator.changed.connect (() => {
                 infobar.no_show_all = false;
-                infobar.show_all();
-
+                infobar.show_all ();
             });
 
-            Gtk.InfoBar permission_infobar = new Gtk.InfoBar ();
+            var permission_infobar = new Gtk.InfoBar ();
             permission_infobar.message_type = Gtk.MessageType.INFO;
 
+            var permission = get_permission ();
+
             var area_infobar = permission_infobar.get_action_area () as Gtk.Container;
-            var lock_button = new Gtk.LockButton (get_permission ());
+            var lock_button = new Gtk.LockButton (permission);
             area_infobar.add (lock_button);
 
             var content_infobar = permission_infobar.get_content_area () as Gtk.Container;
-            Gtk.Label label_infobar = new Gtk.Label (_("Some settings require administrator rights to be changed"));
+            var label_infobar = new Gtk.Label (_("Some settings require administrator rights to be changed"));
             content_infobar.add (label_infobar);
 
             if (laptop_detect () || battery.laptop) {
+                permission_infobar.no_show_all = false;
                 permission_infobar.show_all ();
             } else {
                 permission_infobar.no_show_all = true;
@@ -198,8 +209,8 @@ namespace Power {
             }
 
             //connect polkit permission to hiding the permission infobar
-            get_permission ().notify["allowed"].connect (() => {
-                if (get_permission ().allowed) {
+            permission.notify["allowed"].connect (() => {
+                if (permission.allowed) {
                     permission_infobar.no_show_all = true;
                     permission_infobar.hide ();
                 }
@@ -253,9 +264,11 @@ namespace Power {
                 lid_dock_box.label.sensitive = false;
                 label_size.add_widget (lid_dock_box.label);
 
+                var permission = get_permission ();
+
                 // lock and UI visible that settings are locked and unlocked
-                get_permission ().notify["allowed"].connect (() => {
-                    if (get_permission ().allowed) {
+                permission.notify["allowed"].connect (() => {
+                    if (permission.allowed) {
                         lid_closed_box.sensitive = true;
                         lid_closed_box.label.sensitive = true;
                         lid_dock_box.sensitive = true;
@@ -311,7 +324,7 @@ namespace Power {
         }
 
         private void on_screen_properties_changed (Variant changed_properties, string[] invalidated_properties) {
-            var changed_brightness = changed_properties.lookup_value("Brightness", new VariantType("i"));
+            var changed_brightness = changed_properties.lookup_value ("Brightness", new VariantType ("i"));
             if (changed_brightness != null) {
                 var val = screen.brightness;
                 scale.value_changed.disconnect (on_scale_value_changed);
@@ -334,7 +347,7 @@ namespace Power {
                 type = "ac";
             }
 
-            var scale_settings = @"sleep-inactive-$type-timeout";
+            var scale_settings = @"sleep-inactive-%s-timeout".printf (type);
             var sleep_timeout = new TimeoutComboBox (settings, scale_settings);
 
             grid.attach (sleep_timeout_label, 0, 1, 1, 1);
@@ -351,47 +364,38 @@ namespace Power {
 
                 grid.attach (dim_label, 0, 0, 1, 1);
                 grid.attach (dim_switch, 1, 0, 1, 1);
-
-            } else if (battery.laptop) {
-
             }
 
             return grid;
         }
 
-        private bool laptop_detect () {
-            string? laptop_detect_executable = Environment.find_program_in_path ("laptop-detect");
-            if (laptop_detect_executable == null ||
-                !FileUtils.test (laptop_detect_executable, FileTest.IS_EXECUTABLE) ||
-                !FileUtils.test (LAPTOP_DETECT_BINARY, FileTest.IS_EXECUTABLE)) {
-                warning ("Laptop detect not found");
+        private static bool laptop_detect () {
+            string? laptop_detect_executable = Environment.find_program_in_path (LAPTOP_DETECT_NAME);
+            if (laptop_detect_executable == null) {
+                warning ("laptop-detect not found");
                 return false;
             }
 
             int exit_status;
-            string standard_output, standard_error;
+
             try {
-                Process.spawn_command_line_sync (laptop_detect_executable, out standard_output,
-                    out standard_error, out exit_status);
+                Process.spawn_command_line_sync (laptop_detect_executable, null, null, out exit_status);
                 if (exit_status == 0) {
-                    debug ("Laptop detect returned true");
+                    debug ("Detected a laptop");
                     return true;
                 }
             } catch (SpawnError err) {
                 warning (err.message);
-                return false;
             }
 
-            debug ("Laptop detect returned false");
             return false;
         }
 
-        private void run_dpms_helper () {
-            Settings.sync ();
-
+        private static void run_dpms_helper () {
             try {
-                Process.spawn_async (null, { "elementary-dpms-helper" }, Environ.get (),
-                    SpawnFlags.SEARCH_PATH|SpawnFlags.STDERR_TO_DEV_NULL|SpawnFlags.STDOUT_TO_DEV_NULL,
+                string[] argv = { "elementary-dpms-helper" };
+                Process.spawn_async (null, argv, Environ.get (),
+                    SpawnFlags.SEARCH_PATH | SpawnFlags.STDERR_TO_DEV_NULL | SpawnFlags.STDOUT_TO_DEV_NULL,
                     null, null);
             } catch (SpawnError e) {
                 warning ("Failed to reset dpms settings: %s", e.message);
