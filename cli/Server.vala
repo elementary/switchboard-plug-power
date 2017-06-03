@@ -37,6 +37,7 @@ public class LoginDHelper.Server : Object {
     [DBus (visible = false)]
     public signal void reset_timeout ();
 
+    public signal void changed ();
 
     private bool _present = false;
     public bool present { 
@@ -85,6 +86,7 @@ public class LoginDHelper.Server : Object {
 
         try {
             file.save_to_file (CONFIG_FILE);
+            changed ();
         } catch (Error e) {
             throw e;
         }

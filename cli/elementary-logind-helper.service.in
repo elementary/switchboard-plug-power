@@ -1,8 +1,0 @@
-[Unit]
-Description=Logind helper
-
-[Service]
-Type=dbus
-Restart=on-failure
-BusName=io.elementary.logind.helper
-ExecStart=@PKGDATADIR@/@CLI_EXEC_NAME@

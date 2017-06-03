@@ -9,7 +9,6 @@ link_directories (${CLI_DEPS_LIBRARY_DIRS})
 
 set (CLI_EXEC_NAME logind-helper)
 configure_file (io.elementary.logind.helper.service.in ${CMAKE_CURRENT_BINARY_DIR}/io.elementary.logind.helper.service)
-configure_file (elementary-logind-helper.service.in ${CMAKE_CURRENT_BINARY_DIR}/elementary-logind-helper.service)
 
 vala_precompile (CLI_VALA_C ${CLI_EXEC_NAME}
     main.vala
@@ -24,6 +23,5 @@ add_executable(${CLI_EXEC_NAME} ${CLI_VALA_C})
 target_link_libraries (${CLI_EXEC_NAME} ${CLI_DEPS_LIBRARIES})
 
 install (TARGETS ${CLI_EXEC_NAME} DESTINATION ${PKGDATADIR})
-install (FILES ${CMAKE_CURRENT_BINARY_DIR}/elementary-logind-helper.service DESTINATION /lib/systemd/system)
 install (FILES ${CMAKE_CURRENT_BINARY_DIR}/io.elementary.logind.helper.service DESTINATION share/dbus-1/system-services)
 install (FILES io.elementary.logind.helper.conf DESTINATION /etc/dbus-1/system.d)

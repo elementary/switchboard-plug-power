@@ -28,6 +28,7 @@ namespace Power {
         public abstract bool present { get; }
         public abstract void set_key (string key, string value) throws IOError;
         public abstract string get_key (string key) throws IOError;
+        public signal void changed ();
     }
 
     [DBus (name = "org.gnome.SettingsDaemon.Power.Screen")]
