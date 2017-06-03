@@ -254,12 +254,12 @@ namespace Power {
                 scale.value_changed.connect (on_scale_value_changed);
                 (screen as DBusProxy).g_properties_changed.connect (on_screen_properties_changed);
 
-                var lid_closed_box = new LidCloseActionComboBox (_("When lid is closed:"), cli_communicator);
+                var lid_closed_box = new LidCloseActionComboBox (_("When lid is closed:"), cli_communicator, false);
                 lid_closed_box.sensitive = false;
                 lid_closed_box.label.sensitive = false;
                 label_size.add_widget (lid_closed_box.label);
 
-                var lid_dock_box = new LidCloseActionComboBox (_("When lid is closed with external monitor:"), cli_communicator);
+                var lid_dock_box = new LidCloseActionComboBox (_("When lid is closed with external monitor:"), cli_communicator, true);
                 lid_dock_box.sensitive = false;
                 lid_dock_box.label.sensitive = false;
                 label_size.add_widget (lid_dock_box.label);

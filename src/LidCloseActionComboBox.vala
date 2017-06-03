@@ -21,13 +21,16 @@ namespace Power {
     class LidCloseActionComboBox : Gtk.ComboBoxText {
 
         public Gtk.Label label;
+        private bool dock;
         private CliCommunicator cli_communicator;
 
-        public LidCloseActionComboBox (string label_name, CliCommunicator cli_comm) {
+        public LidCloseActionComboBox (string label_name, CliCommunicator cli_comm, bool dock) {
             cli_communicator = cli_comm;
             label = new Gtk.Label (label_name);
             label.halign = Gtk.Align.END;
             ((Gtk.Misc) label).xalign = 1.0f;
+
+            this.dock = dock;
 
             if (cli_communicator.supported) {
                 append_text (_("Suspend"));
@@ -47,7 +50,7 @@ namespace Power {
         private void update_action () {
             CliCommunicator.Action action = get_action ();
             debug ("action:%s",action.to_string());
-            if (label.label.contains ("dock")) {
+            if (dock) {
                 cli_communicator.set_action_state(action, true);
             } else {
                 cli_communicator.set_action_state (action, false);
@@ -56,7 +59,7 @@ namespace Power {
         }
 
         private void set_current_action () {
-            if (label.label.contains ("docked")) {
+            if (dock) {
                 set_active_item (cli_communicator.lid_close_dock);
             } else {
                 set_active_item (cli_communicator.lid_close);
