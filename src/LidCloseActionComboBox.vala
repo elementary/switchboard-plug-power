@@ -75,17 +75,22 @@ namespace Power {
             }
 
             Utils.Action action;
-            try {
-                if (dock) {
+            if (dock) {
+                try {
                     string val = helper.get_key (HANDLE_LID_SWITCH_DOCKED_KEY);
                     action = Utils.Action.from_string (val);
-                } else {
+                } catch (Error e) {
+                    // Default in logind.conf
+                    action = Utils.Action.IGNORE;
+                }
+            } else {
+                try {
                     string val = helper.get_key (HANDLE_LID_SWITCH_KEY);
                     action = Utils.Action.from_string (val);
+                } catch (Error e) {
+                    // Default in logind.conf
+                    action = Utils.Action.SUSPEND;
                 }
-            } catch (Error e) {
-                // Default in logind.conf
-                action = Utils.Action.IGNORE;
             }
 
             set_active_item (action);
