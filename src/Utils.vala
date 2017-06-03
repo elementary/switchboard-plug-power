@@ -18,7 +18,7 @@
  */
 
 namespace Power {
-	public class Utils {
+    public class Utils {
         public enum Action {
             IGNORE,
             POWEROFF,
@@ -28,20 +28,20 @@ namespace Power {
             UNKNOWN;
 
             public static Action from_string (string str) {
-	            switch (str) {
-	                case "ignore":
-	                    return Utils.Action.IGNORE;
-	                case "poweroff":
-	                    return Utils.Action.POWEROFF;
-	                case "lock":
-	                    return Utils.Action.LOCK;
-	                case "suspend":
-	                    return Utils.Action.SUSPEND;
-	                case "halt":
-	                    return Utils.Action.HALT;
-	                default:
-	                    return Utils.Action.UNKNOWN;
-	            }
+                switch (str) {
+                    case "ignore":
+                        return Utils.Action.IGNORE;
+                    case "poweroff":
+                        return Utils.Action.POWEROFF;
+                    case "lock":
+                        return Utils.Action.LOCK;
+                    case "suspend":
+                        return Utils.Action.SUSPEND;
+                    case "halt":
+                        return Utils.Action.HALT;
+                    default:
+                        return Utils.Action.UNKNOWN;
+                }
             }
 
             public string to_string () {
@@ -57,22 +57,22 @@ namespace Power {
                     case Action.HALT:
                         return "halt";
                     default:
-                    	return "unknown";
+                        return "unknown";
                 }
             }
         }
 
-		private static LogindHelper? instance;
-		public static unowned LogindHelper? get_logind_helper () {
-			if (instance == null) {
-				try {
-					instance = Bus.get_proxy_sync (BusType.SYSTEM, LOGIND_HELPER_NAME, LOGIND_HELPER_OBJECT_PATH);
-				} catch (Error e) {
-					warning (e.message);
-				}
-			}
+        private static LogindHelper? instance;
+        public static unowned LogindHelper? get_logind_helper () {
+            if (instance == null) {
+                try {
+                    instance = Bus.get_proxy_sync (BusType.SYSTEM, LOGIND_HELPER_NAME, LOGIND_HELPER_OBJECT_PATH);
+                } catch (Error e) {
+                    warning (e.message);
+                }
+            }
 
-			return instance;
-		}
-	}
+            return instance;
+        }
+    }
 }
