@@ -49,17 +49,20 @@ namespace Power {
         }
 
         private void on_changed () {
-            Utils.Action action = get_action ();
-
             var helper = Utils.get_logind_helper ();
             if (helper == null) {
                 return;
             }
 
-            if (dock) {
-                helper.set_key (HANDLE_LID_SWITCH_DOCKED_KEY, action.to_string ());
-            } else {
-                helper.set_key (HANDLE_LID_SWITCH_KEY, action.to_string ());
+            Utils.Action action = get_action ();
+            try {
+                if (dock) {
+                    helper.set_key (HANDLE_LID_SWITCH_DOCKED_KEY, action.to_string ());
+                } else {
+                    helper.set_key (HANDLE_LID_SWITCH_KEY, action.to_string ());
+                }
+            } catch (IOError e) {
+                warning (e.message);
             }
 
             update_current_action ();
@@ -71,29 +74,21 @@ namespace Power {
                 return;
             }
 
-            if (dock) {
-                Utils.Action action;
-                try {
+            Utils.Action action;
+            try {
+                if (dock) {
                     string val = helper.get_key (HANDLE_LID_SWITCH_DOCKED_KEY);
                     action = Utils.Action.from_string (val);
-                } catch (Error e) {
-                    // Default in logind.conf
-                    action = Utils.Action.IGNORE;
-                }
-
-                set_active_item (action);
-            } else {
-                Utils.Action action;
-                try {
+                } else {
                     string val = helper.get_key (HANDLE_LID_SWITCH_KEY);
                     action = Utils.Action.from_string (val);
-                } catch (Error e) {
-                    // Default in logind.conf
-                    action = Utils.Action.SUSPEND;
                 }
-
-                set_active_item (action);
+            } catch (Error e) {
+                // Default in logind.conf
+                action = Utils.Action.IGNORE;
             }
+
+            set_active_item (action);
         }
 
         private Utils.Action get_action () {
