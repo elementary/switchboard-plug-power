@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-23 07:34-0500\n"
-"PO-Revision-Date: 2017-06-01 20:20+0000\n"
+"PO-Revision-Date: 2017-06-03 21:13+0000\n"
 "Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-power/nl/>\n"
@@ -19,8 +19,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.14\n"
 "X-Launchpad-Export-Date: 2016-11-21 05:42+0000\n"
-"X-Generator: Launchpad (build 18269)\n"
-"Language: nl\n"
 
 #: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:38
 msgid "Suspend"
@@ -176,9 +174,7 @@ msgstr ""
 
 #: ../src/Plug.vala:187
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
-"Voor sommige instellingen zijn administrator bevoegdheden nodig om ze te "
-"verranderen"
+msgstr "Sommige instellingen vereisen beheerdersrechten om te worden gewijzigd"
 
 #: ../src/Plug.vala:220
 msgid "Display brightness:"
@@ -190,7 +186,7 @@ msgstr "Pas de helderheid automatisch aan:"
 
 #: ../src/Plug.vala:243
 msgid "When lid is closed:"
-msgstr "wanneer laptop is dicht geklapt"
+msgstr "Wanneer laptop is dichtgeklapt:"
 
 #: ../src/Plug.vala:248
 msgid "When lid is closed with external monitor:"
@@ -206,7 +202,7 @@ msgstr "Aan-/uit-knop:"
 
 #: ../src/Plug.vala:325
 msgid "Suspend when inactive for:"
-msgstr ""
+msgstr "Naar slaapstand wanneer inactief voor:"
 
 #: ../src/Plug.vala:341
 msgid "Dim display when inactive:"
