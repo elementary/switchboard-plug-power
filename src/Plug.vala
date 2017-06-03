@@ -30,7 +30,6 @@ namespace Power {
         private PowerSettings screen;
         private Battery battery;
         private PowerSupply power_supply;
-        private CliCommunicator cli_communicator;
         private Gtk.Image lock_image;
         private Gtk.Image lock_image2;
         private Gtk.Scale scale;
@@ -46,7 +45,6 @@ namespace Power {
 
             battery = new Battery ();
             power_supply = new PowerSupply ();
-            cli_communicator = new CliCommunicator ();
 
             connect_to_settings_daemon ();            
         }
@@ -182,11 +180,6 @@ namespace Power {
             var content = infobar.get_content_area () as Gtk.Container;
             content.add (label);
 
-            cli_communicator.changed.connect (() => {
-                infobar.no_show_all = false;
-                infobar.show_all ();
-            });
-
             var permission_infobar = new Gtk.InfoBar ();
             permission_infobar.message_type = Gtk.MessageType.INFO;
 
@@ -230,7 +223,7 @@ namespace Power {
             lock_image2.tooltip_text = NO_PERMISSION_STRING;
             lock_image2.sensitive = false;
 
-            if (laptop_detect () || battery.laptop) {
+            //if (laptop_detect () || battery.laptop) {
                 var brightness_label = new Gtk.Label (_("Display brightness:"));
                 ((Gtk.Misc) brightness_label).xalign = 1.0f;
                 label_size.add_widget (brightness_label);
@@ -254,12 +247,12 @@ namespace Power {
                 scale.value_changed.connect (on_scale_value_changed);
                 (screen as DBusProxy).g_properties_changed.connect (on_screen_properties_changed);
 
-                var lid_closed_box = new LidCloseActionComboBox (_("When lid is closed:"), cli_communicator);
+                var lid_closed_box = new LidCloseActionComboBox (_("When lid is closed:"), false);
                 lid_closed_box.sensitive = false;
                 lid_closed_box.label.sensitive = false;
                 label_size.add_widget (lid_closed_box.label);
 
-                var lid_dock_box = new LidCloseActionComboBox (_("When lid is closed with external monitor:"), cli_communicator);
+                var lid_dock_box = new LidCloseActionComboBox (_("When lid is closed with external monitor:"), true);
                 lid_dock_box.sensitive = false;
                 lid_dock_box.label.sensitive = false;
                 label_size.add_widget (lid_dock_box.label);
@@ -295,7 +288,7 @@ namespace Power {
                 main_grid.attach (lid_dock_box.label, 0, 6, 1, 1);
                 main_grid.attach (lid_dock_box, 1, 6, 1, 1);
                 main_grid.attach (lock_image, 2, 6, 1, 1);
-            }
+            //}
 
             var screen_timeout_label = new Gtk.Label (_("Turn off display when inactive for:"));
             screen_timeout_label.halign = Gtk.Align.END;

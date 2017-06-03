@@ -19,17 +19,21 @@
 
 namespace Power {
     class LidCloseActionComboBox : Gtk.ComboBoxText {
+        private const string HANDLE_LID_SWITCH_DOCKED_KEY = "HandleLidSwitchDocked";
+        private const string HANDLE_LID_SWITCH_KEY = "HandleLidSwitch";
 
         public Gtk.Label label;
-        private CliCommunicator cli_communicator;
+        private bool dock;
 
-        public LidCloseActionComboBox (string label_name, CliCommunicator cli_comm) {
-            cli_communicator = cli_comm;
+        public LidCloseActionComboBox (string label_name, bool dock) {
             label = new Gtk.Label (label_name);
             label.halign = Gtk.Align.END;
             ((Gtk.Misc) label).xalign = 1.0f;
 
-            if (cli_communicator.supported) {
+            this.dock = dock;
+
+            var helper = Utils.get_logind_helper ();
+            if (helper != null && helper.present) {
                 append_text (_("Suspend"));
                 append_text (_("Shutdown"));
                 append_text (_("Lock"));
@@ -40,74 +44,91 @@ namespace Power {
             }
 
             hexpand = true;
-            set_current_action ();
-            changed.connect (update_action);
+            update_current_action ();
+            changed.connect (on_changed);
         }
 
-        private void update_action () {
-            CliCommunicator.Action action = get_action ();
-            debug ("action:%s",action.to_string());
-            if (label.label.contains ("dock")) {
-                cli_communicator.set_action_state(action, true);
-            } else {
-                cli_communicator.set_action_state (action, false);
+        private void on_changed () {
+            Utils.Action action = get_action ();
+
+            var helper = Utils.get_logind_helper ();
+            if (helper == null) {
+                return;
             }
-            set_current_action ();
+
+            if (dock) {
+                helper.set_key (HANDLE_LID_SWITCH_DOCKED_KEY, action.to_string ());
+            } else {
+                helper.set_key (HANDLE_LID_SWITCH_KEY, action.to_string ());
+            }
+
+            update_current_action ();
         }
 
-        private void set_current_action () {
-            if (label.label.contains ("docked")) {
-                set_active_item (cli_communicator.lid_close_dock);
+        private void update_current_action () {
+            var helper = Utils.get_logind_helper ();
+            if (helper == null) {
+                return;
+            }
+
+            if (dock) {
+                Utils.Action action;
+                try {
+                    string val = helper.get_key (HANDLE_LID_SWITCH_DOCKED_KEY);
+                    action = Utils.Action.from_string (val);
+                } catch (Error e) {
+                    // Default in logind.conf
+                    action = Utils.Action.IGNORE;
+                }
+
+                set_active_item (action);
             } else {
-                set_active_item (cli_communicator.lid_close);
+                Utils.Action action;
+                try {
+                    string val = helper.get_key (HANDLE_LID_SWITCH_KEY);
+                    action = Utils.Action.from_string (val);
+                } catch (Error e) {
+                    // Default in logind.conf
+                    action = Utils.Action.SUSPEND;
+                }
+
+                set_active_item (action);
             }
         }
 
-        private CliCommunicator.Action get_action () {
-            CliCommunicator.Action action = CliCommunicator.Action.NOT_SUPPORTED;
-            debug ("active:%d", active);
+        private Utils.Action get_action () {
             switch (active) {
                 case 0:
-                    action  = CliCommunicator.Action.SUSPEND;
-                    break;
+                    return Utils.Action.SUSPEND;
                 case 1:
-                    action  = CliCommunicator.Action.POWEROFF;
-                    break;
+                    return Utils.Action.POWEROFF;
                 case 2:
-                    action  = CliCommunicator.Action.LOCK;
-                    break;
+                    return Utils.Action.LOCK;
                 case 3:
-                    action  = CliCommunicator.Action.HALT;
-                    break;
+                    return Utils.Action.HALT;
                 case 4:
-                    action  = CliCommunicator.Action.IGNORE;
-                    break;
+                    return Utils.Action.IGNORE;
                 default:
-                    break;
+                    return Utils.Action.UNKNOWN;
             }
-
-            return action;
         }
 
-        private void set_active_item (CliCommunicator.Action action) {
+        private void set_active_item (Utils.Action action) {
             switch (action) {
-                case CliCommunicator.Action.SUSPEND:
+                case Utils.Action.SUSPEND:
                     active = 0;
                     break;
-                case CliCommunicator.Action.POWEROFF:
+                case Utils.Action.POWEROFF:
                     active = 1;
                     break;
-                case CliCommunicator.Action.LOCK:
+                case Utils.Action.LOCK:
                     active = 2;
                     break;
-                case CliCommunicator.Action.HALT:
+                case Utils.Action.HALT:
                     active = 3;
                     break;
-                case CliCommunicator.Action.IGNORE:
+                case Utils.Action.IGNORE:
                     active = 4;
-                    break;
-                case CliCommunicator.Action.NOT_SUPPORTED: // see constructor
-                    active = 0;
                     break;
                 default:
                     break;
