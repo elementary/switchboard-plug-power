@@ -31,8 +31,9 @@ public class LoginDHelper.Server : Object {
     private const string CONFIG_GROUP = "Login";
     private const string ACTION_ID = "org.pantheon.switchboard.power.administration";
 
+    private static DBus? bus_proxy = null;
+
     private KeyFile file;
-    private DBus? bus_proxy = null;
 
     [DBus (visible = false)]
     public signal void reset_timeout ();
@@ -58,15 +59,17 @@ public class LoginDHelper.Server : Object {
         return instance;
     }
 
-    construct {
-        file = new KeyFile ();
-
+    static construct {
         try {
             bus_proxy = Bus.get_proxy_sync (BusType.SYSTEM, "org.freedesktop.DBus", "/");
         } catch (Error e) {
             warning (e.message);
             bus_proxy = null;
-        }
+        }        
+    }
+
+    construct {
+        file = new KeyFile ();
 
         try {
             _present = file.load_from_file (CONFIG_FILE, KeyFileFlags.KEEP_COMMENTS);
@@ -107,7 +110,7 @@ public class LoginDHelper.Server : Object {
         return CONFIG_FILE;
     }
 
-    private bool get_sender_is_authorized (BusName sender) {
+    private static bool get_sender_is_authorized (BusName sender) {
         if (bus_proxy == null) {
             return false;
         }
@@ -115,10 +118,11 @@ public class LoginDHelper.Server : Object {
         uint32 user = 0, pid = 0;
 
         try {
-            pid = get_pid_from_sender (sender);
+            pid = bus_proxy.get_connection_unix_process_id (sender);
             user = bus_proxy.get_connection_unix_user (sender);
         } catch (Error e) {
             warning (e.message);
+            return false;
         }            
 
         var subject = new Polkit.UnixProcess.for_owner ((int)pid, 0, (int)user);
@@ -132,17 +136,5 @@ public class LoginDHelper.Server : Object {
         }
 
         return false;
-    }
-
-    private uint32 get_pid_from_sender (BusName sender) {
-        uint32 pid = 0;
-
-        try {
-            pid = bus_proxy.get_connection_unix_process_id (sender);
-        } catch (Error e) {
-            warning (e.message);
-        }   
-
-        return pid;
-    }    
+    } 
 }
