@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-23 07:34-0500\n"
-"PO-Revision-Date: 2017-06-01 21:16+0000\n"
+"PO-Revision-Date: 2017-06-07 13:26+0000\n"
 "Last-Translator: Corentin Noël <corentin@elementary.io>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-power/fr/>\n"
@@ -19,8 +19,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 2.14\n"
 "X-Launchpad-Export-Date: 2016-12-20 04:54+0000\n"
-"X-Generator: Launchpad (build 18298)\n"
-"Language: fr\n"
 
 #: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:38
 msgid "Suspend"
@@ -188,7 +186,7 @@ msgstr "Luminosité de l'écran :"
 
 #: ../src/Plug.vala:225
 msgid "Automatically adjust brightness:"
-msgstr "Ajuster automatiquement la luminosité"
+msgstr "Ajuster automatiquement la luminosité :"
 
 #: ../src/Plug.vala:243
 msgid "When lid is closed:"
