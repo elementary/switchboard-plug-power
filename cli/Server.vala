@@ -90,8 +90,8 @@ public class LoginDHelper.Server : Object {
      *
      * Sets the @key to @value in the logind config file (that is /etc/systemd/logind.conf)
      *
-     * In order for this method to succeed, the caller must be first granted the 
-     * org.pantheon.switchboard.power.administration policy permission, otherwise
+     * In order for this method to succeed, the caller must be already granted the 
+     * org.pantheon.switchboard.power.administration policy PolicyKit permission, otherwise
      * the method will throw an error and exit
      *
      * When the @key was successfully set, the changed () signal will be emitted
