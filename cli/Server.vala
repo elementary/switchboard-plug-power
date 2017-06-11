@@ -38,6 +38,11 @@ public class LoginDHelper.Server : Object {
     [DBus (visible = false)]
     public signal void reset_timeout ();
 
+    /**
+     * changed:
+     *
+     * Emitted when a call to set_key () succeeded
+     */
     public signal void changed ();
 
     private bool _present = false;
@@ -78,6 +83,19 @@ public class LoginDHelper.Server : Object {
         }
     }
 
+    /**
+     * set_key:
+     * @key: the key to set
+     * @value: the value that key will be set with
+     *
+     * Sets the @key to @value in the logind config file (that is /etc/systemd/logind.conf)
+     *
+     * In order for this method to succeed, the caller must be first granted the 
+     * org.pantheon.switchboard.power.administration policy permission, otherwise
+     * the method will throw an error and exit
+     *
+     * When the @key was successfully set, the changed () signal will be emitted
+     */
     public void set_key (string key, string value, BusName sender) throws Error {
         reset_timeout ();
 
@@ -95,6 +113,16 @@ public class LoginDHelper.Server : Object {
         }
     }
 
+    /**
+     * get_key:
+     * @key: the key to retrieve
+     *
+     * Returns the value of @key in the logind config file (that is /etc/systemd/logind.conf)
+     *
+     * If the @key does not exist, an error will be thrown
+     *
+     * Returns: the value for the @key
+     */
     public string get_key (string key) throws Error {
         reset_timeout ();
 
@@ -105,6 +133,12 @@ public class LoginDHelper.Server : Object {
         }
     }
 
+    /**
+     * get_config_file:
+     *
+     * Gets a full path to the current used logind config file (at the moment this
+     * will always return "/etc/systemd/logind.conf")
+     */
     public string get_config_file () {
         reset_timeout ();
         return CONFIG_FILE;
