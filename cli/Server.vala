@@ -33,8 +33,6 @@ public class LoginDHelper.Server : Object {
     private const string CONFIG_GROUP = "Login";
     private const string ACTION_ID = "org.pantheon.switchboard.power.administration";
 
-    private static Power.DBus? bus_proxy = null;
-
     private KeyFile file;
 
     private bool _present = false;
@@ -46,6 +44,7 @@ public class LoginDHelper.Server : Object {
     }
 
     private static Server? instance = null;
+    private static Power.DBus? bus_proxy = null;
 
     [DBus (visible = false)]
     public static unowned Server get_default () {
