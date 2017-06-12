@@ -13,6 +13,7 @@ configure_file (io.elementary.logind.helper.service.in ${CMAKE_CURRENT_BINARY_DI
 vala_precompile (CLI_VALA_C ${CLI_EXEC_NAME}
     main.vala
     Server.vala
+    ../src/Interfaces.vala
 PACKAGES
     glib-2.0
     gio-2.0

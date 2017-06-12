@@ -32,7 +32,7 @@ namespace Power {
 
             this.dock = dock;
 
-            var helper = Utils.get_logind_helper ();
+            var helper = LogindHelper.get_logind_helper ();
             if (helper != null && helper.present) {
                 append_text (_("Suspend"));
                 append_text (_("Shutdown"));
@@ -49,12 +49,12 @@ namespace Power {
         }
 
         private void on_changed () {
-            var helper = Utils.get_logind_helper ();
+            var helper = LogindHelper.get_logind_helper ();
             if (helper == null) {
                 return;
             }
 
-            Utils.Action action = get_action ();
+            LogindHelper.Action action = get_action ();
             try {
                 if (dock) {
                     helper.set_key (HANDLE_LID_SWITCH_DOCKED_KEY, action.to_string ());
@@ -69,65 +69,65 @@ namespace Power {
         }
 
         private void update_current_action () {
-            var helper = Utils.get_logind_helper ();
+            var helper = LogindHelper.get_logind_helper ();
             if (helper == null) {
                 return;
             }
 
-            Utils.Action action;
+            LogindHelper.Action action;
             if (dock) {
                 try {
                     string val = helper.get_key (HANDLE_LID_SWITCH_DOCKED_KEY);
-                    action = Utils.Action.from_string (val);
+                    action = LogindHelper.Action.from_string (val);
                 } catch (Error e) {
                     // Default in logind.conf
-                    action = Utils.Action.IGNORE;
+                    action = LogindHelper.Action.IGNORE;
                 }
             } else {
                 try {
                     string val = helper.get_key (HANDLE_LID_SWITCH_KEY);
-                    action = Utils.Action.from_string (val);
+                    action = LogindHelper.Action.from_string (val);
                 } catch (Error e) {
                     // Default in logind.conf
-                    action = Utils.Action.SUSPEND;
+                    action = LogindHelper.Action.SUSPEND;
                 }
             }
 
             set_active_item (action);
         }
 
-        private Utils.Action get_action () {
+        private LogindHelper.Action get_action () {
             switch (active) {
                 case 0:
-                    return Utils.Action.SUSPEND;
+                    return LogindHelper.Action.SUSPEND;
                 case 1:
-                    return Utils.Action.POWEROFF;
+                    return LogindHelper.Action.POWEROFF;
                 case 2:
-                    return Utils.Action.LOCK;
+                    return LogindHelper.Action.LOCK;
                 case 3:
-                    return Utils.Action.HALT;
+                    return LogindHelper.Action.HALT;
                 case 4:
-                    return Utils.Action.IGNORE;
+                    return LogindHelper.Action.IGNORE;
                 default:
-                    return Utils.Action.UNKNOWN;
+                    return LogindHelper.Action.UNKNOWN;
             }
         }
 
-        private void set_active_item (Utils.Action action) {
+        private void set_active_item (LogindHelper.Action action) {
             switch (action) {
-                case Utils.Action.SUSPEND:
+                case LogindHelper.Action.SUSPEND:
                     active = 0;
                     break;
-                case Utils.Action.POWEROFF:
+                case LogindHelper.Action.POWEROFF:
                     active = 1;
                     break;
-                case Utils.Action.LOCK:
+                case LogindHelper.Action.LOCK:
                     active = 2;
                     break;
-                case Utils.Action.HALT:
+                case LogindHelper.Action.HALT:
                     active = 3;
                     break;
-                case Utils.Action.IGNORE:
+                case LogindHelper.Action.IGNORE:
                     active = 4;
                     break;
                 default:

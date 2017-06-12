@@ -175,7 +175,7 @@ namespace Power {
             infobar.no_show_all = true;
             infobar.hide ();
 
-            var helper = Utils.get_logind_helper ();
+            var helper = LogindHelper.get_logind_helper ();
             if (helper != null) {
                 helper.changed.connect (() => {
                     infobar.no_show_all = false;

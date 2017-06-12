@@ -22,7 +22,7 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     LidCloseActionComboBox.vala
     TimeoutComboBox.vala
     Permission.vala
-    Utils.vala
+    LogindHelper.vala
     ${CMAKE_CURRENT_BINARY_DIR}/config.vala
 PACKAGES
     gtk+-3.0

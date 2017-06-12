@@ -18,15 +18,12 @@
  */
 
 public class LoginDHelper.Application : GLib.Application {
-    private const string IFACE_NAME = "io.elementary.logind.helper";
-    private const string OBJECT_PATH = "/io/elementary/logind/helper";
-
     private const uint ACTIVE_TIMEOUT_SECONDS = 5;
     private uint timeout_id = 0;
     private uint own_id = -1;
 
     construct {
-        application_id = IFACE_NAME;
+        application_id = Power.LOGIND_HELPER_NAME;
     }
 
     private void on_bus_lost (DBusConnection connection, string name) {
@@ -38,7 +35,7 @@ public class LoginDHelper.Application : GLib.Application {
         server.reset_timeout.connect (on_reset_timeout);
 
         try {
-            connection.register_object (OBJECT_PATH, server);
+            connection.register_object (Power.LOGIND_HELPER_OBJECT_PATH, server);
         } catch (IOError e) {
             warning (e.message);
         }
@@ -60,9 +57,9 @@ public class LoginDHelper.Application : GLib.Application {
     }
 
     public override void activate () {
-        own_id = Bus.own_name (BusType.SYSTEM, IFACE_NAME, BusNameOwnerFlags.REPLACE,
+        own_id = Bus.own_name (BusType.SYSTEM, Power.LOGIND_HELPER_NAME, BusNameOwnerFlags.REPLACE,
                     on_bus_acquired,
-                    () => {},
+                    null,
                     on_bus_lost);
         hold ();
     }

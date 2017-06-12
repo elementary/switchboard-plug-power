@@ -17,24 +17,8 @@
  * Boston, MA  02110-1301, USA.
  */
 
-[DBus (name = "org.freedesktop.DBus")]
-private interface DBus : Object {
-    [DBus (name = "GetConnectionUnixProcessID")]
-    public abstract uint32 get_connection_unix_process_id (string name) throws IOError;
-    
-    public abstract uint32 get_connection_unix_user (string name) throws IOError;
-}
-
 [DBus (name = "io.elementary.logind.helper")]
 public class LoginDHelper.Server : Object {
-    private const string CONFIG_FILE = "/etc/systemd/logind.conf";
-    private const string CONFIG_GROUP = "Login";
-    private const string ACTION_ID = "org.pantheon.switchboard.power.administration";
-
-    private static DBus? bus_proxy = null;
-
-    private KeyFile file;
-
     [DBus (visible = false)]
     public signal void reset_timeout ();
 
@@ -44,6 +28,14 @@ public class LoginDHelper.Server : Object {
      * Emitted when a call to set_key () succeeded
      */
     public signal void changed ();
+
+    private const string CONFIG_FILE = "/etc/systemd/logind.conf";
+    private const string CONFIG_GROUP = "Login";
+    private const string ACTION_ID = "org.pantheon.switchboard.power.administration";
+
+    private static Power.DBus? bus_proxy = null;
+
+    private KeyFile file;
 
     private bool _present = false;
     public bool present { 

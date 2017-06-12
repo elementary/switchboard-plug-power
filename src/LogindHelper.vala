@@ -18,7 +18,7 @@
  */
 
 namespace Power {
-    public class Utils {
+    public class LogindHelper {
         public enum Action {
             IGNORE,
             POWEROFF,
@@ -30,17 +30,17 @@ namespace Power {
             public static Action from_string (string str) {
                 switch (str) {
                     case "ignore":
-                        return Utils.Action.IGNORE;
+                        return Action.IGNORE;
                     case "poweroff":
-                        return Utils.Action.POWEROFF;
+                        return Action.POWEROFF;
                     case "lock":
-                        return Utils.Action.LOCK;
+                        return Action.LOCK;
                     case "suspend":
-                        return Utils.Action.SUSPEND;
+                        return Action.SUSPEND;
                     case "halt":
-                        return Utils.Action.HALT;
+                        return Action.HALT;
                     default:
-                        return Utils.Action.UNKNOWN;
+                        return Action.UNKNOWN;
                 }
             }
 
@@ -62,8 +62,8 @@ namespace Power {
             }
         }
 
-        private static LogindHelper? instance;
-        public static unowned LogindHelper? get_logind_helper () {
+        private static LogindHelperIface? instance;
+        public static unowned LogindHelperIface? get_logind_helper () {
             if (instance == null) {
                 try {
                     instance = Bus.get_proxy_sync (BusType.SYSTEM, LOGIND_HELPER_NAME, LOGIND_HELPER_OBJECT_PATH);
