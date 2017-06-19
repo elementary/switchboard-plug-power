@@ -1,0 +1,4 @@
+[D-BUS Service]
+Name=io.elementary.logind.helper
+Exec=@PKGDATADIR@/@CLI_EXEC_NAME@
+User=root

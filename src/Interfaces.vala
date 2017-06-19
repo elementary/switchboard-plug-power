@@ -20,6 +20,24 @@
 namespace Power {
     public const string DBUS_UPOWER_NAME = "org.freedesktop.UPower";
     public const string DBUS_UPOWER_PATH = "/org/freedesktop/UPower";
+    public const string LOGIND_HELPER_NAME = "io.elementary.logind.helper";
+    public const string LOGIND_HELPER_OBJECT_PATH = "/io/elementary/logind/helper";
+
+    [DBus (name = "org.freedesktop.DBus")]
+    public interface DBus : Object {
+        [DBus (name = "GetConnectionUnixProcessID")]
+        public abstract uint32 get_connection_unix_process_id (string name) throws IOError;
+        
+        public abstract uint32 get_connection_unix_user (string name) throws IOError;
+    }
+
+    [DBus (name = "io.elementary.logind.helper")]
+    public interface LogindHelperIface : Object {
+        public abstract bool present { get; }
+        public abstract void set_key (string key, string value) throws IOError;
+        public abstract string get_key (string key) throws IOError;
+        public signal void changed ();
+    }
 
     [DBus (name = "org.gnome.SettingsDaemon.Power.Screen")]
     interface PowerSettings : GLib.Object {

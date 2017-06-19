@@ -18,11 +18,11 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Battery.vala
     Interfaces.vala
     PowerSupply.vala
-    CliCommunicator.vala
     ActionComboBox.vala
     LidCloseActionComboBox.vala
     TimeoutComboBox.vala
     Permission.vala
+    LogindHelper.vala
     ${CMAKE_CURRENT_BINARY_DIR}/config.vala
 PACKAGES
     gtk+-3.0

@@ -17,52 +17,63 @@
  * Boston, MA  02110-1301, USA.
  */
 
-namespace systemd {
+public class LoginDHelper.Application : GLib.Application {
+    private const uint ACTIVE_TIMEOUT_SECONDS = 5;
+    private uint timeout_id = 0;
+    private uint own_id = -1;
 
-    private Systemd systemd;
-
-    public static int main (string[] args) {
-        systemd = new Systemd ();
-
-        if (!systemd.present) {
-            printerr ("Systemd is not present\n");
-            return Posix.EXIT_FAILURE;
-        }
-
-        if (args.length < 2) {
-            printerr ("command are needed: show / lid_action <action> / dock_action <action>\n");
-            return Posix.EXIT_FAILURE;
-        }
-
-        if (args[1] == "show") {
-            print_supported ();
-            print ("dock:"+systemd.get_key ("HandleLidSwitchDocked")+":\n");
-            print ("lid:"+systemd.get_key ("HandleLidSwitch")+":\n");
-        } else if (args.length > 2) {
-            var uid = Posix.getuid ();
-
-            if (uid > 0) {
-                printerr ("Must be run from administrative context\n");
-                return Posix.EXIT_FAILURE;
-            }
-
-            if (args[1] == "lid_action") {
-                systemd.set_key ("HandleLidSwitch", args[2]);
-                print ("success\n");
-            } else if (args[1] == "dock_action") {
-                systemd.set_key ("HandleLidSwitchDocked", args[2]);
-                print ("success\n");
-            }
-        }
-
-        return Posix.EXIT_SUCCESS;
+    construct {
+        application_id = Power.LOGIND_HELPER_NAME;
     }
 
-    private void print_supported () {
-        if (!systemd.present) {
-            print ("not supported:\n");
-        } else {
-            print ("supported:\n");
+    private void on_bus_lost (DBusConnection connection, string name) {
+        warning ("Could not acquire name: %s", name);
+    }
+
+    private void on_bus_acquired (DBusConnection connection) {
+        var server = Server.get_default ();
+        server.reset_timeout.connect (on_reset_timeout);
+
+        try {
+            connection.register_object (Power.LOGIND_HELPER_OBJECT_PATH, server);
+        } catch (IOError e) {
+            warning (e.message);
         }
+
+        on_reset_timeout ();
+    }
+
+    private void on_reset_timeout () {
+        if (timeout_id > 0) {
+            Source.remove (timeout_id);
+            timeout_id = 0;
+        }
+
+        timeout_id = Timeout.add_seconds (ACTIVE_TIMEOUT_SECONDS, () => {
+            timeout_id = 0;
+            release ();
+            return false;
+        });
+    }
+
+    public override void activate () {
+        own_id = Bus.own_name (BusType.SYSTEM, Power.LOGIND_HELPER_NAME, BusNameOwnerFlags.REPLACE,
+                    on_bus_acquired,
+                    null,
+                    on_bus_lost);
+        hold ();
+    }
+
+    public override void shutdown () {
+        if (own_id != -1) {
+            Bus.unown_name (own_id);
+        }
+
+        base.shutdown ();
+    }
+
+    public static int main (string[] args) {
+        var app = new Application ();
+        return app.run (args);
     }
 }
