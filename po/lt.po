@@ -3,14 +3,18 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-20 16:38-0600\n"
-"PO-Revision-Date: 2016-11-27 18:22+0000\n"
+"PO-Revision-Date: 2017-06-04 14:19+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: Lithuanian <https://l10n.elementary.io/projects/switchboard"
+"/switchboard-plug-power/lt/>\n"
+"Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"(n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 2.14\n"
 "X-Launchpad-Export-Date: 2016-11-28 05:41+0000\n"
-"X-Generator: Launchpad (build 18282)\n"
 
 #: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:38
 msgid "Suspend"
@@ -120,19 +124,19 @@ msgstr "Maitinimo mygtukas"
 
 #: ../src/Plug.vala:86
 msgid "Display inactive"
-msgstr ""
+msgstr "Ekranas neaktyvus"
 
 #: ../src/Plug.vala:87
 msgid "Dim display"
-msgstr ""
+msgstr "Užtemdyti ekraną"
 
 #: ../src/Plug.vala:88
 msgid "Lid close"
-msgstr ""
+msgstr "Dangtis uždarytas"
 
 #: ../src/Plug.vala:89
 msgid "Display brightness"
-msgstr ""
+msgstr "Ekrano ryškumas"
 
 #: ../src/Plug.vala:90
 msgid "Automatic brightness adjustment"
@@ -140,15 +144,15 @@ msgstr "Automatinis ryškumo reguliavimas"
 
 #: ../src/Plug.vala:91
 msgid "Inactive display off"
-msgstr ""
+msgstr "Ekrano išjungimas esant neveiklumui"
 
 #: ../src/Plug.vala:92
 msgid "Docked lid close"
-msgstr ""
+msgstr "Nešiojamojo kompiuterio dangtis uždarytas"
 
 #: ../src/Plug.vala:93
 msgid "Sleep inactive"
-msgstr ""
+msgstr "Miegas esant neveiklumui"
 
 #: ../src/Plug.vala:115
 msgid "Plugged In"

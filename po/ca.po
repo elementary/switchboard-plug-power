@@ -8,15 +8,17 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-20 16:38-0600\n"
-"PO-Revision-Date: 2016-12-14 17:52+0000\n"
-"Last-Translator: Davidmp <rbndavid@gmail.com>\n"
-"Language-Team: Catalan <ca@li.org>\n"
+"PO-Revision-Date: 2017-06-06 16:22+0000\n"
+"Last-Translator: David M <rbndavid@gmail.com>\n"
+"Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard"
+"/switchboard-plug-power/ca/>\n"
+"Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.14\n"
 "X-Launchpad-Export-Date: 2016-12-15 04:52+0000\n"
-"X-Generator: Launchpad (build 18293)\n"
-"Language: ca\n"
 
 #: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:38
 msgid "Suspend"
@@ -60,7 +62,7 @@ msgstr "10 min"
 
 #: ../src/TimeoutComboBox.vala:45
 msgid "15 min"
-msgstr "15 mins."
+msgstr "15 min."
 
 #: ../src/TimeoutComboBox.vala:46
 msgid "30 min"
@@ -68,7 +70,7 @@ msgstr "30 min"
 
 #: ../src/TimeoutComboBox.vala:47
 msgid "45 min"
-msgstr "45 mins."
+msgstr "45 min."
 
 #: ../src/TimeoutComboBox.vala:48
 msgid "1 hour"
@@ -172,11 +174,11 @@ msgstr "Alguns canvis no tindran efecte fins que reinicieu l'ordinador."
 #: ../src/Plug.vala:187
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
-"Alguns paràmetres necessiten permisos d'administrador per ser modificats."
+"Alguns paràmetres necessiten permisos d'administrador per ser modificats"
 
 #: ../src/Plug.vala:220
 msgid "Display brightness:"
-msgstr "Brillantor de la pantalla"
+msgstr "Brillantor de la pantalla:"
 
 #: ../src/Plug.vala:225
 msgid "Automatically adjust brightness:"
