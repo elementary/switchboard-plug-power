@@ -8,14 +8,18 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-11-20 16:38-0600\n"
-"PO-Revision-Date: 2016-12-10 08:14+0000\n"
-"Last-Translator: Jernej Virag <Unknown>\n"
-"Language-Team: Slovenian <sl@li.org>\n"
+"PO-Revision-Date: 2017-07-01 13:03+0000\n"
+"Last-Translator: Jernej Virag <jernej@virag.si>\n"
+"Language-Team: Slovenian <https://l10n.elementary.io/projects/switchboard"
+"/switchboard-plug-power/sl/>\n"
+"Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 2.14\n"
 "X-Launchpad-Export-Date: 2016-12-11 05:17+0000\n"
-"X-Generator: Launchpad (build 18292)\n"
 
 #: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:38
 msgid "Suspend"
@@ -148,7 +152,7 @@ msgstr "Izklop neaktivnega zaslona"
 
 #: ../src/Plug.vala:92
 msgid "Docked lid close"
-msgstr "Zaprtje pokrova na postaji:"
+msgstr "Zaprje pokrova na postaji"
 
 #: ../src/Plug.vala:93
 msgid "Sleep inactive"
@@ -164,7 +168,7 @@ msgstr "Na bateriji"
 
 #: ../src/Plug.vala:169
 msgid "Some changes will not take effect until you restart this computer"
-msgstr "Nekatere spremembe bodo vidne samo po ponovnem zagonu sistema."
+msgstr "Nekatere spremembe bodo vidne samo po ponovnem zagonu sistema"
 
 #: ../src/Plug.vala:187
 msgid "Some settings require administrator rights to be changed"
@@ -172,7 +176,7 @@ msgstr "Za spreminjanje nekaterih nastavitev so potrebne skrbniške pravice"
 
 #: ../src/Plug.vala:220
 msgid "Display brightness:"
-msgstr "Svetlost zaslona"
+msgstr "Svetlost zaslona:"
 
 #: ../src/Plug.vala:225
 msgid "Automatically adjust brightness:"
@@ -180,11 +184,11 @@ msgstr "Samodejno prilagajanje svetlosti:"
 
 #: ../src/Plug.vala:243
 msgid "When lid is closed:"
-msgstr "Ko je pokrov zaprt:"
+msgstr "Ob zaprtju pokrova:"
 
 #: ../src/Plug.vala:248
 msgid "When lid is closed with external monitor:"
-msgstr "Ko je pokrov zaprt, zunanji zaslon:"
+msgstr "Ob zaprtju pokrova s priključenim zunanjim zaslonom:"
 
 #: ../src/Plug.vala:284
 msgid "Turn off display when inactive for:"
@@ -192,12 +196,12 @@ msgstr "Ob nedejavnosti izklopi zaslon po:"
 
 #: ../src/Plug.vala:292
 msgid "Power button:"
-msgstr "Gumb za vklop:"
+msgstr "Ob pritisku gumba za vklop:"
 
 #: ../src/Plug.vala:325
 msgid "Suspend when inactive for:"
-msgstr "Pošlji v pripravljenost ob nedejavnosti:"
+msgstr "Ob nedejavnosti v spanje po:"
 
 #: ../src/Plug.vala:341
 msgid "Dim display when inactive:"
-msgstr "Zatemni zaslon pri nedejavnosti:"
+msgstr "Ob nedejavnosti zatemni zaslon:"
