@@ -31,7 +31,7 @@ PACKAGES
     polkit-gobject-1
     posix
 OPTIONS
-    --vapidir=${CMAKE_CURRENT_SOURCE_DIR}/../vapi/
+    --vapidir=${CMAKE_SOURCE_DIR}/vapi/
     --thread
 	${VALA_DEFINED_VAR}
 )
