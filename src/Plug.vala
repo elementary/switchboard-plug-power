@@ -85,6 +85,7 @@ namespace Power {
                 stack_container.add (info_bars);
 
                 stack_switcher = new Gtk.StackSwitcher ();
+                stack_switcher.homogeneous = true;
                 stack_switcher.stack = stack;
 
                 if (laptop_detect () || battery.laptop) {
