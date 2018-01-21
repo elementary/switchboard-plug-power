@@ -39,7 +39,7 @@ namespace Power {
         private const string SETTINGS_DAEMON_NAME = "org.gnome.SettingsDaemon";
         private const string SETTINGS_DAEMON_PATH = "/org/gnome/SettingsDaemon/Power";
 
-       construct {
+        construct {
             settings = new GLib.Settings ("org.gnome.settings-daemon.plugins.power");
             pantheon_dpms_settings = new GLib.Settings ("org.pantheon.dpms");
 
@@ -157,7 +157,7 @@ namespace Power {
             search_results.set ("%s → %s".printf (display_name, _("Sleep inactive")), "");
             return search_results;;
         }
-       private void connect_to_settings_daemon () {
+        private void connect_to_settings_daemon () {
             try {
                 screen = Bus.get_proxy_sync (BusType.SESSION, SETTINGS_DAEMON_NAME,
                     SETTINGS_DAEMON_PATH, DBusProxyFlags.GET_INVALIDATED_PROPERTIES);
