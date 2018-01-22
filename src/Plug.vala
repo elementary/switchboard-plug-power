@@ -376,7 +376,8 @@ namespace Power {
         private static bool lid_detect () {
             var lid_path = File.new_for_path ("/proc/acpi/button/lid/");
             var enumerator = lid_path.enumerate_children (
-                GLib.FileAttribute.STANDARD_NAME, 0);
+                GLib.FileAttribute.STANDARD_NAME,
+                FileQueryInfoFlags.NONE);
             try {
                 FileInfo lid;
                 if ((lid = enumerator.next_file ()) != null) {
@@ -393,7 +394,8 @@ namespace Power {
         private static bool backlight_detect () {
             var backlight_path = File.new_for_path ("/sys/class/backlight/");
             var enumerator = backlight_path.enumerate_children (
-                GLib.FileAttribute.STANDARD_NAME, 0);
+                GLib.FileAttribute.STANDARD_NAME,
+                FileQueryInfoFlags.NONE);
             try {
                 FileInfo bl;
                 if ((bl = enumerator.next_file ()) != null) {
