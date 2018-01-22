@@ -39,7 +39,7 @@ namespace Power {
         private const string SETTINGS_DAEMON_NAME = "org.gnome.SettingsDaemon";
         private const string SETTINGS_DAEMON_PATH = "/org/gnome/SettingsDaemon/Power";
 
-        construct {
+       construct {
             settings = new GLib.Settings ("org.gnome.settings-daemon.plugins.power");
             pantheon_dpms_settings = new GLib.Settings ("org.pantheon.dpms");
 
@@ -157,7 +157,7 @@ namespace Power {
             search_results.set ("%s → %s".printf (display_name, _("Sleep inactive")), "");
             return search_results;;
         }
-        private void connect_to_settings_daemon () {
+       private void connect_to_settings_daemon () {
             try {
                 screen = Bus.get_proxy_sync (BusType.SESSION, SETTINGS_DAEMON_NAME,
                     SETTINGS_DAEMON_PATH, DBusProxyFlags.GET_INVALIDATED_PROPERTIES);
@@ -231,8 +231,7 @@ namespace Power {
             lock_image2.tooltip_text = NO_PERMISSION_STRING;
             lock_image2.sensitive = false;
 
-            if (laptop_detect () || battery.laptop) {
-                if (backlight_detect ()) {
+            if (backlight_detect()) {
                     var brightness_label = new Gtk.Label (_("Display brightness:"));
                     ((Gtk.Misc) brightness_label).xalign = 1.0f;
                     label_size.add_widget (brightness_label);
@@ -260,8 +259,9 @@ namespace Power {
                     main_grid.attach (scale, 1, 0, 1, 1);
                     main_grid.attach (als_label, 0, 1, 1, 1);
                     main_grid.attach (als_switch, 1, 1, 1, 1);
-                }
+            }
 
+            if (lid_detect()){
                 var lid_closed_box = new LidCloseActionComboBox (_("When lid is closed:"), false);
                 lid_closed_box.sensitive = false;
                 lid_closed_box.label.sensitive = false;
