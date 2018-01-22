@@ -46,7 +46,7 @@ namespace Power {
             battery = new Battery ();
             power_supply = new PowerSupply ();
 
-            connect_to_settings_daemon ();            
+            connect_to_settings_daemon ();
         }
 
         public Plug () {
@@ -232,30 +232,37 @@ namespace Power {
             lock_image2.tooltip_text = NO_PERMISSION_STRING;
             lock_image2.sensitive = false;
 
-            if (laptop_detect () || battery.laptop) {
-                var brightness_label = new Gtk.Label (_("Display brightness:"));
-                ((Gtk.Misc) brightness_label).xalign = 1.0f;
-                label_size.add_widget (brightness_label);
-                brightness_label.halign = Gtk.Align.END;
+            if (backlight_detect()) {
+                    var brightness_label = new Gtk.Label (_("Display brightness:"));
+                    ((Gtk.Misc) brightness_label).xalign = 1.0f;
+                    label_size.add_widget (brightness_label);
+                    brightness_label.halign = Gtk.Align.END;
 
-                var als_label = new Gtk.Label (_("Automatically adjust brightness:"));
-                ((Gtk.Misc) als_label).xalign = 1.0f;
-                label_size.add_widget (als_label);
-                var als_switch = new Gtk.Switch ();
-                als_switch.halign = Gtk.Align.START;
+                    var als_label = new Gtk.Label (_("Automatically adjust brightness:"));
+                    ((Gtk.Misc) als_label).xalign = 1.0f;
+                    label_size.add_widget (als_label);
+                    var als_switch = new Gtk.Switch ();
+                    als_switch.halign = Gtk.Align.START;
 
-                settings.bind ("ambient-enabled", als_switch, "active", SettingsBindFlags.DEFAULT);
+                    settings.bind ("ambient-enabled", als_switch, "active", SettingsBindFlags.DEFAULT);
 
-                scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 100, 10);
-                scale.draw_value = false;
-                scale.hexpand = true;
-                scale.width_request = 480;
+                    scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 100, 10);
+                    scale.draw_value = false;
+                    scale.hexpand = true;
+                    scale.width_request = 480;
 
-                scale.set_value (screen.brightness);
+                    scale.set_value (screen.brightness);
 
-                scale.value_changed.connect (on_scale_value_changed);
-                (screen as DBusProxy).g_properties_changed.connect (on_screen_properties_changed);
+                    scale.value_changed.connect (on_scale_value_changed);
+                    (screen as DBusProxy).g_properties_changed.connect (on_screen_properties_changed);
 
+                    main_grid.attach (brightness_label, 0, 0, 1, 1);
+                    main_grid.attach (scale, 1, 0, 1, 1);
+                    main_grid.attach (als_label, 0, 1, 1, 1);
+                    main_grid.attach (als_switch, 1, 1, 1, 1);
+            }
+
+            if (lid_detect()) {
                 var lid_closed_box = new LidCloseActionComboBox (_("When lid is closed:"), false);
                 lid_closed_box.sensitive = false;
                 lid_closed_box.label.sensitive = false;
@@ -287,10 +294,6 @@ namespace Power {
                     }
                 });
 
-                main_grid.attach (brightness_label, 0, 0, 1, 1);
-                main_grid.attach (scale, 1, 0, 1, 1);
-                main_grid.attach (als_label, 0, 1, 1, 1);
-                main_grid.attach (als_switch, 1, 1, 1, 1);
                 main_grid.attach (lid_closed_box.label, 0, 5, 1, 1);
                 main_grid.attach (lid_closed_box, 1, 5, 1, 1);
                 main_grid.attach (lock_image2, 2, 5, 1, 1);
@@ -355,7 +358,7 @@ namespace Power {
             grid.attach (sleep_timeout_label, 0, 1, 1, 1);
             grid.attach (sleep_timeout, 1, 1, 1, 1);
 
-            if (!ac) {
+            if (!ac && backlight_detect ()){
                 var dim_label = new Gtk.Label (_("Dim display when inactive:"));
                 ((Gtk.Misc) dim_label).xalign = 1.0f;
                 label_size.add_widget (dim_label);
@@ -367,8 +370,43 @@ namespace Power {
                 grid.attach (dim_label, 0, 0, 1, 1);
                 grid.attach (dim_switch, 1, 0, 1, 1);
             }
-
             return grid;
+        }
+
+        private static bool lid_detect () {
+            var lid_path = File.new_for_path ("/proc/acpi/button/lid/");
+            var enumerator = lid_path.enumerate_children (
+                GLib.FileAttribute.STANDARD_NAME,
+                FileQueryInfoFlags.NONE);
+            try {
+                FileInfo lid;
+                if ((lid = enumerator.next_file ()) != null) {
+                    debug ("Detected lid interface");
+                    return true;
+                }
+            } catch (SpawnError err) {
+                critical (err.message);
+            }
+
+            return false;
+        }
+
+        private static bool backlight_detect () {
+            var backlight_path = File.new_for_path ("/sys/class/backlight/");
+            var enumerator = backlight_path.enumerate_children (
+                GLib.FileAttribute.STANDARD_NAME,
+                FileQueryInfoFlags.NONE);
+            try {
+                FileInfo bl;
+                if ((bl = enumerator.next_file ()) != null) {
+                    debug ("Detected backlight interface");
+                    return true;
+                }
+            } catch (SpawnError err) {
+                critical (err.message);
+            }
+
+            return false;
         }
 
         private static bool laptop_detect () {
