@@ -357,7 +357,7 @@ namespace Power {
             grid.attach (sleep_timeout_label, 0, 1, 1, 1);
             grid.attach (sleep_timeout, 1, 1, 1, 1);
 
-            if (!ac && backlight_detect () ){
+            if (!ac && backlight_detect ()){
                 var dim_label = new Gtk.Label (_("Dim display when inactive:"));
                 ((Gtk.Misc) dim_label).xalign = 1.0f;
                 label_size.add_widget (dim_label);
