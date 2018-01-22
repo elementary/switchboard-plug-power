@@ -374,30 +374,32 @@ namespace Power {
 
         private static bool lid_detect () {
             var lid_path = File.new_for_path ("/proc/acpi/button/lid/");
-            var enumerator = lid_path.enumerate_children ("standard::*", 0);
+            var enumerator = lid_path.enumerate_children (
+                GLib.FileAttribute.STANDARD_NAME, 0);
             try {
-                FileInfo lid_file;
-                if ((lid_file = enumerator.next_file ()) != null) {
-                    debug ("Detected lid switch");
+                FileInfo lid;
+                if ((lid = enumerator.next_file ()) != null) {
+                    debug ("Detected lid interface");
                     return true;
                 }
-            }catch (SpawnError err) {
-                    warning (err.message);
+            } catch (SpawnError err) {
+                critical (err.message);
             }
             return false;
         }
 
         private static bool backlight_detect () {
             var backlight_path = File.new_for_path ("/sys/class/backlight/");
-            var enumerator = backlight_path.enumerate_children ("standard::*", 0);
+            var enumerator = backlight_path.enumerate_children (
+                GLib.FileAttribute.STANDARD_NAME, 0);
             try {
-                FileInfo bl_file;
-                if ((bl_file = enumerator.next_file ()) != null) {
+                FileInfo bl;
+                if ((bl = enumerator.next_file ()) != null) {
                     debug ("Detected backlight interface");
                     return true;
                 }
-            }catch (SpawnError err) {
-                    warning (err.message);
+            } catch (SpawnError err) {
+                critical (err.message);
             }
             return false;
         }
