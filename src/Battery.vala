@@ -29,7 +29,7 @@ namespace Power {
         construct {
             try {
                 upower = Bus.get_proxy_sync (BusType.SYSTEM, DBUS_UPOWER_NAME, DBUS_UPOWER_PATH, DBusProxyFlags.NONE);
-                dbus_upower_battery_path = get_dbus_path(upower);
+                dbus_upower_battery_path = get_dbus_path (upower);
                 if (dbus_upower_battery_path != "" && dbus_upower_battery_path != null) {
                     upower_device = Bus.get_proxy_sync (BusType.SYSTEM, DBUS_UPOWER_NAME, dbus_upower_battery_path, DBusProxyFlags.GET_INVALIDATED_PROPERTIES);
 
@@ -58,9 +58,11 @@ namespace Power {
         private string get_dbus_path (Upower upow) {
             string path = "";
             try {
-                ObjectPath[] devs = upow.enumerate_devices();
+                ObjectPath[] devs = upow.enumerate_devices ();
                 for (int i = 0; i < devs.length; i++) {
-                    if (devs[i].contains ("BAT")) {
+                    UpowerDevice device = Bus.get_proxy_sync (BusType.SYSTEM, DBUS_UPOWER_NAME, devs[i].to_string(), DBusProxyFlags.GET_INVALIDATED_PROPERTIES);
+
+                    if (device.device_type == 2) {
                         path = devs[i].to_string();
                         break;
                     }
