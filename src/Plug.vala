@@ -35,7 +35,6 @@ namespace Power {
         private Gtk.Scale scale;
 
         private const string NO_PERMISSION_STRING  = _("You do not have permission to change this");
-        private const string LAPTOP_DETECT_NAME = "laptop-detect";
         private const string SETTINGS_DAEMON_NAME = "org.gnome.SettingsDaemon";
         private const string SETTINGS_DAEMON_PATH = "/org/gnome/SettingsDaemon/Power";
 
@@ -88,7 +87,8 @@ namespace Power {
                 stack_switcher.homogeneous = true;
                 stack_switcher.stack = stack;
 
-                if (laptop_detect () || battery.laptop) {
+
+                if (battery_detect ()) {
                     Gtk.Grid battery_grid = create_notebook_pages (false);
                     stack.add_titled (battery_grid, "battery", _("On Battery"));
 
@@ -202,7 +202,7 @@ namespace Power {
             var label_infobar = new Gtk.Label (_("Some settings require administrator rights to be changed"));
             content_infobar.add (label_infobar);
 
-            if (laptop_detect () || battery.laptop) {
+            if (lid_detect ()) {
                 permission_infobar.no_show_all = false;
                 permission_infobar.show_all ();
             } else {
@@ -232,37 +232,37 @@ namespace Power {
             lock_image2.tooltip_text = NO_PERMISSION_STRING;
             lock_image2.sensitive = false;
 
-            if (backlight_detect()) {
-                    var brightness_label = new Gtk.Label (_("Display brightness:"));
-                    ((Gtk.Misc) brightness_label).xalign = 1.0f;
-                    label_size.add_widget (brightness_label);
-                    brightness_label.halign = Gtk.Align.END;
+            if (backlight_detect ()) {
+                var brightness_label = new Gtk.Label (_("Display brightness:"));
+                ((Gtk.Misc) brightness_label).xalign = 1.0f;
+                label_size.add_widget (brightness_label);
+                brightness_label.halign = Gtk.Align.END;
 
-                    var als_label = new Gtk.Label (_("Automatically adjust brightness:"));
-                    ((Gtk.Misc) als_label).xalign = 1.0f;
-                    label_size.add_widget (als_label);
-                    var als_switch = new Gtk.Switch ();
-                    als_switch.halign = Gtk.Align.START;
+                var als_label = new Gtk.Label (_("Automatically adjust brightness:"));
+                ((Gtk.Misc) als_label).xalign = 1.0f;
+                label_size.add_widget (als_label);
+                var als_switch = new Gtk.Switch ();
+                als_switch.halign = Gtk.Align.START;
 
-                    settings.bind ("ambient-enabled", als_switch, "active", SettingsBindFlags.DEFAULT);
+                settings.bind ("ambient-enabled", als_switch, "active", SettingsBindFlags.DEFAULT);
 
-                    scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 100, 10);
-                    scale.draw_value = false;
-                    scale.hexpand = true;
-                    scale.width_request = 480;
+                scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 100, 10);
+                scale.draw_value = false;
+                scale.hexpand = true;
+                scale.width_request = 480;
 
-                    scale.set_value (screen.brightness);
+                scale.set_value (screen.brightness);
 
-                    scale.value_changed.connect (on_scale_value_changed);
-                    (screen as DBusProxy).g_properties_changed.connect (on_screen_properties_changed);
+                scale.value_changed.connect (on_scale_value_changed);
+                (screen as DBusProxy).g_properties_changed.connect (on_screen_properties_changed);
 
-                    main_grid.attach (brightness_label, 0, 0, 1, 1);
-                    main_grid.attach (scale, 1, 0, 1, 1);
-                    main_grid.attach (als_label, 0, 1, 1, 1);
-                    main_grid.attach (als_switch, 1, 1, 1, 1);
+                main_grid.attach (brightness_label, 0, 0, 1, 1);
+                main_grid.attach (scale, 1, 0, 1, 1);
+                main_grid.attach (als_label, 0, 1, 1, 1);
+                main_grid.attach (als_switch, 1, 1, 1, 1);
             }
 
-            if (lid_detect()) {
+            if (lid_detect ()) {
                 var lid_closed_box = new LidCloseActionComboBox (_("When lid is closed:"), false);
                 lid_closed_box.sensitive = false;
                 lid_closed_box.label.sensitive = false;
@@ -374,58 +374,76 @@ namespace Power {
         }
 
         private static bool lid_detect () {
-            var lid_path = File.new_for_path ("/proc/acpi/button/lid/");
-            var enumerator = lid_path.enumerate_children (
+            var interface_path = File.new_for_path ("/proc/acpi/button/lid/");
+
+            try {
+                var enumerator = interface_path.enumerate_children (
                 GLib.FileAttribute.STANDARD_NAME,
                 FileQueryInfoFlags.NONE);
-            try {
                 FileInfo lid;
                 if ((lid = enumerator.next_file ()) != null) {
-                    debug ("Detected lid interface");
+                    debug ("Detected lid switch");
                     return true;
                 }
-            } catch (SpawnError err) {
-                critical (err.message);
+
+            enumerator.close ();
+
+            } catch (GLib.Error err) {
+                critical ("%s", err.message);
             }
 
             return false;
         }
 
         private static bool backlight_detect () {
-            var backlight_path = File.new_for_path ("/sys/class/backlight/");
-            var enumerator = backlight_path.enumerate_children (
+            var interface_path = File.new_for_path ("/sys/class/backlight/");
+
+            try {
+                var enumerator = interface_path.enumerate_children (
                 GLib.FileAttribute.STANDARD_NAME,
                 FileQueryInfoFlags.NONE);
-            try {
-                FileInfo bl;
-                if ((bl = enumerator.next_file ()) != null) {
+                FileInfo backlight;
+                if ((backlight = enumerator.next_file ()) != null) {
                     debug ("Detected backlight interface");
                     return true;
                 }
-            } catch (SpawnError err) {
-                critical (err.message);
+
+            enumerator.close ();
+
+            } catch (GLib.Error err) {
+                critical ("%s", err.message);
             }
 
             return false;
         }
 
-        private static bool laptop_detect () {
-            string? laptop_detect_executable = Environment.find_program_in_path (LAPTOP_DETECT_NAME);
-            if (laptop_detect_executable == null) {
-                warning ("laptop-detect not found");
-                return false;
-            }
-
-            int exit_status;
+        private static bool battery_detect () {
+            var interface_path = File.new_for_path ("/sys/class/power_supply/");
 
             try {
-                Process.spawn_command_line_sync (laptop_detect_executable, null, null, out exit_status);
-                if (exit_status == 0) {
-                    debug ("Detected a laptop");
-                    return true;
+                var enumerator = interface_path.enumerate_children (
+                GLib.FileAttribute.STANDARD_NAME,
+                FileQueryInfoFlags.NONE);
+                FileInfo power_supply;
+
+                while ((power_supply = enumerator.next_file ()) != null) {
+                    var supply = interface_path.resolve_relative_path (
+                        power_supply.get_name ());
+                    var supply_type = supply.get_child ("type");
+
+                    var dis = new DataInputStream(supply_type.read ());
+                    string type;
+                    if ((type = dis.read_line(null)) == "Battery") {
+                        debug ("Detected battery");
+                        return true;
+                    }
+                    continue;
                 }
-            } catch (SpawnError err) {
-                warning (err.message);
+
+            enumerator.close ();
+
+            } catch (GLib.Error err) {
+                critical ("%s", err.message);
             }
 
             return false;
