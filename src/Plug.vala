@@ -432,12 +432,12 @@ namespace Power {
                     var supply_type = supply.get_child ("type");
 
                     var dis = new DataInputStream(supply_type.read());
-		            string type;
-		            if(( type = dis.read_line(null)) == "Battery") {
+                    string type;
+                    if(( type = dis.read_line(null)) == "Battery") {
                         debug ("Detected battery");
                         return true;
                     }
-		            continue;
+                    continue;
                 }
 
             enumerator.close ();
