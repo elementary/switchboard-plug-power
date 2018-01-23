@@ -88,7 +88,7 @@ namespace Power {
                 stack_switcher.stack = stack;
 
 
-                if (battery_detect()) {
+                if (battery_detect ()) {
                     Gtk.Grid battery_grid = create_notebook_pages (false);
                     stack.add_titled (battery_grid, "battery", _("On Battery"));
 
@@ -202,7 +202,7 @@ namespace Power {
             var label_infobar = new Gtk.Label (_("Some settings require administrator rights to be changed"));
             content_infobar.add (label_infobar);
 
-            if (lid_detect()) {
+            if (lid_detect ()) {
                 permission_infobar.no_show_all = false;
                 permission_infobar.show_all ();
             } else {
@@ -232,7 +232,7 @@ namespace Power {
             lock_image2.tooltip_text = NO_PERMISSION_STRING;
             lock_image2.sensitive = false;
 
-            if (backlight_detect()) {
+            if (backlight_detect ()) {
                 var brightness_label = new Gtk.Label (_("Display brightness:"));
                 ((Gtk.Misc) brightness_label).xalign = 1.0f;
                 label_size.add_widget (brightness_label);
@@ -262,7 +262,7 @@ namespace Power {
                 main_grid.attach (als_switch, 1, 1, 1, 1);
             }
 
-            if (lid_detect()) {
+            if (lid_detect ()) {
                 var lid_closed_box = new LidCloseActionComboBox (_("When lid is closed:"), false);
                 lid_closed_box.sensitive = false;
                 lid_closed_box.label.sensitive = false;
@@ -431,9 +431,9 @@ namespace Power {
                         power_supply.get_name ());
                     var supply_type = supply.get_child ("type");
 
-                    var dis = new DataInputStream(supply_type.read());
+                    var dis = new DataInputStream(supply_type.read ());
                     string type;
-                    if((type = dis.read_line(null)) == "Battery") {
+                    if ((type = dis.read_line(null)) == "Battery") {
                         debug ("Detected battery");
                         return true;
                     }
