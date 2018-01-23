@@ -14,15 +14,15 @@ ensure_vala_version ("0.34.1" MINIMUM)
 include (ValaPrecompile)
 # Add all your vala files and requires packages to the List below to include them in the build
 vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
-    Plug.vala
     Battery.vala
     Interfaces.vala
-    PowerSupply.vala
-    ActionComboBox.vala
-    LidCloseActionComboBox.vala
-    TimeoutComboBox.vala
     Permission.vala
+    Plug.vala
+    PowerSupply.vala
     LogindHelper.vala
+    Widgets/ActionComboBox.vala
+    Widgets/LidCloseActionComboBox.vala
+    Widgets/TimeoutComboBox.vala
     ${CMAKE_CURRENT_BINARY_DIR}/config.vala
 PACKAGES
     gtk+-3.0
