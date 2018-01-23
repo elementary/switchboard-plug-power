@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2016 elementary LLC. (https://launchpad.net/switchboard-plug-power)
+ * Copyright (c) 2011-2018 elementary LLC. (https://elementary.io)
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -22,14 +22,9 @@ namespace Power {
         private const string HANDLE_LID_SWITCH_DOCKED_KEY = "HandleLidSwitchDocked";
         private const string HANDLE_LID_SWITCH_KEY = "HandleLidSwitch";
 
-        public Gtk.Label label;
         private bool dock;
 
-        public LidCloseActionComboBox (string label_name, bool dock) {
-            label = new Gtk.Label (label_name);
-            label.halign = Gtk.Align.END;
-            ((Gtk.Misc) label).xalign = 1.0f;
-
+        public LidCloseActionComboBox (bool dock) {
             this.dock = dock;
 
             var helper = LogindHelper.get_logind_helper ();
