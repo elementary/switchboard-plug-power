@@ -46,8 +46,10 @@ namespace Power {
 
         public bool check_present () {
             bool present = false;
-            if (upower.on_battery || upower_device.is_present) {
-                present = true;
+            if (laptop) {
+                if (upower.on_battery || upower_device.is_present) {
+                    present = true;
+                }
             }
 
             return present;
@@ -58,7 +60,7 @@ namespace Power {
             try {
                 ObjectPath[] devs = upow.enumerate_devices();
                 for (int i = 0; i < devs.length; i++) {
-                    if (devs[i].contains ("BAT0")) {
+                    if (devs[i].contains ("BAT")) {
                         path = devs[i].to_string();
                         break;
                     }
