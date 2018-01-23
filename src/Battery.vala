@@ -60,10 +60,10 @@ namespace Power {
             try {
                 ObjectPath[] devs = upow.enumerate_devices ();
                 for (int i = 0; i < devs.length; i++) {
-                    UpowerDevice device = Bus.get_proxy_sync (BusType.SYSTEM, DBUS_UPOWER_NAME, devs[i].to_string(), DBusProxyFlags.GET_INVALIDATED_PROPERTIES);
+                    UpowerDevice device = Bus.get_proxy_sync (BusType.SYSTEM, DBUS_UPOWER_NAME, devs[i].to_string (), DBusProxyFlags.GET_INVALIDATED_PROPERTIES);
 
                     if (device.device_type == 2) {
-                        path = devs[i].to_string();
+                        path = devs[i].to_string ();
                         break;
                     }
                 }
