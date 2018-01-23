@@ -30,8 +30,6 @@ namespace Power {
         private PowerSettings screen;
         private Battery battery;
         private PowerSupply power_supply;
-        private Gtk.Image lock_image;
-        private Gtk.Image lock_image2;
         private Gtk.Scale scale;
 
         private const string NO_PERMISSION_STRING  = _("You do not have permission to change this");
@@ -265,11 +263,11 @@ namespace Power {
                 lid_dock_box.label.sensitive = false;
                 label_size.add_widget (lid_dock_box.label);
 
-                lock_image = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
+                var lock_image = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
                 lock_image.tooltip_text = NO_PERMISSION_STRING;
                 lock_image.sensitive = false;
 
-                lock_image2 = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
+                var lock_image2 = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
                 lock_image2.tooltip_text = NO_PERMISSION_STRING;
                 lock_image2.sensitive = false;
 
