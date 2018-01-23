@@ -26,8 +26,22 @@ namespace Power {
 
         public bool laptop { get; private set; default = false; }
 
-        public Battery () {
-            connect_dbus ();
+        construct {
+            try {
+                upower = Bus.get_proxy_sync (BusType.SYSTEM, DBUS_UPOWER_NAME, DBUS_UPOWER_PATH, DBusProxyFlags.NONE);
+                dbus_upower_battery_path = get_dbus_path (upower);
+                if (dbus_upower_battery_path != "" && dbus_upower_battery_path != null) {
+                    upower_device = Bus.get_proxy_sync (BusType.SYSTEM, DBUS_UPOWER_NAME, dbus_upower_battery_path, DBusProxyFlags.GET_INVALIDATED_PROPERTIES);
+
+                    laptop = true;
+                    debug ("battery path:%s , its a laptop, dbus connected", dbus_upower_battery_path);
+                } else {
+                    laptop = false;
+                    debug ("it is a desktop (laptops false)");
+                }
+            } catch (Error e) {
+                critical ("battery dbus connection to upower fault");
+            }
         }
 
         public bool check_present () {
@@ -44,10 +58,12 @@ namespace Power {
         private string get_dbus_path (Upower upow) {
             string path = "";
             try {
-                ObjectPath[] devs = upow.enumerate_devices();
+                ObjectPath[] devs = upow.enumerate_devices ();
                 for (int i = 0; i < devs.length; i++) {
-                    if (devs[i].contains ("BAT0")) {
-                        path = devs[i].to_string();
+                    UpowerDevice device = Bus.get_proxy_sync (BusType.SYSTEM, DBUS_UPOWER_NAME, devs[i].to_string (), DBusProxyFlags.GET_INVALIDATED_PROPERTIES);
+
+                    if (device.device_type == 2) {
+                        path = devs[i].to_string ();
                         break;
                     }
                 }
@@ -56,24 +72,6 @@ namespace Power {
             }
 
             return path;
-        }
-
-        private void connect_dbus () {
-            try {
-                upower = Bus.get_proxy_sync (BusType.SYSTEM, DBUS_UPOWER_NAME, DBUS_UPOWER_PATH, DBusProxyFlags.NONE);
-                dbus_upower_battery_path = get_dbus_path(upower);
-                if (dbus_upower_battery_path != "" && dbus_upower_battery_path != null) {
-                    upower_device = Bus.get_proxy_sync (BusType.SYSTEM, DBUS_UPOWER_NAME, dbus_upower_battery_path, DBusProxyFlags.GET_INVALIDATED_PROPERTIES);
-
-                    laptop = true;
-                    debug ("battery path:%s , its a laptop, dbus connected", dbus_upower_battery_path);
-                } else {
-                    laptop = false;
-                    debug ("it is a dekstop (laptops false)");
-                }
-            } catch (Error e) {
-                critical ("battery dbus connection to upower fault");
-            }
         }
     }
 }
