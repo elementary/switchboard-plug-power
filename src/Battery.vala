@@ -37,7 +37,7 @@ namespace Power {
                     debug ("battery path:%s , its a laptop, dbus connected", dbus_upower_battery_path);
                 } else {
                     laptop = false;
-                    debug ("it is a dekstop (laptops false)");
+                    debug ("it is a desktop (laptops false)");
                 }
             } catch (Error e) {
                 critical ("battery dbus connection to upower fault");
