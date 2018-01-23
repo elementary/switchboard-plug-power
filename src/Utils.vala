@@ -40,38 +40,6 @@ namespace Power.Utils {
         return false;
     }
 
-    private static bool battery_detect () {
-        var interface_path = File.new_for_path ("/sys/class/power_supply/");
-
-        try {
-            var enumerator = interface_path.enumerate_children (
-            GLib.FileAttribute.STANDARD_NAME,
-            FileQueryInfoFlags.NONE);
-            FileInfo power_supply;
-
-            while ((power_supply = enumerator.next_file ()) != null) {
-                var supply = interface_path.resolve_relative_path (power_supply.get_name ());
-                var supply_type = supply.get_child ("type");
-
-                var dis = new DataInputStream (supply_type.read ());
-                string type;
-                if ((type = dis.read_line (null)) == "Battery") {
-                    debug ("Detected battery");
-                    return true;
-                }
-
-                continue;
-            }
-
-            enumerator.close ();
-
-        } catch (GLib.Error err) {
-            critical ("%s", err.message);
-        }
-
-        return false;
-    }
-
     private static bool lid_detect () {
         var interface_path = File.new_for_path ("/proc/acpi/button/lid/");
 
