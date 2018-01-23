@@ -233,33 +233,33 @@ namespace Power {
             lock_image2.sensitive = false;
 
             if (backlight_detect()) {
-                    var brightness_label = new Gtk.Label (_("Display brightness:"));
-                    ((Gtk.Misc) brightness_label).xalign = 1.0f;
-                    label_size.add_widget (brightness_label);
-                    brightness_label.halign = Gtk.Align.END;
+                var brightness_label = new Gtk.Label (_("Display brightness:"));
+                ((Gtk.Misc) brightness_label).xalign = 1.0f;
+                label_size.add_widget (brightness_label);
+                brightness_label.halign = Gtk.Align.END;
 
-                    var als_label = new Gtk.Label (_("Automatically adjust brightness:"));
-                    ((Gtk.Misc) als_label).xalign = 1.0f;
-                    label_size.add_widget (als_label);
-                    var als_switch = new Gtk.Switch ();
-                    als_switch.halign = Gtk.Align.START;
+                var als_label = new Gtk.Label (_("Automatically adjust brightness:"));
+                ((Gtk.Misc) als_label).xalign = 1.0f;
+                label_size.add_widget (als_label);
+                var als_switch = new Gtk.Switch ();
+                als_switch.halign = Gtk.Align.START;
 
-                    settings.bind ("ambient-enabled", als_switch, "active", SettingsBindFlags.DEFAULT);
+                settings.bind ("ambient-enabled", als_switch, "active", SettingsBindFlags.DEFAULT);
 
-                    scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 100, 10);
-                    scale.draw_value = false;
-                    scale.hexpand = true;
-                    scale.width_request = 480;
+                scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 100, 10);
+                scale.draw_value = false;
+                scale.hexpand = true;
+                scale.width_request = 480;
 
-                    scale.set_value (screen.brightness);
+                scale.set_value (screen.brightness);
 
-                    scale.value_changed.connect (on_scale_value_changed);
-                    (screen as DBusProxy).g_properties_changed.connect (on_screen_properties_changed);
+                scale.value_changed.connect (on_scale_value_changed);
+                (screen as DBusProxy).g_properties_changed.connect (on_screen_properties_changed);
 
-                    main_grid.attach (brightness_label, 0, 0, 1, 1);
-                    main_grid.attach (scale, 1, 0, 1, 1);
-                    main_grid.attach (als_label, 0, 1, 1, 1);
-                    main_grid.attach (als_switch, 1, 1, 1, 1);
+                main_grid.attach (brightness_label, 0, 0, 1, 1);
+                main_grid.attach (scale, 1, 0, 1, 1);
+                main_grid.attach (als_label, 0, 1, 1, 1);
+                main_grid.attach (als_switch, 1, 1, 1, 1);
             }
 
             if (lid_detect()) {
@@ -374,18 +374,23 @@ namespace Power {
         }
 
         private static bool lid_detect () {
+
             var lid_path = File.new_for_path ("/proc/acpi/button/lid/");
-            var enumerator = lid_path.enumerate_children (
+
+            try {
+                var enumerator = lid_path.enumerate_children (
                 GLib.FileAttribute.STANDARD_NAME,
                 FileQueryInfoFlags.NONE);
-            try {
                 FileInfo lid;
                 if ((lid = enumerator.next_file ()) != null) {
                     debug ("Detected lid interface");
                     return true;
                 }
-            } catch (SpawnError err) {
-                critical (err.message);
+
+            enumerator.close ();
+
+            } catch (GLib.Error err) {
+                critical ("%s", err.message);
             }
 
             return false;
@@ -393,17 +398,21 @@ namespace Power {
 
         private static bool backlight_detect () {
             var backlight_path = File.new_for_path ("/sys/class/backlight/");
-            var enumerator = backlight_path.enumerate_children (
+
+            try {
+                var enumerator = backlight_path.enumerate_children (
                 GLib.FileAttribute.STANDARD_NAME,
                 FileQueryInfoFlags.NONE);
-            try {
-                FileInfo bl;
-                if ((bl = enumerator.next_file ()) != null) {
+                FileInfo backlight;
+                if ((backlight = enumerator.next_file ()) != null) {
                     debug ("Detected backlight interface");
                     return true;
                 }
-            } catch (SpawnError err) {
-                critical (err.message);
+
+            enumerator.close ();
+
+            } catch (GLib.Error err) {
+                critical ("%s", err.message);
             }
 
             return false;
