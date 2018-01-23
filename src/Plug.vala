@@ -426,7 +426,7 @@ namespace Power {
                 FileQueryInfoFlags.NONE);
                 FileInfo power_supply;
 
-                while (( power_supply = enumerator.next_file ()) != null) {
+                while ((power_supply = enumerator.next_file ()) != null) {
                     var supply = interface_path.resolve_relative_path (
                         power_supply.get_name ());
                     var supply_type = supply.get_child ("type");
