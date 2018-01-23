@@ -83,7 +83,7 @@ namespace Power {
                 stack_switcher.homogeneous = true;
                 stack_switcher.stack = stack;
 
-                if (Utils.battery_detect ()) {
+                if (battery.check_present ()) {
                     var battery_grid = create_notebook_pages (false);
                     stack.add_titled (battery_grid, "battery", _("On Battery"));
 
