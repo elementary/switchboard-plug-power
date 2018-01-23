@@ -83,7 +83,7 @@ namespace Power {
                 stack_switcher.homogeneous = true;
                 stack_switcher.stack = stack;
 
-                if (battery_detect ()) {
+                if (Utils.battery_detect ()) {
                     var battery_grid = create_notebook_pages (false);
                     stack.add_titled (battery_grid, "battery", _("On Battery"));
 
@@ -195,7 +195,7 @@ namespace Power {
 
             permission_infobar.get_content_area ().add (label_infobar);
 
-            if (lid_detect ()) {
+            if (Utils.lid_detect ()) {
                 permission_infobar.no_show_all = false;
                 permission_infobar.show_all ();
             } else {
@@ -220,7 +220,7 @@ namespace Power {
         }
 
         private Gtk.Grid create_common_settings () {
-            if (backlight_detect ()) {
+            if (Utils.backlight_detect ()) {
                 var brightness_label = new Gtk.Label (_("Display brightness:"));
                 brightness_label.halign = Gtk.Align.END;
                 brightness_label.xalign = 1;
@@ -252,7 +252,7 @@ namespace Power {
                 label_size.add_widget (als_label);
             }
 
-            if (lid_detect ()) {
+            if (Utils.lid_detect ()) {
                 var lid_closed_box = new LidCloseActionComboBox (_("When lid is closed:"), false);
                 lid_closed_box.sensitive = false;
                 lid_closed_box.label.sensitive = false;
@@ -305,7 +305,7 @@ namespace Power {
             screen_timeout_label.xalign = 1;
 
             var screen_timeout = new TimeoutComboBox (pantheon_dpms_settings, "standby-time");
-            screen_timeout.changed.connect (run_dpms_helper);
+            screen_timeout.changed.connect (Utils.run_dpms_helper);
 
             var power_combobox = new ActionComboBox (_("Power button:"), "power-button-action");
 
@@ -356,7 +356,7 @@ namespace Power {
             grid.attach (sleep_timeout_label, 0, 1, 1, 1);
             grid.attach (sleep_timeout, 1, 1, 1, 1);
 
-            if (!ac && backlight_detect ()){
+            if (!ac && Utils.backlight_detect ()){
                 var dim_label = new Gtk.Label (_("Dim display when inactive:"));
                 dim_label.xalign = 1;
 
@@ -372,93 +372,6 @@ namespace Power {
             }
 
             return grid;
-        }
-
-        private static bool lid_detect () {
-            var interface_path = File.new_for_path ("/proc/acpi/button/lid/");
-
-            try {
-                var enumerator = interface_path.enumerate_children (
-                GLib.FileAttribute.STANDARD_NAME,
-                FileQueryInfoFlags.NONE);
-                FileInfo lid;
-                if ((lid = enumerator.next_file ()) != null) {
-                    debug ("Detected lid switch");
-                    return true;
-                }
-
-                enumerator.close ();
-
-            } catch (GLib.Error err) {
-                critical ("%s", err.message);
-            }
-
-            return false;
-        }
-
-        private static bool backlight_detect () {
-            var interface_path = File.new_for_path ("/sys/class/backlight/");
-
-            try {
-                var enumerator = interface_path.enumerate_children (
-                GLib.FileAttribute.STANDARD_NAME,
-                FileQueryInfoFlags.NONE);
-                FileInfo backlight;
-                if ((backlight = enumerator.next_file ()) != null) {
-                    debug ("Detected backlight interface");
-                    return true;
-                }
-
-            enumerator.close ();
-
-            } catch (GLib.Error err) {
-                critical ("%s", err.message);
-            }
-
-            return false;
-        }
-
-        private static bool battery_detect () {
-            var interface_path = File.new_for_path ("/sys/class/power_supply/");
-
-            try {
-                var enumerator = interface_path.enumerate_children (
-                GLib.FileAttribute.STANDARD_NAME,
-                FileQueryInfoFlags.NONE);
-                FileInfo power_supply;
-
-                while ((power_supply = enumerator.next_file ()) != null) {
-                    var supply = interface_path.resolve_relative_path (power_supply.get_name ());
-                    var supply_type = supply.get_child ("type");
-
-                    var dis = new DataInputStream (supply_type.read ());
-                    string type;
-                    if ((type = dis.read_line (null)) == "Battery") {
-                        debug ("Detected battery");
-                        return true;
-                    }
-
-                    continue;
-                }
-
-                enumerator.close ();
-
-            } catch (GLib.Error err) {
-                critical ("%s", err.message);
-            }
-
-            return false;
-        }
-
-        private static void run_dpms_helper () {
-            try {
-                string[] argv = { "elementary-dpms-helper" };
-                Process.spawn_async (null, argv, Environ.get (),
-                    SpawnFlags.SEARCH_PATH | SpawnFlags.STDERR_TO_DEV_NULL | SpawnFlags.STDOUT_TO_DEV_NULL,
-                    null, null);
-            } catch (SpawnError e) {
-                warning ("Failed to reset dpms settings: %s", e.message);
-            }
         }
     }
 }
