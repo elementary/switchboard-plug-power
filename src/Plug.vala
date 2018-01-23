@@ -433,7 +433,7 @@ namespace Power {
 
                     var dis = new DataInputStream(supply_type.read());
                     string type;
-                    if(( type = dis.read_line(null)) == "Battery") {
+                    if((type = dis.read_line(null)) == "Battery") {
                         debug ("Detected battery");
                         return true;
                     }
