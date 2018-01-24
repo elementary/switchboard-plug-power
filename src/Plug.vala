@@ -60,12 +60,7 @@ namespace Power {
 
         public override Gtk.Widget get_widget () {
             if (stack_container == null) {
-                stack_container = new Gtk.Grid ();
-                stack_container.orientation = Gtk.Orientation.VERTICAL;
-
                 label_size = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
-
-                var info_bars = create_info_bars ();
 
                 main_grid = new Gtk.Grid ();
                 main_grid.margin = 24;
@@ -105,8 +100,12 @@ namespace Power {
 
                 main_grid.attach (stack, 0, 8, 2, 1);
 
+                stack_container = new Gtk.Grid ();
+                stack_container.orientation = Gtk.Orientation.VERTICAL;
                 stack_container.margin_bottom = 12;
-                stack_container.add (info_bars);
+
+                create_info_bars ();
+
                 stack_container.add (main_grid);
                 stack_container.show_all ();
 
@@ -163,10 +162,13 @@ namespace Power {
             }
         }
 
-        private Gtk.Grid create_info_bars () {
+        private void create_info_bars () {
+            var label = new Gtk.Label (_("Some changes will not take effect until you restart this computer"));
+
             var infobar = new Gtk.InfoBar ();
             infobar.message_type = Gtk.MessageType.WARNING;
             infobar.no_show_all = true;
+            infobar.get_content_area ().add (label);
             infobar.hide ();
 
             var helper = LogindHelper.get_logind_helper ();
@@ -177,46 +179,32 @@ namespace Power {
                 });
             }
 
-            var label = new Gtk.Label (_("Some changes will not take effect until you restart this computer"));
-
-            infobar.get_content_area ().add (label);
-
-            var permission_infobar = new Gtk.InfoBar ();
-            permission_infobar.message_type = Gtk.MessageType.INFO;
-
-            var permission = get_permission ();
-
-            var lock_button = new Gtk.LockButton (permission);
-
-            var label_infobar = new Gtk.Label (_("Some settings require administrator rights to be changed"));
-
-            var area_infobar = permission_infobar.get_action_area () as Gtk.Container;
-            area_infobar.add (lock_button);
-
-            permission_infobar.get_content_area ().add (label_infobar);
+            stack_container.add (infobar);
 
             if (lid_detect ()) {
-                permission_infobar.no_show_all = false;
+                var lock_button = new Gtk.LockButton (get_permission ());
+
+                var permission_label = new Gtk.Label (_("Some settings require administrator rights to be changed"));
+
+                var permission_infobar = new Gtk.InfoBar ();
+                permission_infobar.message_type = Gtk.MessageType.INFO;
+                permission_infobar.get_content_area ().add (permission_label);
+
+                var area_infobar = permission_infobar.get_action_area () as Gtk.Container;
+                area_infobar.add (lock_button);
+
                 permission_infobar.show_all ();
-            } else {
-                permission_infobar.no_show_all = true;
-                permission_infobar.hide ();
+
+                stack_container.add (permission_infobar);
+
+                //connect polkit permission to hiding the permission infobar
+                permission.notify["allowed"].connect (() => {
+                    if (permission.allowed) {
+                        permission_infobar.no_show_all = true;
+                        permission_infobar.hide ();
+                    }
+                });
             }
-
-            //connect polkit permission to hiding the permission infobar
-            permission.notify["allowed"].connect (() => {
-                if (permission.allowed) {
-                    permission_infobar.no_show_all = true;
-                    permission_infobar.hide ();
-                }
-            });
-
-            var info_grid = new Gtk.Grid ();
-            info_grid.column_homogeneous = true;
-            info_grid.attach (infobar, 0, 0, 1, 1);
-            info_grid.attach (permission_infobar, 0, 1, 1, 1);
-
-            return info_grid;
         }
 
         private Gtk.Grid create_common_settings () {
