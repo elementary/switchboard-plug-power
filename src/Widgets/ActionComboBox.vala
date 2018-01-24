@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2016 elementary LLC. (https://launchpad.net/switchboard-plug-power)
+ * Copyright (c) 2011-2018 elementary LLC. (https://elementary.io)
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -19,8 +19,6 @@
 
 namespace Power {
     class ActionComboBox : Gtk.ComboBoxText {
-
-        public Gtk.Label label;
         private string key;
 
         // this maps combobox indices to gsettings enums
@@ -28,11 +26,8 @@ namespace Power {
         // and vice-versa
         private int[] map_to_list = {0, 1, 2};
 
-        public ActionComboBox (string label_name, string key_value) {
+        public ActionComboBox (string key_value) {
             key = key_value;
-            label = new Gtk.Label (label_name);
-            label.halign = Gtk.Align.END;
-            ((Gtk.Misc) label).xalign = 1.0f;
 
             append_text (_("Do nothing"));
             append_text (_("Suspend"));

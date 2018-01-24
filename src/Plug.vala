@@ -241,15 +241,24 @@ namespace Power {
             }
 
             if (lid_detect ()) {
-                var lid_closed_box = new LidCloseActionComboBox (_("When lid is closed:"), false);
-                lid_closed_box.sensitive = false;
-                lid_closed_box.label.sensitive = false;
-                label_size.add_widget (lid_closed_box.label);
+                var lid_closed_label = new Gtk.Label (_("When lid is closed:"));
+                lid_closed_label.halign = Gtk.Align.END;
+                lid_closed_label.sensitive = false;
+                lid_closed_label.xalign = 1;
 
-                var lid_dock_box = new LidCloseActionComboBox (_("When lid is closed with external monitor:"), true);
+                var lid_closed_box = new LidCloseActionComboBox (false);
+                lid_closed_box.sensitive = false;
+
+                var lid_dock_label = new Gtk.Label (_("When lid is closed with external monitor:"));
+                lid_dock_label.halign = Gtk.Align.END;
+                lid_dock_label.sensitive = false;
+                lid_dock_label.xalign = 1;
+
+                var lid_dock_box = new LidCloseActionComboBox (true);
                 lid_dock_box.sensitive = false;
-                lid_dock_box.label.sensitive = false;
-                label_size.add_widget (lid_dock_box.label);
+
+                label_size.add_widget (lid_closed_label);
+                label_size.add_widget (lid_dock_label);
 
                 var lock_image = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
                 lock_image.tooltip_text = NO_PERMISSION_STRING;
@@ -265,25 +274,25 @@ namespace Power {
                 permission.notify["allowed"].connect (() => {
                     if (permission.allowed) {
                         lid_closed_box.sensitive = true;
-                        lid_closed_box.label.sensitive = true;
+                        lid_closed_label.sensitive = true;
                         lid_dock_box.sensitive = true;
-                        lid_dock_box.label.sensitive = true;
+                        lid_dock_label.sensitive = true;
                         lock_image.visible = false;
                         lock_image2.visible = false;
                     } else {
                         lid_closed_box.sensitive = false;
-                        lid_closed_box.label.sensitive = false;
+                        lid_closed_label.sensitive = false;
                         lid_dock_box.sensitive = false;
-                        lid_dock_box.label.sensitive = false;
+                        lid_dock_label.sensitive = false;
                         lock_image.visible = true;
                         lock_image2.visible = true;
                     }
                 });
 
-                main_grid.attach (lid_closed_box.label, 0, 5, 1, 1);
+                main_grid.attach (lid_closed_label, 0, 5, 1, 1);
                 main_grid.attach (lid_closed_box, 1, 5, 1, 1);
                 main_grid.attach (lock_image2, 2, 5, 1, 1);
-                main_grid.attach (lid_dock_box.label, 0, 6, 1, 1);
+                main_grid.attach (lid_dock_label, 0, 6, 1, 1);
                 main_grid.attach (lid_dock_box, 1, 6, 1, 1);
                 main_grid.attach (lock_image, 2, 6, 1, 1);
             }
@@ -295,15 +304,19 @@ namespace Power {
             var screen_timeout = new TimeoutComboBox (pantheon_dpms_settings, "standby-time");
             screen_timeout.changed.connect (run_dpms_helper);
 
-            var power_combobox = new ActionComboBox (_("Power button:"), "power-button-action");
+            var power_label = new Gtk.Label (_("Power button:"));
+            power_label.halign = Gtk.Align.END;
+            power_label.xalign = 1;
+
+            var power_combobox = new ActionComboBox ("power-button-action");
 
             main_grid.attach (screen_timeout_label, 0, 3, 1, 1);
             main_grid.attach (screen_timeout, 1, 3, 1, 1);
-            main_grid.attach (power_combobox.label, 0, 4, 1, 1);
+            main_grid.attach (power_label, 0, 4, 1, 1);
             main_grid.attach (power_combobox, 1, 4, 1, 1);
 
             label_size.add_widget (screen_timeout_label);
-            label_size.add_widget (power_combobox.label);
+            label_size.add_widget (power_label);
 
             return main_grid;
         }
