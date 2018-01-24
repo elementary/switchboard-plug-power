@@ -384,7 +384,6 @@ namespace Power {
                         GLib.FileAttribute.STANDARD_NAME,
                         FileQueryInfoFlags.NONE);
                     FileInfo lid;
-
                     if ((lid = enumerator.next_file ()) != null) {
                         debug ("Detected lid switch");
                         return true;
