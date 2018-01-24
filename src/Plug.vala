@@ -381,9 +381,10 @@ namespace Power {
             if (interface_path.query_exists()) {
                 try {
                     var enumerator = interface_path.enumerate_children (
-                    GLib.FileAttribute.STANDARD_NAME,
-                    FileQueryInfoFlags.NONE);
+                        GLib.FileAttribute.STANDARD_NAME,
+                        FileQueryInfoFlags.NONE);
                     FileInfo lid;
+
                     if ((lid = enumerator.next_file ()) != null) {
                         debug ("Detected lid switch");
                         return true;
