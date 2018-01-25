@@ -378,7 +378,7 @@ namespace Power {
         private static bool lid_detect () {
             var interface_path = File.new_for_path ("/proc/acpi/button/lid/");
 
-            if (interface_path.query_exists()) {
+            if (interface_path.query_exists ()) {
                 try {
                     var enumerator = interface_path.enumerate_children (
                         GLib.FileAttribute.STANDARD_NAME,
