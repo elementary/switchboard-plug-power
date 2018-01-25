@@ -400,20 +400,22 @@ namespace Power {
         private static bool backlight_detect () {
             var interface_path = File.new_for_path ("/sys/class/backlight/");
 
-            try {
-                var enumerator = interface_path.enumerate_children (
-                GLib.FileAttribute.STANDARD_NAME,
-                FileQueryInfoFlags.NONE);
-                FileInfo backlight;
-                if ((backlight = enumerator.next_file ()) != null) {
-                    debug ("Detected backlight interface");
-                    return true;
+            if (interface_path.query_exist ()){
+                try {
+                    var enumerator = interface_path.enumerate_children (
+                        GLib.FileAttribute.STANDARD_NAME,
+                        FileQueryInfoFlags.NONE);
+                     FileInfo backlight;
+                    if ((backlight = enumerator.next_file ()) != null) {
+                        debug ("Detected backlight interface");
+                        return true;
+                    }
+
+                    enumerator.close ();
+
+                } catch (GLib.Error err) {
+                    critical ("%s", err.message);
                 }
-
-            enumerator.close ();
-
-            } catch (GLib.Error err) {
-                critical ("%s", err.message);
             }
 
             return false;
