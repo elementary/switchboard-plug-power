@@ -41,9 +41,9 @@ namespace Power {
 
         public bool check_present () {
             bool present = false;
-                if (upower.on_battery || upower_device.is_present) {
-                    present = true;
-                }
+            if (upower.on_battery || upower_device.is_present) {
+                present = true;
+            }
 
             return present;
         }
