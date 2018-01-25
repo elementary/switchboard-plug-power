@@ -24,20 +24,15 @@ namespace Power {
 
         private string dbus_upower_battery_path;
 
-        public bool laptop { get; private set; default = false; }
-
         construct {
             try {
                 upower = Bus.get_proxy_sync (BusType.SYSTEM, DBUS_UPOWER_NAME, DBUS_UPOWER_PATH, DBusProxyFlags.NONE);
                 dbus_upower_battery_path = get_dbus_path (upower);
                 if (dbus_upower_battery_path != "" && dbus_upower_battery_path != null) {
                     upower_device = Bus.get_proxy_sync (BusType.SYSTEM, DBUS_UPOWER_NAME, dbus_upower_battery_path, DBusProxyFlags.GET_INVALIDATED_PROPERTIES);
-
-                    laptop = true;
-                    debug ("battery path:%s , its a laptop, dbus connected", dbus_upower_battery_path);
+                    debug ("battery detected at path:%s , dbus connected", dbus_upower_battery_path);
                 } else {
-                    laptop = false;
-                    debug ("it is a desktop (laptops false)");
+                    debug ("no battery detected");
                 }
             } catch (Error e) {
                 critical ("battery dbus connection to upower fault");
@@ -46,11 +41,9 @@ namespace Power {
 
         public bool check_present () {
             bool present = false;
-            if (laptop) {
                 if (upower.on_battery || upower_device.is_present) {
                     present = true;
                 }
-            }
 
             return present;
         }
