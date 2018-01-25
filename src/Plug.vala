@@ -405,7 +405,7 @@ namespace Power {
                     var enumerator = interface_path.enumerate_children (
                         GLib.FileAttribute.STANDARD_NAME,
                         FileQueryInfoFlags.NONE);
-                     FileInfo backlight;
+                    FileInfo backlight;
                     if ((backlight = enumerator.next_file ()) != null) {
                         debug ("Detected backlight interface");
                         return true;
