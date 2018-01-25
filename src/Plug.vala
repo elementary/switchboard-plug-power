@@ -400,7 +400,7 @@ namespace Power {
         private static bool backlight_detect () {
             var interface_path = File.new_for_path ("/sys/class/backlight/");
 
-            if (interface_path.query_exist ()){
+            if (interface_path.query_exists ()){
                 try {
                     var enumerator = interface_path.enumerate_children (
                         GLib.FileAttribute.STANDARD_NAME,
