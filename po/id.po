@@ -6,11 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-20 16:38-0600\n"
+"POT-Creation-Date: 2018-01-27 12:22-0800\n"
 "PO-Revision-Date: 2017-07-31 16:10+0700\n"
 "Last-Translator: Kukuh Syafaat <syafaatkukuh@gmail.com>\n"
-"Language-Team: Indonesian <https://weblate.elementary.io/projects/switchboard"
-"/switchboard-plug-power/id/>\n"
+"Language-Team: Indonesian <https://weblate.elementary.io/projects/"
+"switchboard/switchboard-plug-power/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,66 +18,6 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 2.0.3\n"
 "X-Launchpad-Export-Date: 2016-11-21 05:42+0000\n"
-
-#: ../src/LidCloseActionComboBox.vala:33 ../src/ActionComboBox.vala:38
-msgid "Suspend"
-msgstr "Suspensi"
-
-#: ../src/LidCloseActionComboBox.vala:34
-msgid "Shutdown"
-msgstr "Matikan"
-
-#: ../src/LidCloseActionComboBox.vala:35
-msgid "Lock"
-msgstr "Kunci"
-
-#: ../src/LidCloseActionComboBox.vala:36
-msgid "Halt"
-msgstr "Berhenti"
-
-#: ../src/LidCloseActionComboBox.vala:37 ../src/ActionComboBox.vala:37
-msgid "Do nothing"
-msgstr "Jangan lakukan apapun"
-
-#: ../src/LidCloseActionComboBox.vala:39
-msgid "Not supported"
-msgstr "Tidak didukung"
-
-#: ../src/ActionComboBox.vala:39
-msgid "Hibernate"
-msgstr "Hibernasi"
-
-#: ../src/TimeoutComboBox.vala:42
-msgid "Never"
-msgstr "Jangan"
-
-#: ../src/TimeoutComboBox.vala:43
-msgid "5 min"
-msgstr "5 menit"
-
-#: ../src/TimeoutComboBox.vala:44
-msgid "10 min"
-msgstr "10 menit"
-
-#: ../src/TimeoutComboBox.vala:45
-msgid "15 min"
-msgstr "15 menit"
-
-#: ../src/TimeoutComboBox.vala:46
-msgid "30 min"
-msgstr "30 menit"
-
-#: ../src/TimeoutComboBox.vala:47
-msgid "45 min"
-msgstr "45 menit"
-
-#: ../src/TimeoutComboBox.vala:48
-msgid "1 hour"
-msgstr "1 jam"
-
-#: ../src/TimeoutComboBox.vala:49
-msgid "2 hours"
-msgstr "2 jam"
 
 #. //launchpad.net/switchboard-plug-power)
 #. *
@@ -91,11 +31,11 @@ msgstr "2 jam"
 #. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
 #. * General Public License for more details.
 #. *
-#. * You should have received a copy of the GNU General Public
-#. * License along with this program; if not, write to the
-#. * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
-#. * Boston, MA 02111-1307, USA.
-#. 
+#. * You should have received a copy of the GNU General Public License
+#. * along with this program; if not, write to the Free Software
+#. * Foundation, Inc., 51 Franklin Street, Fifth Floor,
+#. * Boston, MA  02110-1301, USA.
+#.
 #: ../src/Translations.vala:20
 msgid "Manage power settings "
 msgstr "Kelola pengaturan daya "
@@ -104,67 +44,67 @@ msgstr "Kelola pengaturan daya "
 msgid "Authentication is required to manage power settings"
 msgstr "Otentikasi diperlukan untuk mengatur pengaturan daya"
 
-#: ../src/Plug.vala:39
+#: ../src/Plug.vala:35
 msgid "You do not have permission to change this"
 msgstr "Anda tidak memiliki izin untuk mengubah ini"
 
-#: ../src/Plug.vala:45
+#: ../src/Plug.vala:55
 msgid "Power"
 msgstr "Daya"
 
-#: ../src/Plug.vala:46
+#: ../src/Plug.vala:56
 msgid "Configure display brightness, power buttons, and sleep behavior"
 msgstr "Konfigurasikan kecerahan tampilan, tombol daya, dan perilaku tidur"
 
-#: ../src/Plug.vala:84
-msgid "Sleep button"
-msgstr "Tombol tidur"
-
-#: ../src/Plug.vala:85
-msgid "Power button"
-msgstr "Tombol daya"
-
-#: ../src/Plug.vala:86
-msgid "Display inactive"
-msgstr "Tampilan tidak aktif"
-
-#: ../src/Plug.vala:87
-msgid "Dim display"
-msgstr "Tampilan dim"
-
-#: ../src/Plug.vala:88
-msgid "Lid close"
-msgstr "Tutup lid"
-
-#: ../src/Plug.vala:89
-msgid "Display brightness"
-msgstr "Tampilkan kecerahan"
-
-#: ../src/Plug.vala:90
-msgid "Automatic brightness adjustment"
-msgstr "Penyesuaian kecerahan otomatis"
-
-#: ../src/Plug.vala:91
-msgid "Inactive display off"
-msgstr "Tampilan tidak aktif"
-
-#: ../src/Plug.vala:92
-msgid "Docked lid close"
-msgstr "Tutup lid dok"
-
-#: ../src/Plug.vala:93
-msgid "Sleep inactive"
-msgstr "Tidur tidak aktif"
-
-#: ../src/Plug.vala:115
+#: ../src/Plug.vala:75
 msgid "Plugged In"
 msgstr "Tersambung ke Listrik"
 
-#: ../src/Plug.vala:124
+#: ../src/Plug.vala:83
 msgid "On Battery"
 msgstr "Pada daya baterai"
 
-#: ../src/Plug.vala:169
+#: ../src/Plug.vala:143
+msgid "Sleep button"
+msgstr "Tombol tidur"
+
+#: ../src/Plug.vala:144
+msgid "Power button"
+msgstr "Tombol daya"
+
+#: ../src/Plug.vala:145
+msgid "Display inactive"
+msgstr "Tampilan tidak aktif"
+
+#: ../src/Plug.vala:146
+msgid "Dim display"
+msgstr "Tampilan dim"
+
+#: ../src/Plug.vala:147
+msgid "Lid close"
+msgstr "Tutup lid"
+
+#: ../src/Plug.vala:148
+msgid "Display brightness"
+msgstr "Tampilkan kecerahan"
+
+#: ../src/Plug.vala:149
+msgid "Automatic brightness adjustment"
+msgstr "Penyesuaian kecerahan otomatis"
+
+#: ../src/Plug.vala:150
+msgid "Inactive display off"
+msgstr "Tampilan tidak aktif"
+
+#: ../src/Plug.vala:151
+msgid "Docked lid close"
+msgstr "Tutup lid dok"
+
+#: ../src/Plug.vala:152
+msgid "Sleep inactive"
+msgstr "Tidur tidak aktif"
+
+#: ../src/Plug.vala:166
 msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
 "Beberapa perubahan tidak akan berpengaruh sampai Anda memulai ulang komputer "
@@ -174,34 +114,97 @@ msgstr ""
 msgid "Some settings require administrator rights to be changed"
 msgstr "Beberapa pengaturan memerlukan hak administrator untuk diubah"
 
-#: ../src/Plug.vala:220
+#: ../src/Plug.vala:212
 msgid "Display brightness:"
 msgstr "Kecerahan layar:"
 
-#: ../src/Plug.vala:225
+#: ../src/Plug.vala:216
 msgid "Automatically adjust brightness:"
 msgstr "Secara otomatis mengatur kecerahan:"
 
-#: ../src/Plug.vala:243
+#: ../src/Plug.vala:244
 msgid "When lid is closed:"
 msgstr "Ketika lid ditutup:"
 
-#: ../src/Plug.vala:248
+#: ../src/Plug.vala:252
 msgid "When lid is closed with external monitor:"
 msgstr "Ketika lid ditutup dengan monitor eksternal:"
 
-#: ../src/Plug.vala:284
+#: ../src/Plug.vala:300
 msgid "Turn off display when inactive for:"
 msgstr "Matikan tampilan saat tidak aktif untuk:"
 
-#: ../src/Plug.vala:292
+#: ../src/Plug.vala:307
 msgid "Power button:"
 msgstr "Tombol power:"
 
-#: ../src/Plug.vala:325
-msgid "Suspend when inactive for:"
+#: ../src/Plug.vala:342
+#, fuzzy
+msgid "Sleep when inactive for:"
 msgstr "Suspen bila tidak aktif untuk:"
 
-#: ../src/Plug.vala:341
+#: ../src/Plug.vala:361
 msgid "Dim display when inactive:"
 msgstr "Dim tampilan bila tidak aktif:"
+
+#: ../src/Widgets/LidCloseActionComboBox.vala:32
+#: ../src/Widgets/ActionComboBox.vala:33
+msgid "Suspend"
+msgstr "Suspensi"
+
+#: ../src/Widgets/LidCloseActionComboBox.vala:33
+msgid "Shutdown"
+msgstr "Matikan"
+
+#: ../src/Widgets/LidCloseActionComboBox.vala:34
+msgid "Lock"
+msgstr "Kunci"
+
+#: ../src/Widgets/LidCloseActionComboBox.vala:35
+msgid "Halt"
+msgstr "Berhenti"
+
+#: ../src/Widgets/LidCloseActionComboBox.vala:36
+#: ../src/Widgets/ActionComboBox.vala:32
+msgid "Do nothing"
+msgstr "Jangan lakukan apapun"
+
+#: ../src/Widgets/LidCloseActionComboBox.vala:38
+msgid "Not supported"
+msgstr "Tidak didukung"
+
+#: ../src/Widgets/ActionComboBox.vala:34
+msgid "Hibernate"
+msgstr "Hibernasi"
+
+#: ../src/Widgets/TimeoutComboBox.vala:42
+msgid "Never"
+msgstr "Jangan"
+
+#: ../src/Widgets/TimeoutComboBox.vala:43
+msgid "5 min"
+msgstr "5 menit"
+
+#: ../src/Widgets/TimeoutComboBox.vala:44
+msgid "10 min"
+msgstr "10 menit"
+
+#: ../src/Widgets/TimeoutComboBox.vala:45
+msgid "15 min"
+msgstr "15 menit"
+
+#: ../src/Widgets/TimeoutComboBox.vala:46
+msgid "30 min"
+msgstr "30 menit"
+
+#: ../src/Widgets/TimeoutComboBox.vala:47
+msgid "45 min"
+msgstr "45 menit"
+
+#: ../src/Widgets/TimeoutComboBox.vala:48
+msgid "1 hour"
+msgstr "1 jam"
+
+#: ../src/Widgets/TimeoutComboBox.vala:49
+msgid "2 hours"
+msgstr "2 jam"
