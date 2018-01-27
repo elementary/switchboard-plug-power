@@ -31,8 +31,6 @@ namespace Power {
                 if (dbus_upower_battery_path != "" && dbus_upower_battery_path != null) {
                     upower_device = Bus.get_proxy_sync (BusType.SYSTEM, DBUS_UPOWER_NAME, dbus_upower_battery_path, DBusProxyFlags.GET_INVALIDATED_PROPERTIES);
                     debug ("battery detected at path:%s , dbus connected", dbus_upower_battery_path);
-                } else {
-                    debug ("no battery detected");
                 }
             } catch (Error e) {
                 critical ("battery dbus connection to upower fault");
