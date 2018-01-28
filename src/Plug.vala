@@ -78,7 +78,7 @@ namespace Power {
                 stack_switcher.homogeneous = true;
                 stack_switcher.stack = stack;
 
-                if (battery.check_present ()) {
+                if (battery.is_present ()) {
                     var battery_grid = create_notebook_pages (false);
                     stack.add_titled (battery_grid, "battery", _("On Battery"));
 
@@ -122,7 +122,7 @@ namespace Power {
                 return;
             }
 
-            if (battery.check_present ()) {
+            if (battery.is_present ()) {
                 stack.visible_child_name = "battery";
             } else {
                 stack.visible_child_name = "ac";
