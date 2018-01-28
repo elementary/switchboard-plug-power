@@ -34,6 +34,7 @@ namespace Power {
             bool present = false;
             if (upower.lid_is_present) {
                 present = true;
+                debug ("Lid switch detected");
             }
 
             return present;
