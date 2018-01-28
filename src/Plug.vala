@@ -378,20 +378,22 @@ namespace Power {
         private static bool lid_detect () {
             var interface_path = File.new_for_path ("/proc/acpi/button/lid/");
 
-            try {
-                var enumerator = interface_path.enumerate_children (
-                GLib.FileAttribute.STANDARD_NAME,
-                FileQueryInfoFlags.NONE);
-                FileInfo lid;
-                if ((lid = enumerator.next_file ()) != null) {
-                    debug ("Detected lid switch");
-                    return true;
+            if (interface_path.query_exists ()) {
+                try {
+                    var enumerator = interface_path.enumerate_children (
+                        GLib.FileAttribute.STANDARD_NAME,
+                        FileQueryInfoFlags.NONE);
+                    FileInfo lid;
+                    if ((lid = enumerator.next_file ()) != null) {
+                        debug ("Detected lid switch");
+                        return true;
+                    }
+
+                    enumerator.close ();
+
+                } catch (GLib.Error err) {
+                    critical ("%s", err.message);
                 }
-
-                enumerator.close ();
-
-            } catch (GLib.Error err) {
-                critical ("%s", err.message);
             }
 
             return false;
@@ -402,15 +404,15 @@ namespace Power {
 
             try {
                 var enumerator = interface_path.enumerate_children (
-                GLib.FileAttribute.STANDARD_NAME,
-                FileQueryInfoFlags.NONE);
+                    GLib.FileAttribute.STANDARD_NAME,
+                    FileQueryInfoFlags.NONE);
                 FileInfo backlight;
                 if ((backlight = enumerator.next_file ()) != null) {
                     debug ("Detected backlight interface");
                     return true;
                 }
 
-            enumerator.close ();
+                enumerator.close ();
 
             } catch (GLib.Error err) {
                 critical ("%s", err.message);
