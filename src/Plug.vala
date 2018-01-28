@@ -30,6 +30,7 @@ namespace Power {
         private PowerSettings screen;
         private Battery battery;
         private PowerSupply power_supply;
+        private Lid lid;
         private Gtk.Scale scale;
 
         private const string NO_PERMISSION_STRING  = _("You do not have permission to change this");
@@ -42,6 +43,8 @@ namespace Power {
 
             battery = new Battery ();
             power_supply = new PowerSupply ();
+
+            lid = new Lid ();
 
             connect_to_settings_daemon ();
         }

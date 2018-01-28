@@ -19,6 +19,7 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Permission.vala
     Plug.vala
     PowerSupply.vala
+    Lid.vala
     LogindHelper.vala
     Widgets/ActionComboBox.vala
     Widgets/LidCloseActionComboBox.vala

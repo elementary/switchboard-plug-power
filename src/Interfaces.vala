@@ -61,6 +61,7 @@ namespace Power {
         public signal void changed ();
         public abstract bool on_battery { owned get; }
         public abstract bool low_on_battery { owned get; }
+        public abstract bool lid_is_present { owned get; }
         public abstract ObjectPath[] enumerate_devices () throws IOError;
     }
 }
