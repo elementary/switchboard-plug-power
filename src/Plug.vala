@@ -34,7 +34,7 @@ namespace Power {
         private Gtk.Scale scale;
 
         private const string NO_PERMISSION_STRING  = _("You do not have permission to change this");
-        private const string SETTINGS_DAEMON_NAME = "org.gnome.SettingsDaemon";
+        private const string SETTINGS_DAEMON_NAME = "org.gnome.SettingsDaemon.Power";
         private const string SETTINGS_DAEMON_PATH = "/org/gnome/SettingsDaemon/Power";
 
         construct {
