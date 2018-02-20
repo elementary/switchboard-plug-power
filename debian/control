@@ -1,13 +1,13 @@
 Source: switchboard-plug-power
 Section: x11
 Priority: optional
-Maintainer: elementary OS Team <builds@elementaryos.org>
-Build-Depends: cmake,
-               debhelper (>= 10.5.1),
-               gnome-settings-daemon-dev,
+Maintainer: elementary OS Team <builds@elementary.io>
+Build-Depends: debhelper (>= 10.5.1),
+               gettext,
                libgranite-dev,
                libpolkit-gobject-1-dev,
                libswitchboard-2.0-dev,
+               meson,
                valac (>= 0.34.1)
 Standards-Version: 4.1.1
 Homepage: https://github.com/elementary/switchboard-plug-power
