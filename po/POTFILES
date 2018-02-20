@@ -1,4 +1,4 @@
-data/org.pantheon.switchboard.power.policy.in
+data/io.elementary.switchboard.power.policy.in
 cli/Server.vala
 cli/main.vala
 src/PowerSupply.vala
