@@ -2,201 +2,186 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-27 12:22-0800\n"
-"PO-Revision-Date: 2017-03-01 12:44+0000\n"
-"Last-Translator: Ryo Nakano <Unknown>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2018-02-20 13:22-0800\n"
+"PO-Revision-Date: 2018-01-29 00:02+0000\n"
+"Last-Translator: Ryo Nakano <ryonakaknock@gmail.com>\n"
+"Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-power/ja/>\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-03-02 05:49+0000\n"
-"X-Generator: Launchpad (build 18329)\n"
 
-#. //launchpad.net/switchboard-plug-power)
-#. *
-#. * This program is free software; you can redistribute it and/or
-#. * modify it under the terms of the GNU General Public
-#. * License as published by the Free Software Foundation; either
-#. * version 2 of the License, or (at your option) any later version.
-#. *
-#. * This program is distributed in the hope that it will be useful,
-#. * but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-#. * General Public License for more details.
-#. *
-#. * You should have received a copy of the GNU General Public License
-#. * along with this program; if not, write to the Free Software
-#. * Foundation, Inc., 51 Franklin Street, Fifth Floor,
-#. * Boston, MA  02110-1301, USA.
-#.
-#: ../src/Translations.vala:20
-msgid "Manage power settings "
+#: data/io.elementary.switchboard.power.policy.in:10
+#, fuzzy
+msgid "Manage power settings"
 msgstr "電源管理の設定 "
 
-#: ../src/Translations.vala:21
+#: data/io.elementary.switchboard.power.policy.in:11
 msgid "Authentication is required to manage power settings"
 msgstr "電源管理の設定は認証が必要です"
 
-#: ../src/Plug.vala:35
+#: src/Plug.vala:35
 msgid "You do not have permission to change this"
 msgstr "これを変更する権限がありません"
 
-#: ../src/Plug.vala:55
+#: src/Plug.vala:55
 msgid "Power"
 msgstr "電源"
 
-#: ../src/Plug.vala:56
+#: src/Plug.vala:56
 msgid "Configure display brightness, power buttons, and sleep behavior"
 msgstr "ディスプレイの明るさ、電源ボタン、スリープ動作を設定します"
 
-#: ../src/Plug.vala:75
+#: src/Plug.vala:75
 msgid "Plugged In"
 msgstr "電源接続時"
 
-#: ../src/Plug.vala:83
+#: src/Plug.vala:83
 msgid "On Battery"
 msgstr "バッテリー時"
 
-#: ../src/Plug.vala:143
+#: src/Plug.vala:143
 msgid "Sleep button"
 msgstr "スリープボタン"
 
-#: ../src/Plug.vala:144
+#: src/Plug.vala:144
 msgid "Power button"
 msgstr "電源ボタン"
 
-#: ../src/Plug.vala:145
+#: src/Plug.vala:145
 msgid "Display inactive"
 msgstr "非アクティブディスプレイ"
 
-#: ../src/Plug.vala:146
+#: src/Plug.vala:146
 msgid "Dim display"
 msgstr "ディスプレイを薄暗くする"
 
-#: ../src/Plug.vala:147
+#: src/Plug.vala:147
 msgid "Lid close"
 msgstr "カバーを閉じる"
 
-#: ../src/Plug.vala:148
+#: src/Plug.vala:148
 msgid "Display brightness"
 msgstr "ディスプレイの輝度"
 
-#: ../src/Plug.vala:149
+#: src/Plug.vala:149
 msgid "Automatic brightness adjustment"
 msgstr "輝度を自動調整"
 
-#: ../src/Plug.vala:150
+#: src/Plug.vala:150
 msgid "Inactive display off"
 msgstr ""
 
-#: ../src/Plug.vala:151
+#: src/Plug.vala:151
 msgid "Docked lid close"
 msgstr ""
 
-#: ../src/Plug.vala:152
+#: src/Plug.vala:152
 msgid "Sleep inactive"
 msgstr ""
 
-#: ../src/Plug.vala:166
+#: src/Plug.vala:166
 msgid "Some changes will not take effect until you restart this computer"
-msgstr "このコンピュータを再起動するまで、いくつかの変更は反映されません"
+msgstr "一部の変更はこのコンピューターの再起動後に反映されます"
 
-#: ../src/Plug.vala:187
+#: src/Plug.vala:187
 msgid "Some settings require administrator rights to be changed"
 msgstr "一部の設定変更には管理者権限が必要です"
 
-#: ../src/Plug.vala:212
+#: src/Plug.vala:212
 msgid "Display brightness:"
 msgstr "ディスプレイの明るさ:"
 
-#: ../src/Plug.vala:216
+#: src/Plug.vala:216
 msgid "Automatically adjust brightness:"
 msgstr "明るさの自動調整:"
 
-#: ../src/Plug.vala:244
+#: src/Plug.vala:244
 msgid "When lid is closed:"
 msgstr "閉じた時:"
 
-#: ../src/Plug.vala:252
+#: src/Plug.vala:252
 msgid "When lid is closed with external monitor:"
 msgstr "外部モニターとカバーが閉じられた時:"
 
-#: ../src/Plug.vala:300
+#: src/Plug.vala:300
 msgid "Turn off display when inactive for:"
 msgstr "非アクティブ時は非表示に切替:"
 
-#: ../src/Plug.vala:307
+#: src/Plug.vala:307
 msgid "Power button:"
 msgstr "電源ボタン:"
 
-#: ../src/Plug.vala:342
-#, fuzzy
+#: src/Plug.vala:342
 msgid "Sleep when inactive for:"
 msgstr "非アクティブ時にサスペンド:"
 
-#: ../src/Plug.vala:361
+#: src/Plug.vala:361
 msgid "Dim display when inactive:"
 msgstr "非アクティブ時に画面を暗くする:"
 
-#: ../src/Widgets/LidCloseActionComboBox.vala:32
-#: ../src/Widgets/ActionComboBox.vala:33
-msgid "Suspend"
-msgstr "サスペンド"
-
-#: ../src/Widgets/LidCloseActionComboBox.vala:33
-msgid "Shutdown"
-msgstr "シャットダウン"
-
-#: ../src/Widgets/LidCloseActionComboBox.vala:34
-msgid "Lock"
-msgstr "ロック"
-
-#: ../src/Widgets/LidCloseActionComboBox.vala:35
-msgid "Halt"
-msgstr "終了"
-
-#: ../src/Widgets/LidCloseActionComboBox.vala:36
-#: ../src/Widgets/ActionComboBox.vala:32
-msgid "Do nothing"
-msgstr "何もしない"
-
-#: ../src/Widgets/LidCloseActionComboBox.vala:38
-msgid "Not supported"
-msgstr "サポートされていません"
-
-#: ../src/Widgets/ActionComboBox.vala:34
-msgid "Hibernate"
-msgstr "ハイバーネート"
-
-#: ../src/Widgets/TimeoutComboBox.vala:42
+#: src/Widgets/TimeoutComboBox.vala:42
 msgid "Never"
 msgstr "なし"
 
-#: ../src/Widgets/TimeoutComboBox.vala:43
+#: src/Widgets/TimeoutComboBox.vala:43
 msgid "5 min"
 msgstr "5 分"
 
-#: ../src/Widgets/TimeoutComboBox.vala:44
+#: src/Widgets/TimeoutComboBox.vala:44
 msgid "10 min"
 msgstr "10 分"
 
-#: ../src/Widgets/TimeoutComboBox.vala:45
+#: src/Widgets/TimeoutComboBox.vala:45
 msgid "15 min"
 msgstr "15 分"
 
-#: ../src/Widgets/TimeoutComboBox.vala:46
+#: src/Widgets/TimeoutComboBox.vala:46
 msgid "30 min"
 msgstr "30 分"
 
-#: ../src/Widgets/TimeoutComboBox.vala:47
+#: src/Widgets/TimeoutComboBox.vala:47
 msgid "45 min"
 msgstr "45 分"
 
-#: ../src/Widgets/TimeoutComboBox.vala:48
+#: src/Widgets/TimeoutComboBox.vala:48
 msgid "1 hour"
 msgstr "1 時間"
 
-#: ../src/Widgets/TimeoutComboBox.vala:49
+#: src/Widgets/TimeoutComboBox.vala:49
 msgid "2 hours"
 msgstr "2 時間"
+
+#: src/Widgets/LidCloseActionComboBox.vala:32
+#: src/Widgets/ActionComboBox.vala:33
+msgid "Suspend"
+msgstr "サスペンド"
+
+#: src/Widgets/LidCloseActionComboBox.vala:33
+msgid "Shutdown"
+msgstr "シャットダウン"
+
+#: src/Widgets/LidCloseActionComboBox.vala:34
+msgid "Lock"
+msgstr "ロック"
+
+#: src/Widgets/LidCloseActionComboBox.vala:35
+msgid "Halt"
+msgstr "終了"
+
+#: src/Widgets/LidCloseActionComboBox.vala:36
+#: src/Widgets/ActionComboBox.vala:32
+msgid "Do nothing"
+msgstr "何もしない"
+
+#: src/Widgets/LidCloseActionComboBox.vala:38
+msgid "Not supported"
+msgstr "サポートされていません"
+
+#: src/Widgets/ActionComboBox.vala:34
+msgid "Hibernate"
+msgstr "ハイバーネート"
