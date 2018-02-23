@@ -4,6 +4,7 @@ plug_files = files(
     'PowerSupply.vala',
     'Plug.vala',
     'Permission.vala',
+    'Lid.vala',
     'LogindHelper.vala',
     'Battery.vala',
     'Widgets/TimeoutComboBox.vala',
