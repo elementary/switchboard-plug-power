@@ -6,6 +6,7 @@
 
 You'll need the following dependencies:
 
+* libdbus-1-dev
 * libswitchboard-2.0-dev
 * libgranite-dev
 * libpolkit-gobject-1-dev
