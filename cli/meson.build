@@ -9,7 +9,12 @@ configure_file(
     input: 'io.elementary.logind.helper.service.in',
     output: '@BASENAME@',
     configuration: config_data,
-    install_dir: helper_dir
+    install_dir: dbus_dep.get_pkgconfig_variable('system_bus_services_dir')
+)
+
+install_data(
+    'io.elementary.logind.helper.conf',
+    install_dir: join_paths(dbus_dep.get_pkgconfig_variable('sysconfdir'), 'dbus-1', 'system.d')
 )
 
 executable(
