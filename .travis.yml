@@ -4,7 +4,7 @@ services:
  - docker
 
 env:
- - DEPENDENCY_PACKAGES="meson libswitchboard-2.0-dev libgranite-dev libpolkit-gobject-1-dev valac"
+ - DEPENDENCY_PACKAGES="meson libswitchboard-2.0-dev libgranite-dev libpolkit-gobject-1-dev valac libdbus-1-dev"
 
 install:
  - docker pull elementary/docker:loki
