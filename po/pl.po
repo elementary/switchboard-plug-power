@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-20 13:22-0800\n"
-"PO-Revision-Date: 2018-02-26 20:53+0000\n"
+"PO-Revision-Date: 2018-02-27 00:04+0000\n"
 "Last-Translator: Piotr Strebski <strebski@o2.pl>\n"
 "Language-Team: Polish <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-power/pl/>\n"
@@ -153,7 +153,7 @@ msgstr "30 min"
 
 #: src/Widgets/TimeoutComboBox.vala:47
 msgid "45 min"
-msgstr "45 min."
+msgstr "45 minut"
 
 #: src/Widgets/TimeoutComboBox.vala:48
 msgid "1 hour"
