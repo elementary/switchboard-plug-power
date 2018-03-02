@@ -37,7 +37,7 @@ msgid "Power"
 msgstr "Napájanie"
 
 #: src/Plug.vala:56
-msgid "Configure display brightness, power buttons, and sleep behavior"
+msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr ""
 "Nastavenie jasu monitora, tlačidla napájania a správania sa v režime spánku"
 
@@ -50,7 +50,7 @@ msgid "On Battery"
 msgstr "Na batérii"
 
 #: src/Plug.vala:143
-msgid "Sleep button"
+msgid "Suspend button"
 msgstr "Tlačidlo uspania"
 
 #: src/Plug.vala:144
@@ -86,7 +86,7 @@ msgid "Docked lid close"
 msgstr "Zavreté veko v doku"
 
 #: src/Plug.vala:152
-msgid "Sleep inactive"
+msgid "Suspend inactive"
 msgstr "Neaktívne uspanie"
 
 #: src/Plug.vala:166
@@ -123,7 +123,7 @@ msgstr "Tlačidlo napájania:"
 
 #: src/Plug.vala:342
 #, fuzzy
-msgid "Sleep when inactive for:"
+msgid "Suspend when inactive for:"
 msgstr "Odložiť ak neaktívny počas:"
 
 #: src/Plug.vala:361

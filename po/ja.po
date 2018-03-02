@@ -33,7 +33,7 @@ msgid "Power"
 msgstr "電源"
 
 #: src/Plug.vala:56
-msgid "Configure display brightness, power buttons, and sleep behavior"
+msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "ディスプレイの明るさ、電源ボタン、スリープ動作を設定します"
 
 #: src/Plug.vala:75
@@ -45,7 +45,7 @@ msgid "On Battery"
 msgstr "バッテリー時"
 
 #: src/Plug.vala:143
-msgid "Sleep button"
+msgid "Suspend button"
 msgstr "スリープボタン"
 
 #: src/Plug.vala:144
@@ -81,7 +81,7 @@ msgid "Docked lid close"
 msgstr ""
 
 #: src/Plug.vala:152
-msgid "Sleep inactive"
+msgid "Suspend inactive"
 msgstr ""
 
 #: src/Plug.vala:166
@@ -117,7 +117,7 @@ msgid "Power button:"
 msgstr "電源ボタン:"
 
 #: src/Plug.vala:342
-msgid "Sleep when inactive for:"
+msgid "Suspend when inactive for:"
 msgstr "非アクティブ時にサスペンド:"
 
 #: src/Plug.vala:361

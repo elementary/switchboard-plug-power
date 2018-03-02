@@ -38,7 +38,7 @@ msgid "Power"
 msgstr "Strøm"
 
 #: src/Plug.vala:56
-msgid "Configure display brightness, power buttons, and sleep behavior"
+msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "Konfigurer lysstyrke, strømknapper og strømsparing"
 
 #: src/Plug.vala:75
@@ -50,7 +50,7 @@ msgid "On Battery"
 msgstr "På batteri"
 
 #: src/Plug.vala:143
-msgid "Sleep button"
+msgid "Suspend button"
 msgstr "Dvale-knapp"
 
 #: src/Plug.vala:144
@@ -88,7 +88,7 @@ msgstr "Tilkoblet skjermlukking"
 
 #: src/Plug.vala:152
 #, fuzzy
-msgid "Sleep inactive"
+msgid "Suspend inactive"
 msgstr "Dvalgang inaktiv"
 
 #: src/Plug.vala:166
@@ -125,7 +125,7 @@ msgstr "Av/på-knapp"
 
 #: src/Plug.vala:342
 #, fuzzy
-msgid "Sleep when inactive for:"
+msgid "Suspend when inactive for:"
 msgstr "Hvilemodus ved inaktivitet i:"
 
 #: src/Plug.vala:361
