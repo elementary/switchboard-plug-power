@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-20 13:22-0800\n"
-"PO-Revision-Date: 2018-03-05 11:48+0000\n"
+"PO-Revision-Date: 2018-03-06 00:05+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-power/ko/>\n"
@@ -26,7 +26,7 @@ msgstr "전력 설정 관리"
 
 #: data/io.elementary.switchboard.power.policy.in:11
 msgid "Authentication is required to manage power settings"
-msgstr "전원 설정 관리에는 인증이 필요합니다"
+msgstr "전력 설정 관리에는 인증이 필요합니다"
 
 #: src/Plug.vala:35
 msgid "You do not have permission to change this"
