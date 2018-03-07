@@ -35,7 +35,7 @@ msgid "Power"
 msgstr "พลังงาน"
 
 #: src/Plug.vala:56
-msgid "Configure display brightness, power buttons, and sleep behavior"
+msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "ตั้งค่าความสว่างในการแสดงผล ปุ่มเปิด/ปิด และโหมดสลีป"
 
 #: src/Plug.vala:75
@@ -47,7 +47,7 @@ msgid "On Battery"
 msgstr "เมื่อใช้ไฟจากแบตเตอรี่"
 
 #: src/Plug.vala:143
-msgid "Sleep button"
+msgid "Suspend button"
 msgstr ""
 
 #: src/Plug.vala:144
@@ -83,7 +83,7 @@ msgid "Docked lid close"
 msgstr ""
 
 #: src/Plug.vala:152
-msgid "Sleep inactive"
+msgid "Suspend inactive"
 msgstr ""
 
 #: src/Plug.vala:166
@@ -119,7 +119,7 @@ msgid "Power button:"
 msgstr "ปุ่มปิดเครื่อง:"
 
 #: src/Plug.vala:342
-msgid "Sleep when inactive for:"
+msgid "Suspend when inactive for:"
 msgstr ""
 
 #: src/Plug.vala:361

@@ -38,7 +38,7 @@ msgid "Power"
 msgstr "Zasilanie"
 
 #: src/Plug.vala:56
-msgid "Configure display brightness, power buttons, and sleep behavior"
+msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr ""
 "Konfiguruj jasność ekranu, zachowanie przycisków zasilania i trybu usypiania"
 
@@ -51,7 +51,7 @@ msgid "On Battery"
 msgstr "Na baterii"
 
 #: src/Plug.vala:143
-msgid "Sleep button"
+msgid "Suspend button"
 msgstr "Przycisk uśpienia"
 
 #: src/Plug.vala:144
@@ -87,7 +87,7 @@ msgid "Docked lid close"
 msgstr "Zamknięcie pokrywy w doku"
 
 #: src/Plug.vala:152
-msgid "Sleep inactive"
+msgid "Suspend inactive"
 msgstr "Nieaktywność usypiania"
 
 #: src/Plug.vala:166
@@ -124,7 +124,7 @@ msgid "Power button:"
 msgstr "Przycisk zasilania:"
 
 #: src/Plug.vala:342
-msgid "Sleep when inactive for:"
+msgid "Suspend when inactive for:"
 msgstr "Uśpienie, gdy nieaktywność przez:"
 
 #: src/Plug.vala:361
