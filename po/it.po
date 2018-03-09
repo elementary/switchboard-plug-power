@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-20 13:22-0800\n"
-"PO-Revision-Date: 2018-03-08 19:29+0000\n"
+"PO-Revision-Date: 2018-03-10 00:04+0000\n"
 "Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
 "Language-Team: Italian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-power/it/>\n"
@@ -184,7 +184,7 @@ msgstr "Arresta"
 #: src/Widgets/LidCloseActionComboBox.vala:36
 #: src/Widgets/ActionComboBox.vala:32
 msgid "Do nothing"
-msgstr "Non fare nulla"
+msgstr "Nessuna azione"
 
 #: src/Widgets/LidCloseActionComboBox.vala:38
 msgid "Not supported"
