@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-20 13:22-0800\n"
-"PO-Revision-Date: 2018-03-07 00:10+0000\n"
+"PO-Revision-Date: 2018-03-10 00:04+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-power/ja/>\n"
@@ -97,7 +97,7 @@ msgstr "ディスプレイの明るさ:"
 
 #: src/Plug.vala:216
 msgid "Automatically adjust brightness:"
-msgstr "明るさの自動調整:"
+msgstr "輝度を自動調整:"
 
 #: src/Plug.vala:244
 msgid "When lid is closed:"
