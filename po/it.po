@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-20 13:22-0800\n"
-"PO-Revision-Date: 2018-03-10 00:04+0000\n"
+"PO-Revision-Date: 2018-03-14 00:02+0000\n"
 "Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
 "Language-Team: Italian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-power/it/>\n"
@@ -30,7 +30,7 @@ msgstr "È necessario autenticarsi per gestire le impostazioni di alimentazione"
 
 #: src/Plug.vala:35
 msgid "You do not have permission to change this"
-msgstr "Non disponi dei permessi necessari per cambiare questo"
+msgstr "Non disponi dei permessi necessari per cambiare questo parametro"
 
 #: src/Plug.vala:55
 msgid "Power"
