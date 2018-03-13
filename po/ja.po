@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-20 13:22-0800\n"
-"PO-Revision-Date: 2018-03-10 00:04+0000\n"
+"PO-Revision-Date: 2018-03-14 00:02+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-power/ja/>\n"
@@ -117,7 +117,7 @@ msgstr "電源ボタン:"
 
 #: src/Plug.vala:342
 msgid "Sleep when inactive for:"
-msgstr "非アクティブ時にサスペンド:"
+msgstr "非アクティブ時にスリーブ:"
 
 #: src/Plug.vala:361
 msgid "Dim display when inactive:"
