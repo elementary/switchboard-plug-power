@@ -53,7 +53,7 @@ namespace Power {
             Object (category: Category.HARDWARE,
                 code_name: "system-pantheon-power",
                 display_name: _("Power"),
-                description: _("Configure display brightness, power buttons, and sleep behavior"),
+                description: _("Configure display brightness, power buttons, and suspend behavior"),
                 icon: "preferences-system-power",
                 supported_settings: supported_settings);
         }
@@ -140,7 +140,7 @@ namespace Power {
         // 'search' returns results like ("Keyboard → Behavior → Duration", "keyboard<sep>behavior")
         public override async Gee.TreeMap<string, string> search (string search) {
             var search_results = new Gee.TreeMap<string, string> ((GLib.CompareDataFunc<string>)strcmp, (Gee.EqualDataFunc<string>)str_equal);
-            search_results.set ("%s → %s".printf (display_name, _("Sleep button")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Suspend button")), "");
             search_results.set ("%s → %s".printf (display_name, _("Power button")), "");
             search_results.set ("%s → %s".printf (display_name, _("Display inactive")), "");
             search_results.set ("%s → %s".printf (display_name, _("Dim display")), "");
@@ -149,7 +149,7 @@ namespace Power {
             search_results.set ("%s → %s".printf (display_name, _("Automatic brightness adjustment")), "");
             search_results.set ("%s → %s".printf (display_name, _("Inactive display off")), "");
             search_results.set ("%s → %s".printf (display_name, _("Docked lid close")), "");
-            search_results.set ("%s → %s".printf (display_name, _("Sleep inactive")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Suspend inactive")), "");
             return search_results;;
         }
 
@@ -339,7 +339,7 @@ namespace Power {
         }
 
         private Gtk.Grid create_notebook_pages (bool ac) {
-            var sleep_timeout_label = new Gtk.Label (_("Sleep when inactive for:"));
+            var sleep_timeout_label = new Gtk.Label (_("Suspend when inactive for:"));
             sleep_timeout_label.xalign = 1;
             label_size.add_widget (sleep_timeout_label);
 
