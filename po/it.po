@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-20 13:22-0800\n"
+"POT-Creation-Date: 2018-03-17 15:51-0700\n"
 "PO-Revision-Date: 2018-03-14 00:02+0000\n"
 "Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
-"Language-Team: Italian <https://weblate.elementary.io/projects/switchboard"
-"/switchboard-plug-power/it/>\n"
+"Language-Team: Italian <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-power/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,7 +37,8 @@ msgid "Power"
 msgstr "Alimentazione"
 
 #: src/Plug.vala:56
-msgid "Configure display brightness, power buttons, and sleep behavior"
+#, fuzzy
+msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr ""
 "Configura la luminosità del display, i pulsanti di alimentazione e il "
 "comportamento durante la sospensione"
@@ -51,7 +52,8 @@ msgid "On Battery"
 msgstr "Con batteria"
 
 #: src/Plug.vala:143
-msgid "Sleep button"
+#, fuzzy
+msgid "Suspend button"
 msgstr "Pulsante di sospensione"
 
 #: src/Plug.vala:144
@@ -87,7 +89,8 @@ msgid "Docked lid close"
 msgstr "Ancorato ad una dock con coperchio chiuso"
 
 #: src/Plug.vala:152
-msgid "Sleep inactive"
+#, fuzzy
+msgid "Suspend inactive"
 msgstr "Inattività in sospensione"
 
 #: src/Plug.vala:166
@@ -125,7 +128,8 @@ msgid "Power button:"
 msgstr "Pulsante di accensione:"
 
 #: src/Plug.vala:342
-msgid "Sleep when inactive for:"
+#, fuzzy
+msgid "Suspend when inactive for:"
 msgstr "Sospendere quando inattivo per:"
 
 #: src/Plug.vala:361

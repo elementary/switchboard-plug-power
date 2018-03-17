@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-20 13:22-0800\n"
+"POT-Creation-Date: 2018-03-17 15:51-0700\n"
 "PO-Revision-Date: 2016-12-27 02:16+0000\n"
 "Last-Translator: Timothy <timothy.wong@rocketmail.com>\n"
 "Language-Team: Malay <ms@li.org>\n"
@@ -36,7 +36,8 @@ msgid "Power"
 msgstr "Kuasa"
 
 #: src/Plug.vala:56
-msgid "Configure display brightness, power buttons, and sleep behavior"
+#, fuzzy
+msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "Konfigut kecerahan paparan ,butang kuasa, dan kelakuan tidur"
 
 #: src/Plug.vala:75
@@ -48,7 +49,8 @@ msgid "On Battery"
 msgstr "Mod Bateri"
 
 #: src/Plug.vala:143
-msgid "Sleep button"
+#, fuzzy
+msgid "Suspend button"
 msgstr "Butang tidur"
 
 #: src/Plug.vala:144
@@ -84,7 +86,8 @@ msgid "Docked lid close"
 msgstr "Penutup terlabuh ditutup"
 
 #: src/Plug.vala:152
-msgid "Sleep inactive"
+#, fuzzy
+msgid "Suspend inactive"
 msgstr "Tidur tidak aktif"
 
 #: src/Plug.vala:166
@@ -123,7 +126,7 @@ msgstr "Butang kuasa:"
 
 #: src/Plug.vala:342
 #, fuzzy
-msgid "Sleep when inactive for:"
+msgid "Suspend when inactive for:"
 msgstr "Tangguh bila tidak aktif selama:"
 
 #: src/Plug.vala:361
