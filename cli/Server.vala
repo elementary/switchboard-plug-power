@@ -31,7 +31,7 @@ public class LoginDHelper.Server : Object {
 
     private const string CONFIG_FILE = "/etc/systemd/logind.conf";
     private const string CONFIG_GROUP = "Login";
-    private const string ACTION_ID = "org.pantheon.switchboard.power.administration";
+    private const string ACTION_ID = "io.elementary.switchboard.power.administration";
 
     private KeyFile file;
 
@@ -82,7 +82,7 @@ public class LoginDHelper.Server : Object {
      * Sets the @key to @value in the logind config file (that is /etc/systemd/logind.conf)
      *
      * In order for this method to succeed, the caller must be already granted the 
-     * org.pantheon.switchboard.power.administration policy PolicyKit permission, otherwise
+     * io.elementary.switchboard.power.administration policy PolicyKit permission, otherwise
      * the method will throw an error and exit
      *
      * When the @key was successfully set, the changed () signal will be emitted
