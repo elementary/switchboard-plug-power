@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-17 15:51-0700\n"
-"PO-Revision-Date: 2018-03-23 00:05+0000\n"
+"PO-Revision-Date: 2018-04-24 20:20+0000\n"
 "Last-Translator: haggen svastian <h2gn@openmailbox.org>\n"
 "Language-Team: Spanish <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-power/es/>\n"
@@ -126,9 +126,8 @@ msgid "Power button:"
 msgstr "Botón de encendido:"
 
 #: src/Plug.vala:342
-#, fuzzy
 msgid "Suspend when inactive for:"
-msgstr "Dormir cuando esté inactivo por:"
+msgstr "Suspender cuando esté inactivo por:"
 
 #: src/Plug.vala:361
 msgid "Dim display when inactive:"
