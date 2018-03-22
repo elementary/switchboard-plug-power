@@ -8,10 +8,11 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-17 15:51-0700\n"
-"PO-Revision-Date: 2018-03-08 17:54+0000\n"
+"PO-Revision-Date: 2018-03-22 13:42+0000\n"
 "Last-Translator: Shawn <syst3mfailur3@gmail.com>\n"
-"Language-Team: English (Canada) <https://weblate.elementary.io/projects/"
-"switchboard/switchboard-plug-power/en_CA/>\n"
+"Language-Team: English (Canada) "
+"<https://weblate.elementary.io/projects/switchboard/switchboard-plug-"
+"power/en_CA/>\n"
 "Language: en_CA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,9 +38,8 @@ msgid "Power"
 msgstr "Power"
 
 #: src/Plug.vala:56
-#, fuzzy
 msgid "Configure display brightness, power buttons, and suspend behavior"
-msgstr "Configure display brightness, power buttons, and sleep behaviour"
+msgstr "Configure display brightness, power buttons, and suspend behaviour"
 
 #: src/Plug.vala:75
 msgid "Plugged In"
@@ -50,9 +50,8 @@ msgid "On Battery"
 msgstr "On Battery"
 
 #: src/Plug.vala:143
-#, fuzzy
 msgid "Suspend button"
-msgstr "Sleep button"
+msgstr "Suspend button"
 
 #: src/Plug.vala:144
 msgid "Power button"
@@ -87,9 +86,8 @@ msgid "Docked lid close"
 msgstr "Docked lid close"
 
 #: src/Plug.vala:152
-#, fuzzy
 msgid "Suspend inactive"
-msgstr "Sleep inactive"
+msgstr "Suspend inactive"
 
 #: src/Plug.vala:166
 msgid "Some changes will not take effect until you restart this computer"
@@ -124,9 +122,8 @@ msgid "Power button:"
 msgstr "Power button:"
 
 #: src/Plug.vala:342
-#, fuzzy
 msgid "Suspend when inactive for:"
-msgstr "Sleep when inactive for:"
+msgstr "Suspend when inactive for:"
 
 #: src/Plug.vala:361
 msgid "Dim display when inactive:"
