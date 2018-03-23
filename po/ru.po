@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-17 15:51-0700\n"
-"PO-Revision-Date: 2018-02-26 20:13+0000\n"
+"PO-Revision-Date: 2018-03-23 15:27+0000\n"
 "Last-Translator: Kirill Romanov <djaler1@gmail.com>\n"
-"Language-Team: Russian <https://weblate.elementary.io/projects/switchboard/"
-"switchboard-plug-power/ru/>\n"
+"Language-Team: Russian <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-power/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2016-12-02 05:21+0000\n"
 
@@ -38,7 +38,6 @@ msgid "Power"
 msgstr "Питание"
 
 #: src/Plug.vala:56
-#, fuzzy
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "Настройка яркости экрана, сна и кнопок питания"
 
@@ -51,7 +50,6 @@ msgid "On Battery"
 msgstr "От батареи"
 
 #: src/Plug.vala:143
-#, fuzzy
 msgid "Suspend button"
 msgstr "Кнопка сна"
 
@@ -88,7 +86,6 @@ msgid "Docked lid close"
 msgstr "Крышка закрыта"
 
 #: src/Plug.vala:152
-#, fuzzy
 msgid "Suspend inactive"
 msgstr "Сон при простое"
 
@@ -125,7 +122,6 @@ msgid "Power button:"
 msgstr "Кнопка питания:"
 
 #: src/Plug.vala:342
-#, fuzzy
 msgid "Suspend when inactive for:"
 msgstr "Перейти в ждущий режим через:"
 
