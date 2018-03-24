@@ -8,20 +8,21 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-17 15:51-0700\n"
-"PO-Revision-Date: 2017-03-17 15:01+0000\n"
-"Last-Translator: scootergrisen <scootergrisen@gmail.com>\n"
-"Language-Team: Danish <da@li.org>\n"
+"PO-Revision-Date: 2018-03-24 17:50+0000\n"
+"Last-Translator: Kaj Printz Madsen <kajprintz@gmail.com>\n"
+"Language-Team: Danish <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-power/da/>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-03-19 06:31+0000\n"
-"X-Generator: Launchpad (build 18332)\n"
 
 #: data/io.elementary.switchboard.power.policy.in:10
-#, fuzzy
 msgid "Manage power settings"
-msgstr "Håndter strømindstillinger "
+msgstr "Administrer strømindstillinger"
 
 #: data/io.elementary.switchboard.power.policy.in:11
 msgid "Authentication is required to manage power settings"
@@ -36,9 +37,9 @@ msgid "Power"
 msgstr "Strøm"
 
 #: src/Plug.vala:56
-#, fuzzy
 msgid "Configure display brightness, power buttons, and suspend behavior"
-msgstr "Konfigurer skærmens lysstyrke, strømknapper og soveopførsel"
+msgstr ""
+"Konfigurer skærmens lysstyrke, tænd / sluk-knapper og suspender opførsel"
 
 #: src/Plug.vala:75
 msgid "Plugged In"
@@ -49,9 +50,8 @@ msgid "On Battery"
 msgstr "På batteri"
 
 #: src/Plug.vala:143
-#, fuzzy
 msgid "Suspend button"
-msgstr "Soveknap"
+msgstr "Suspender knap"
 
 #: src/Plug.vala:144
 msgid "Power button"
@@ -86,9 +86,8 @@ msgid "Docked lid close"
 msgstr "Dokket låg lukket"
 
 #: src/Plug.vala:152
-#, fuzzy
 msgid "Suspend inactive"
-msgstr "Sove inaktiv"
+msgstr "Suspension inaktiv"
 
 #: src/Plug.vala:166
 msgid "Some changes will not take effect until you restart this computer"
@@ -124,9 +123,8 @@ msgid "Power button:"
 msgstr "Tænd/sluk-knap:"
 
 #: src/Plug.vala:342
-#, fuzzy
 msgid "Suspend when inactive for:"
-msgstr "Sæt i hvile ved inaktivitet i:"
+msgstr "Suspension når inaktiv i:"
 
 #: src/Plug.vala:361
 msgid "Dim display when inactive:"
