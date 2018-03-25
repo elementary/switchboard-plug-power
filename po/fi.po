@@ -8,20 +8,21 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-17 15:51-0700\n"
-"PO-Revision-Date: 2016-11-21 09:47+0000\n"
-"Last-Translator: Jiri Grönroos <Unknown>\n"
-"Language-Team: Finnish <fi@li.org>\n"
+"PO-Revision-Date: 2018-03-26 00:09+0000\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
+"Language-Team: Finnish <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-power/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2016-11-22 06:03+0000\n"
-"X-Generator: Launchpad (build 18269)\n"
 
 #: data/io.elementary.switchboard.power.policy.in:10
-#, fuzzy
 msgid "Manage power settings"
-msgstr "Hallitse virranhallinnan asetuksia "
+msgstr "Hallitse virranhallinnan asetuksia"
 
 #: data/io.elementary.switchboard.power.policy.in:11
 msgid "Authentication is required to manage power settings"
@@ -36,7 +37,6 @@ msgid "Power"
 msgstr "Virransäästö"
 
 #: src/Plug.vala:56
-#, fuzzy
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "Määritä näytön kirkkaus, virtapainikkeet ja virransäästötilan toiminta"
 
