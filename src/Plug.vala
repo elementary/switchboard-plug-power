@@ -30,6 +30,7 @@ namespace Power {
         private PowerSettings screen;
         private Battery battery;
         private PowerSupply power_supply;
+        private Lid lid;
         private Gtk.Scale scale;
 
         private const string NO_PERMISSION_STRING  = _("You do not have permission to change this");
@@ -42,6 +43,7 @@ namespace Power {
 
             battery = new Battery ();
             power_supply = new PowerSupply ();
+            lid = new Lid ();
 
             connect_to_settings_daemon ();
         }
@@ -181,7 +183,7 @@ namespace Power {
 
             stack_container.add (infobar);
 
-            if (lid_detect ()) {
+            if (lid.is_present ()) {
                 var lock_button = new Gtk.LockButton (get_permission ());
 
                 var permission_label = new Gtk.Label (_("Some settings require administrator rights to be changed"));
@@ -240,7 +242,7 @@ namespace Power {
                 label_size.add_widget (als_label);
             }
 
-            if (lid_detect ()) {
+            if (lid.is_present ()) {
                 var lid_closed_label = new Gtk.Label (_("When lid is closed:"));
                 lid_closed_label.halign = Gtk.Align.END;
                 lid_closed_label.sensitive = false;
@@ -373,28 +375,6 @@ namespace Power {
             }
 
             return grid;
-        }
-
-        private static bool lid_detect () {
-            var interface_path = File.new_for_path ("/proc/acpi/button/lid/");
-
-            try {
-                var enumerator = interface_path.enumerate_children (
-                GLib.FileAttribute.STANDARD_NAME,
-                FileQueryInfoFlags.NONE);
-                FileInfo lid;
-                if ((lid = enumerator.next_file ()) != null) {
-                    debug ("Detected lid switch");
-                    return true;
-                }
-
-                enumerator.close ();
-
-            } catch (GLib.Error err) {
-                critical ("%s", err.message);
-            }
-
-            return false;
         }
 
         private static bool backlight_detect () {
