@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-20 13:22-0800\n"
+"POT-Creation-Date: 2018-03-17 15:51-0700\n"
 "PO-Revision-Date: 2016-06-14 21:57+0000\n"
 "Last-Translator: Roman Sytnyk <Unknown>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -35,7 +35,8 @@ msgid "Power"
 msgstr "Живлення"
 
 #: src/Plug.vala:56
-msgid "Configure display brightness, power buttons, and sleep behavior"
+#, fuzzy
+msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr ""
 "Налаштування яскравості дисплея, кнопок живлення та поведінки переходу у "
 "режим сну"
@@ -49,8 +50,9 @@ msgid "On Battery"
 msgstr "Робота на акумуляторах"
 
 #: src/Plug.vala:143
-msgid "Sleep button"
-msgstr ""
+#, fuzzy
+msgid "Suspend button"
+msgstr "Призупинити"
 
 #: src/Plug.vala:144
 msgid "Power button"
@@ -85,8 +87,9 @@ msgid "Docked lid close"
 msgstr ""
 
 #: src/Plug.vala:152
-msgid "Sleep inactive"
-msgstr ""
+#, fuzzy
+msgid "Suspend inactive"
+msgstr "Вимкнення дисплея при неактивності для:"
 
 #: src/Plug.vala:166
 msgid "Some changes will not take effect until you restart this computer"
@@ -122,7 +125,7 @@ msgstr "Кнопка живлення:"
 
 #: src/Plug.vala:342
 #, fuzzy
-msgid "Sleep when inactive for:"
+msgid "Suspend when inactive for:"
 msgstr "Вимкнення дисплея при неактивності для:"
 
 #: src/Plug.vala:361
