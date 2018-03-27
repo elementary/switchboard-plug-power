@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-20 13:22-0800\n"
-"PO-Revision-Date: 2018-02-26 21:07+0000\n"
+"POT-Creation-Date: 2018-03-17 15:51-0700\n"
+"PO-Revision-Date: 2018-03-18 17:48+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-power/lt/>\n"
@@ -33,8 +33,8 @@ msgid "Power"
 msgstr "Maitinimas"
 
 #: src/Plug.vala:56
-msgid "Configure display brightness, power buttons, and sleep behavior"
-msgstr "Konfigūruoti ekrano ryškumą, maitinimo mygtukų ir miego elgseną"
+msgid "Configure display brightness, power buttons, and suspend behavior"
+msgstr "Konfigūruoti ekrano ryškumą, maitinimo mygtukų ir pristabdymo elgseną"
 
 #: src/Plug.vala:75
 msgid "Plugged In"
@@ -45,8 +45,8 @@ msgid "On Battery"
 msgstr "Naudojama baterija"
 
 #: src/Plug.vala:143
-msgid "Sleep button"
-msgstr "Miego mygtukas"
+msgid "Suspend button"
+msgstr "Pristabdymo mygtukas"
 
 #: src/Plug.vala:144
 msgid "Power button"
@@ -81,8 +81,8 @@ msgid "Docked lid close"
 msgstr "Nešiojamojo kompiuterio dangtis uždarytas"
 
 #: src/Plug.vala:152
-msgid "Sleep inactive"
-msgstr "Miegas esant neveiklumui"
+msgid "Suspend inactive"
+msgstr "Pristabdymas esant neveiklumui"
 
 #: src/Plug.vala:166
 msgid "Some changes will not take effect until you restart this computer"
@@ -119,8 +119,8 @@ msgid "Power button:"
 msgstr "Maitinimo mygtukas:"
 
 #: src/Plug.vala:342
-msgid "Sleep when inactive for:"
-msgstr "Pristabdyti, kai kompiuteris neaktyvus:"
+msgid "Suspend when inactive for:"
+msgstr "Pristabdyti, kai kompiuteris neveiklus:"
 
 #: src/Plug.vala:361
 msgid "Dim display when inactive:"

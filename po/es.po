@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-20 13:22-0800\n"
-"PO-Revision-Date: 2018-03-09 03:42+0000\n"
-"Last-Translator: Mattias Ezequiel Mignone <memignone@gmail.com>\n"
+"POT-Creation-Date: 2018-03-17 15:51-0700\n"
+"PO-Revision-Date: 2018-03-23 00:05+0000\n"
+"Last-Translator: haggen svastian <h2gn@openmailbox.org>\n"
 "Language-Team: Spanish <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-power/es/>\n"
 "Language: es\n"
@@ -37,7 +37,7 @@ msgid "Power"
 msgstr "Energía"
 
 #: src/Plug.vala:56
-msgid "Configure display brightness, power buttons, and sleep behavior"
+msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr ""
 "Configurar el brillo de pantalla, los botones de encendido y las opciones de "
 "suspensión"
@@ -51,7 +51,7 @@ msgid "On Battery"
 msgstr "Con batería"
 
 #: src/Plug.vala:143
-msgid "Sleep button"
+msgid "Suspend button"
 msgstr "Botón de suspensión"
 
 #: src/Plug.vala:144
@@ -87,7 +87,7 @@ msgid "Docked lid close"
 msgstr "Cierre de la tapa acoplada"
 
 #: src/Plug.vala:152
-msgid "Sleep inactive"
+msgid "Suspend inactive"
 msgstr "Dormir inactivo"
 
 #: src/Plug.vala:166
@@ -126,7 +126,8 @@ msgid "Power button:"
 msgstr "Botón de encendido:"
 
 #: src/Plug.vala:342
-msgid "Sleep when inactive for:"
+#, fuzzy
+msgid "Suspend when inactive for:"
 msgstr "Dormir cuando esté inactivo por:"
 
 #: src/Plug.vala:361
