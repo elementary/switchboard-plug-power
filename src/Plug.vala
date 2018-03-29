@@ -84,9 +84,11 @@ namespace Power {
 
                     var left_sep = new Gtk.Separator (Gtk.Orientation.HORIZONTAL);
                     left_sep.hexpand = true;
+                    left_sep.valign = Gtk.Align.CENTER;
 
                     var right_sep = new Gtk.Separator (Gtk.Orientation.HORIZONTAL);
                     right_sep.hexpand = true;
+                    right_sep.valign = Gtk.Align.CENTER;
 
                     var switcher_grid = new Gtk.Grid ();
                     switcher_grid.margin_top = 24;
