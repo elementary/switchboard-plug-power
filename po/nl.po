@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-17 15:51-0700\n"
-"PO-Revision-Date: 2018-04-01 13:29+0000\n"
+"PO-Revision-Date: 2018-04-02 00:05+0000\n"
 "Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
 "Language-Team: Dutch <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-power/nl/>\n"
@@ -174,7 +174,7 @@ msgstr "Afsluiten"
 
 #: src/Widgets/LidCloseActionComboBox.vala:34
 msgid "Lock"
-msgstr "Vergrendelen"
+msgstr "Vergrendeling"
 
 #: src/Widgets/LidCloseActionComboBox.vala:35
 msgid "Halt"
