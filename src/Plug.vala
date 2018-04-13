@@ -36,16 +36,6 @@ namespace Power {
         private const string SETTINGS_DAEMON_NAME = "org.gnome.SettingsDaemon.Power";
         private const string SETTINGS_DAEMON_PATH = "/org/gnome/SettingsDaemon/Power";
 
-        construct {
-            settings = new GLib.Settings ("org.gnome.settings-daemon.plugins.power");
-            pantheon_dpms_settings = new GLib.Settings ("org.pantheon.dpms");
-
-            battery = new Battery ();
-            power_supply = new PowerSupply ();
-
-            connect_to_settings_daemon ();
-        }
-
         public Plug () {
             var supported_settings = new Gee.TreeMap<string, string?> (null, null);
             supported_settings["power"] = null;
@@ -60,6 +50,14 @@ namespace Power {
 
         public override Gtk.Widget get_widget () {
             if (stack_container == null) {
+                settings = new GLib.Settings ("org.gnome.settings-daemon.plugins.power");
+                pantheon_dpms_settings = new GLib.Settings ("org.pantheon.dpms");
+    
+                battery = new Battery ();
+                power_supply = new PowerSupply ();
+    
+                connect_to_settings_daemon ();
+
                 label_size = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
 
                 main_grid = new Gtk.Grid ();
