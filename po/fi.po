@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-17 15:51-0700\n"
-"PO-Revision-Date: 2018-03-26 00:09+0000\n"
+"PO-Revision-Date: 2018-05-03 00:06+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-power/fi/>\n"
@@ -34,7 +34,7 @@ msgstr "Oikeutesi eivät riitä tämän kohdan muuttamiseen"
 
 #: src/Plug.vala:55
 msgid "Power"
-msgstr "Virransäästö"
+msgstr "Virranhallinta"
 
 #: src/Plug.vala:56
 msgid "Configure display brightness, power buttons, and suspend behavior"
