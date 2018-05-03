@@ -25,7 +25,7 @@ namespace Power {
     public class Plug : Switchboard.Plug {
         private Gtk.SizeGroup label_size;
         private Gtk.StackSwitcher stack_switcher;
-        private GLib.Settings pantheon_dpms_settings;
+        private GLib.Settings elementary_dpms_settings;
 
         private PowerSettings screen;
         private Battery battery;
@@ -51,7 +51,7 @@ namespace Power {
         public override Gtk.Widget get_widget () {
             if (stack_container == null) {
                 settings = new GLib.Settings ("org.gnome.settings-daemon.plugins.power");
-                pantheon_dpms_settings = new GLib.Settings ("org.pantheon.dpms");
+                elementary_dpms_settings = new GLib.Settings ("io.elementary.dpms");
     
                 battery = new Battery ();
                 power_supply = new PowerSupply ();
@@ -301,7 +301,7 @@ namespace Power {
             screen_timeout_label.halign = Gtk.Align.END;
             screen_timeout_label.xalign = 1;
 
-            var screen_timeout = new TimeoutComboBox (pantheon_dpms_settings, "standby-time");
+            var screen_timeout = new TimeoutComboBox (elementary_dpms_settings, "standby-time");
             screen_timeout.changed.connect (run_dpms_helper);
 
             var power_label = new Gtk.Label (_("Power button:"));

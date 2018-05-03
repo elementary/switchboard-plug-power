@@ -8,20 +8,21 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-17 15:51-0700\n"
-"PO-Revision-Date: 2016-08-06 18:43+0000\n"
-"Last-Translator: Lukáš Kubíček <Unknown>\n"
-"Language-Team: German <de@li.org>\n"
-"Language: de\n"
+"PO-Revision-Date: 2018-04-27 00:03+0000\n"
+"Last-Translator: Jan Marek <janmarek28@gmail.com>\n"
+"Language-Team: Czech <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-power/cs/>\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2016-11-21 05:42+0000\n"
-"X-Generator: Launchpad (build 18269)\n"
 
 #: data/io.elementary.switchboard.power.policy.in:10
-#, fuzzy
 msgid "Manage power settings"
-msgstr "Spravovat možnosti napájení "
+msgstr "Spravovat nastavení napájení"
 
 #: data/io.elementary.switchboard.power.policy.in:11
 msgid "Authentication is required to manage power settings"
@@ -36,9 +37,8 @@ msgid "Power"
 msgstr "Napájení"
 
 #: src/Plug.vala:56
-#, fuzzy
 msgid "Configure display brightness, power buttons, and suspend behavior"
-msgstr "Konfigurovat jas obrazovky, tlačítka napájení a funkce uspávání"
+msgstr "Konfigurovat jas obrazovky, tlačítka napájení a chování uspávání"
 
 #: src/Plug.vala:75
 msgid "Plugged In"
@@ -49,33 +49,32 @@ msgid "On Battery"
 msgstr "Napájení z baterie"
 
 #: src/Plug.vala:143
-#, fuzzy
 msgid "Suspend button"
-msgstr "Uspat do paměti"
+msgstr "Tlačítko uspání"
 
 #: src/Plug.vala:144
 msgid "Power button"
-msgstr ""
+msgstr "Tlačítko vypnutí"
 
 #: src/Plug.vala:145
 msgid "Display inactive"
-msgstr ""
+msgstr "Neaktivní displej"
 
 #: src/Plug.vala:146
 msgid "Dim display"
-msgstr ""
+msgstr "Ztmavit displej"
 
 #: src/Plug.vala:147
 msgid "Lid close"
-msgstr ""
+msgstr "Zavření víka"
 
 #: src/Plug.vala:148
 msgid "Display brightness"
-msgstr ""
+msgstr "Jas displeje"
 
 #: src/Plug.vala:149
 msgid "Automatic brightness adjustment"
-msgstr ""
+msgstr "Automatické přizpůsobení jasu"
 
 #: src/Plug.vala:150
 msgid "Inactive display off"
@@ -86,13 +85,12 @@ msgid "Docked lid close"
 msgstr ""
 
 #: src/Plug.vala:152
-#, fuzzy
 msgid "Suspend inactive"
-msgstr "Vypnout obrazovku, když je neaktivní:"
+msgstr "Uspat neaktivní"
 
 #: src/Plug.vala:166
 msgid "Some changes will not take effect until you restart this computer"
-msgstr "Některé změny se projeví až po restartu tohoto počítače"
+msgstr "Některé změny se neprojeví dokud nerestartujete tento počítač"
 
 #: src/Plug.vala:187
 msgid "Some settings require administrator rights to be changed"
@@ -104,7 +102,7 @@ msgstr "Jas displeje:"
 
 #: src/Plug.vala:216
 msgid "Automatically adjust brightness:"
-msgstr "Automaticky nastavit jas:"
+msgstr "Automaticky přizpůsobit jas:"
 
 #: src/Plug.vala:244
 msgid "When lid is closed:"
@@ -112,20 +110,19 @@ msgstr "Když je víko zavřeno:"
 
 #: src/Plug.vala:252
 msgid "When lid is closed with external monitor:"
-msgstr ""
+msgstr "Když je víko zavřeno a připojen externí monitor:"
 
 #: src/Plug.vala:300
 msgid "Turn off display when inactive for:"
-msgstr "Vypnout obrazovku, když je neaktivní:"
+msgstr "Vypnout obrazovku, když je neaktivní po dobu:"
 
 #: src/Plug.vala:307
 msgid "Power button:"
 msgstr "Tlačítko napájení:"
 
 #: src/Plug.vala:342
-#, fuzzy
 msgid "Suspend when inactive for:"
-msgstr "Vypnout obrazovku, když je neaktivní:"
+msgstr "Uspat, když je neaktivní po dobu:"
 
 #: src/Plug.vala:361
 msgid "Dim display when inactive:"
@@ -174,7 +171,7 @@ msgstr "Vypnout"
 
 #: src/Widgets/LidCloseActionComboBox.vala:34
 msgid "Lock"
-msgstr "Uzamknout"
+msgstr "Zamknout"
 
 #: src/Widgets/LidCloseActionComboBox.vala:35
 msgid "Halt"

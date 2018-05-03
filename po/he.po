@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-17 15:51-0700\n"
-"PO-Revision-Date: 2018-03-18 08:05+0000\n"
+"PO-Revision-Date: 2018-05-03 00:06+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-power/he/>\n"
@@ -34,7 +34,7 @@ msgstr "אין לך הרשאה לשנות את זה"
 
 #: src/Plug.vala:55
 msgid "Power"
-msgstr "צריכת חשמל"
+msgstr "חשמל"
 
 #: src/Plug.vala:56
 msgid "Configure display brightness, power buttons, and suspend behavior"
