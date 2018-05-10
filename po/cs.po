@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-17 15:51-0700\n"
-"PO-Revision-Date: 2018-05-11 00:06+0000\n"
+"PO-Revision-Date: 2018-05-16 13:31+0000\n"
 "Last-Translator: Jan Marek <janmarek28@gmail.com>\n"
 "Language-Team: Czech <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-power/cs/>\n"
@@ -82,7 +82,7 @@ msgstr "Vypnutý neaktivní displej"
 
 #: src/Plug.vala:151
 msgid "Docked lid close"
-msgstr ""
+msgstr "Zavření víka při připojeném doku"
 
 #: src/Plug.vala:152
 msgid "Suspend inactive"
