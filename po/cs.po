@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-17 15:51-0700\n"
-"PO-Revision-Date: 2018-04-27 00:03+0000\n"
+"PO-Revision-Date: 2018-05-11 00:06+0000\n"
 "Last-Translator: Jan Marek <janmarek28@gmail.com>\n"
 "Language-Team: Czech <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-power/cs/>\n"
@@ -38,15 +38,15 @@ msgstr "Napájení"
 
 #: src/Plug.vala:56
 msgid "Configure display brightness, power buttons, and suspend behavior"
-msgstr "Konfigurovat jas obrazovky, tlačítka napájení a chování uspávání"
+msgstr "Nastavuj jas obrazovky, tlačítka napájení a chování uspávání"
 
 #: src/Plug.vala:75
 msgid "Plugged In"
-msgstr "Napájení ze sítě"
+msgstr "Připojeno"
 
 #: src/Plug.vala:83
 msgid "On Battery"
-msgstr "Napájení z baterie"
+msgstr "Z baterie"
 
 #: src/Plug.vala:143
 msgid "Suspend button"
@@ -78,7 +78,7 @@ msgstr "Automatické přizpůsobení jasu"
 
 #: src/Plug.vala:150
 msgid "Inactive display off"
-msgstr ""
+msgstr "Vypnutý neaktivní displej"
 
 #: src/Plug.vala:151
 msgid "Docked lid close"
