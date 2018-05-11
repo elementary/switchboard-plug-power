@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-17 15:51-0700\n"
-"PO-Revision-Date: 2018-05-11 03:25+0000\n"
+"PO-Revision-Date: 2018-05-12 00:12+0000\n"
 "Last-Translator: Pedro Ferreira <pmaf.ferreira@gmail.com>\n"
 "Language-Team: Portuguese <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-power/pt/>\n"
@@ -30,7 +30,7 @@ msgstr "É necessário autenticação para modificar as definições de energia"
 
 #: src/Plug.vala:35
 msgid "You do not have permission to change this"
-msgstr "Não tem permissão para modificar esta opção"
+msgstr "Não tens permissão para modificar isto"
 
 #: src/Plug.vala:55
 msgid "Power"
@@ -135,11 +135,11 @@ msgstr "Nunca"
 
 #: src/Widgets/TimeoutComboBox.vala:43
 msgid "5 min"
-msgstr "5 min."
+msgstr "5 min"
 
 #: src/Widgets/TimeoutComboBox.vala:44
 msgid "10 min"
-msgstr "10 min."
+msgstr "10 min"
 
 #: src/Widgets/TimeoutComboBox.vala:45
 msgid "15 min"
@@ -147,7 +147,7 @@ msgstr "15 min"
 
 #: src/Widgets/TimeoutComboBox.vala:46
 msgid "30 min"
-msgstr "30 min."
+msgstr "30 min"
 
 #: src/Widgets/TimeoutComboBox.vala:47
 msgid "45 min"
