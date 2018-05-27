@@ -2,8 +2,16 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-17 15:51-0700\n"
+"PO-Revision-Date: 2018-05-28 00:03+0000\n"
+"Last-Translator: Romanic Ion Nicușor <contact.romanic@gmail.com>\n"
+"Language-Team: Moldovan <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-power/mo/>\n"
+"Language: mo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.18\n"
 
 #: data/io.elementary.switchboard.power.policy.in:10
 msgid "Manage power settings"
@@ -79,7 +87,7 @@ msgstr ""
 
 #: src/Plug.vala:187
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "Unele setări necesită modificarea drepturilor de administrator"
 
 #: src/Plug.vala:212
 msgid "Display brightness:"
@@ -165,7 +173,7 @@ msgstr ""
 #: src/Widgets/LidCloseActionComboBox.vala:36
 #: src/Widgets/ActionComboBox.vala:32
 msgid "Do nothing"
-msgstr ""
+msgstr "Nu face nimic"
 
 #: src/Widgets/LidCloseActionComboBox.vala:38
 msgid "Not supported"
