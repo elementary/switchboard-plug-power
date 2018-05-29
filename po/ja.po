@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-17 15:51-0700\n"
-"PO-Revision-Date: 2018-03-20 00:12+0000\n"
+"PO-Revision-Date: 2018-05-30 00:04+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-power/ja/>\n"
@@ -121,7 +121,7 @@ msgstr "非アクティブ時にサスペンド:"
 
 #: src/Plug.vala:361
 msgid "Dim display when inactive:"
-msgstr "非アクティブ時に画面を暗くする:"
+msgstr "非アクティブ時にディスプレイを暗くする:"
 
 #: src/Widgets/TimeoutComboBox.vala:42
 msgid "Never"
