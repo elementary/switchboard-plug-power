@@ -8,27 +8,29 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-17 15:51-0700\n"
-"PO-Revision-Date: 2014-09-24 06:51+0000\n"
-"Last-Translator: Mark Lutring <marcus@elitemail.hu>\n"
-"Language-Team: Hungarian <hu@li.org>\n"
+"PO-Revision-Date: 2018-05-30 16:22+0000\n"
+"Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
+"Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-power/hu/>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2016-11-21 05:42+0000\n"
-"X-Generator: Launchpad (build 18269)\n"
 
 #: data/io.elementary.switchboard.power.policy.in:10
 msgid "Manage power settings"
-msgstr ""
+msgstr "Energiagazdálkodási beállítások kezelése"
 
 #: data/io.elementary.switchboard.power.policy.in:11
 msgid "Authentication is required to manage power settings"
-msgstr ""
+msgstr "Hitelesítés szükséges az energiagazdálkodási beállítások kezeléséhez"
 
 #: src/Plug.vala:35
 msgid "You do not have permission to change this"
-msgstr ""
+msgstr "Nincs jogosultságod megváltoztatni"
 
 #: src/Plug.vala:55
 msgid "Power"
@@ -37,6 +39,8 @@ msgstr "Energiagazdálkodás"
 #: src/Plug.vala:56
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr ""
+"Állítsa be a kijelző fényerejét, az energiakezelő gombok és a felfüggesztés "
+"viselkedését"
 
 #: src/Plug.vala:75
 msgid "Plugged In"
@@ -47,74 +51,72 @@ msgid "On Battery"
 msgstr "Akkumulátorról"
 
 #: src/Plug.vala:143
-#, fuzzy
 msgid "Suspend button"
-msgstr "Felfüggesztés"
+msgstr "Felfüggesztés gomb"
 
 #: src/Plug.vala:144
 msgid "Power button"
-msgstr ""
+msgstr "Bekapcsológomb"
 
 #: src/Plug.vala:145
 msgid "Display inactive"
-msgstr ""
+msgstr "Kijelző inaktív"
 
 #: src/Plug.vala:146
 msgid "Dim display"
-msgstr ""
+msgstr "Kijelző elsötétítése"
 
 #: src/Plug.vala:147
 msgid "Lid close"
-msgstr ""
+msgstr "Fedél lecsukása"
 
 #: src/Plug.vala:148
 msgid "Display brightness"
-msgstr ""
+msgstr "Kijelző fényereje"
 
 #: src/Plug.vala:149
 msgid "Automatic brightness adjustment"
-msgstr ""
+msgstr "Automatikus fényerő-szabályozás"
 
 #: src/Plug.vala:150
 msgid "Inactive display off"
-msgstr ""
+msgstr "Inaktív kijelző kikapcsolva"
 
 #: src/Plug.vala:151
 msgid "Docked lid close"
-msgstr ""
+msgstr "Dokkolt fedél lecsukása"
 
 #: src/Plug.vala:152
-#, fuzzy
 msgid "Suspend inactive"
-msgstr "Felfüggesztés"
+msgstr "Felfüggesztés inaktív"
 
 #: src/Plug.vala:166
 msgid "Some changes will not take effect until you restart this computer"
-msgstr ""
+msgstr "Néhány módosítás csak a számítógép újraindítása után lép érvénybe"
 
 #: src/Plug.vala:187
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "Egyes beállítások megváltoztatása adminisztrátori jogokat igényel"
 
 #: src/Plug.vala:212
 msgid "Display brightness:"
-msgstr ""
+msgstr "Kijelző fényereje:"
 
 #: src/Plug.vala:216
 msgid "Automatically adjust brightness:"
-msgstr ""
+msgstr "A fényerő automatikus beállítása:"
 
 #: src/Plug.vala:244
 msgid "When lid is closed:"
-msgstr ""
+msgstr "Mikor le van csukva a fedél:"
 
 #: src/Plug.vala:252
 msgid "When lid is closed with external monitor:"
-msgstr ""
+msgstr "Mikor le van csukva a fedél és egy külső monitor van csatlakoztatva:"
 
 #: src/Plug.vala:300
 msgid "Turn off display when inactive for:"
-msgstr ""
+msgstr "Kijelző kikapcsolása ennyi inaktivitás után:"
 
 #: src/Plug.vala:307
 msgid "Power button:"
@@ -122,11 +124,11 @@ msgstr "Bekapcsolás gomb:"
 
 #: src/Plug.vala:342
 msgid "Suspend when inactive for:"
-msgstr ""
+msgstr "Felfüggesztés ennyi inaktivitás után:"
 
 #: src/Plug.vala:361
 msgid "Dim display when inactive:"
-msgstr ""
+msgstr "Kijelző elsötétítése ennyi inaktivitás után:"
 
 #: src/Widgets/TimeoutComboBox.vala:42
 msgid "Never"
@@ -142,7 +144,7 @@ msgstr "10 perc"
 
 #: src/Widgets/TimeoutComboBox.vala:45
 msgid "15 min"
-msgstr ""
+msgstr "15 perc"
 
 #: src/Widgets/TimeoutComboBox.vala:46
 msgid "30 min"
@@ -150,7 +152,7 @@ msgstr "30 perc"
 
 #: src/Widgets/TimeoutComboBox.vala:47
 msgid "45 min"
-msgstr ""
+msgstr "45 perc"
 
 #: src/Widgets/TimeoutComboBox.vala:48
 msgid "1 hour"
@@ -158,7 +160,7 @@ msgstr "1 óra"
 
 #: src/Widgets/TimeoutComboBox.vala:49
 msgid "2 hours"
-msgstr ""
+msgstr "2 óra"
 
 #: src/Widgets/LidCloseActionComboBox.vala:32
 #: src/Widgets/ActionComboBox.vala:33
@@ -171,11 +173,11 @@ msgstr "Leállítás"
 
 #: src/Widgets/LidCloseActionComboBox.vala:34
 msgid "Lock"
-msgstr ""
+msgstr "Lezárás"
 
 #: src/Widgets/LidCloseActionComboBox.vala:35
 msgid "Halt"
-msgstr ""
+msgstr "Leállítás"
 
 #: src/Widgets/LidCloseActionComboBox.vala:36
 #: src/Widgets/ActionComboBox.vala:32
@@ -184,7 +186,7 @@ msgstr "Ne tegyen semmit"
 
 #: src/Widgets/LidCloseActionComboBox.vala:38
 msgid "Not supported"
-msgstr ""
+msgstr "Nem támogatott"
 
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Hibernate"
