@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-17 15:51-0700\n"
-"PO-Revision-Date: 2018-05-30 16:22+0000\n"
+"PO-Revision-Date: 2018-06-02 00:06+0000\n"
 "Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
 "Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-power/hu/>\n"
@@ -96,7 +96,7 @@ msgstr "Néhány módosítás csak a számítógép újraindítása után lép �
 
 #: src/Plug.vala:187
 msgid "Some settings require administrator rights to be changed"
-msgstr "Egyes beállítások megváltoztatása adminisztrátori jogokat igényel"
+msgstr "Egyes beállítások megváltoztatása rendszergazdai jogokat igényel"
 
 #: src/Plug.vala:212
 msgid "Display brightness:"
@@ -108,11 +108,11 @@ msgstr "A fényerő automatikus beállítása:"
 
 #: src/Plug.vala:244
 msgid "When lid is closed:"
-msgstr "Mikor le van csukva a fedél:"
+msgstr "Ha le van csukva a fedél:"
 
 #: src/Plug.vala:252
 msgid "When lid is closed with external monitor:"
-msgstr "Mikor le van csukva a fedél és egy külső monitor van csatlakoztatva:"
+msgstr "Ha le van csukva a fedél és egy külső monitor van csatlakoztatva:"
 
 #: src/Plug.vala:300
 msgid "Turn off display when inactive for:"
