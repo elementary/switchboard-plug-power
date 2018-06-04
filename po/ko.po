@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-17 15:51-0700\n"
-"PO-Revision-Date: 2018-06-03 07:08+0000\n"
+"PO-Revision-Date: 2018-06-06 00:09+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-power/ko/>\n"
@@ -171,7 +171,7 @@ msgstr "시스템 종료"
 
 #: src/Widgets/LidCloseActionComboBox.vala:34
 msgid "Lock"
-msgstr "잠그기"
+msgstr "잠금"
 
 #: src/Widgets/LidCloseActionComboBox.vala:35
 msgid "Halt"
