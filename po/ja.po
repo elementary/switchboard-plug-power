@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-17 15:51-0700\n"
-"PO-Revision-Date: 2018-06-10 00:12+0000\n"
+"PO-Revision-Date: 2018-06-14 00:09+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-power/ja/>\n"
@@ -69,7 +69,7 @@ msgstr "ディスプレイの輝度"
 
 #: src/Plug.vala:149
 msgid "Automatic brightness adjustment"
-msgstr "輝度を自動調整"
+msgstr "明るさを自動調整"
 
 #: src/Plug.vala:150
 msgid "Inactive display off"
@@ -97,15 +97,15 @@ msgstr "ディスプレイの明るさ:"
 
 #: src/Plug.vala:216
 msgid "Automatically adjust brightness:"
-msgstr "輝度を自動調整:"
+msgstr "明るさを自動調整:"
 
 #: src/Plug.vala:244
 msgid "When lid is closed:"
-msgstr "カバーが閉じられた時:"
+msgstr "カバーが閉じられたとき:"
 
 #: src/Plug.vala:252
 msgid "When lid is closed with external monitor:"
-msgstr "外部モニターとカバーが閉じられた時:"
+msgstr "外部モニターとカバーが閉じられたとき:"
 
 #: src/Plug.vala:300
 msgid "Turn off display when inactive for:"
