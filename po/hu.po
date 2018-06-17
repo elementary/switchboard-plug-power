@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-17 15:51-0700\n"
-"PO-Revision-Date: 2018-06-02 00:06+0000\n"
+"PO-Revision-Date: 2018-06-18 00:05+0000\n"
 "Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
 "Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-power/hu/>\n"
@@ -39,8 +39,8 @@ msgstr "Energiagazdálkodás"
 #: src/Plug.vala:56
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr ""
-"Állítsa be a kijelző fényerejét, az energiakezelő gombok és a felfüggesztés "
-"viselkedését"
+"A kijelző fényerejének, a bekapcsológomb viselkedésének és a felfüggesztési "
+"opciók beállítása"
 
 #: src/Plug.vala:75
 msgid "Plugged In"
@@ -96,7 +96,7 @@ msgstr "Néhány módosítás csak a számítógép újraindítása után lép �
 
 #: src/Plug.vala:187
 msgid "Some settings require administrator rights to be changed"
-msgstr "Egyes beállítások megváltoztatása rendszergazdai jogokat igényel"
+msgstr "Egyes beállítások megváltoztatásához rendszergazdai jogokra van szükség"
 
 #: src/Plug.vala:212
 msgid "Display brightness:"
