@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-17 15:51-0700\n"
+"POT-Creation-Date: 2018-06-27 09:26-0700\n"
 "PO-Revision-Date: 2016-12-10 05:00+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
@@ -31,20 +31,20 @@ msgstr "توك مەنبەسى تەڭشىكىنى باشقۇرۇش ئۈچۈن س�
 msgid "You do not have permission to change this"
 msgstr "سىزنىڭ بۇنى ئۆزگەرتىش سالاھىيىتىڭىز يوق"
 
-#: src/Plug.vala:55
+#: src/Plug.vala:45
 msgid "Power"
 msgstr "توك مەنبەسى"
 
-#: src/Plug.vala:56
+#: src/Plug.vala:46
 #, fuzzy
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "ئىكران يورۇقلۇقىنى، توك مەنبەسى كۇنۇپكىسىنى ۋە ئۇخلىتىش شەكلىنى تەڭشەش"
 
-#: src/Plug.vala:75
+#: src/Plug.vala:73
 msgid "Plugged In"
 msgstr "توك مەنبەسىگە چىتىلدى"
 
-#: src/Plug.vala:83
+#: src/Plug.vala:81
 msgid "On Battery"
 msgstr "باتارىيەنى ئىشلىتىۋاتىدۇ"
 

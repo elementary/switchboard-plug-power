@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-17 15:51-0700\n"
+"POT-Creation-Date: 2018-06-27 09:26-0700\n"
 "PO-Revision-Date: 2018-05-27 00:05+0000\n"
 "Last-Translator: İbrahim Ethem Göl <ethem578@gmail.com>\n"
-"Language-Team: Turkish <https://weblate.elementary.io/projects/switchboard"
-"/switchboard-plug-power/tr/>\n"
+"Language-Team: Turkish <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-power/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,20 +33,20 @@ msgstr "Güç ayarlarını yönetmek için kimlik doğrulaması gerekiyor"
 msgid "You do not have permission to change this"
 msgstr "Değiştirmek için yetkiniz yok"
 
-#: src/Plug.vala:55
+#: src/Plug.vala:45
 msgid "Power"
 msgstr "Güç"
 
-#: src/Plug.vala:56
+#: src/Plug.vala:46
 #, fuzzy
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "Ekran parlaklığı, güç düğmeleri ve uyku davranışını ayarla"
 
-#: src/Plug.vala:75
+#: src/Plug.vala:73
 msgid "Plugged In"
 msgstr "Fişe Takılı"
 
-#: src/Plug.vala:83
+#: src/Plug.vala:81
 msgid "On Battery"
 msgstr "Pilde"
 

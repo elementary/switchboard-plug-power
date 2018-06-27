@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-17 15:51-0700\n"
+"POT-Creation-Date: 2018-06-27 09:26-0700\n"
 "PO-Revision-Date: 2017-06-21 00:37+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -33,20 +33,20 @@ msgstr "电源设置需要管理员权限"
 msgid "You do not have permission to change this"
 msgstr "您没有更改此项内容的权限"
 
-#: src/Plug.vala:55
+#: src/Plug.vala:45
 msgid "Power"
 msgstr "电源"
 
-#: src/Plug.vala:56
+#: src/Plug.vala:46
 #, fuzzy
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "配置显示器亮度、电源按键和睡眠方式"
 
-#: src/Plug.vala:75
+#: src/Plug.vala:73
 msgid "Plugged In"
 msgstr "插入电源"
 
-#: src/Plug.vala:83
+#: src/Plug.vala:81
 msgid "On Battery"
 msgstr "使用电池"
 

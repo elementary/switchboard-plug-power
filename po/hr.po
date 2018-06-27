@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-17 15:51-0700\n"
+"POT-Creation-Date: 2018-06-27 09:26-0700\n"
 "PO-Revision-Date: 2017-08-16 11:38+0000\n"
 "Last-Translator: gogogogi <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <https://weblate.elementary.io/projects/switchboard/"
@@ -34,21 +34,21 @@ msgstr "Potrebna je ovjera za upravljanje postavkama energije"
 msgid "You do not have permission to change this"
 msgstr "Nemate dozvolu za ovu promjenu"
 
-#: src/Plug.vala:55
+#: src/Plug.vala:45
 msgid "Power"
 msgstr "Energija"
 
-#: src/Plug.vala:56
+#: src/Plug.vala:46
 #, fuzzy
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr ""
 "Prilagodite svjetlinu zaslona, tipku isključivanja i ponašanje spavanja"
 
-#: src/Plug.vala:75
+#: src/Plug.vala:73
 msgid "Plugged In"
 msgstr "Na napajanju"
 
-#: src/Plug.vala:83
+#: src/Plug.vala:81
 msgid "On Battery"
 msgstr "Na bateriji"
 

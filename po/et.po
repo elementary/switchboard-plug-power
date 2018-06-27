@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-17 15:51-0700\n"
+"POT-Creation-Date: 2018-06-27 09:26-0700\n"
 "PO-Revision-Date: 2016-06-14 15:46+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: Estonian <et@li.org>\n"
@@ -31,20 +31,20 @@ msgstr "Toite seadete muutmiseks on vajalik autentimine"
 msgid "You do not have permission to change this"
 msgstr "Sul pole õigusi selle muutmiseks"
 
-#: src/Plug.vala:55
+#: src/Plug.vala:45
 msgid "Power"
 msgstr "Toide"
 
-#: src/Plug.vala:56
+#: src/Plug.vala:46
 #, fuzzy
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "Ekraani heleduse, toite nuppude ja puhkerežiimi seadistamine"
 
-#: src/Plug.vala:75
+#: src/Plug.vala:73
 msgid "Plugged In"
 msgstr "Aku laadimisel"
 
-#: src/Plug.vala:83
+#: src/Plug.vala:81
 msgid "On Battery"
 msgstr "Aku kasutamisel"
 

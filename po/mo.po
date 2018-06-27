@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-17 15:51-0700\n"
+"POT-Creation-Date: 2018-06-27 09:26-0700\n"
 "PO-Revision-Date: 2018-05-28 08:56+0000\n"
 "Last-Translator: Romanic Ion Nicușor <contact.romanic@gmail.com>\n"
-"Language-Team: Moldovan <https://weblate.elementary.io/projects/switchboard"
-"/switchboard-plug-power/mo/>\n"
+"Language-Team: Moldovan <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-power/mo/>\n"
 "Language: mo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,21 +25,21 @@ msgstr "Este necesară autentificarea pentru a gestiona setările de alimentare"
 msgid "You do not have permission to change this"
 msgstr "Nu aveți permisiunea de a schimba"
 
-#: src/Plug.vala:55
+#: src/Plug.vala:45
 msgid "Power"
 msgstr "Aprinde"
 
-#: src/Plug.vala:56
+#: src/Plug.vala:46
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr ""
 "Configurați luminozitatea ecranului, butoanele de alimentare și "
 "comportamentul de suspendare"
 
-#: src/Plug.vala:75
+#: src/Plug.vala:73
 msgid "Plugged In"
 msgstr "Conectat"
 
-#: src/Plug.vala:83
+#: src/Plug.vala:81
 msgid "On Battery"
 msgstr "La baterie"
 

@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-17 15:51-0700\n"
+"POT-Creation-Date: 2018-06-27 09:26-0700\n"
 "PO-Revision-Date: 2018-05-03 00:06+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
-"Language-Team: Hebrew <https://weblate.elementary.io/projects/switchboard"
-"/switchboard-plug-power/he/>\n"
+"Language-Team: Hebrew <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-power/he/>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,19 +32,19 @@ msgstr "נדרש אימות לצורך ניהול הגדרות צריכת חשמ
 msgid "You do not have permission to change this"
 msgstr "אין לך הרשאה לשנות את זה"
 
-#: src/Plug.vala:55
+#: src/Plug.vala:45
 msgid "Power"
 msgstr "חשמל"
 
-#: src/Plug.vala:56
+#: src/Plug.vala:46
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "הגדרת בהירות המסך, כפתורי הכיבוי והתנהגות מצב ההשהיה"
 
-#: src/Plug.vala:75
+#: src/Plug.vala:73
 msgid "Plugged In"
 msgstr "מחובר"
 
-#: src/Plug.vala:83
+#: src/Plug.vala:81
 msgid "On Battery"
 msgstr "על סוללה"
 

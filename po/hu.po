@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-17 15:51-0700\n"
+"POT-Creation-Date: 2018-06-27 09:26-0700\n"
 "PO-Revision-Date: 2018-06-18 00:05+0000\n"
 "Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
-"Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard"
-"/switchboard-plug-power/hu/>\n"
+"Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-power/hu/>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,21 +32,21 @@ msgstr "Hitelesítés szükséges az energiagazdálkodási beállítások kezel�
 msgid "You do not have permission to change this"
 msgstr "Nincs jogosultságod megváltoztatni"
 
-#: src/Plug.vala:55
+#: src/Plug.vala:45
 msgid "Power"
 msgstr "Energiagazdálkodás"
 
-#: src/Plug.vala:56
+#: src/Plug.vala:46
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr ""
 "A kijelző fényerejének, a bekapcsológomb viselkedésének és a felfüggesztési "
 "opciók beállítása"
 
-#: src/Plug.vala:75
+#: src/Plug.vala:73
 msgid "Plugged In"
 msgstr "Csatlakoztatva"
 
-#: src/Plug.vala:83
+#: src/Plug.vala:81
 msgid "On Battery"
 msgstr "Akkumulátorról"
 
@@ -96,7 +96,8 @@ msgstr "Néhány módosítás csak a számítógép újraindítása után lép �
 
 #: src/Plug.vala:187
 msgid "Some settings require administrator rights to be changed"
-msgstr "Egyes beállítások megváltoztatásához rendszergazdai jogokra van szükség"
+msgstr ""
+"Egyes beállítások megváltoztatásához rendszergazdai jogokra van szükség"
 
 #: src/Plug.vala:212
 msgid "Display brightness:"
