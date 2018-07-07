@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-17 15:51-0700\n"
-"PO-Revision-Date: 2018-03-20 00:12+0000\n"
+"POT-Creation-Date: 2018-06-27 09:26-0700\n"
+"PO-Revision-Date: 2018-07-03 00:06+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
-"Language-Team: Catalan <https://weblate.elementary.io/projects/switchboard"
-"/switchboard-plug-power/ca/>\n"
+"Language-Team: Catalan <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-power/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2016-12-15 04:52+0000\n"
 
 #: data/io.elementary.switchboard.power.policy.in:10
@@ -32,21 +32,21 @@ msgstr "Cal autenticació per gestionar els paràmetres de l'energia"
 msgid "You do not have permission to change this"
 msgstr "No teniu permís per canviar això."
 
-#: src/Plug.vala:55
+#: src/Plug.vala:45
 msgid "Power"
 msgstr "Energia"
 
-#: src/Plug.vala:56
+#: src/Plug.vala:46
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr ""
 "Configureu la brillantor de la pantalla, els botons d'engegar i el "
 "comportament de l'aturada temporal."
 
-#: src/Plug.vala:75
+#: src/Plug.vala:73
 msgid "Plugged In"
 msgstr "Endollat"
 
-#: src/Plug.vala:83
+#: src/Plug.vala:81
 msgid "On Battery"
 msgstr "Amb la bateria"
 
@@ -145,7 +145,7 @@ msgstr "10 min"
 
 #: src/Widgets/TimeoutComboBox.vala:45
 msgid "15 min"
-msgstr "15 min."
+msgstr "15 min"
 
 #: src/Widgets/TimeoutComboBox.vala:46
 msgid "30 min"
@@ -153,7 +153,7 @@ msgstr "30 min"
 
 #: src/Widgets/TimeoutComboBox.vala:47
 msgid "45 min"
-msgstr "45 min."
+msgstr "45 min"
 
 #: src/Widgets/TimeoutComboBox.vala:48
 msgid "1 hour"

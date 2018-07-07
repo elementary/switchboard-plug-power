@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-17 15:51-0700\n"
+"POT-Creation-Date: 2018-06-27 09:26-0700\n"
 "PO-Revision-Date: 2018-04-02 00:05+0000\n"
 "Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
-"Language-Team: Dutch <https://weblate.elementary.io/projects/switchboard"
-"/switchboard-plug-power/nl/>\n"
+"Language-Team: Dutch <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-power/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,19 +33,19 @@ msgstr ""
 msgid "You do not have permission to change this"
 msgstr "U heeft geen rechten om dit te veranderen"
 
-#: src/Plug.vala:55
+#: src/Plug.vala:45
 msgid "Power"
 msgstr "Energie"
 
-#: src/Plug.vala:56
+#: src/Plug.vala:46
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "Configureer schermhelderheid, stroomknoppen en slaapstand"
 
-#: src/Plug.vala:75
+#: src/Plug.vala:73
 msgid "Plugged In"
 msgstr "Aangesloten"
 
-#: src/Plug.vala:83
+#: src/Plug.vala:81
 msgid "On Battery"
 msgstr "Op accustroom"
 

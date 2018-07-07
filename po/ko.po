@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-17 15:51-0700\n"
-"PO-Revision-Date: 2018-03-06 00:05+0000\n"
+"POT-Creation-Date: 2018-06-27 09:26-0700\n"
+"PO-Revision-Date: 2018-06-06 00:09+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-power/ko/>\n"
@@ -32,25 +32,23 @@ msgstr "전력 설정 관리에는 인증이 필요합니다"
 msgid "You do not have permission to change this"
 msgstr "이 설정을 바꿀 권한이 없습니다"
 
-#: src/Plug.vala:55
+#: src/Plug.vala:45
 msgid "Power"
 msgstr "전력"
 
-#: src/Plug.vala:56
-#, fuzzy
+#: src/Plug.vala:46
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "디스플레이 밝기, 전원 버튼, 잠자기 작동 방식 설정하기"
 
-#: src/Plug.vala:75
+#: src/Plug.vala:73
 msgid "Plugged In"
 msgstr "연결됨"
 
-#: src/Plug.vala:83
+#: src/Plug.vala:81
 msgid "On Battery"
 msgstr "배터리 사용 시"
 
 #: src/Plug.vala:143
-#, fuzzy
 msgid "Suspend button"
 msgstr "잠자기 버튼"
 
@@ -87,7 +85,6 @@ msgid "Docked lid close"
 msgstr "고정 덮개 닫기"
 
 #: src/Plug.vala:152
-#, fuzzy
 msgid "Suspend inactive"
 msgstr "사용하지 않을 땐 잠자기"
 
@@ -124,7 +121,6 @@ msgid "Power button:"
 msgstr "전원 버튼:"
 
 #: src/Plug.vala:342
-#, fuzzy
 msgid "Suspend when inactive for:"
 msgstr "다음 시간 동안 활동이 없으면 잠자기:"
 
@@ -175,7 +171,7 @@ msgstr "시스템 종료"
 
 #: src/Widgets/LidCloseActionComboBox.vala:34
 msgid "Lock"
-msgstr "잠그기"
+msgstr "잠금"
 
 #: src/Widgets/LidCloseActionComboBox.vala:35
 msgid "Halt"
