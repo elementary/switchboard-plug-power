@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 09:26-0700\n"
-"PO-Revision-Date: 2018-07-08 06:25+0000\n"
+"PO-Revision-Date: 2018-07-09 00:10+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-power/fi/>\n"
@@ -104,15 +104,15 @@ msgstr "Näytön kirkkaus:"
 
 #: src/Plug.vala:216
 msgid "Automatically adjust brightness:"
-msgstr "Säädä valoisuutta automaattisesti:"
+msgstr "Säädä kirkkautta automaattisesti:"
 
 #: src/Plug.vala:244
 msgid "When lid is closed:"
-msgstr "Kansi suljettuna:"
+msgstr "Kun kansi suljetaan:"
 
 #: src/Plug.vala:252
 msgid "When lid is closed with external monitor:"
-msgstr "Kun kansi on suljettu ulkoisen näytön kanssa:"
+msgstr "Kun kansi suljetaan ulkoisen näytön kanssa:"
 
 #: src/Plug.vala:300
 msgid "Turn off display when inactive for:"
