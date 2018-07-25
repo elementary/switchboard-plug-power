@@ -58,8 +58,6 @@ namespace Power {
     
                 connect_to_settings_daemon ();
 
-                label_size = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
-
                 main_grid = new Gtk.Grid ();
                 main_grid.margin = 24;
                 main_grid.column_spacing = 12;
@@ -67,17 +65,55 @@ namespace Power {
 
                 create_common_settings ();
 
-                var stack = new Gtk.Stack ();
+                var sleep_timeout_label = new Gtk.Label (_("Suspend when inactive for:"));
+                sleep_timeout_label.xalign = 1;
 
-                var plug_grid = create_notebook_pages (true);
-                stack.add_titled (plug_grid, "ac", _("Plugged In"));
+                label_size = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
+                label_size.add_widget (sleep_timeout_label);
+
+                var sleep_timeout = new TimeoutComboBox (settings, "sleep-inactive-ac-timeout");
+
+                var ac_grid = new Gtk.Grid ();
+                ac_grid.column_spacing = 12;
+                ac_grid.row_spacing = 12;
+                ac_grid.attach (sleep_timeout_label, 0, 1);
+                ac_grid.attach (sleep_timeout, 1, 1);
+
+                var stack = new Gtk.Stack ();
+                stack.add_titled (ac_grid, "ac", _("Plugged In"));
 
                 stack_switcher = new Gtk.StackSwitcher ();
                 stack_switcher.homogeneous = true;
                 stack_switcher.stack = stack;
 
                 if (battery.is_present ()) {
-                    var battery_grid = create_notebook_pages (false);
+                    var battery_timeout_label = new Gtk.Label (_("Suspend when inactive for:"));
+                    battery_timeout_label.xalign = 1;
+                    label_size.add_widget (battery_timeout_label);
+
+                    var battery_timeout = new TimeoutComboBox (settings, "sleep-inactive-battery-timeout");
+
+                    var battery_grid = new Gtk.Grid ();
+                    battery_grid.column_spacing = 12;
+                    battery_grid.row_spacing = 12;
+                    battery_grid.attach (battery_timeout_label, 0, 1);
+                    battery_grid.attach (battery_timeout, 1, 1);
+
+                    if (backlight_detect ()){
+                        var dim_label = new Gtk.Label (_("Dim display when inactive:"));
+                        dim_label.xalign = 1;
+
+                        var dim_switch = new Gtk.Switch ();
+                        dim_switch.halign = Gtk.Align.START;
+
+                        settings.bind ("idle-dim", dim_switch, "active", SettingsBindFlags.DEFAULT);
+
+                        battery_grid.attach (dim_label, 0, 0, 1, 1);
+                        battery_grid.attach (dim_switch, 1, 0, 1, 1);
+
+                        label_size.add_widget (dim_label);
+                    }
+
                     stack.add_titled (battery_grid, "battery", _("On Battery"));
 
                     var left_sep = new Gtk.Separator (Gtk.Orientation.HORIZONTAL);
@@ -336,43 +372,6 @@ namespace Power {
                 scale.set_value (val);
                 scale.value_changed.connect (on_scale_value_changed);
             }
-        }
-
-        private Gtk.Grid create_notebook_pages (bool ac) {
-            var sleep_timeout_label = new Gtk.Label (_("Suspend when inactive for:"));
-            sleep_timeout_label.xalign = 1;
-            label_size.add_widget (sleep_timeout_label);
-
-            string type = "battery";
-            if (ac) {
-                type = "ac";
-            }
-
-            var scale_settings = @"sleep-inactive-%s-timeout".printf (type);
-            var sleep_timeout = new TimeoutComboBox (settings, scale_settings);
-
-            var grid = new Gtk.Grid ();
-            grid.column_spacing = 12;
-            grid.row_spacing = 12;
-            grid.attach (sleep_timeout_label, 0, 1, 1, 1);
-            grid.attach (sleep_timeout, 1, 1, 1, 1);
-
-            if (!ac && backlight_detect ()){
-                var dim_label = new Gtk.Label (_("Dim display when inactive:"));
-                dim_label.xalign = 1;
-
-                var dim_switch = new Gtk.Switch ();
-                dim_switch.halign = Gtk.Align.START;
-
-                settings.bind ("idle-dim", dim_switch, "active", SettingsBindFlags.DEFAULT);
-
-                grid.attach (dim_label, 0, 0, 1, 1);
-                grid.attach (dim_switch, 1, 0, 1, 1);
-
-                label_size.add_widget (dim_label);
-            }
-
-            return grid;
         }
 
         private static bool lid_detect () {
