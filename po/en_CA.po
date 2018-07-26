@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-27 09:26-0700\n"
+"POT-Creation-Date: 2018-07-26 16:15-0700\n"
 "PO-Revision-Date: 2018-03-22 13:42+0000\n"
 "Last-Translator: Shawn <syst3mfailur3@gmail.com>\n"
 "Language-Team: English (Canada) <https://weblate.elementary.io/projects/"
@@ -28,105 +28,105 @@ msgstr "Manage power settings"
 msgid "Authentication is required to manage power settings"
 msgstr "Authentication is required to manage power settings"
 
-#: src/Plug.vala:35
+#: src/MainView.vala:24
 msgid "You do not have permission to change this"
 msgstr "You do not have permission to change this"
 
-#: src/Plug.vala:45
-msgid "Power"
-msgstr "Power"
-
-#: src/Plug.vala:46
-msgid "Configure display brightness, power buttons, and suspend behavior"
-msgstr "Configure display brightness, power buttons, and suspend behaviour"
-
-#: src/Plug.vala:73
-msgid "Plugged In"
-msgstr "Plugged In"
-
-#: src/Plug.vala:81
-msgid "On Battery"
-msgstr "On Battery"
-
-#: src/Plug.vala:143
-msgid "Suspend button"
-msgstr "Suspend button"
-
-#: src/Plug.vala:144
-msgid "Power button"
-msgstr "Power button"
-
-#: src/Plug.vala:145
-msgid "Display inactive"
-msgstr "Display inactive"
-
-#: src/Plug.vala:146
-msgid "Dim display"
-msgstr "Dim display"
-
-#: src/Plug.vala:147
-msgid "Lid close"
-msgstr "Lid close"
-
-#: src/Plug.vala:148
-msgid "Display brightness"
-msgstr "Display brightness"
-
-#: src/Plug.vala:149
-msgid "Automatic brightness adjustment"
-msgstr "Automatic brightness adjustment"
-
-#: src/Plug.vala:150
-msgid "Inactive display off"
-msgstr "Inactive display off"
-
-#: src/Plug.vala:151
-msgid "Docked lid close"
-msgstr "Docked lid close"
-
-#: src/Plug.vala:152
-msgid "Suspend inactive"
-msgstr "Suspend inactive"
-
-#: src/Plug.vala:166
-msgid "Some changes will not take effect until you restart this computer"
-msgstr "Some changes will not take effect until you restart this computer"
-
-#: src/Plug.vala:187
-msgid "Some settings require administrator rights to be changed"
-msgstr "Some settings require administrator rights to be changed"
-
-#: src/Plug.vala:212
+#: src/MainView.vala:58
 msgid "Display brightness:"
 msgstr "Display brightness:"
 
-#: src/Plug.vala:216
+#: src/MainView.vala:62
 msgid "Automatically adjust brightness:"
 msgstr "Automatically adjust brightness:"
 
-#: src/Plug.vala:244
+#: src/MainView.vala:90
 msgid "When lid is closed:"
 msgstr "When lid is closed:"
 
-#: src/Plug.vala:252
+#: src/MainView.vala:96
 msgid "When lid is closed with external monitor:"
 msgstr "When lid is closed with external monitor:"
 
-#: src/Plug.vala:300
+#: src/MainView.vala:129
 msgid "Turn off display when inactive for:"
 msgstr "Turn off display when inactive for:"
 
-#: src/Plug.vala:307
+#: src/MainView.vala:136
 msgid "Power button:"
 msgstr "Power button:"
 
-#: src/Plug.vala:342
+#: src/MainView.vala:147 src/MainView.vala:166
 msgid "Suspend when inactive for:"
 msgstr "Suspend when inactive for:"
 
-#: src/Plug.vala:361
+#: src/MainView.vala:159
+msgid "Plugged In"
+msgstr "Plugged In"
+
+#: src/MainView.vala:179
 msgid "Dim display when inactive:"
 msgstr "Dim display when inactive:"
+
+#: src/MainView.vala:193
+msgid "On Battery"
+msgstr "On Battery"
+
+#: src/MainView.vala:215
+msgid "Some changes will not take effect until you restart this computer"
+msgstr "Some changes will not take effect until you restart this computer"
+
+#: src/MainView.vala:234
+msgid "Some settings require administrator rights to be changed"
+msgstr "Some settings require administrator rights to be changed"
+
+#: src/Plug.vala:32
+msgid "Power"
+msgstr "Power"
+
+#: src/Plug.vala:33
+msgid "Configure display brightness, power buttons, and suspend behavior"
+msgstr "Configure display brightness, power buttons, and suspend behaviour"
+
+#: src/Plug.vala:68
+msgid "Suspend button"
+msgstr "Suspend button"
+
+#: src/Plug.vala:69
+msgid "Power button"
+msgstr "Power button"
+
+#: src/Plug.vala:70
+msgid "Display inactive"
+msgstr "Display inactive"
+
+#: src/Plug.vala:71
+msgid "Dim display"
+msgstr "Dim display"
+
+#: src/Plug.vala:72
+msgid "Lid close"
+msgstr "Lid close"
+
+#: src/Plug.vala:73
+msgid "Display brightness"
+msgstr "Display brightness"
+
+#: src/Plug.vala:74
+msgid "Automatic brightness adjustment"
+msgstr "Automatic brightness adjustment"
+
+#: src/Plug.vala:75
+msgid "Inactive display off"
+msgstr "Inactive display off"
+
+#: src/Plug.vala:76
+msgid "Docked lid close"
+msgstr "Docked lid close"
+
+#: src/Plug.vala:77
+msgid "Suspend inactive"
+msgstr "Suspend inactive"
 
 #: src/Widgets/TimeoutComboBox.vala:42
 msgid "Never"

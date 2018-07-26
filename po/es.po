@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-27 09:26-0700\n"
+"POT-Creation-Date: 2018-07-26 16:15-0700\n"
 "PO-Revision-Date: 2018-04-24 20:20+0000\n"
 "Last-Translator: haggen svastian <h2gn@openmailbox.org>\n"
 "Language-Team: Spanish <https://weblate.elementary.io/projects/switchboard/"
@@ -28,110 +28,110 @@ msgstr "Administrar la configuración de energía"
 msgid "Authentication is required to manage power settings"
 msgstr "Se requiere autenticación para administrar la configuración de energía"
 
-#: src/Plug.vala:35
+#: src/MainView.vala:24
 msgid "You do not have permission to change this"
 msgstr "No tienes permisos para realizar estos cambios"
 
-#: src/Plug.vala:45
-msgid "Power"
-msgstr "Energía"
-
-#: src/Plug.vala:46
-msgid "Configure display brightness, power buttons, and suspend behavior"
-msgstr ""
-"Configurar el brillo de pantalla, los botones de encendido y las opciones de "
-"suspensión"
-
-#: src/Plug.vala:73
-msgid "Plugged In"
-msgstr "Conectado"
-
-#: src/Plug.vala:81
-msgid "On Battery"
-msgstr "Con batería"
-
-#: src/Plug.vala:143
-msgid "Suspend button"
-msgstr "Botón de suspensión"
-
-#: src/Plug.vala:144
-msgid "Power button"
-msgstr "Botón de energía"
-
-#: src/Plug.vala:145
-msgid "Display inactive"
-msgstr "Pantalla inactiva"
-
-#: src/Plug.vala:146
-msgid "Dim display"
-msgstr "Oscurecer pantalla"
-
-#: src/Plug.vala:147
-msgid "Lid close"
-msgstr "Tapa cerrada"
-
-#: src/Plug.vala:148
-msgid "Display brightness"
-msgstr "Brillo de pantalla"
-
-#: src/Plug.vala:149
-msgid "Automatic brightness adjustment"
-msgstr "Ajuste automático de brillo"
-
-#: src/Plug.vala:150
-msgid "Inactive display off"
-msgstr "Apagar pantalla inactiva"
-
-#: src/Plug.vala:151
-msgid "Docked lid close"
-msgstr "Cierre de la tapa acoplada"
-
-#: src/Plug.vala:152
-msgid "Suspend inactive"
-msgstr "Dormir inactivo"
-
-#: src/Plug.vala:166
-msgid "Some changes will not take effect until you restart this computer"
-msgstr "Algunos cambios no tendrán efecto hasta que reinicies el equipo"
-
-#: src/Plug.vala:187
-msgid "Some settings require administrator rights to be changed"
-msgstr ""
-"Algunos ajustes requieren permisos de administrador para ser modificados"
-
-#: src/Plug.vala:212
+#: src/MainView.vala:58
 msgid "Display brightness:"
 msgstr "Brillo de pantalla:"
 
-#: src/Plug.vala:216
+#: src/MainView.vala:62
 msgid "Automatically adjust brightness:"
 msgstr "Ajustar brillo automáticamente:"
 
-#: src/Plug.vala:244
+#: src/MainView.vala:90
 msgid "When lid is closed:"
 msgstr "Cuando la tapa está cerrada:"
 
-#: src/Plug.vala:252
+#: src/MainView.vala:96
 msgid "When lid is closed with external monitor:"
 msgstr ""
 "Cuando la tapa está cerrada mientras el equipo está conectado a un monitor "
 "externo:"
 
-#: src/Plug.vala:300
+#: src/MainView.vala:129
 msgid "Turn off display when inactive for:"
 msgstr "Apagar la pantalla cuando esté inactivo durante:"
 
-#: src/Plug.vala:307
+#: src/MainView.vala:136
 msgid "Power button:"
 msgstr "Botón de encendido:"
 
-#: src/Plug.vala:342
+#: src/MainView.vala:147 src/MainView.vala:166
 msgid "Suspend when inactive for:"
 msgstr "Suspender cuando esté inactivo por:"
 
-#: src/Plug.vala:361
+#: src/MainView.vala:159
+msgid "Plugged In"
+msgstr "Conectado"
+
+#: src/MainView.vala:179
 msgid "Dim display when inactive:"
 msgstr "Atenuar la pantalla cuando esté inactivo:"
+
+#: src/MainView.vala:193
+msgid "On Battery"
+msgstr "Con batería"
+
+#: src/MainView.vala:215
+msgid "Some changes will not take effect until you restart this computer"
+msgstr "Algunos cambios no tendrán efecto hasta que reinicies el equipo"
+
+#: src/MainView.vala:234
+msgid "Some settings require administrator rights to be changed"
+msgstr ""
+"Algunos ajustes requieren permisos de administrador para ser modificados"
+
+#: src/Plug.vala:32
+msgid "Power"
+msgstr "Energía"
+
+#: src/Plug.vala:33
+msgid "Configure display brightness, power buttons, and suspend behavior"
+msgstr ""
+"Configurar el brillo de pantalla, los botones de encendido y las opciones de "
+"suspensión"
+
+#: src/Plug.vala:68
+msgid "Suspend button"
+msgstr "Botón de suspensión"
+
+#: src/Plug.vala:69
+msgid "Power button"
+msgstr "Botón de energía"
+
+#: src/Plug.vala:70
+msgid "Display inactive"
+msgstr "Pantalla inactiva"
+
+#: src/Plug.vala:71
+msgid "Dim display"
+msgstr "Oscurecer pantalla"
+
+#: src/Plug.vala:72
+msgid "Lid close"
+msgstr "Tapa cerrada"
+
+#: src/Plug.vala:73
+msgid "Display brightness"
+msgstr "Brillo de pantalla"
+
+#: src/Plug.vala:74
+msgid "Automatic brightness adjustment"
+msgstr "Ajuste automático de brillo"
+
+#: src/Plug.vala:75
+msgid "Inactive display off"
+msgstr "Apagar pantalla inactiva"
+
+#: src/Plug.vala:76
+msgid "Docked lid close"
+msgstr "Cierre de la tapa acoplada"
+
+#: src/Plug.vala:77
+msgid "Suspend inactive"
+msgstr "Dormir inactivo"
 
 #: src/Widgets/TimeoutComboBox.vala:42
 msgid "Never"

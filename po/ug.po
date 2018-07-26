@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-27 09:26-0700\n"
+"POT-Creation-Date: 2018-07-26 16:15-0700\n"
 "PO-Revision-Date: 2016-12-10 05:00+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
@@ -27,109 +27,109 @@ msgstr "توك مەنبەسى تەڭشىكىنى باشقۇرۇش "
 msgid "Authentication is required to manage power settings"
 msgstr "توك مەنبەسى تەڭشىكىنى باشقۇرۇش ئۈچۈن سالاھىيەت دەلىللەش زۆرۈر"
 
-#: src/Plug.vala:35
+#: src/MainView.vala:24
 msgid "You do not have permission to change this"
 msgstr "سىزنىڭ بۇنى ئۆزگەرتىش سالاھىيىتىڭىز يوق"
 
-#: src/Plug.vala:45
-msgid "Power"
-msgstr "توك مەنبەسى"
-
-#: src/Plug.vala:46
-#, fuzzy
-msgid "Configure display brightness, power buttons, and suspend behavior"
-msgstr "ئىكران يورۇقلۇقىنى، توك مەنبەسى كۇنۇپكىسىنى ۋە ئۇخلىتىش شەكلىنى تەڭشەش"
-
-#: src/Plug.vala:73
-msgid "Plugged In"
-msgstr "توك مەنبەسىگە چىتىلدى"
-
-#: src/Plug.vala:81
-msgid "On Battery"
-msgstr "باتارىيەنى ئىشلىتىۋاتىدۇ"
-
-#: src/Plug.vala:143
-#, fuzzy
-msgid "Suspend button"
-msgstr "ئۇخلىتىش كۇنۇپكىسى"
-
-#: src/Plug.vala:144
-msgid "Power button"
-msgstr "توك مەنبەسى كۇنۇپكىسى"
-
-#: src/Plug.vala:145
-msgid "Display inactive"
-msgstr "ئىكران قوزغىتىلمىغان"
-
-#: src/Plug.vala:146
-msgid "Dim display"
-msgstr "ئىكراننى خىرەلەشتۈرۈش"
-
-#: src/Plug.vala:147
-msgid "Lid close"
-msgstr "قاپقاقنى ئىتىش"
-
-#: src/Plug.vala:148
-msgid "Display brightness"
-msgstr "ئىكران يورۇقلۇقى"
-
-#: src/Plug.vala:149
-msgid "Automatic brightness adjustment"
-msgstr "ئىكران يورۇقلۇقىنى ئاپتوماتىك تەڭشەش"
-
-#: src/Plug.vala:150
-msgid "Inactive display off"
-msgstr "ئىكراننى ئۆچۈرۈش"
-
-#: src/Plug.vala:151
-msgid "Docked lid close"
-msgstr "Docked ستونىنى تاقاش"
-
-#: src/Plug.vala:152
-#, fuzzy
-msgid "Suspend inactive"
-msgstr "ئۇخلاش ھالىتىگە كىردى"
-
-#: src/Plug.vala:166
-msgid "Some changes will not take effect until you restart this computer"
-msgstr "بەزى تەڭشەكلەر كومپىيۇتىرنى قايتا قوزغاتقاندىن كىيىن ئىشلەيدۇ."
-
-#: src/Plug.vala:187
-msgid "Some settings require administrator rights to be changed"
-msgstr "بەزى تەڭشەكلەرنى ئۆزگەرتىش ئۈچۈن باشقۇرغۇچىلىق سالاھىيىتى بولىشى كىرەك"
-
-#: src/Plug.vala:212
+#: src/MainView.vala:58
 msgid "Display brightness:"
 msgstr "ئىكران يورۇقلىقى:"
 
-#: src/Plug.vala:216
+#: src/MainView.vala:62
 msgid "Automatically adjust brightness:"
 msgstr "ئىكران يورۇقلۇقىنى ئاپتوماتىك تەڭشەش"
 
-#: src/Plug.vala:244
+#: src/MainView.vala:90
 msgid "When lid is closed:"
 msgstr "قاپقاق تاقالغان ۋاقىتتا:"
 
-#: src/Plug.vala:252
+#: src/MainView.vala:96
 msgid "When lid is closed with external monitor:"
 msgstr "تاشقى كۆزەتكۈچى ئارقىلىق قاپقاق تاقالغان ۋاقىتتا:"
 
-#: src/Plug.vala:300
+#: src/MainView.vala:129
 msgid "Turn off display when inactive for:"
 msgstr "مەشغۇلات قىلمىغان ۋاقىتتا ئىكراننى ئۆچۈرۈش"
 
-#: src/Plug.vala:307
+#: src/MainView.vala:136
 msgid "Power button:"
 msgstr "توك مەنبەسى كۇنۇپكىسى"
 
-#: src/Plug.vala:342
+#: src/MainView.vala:147 src/MainView.vala:166
 #, fuzzy
 msgid "Suspend when inactive for:"
 msgstr "مەشغۇلات قىلمىغان ۋاقىتتا كومپىيۇتىرنى توڭلىتىش"
 
-#: src/Plug.vala:361
+#: src/MainView.vala:159
+msgid "Plugged In"
+msgstr "توك مەنبەسىگە چىتىلدى"
+
+#: src/MainView.vala:179
 msgid "Dim display when inactive:"
 msgstr "مەشغۇلات قىلمىغان ۋاقىتتا ئىكراننى خىرەلەشتۈرۈش"
+
+#: src/MainView.vala:193
+msgid "On Battery"
+msgstr "باتارىيەنى ئىشلىتىۋاتىدۇ"
+
+#: src/MainView.vala:215
+msgid "Some changes will not take effect until you restart this computer"
+msgstr "بەزى تەڭشەكلەر كومپىيۇتىرنى قايتا قوزغاتقاندىن كىيىن ئىشلەيدۇ."
+
+#: src/MainView.vala:234
+msgid "Some settings require administrator rights to be changed"
+msgstr "بەزى تەڭشەكلەرنى ئۆزگەرتىش ئۈچۈن باشقۇرغۇچىلىق سالاھىيىتى بولىشى كىرەك"
+
+#: src/Plug.vala:32
+msgid "Power"
+msgstr "توك مەنبەسى"
+
+#: src/Plug.vala:33
+#, fuzzy
+msgid "Configure display brightness, power buttons, and suspend behavior"
+msgstr "ئىكران يورۇقلۇقىنى، توك مەنبەسى كۇنۇپكىسىنى ۋە ئۇخلىتىش شەكلىنى تەڭشەش"
+
+#: src/Plug.vala:68
+#, fuzzy
+msgid "Suspend button"
+msgstr "ئۇخلىتىش كۇنۇپكىسى"
+
+#: src/Plug.vala:69
+msgid "Power button"
+msgstr "توك مەنبەسى كۇنۇپكىسى"
+
+#: src/Plug.vala:70
+msgid "Display inactive"
+msgstr "ئىكران قوزغىتىلمىغان"
+
+#: src/Plug.vala:71
+msgid "Dim display"
+msgstr "ئىكراننى خىرەلەشتۈرۈش"
+
+#: src/Plug.vala:72
+msgid "Lid close"
+msgstr "قاپقاقنى ئىتىش"
+
+#: src/Plug.vala:73
+msgid "Display brightness"
+msgstr "ئىكران يورۇقلۇقى"
+
+#: src/Plug.vala:74
+msgid "Automatic brightness adjustment"
+msgstr "ئىكران يورۇقلۇقىنى ئاپتوماتىك تەڭشەش"
+
+#: src/Plug.vala:75
+msgid "Inactive display off"
+msgstr "ئىكراننى ئۆچۈرۈش"
+
+#: src/Plug.vala:76
+msgid "Docked lid close"
+msgstr "Docked ستونىنى تاقاش"
+
+#: src/Plug.vala:77
+#, fuzzy
+msgid "Suspend inactive"
+msgstr "ئۇخلاش ھالىتىگە كىردى"
 
 #: src/Widgets/TimeoutComboBox.vala:42
 msgid "Never"

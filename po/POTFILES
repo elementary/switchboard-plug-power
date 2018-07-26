@@ -1,6 +1,7 @@
 data/io.elementary.switchboard.power.policy.in
 cli/Server.vala
 cli/main.vala
+src/MainView.vala
 src/PowerSupply.vala
 src/Plug.vala
 src/Permission.vala
