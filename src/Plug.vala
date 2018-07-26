@@ -20,10 +20,8 @@
 namespace Power {
     private GLib.Settings settings;
     private Gtk.Grid stack_container;
-    private Gtk.Grid main_grid;
 
     public class Plug : Switchboard.Plug {
-        private Gtk.SizeGroup label_size;
         private Gtk.StackSwitcher stack_switcher;
         private GLib.Settings elementary_dpms_settings;
 
@@ -50,26 +48,135 @@ namespace Power {
 
         public override Gtk.Widget get_widget () {
             if (stack_container == null) {
+                var label_size = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
+
                 settings = new GLib.Settings ("org.gnome.settings-daemon.plugins.power");
                 elementary_dpms_settings = new GLib.Settings ("io.elementary.dpms");
     
                 battery = new Battery ();
                 power_supply = new PowerSupply ();
     
-                connect_to_settings_daemon ();
+                try {
+                    screen = Bus.get_proxy_sync (BusType.SESSION, SETTINGS_DAEMON_NAME,
+                        SETTINGS_DAEMON_PATH, DBusProxyFlags.GET_INVALIDATED_PROPERTIES);
+                } catch (IOError e) {
+                    warning ("Failed to get settings daemon for brightness setting");
+                }
 
-                main_grid = new Gtk.Grid ();
+                var main_grid = new Gtk.Grid ();
                 main_grid.margin = 24;
                 main_grid.column_spacing = 12;
                 main_grid.row_spacing = 12;
 
-                create_common_settings ();
+                if (backlight_detect ()) {
+                    var brightness_label = new Gtk.Label (_("Display brightness:"));
+                    brightness_label.halign = Gtk.Align.END;
+                    brightness_label.xalign = 1;
+
+                    var als_label = new Gtk.Label (_("Automatically adjust brightness:"));
+                    als_label.xalign = 1;
+
+                    var als_switch = new Gtk.Switch ();
+                    als_switch.halign = Gtk.Align.START;
+
+                    settings.bind ("ambient-enabled", als_switch, "active", SettingsBindFlags.DEFAULT);
+
+                    scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 100, 10);
+                    scale.draw_value = false;
+                    scale.hexpand = true;
+                    scale.width_request = 480;
+
+                    scale.set_value (screen.brightness);
+
+                    scale.value_changed.connect (on_scale_value_changed);
+                    (screen as DBusProxy).g_properties_changed.connect (on_screen_properties_changed);
+
+                    main_grid.attach (brightness_label, 0, 0, 1, 1);
+                    main_grid.attach (scale, 1, 0, 1, 1);
+                    main_grid.attach (als_label, 0, 1, 1, 1);
+                    main_grid.attach (als_switch, 1, 1, 1, 1);
+
+                    label_size.add_widget (brightness_label);
+                    label_size.add_widget (als_label);
+                }
+
+                if (lid_detect ()) {
+                    var lid_closed_label = new Gtk.Label (_("When lid is closed:"));
+                    lid_closed_label.halign = Gtk.Align.END;
+                    lid_closed_label.sensitive = false;
+                    lid_closed_label.xalign = 1;
+
+                    var lid_closed_box = new LidCloseActionComboBox (false);
+                    lid_closed_box.sensitive = false;
+
+                    var lid_dock_label = new Gtk.Label (_("When lid is closed with external monitor:"));
+                    lid_dock_label.halign = Gtk.Align.END;
+                    lid_dock_label.sensitive = false;
+                    lid_dock_label.xalign = 1;
+
+                    var lid_dock_box = new LidCloseActionComboBox (true);
+                    lid_dock_box.sensitive = false;
+
+                    label_size.add_widget (lid_closed_label);
+                    label_size.add_widget (lid_dock_label);
+
+                    var lock_image = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
+                    lock_image.tooltip_text = NO_PERMISSION_STRING;
+                    lock_image.sensitive = false;
+
+                    var lock_image2 = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
+                    lock_image2.tooltip_text = NO_PERMISSION_STRING;
+                    lock_image2.sensitive = false;
+
+                    var permission = get_permission ();
+
+                    // lock and UI visible that settings are locked and unlocked
+                    permission.notify["allowed"].connect (() => {
+                        if (permission.allowed) {
+                            lid_closed_box.sensitive = true;
+                            lid_closed_label.sensitive = true;
+                            lid_dock_box.sensitive = true;
+                            lid_dock_label.sensitive = true;
+                            lock_image.visible = false;
+                            lock_image2.visible = false;
+                        } else {
+                            lid_closed_box.sensitive = false;
+                            lid_closed_label.sensitive = false;
+                            lid_dock_box.sensitive = false;
+                            lid_dock_label.sensitive = false;
+                            lock_image.visible = true;
+                            lock_image2.visible = true;
+                        }
+                    });
+
+                    main_grid.attach (lid_closed_label, 0, 5, 1, 1);
+                    main_grid.attach (lid_closed_box, 1, 5, 1, 1);
+                    main_grid.attach (lock_image2, 2, 5, 1, 1);
+                    main_grid.attach (lid_dock_label, 0, 6, 1, 1);
+                    main_grid.attach (lid_dock_box, 1, 6, 1, 1);
+                    main_grid.attach (lock_image, 2, 6, 1, 1);
+                }
+
+                var screen_timeout_label = new Gtk.Label (_("Turn off display when inactive for:"));
+                screen_timeout_label.halign = Gtk.Align.END;
+                screen_timeout_label.xalign = 1;
+
+                var screen_timeout = new TimeoutComboBox (elementary_dpms_settings, "standby-time");
+                screen_timeout.changed.connect (run_dpms_helper);
+
+                var power_label = new Gtk.Label (_("Power button:"));
+                power_label.halign = Gtk.Align.END;
+                power_label.xalign = 1;
+
+                var power_combobox = new ActionComboBox ("power-button-action");
+
+                main_grid.attach (screen_timeout_label, 0, 3, 1, 1);
+                main_grid.attach (screen_timeout, 1, 3, 1, 1);
+                main_grid.attach (power_label, 0, 4, 1, 1);
+                main_grid.attach (power_combobox, 1, 4, 1, 1);
 
                 var sleep_timeout_label = new Gtk.Label (_("Suspend when inactive for:"));
                 sleep_timeout_label.xalign = 1;
-
-                label_size = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
-                label_size.add_widget (sleep_timeout_label);
 
                 var sleep_timeout = new TimeoutComboBox (settings, "sleep-inactive-ac-timeout");
 
@@ -140,10 +247,55 @@ namespace Power {
                 stack_container.orientation = Gtk.Orientation.VERTICAL;
                 stack_container.margin_bottom = 12;
 
-                create_info_bars ();
+                var infobar_label = new Gtk.Label (_("Some changes will not take effect until you restart this computer"));
+
+                var infobar = new Gtk.InfoBar ();
+                infobar.message_type = Gtk.MessageType.WARNING;
+                infobar.no_show_all = true;
+                infobar.get_content_area ().add (infobar_label);
+                infobar.hide ();
+
+                var helper = LogindHelper.get_logind_helper ();
+                if (helper != null) {
+                    helper.changed.connect (() => {
+                        infobar.no_show_all = false;
+                        infobar.show_all ();
+                    });
+                }
+
+                stack_container.add (infobar);
+
+                if (lid_detect ()) {
+                    var lock_button = new Gtk.LockButton (get_permission ());
+
+                    var permission_label = new Gtk.Label (_("Some settings require administrator rights to be changed"));
+
+                    var permission_infobar = new Gtk.InfoBar ();
+                    permission_infobar.message_type = Gtk.MessageType.INFO;
+                    permission_infobar.get_content_area ().add (permission_label);
+
+                    var area_infobar = permission_infobar.get_action_area () as Gtk.Container;
+                    area_infobar.add (lock_button);
+
+                    permission_infobar.show_all ();
+
+                    stack_container.add (permission_infobar);
+
+                    //connect polkit permission to hiding the permission infobar
+                    permission.notify["allowed"].connect (() => {
+                        if (permission.allowed) {
+                            permission_infobar.no_show_all = true;
+                            permission_infobar.hide ();
+                        }
+                    });
+                }
 
                 stack_container.add (main_grid);
                 stack_container.show_all ();
+
+                label_size.add_widget (sleep_timeout_label);
+                label_size.add_widget (screen_timeout_label);
+                label_size.add_widget (power_label);
 
                 // hide stack switcher if we only have ac line
                 stack_switcher.visible = stack.get_children ().length () > 1;
@@ -187,174 +339,6 @@ namespace Power {
             search_results.set ("%s → %s".printf (display_name, _("Docked lid close")), "");
             search_results.set ("%s → %s".printf (display_name, _("Suspend inactive")), "");
             return search_results;;
-        }
-
-        private void connect_to_settings_daemon () {
-            try {
-                screen = Bus.get_proxy_sync (BusType.SESSION, SETTINGS_DAEMON_NAME,
-                    SETTINGS_DAEMON_PATH, DBusProxyFlags.GET_INVALIDATED_PROPERTIES);
-            } catch (IOError e) {
-                warning ("Failed to get settings daemon for brightness setting");
-            }
-        }
-
-        private void create_info_bars () {
-            var label = new Gtk.Label (_("Some changes will not take effect until you restart this computer"));
-
-            var infobar = new Gtk.InfoBar ();
-            infobar.message_type = Gtk.MessageType.WARNING;
-            infobar.no_show_all = true;
-            infobar.get_content_area ().add (label);
-            infobar.hide ();
-
-            var helper = LogindHelper.get_logind_helper ();
-            if (helper != null) {
-                helper.changed.connect (() => {
-                    infobar.no_show_all = false;
-                    infobar.show_all ();
-                });
-            }
-
-            stack_container.add (infobar);
-
-            if (lid_detect ()) {
-                var lock_button = new Gtk.LockButton (get_permission ());
-
-                var permission_label = new Gtk.Label (_("Some settings require administrator rights to be changed"));
-
-                var permission_infobar = new Gtk.InfoBar ();
-                permission_infobar.message_type = Gtk.MessageType.INFO;
-                permission_infobar.get_content_area ().add (permission_label);
-
-                var area_infobar = permission_infobar.get_action_area () as Gtk.Container;
-                area_infobar.add (lock_button);
-
-                permission_infobar.show_all ();
-
-                stack_container.add (permission_infobar);
-
-                //connect polkit permission to hiding the permission infobar
-                permission.notify["allowed"].connect (() => {
-                    if (permission.allowed) {
-                        permission_infobar.no_show_all = true;
-                        permission_infobar.hide ();
-                    }
-                });
-            }
-        }
-
-        private Gtk.Grid create_common_settings () {
-            if (backlight_detect ()) {
-                var brightness_label = new Gtk.Label (_("Display brightness:"));
-                brightness_label.halign = Gtk.Align.END;
-                brightness_label.xalign = 1;
-
-                var als_label = new Gtk.Label (_("Automatically adjust brightness:"));
-                als_label.xalign = 1;
-
-                var als_switch = new Gtk.Switch ();
-                als_switch.halign = Gtk.Align.START;
-
-                settings.bind ("ambient-enabled", als_switch, "active", SettingsBindFlags.DEFAULT);
-
-                scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 100, 10);
-                scale.draw_value = false;
-                scale.hexpand = true;
-                scale.width_request = 480;
-
-                scale.set_value (screen.brightness);
-
-                scale.value_changed.connect (on_scale_value_changed);
-                (screen as DBusProxy).g_properties_changed.connect (on_screen_properties_changed);
-
-                main_grid.attach (brightness_label, 0, 0, 1, 1);
-                main_grid.attach (scale, 1, 0, 1, 1);
-                main_grid.attach (als_label, 0, 1, 1, 1);
-                main_grid.attach (als_switch, 1, 1, 1, 1);
-
-                label_size.add_widget (brightness_label);
-                label_size.add_widget (als_label);
-            }
-
-            if (lid_detect ()) {
-                var lid_closed_label = new Gtk.Label (_("When lid is closed:"));
-                lid_closed_label.halign = Gtk.Align.END;
-                lid_closed_label.sensitive = false;
-                lid_closed_label.xalign = 1;
-
-                var lid_closed_box = new LidCloseActionComboBox (false);
-                lid_closed_box.sensitive = false;
-
-                var lid_dock_label = new Gtk.Label (_("When lid is closed with external monitor:"));
-                lid_dock_label.halign = Gtk.Align.END;
-                lid_dock_label.sensitive = false;
-                lid_dock_label.xalign = 1;
-
-                var lid_dock_box = new LidCloseActionComboBox (true);
-                lid_dock_box.sensitive = false;
-
-                label_size.add_widget (lid_closed_label);
-                label_size.add_widget (lid_dock_label);
-
-                var lock_image = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-                lock_image.tooltip_text = NO_PERMISSION_STRING;
-                lock_image.sensitive = false;
-
-                var lock_image2 = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-                lock_image2.tooltip_text = NO_PERMISSION_STRING;
-                lock_image2.sensitive = false;
-
-                var permission = get_permission ();
-
-                // lock and UI visible that settings are locked and unlocked
-                permission.notify["allowed"].connect (() => {
-                    if (permission.allowed) {
-                        lid_closed_box.sensitive = true;
-                        lid_closed_label.sensitive = true;
-                        lid_dock_box.sensitive = true;
-                        lid_dock_label.sensitive = true;
-                        lock_image.visible = false;
-                        lock_image2.visible = false;
-                    } else {
-                        lid_closed_box.sensitive = false;
-                        lid_closed_label.sensitive = false;
-                        lid_dock_box.sensitive = false;
-                        lid_dock_label.sensitive = false;
-                        lock_image.visible = true;
-                        lock_image2.visible = true;
-                    }
-                });
-
-                main_grid.attach (lid_closed_label, 0, 5, 1, 1);
-                main_grid.attach (lid_closed_box, 1, 5, 1, 1);
-                main_grid.attach (lock_image2, 2, 5, 1, 1);
-                main_grid.attach (lid_dock_label, 0, 6, 1, 1);
-                main_grid.attach (lid_dock_box, 1, 6, 1, 1);
-                main_grid.attach (lock_image, 2, 6, 1, 1);
-            }
-
-            var screen_timeout_label = new Gtk.Label (_("Turn off display when inactive for:"));
-            screen_timeout_label.halign = Gtk.Align.END;
-            screen_timeout_label.xalign = 1;
-
-            var screen_timeout = new TimeoutComboBox (elementary_dpms_settings, "standby-time");
-            screen_timeout.changed.connect (run_dpms_helper);
-
-            var power_label = new Gtk.Label (_("Power button:"));
-            power_label.halign = Gtk.Align.END;
-            power_label.xalign = 1;
-
-            var power_combobox = new ActionComboBox ("power-button-action");
-
-            main_grid.attach (screen_timeout_label, 0, 3, 1, 1);
-            main_grid.attach (screen_timeout, 1, 3, 1, 1);
-            main_grid.attach (power_label, 0, 4, 1, 1);
-            main_grid.attach (power_combobox, 1, 4, 1, 1);
-
-            label_size.add_widget (screen_timeout_label);
-            label_size.add_widget (power_label);
-
-            return main_grid;
         }
 
         private void on_scale_value_changed () {
