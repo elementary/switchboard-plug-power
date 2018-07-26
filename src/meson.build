@@ -1,6 +1,7 @@
 interfaces_file = files('Interfaces.vala')
 
 plug_files = files(
+    'MainView.vala',
     'PowerSupply.vala',
     'Plug.vala',
     'Permission.vala',
