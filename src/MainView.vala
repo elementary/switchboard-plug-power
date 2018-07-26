@@ -18,6 +18,7 @@
  */
 
 public class Power.MainView : Gtk.Grid {
+    public Battery battery { get; private set; }
     public Gtk.Stack stack { get; private set; }
 
     private const string NO_PERMISSION_STRING  = _("You do not have permission to change this");
@@ -38,6 +39,7 @@ public class Power.MainView : Gtk.Grid {
         settings = new GLib.Settings ("org.gnome.settings-daemon.plugins.power");
         elementary_dpms_settings = new GLib.Settings ("io.elementary.dpms");
 
+        battery = new Battery ();
         power_supply = new PowerSupply ();
 
         try {

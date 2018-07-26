@@ -18,7 +18,6 @@
  */
 
 namespace Power {
-    private Battery battery;
     private GLib.Settings settings;
 
     public class Plug : Switchboard.Plug {
@@ -39,8 +38,6 @@ namespace Power {
         public override Gtk.Widget get_widget () {
             if (main_view == null) {
                 main_view = new MainView ();
-
-                battery = new Battery ();
             }
             return main_view;
         }
@@ -50,7 +47,7 @@ namespace Power {
                 return;
             }
 
-            if (battery.is_present ()) {
+            if (main_view.battery.is_present ()) {
                 main_view.stack.visible_child_name = "battery";
             } else {
                 main_view.stack.visible_child_name = "ac";
