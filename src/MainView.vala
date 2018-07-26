@@ -216,15 +216,13 @@ public class Power.MainView : Gtk.Grid {
 
         var infobar = new Gtk.InfoBar ();
         infobar.message_type = Gtk.MessageType.WARNING;
-        infobar.no_show_all = true;
+        infobar.revealed = false;
         infobar.get_content_area ().add (infobar_label);
-        infobar.hide ();
 
         var helper = LogindHelper.get_logind_helper ();
         if (helper != null) {
             helper.changed.connect (() => {
-                infobar.no_show_all = false;
-                infobar.show_all ();
+                infobar.revealed = true;
             });
         }
 
@@ -242,17 +240,9 @@ public class Power.MainView : Gtk.Grid {
             var area_infobar = permission_infobar.get_action_area () as Gtk.Container;
             area_infobar.add (lock_button);
 
-            permission_infobar.show_all ();
-
             add (permission_infobar);
 
-            //connect polkit permission to hiding the permission infobar
-            permission.notify["allowed"].connect (() => {
-                if (permission.allowed) {
-                    permission_infobar.no_show_all = true;
-                    permission_infobar.hide ();
-                }
-            });
+            permission.bind_property ("allowed", permission_infobar, "revealed", GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN);
         }
 
         add (main_grid);
