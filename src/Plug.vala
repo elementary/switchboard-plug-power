@@ -103,51 +103,34 @@ namespace Power {
                 if (lid_detect ()) {
                     var lid_closed_label = new Gtk.Label (_("When lid is closed:"));
                     lid_closed_label.halign = Gtk.Align.END;
-                    lid_closed_label.sensitive = false;
                     lid_closed_label.xalign = 1;
 
                     var lid_closed_box = new LidCloseActionComboBox (false);
-                    lid_closed_box.sensitive = false;
 
                     var lid_dock_label = new Gtk.Label (_("When lid is closed with external monitor:"));
                     lid_dock_label.halign = Gtk.Align.END;
-                    lid_dock_label.sensitive = false;
                     lid_dock_label.xalign = 1;
 
                     var lid_dock_box = new LidCloseActionComboBox (true);
-                    lid_dock_box.sensitive = false;
 
                     label_size.add_widget (lid_closed_label);
                     label_size.add_widget (lid_dock_label);
 
                     var lock_image = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-                    lock_image.tooltip_text = NO_PERMISSION_STRING;
                     lock_image.sensitive = false;
+                    lock_image.tooltip_text = NO_PERMISSION_STRING;
 
                     var lock_image2 = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-                    lock_image2.tooltip_text = NO_PERMISSION_STRING;
                     lock_image2.sensitive = false;
+                    lock_image2.tooltip_text = NO_PERMISSION_STRING;
 
                     var permission = get_permission ();
-
-                    // lock and UI visible that settings are locked and unlocked
-                    permission.notify["allowed"].connect (() => {
-                        if (permission.allowed) {
-                            lid_closed_box.sensitive = true;
-                            lid_closed_label.sensitive = true;
-                            lid_dock_box.sensitive = true;
-                            lid_dock_label.sensitive = true;
-                            lock_image.visible = false;
-                            lock_image2.visible = false;
-                        } else {
-                            lid_closed_box.sensitive = false;
-                            lid_closed_label.sensitive = false;
-                            lid_dock_box.sensitive = false;
-                            lid_dock_label.sensitive = false;
-                            lock_image.visible = true;
-                            lock_image2.visible = true;
-                        }
-                    });
+                    permission.bind_property ("allowed", lid_closed_box, "sensitive", GLib.BindingFlags.SYNC_CREATE);
+                    permission.bind_property ("allowed", lid_closed_label, "sensitive", GLib.BindingFlags.SYNC_CREATE);
+                    permission.bind_property ("allowed", lid_dock_box, "sensitive", GLib.BindingFlags.SYNC_CREATE);
+                    permission.bind_property ("allowed", lid_dock_label, "sensitive", GLib.BindingFlags.SYNC_CREATE);
+                    permission.bind_property ("allowed", lock_image, "visible", GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN);
+                    permission.bind_property ("allowed", lock_image2, "visible", GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN);
 
                     main_grid.attach (lid_closed_label, 0, 5, 1, 1);
                     main_grid.attach (lid_closed_box, 1, 5, 1, 1);
