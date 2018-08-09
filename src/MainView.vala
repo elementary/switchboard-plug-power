@@ -110,6 +110,26 @@ public class Power.MainView : Gtk.Grid {
             lock_image2.sensitive = false;
             lock_image2.tooltip_text = NO_PERMISSION_STRING;
 
+            main_grid.attach (lid_closed_label, 0, 5, 1, 1);
+            main_grid.attach (lid_closed_box, 1, 5, 1, 1);
+            main_grid.attach (lock_image2, 2, 5, 1, 1);
+            main_grid.attach (lid_dock_label, 0, 6, 1, 1);
+            main_grid.attach (lid_dock_box, 1, 6, 1, 1);
+            main_grid.attach (lock_image, 2, 6, 1, 1);
+
+            var lock_button = new Gtk.LockButton (get_permission ());
+
+            var permission_label = new Gtk.Label (_("Some settings require administrator rights to be changed"));
+
+            var permission_infobar = new Gtk.InfoBar ();
+            permission_infobar.message_type = Gtk.MessageType.INFO;
+            permission_infobar.get_content_area ().add (permission_label);
+
+            var area_infobar = permission_infobar.get_action_area () as Gtk.Container;
+            area_infobar.add (lock_button);
+
+            add (permission_infobar);
+
             var permission = get_permission ();
             permission.bind_property ("allowed", lid_closed_box, "sensitive", GLib.BindingFlags.SYNC_CREATE);
             permission.bind_property ("allowed", lid_closed_label, "sensitive", GLib.BindingFlags.SYNC_CREATE);
@@ -117,13 +137,7 @@ public class Power.MainView : Gtk.Grid {
             permission.bind_property ("allowed", lid_dock_label, "sensitive", GLib.BindingFlags.SYNC_CREATE);
             permission.bind_property ("allowed", lock_image, "visible", GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN);
             permission.bind_property ("allowed", lock_image2, "visible", GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN);
-
-            main_grid.attach (lid_closed_label, 0, 5, 1, 1);
-            main_grid.attach (lid_closed_box, 1, 5, 1, 1);
-            main_grid.attach (lock_image2, 2, 5, 1, 1);
-            main_grid.attach (lid_dock_label, 0, 6, 1, 1);
-            main_grid.attach (lid_dock_box, 1, 6, 1, 1);
-            main_grid.attach (lock_image, 2, 6, 1, 1);
+            permission.bind_property ("allowed", permission_infobar, "revealed", GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN);
         }
 
         var screen_timeout_label = new Gtk.Label (_("Turn off display when inactive for:"));
@@ -227,23 +241,6 @@ public class Power.MainView : Gtk.Grid {
         }
 
         add (infobar);
-
-        if (lid_detect ()) {
-            var lock_button = new Gtk.LockButton (get_permission ());
-
-            var permission_label = new Gtk.Label (_("Some settings require administrator rights to be changed"));
-
-            var permission_infobar = new Gtk.InfoBar ();
-            permission_infobar.message_type = Gtk.MessageType.INFO;
-            permission_infobar.get_content_area ().add (permission_label);
-
-            var area_infobar = permission_infobar.get_action_area () as Gtk.Container;
-            area_infobar.add (lock_button);
-
-            add (permission_infobar);
-
-            permission.bind_property ("allowed", permission_infobar, "revealed", GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN);
-        }
 
         add (main_grid);
         show_all ();
