@@ -9,7 +9,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-26 16:15-0700\n"
 "PO-Revision-Date: 2018-08-29 16:35+0000\n"
-"Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
+"Last-Translator: Israel Felipe de Lima Araújo S <israelita.felipe@gmail.com>"
+"\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-power/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -21,9 +22,8 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-13 05:53+0000\n"
 
 #: data/io.elementary.switchboard.power.policy.in:10
-#, fuzzy
 msgid "Manage power settings"
-msgstr "Alterar configurações de energia "
+msgstr "Gerenciar configurações de energia "
 
 #: data/io.elementary.switchboard.power.policy.in:11
 msgid "Authentication is required to manage power settings"
@@ -89,10 +89,9 @@ msgid "Power"
 msgstr "Energia"
 
 #: src/Plug.vala:33
-#, fuzzy
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr ""
-"Configurar brilho da tela, botões de energia e comportamento de hibernação"
+"Configurar brilho da tela, botões de energia e comportamento de suspensão"
 
 #: src/Plug.vala:68
 msgid "Suspend button"
