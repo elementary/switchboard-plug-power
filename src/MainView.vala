@@ -189,21 +189,6 @@ public class Power.MainView : Gtk.Grid {
             battery_grid.attach (battery_timeout_label, 0, 1);
             battery_grid.attach (battery_timeout, 1, 1);
 
-            if (backlight_detect ()){
-                var dim_label = new Gtk.Label (_("Dim display when inactive:"));
-                dim_label.xalign = 1;
-
-                var dim_switch = new Gtk.Switch ();
-                dim_switch.halign = Gtk.Align.START;
-
-                settings.bind ("idle-dim", dim_switch, "active", SettingsBindFlags.DEFAULT);
-
-                battery_grid.attach (dim_label, 0, 0, 1, 1);
-                battery_grid.attach (dim_switch, 1, 0, 1, 1);
-
-                label_size.add_widget (dim_label);
-            }
-
             stack.add_titled (battery_grid, "battery", _("On Battery"));
 
             var left_sep = new Gtk.Separator (Gtk.Orientation.HORIZONTAL);
