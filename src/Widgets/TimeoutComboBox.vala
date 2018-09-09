@@ -20,6 +20,45 @@
 namespace Power {
     class TimeoutComboBox : Gtk.ComboBoxText {
 
+        private string? _enum_property = null;
+        public string? enum_property {
+            get {
+                return _enum_property;
+            }
+            set {
+                if (value != _enum_property) {
+                    _enum_property = value;
+                    update_combo ();
+                }
+            }
+        }
+
+        private int _enum_never_value = -1;
+        public int enum_never_value {
+            get {
+                return _enum_never_value;
+            }
+            set {
+                if (value != _enum_never_value) {
+                    _enum_never_value = value;
+                    update_combo ();
+                }
+            }
+        }
+
+        private int _enum_normal_value = -1;
+        public int enum_normal_value {
+            get {
+                return _enum_normal_value;
+            }
+            set {
+                if (value != _enum_normal_value) {
+                    _enum_normal_value = value;
+                    update_combo ();
+                }
+            }
+        }
+
         private GLib.Settings schema;
         private string key;
 
@@ -57,6 +96,14 @@ namespace Power {
         }
 
         private void update_settings () {
+            if (enum_property != null && enum_never_value != -1 && enum_normal_value != -1) {
+                if (active == 0) {
+                    schema.set_enum (enum_property, enum_never_value);
+                } else {
+                    schema.set_enum (enum_property, enum_normal_value);
+                }
+            }
+
             schema.set_int (key, timeout[active]);
         }
 
@@ -76,6 +123,14 @@ namespace Power {
 
         private void update_combo () {
             int val = schema.get_int (key);
+
+            if (enum_property != null && enum_never_value != -1 && enum_normal_value != -1) {
+                var enum_value = schema.get_enum (enum_property);
+                if (enum_value == enum_never_value) {
+                    active = 0;
+                    return;
+                }
+            }
 
             // need to process value to comply our timeout level
             active = find_closest (val);
