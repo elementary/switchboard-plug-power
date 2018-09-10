@@ -30,6 +30,16 @@ public class Power.MainView : Gtk.Grid {
     private PowerSettings screen;
     private PowerSupply power_supply;
 
+    private enum PowerActionType {
+        BLANK,
+        SUSPEND,
+        SHUTDOWN,
+        HIBERNATE,
+        INTERACTIVE,
+        NOTHING,
+        LOGOUT
+    }
+
     construct {
         orientation = Gtk.Orientation.VERTICAL;
         margin_bottom = 12;
@@ -162,6 +172,9 @@ public class Power.MainView : Gtk.Grid {
         sleep_timeout_label.xalign = 1;
 
         var sleep_timeout = new TimeoutComboBox (settings, "sleep-inactive-ac-timeout");
+        sleep_timeout.enum_property = "sleep-inactive-ac-type";
+        sleep_timeout.enum_never_value = PowerActionType.NOTHING;
+        sleep_timeout.enum_normal_value = PowerActionType.SUSPEND;
 
         var ac_grid = new Gtk.Grid ();
         ac_grid.column_spacing = 12;
@@ -182,6 +195,9 @@ public class Power.MainView : Gtk.Grid {
             label_size.add_widget (battery_timeout_label);
 
             var battery_timeout = new TimeoutComboBox (settings, "sleep-inactive-battery-timeout");
+            battery_timeout.enum_property = "sleep-inactive-battery-type";
+            battery_timeout.enum_never_value = PowerActionType.NOTHING;
+            battery_timeout.enum_normal_value = PowerActionType.SUSPEND;
 
             var battery_grid = new Gtk.Grid ();
             battery_grid.column_spacing = 12;
