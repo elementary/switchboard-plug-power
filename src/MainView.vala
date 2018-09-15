@@ -317,7 +317,7 @@ public class Power.MainView : Gtk.Grid {
 
     private static void run_dpms_helper () {
         try {
-            string[] argv = { "elementary-dpms-helper" };
+            string[] argv = { "io.elementary.dpms-helper" };
             Process.spawn_async (null, argv, Environ.get (),
                 SpawnFlags.SEARCH_PATH | SpawnFlags.STDERR_TO_DEV_NULL | SpawnFlags.STDOUT_TO_DEV_NULL,
                 null, null);
