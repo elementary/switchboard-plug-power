@@ -172,6 +172,7 @@ public class Power.MainView : Gtk.Grid {
         sleep_timeout_label.xalign = 1;
 
         var sleep_timeout = new TimeoutComboBox (settings, "sleep-inactive-ac-timeout");
+        sleep_timeout.changed.connect (run_dpms_greeter_helper);
         sleep_timeout.enum_property = "sleep-inactive-ac-type";
         sleep_timeout.enum_never_value = PowerActionType.NOTHING;
         sleep_timeout.enum_normal_value = PowerActionType.SUSPEND;
@@ -195,6 +196,7 @@ public class Power.MainView : Gtk.Grid {
             label_size.add_widget (battery_timeout_label);
 
             var battery_timeout = new TimeoutComboBox (settings, "sleep-inactive-battery-timeout");
+            battery_timeout.changed.connect (run_dpms_greeter_helper);
             battery_timeout.enum_property = "sleep-inactive-battery-type";
             battery_timeout.enum_never_value = PowerActionType.NOTHING;
             battery_timeout.enum_normal_value = PowerActionType.SUSPEND;
@@ -318,6 +320,17 @@ public class Power.MainView : Gtk.Grid {
     private static void run_dpms_helper () {
         try {
             string[] argv = { "io.elementary.dpms-helper" };
+            Process.spawn_async (null, argv, Environ.get (),
+                SpawnFlags.SEARCH_PATH | SpawnFlags.STDERR_TO_DEV_NULL | SpawnFlags.STDOUT_TO_DEV_NULL,
+                null, null);
+        } catch (SpawnError e) {
+            warning ("Failed to reset dpms settings: %s", e.message);
+        }
+    }
+
+    private static void run_dpms_greeter_helper () {
+        try {
+            string[] argv = { "io.elementary.dpms-greeter-helper" };
             Process.spawn_async (null, argv, Environ.get (),
                 SpawnFlags.SEARCH_PATH | SpawnFlags.STDERR_TO_DEV_NULL | SpawnFlags.STDOUT_TO_DEV_NULL,
                 null, null);
