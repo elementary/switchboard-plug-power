@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-26 16:15-0700\n"
-"PO-Revision-Date: 2017-09-02 03:10+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"PO-Revision-Date: 2018-09-27 00:10+0000\n"
+"Last-Translator: Nils K <slx@nilsk.net>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-power/nb/>\n"
 "Language: nb\n"
@@ -17,13 +17,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.16\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: data/io.elementary.switchboard.power.policy.in:10
-#, fuzzy
 msgid "Manage power settings"
-msgstr "Behandle strøm-innstillinger "
+msgstr "Behandle strøminnstillinger"
 
 #: data/io.elementary.switchboard.power.policy.in:11
 msgid "Authentication is required to manage power settings"
@@ -58,7 +57,6 @@ msgid "Power button:"
 msgstr "Av/på-knapp"
 
 #: src/MainView.vala:147 src/MainView.vala:166
-#, fuzzy
 msgid "Suspend when inactive for:"
 msgstr "Hvilemodus ved inaktivitet i:"
 
@@ -87,14 +85,12 @@ msgid "Power"
 msgstr "Strøm"
 
 #: src/Plug.vala:33
-#, fuzzy
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "Konfigurer lysstyrke, strømknapper og strømsparing"
 
 #: src/Plug.vala:68
-#, fuzzy
 msgid "Suspend button"
-msgstr "Dvale-knapp"
+msgstr "Dvaleknapp"
 
 #: src/Plug.vala:69
 msgid "Power button"
