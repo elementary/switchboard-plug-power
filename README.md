@@ -2,6 +2,8 @@
 [![Packaging status](https://repology.org/badge/tiny-repos/switchboard-plug-power.svg)](https://repology.org/metapackage/switchboard-plug-power)
 [![l10n](https://l10n.elementary.io/widgets/switchboard/switchboard-plug-power/svg-badge.svg)](https://l10n.elementary.io/projects/switchboard/switchboard-plug-power)
 
+![screenshot](data/screenshot.png?raw=true)
+
 ## Building and Installation
 
 You'll need the following dependencies:
