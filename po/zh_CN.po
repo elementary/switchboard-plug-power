@@ -8,22 +8,21 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-26 16:15-0700\n"
-"PO-Revision-Date: 2017-06-21 00:37+0000\n"
+"PO-Revision-Date: 2018-10-29 02:46+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
-"Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
-"switchboard/switchboard-plug-power/zh_CN/>\n"
+"Language-Team: Chinese (Simplified) <https://weblate.elementary.io/projects/"
+"switchboard/switchboard-plug-power/zh_Hans/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.14\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-03-14 07:03+0000\n"
 
 #: data/io.elementary.switchboard.power.policy.in:10
-#, fuzzy
 msgid "Manage power settings"
-msgstr "管理电源设置 "
+msgstr "管理电源设置"
 
 #: data/io.elementary.switchboard.power.policy.in:11
 msgid "Authentication is required to manage power settings"
@@ -58,9 +57,8 @@ msgid "Power button:"
 msgstr "电源按钮："
 
 #: src/MainView.vala:147 src/MainView.vala:166
-#, fuzzy
 msgid "Suspend when inactive for:"
-msgstr "闲时挂起："
+msgstr "闲时进入睡眠："
 
 #: src/MainView.vala:159
 msgid "Plugged In"
@@ -87,12 +85,10 @@ msgid "Power"
 msgstr "电源"
 
 #: src/Plug.vala:33
-#, fuzzy
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "配置显示器亮度、电源按键和睡眠方式"
 
 #: src/Plug.vala:68
-#, fuzzy
 msgid "Suspend button"
 msgstr "睡眠键"
 
@@ -122,14 +118,13 @@ msgstr "自动调节亮度"
 
 #: src/Plug.vala:75
 msgid "Inactive display off"
-msgstr "屏幕关闭"
+msgstr "闲时关闭屏幕"
 
 #: src/Plug.vala:76
 msgid "Docked lid close"
 msgstr "盖子关闭"
 
 #: src/Plug.vala:77
-#, fuzzy
 msgid "Suspend inactive"
 msgstr "闲时睡眠"
 
