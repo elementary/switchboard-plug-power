@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-26 16:15-0700\n"
-"PO-Revision-Date: 2018-11-01 00:03+0000\n"
+"PO-Revision-Date: 2018-11-06 21:45+0000\n"
 "Last-Translator: Sinan Decron <intenfinitia@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-power/tr/>\n"
@@ -21,9 +21,8 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-01-01 05:31+0000\n"
 
 #: data/io.elementary.switchboard.power.policy.in:10
-#, fuzzy
 msgid "Manage power settings"
-msgstr "Güç ayarlarını yönet "
+msgstr "Güç ayarlarını yönet"
 
 #: data/io.elementary.switchboard.power.policy.in:11
 msgid "Authentication is required to manage power settings"
@@ -47,7 +46,7 @@ msgstr "Kapak kapalıyken:"
 
 #: src/MainView.vala:96
 msgid "When lid is closed with external monitor:"
-msgstr ""
+msgstr "Harici monitör varken kapak kapatıldığında:"
 
 #: src/MainView.vala:129
 msgid "Turn off display when inactive for:"
@@ -58,7 +57,6 @@ msgid "Power button:"
 msgstr "Güç tuşu:"
 
 #: src/MainView.vala:147 src/MainView.vala:166
-#, fuzzy
 msgid "Suspend when inactive for:"
 msgstr "Şu kadar süre etkin değilse askıya al:"
 
@@ -89,14 +87,12 @@ msgid "Power"
 msgstr "Güç"
 
 #: src/Plug.vala:33
-#, fuzzy
 msgid "Configure display brightness, power buttons, and suspend behavior"
-msgstr "Ekran parlaklığı, güç düğmeleri ve uyku davranışını ayarla"
+msgstr "Ekran parlaklığı, güç düğmeleri ve askıya alma davranışını ayarla"
 
 #: src/Plug.vala:68
-#, fuzzy
 msgid "Suspend button"
-msgstr "Uyku düğmesi"
+msgstr "Askıya Alma düğmesi"
 
 #: src/Plug.vala:69
 msgid "Power button"
@@ -112,7 +108,7 @@ msgstr "Karanlık/Loş ekran"
 
 #: src/Plug.vala:72
 msgid "Lid close"
-msgstr ""
+msgstr "Kapak kapalı"
 
 #: src/Plug.vala:73
 msgid "Display brightness"
@@ -128,12 +124,11 @@ msgstr ""
 
 #: src/Plug.vala:76
 msgid "Docked lid close"
-msgstr ""
+msgstr "Takılıyken kapak kapalı"
 
 #: src/Plug.vala:77
-#, fuzzy
 msgid "Suspend inactive"
-msgstr "Şu kadar süre etkin değilse askıya al:"
+msgstr "Etkin değilse askıya al"
 
 #: src/Widgets/TimeoutComboBox.vala:42
 msgid "Never"
