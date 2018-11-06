@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-26 16:15-0700\n"
 "PO-Revision-Date: 2018-11-06 21:45+0000\n"
-"Last-Translator: Sinan Decron <intenfinitia@gmail.com>\n"
+"Last-Translator: Ümit Seyhan <btc.umit@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-power/tr/>\n"
 "Language: tr\n"
@@ -120,7 +120,7 @@ msgstr "Otomatik parlaklık ayarı"
 
 #: src/Plug.vala:75
 msgid "Inactive display off"
-msgstr ""
+msgstr "Hareketsizken ekranı kapat"
 
 #: src/Plug.vala:76
 msgid "Docked lid close"
