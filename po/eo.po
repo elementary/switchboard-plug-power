@@ -8,23 +8,25 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-26 16:15-0700\n"
-"PO-Revision-Date: 2012-10-27 02:16+0000\n"
-"Last-Translator: Michael Moroni <michael.moroni@openmailbox.org>\n"
-"Language-Team: Esperanto <eo@li.org>\n"
+"PO-Revision-Date: 2018-10-25 22:07+0000\n"
+"Last-Translator: Jesse ALTER <jesse@jessealter.com>\n"
+"Language-Team: Esperanto <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-power/eo/>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2016-11-21 05:42+0000\n"
-"X-Generator: Launchpad (build 18269)\n"
 
 #: data/io.elementary.switchboard.power.policy.in:10
 msgid "Manage power settings"
-msgstr ""
+msgstr "Administri energio-agordojn"
 
 #: data/io.elementary.switchboard.power.policy.in:11
 msgid "Authentication is required to manage power settings"
-msgstr ""
+msgstr "Aŭtentigo estas postulata por administri energio-agordojn"
 
 #: src/MainView.vala:24
 msgid "You do not have permission to change this"
@@ -32,55 +34,55 @@ msgstr ""
 
 #: src/MainView.vala:58
 msgid "Display brightness:"
-msgstr ""
+msgstr "Brileco de ekrano:"
 
 #: src/MainView.vala:62
 msgid "Automatically adjust brightness:"
-msgstr ""
+msgstr "Aŭtomate alĝustigi brilecon de ekrano:"
 
 #: src/MainView.vala:90
 msgid "When lid is closed:"
-msgstr ""
+msgstr "Kiam kovrilo fermatas:"
 
 #: src/MainView.vala:96
 msgid "When lid is closed with external monitor:"
-msgstr ""
+msgstr "Kiam kovrilo fermatas kun ekstera ekrano:"
 
 #: src/MainView.vala:129
 msgid "Turn off display when inactive for:"
-msgstr ""
+msgstr "Malŝalti ekranon kiam neaktiva por:"
 
 #: src/MainView.vala:136
 msgid "Power button:"
-msgstr ""
+msgstr "Ŝalta butono:"
 
 #: src/MainView.vala:147 src/MainView.vala:166
 msgid "Suspend when inactive for:"
-msgstr ""
+msgstr "Halteti kiam neaktiva por:"
 
 #: src/MainView.vala:159
 msgid "Plugged In"
-msgstr ""
+msgstr "Konektita"
 
 #: src/MainView.vala:179
 msgid "Dim display when inactive:"
-msgstr ""
+msgstr "Malheligi ekranon kiam neaktiva:"
 
 #: src/MainView.vala:193
 msgid "On Battery"
-msgstr ""
+msgstr "Uzante baterion"
 
 #: src/MainView.vala:215
 msgid "Some changes will not take effect until you restart this computer"
-msgstr ""
+msgstr "Kelkaj ŝanĝoj ne okazos ĝis vi restartigi ĉi tiun komputilon"
 
 #: src/MainView.vala:234
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "Kelkaj agordoj postulas administrantajn rajtojn por esti ŝanĝitaj"
 
 #: src/Plug.vala:32
 msgid "Power"
-msgstr ""
+msgstr "Energio"
 
 #: src/Plug.vala:33
 msgid "Configure display brightness, power buttons, and suspend behavior"

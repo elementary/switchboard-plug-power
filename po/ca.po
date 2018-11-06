@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-26 16:15-0700\n"
-"PO-Revision-Date: 2018-07-03 00:06+0000\n"
+"PO-Revision-Date: 2018-10-18 00:11+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-power/ca/>\n"
@@ -78,8 +78,7 @@ msgstr "Alguns canvis no tindran efecte fins que reinicieu l'ordinador."
 
 #: src/MainView.vala:234
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
-"Alguns paràmetres necessiten permisos d'administrador per ser modificats"
+msgstr "Alguns paràmetres necessiten permisos d'administrador per modificar-se"
 
 #: src/Plug.vala:32
 msgid "Power"
