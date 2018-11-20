@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-26 16:15-0700\n"
-"PO-Revision-Date: 2018-06-14 00:09+0000\n"
-"Last-Translator: Ryo Nakano <ryonakaknock@gmail.com>\n"
+"PO-Revision-Date: 2018-11-20 09:57+0000\n"
+"Last-Translator: Takumi Nishino <nistak04@yahoo.co.jp>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-power/ja/>\n"
 "Language: ja\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-03-02 05:49+0000\n"
 
 #: data/io.elementary.switchboard.power.policy.in:10
@@ -117,7 +117,7 @@ msgstr "非アクティブディスプレイをオフにする"
 
 #: src/Plug.vala:76
 msgid "Docked lid close"
-msgstr ""
+msgstr "充電中にカバーを閉じる"
 
 #: src/Plug.vala:77
 msgid "Suspend inactive"
