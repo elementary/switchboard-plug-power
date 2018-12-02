@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-26 16:15-0700\n"
-"PO-Revision-Date: 2018-11-24 13:08+0000\n"
+"PO-Revision-Date: 2018-12-02 06:48+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-power/ja/>\n"
@@ -29,31 +29,31 @@ msgstr "これを変更する権限がありません"
 
 #: src/MainView.vala:58
 msgid "Display brightness:"
-msgstr "ディスプレイの明るさ："
+msgstr "ディスプレイの明るさ:"
 
 #: src/MainView.vala:62
 msgid "Automatically adjust brightness:"
-msgstr "明るさを自動調整："
+msgstr "明るさを自動調整:"
 
 #: src/MainView.vala:90
 msgid "When lid is closed:"
-msgstr "カバーが閉じられたとき："
+msgstr "カバーが閉じられたとき:"
 
 #: src/MainView.vala:96
 msgid "When lid is closed with external monitor:"
-msgstr "外部モニターとカバーが閉じられたとき："
+msgstr "外部モニターとカバーが閉じられたとき:"
 
 #: src/MainView.vala:129
 msgid "Turn off display when inactive for:"
-msgstr "非アクティブ時はディスプレイをオフにする："
+msgstr "非アクティブ時はディスプレイをオフにする:"
 
 #: src/MainView.vala:136
 msgid "Power button:"
-msgstr "電源ボタン："
+msgstr "電源ボタン:"
 
 #: src/MainView.vala:147 src/MainView.vala:166
 msgid "Suspend when inactive for:"
-msgstr "非アクティブ時にサスペンド："
+msgstr "非アクティブ時にサスペンド:"
 
 #: src/MainView.vala:159
 msgid "Plugged In"
@@ -61,7 +61,7 @@ msgstr "電源接続時"
 
 #: src/MainView.vala:179
 msgid "Dim display when inactive:"
-msgstr "非アクティブ時にディスプレイを暗くする："
+msgstr "非アクティブ時にディスプレイを暗くする:"
 
 #: src/MainView.vala:193
 msgid "On Battery"
