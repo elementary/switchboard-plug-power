@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-26 16:15-0700\n"
-"PO-Revision-Date: 2018-12-02 06:48+0000\n"
+"PO-Revision-Date: 2018-12-19 00:08+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-power/ja/>\n"
@@ -69,7 +69,7 @@ msgstr "バッテリー時"
 
 #: src/MainView.vala:215
 msgid "Some changes will not take effect until you restart this computer"
-msgstr "一部の変更はこのコンピューターの再起動後に反映されます"
+msgstr "一部の変更は、このコンピューターの再起動後に反映されます"
 
 #: src/MainView.vala:234
 msgid "Some settings require administrator rights to be changed"
