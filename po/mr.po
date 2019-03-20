@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-26 16:15-0700\n"
-"PO-Revision-Date: 2019-03-09 13:31+0000\n"
+"PO-Revision-Date: 2019-03-21 10:53+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/mr/>\n"
@@ -17,59 +17,59 @@ msgstr ""
 
 #: data/io.elementary.switchboard.power.policy.in:10
 msgid "Manage power settings"
-msgstr ""
+msgstr "पॉवर सेटिंग्ज व्यवस्थापित करा"
 
 #: data/io.elementary.switchboard.power.policy.in:11
 msgid "Authentication is required to manage power settings"
-msgstr ""
+msgstr "पॉवर सेटिंग्ज व्यवस्थापित करण्यासाठी प्रमाणीकरण आवश्यक आहे"
 
 #: src/MainView.vala:24
 msgid "You do not have permission to change this"
-msgstr ""
+msgstr "आपल्याला हे बदलण्याची परवानगी नाही"
 
 #: src/MainView.vala:58
 msgid "Display brightness:"
-msgstr ""
+msgstr "प्रदर्शनाचा ब्राइटनेस:"
 
 #: src/MainView.vala:62
 msgid "Automatically adjust brightness:"
-msgstr ""
+msgstr "ब्राइटनेस स्वयंचलितपणे समायोजित करा:"
 
 #: src/MainView.vala:90
 msgid "When lid is closed:"
-msgstr ""
+msgstr "झाकण बंद असताना:"
 
 #: src/MainView.vala:96
 msgid "When lid is closed with external monitor:"
-msgstr ""
+msgstr "बाह्य मॉनिटरसह झाकण बंद असताना:"
 
 #: src/MainView.vala:129
 msgid "Turn off display when inactive for:"
-msgstr ""
+msgstr "पर्यंत निष्क्रिय असताना प्रदर्शन बंद करा:"
 
 #: src/MainView.vala:136
 msgid "Power button:"
-msgstr ""
+msgstr "पॉवर बटण:"
 
 #: src/MainView.vala:147 src/MainView.vala:166
 msgid "Suspend when inactive for:"
-msgstr ""
+msgstr "पर्यंत निष्क्रिय असेल तेव्हा निलंबित करा:"
 
 #: src/MainView.vala:159
 msgid "Plugged In"
-msgstr ""
+msgstr "प्लग इन"
 
 #: src/MainView.vala:179
 msgid "Dim display when inactive:"
-msgstr ""
+msgstr "निष्क्रिय असताना प्रदर्शन निस्तेज करा:"
 
 #: src/MainView.vala:193
 msgid "On Battery"
-msgstr ""
+msgstr "बॅटरी"
 
 #: src/MainView.vala:215
 msgid "Some changes will not take effect until you restart this computer"
-msgstr ""
+msgstr "आपण हे संगणक रीस्टार्ट करेपर्यंत काही बदल प्रभावी होणार नाहीत"
 
 #: src/MainView.vala:234
 msgid "Some settings require administrator rights to be changed"
@@ -77,92 +77,92 @@ msgstr "काही सेटिंग्जसाठी प्रशासक�
 
 #: src/Plug.vala:32
 msgid "Power"
-msgstr ""
+msgstr "पॉवर"
 
 #: src/Plug.vala:33
 msgid "Configure display brightness, power buttons, and suspend behavior"
-msgstr ""
+msgstr "डिस्प्ले ब्राइटनेस, पॉवर बटणे आणि निलंबन वर्तन कॉन्फिगर करा"
 
 #: src/Plug.vala:68
 msgid "Suspend button"
-msgstr ""
+msgstr "निलंबन बटण"
 
 #: src/Plug.vala:69
 msgid "Power button"
-msgstr ""
+msgstr "पॉवर बटण"
 
 #: src/Plug.vala:70
 msgid "Display inactive"
-msgstr ""
+msgstr "निष्क्रिय प्रदर्शन"
 
 #: src/Plug.vala:71
 msgid "Dim display"
-msgstr ""
+msgstr "मंद प्रदर्शन"
 
 #: src/Plug.vala:72
 msgid "Lid close"
-msgstr ""
+msgstr "बंद झाकण"
 
 #: src/Plug.vala:73
 msgid "Display brightness"
-msgstr ""
+msgstr "प्रदर्शन ब्राईटनेस"
 
 #: src/Plug.vala:74
 msgid "Automatic brightness adjustment"
-msgstr ""
+msgstr "स्वयंचलित ब्राईटनेस समायोजन"
 
 #: src/Plug.vala:75
 msgid "Inactive display off"
-msgstr ""
+msgstr "निष्क्रिय प्रदर्शन बंद"
 
 #: src/Plug.vala:76
 msgid "Docked lid close"
-msgstr ""
+msgstr "डॉक केलेले झाकण बंद"
 
 #: src/Plug.vala:77
 msgid "Suspend inactive"
-msgstr ""
+msgstr "निष्क्रिय निलंबित"
 
 #: src/Widgets/TimeoutComboBox.vala:42
 msgid "Never"
-msgstr ""
+msgstr "कधीही नाही"
 
 #: src/Widgets/TimeoutComboBox.vala:43
 msgid "5 min"
-msgstr ""
+msgstr "5 मिनिटे"
 
 #: src/Widgets/TimeoutComboBox.vala:44
 msgid "10 min"
-msgstr ""
+msgstr "10 मिनिटे"
 
 #: src/Widgets/TimeoutComboBox.vala:45
 msgid "15 min"
-msgstr ""
+msgstr "15 मिनिटे"
 
 #: src/Widgets/TimeoutComboBox.vala:46
 msgid "30 min"
-msgstr ""
+msgstr "30 मिनिटे"
 
 #: src/Widgets/TimeoutComboBox.vala:47
 msgid "45 min"
-msgstr ""
+msgstr "45 मिनिटे"
 
 #: src/Widgets/TimeoutComboBox.vala:48
 msgid "1 hour"
-msgstr ""
+msgstr "1 तास"
 
 #: src/Widgets/TimeoutComboBox.vala:49
 msgid "2 hours"
-msgstr ""
+msgstr "2 तास"
 
 #: src/Widgets/LidCloseActionComboBox.vala:32
 #: src/Widgets/ActionComboBox.vala:33
 msgid "Suspend"
-msgstr ""
+msgstr "निलंबित करा"
 
 #: src/Widgets/LidCloseActionComboBox.vala:33
 msgid "Shutdown"
-msgstr ""
+msgstr "बंद करा"
 
 #: src/Widgets/LidCloseActionComboBox.vala:34
 msgid "Lock"
@@ -170,17 +170,17 @@ msgstr "लॉक"
 
 #: src/Widgets/LidCloseActionComboBox.vala:35
 msgid "Halt"
-msgstr ""
+msgstr "थांबा"
 
 #: src/Widgets/LidCloseActionComboBox.vala:36
 #: src/Widgets/ActionComboBox.vala:32
 msgid "Do nothing"
-msgstr ""
+msgstr "काही करू नका"
 
 #: src/Widgets/LidCloseActionComboBox.vala:38
 msgid "Not supported"
-msgstr ""
+msgstr "समर्थित नाही"
 
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Hibernate"
-msgstr ""
+msgstr "हायबरनेट"
