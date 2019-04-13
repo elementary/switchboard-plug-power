@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-26 16:15-0700\n"
-"PO-Revision-Date: 2019-04-06 22:52+0000\n"
+"PO-Revision-Date: 2019-04-14 18:53+0000\n"
 "Last-Translator: Ozgur Baskin <bebeto_baskin@yahoo.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/tr/>\n"
@@ -50,7 +50,7 @@ msgstr "Harici monitör varken kapak kapatıldığında:"
 
 #: src/MainView.vala:129
 msgid "Turn off display when inactive for:"
-msgstr "Kullanılmıyorken, ekranı şu süre sonunda kapat:"
+msgstr "Etkin olmadığında ekranı kapat:"
 
 #: src/MainView.vala:136
 msgid "Power button:"
@@ -58,7 +58,7 @@ msgstr "Güç düğmesi:"
 
 #: src/MainView.vala:147 src/MainView.vala:166
 msgid "Suspend when inactive for:"
-msgstr "Şu kadar süre etkin değilse askıya al:"
+msgstr "Etkin olmadığında askıya al:"
 
 #: src/MainView.vala:159
 msgid "Plugged In"
@@ -66,7 +66,7 @@ msgstr "Fişe Takılı"
 
 #: src/MainView.vala:179
 msgid "Dim display when inactive:"
-msgstr "Aktif değilken ekranı karart:"
+msgstr "Etkin olmadığında ekranı karart:"
 
 #: src/MainView.vala:193
 msgid "On Battery"
@@ -75,7 +75,8 @@ msgstr "Pilde"
 #: src/MainView.vala:215
 msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
-"Bazı değişiklikler bilgisayarınızı yeniden başlatana kadar geçerli olmayacak"
+"Bazı değişiklikler bilgisayarınızı yeniden başlatana kadar etkili "
+"olmayacaktır"
 
 #: src/MainView.vala:234
 msgid "Some settings require administrator rights to be changed"
@@ -88,7 +89,7 @@ msgstr "Güç"
 
 #: src/Plug.vala:33
 msgid "Configure display brightness, power buttons, and suspend behavior"
-msgstr "Ekran parlaklığı, güç düğmeleri ve askıya alma davranışını ayarla"
+msgstr "Ekran parlaklığı, güç düğmeleri ve askıya alma davranışını yapılandırın"
 
 #: src/Plug.vala:68
 msgid "Suspend button"
@@ -104,11 +105,11 @@ msgstr "Ekran etkin değil"
 
 #: src/Plug.vala:71
 msgid "Dim display"
-msgstr "Karanlık/Loş ekran"
+msgstr "Ekranı karart"
 
 #: src/Plug.vala:72
 msgid "Lid close"
-msgstr "Kapak kapalı"
+msgstr "Kapağı kapat"
 
 #: src/Plug.vala:73
 msgid "Display brightness"
@@ -120,15 +121,15 @@ msgstr "Otomatik parlaklık ayarı"
 
 #: src/Plug.vala:75
 msgid "Inactive display off"
-msgstr "Hareketsizken ekranı kapat"
+msgstr "Etkin olmadığında ekranı kapat"
 
 #: src/Plug.vala:76
 msgid "Docked lid close"
-msgstr "Takılıyken kapak kapalı"
+msgstr "Kapağı kapat"
 
 #: src/Plug.vala:77
 msgid "Suspend inactive"
-msgstr "Etkin değilse askıya al"
+msgstr "Etkin olmadığında askıya al"
 
 #: src/Widgets/TimeoutComboBox.vala:42
 msgid "Never"
@@ -186,8 +187,8 @@ msgstr "Hiçbir şey yapma"
 
 #: src/Widgets/LidCloseActionComboBox.vala:38
 msgid "Not supported"
-msgstr "Desteklenmeyen"
+msgstr "Desteklenmiyor"
 
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Hibernate"
-msgstr "Uykuya Al"
+msgstr "Hazırda Beklet"
