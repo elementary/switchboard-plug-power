@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-26 16:15-0700\n"
-"PO-Revision-Date: 2019-04-14 18:53+0000\n"
+"PO-Revision-Date: 2019-04-16 22:31+0000\n"
 "Last-Translator: Ozgur Baskin <bebeto_baskin@yahoo.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/tr/>\n"
@@ -30,7 +30,7 @@ msgstr "Güç ayarlarını yönetmek için kimlik doğrulaması gerekiyor"
 
 #: src/MainView.vala:24
 msgid "You do not have permission to change this"
-msgstr "Değiştirmek için yetkiniz yok"
+msgstr "Bunu değiştirmek için izniniz yok"
 
 #: src/MainView.vala:58
 msgid "Display brightness:"
