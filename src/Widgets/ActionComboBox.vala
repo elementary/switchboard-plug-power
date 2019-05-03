@@ -13,7 +13,7 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, 
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor,
  * Boston, MA  02110-1301, USA.
  */
 
@@ -22,16 +22,15 @@ namespace Power {
         private string key;
 
         // this maps combobox indices to gsettings enums
-        private int[] map_to_sett = {0, 1, 2};
+        private int[] map_to_sett = {0, 1};
         // and vice-versa
-        private int[] map_to_list = {0, 1, 2};
+        private int[] map_to_list = {0, 1};
 
         public ActionComboBox (string key_value) {
             key = key_value;
 
             append_text (_("Do nothing"));
             append_text (_("Suspend"));
-            append_text (_("Hibernate"));
 
             hexpand = true;
 
