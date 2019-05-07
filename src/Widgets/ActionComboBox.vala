@@ -22,16 +22,15 @@ namespace Power {
         private string key;
 
         // this maps combobox indices to gsettings enums
-        private int[] map_to_sett = {0, 1, 2};
+        private int[] map_to_sett = {0, 1};
         // and vice-versa
-        private int[] map_to_list = {0, 1, 2};
+        private int[] map_to_list = {0, 1};
 
         public ActionComboBox (string key_value) {
             key = key_value;
 
             append_text (_("Do nothing"));
             append_text (_("Suspend"));
-            append_text (_("Hibernate"));
 
             hexpand = true;
 
