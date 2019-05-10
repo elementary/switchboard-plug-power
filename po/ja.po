@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-26 16:15-0700\n"
-"PO-Revision-Date: 2018-06-14 00:09+0000\n"
-"Last-Translator: Ryo Nakano <ryonakaknock@gmail.com>\n"
-"Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
+"PO-Revision-Date: 2019-03-05 03:26+0000\n"
+"Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
+"Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.4\n"
 "X-Launchpad-Export-Date: 2017-03-02 05:49+0000\n"
 
 #: data/io.elementary.switchboard.power.policy.in:10
@@ -69,7 +69,7 @@ msgstr "バッテリー時"
 
 #: src/MainView.vala:215
 msgid "Some changes will not take effect until you restart this computer"
-msgstr "一部の変更はこのコンピューターの再起動後に反映されます"
+msgstr "一部の変更は、このコンピューターの再起動後に反映されます"
 
 #: src/MainView.vala:234
 msgid "Some settings require administrator rights to be changed"
@@ -105,7 +105,7 @@ msgstr "カバーを閉じる"
 
 #: src/Plug.vala:73
 msgid "Display brightness"
-msgstr "ディスプレイの輝度"
+msgstr "ディスプレイの明るさ"
 
 #: src/Plug.vala:74
 msgid "Automatic brightness adjustment"
@@ -117,7 +117,7 @@ msgstr "非アクティブディスプレイをオフにする"
 
 #: src/Plug.vala:76
 msgid "Docked lid close"
-msgstr ""
+msgstr "充電中にカバーを閉じる"
 
 #: src/Plug.vala:77
 msgid "Suspend inactive"

@@ -8,22 +8,21 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-26 16:15-0700\n"
-"PO-Revision-Date: 2018-05-27 00:05+0000\n"
-"Last-Translator: İbrahim Ethem Göl <ethem578@gmail.com>\n"
-"Language-Team: Turkish <https://weblate.elementary.io/projects/switchboard/"
+"PO-Revision-Date: 2019-04-16 22:31+0000\n"
+"Last-Translator: Ozgur Baskin <bebeto_baskin@yahoo.com>\n"
+"Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.5.1\n"
 "X-Launchpad-Export-Date: 2017-01-01 05:31+0000\n"
 
 #: data/io.elementary.switchboard.power.policy.in:10
-#, fuzzy
 msgid "Manage power settings"
-msgstr "Güç ayarlarını yönet "
+msgstr "Güç ayarlarını yönet"
 
 #: data/io.elementary.switchboard.power.policy.in:11
 msgid "Authentication is required to manage power settings"
@@ -31,7 +30,7 @@ msgstr "Güç ayarlarını yönetmek için kimlik doğrulaması gerekiyor"
 
 #: src/MainView.vala:24
 msgid "You do not have permission to change this"
-msgstr "Değiştirmek için yetkiniz yok"
+msgstr "Bunu değiştirmek için izniniz yok"
 
 #: src/MainView.vala:58
 msgid "Display brightness:"
@@ -47,20 +46,19 @@ msgstr "Kapak kapalıyken:"
 
 #: src/MainView.vala:96
 msgid "When lid is closed with external monitor:"
-msgstr ""
+msgstr "Harici monitör varken kapak kapatıldığında:"
 
 #: src/MainView.vala:129
 msgid "Turn off display when inactive for:"
-msgstr "Kullanılmıyorken, ekranı şu süre sonunda kapat:"
+msgstr "Etkin olmadığında ekranı kapat:"
 
 #: src/MainView.vala:136
 msgid "Power button:"
-msgstr "Güç tuşu:"
+msgstr "Güç düğmesi:"
 
 #: src/MainView.vala:147 src/MainView.vala:166
-#, fuzzy
 msgid "Suspend when inactive for:"
-msgstr "Şu kadar süre etkin değilse askıya al:"
+msgstr "Etkin olmadığında askıya al:"
 
 #: src/MainView.vala:159
 msgid "Plugged In"
@@ -68,7 +66,7 @@ msgstr "Fişe Takılı"
 
 #: src/MainView.vala:179
 msgid "Dim display when inactive:"
-msgstr "Aktif değilken ekranı karart:"
+msgstr "Etkin olmadığında ekranı karart:"
 
 #: src/MainView.vala:193
 msgid "On Battery"
@@ -77,27 +75,25 @@ msgstr "Pilde"
 #: src/MainView.vala:215
 msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
-"Bazı değişiklikler bilgisayarınızı yeniden başlatana kadar geçerli olmayacak"
+"Bazı değişiklikler bilgisayarınızı yeniden başlatana kadar etkili "
+"olmayacaktır"
 
 #: src/MainView.vala:234
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
-"Bazı ayarları değiştirebilmek için yönetici haklarına sahip olmanız "
-"gerekiyor."
+"Bazı ayarları değiştirebilmek için yönetici haklarına sahip olmanız gerekiyor"
 
 #: src/Plug.vala:32
 msgid "Power"
 msgstr "Güç"
 
 #: src/Plug.vala:33
-#, fuzzy
 msgid "Configure display brightness, power buttons, and suspend behavior"
-msgstr "Ekran parlaklığı, güç düğmeleri ve uyku davranışını ayarla"
+msgstr "Ekran parlaklığı, güç düğmeleri ve askıya alma davranışını yapılandırın"
 
 #: src/Plug.vala:68
-#, fuzzy
 msgid "Suspend button"
-msgstr "Uyku düğmesi"
+msgstr "Askıya alma düğmesi"
 
 #: src/Plug.vala:69
 msgid "Power button"
@@ -109,11 +105,11 @@ msgstr "Ekran etkin değil"
 
 #: src/Plug.vala:71
 msgid "Dim display"
-msgstr "Karanlık/Loş ekran"
+msgstr "Ekranı karart"
 
 #: src/Plug.vala:72
 msgid "Lid close"
-msgstr ""
+msgstr "Kapağı kapat"
 
 #: src/Plug.vala:73
 msgid "Display brightness"
@@ -125,16 +121,15 @@ msgstr "Otomatik parlaklık ayarı"
 
 #: src/Plug.vala:75
 msgid "Inactive display off"
-msgstr ""
+msgstr "Etkin olmadığında ekranı kapat"
 
 #: src/Plug.vala:76
 msgid "Docked lid close"
-msgstr ""
+msgstr "Kapağı kapat"
 
 #: src/Plug.vala:77
-#, fuzzy
 msgid "Suspend inactive"
-msgstr "Şu kadar süre etkin değilse askıya al:"
+msgstr "Etkin olmadığında askıya al"
 
 #: src/Widgets/TimeoutComboBox.vala:42
 msgid "Never"
@@ -192,8 +187,8 @@ msgstr "Hiçbir şey yapma"
 
 #: src/Widgets/LidCloseActionComboBox.vala:38
 msgid "Not supported"
-msgstr "Desteklenmeyen"
+msgstr "Desteklenmiyor"
 
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Hibernate"
-msgstr "Uykuya Al"
+msgstr "Hazırda Beklet"

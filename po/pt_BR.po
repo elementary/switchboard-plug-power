@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-26 16:15-0700\n"
-"PO-Revision-Date: 2018-08-30 00:08+0000\n"
+"PO-Revision-Date: 2018-10-18 00:11+0000\n"
 "Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-power/pt_BR/>\n"
@@ -26,7 +26,7 @@ msgstr "Gerenciar configurações de energia"
 
 #: data/io.elementary.switchboard.power.policy.in:11
 msgid "Authentication is required to manage power settings"
-msgstr "A autenticação é necessária  para alterar as configurações de energia"
+msgstr "É necessária autenticação para alterar as configurações de energia"
 
 #: src/MainView.vala:24
 msgid "You do not have permission to change this"
@@ -184,7 +184,7 @@ msgstr "Parar"
 #: src/Widgets/LidCloseActionComboBox.vala:36
 #: src/Widgets/ActionComboBox.vala:32
 msgid "Do nothing"
-msgstr "Fazer nada"
+msgstr "Nenhuma ação"
 
 #: src/Widgets/LidCloseActionComboBox.vala:38
 msgid "Not supported"

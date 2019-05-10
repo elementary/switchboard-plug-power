@@ -8,63 +8,67 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-26 16:15-0700\n"
-"PO-Revision-Date: 2014-11-11 13:00+0000\n"
-"Last-Translator: aleksandar-todorovic <aleksandar.todorovic@mail.ru>\n"
-"Language-Team: Bosnian <bs@li.org>\n"
+"PO-Revision-Date: 2018-11-09 23:07+0000\n"
+"Last-Translator: Elvis Mujanović <elvis.mujanovic@gmail.com>\n"
+"Language-Team: Bosnian <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-power/bs/>\n"
 "Language: bs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2016-11-21 05:42+0000\n"
-"X-Generator: Launchpad (build 18269)\n"
 
 #: data/io.elementary.switchboard.power.policy.in:10
 msgid "Manage power settings"
-msgstr ""
+msgstr "Upravljaj podešavanjima napajanja"
 
 #: data/io.elementary.switchboard.power.policy.in:11
 msgid "Authentication is required to manage power settings"
 msgstr ""
+"Autentifikacija je potrebna kako biste upravljali podešavanjima napajanja"
 
 #: src/MainView.vala:24
 msgid "You do not have permission to change this"
-msgstr ""
+msgstr "Nemate dozvolu da ovo izmijenite"
 
 #: src/MainView.vala:58
 msgid "Display brightness:"
-msgstr "Prikaži svjetlinu:"
+msgstr "Svjetlina ekrana:"
 
 #: src/MainView.vala:62
 msgid "Automatically adjust brightness:"
-msgstr ""
+msgstr "Automatski prilagodi svjetlinu:"
 
 #: src/MainView.vala:90
 msgid "When lid is closed:"
-msgstr ""
+msgstr "Prilikom zatvaranja poklopca:"
 
 #: src/MainView.vala:96
 msgid "When lid is closed with external monitor:"
-msgstr ""
+msgstr "Prilikom zatvaranja poklopca uz vanjski monitor:"
 
 #: src/MainView.vala:129
 msgid "Turn off display when inactive for:"
-msgstr ""
+msgstr "Ugasi ekran kada je neaktivan:"
 
 #: src/MainView.vala:136
 msgid "Power button:"
-msgstr "Taster za gašenje:"
+msgstr "Dugme za isključenje:"
 
 #: src/MainView.vala:147 src/MainView.vala:166
 msgid "Suspend when inactive for:"
-msgstr ""
+msgstr "Obustavi kada je neaktivan:"
 
 #: src/MainView.vala:159
 msgid "Plugged In"
-msgstr "Na punjenju"
+msgstr "Na napajanju"
 
 #: src/MainView.vala:179
 msgid "Dim display when inactive:"
-msgstr ""
+msgstr "Zatamni ekran kada je neaktivan:"
 
 #: src/MainView.vala:193
 msgid "On Battery"
@@ -72,11 +76,11 @@ msgstr "Na bateriji"
 
 #: src/MainView.vala:215
 msgid "Some changes will not take effect until you restart this computer"
-msgstr ""
+msgstr "Neke izmjene neće imati učinka dok ponovo ne pokrenete ovaj računar"
 
 #: src/MainView.vala:234
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "Za izmjenu nekih podešavanja su potrebna administratorska prava"
 
 #: src/Plug.vala:32
 msgid "Power"
@@ -85,48 +89,48 @@ msgstr "Napajanje"
 #: src/Plug.vala:33
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr ""
+"Podesite svjetlinu ekrana, dugmad za isključenje i ponašanje prilikom "
+"obustave rada"
 
 #: src/Plug.vala:68
-#, fuzzy
 msgid "Suspend button"
-msgstr "Suspenduj"
+msgstr "Dugme za obustavu rada"
 
 #: src/Plug.vala:69
 msgid "Power button"
-msgstr ""
+msgstr "Dugme isključenja"
 
 #: src/Plug.vala:70
 msgid "Display inactive"
-msgstr ""
+msgstr "Ekran neaktivan"
 
 #: src/Plug.vala:71
 msgid "Dim display"
-msgstr ""
+msgstr "Zatamni ekran"
 
 #: src/Plug.vala:72
 msgid "Lid close"
-msgstr ""
+msgstr "Poklopac zatvoren"
 
 #: src/Plug.vala:73
 msgid "Display brightness"
-msgstr ""
+msgstr "Svjetlina ekrana"
 
 #: src/Plug.vala:74
 msgid "Automatic brightness adjustment"
-msgstr ""
+msgstr "Automatsko prilagođavanje svjetline"
 
 #: src/Plug.vala:75
 msgid "Inactive display off"
-msgstr ""
+msgstr "Isključen neaktivan ekran"
 
 #: src/Plug.vala:76
 msgid "Docked lid close"
-msgstr ""
+msgstr "Poklopac na docking stanici zatvoren"
 
 #: src/Plug.vala:77
-#, fuzzy
 msgid "Suspend inactive"
-msgstr "Suspenduj"
+msgstr "Obustavi neaktivan"
 
 #: src/Widgets/TimeoutComboBox.vala:42
 msgid "Never"
@@ -142,7 +146,7 @@ msgstr "10 min"
 
 #: src/Widgets/TimeoutComboBox.vala:45
 msgid "15 min"
-msgstr ""
+msgstr "15 min"
 
 #: src/Widgets/TimeoutComboBox.vala:46
 msgid "30 min"
@@ -150,7 +154,7 @@ msgstr "30 min"
 
 #: src/Widgets/TimeoutComboBox.vala:47
 msgid "45 min"
-msgstr ""
+msgstr "45 min"
 
 #: src/Widgets/TimeoutComboBox.vala:48
 msgid "1 hour"
@@ -158,24 +162,24 @@ msgstr "1 sat"
 
 #: src/Widgets/TimeoutComboBox.vala:49
 msgid "2 hours"
-msgstr ""
+msgstr "2 sata"
 
 #: src/Widgets/LidCloseActionComboBox.vala:32
 #: src/Widgets/ActionComboBox.vala:33
 msgid "Suspend"
-msgstr "Suspenduj"
+msgstr "Obustavi"
 
 #: src/Widgets/LidCloseActionComboBox.vala:33
 msgid "Shutdown"
-msgstr "Ugasi"
+msgstr "Isključi"
 
 #: src/Widgets/LidCloseActionComboBox.vala:34
 msgid "Lock"
-msgstr ""
+msgstr "Zaključaj"
 
 #: src/Widgets/LidCloseActionComboBox.vala:35
 msgid "Halt"
-msgstr ""
+msgstr "Zaustavi"
 
 #: src/Widgets/LidCloseActionComboBox.vala:36
 #: src/Widgets/ActionComboBox.vala:32
@@ -184,8 +188,8 @@ msgstr "Ne radi ništa"
 
 #: src/Widgets/LidCloseActionComboBox.vala:38
 msgid "Not supported"
-msgstr ""
+msgstr "Nije podržano"
 
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Hibernate"
-msgstr "Hibernacija"
+msgstr "Mirovanje"

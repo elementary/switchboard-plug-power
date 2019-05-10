@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-26 16:15-0700\n"
-"PO-Revision-Date: 2018-03-18 00:13+0000\n"
-"Last-Translator: Corentin Noël <corentin@elementary.io>\n"
+"PO-Revision-Date: 2019-01-14 00:10+0000\n"
+"Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-power/fr/>\n"
 "Language: fr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2016-12-20 04:54+0000\n"
 
 #: data/io.elementary.switchboard.power.policy.in:10
@@ -52,7 +52,7 @@ msgstr "Lorsque l'écran du portable est fermé avec un moniteur externe :"
 
 #: src/MainView.vala:129
 msgid "Turn off display when inactive for:"
-msgstr "Eteindre l'écran lors d'une inactivité supérieure à :"
+msgstr "Éteindre l'écran lors d'une inactivité supérieure à :"
 
 #: src/MainView.vala:136
 msgid "Power button:"
@@ -64,7 +64,7 @@ msgstr "Mettre en veille si inactif depuis :"
 
 #: src/MainView.vala:159
 msgid "Plugged In"
-msgstr "Sous secteur"
+msgstr "Sur secteur"
 
 #: src/MainView.vala:179
 msgid "Dim display when inactive:"
@@ -195,4 +195,4 @@ msgstr "Non pris en charge"
 
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Hibernate"
-msgstr "Hiberner"
+msgstr "Mettre en veille prolongée"
