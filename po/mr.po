@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-26 16:15-0700\n"
-"PO-Revision-Date: 2019-03-21 10:53+0000\n"
+"PO-Revision-Date: 2019-05-15 17:14+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/mr/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.4\n"
+"X-Generator: Weblate 3.6.1\n"
 "X-Launchpad-Export-Date: 2016-11-21 05:42+0000\n"
 
 #: data/io.elementary.switchboard.power.policy.in:10
@@ -77,7 +77,7 @@ msgstr "काही सेटिंग्जसाठी प्रशासक�
 
 #: src/Plug.vala:32
 msgid "Power"
-msgstr "पॉवर"
+msgstr "ऊर्जा"
 
 #: src/Plug.vala:33
 msgid "Configure display brightness, power buttons, and suspend behavior"
