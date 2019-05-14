@@ -8,25 +8,25 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-26 16:15-0700\n"
-"PO-Revision-Date: 2018-10-18 00:11+0000\n"
+"PO-Revision-Date: 2019-05-15 17:14+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
-"Language-Team: Catalan <https://weblate.elementary.io/projects/switchboard/"
+"Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.6.1\n"
 "X-Launchpad-Export-Date: 2016-12-15 04:52+0000\n"
 
 #: data/io.elementary.switchboard.power.policy.in:10
 msgid "Manage power settings"
-msgstr "Gestioneu els paràmetres de l'energia"
+msgstr "Gestioneu els paràmetres de l'energia."
 
 #: data/io.elementary.switchboard.power.policy.in:11
 msgid "Authentication is required to manage power settings"
-msgstr "Cal autenticació per gestionar els paràmetres de l'energia"
+msgstr "Cal autenticació per gestionar els paràmetres de l'energia."
 
 #: src/MainView.vala:24
 msgid "You do not have permission to change this"
@@ -88,7 +88,7 @@ msgstr "Energia"
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr ""
 "Configureu la brillantor de la pantalla, els botons d'engegar i el "
-"comportament de l'aturada temporal."
+"comportament de la suspensió."
 
 #: src/Plug.vala:68
 msgid "Suspend button"
