@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-26 16:15-0700\n"
-"PO-Revision-Date: 2019-05-15 17:14+0000\n"
+"PO-Revision-Date: 2019-05-25 19:03+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/ko/>\n"
@@ -46,7 +46,7 @@ msgstr "덮개가 닫혀있을 때:"
 
 #: src/MainView.vala:96
 msgid "When lid is closed with external monitor:"
-msgstr "외부 모니터에 연결된 덮개가 닫혀있을 때:"
+msgstr "외부 모니터에 연결된 채 덮개가 닫혀있을 때:"
 
 #: src/MainView.vala:129
 msgid "Turn off display when inactive for:"
