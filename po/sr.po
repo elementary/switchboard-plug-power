@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-power-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-26 16:15-0700\n"
+"POT-Creation-Date: 2019-06-26 22:46+0200\n"
 "PO-Revision-Date: 2017-01-08 09:21+0000\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <(nothing)>\n"
@@ -31,54 +31,50 @@ msgstr "Потребно је потврђивање идентитета за �
 msgid "You do not have permission to change this"
 msgstr "Немате овлашћење да измените ово"
 
-#: src/MainView.vala:58
+#: src/MainView.vala:68
 msgid "Display brightness:"
 msgstr "Осветљеност екрана:"
 
-#: src/MainView.vala:62
+#: src/MainView.vala:72
 msgid "Automatically adjust brightness:"
 msgstr "Самостално подеси осветљеност:"
 
-#: src/MainView.vala:90
+#: src/MainView.vala:100
 msgid "When lid is closed:"
 msgstr "Кад је поклопац спуштен:"
 
-#: src/MainView.vala:96
+#: src/MainView.vala:106
 msgid "When lid is closed with external monitor:"
 msgstr "Када је поклопац спуштен са спољним монитором:"
 
-#: src/MainView.vala:129
+#: src/MainView.vala:132
+msgid "Some settings require administrator rights to be changed"
+msgstr "Нека подешавања захтевају администраторска права да би се изменила"
+
+#: src/MainView.vala:153
 msgid "Turn off display when inactive for:"
 msgstr "Искључи екран када је нерадан након:"
 
-#: src/MainView.vala:136
+#: src/MainView.vala:160
 msgid "Power button:"
 msgstr "Дугме напајања:"
 
-#: src/MainView.vala:147 src/MainView.vala:166
+#: src/MainView.vala:171 src/MainView.vala:193
 #, fuzzy
 msgid "Suspend when inactive for:"
 msgstr "Обустави када је нерадан након:"
 
-#: src/MainView.vala:159
+#: src/MainView.vala:186
 msgid "Plugged In"
 msgstr "На ел. мрежи"
 
-#: src/MainView.vala:179
-msgid "Dim display when inactive:"
-msgstr "Затамни екран када је нерадан:"
-
-#: src/MainView.vala:193
+#: src/MainView.vala:208
 msgid "On Battery"
 msgstr "На батерији"
 
-#: src/MainView.vala:215
+#: src/MainView.vala:230
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Неке промене неће ступити на снагу све док поново не покренете рачунар"
-
-#: src/MainView.vala:234
-msgid "Some settings require administrator rights to be changed"
-msgstr "Нека подешавања захтевају администраторска права да би се изменила"
 
 #: src/Plug.vala:32
 msgid "Power"
@@ -131,35 +127,35 @@ msgstr "Затвори прикачени поклопац"
 msgid "Suspend inactive"
 msgstr "Спавање није радно"
 
-#: src/Widgets/TimeoutComboBox.vala:42
+#: src/Widgets/TimeoutComboBox.vala:81
 msgid "Never"
 msgstr "Никада"
 
-#: src/Widgets/TimeoutComboBox.vala:43
+#: src/Widgets/TimeoutComboBox.vala:82
 msgid "5 min"
 msgstr "5 мин."
 
-#: src/Widgets/TimeoutComboBox.vala:44
+#: src/Widgets/TimeoutComboBox.vala:83
 msgid "10 min"
 msgstr "10 мин."
 
-#: src/Widgets/TimeoutComboBox.vala:45
+#: src/Widgets/TimeoutComboBox.vala:84
 msgid "15 min"
 msgstr "15 мин."
 
-#: src/Widgets/TimeoutComboBox.vala:46
+#: src/Widgets/TimeoutComboBox.vala:85
 msgid "30 min"
 msgstr "30 мин."
 
-#: src/Widgets/TimeoutComboBox.vala:47
+#: src/Widgets/TimeoutComboBox.vala:86
 msgid "45 min"
 msgstr "45 мин."
 
-#: src/Widgets/TimeoutComboBox.vala:48
+#: src/Widgets/TimeoutComboBox.vala:87
 msgid "1 hour"
 msgstr "1 сат"
 
-#: src/Widgets/TimeoutComboBox.vala:49
+#: src/Widgets/TimeoutComboBox.vala:88
 msgid "2 hours"
 msgstr "2 сата"
 
@@ -190,5 +186,11 @@ msgid "Not supported"
 msgstr "Није подржано"
 
 #: src/Widgets/ActionComboBox.vala:34
-msgid "Hibernate"
-msgstr "Замрзни"
+msgid "Prompt to shutdown"
+msgstr ""
+
+#~ msgid "Dim display when inactive:"
+#~ msgstr "Затамни екран када је нерадан:"
+
+#~ msgid "Hibernate"
+#~ msgstr "Замрзни"

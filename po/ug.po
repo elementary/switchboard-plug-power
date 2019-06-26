@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-26 16:15-0700\n"
+"POT-Creation-Date: 2019-06-26 22:46+0200\n"
 "PO-Revision-Date: 2016-12-10 05:00+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
@@ -31,54 +31,50 @@ msgstr "توك مەنبەسى تەڭشىكىنى باشقۇرۇش ئۈچۈن س�
 msgid "You do not have permission to change this"
 msgstr "سىزنىڭ بۇنى ئۆزگەرتىش سالاھىيىتىڭىز يوق"
 
-#: src/MainView.vala:58
+#: src/MainView.vala:68
 msgid "Display brightness:"
 msgstr "ئىكران يورۇقلىقى:"
 
-#: src/MainView.vala:62
+#: src/MainView.vala:72
 msgid "Automatically adjust brightness:"
 msgstr "ئىكران يورۇقلۇقىنى ئاپتوماتىك تەڭشەش"
 
-#: src/MainView.vala:90
+#: src/MainView.vala:100
 msgid "When lid is closed:"
 msgstr "قاپقاق تاقالغان ۋاقىتتا:"
 
-#: src/MainView.vala:96
+#: src/MainView.vala:106
 msgid "When lid is closed with external monitor:"
 msgstr "تاشقى كۆزەتكۈچى ئارقىلىق قاپقاق تاقالغان ۋاقىتتا:"
 
-#: src/MainView.vala:129
+#: src/MainView.vala:132
+msgid "Some settings require administrator rights to be changed"
+msgstr "بەزى تەڭشەكلەرنى ئۆزگەرتىش ئۈچۈن باشقۇرغۇچىلىق سالاھىيىتى بولىشى كىرەك"
+
+#: src/MainView.vala:153
 msgid "Turn off display when inactive for:"
 msgstr "مەشغۇلات قىلمىغان ۋاقىتتا ئىكراننى ئۆچۈرۈش"
 
-#: src/MainView.vala:136
+#: src/MainView.vala:160
 msgid "Power button:"
 msgstr "توك مەنبەسى كۇنۇپكىسى"
 
-#: src/MainView.vala:147 src/MainView.vala:166
+#: src/MainView.vala:171 src/MainView.vala:193
 #, fuzzy
 msgid "Suspend when inactive for:"
 msgstr "مەشغۇلات قىلمىغان ۋاقىتتا كومپىيۇتىرنى توڭلىتىش"
 
-#: src/MainView.vala:159
+#: src/MainView.vala:186
 msgid "Plugged In"
 msgstr "توك مەنبەسىگە چىتىلدى"
 
-#: src/MainView.vala:179
-msgid "Dim display when inactive:"
-msgstr "مەشغۇلات قىلمىغان ۋاقىتتا ئىكراننى خىرەلەشتۈرۈش"
-
-#: src/MainView.vala:193
+#: src/MainView.vala:208
 msgid "On Battery"
 msgstr "باتارىيەنى ئىشلىتىۋاتىدۇ"
 
-#: src/MainView.vala:215
+#: src/MainView.vala:230
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "بەزى تەڭشەكلەر كومپىيۇتىرنى قايتا قوزغاتقاندىن كىيىن ئىشلەيدۇ."
-
-#: src/MainView.vala:234
-msgid "Some settings require administrator rights to be changed"
-msgstr "بەزى تەڭشەكلەرنى ئۆزگەرتىش ئۈچۈن باشقۇرغۇچىلىق سالاھىيىتى بولىشى كىرەك"
 
 #: src/Plug.vala:32
 msgid "Power"
@@ -131,35 +127,35 @@ msgstr "Docked ستونىنى تاقاش"
 msgid "Suspend inactive"
 msgstr "ئۇخلاش ھالىتىگە كىردى"
 
-#: src/Widgets/TimeoutComboBox.vala:42
+#: src/Widgets/TimeoutComboBox.vala:81
 msgid "Never"
 msgstr "ئەسلا"
 
-#: src/Widgets/TimeoutComboBox.vala:43
+#: src/Widgets/TimeoutComboBox.vala:82
 msgid "5 min"
 msgstr "5 مىنۇت"
 
-#: src/Widgets/TimeoutComboBox.vala:44
+#: src/Widgets/TimeoutComboBox.vala:83
 msgid "10 min"
 msgstr "10 مىنۇت"
 
-#: src/Widgets/TimeoutComboBox.vala:45
+#: src/Widgets/TimeoutComboBox.vala:84
 msgid "15 min"
 msgstr "15مىنۇت"
 
-#: src/Widgets/TimeoutComboBox.vala:46
+#: src/Widgets/TimeoutComboBox.vala:85
 msgid "30 min"
 msgstr "30مىنۇت"
 
-#: src/Widgets/TimeoutComboBox.vala:47
+#: src/Widgets/TimeoutComboBox.vala:86
 msgid "45 min"
 msgstr "45مىنۇت"
 
-#: src/Widgets/TimeoutComboBox.vala:48
+#: src/Widgets/TimeoutComboBox.vala:87
 msgid "1 hour"
 msgstr "1سائەت"
 
-#: src/Widgets/TimeoutComboBox.vala:49
+#: src/Widgets/TimeoutComboBox.vala:88
 msgid "2 hours"
 msgstr "2سائەت"
 
@@ -190,5 +186,11 @@ msgid "Not supported"
 msgstr "قوللىمايدۇ"
 
 #: src/Widgets/ActionComboBox.vala:34
-msgid "Hibernate"
-msgstr "ئۇخلتىش"
+msgid "Prompt to shutdown"
+msgstr ""
+
+#~ msgid "Dim display when inactive:"
+#~ msgstr "مەشغۇلات قىلمىغان ۋاقىتتا ئىكراننى خىرەلەشتۈرۈش"
+
+#~ msgid "Hibernate"
+#~ msgstr "ئۇخلتىش"

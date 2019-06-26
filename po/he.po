@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-26 16:15-0700\n"
+"POT-Creation-Date: 2019-06-26 22:46+0200\n"
 "PO-Revision-Date: 2018-05-03 00:06+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://weblate.elementary.io/projects/switchboard/"
@@ -32,53 +32,49 @@ msgstr "נדרש אימות לצורך ניהול הגדרות צריכת חשמ
 msgid "You do not have permission to change this"
 msgstr "אין לך הרשאה לשנות את זה"
 
-#: src/MainView.vala:58
+#: src/MainView.vala:68
 msgid "Display brightness:"
 msgstr "בהירות התצוגה:"
 
-#: src/MainView.vala:62
+#: src/MainView.vala:72
 msgid "Automatically adjust brightness:"
 msgstr "התאמת בהירות התצוגה אוטומטית:"
 
-#: src/MainView.vala:90
+#: src/MainView.vala:100
 msgid "When lid is closed:"
 msgstr "כאשר המכסה סגור:"
 
-#: src/MainView.vala:96
+#: src/MainView.vala:106
 msgid "When lid is closed with external monitor:"
 msgstr "כאשר המכסה סגור עם צג חיצוני:"
 
-#: src/MainView.vala:129
+#: src/MainView.vala:132
+msgid "Some settings require administrator rights to be changed"
+msgstr "לצורך שינוי של חלק מההגדרות נדרשות הרשאות ניהול"
+
+#: src/MainView.vala:153
 msgid "Turn off display when inactive for:"
 msgstr "יש לכבות את התצוגה כאשר אין פעילות במשך:"
 
-#: src/MainView.vala:136
+#: src/MainView.vala:160
 msgid "Power button:"
 msgstr "כפתור הפעלה:"
 
-#: src/MainView.vala:147 src/MainView.vala:166
+#: src/MainView.vala:171 src/MainView.vala:193
 msgid "Suspend when inactive for:"
 msgstr "יש לעבור למצב השהיה בעת חוסר פעילות למשך:"
 
-#: src/MainView.vala:159
+#: src/MainView.vala:186
 msgid "Plugged In"
 msgstr "מחובר"
 
-#: src/MainView.vala:179
-msgid "Dim display when inactive:"
-msgstr "יש לעמעם את התצוגה כאשר אין פעילות במשך:"
-
-#: src/MainView.vala:193
+#: src/MainView.vala:208
 msgid "On Battery"
 msgstr "על סוללה"
 
-#: src/MainView.vala:215
+#: src/MainView.vala:230
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "חלק מהשינויים לא יכנסו לתוקף עד להפעלת המחשב מחדש"
-
-#: src/MainView.vala:234
-msgid "Some settings require administrator rights to be changed"
-msgstr "לצורך שינוי של חלק מההגדרות נדרשות הרשאות ניהול"
 
 #: src/Plug.vala:32
 msgid "Power"
@@ -128,35 +124,35 @@ msgstr "סגירת מכסה בתחנת עגינה"
 msgid "Suspend inactive"
 msgstr "השהיה בלתי פעילה"
 
-#: src/Widgets/TimeoutComboBox.vala:42
+#: src/Widgets/TimeoutComboBox.vala:81
 msgid "Never"
 msgstr "אף פעם"
 
-#: src/Widgets/TimeoutComboBox.vala:43
+#: src/Widgets/TimeoutComboBox.vala:82
 msgid "5 min"
 msgstr "5 דקות"
 
-#: src/Widgets/TimeoutComboBox.vala:44
+#: src/Widgets/TimeoutComboBox.vala:83
 msgid "10 min"
 msgstr "10 דקות"
 
-#: src/Widgets/TimeoutComboBox.vala:45
+#: src/Widgets/TimeoutComboBox.vala:84
 msgid "15 min"
 msgstr "רבע שעה"
 
-#: src/Widgets/TimeoutComboBox.vala:46
+#: src/Widgets/TimeoutComboBox.vala:85
 msgid "30 min"
 msgstr "30 דקות"
 
-#: src/Widgets/TimeoutComboBox.vala:47
+#: src/Widgets/TimeoutComboBox.vala:86
 msgid "45 min"
 msgstr "45 דקות"
 
-#: src/Widgets/TimeoutComboBox.vala:48
+#: src/Widgets/TimeoutComboBox.vala:87
 msgid "1 hour"
 msgstr "שעה"
 
-#: src/Widgets/TimeoutComboBox.vala:49
+#: src/Widgets/TimeoutComboBox.vala:88
 msgid "2 hours"
 msgstr "שעתיים"
 
@@ -187,5 +183,11 @@ msgid "Not supported"
 msgstr "לא נתמך"
 
 #: src/Widgets/ActionComboBox.vala:34
-msgid "Hibernate"
-msgstr "תרדמת"
+msgid "Prompt to shutdown"
+msgstr ""
+
+#~ msgid "Dim display when inactive:"
+#~ msgstr "יש לעמעם את התצוגה כאשר אין פעילות במשך:"
+
+#~ msgid "Hibernate"
+#~ msgstr "תרדמת"

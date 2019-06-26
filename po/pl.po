@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-26 16:15-0700\n"
+"POT-Creation-Date: 2019-06-26 22:46+0200\n"
 "PO-Revision-Date: 2018-03-20 00:12+0000\n"
 "Last-Translator: Piotr Strebski <strebski@gmail.com>\n"
 "Language-Team: Polish <https://weblate.elementary.io/projects/switchboard/"
@@ -33,54 +33,50 @@ msgstr "Wymagane jest uwierzytelnienie, aby zmienić ustawienia zasilania"
 msgid "You do not have permission to change this"
 msgstr "Nie masz uprawnień, aby to zmienić"
 
-#: src/MainView.vala:58
+#: src/MainView.vala:68
 msgid "Display brightness:"
 msgstr "Jasność ekranu:"
 
-#: src/MainView.vala:62
+#: src/MainView.vala:72
 msgid "Automatically adjust brightness:"
 msgstr "Automatyczne dostosowanie jasności:"
 
-#: src/MainView.vala:90
+#: src/MainView.vala:100
 msgid "When lid is closed:"
 msgstr "Gdy pokrywa jest zamknięta:"
 
-#: src/MainView.vala:96
+#: src/MainView.vala:106
 msgid "When lid is closed with external monitor:"
 msgstr "Kiedy pokrywa jest zamknięta z zewnętrznym monitorem:"
 
-#: src/MainView.vala:129
+#: src/MainView.vala:132
+msgid "Some settings require administrator rights to be changed"
+msgstr "Zmiana niektórych ustawień wymaga uprawnień administratora"
+
+#: src/MainView.vala:153
 msgid "Turn off display when inactive for:"
 msgstr "Wyłącz ekran, gdy bezczynny przez:"
 
-#: src/MainView.vala:136
+#: src/MainView.vala:160
 msgid "Power button:"
 msgstr "Przycisk zasilania:"
 
-#: src/MainView.vala:147 src/MainView.vala:166
+#: src/MainView.vala:171 src/MainView.vala:193
 msgid "Suspend when inactive for:"
 msgstr "Uśpienie, gdy nieaktywność przez:"
 
-#: src/MainView.vala:159
+#: src/MainView.vala:186
 msgid "Plugged In"
 msgstr "Zasilacz sieciowy"
 
-#: src/MainView.vala:179
-msgid "Dim display when inactive:"
-msgstr "Wygaś ekran, gdy bezczynny:"
-
-#: src/MainView.vala:193
+#: src/MainView.vala:208
 msgid "On Battery"
 msgstr "Na baterii"
 
-#: src/MainView.vala:215
+#: src/MainView.vala:230
 msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
 "Niektóre ustawienia zaczną obowiązywać po ponownym uruchomieniu komputera"
-
-#: src/MainView.vala:234
-msgid "Some settings require administrator rights to be changed"
-msgstr "Zmiana niektórych ustawień wymaga uprawnień administratora"
 
 #: src/Plug.vala:32
 msgid "Power"
@@ -131,35 +127,35 @@ msgstr "Zamknięcie pokrywy w doku"
 msgid "Suspend inactive"
 msgstr "Nieaktywność usypiania"
 
-#: src/Widgets/TimeoutComboBox.vala:42
+#: src/Widgets/TimeoutComboBox.vala:81
 msgid "Never"
 msgstr "Nigdy"
 
-#: src/Widgets/TimeoutComboBox.vala:43
+#: src/Widgets/TimeoutComboBox.vala:82
 msgid "5 min"
 msgstr "5 minut"
 
-#: src/Widgets/TimeoutComboBox.vala:44
+#: src/Widgets/TimeoutComboBox.vala:83
 msgid "10 min"
 msgstr "10 minut"
 
-#: src/Widgets/TimeoutComboBox.vala:45
+#: src/Widgets/TimeoutComboBox.vala:84
 msgid "15 min"
 msgstr "15 minut"
 
-#: src/Widgets/TimeoutComboBox.vala:46
+#: src/Widgets/TimeoutComboBox.vala:85
 msgid "30 min"
 msgstr "30 minut"
 
-#: src/Widgets/TimeoutComboBox.vala:47
+#: src/Widgets/TimeoutComboBox.vala:86
 msgid "45 min"
 msgstr "45 minut"
 
-#: src/Widgets/TimeoutComboBox.vala:48
+#: src/Widgets/TimeoutComboBox.vala:87
 msgid "1 hour"
 msgstr "1 godzina"
 
-#: src/Widgets/TimeoutComboBox.vala:49
+#: src/Widgets/TimeoutComboBox.vala:88
 msgid "2 hours"
 msgstr "2 godziny"
 
@@ -190,5 +186,11 @@ msgid "Not supported"
 msgstr "Nieobsługiwane"
 
 #: src/Widgets/ActionComboBox.vala:34
-msgid "Hibernate"
-msgstr "Zahibernowanie"
+msgid "Prompt to shutdown"
+msgstr ""
+
+#~ msgid "Dim display when inactive:"
+#~ msgstr "Wygaś ekran, gdy bezczynny:"
+
+#~ msgid "Hibernate"
+#~ msgstr "Zahibernowanie"

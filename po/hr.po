@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-26 16:15-0700\n"
+"POT-Creation-Date: 2019-06-26 22:46+0200\n"
 "PO-Revision-Date: 2017-08-16 11:38+0000\n"
 "Last-Translator: gogogogi <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <https://weblate.elementary.io/projects/switchboard/"
@@ -34,54 +34,50 @@ msgstr "Potrebna je ovjera za upravljanje postavkama energije"
 msgid "You do not have permission to change this"
 msgstr "Nemate dozvolu za ovu promjenu"
 
-#: src/MainView.vala:58
+#: src/MainView.vala:68
 msgid "Display brightness:"
 msgstr "Svjetlina zaslona:"
 
-#: src/MainView.vala:62
+#: src/MainView.vala:72
 msgid "Automatically adjust brightness:"
 msgstr "Automatski prilagodi svjetlinu:"
 
-#: src/MainView.vala:90
+#: src/MainView.vala:100
 msgid "When lid is closed:"
 msgstr "Kada se zaslon spusti:"
 
-#: src/MainView.vala:96
+#: src/MainView.vala:106
 msgid "When lid is closed with external monitor:"
 msgstr ""
 
-#: src/MainView.vala:129
+#: src/MainView.vala:132
+msgid "Some settings require administrator rights to be changed"
+msgstr "Neke postavke zahtijevaju administratorske ovlasti"
+
+#: src/MainView.vala:153
 msgid "Turn off display when inactive for:"
 msgstr "Isključi zaslon kada je neaktivan:"
 
-#: src/MainView.vala:136
+#: src/MainView.vala:160
 msgid "Power button:"
 msgstr "Tipka isključivanja:"
 
-#: src/MainView.vala:147 src/MainView.vala:166
+#: src/MainView.vala:171 src/MainView.vala:193
 #, fuzzy
 msgid "Suspend when inactive for:"
 msgstr "Isključi zaslon kada je neaktivan:"
 
-#: src/MainView.vala:159
+#: src/MainView.vala:186
 msgid "Plugged In"
 msgstr "Na napajanju"
 
-#: src/MainView.vala:179
-msgid "Dim display when inactive:"
-msgstr "Zatamni zaslon kada je neaktivan:"
-
-#: src/MainView.vala:193
+#: src/MainView.vala:208
 msgid "On Battery"
 msgstr "Na bateriji"
 
-#: src/MainView.vala:215
+#: src/MainView.vala:230
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Neke promjene neće biti primijenjene dok ponovno ne pokrenete računalo"
-
-#: src/MainView.vala:234
-msgid "Some settings require administrator rights to be changed"
-msgstr "Neke postavke zahtijevaju administratorske ovlasti"
 
 #: src/Plug.vala:32
 msgid "Power"
@@ -135,35 +131,35 @@ msgstr ""
 msgid "Suspend inactive"
 msgstr "Isključi zaslon kada je neaktivan:"
 
-#: src/Widgets/TimeoutComboBox.vala:42
+#: src/Widgets/TimeoutComboBox.vala:81
 msgid "Never"
 msgstr "Nikada"
 
-#: src/Widgets/TimeoutComboBox.vala:43
+#: src/Widgets/TimeoutComboBox.vala:82
 msgid "5 min"
 msgstr "5 min"
 
-#: src/Widgets/TimeoutComboBox.vala:44
+#: src/Widgets/TimeoutComboBox.vala:83
 msgid "10 min"
 msgstr "10 min"
 
-#: src/Widgets/TimeoutComboBox.vala:45
+#: src/Widgets/TimeoutComboBox.vala:84
 msgid "15 min"
 msgstr "15 min"
 
-#: src/Widgets/TimeoutComboBox.vala:46
+#: src/Widgets/TimeoutComboBox.vala:85
 msgid "30 min"
 msgstr "30 min"
 
-#: src/Widgets/TimeoutComboBox.vala:47
+#: src/Widgets/TimeoutComboBox.vala:86
 msgid "45 min"
 msgstr "45 min"
 
-#: src/Widgets/TimeoutComboBox.vala:48
+#: src/Widgets/TimeoutComboBox.vala:87
 msgid "1 hour"
 msgstr "1 sat"
 
-#: src/Widgets/TimeoutComboBox.vala:49
+#: src/Widgets/TimeoutComboBox.vala:88
 msgid "2 hours"
 msgstr "2 sata"
 
@@ -194,5 +190,11 @@ msgid "Not supported"
 msgstr "Nije podržano"
 
 #: src/Widgets/ActionComboBox.vala:34
-msgid "Hibernate"
-msgstr "Hiberniraj"
+msgid "Prompt to shutdown"
+msgstr ""
+
+#~ msgid "Dim display when inactive:"
+#~ msgstr "Zatamni zaslon kada je neaktivan:"
+
+#~ msgid "Hibernate"
+#~ msgstr "Hiberniraj"

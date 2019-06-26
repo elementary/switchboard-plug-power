@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-26 16:15-0700\n"
+"POT-Creation-Date: 2019-06-26 22:46+0200\n"
 "PO-Revision-Date: 2016-06-14 21:57+0000\n"
 "Last-Translator: Roman Sytnyk <Unknown>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -30,54 +30,50 @@ msgstr "Для управління параметрами електрожив�
 msgid "You do not have permission to change this"
 msgstr "У вас не має дозволу щоб змінити це"
 
-#: src/MainView.vala:58
+#: src/MainView.vala:68
 msgid "Display brightness:"
 msgstr "Яскравість екрану:"
 
-#: src/MainView.vala:62
+#: src/MainView.vala:72
 msgid "Automatically adjust brightness:"
 msgstr "Автоматичне регулювання яскравості:"
 
-#: src/MainView.vala:90
+#: src/MainView.vala:100
 msgid "When lid is closed:"
 msgstr "Коли закрита кришка"
 
-#: src/MainView.vala:96
+#: src/MainView.vala:106
 msgid "When lid is closed with external monitor:"
 msgstr ""
 
-#: src/MainView.vala:129
+#: src/MainView.vala:132
+msgid "Some settings require administrator rights to be changed"
+msgstr "Для зміни деяких налаштувань необхідно мати права адміністратора"
+
+#: src/MainView.vala:153
 msgid "Turn off display when inactive for:"
 msgstr "Вимкнення дисплея при неактивності для:"
 
-#: src/MainView.vala:136
+#: src/MainView.vala:160
 msgid "Power button:"
 msgstr "Кнопка живлення:"
 
-#: src/MainView.vala:147 src/MainView.vala:166
+#: src/MainView.vala:171 src/MainView.vala:193
 #, fuzzy
 msgid "Suspend when inactive for:"
 msgstr "Вимкнення дисплея при неактивності для:"
 
-#: src/MainView.vala:159
+#: src/MainView.vala:186
 msgid "Plugged In"
 msgstr "Увімкнений в електромережу"
 
-#: src/MainView.vala:179
-msgid "Dim display when inactive:"
-msgstr ""
-
-#: src/MainView.vala:193
+#: src/MainView.vala:208
 msgid "On Battery"
 msgstr "Робота на акумуляторах"
 
-#: src/MainView.vala:215
+#: src/MainView.vala:230
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Деякі зміни не набудуть чинності до перезавантаження комп'ютера"
-
-#: src/MainView.vala:234
-msgid "Some settings require administrator rights to be changed"
-msgstr "Для зміни деяких налаштувань необхідно мати права адміністратора"
 
 #: src/Plug.vala:32
 msgid "Power"
@@ -132,35 +128,35 @@ msgstr ""
 msgid "Suspend inactive"
 msgstr "Вимкнення дисплея при неактивності для:"
 
-#: src/Widgets/TimeoutComboBox.vala:42
+#: src/Widgets/TimeoutComboBox.vala:81
 msgid "Never"
 msgstr "Ніколи"
 
-#: src/Widgets/TimeoutComboBox.vala:43
+#: src/Widgets/TimeoutComboBox.vala:82
 msgid "5 min"
 msgstr "5 хв"
 
-#: src/Widgets/TimeoutComboBox.vala:44
+#: src/Widgets/TimeoutComboBox.vala:83
 msgid "10 min"
 msgstr "10 хв"
 
-#: src/Widgets/TimeoutComboBox.vala:45
+#: src/Widgets/TimeoutComboBox.vala:84
 msgid "15 min"
 msgstr "15 хв"
 
-#: src/Widgets/TimeoutComboBox.vala:46
+#: src/Widgets/TimeoutComboBox.vala:85
 msgid "30 min"
 msgstr "30 хв"
 
-#: src/Widgets/TimeoutComboBox.vala:47
+#: src/Widgets/TimeoutComboBox.vala:86
 msgid "45 min"
 msgstr "45 хв"
 
-#: src/Widgets/TimeoutComboBox.vala:48
+#: src/Widgets/TimeoutComboBox.vala:87
 msgid "1 hour"
 msgstr "1 год"
 
-#: src/Widgets/TimeoutComboBox.vala:49
+#: src/Widgets/TimeoutComboBox.vala:88
 msgid "2 hours"
 msgstr "2 години"
 
@@ -191,5 +187,8 @@ msgid "Not supported"
 msgstr "Не підтримується"
 
 #: src/Widgets/ActionComboBox.vala:34
-msgid "Hibernate"
-msgstr "Приспати"
+msgid "Prompt to shutdown"
+msgstr ""
+
+#~ msgid "Hibernate"
+#~ msgstr "Приспати"

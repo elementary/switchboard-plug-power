@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-26 16:15-0700\n"
+"POT-Creation-Date: 2019-06-26 22:46+0200\n"
 "PO-Revision-Date: 2018-10-18 00:11+0000\n"
 "Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.elementary.io/projects/"
@@ -32,56 +32,52 @@ msgstr "É necessária autenticação para alterar as configurações de energia
 msgid "You do not have permission to change this"
 msgstr "Você não possui permissões para mudar isto"
 
-#: src/MainView.vala:58
+#: src/MainView.vala:68
 msgid "Display brightness:"
 msgstr "Brilho da tela:"
 
-#: src/MainView.vala:62
+#: src/MainView.vala:72
 msgid "Automatically adjust brightness:"
 msgstr "Ajustar brilho automaticamente:"
 
-#: src/MainView.vala:90
+#: src/MainView.vala:100
 msgid "When lid is closed:"
 msgstr "Quando a tampa estiver fechada:"
 
-#: src/MainView.vala:96
+#: src/MainView.vala:106
 msgid "When lid is closed with external monitor:"
 msgstr "Quando a tampa está fechada com monitor externo:"
 
-#: src/MainView.vala:129
-msgid "Turn off display when inactive for:"
-msgstr "Desligar o monitor quando inativo por:"
-
-#: src/MainView.vala:136
-msgid "Power button:"
-msgstr "Botão liga/desliga:"
-
-#: src/MainView.vala:147 src/MainView.vala:166
-msgid "Suspend when inactive for:"
-msgstr "Suspender quando inativo por:"
-
-#: src/MainView.vala:159
-msgid "Plugged In"
-msgstr "Conectado"
-
-#: src/MainView.vala:179
-msgid "Dim display when inactive:"
-msgstr "Escurecer o monitor quando inativo:"
-
-#: src/MainView.vala:193
-msgid "On Battery"
-msgstr "Na bateria"
-
-#: src/MainView.vala:215
-msgid "Some changes will not take effect until you restart this computer"
-msgstr ""
-"Algumas alterações não serão aplicadas até que você reinicie este computador"
-
-#: src/MainView.vala:234
+#: src/MainView.vala:132
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Algumas configurações precisam de direitos administrativos para serem "
 "modificadas"
+
+#: src/MainView.vala:153
+msgid "Turn off display when inactive for:"
+msgstr "Desligar o monitor quando inativo por:"
+
+#: src/MainView.vala:160
+msgid "Power button:"
+msgstr "Botão liga/desliga:"
+
+#: src/MainView.vala:171 src/MainView.vala:193
+msgid "Suspend when inactive for:"
+msgstr "Suspender quando inativo por:"
+
+#: src/MainView.vala:186
+msgid "Plugged In"
+msgstr "Conectado"
+
+#: src/MainView.vala:208
+msgid "On Battery"
+msgstr "Na bateria"
+
+#: src/MainView.vala:230
+msgid "Some changes will not take effect until you restart this computer"
+msgstr ""
+"Algumas alterações não serão aplicadas até que você reinicie este computador"
 
 #: src/Plug.vala:32
 msgid "Power"
@@ -132,35 +128,35 @@ msgstr "Tampa fechada em um dock"
 msgid "Suspend inactive"
 msgstr "Suspender inativo"
 
-#: src/Widgets/TimeoutComboBox.vala:42
+#: src/Widgets/TimeoutComboBox.vala:81
 msgid "Never"
 msgstr "Nunca"
 
-#: src/Widgets/TimeoutComboBox.vala:43
+#: src/Widgets/TimeoutComboBox.vala:82
 msgid "5 min"
 msgstr "5 min"
 
-#: src/Widgets/TimeoutComboBox.vala:44
+#: src/Widgets/TimeoutComboBox.vala:83
 msgid "10 min"
 msgstr "10 min"
 
-#: src/Widgets/TimeoutComboBox.vala:45
+#: src/Widgets/TimeoutComboBox.vala:84
 msgid "15 min"
 msgstr "15 min"
 
-#: src/Widgets/TimeoutComboBox.vala:46
+#: src/Widgets/TimeoutComboBox.vala:85
 msgid "30 min"
 msgstr "30 min"
 
-#: src/Widgets/TimeoutComboBox.vala:47
+#: src/Widgets/TimeoutComboBox.vala:86
 msgid "45 min"
 msgstr "45 min"
 
-#: src/Widgets/TimeoutComboBox.vala:48
+#: src/Widgets/TimeoutComboBox.vala:87
 msgid "1 hour"
 msgstr "1 hora"
 
-#: src/Widgets/TimeoutComboBox.vala:49
+#: src/Widgets/TimeoutComboBox.vala:88
 msgid "2 hours"
 msgstr "2 horas"
 
@@ -191,5 +187,11 @@ msgid "Not supported"
 msgstr "Não suportado"
 
 #: src/Widgets/ActionComboBox.vala:34
-msgid "Hibernate"
-msgstr "Hibernar"
+msgid "Prompt to shutdown"
+msgstr ""
+
+#~ msgid "Dim display when inactive:"
+#~ msgstr "Escurecer o monitor quando inativo:"
+
+#~ msgid "Hibernate"
+#~ msgstr "Hibernar"
