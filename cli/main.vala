@@ -17,10 +17,17 @@
  * Boston, MA  02110-1301, USA.
  */
 
+[DBus (name = "org.freedesktop.systemd1.Manager")]
+interface SystemDBus : Object {
+    public abstract GLib.ObjectPath reload_or_try_restart_unit (string unit, string mode) throws IOError;
+}
+
 public class LoginDHelper.Application : GLib.Application {
     private const uint ACTIVE_TIMEOUT_SECONDS = 5;
     private uint timeout_id = 0;
     private uint own_id = -1;
+
+    private static SystemDBus? systemd_bus_proxy = null;
 
     construct {
         application_id = Power.LOGIND_HELPER_NAME;
@@ -56,6 +63,15 @@ public class LoginDHelper.Application : GLib.Application {
         });
     }
 
+    private void reload_logind () {
+        try {
+            systemd_bus_proxy = Bus.get_proxy_sync (BusType.SYSTEM, "org.freedesktop.systemd1", "/org/freedesktop/systemd1");
+            systemd_bus_proxy.reload_or_try_restart_unit ("systemd-logind.service", "fail");
+        } catch (Error e) {
+            warning (e.message);
+        }
+    }
+
     public override void activate () {
         own_id = Bus.own_name (BusType.SYSTEM, Power.LOGIND_HELPER_NAME, BusNameOwnerFlags.REPLACE,
                     on_bus_acquired,
@@ -68,6 +84,8 @@ public class LoginDHelper.Application : GLib.Application {
         if (own_id != -1) {
             Bus.unown_name (own_id);
         }
+
+        reload_logind ();
 
         base.shutdown ();
     }

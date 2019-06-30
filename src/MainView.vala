@@ -234,12 +234,12 @@ public class Power.MainView : Gtk.Grid {
         infobar.revealed = false;
         infobar.get_content_area ().add (infobar_label);
 
-        var helper = LogindHelper.get_logind_helper ();
-        if (helper != null) {
-            helper.changed.connect (() => {
-                infobar.revealed = true;
-            });
-        }
+        // var helper = LogindHelper.get_logind_helper ();
+        // if (helper != null) {
+        //     helper.changed.connect (() => {
+        //         infobar.revealed = true;
+        //     });
+        //  }
 
         add (infobar);
 
