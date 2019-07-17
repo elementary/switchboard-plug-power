@@ -50,7 +50,7 @@ msgstr "Je fermo de la platekrano, kun ekstera ekrano:"
 
 #: src/MainView.vala:132
 msgid "Some settings require administrator rights to be changed"
-msgstr "Kelkaj agordoj postulas administrantajn rajtojn por esti ŝanĝitaj"
+msgstr "Kelkaj agordaj ŝanĝoj postulas administrajn permesojn"
 
 #: src/MainView.vala:153
 msgid "Turn off display when inactive for:"
@@ -76,13 +76,6 @@ msgstr "Uzante baterion"
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Kelkaj ŝanĝoj ne okazos ĝis vi restartigos ĉi tiun komputilon"
 
-<<<<<<< HEAD
-=======
-#: src/MainView.vala:234
-msgid "Some settings require administrator rights to be changed"
-msgstr "Kelkaj agordaj ŝanĝoj postulas administrajn permesojn"
-
->>>>>>> weblate/master
 #: src/Plug.vala:32
 msgid "Power"
 msgstr "Energio"
@@ -190,13 +183,8 @@ msgid "Not supported"
 msgstr "Ne subtenata"
 
 #: src/Widgets/ActionComboBox.vala:34
-<<<<<<< HEAD
 msgid "Prompt to shutdown"
 msgstr ""
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Malheligi ekranon kiam neaktiva:"
-=======
-msgid "Hibernate"
-msgstr "Letargiigi"
->>>>>>> weblate/master
