@@ -6,7 +6,7 @@ configure_file(
     input: 'io.elementary.switchboard.power.policy.in',
     output: '@BASENAME@',
     configuration: config_data,
-    install_dir: polkit_dep.get_pkgconfig_variable('policydir')
+    install_dir: polkit_dep.get_pkgconfig_variable('policydir', define_variable: ['prefix', prefix])
 )
 
 i18n.merge_file(
