@@ -14,7 +14,7 @@ configure_file(
 
 install_data(
     'io.elementary.logind.helper.conf',
-    install_dir: join_paths(dbus_dep.get_pkgconfig_variable('sysconfdir'), 'dbus-1', 'system.d')
+    install_dir: join_paths(datadir, 'dbus-1', 'system.d')
 )
 
 executable(
