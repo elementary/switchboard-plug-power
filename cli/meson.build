@@ -1,5 +1,5 @@
 helper_name = 'io.elementary.logind.helper'
-helper_dir = join_paths(get_option('prefix'), get_option('libexecdir'))
+helper_dir = libexecdir
 
 config_data = configuration_data()
 config_data.set('LIBEXEC', helper_dir)
