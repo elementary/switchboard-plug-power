@@ -1,5 +1,5 @@
 helper_name = 'io.elementary.logind.helper'
-helper_dir = join_paths(get_option('prefix'), get_option('libexecdir'))
+helper_dir = libexecdir
 
 config_data = configuration_data()
 config_data.set('LIBEXEC', helper_dir)
@@ -9,12 +9,12 @@ configure_file(
     input: 'io.elementary.logind.helper.service.in',
     output: '@BASENAME@',
     configuration: config_data,
-    install_dir: dbus_dep.get_pkgconfig_variable('system_bus_services_dir')
+    install_dir: dbus_dep.get_pkgconfig_variable('system_bus_services_dir', define_variable: ['datadir', datadir])
 )
 
 install_data(
     'io.elementary.logind.helper.conf',
-    install_dir: join_paths(dbus_dep.get_pkgconfig_variable('sysconfdir'), 'dbus-1', 'system.d')
+    install_dir: join_paths(datadir, 'dbus-1', 'system.d')
 )
 
 executable(
