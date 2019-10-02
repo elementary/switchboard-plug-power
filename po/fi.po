@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:46+0200\n"
-"PO-Revision-Date: 2018-07-09 00:10+0000\n"
+"POT-Creation-Date: 2018-07-26 16:15-0700\n"
+"PO-Revision-Date: 2019-09-16 16:23+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
-"Language-Team: Finnish <https://weblate.elementary.io/projects/switchboard/"
+"Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2016-11-22 06:03+0000\n"
 
 #: data/io.elementary.switchboard.power.policy.in:10
@@ -80,11 +80,11 @@ msgstr ""
 
 #: src/Plug.vala:32
 msgid "Power"
-msgstr "Virranhallinta"
+msgstr "Virransäästö"
 
 #: src/Plug.vala:33
 msgid "Configure display brightness, power buttons, and suspend behavior"
-msgstr "Määritä näytön kirkkaus, virtapainikkeet ja valmiustilan toiminta"
+msgstr "Määritä näytön kirkkaus sekä virtapainikkeiden ja lepotilan toiminta"
 
 #: src/Plug.vala:68
 msgid "Suspend button"
@@ -186,7 +186,7 @@ msgstr "Ei tuettu"
 
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
-msgstr ""
+msgstr "Vahvistus sammutukselle"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Himmennä näyttö kun käyttämättä:"

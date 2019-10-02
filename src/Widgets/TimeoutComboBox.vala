@@ -20,6 +20,8 @@
 namespace Power {
     class TimeoutComboBox : Gtk.ComboBoxText {
 
+        private Greeter.AccountsService? greeter_act = null;
+
         private string? _enum_property = null;
         public string? enum_property {
             get {
@@ -89,10 +91,28 @@ namespace Power {
 
             hexpand = true;
 
+            setup_accountsservice.begin ();
+
             update_combo ();
 
             changed.connect (update_settings);
             schema.changed[key].connect (update_combo);
+        }
+
+        private async void setup_accountsservice () {
+            try {
+                var accounts_service = yield GLib.Bus.get_proxy<FDO.Accounts> (GLib.BusType.SYSTEM,
+                                                                               "org.freedesktop.Accounts",
+                                                                               "/org/freedesktop/Accounts");
+                var user_path = accounts_service.find_user_by_name (GLib.Environment.get_user_name ());
+
+                greeter_act = yield GLib.Bus.get_proxy (GLib.BusType.SYSTEM,
+                                                        "org.freedesktop.Accounts",
+                                                        user_path,
+                                                        GLib.DBusProxyFlags.GET_INVALIDATED_PROPERTIES);
+            } catch (Error e) {
+                warning ("Unable to get AccountsService proxy, greeter power settings may be incorrect");
+            }
         }
 
         private void update_settings () {
@@ -105,6 +125,16 @@ namespace Power {
             }
 
             schema.set_int (key, timeout[active]);
+
+            if (greeter_act != null) {
+                if (key == "sleep-inactive-ac-timeout") {
+                    greeter_act.sleep_inactive_ac_timeout = timeout[active];
+                    greeter_act.sleep_inactive_ac_type = schema.get_enum (enum_property);
+                } else if (key == "sleep-inactive-battery-timeout") {
+                    greeter_act.sleep_inactive_battery_timeout = timeout[active];
+                    greeter_act.sleep_inactive_battery_type = schema.get_enum (enum_property);
+                }
+            }
         }
 
         // find closest timeout to our level

@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-26 22:46+0200\n"
-"PO-Revision-Date: 2019-01-15 00:06+0000\n"
+"PO-Revision-Date: 2019-08-27 22:23+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
-"Language-Team: Chinese (Simplified) <https://weblate.elementary.io/projects/"
+"Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-power/zh_Hans/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2017-03-14 07:03+0000\n"
 
 #: data/io.elementary.switchboard.power.policy.in:10
@@ -184,7 +184,7 @@ msgstr "不支持"
 
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
-msgstr ""
+msgstr "立刻关机"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "闲时调暗屏幕："

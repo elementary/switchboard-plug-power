@@ -1,18 +1,20 @@
 interfaces_file = files('Interfaces.vala')
 
 plug_files = files(
-    'MainView.vala',
-    'PowerSupply.vala',
-    'Plug.vala',
-    'Permission.vala',
-    'LogindHelper.vala',
     'Battery.vala',
+    'GreeterAccountsServicePlugin.vala',
+    'LogindHelper.vala',
+    'MainView.vala',
+    'Permission.vala',
+    'Plug.vala',
+    'PowerSupply.vala',
     'Widgets/TimeoutComboBox.vala',
     'Widgets/LidCloseActionComboBox.vala',
     'Widgets/ActionComboBox.vala',
 )
 
 switchboard_dep = dependency('switchboard-2.0')
+switchboard_plugsdir = switchboard_dep.get_pkgconfig_variable('plugsdir', define_variable: ['libdir', libdir])
 
 shared_module(
     meson.project_name(),
@@ -29,5 +31,5 @@ shared_module(
         switchboard_dep
     ],
     install: true,
-    install_dir : join_paths(switchboard_dep.get_pkgconfig_variable('plugsdir'), 'hardware')
+    install_dir : join_paths(switchboard_plugsdir, 'hardware')
 )
