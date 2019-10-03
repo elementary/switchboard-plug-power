@@ -65,9 +65,9 @@ namespace Power {
         private string key;
 
         private const int SECS_IN_MINUTE = 60;
-        private const int[] timeout = {
+        private const int[] TIMEOUT = {
             0,
-            5 *  SECS_IN_MINUTE,
+            5 * SECS_IN_MINUTE,
             10 * SECS_IN_MINUTE,
             15 * SECS_IN_MINUTE,
             30 * SECS_IN_MINUTE,
@@ -124,14 +124,14 @@ namespace Power {
                 }
             }
 
-            schema.set_int (key, timeout[active]);
+            schema.set_int (key, TIMEOUT[active]);
 
             if (greeter_act != null) {
                 if (key == "sleep-inactive-ac-timeout") {
-                    greeter_act.sleep_inactive_ac_timeout = timeout[active];
+                    greeter_act.sleep_inactive_ac_timeout = TIMEOUT[active];
                     greeter_act.sleep_inactive_ac_type = schema.get_enum (enum_property);
                 } else if (key == "sleep-inactive-battery-timeout") {
-                    greeter_act.sleep_inactive_battery_timeout = timeout[active];
+                    greeter_act.sleep_inactive_battery_timeout = TIMEOUT[active];
                     greeter_act.sleep_inactive_battery_type = schema.get_enum (enum_property);
                 }
             }
@@ -141,7 +141,7 @@ namespace Power {
         private int find_closest (int second) {
             int key = 0;
 
-            foreach (int i in timeout) {
+            foreach (int i in TIMEOUT) {
                 if (second > i)
                     key++;
                 else

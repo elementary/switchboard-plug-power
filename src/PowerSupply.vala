@@ -66,7 +66,7 @@ namespace Power {
                     }
                 }
             } catch (Error e) {
-                critical("power supply couldn't get upower devices");
+                critical ("power supply couldn't get upower devices");
             }
         }
     }
