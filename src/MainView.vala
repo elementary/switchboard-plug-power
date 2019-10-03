@@ -21,7 +21,7 @@ public class Power.MainView : Gtk.Grid {
     public Battery battery { get; private set; }
     public Gtk.Stack stack { get; private set; }
 
-    private const string NO_PERMISSION_STRING  = _("You do not have permission to change this");
+    private const string NO_PERMISSION_STRING = _("You do not have permission to change this");
     private const string SETTINGS_DAEMON_NAME = "org.gnome.SettingsDaemon.Power";
     private const string SETTINGS_DAEMON_PATH = "/org/gnome/SettingsDaemon/Power";
 
