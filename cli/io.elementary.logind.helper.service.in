@@ -1,4 +1,0 @@
-[D-BUS Service]
-Name=io.elementary.logind.helper
-Exec=@LIBEXEC@/@CLI_EXEC_NAME@
-User=root
