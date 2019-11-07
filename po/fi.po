@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-26 16:15-0700\n"
+"POT-Creation-Date: 2019-11-07 16:43+0000\n"
 "PO-Revision-Date: 2019-09-16 16:23+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
@@ -126,35 +126,35 @@ msgstr "Telakoituna kannen sulkeminen"
 msgid "Suspend inactive"
 msgstr "Valmiustila kun käyttämättä"
 
-#: src/Widgets/TimeoutComboBox.vala:81
+#: src/Widgets/TimeoutComboBox.vala:83
 msgid "Never"
 msgstr "Ei koskaan"
 
-#: src/Widgets/TimeoutComboBox.vala:82
+#: src/Widgets/TimeoutComboBox.vala:84
 msgid "5 min"
 msgstr "5 min"
 
-#: src/Widgets/TimeoutComboBox.vala:83
+#: src/Widgets/TimeoutComboBox.vala:85
 msgid "10 min"
 msgstr "10 min"
 
-#: src/Widgets/TimeoutComboBox.vala:84
+#: src/Widgets/TimeoutComboBox.vala:86
 msgid "15 min"
 msgstr "15 min"
 
-#: src/Widgets/TimeoutComboBox.vala:85
+#: src/Widgets/TimeoutComboBox.vala:87
 msgid "30 min"
 msgstr "30 min"
 
-#: src/Widgets/TimeoutComboBox.vala:86
+#: src/Widgets/TimeoutComboBox.vala:88
 msgid "45 min"
 msgstr "45 min"
 
-#: src/Widgets/TimeoutComboBox.vala:87
+#: src/Widgets/TimeoutComboBox.vala:89
 msgid "1 hour"
 msgstr "1 tunti"
 
-#: src/Widgets/TimeoutComboBox.vala:88
+#: src/Widgets/TimeoutComboBox.vala:90
 msgid "2 hours"
 msgstr "2 tuntia"
 

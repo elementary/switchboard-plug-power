@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:46+0200\n"
+"POT-Creation-Date: 2019-11-07 16:43+0000\n"
 "PO-Revision-Date: 2019-08-29 15:22+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -119,35 +119,35 @@ msgstr "充電中にカバーを閉じる"
 msgid "Suspend inactive"
 msgstr "非アクティブ時にサスペンド"
 
-#: src/Widgets/TimeoutComboBox.vala:81
+#: src/Widgets/TimeoutComboBox.vala:83
 msgid "Never"
 msgstr "なし"
 
-#: src/Widgets/TimeoutComboBox.vala:82
+#: src/Widgets/TimeoutComboBox.vala:84
 msgid "5 min"
 msgstr "5 分"
 
-#: src/Widgets/TimeoutComboBox.vala:83
+#: src/Widgets/TimeoutComboBox.vala:85
 msgid "10 min"
 msgstr "10 分"
 
-#: src/Widgets/TimeoutComboBox.vala:84
+#: src/Widgets/TimeoutComboBox.vala:86
 msgid "15 min"
 msgstr "15 分"
 
-#: src/Widgets/TimeoutComboBox.vala:85
+#: src/Widgets/TimeoutComboBox.vala:87
 msgid "30 min"
 msgstr "30 分"
 
-#: src/Widgets/TimeoutComboBox.vala:86
+#: src/Widgets/TimeoutComboBox.vala:88
 msgid "45 min"
 msgstr "45 分"
 
-#: src/Widgets/TimeoutComboBox.vala:87
+#: src/Widgets/TimeoutComboBox.vala:89
 msgid "1 hour"
 msgstr "1 時間"
 
-#: src/Widgets/TimeoutComboBox.vala:88
+#: src/Widgets/TimeoutComboBox.vala:90
 msgid "2 hours"
 msgstr "2 時間"
 

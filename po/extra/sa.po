@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:46+0200\n"
+"POT-Creation-Date: 2019-11-07 16:43+0000\n"
 "PO-Revision-Date: 2019-05-09 18:04-0700\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -22,4 +22,16 @@ msgstr ""
 
 #: data/power.appdata.xml.in:6
 msgid "Configure display brightness, power buttons, and suspend behavior"
+msgstr ""
+
+#: data/power.appdata.xml.in:10
+msgid "Remove broken hibernate option"
+msgstr ""
+
+#: data/power.appdata.xml.in:11
+msgid "Add prompt to shutdown to power button actions"
+msgstr ""
+
+#: data/power.appdata.xml.in:12
+msgid "Updated translations"
 msgstr ""

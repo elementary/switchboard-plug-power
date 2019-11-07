@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-09 18:04-0700\n"
+"POT-Creation-Date: 2019-11-07 16:43+0000\n"
 "PO-Revision-Date: 2019-07-15 10:28+0000\n"
 "Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
@@ -26,3 +26,15 @@ msgstr "Energio"
 #: data/power.appdata.xml.in:6
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "Agordi ekranan brilecon, energiajn butonojn, kaj paŭzan konduton"
+
+#: data/power.appdata.xml.in:10
+msgid "Remove broken hibernate option"
+msgstr ""
+
+#: data/power.appdata.xml.in:11
+msgid "Add prompt to shutdown to power button actions"
+msgstr ""
+
+#: data/power.appdata.xml.in:12
+msgid "Updated translations"
+msgstr ""

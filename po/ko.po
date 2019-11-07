@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-26 16:15-0700\n"
+"POT-Creation-Date: 2019-11-07 16:43+0000\n"
 "PO-Revision-Date: 2019-05-25 19:03+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
@@ -124,35 +124,35 @@ msgstr "고정 덮개 닫기"
 msgid "Suspend inactive"
 msgstr "사용하지 않을 땐 잠자기"
 
-#: src/Widgets/TimeoutComboBox.vala:81
+#: src/Widgets/TimeoutComboBox.vala:83
 msgid "Never"
 msgstr "안 함"
 
-#: src/Widgets/TimeoutComboBox.vala:82
+#: src/Widgets/TimeoutComboBox.vala:84
 msgid "5 min"
 msgstr "5 분"
 
-#: src/Widgets/TimeoutComboBox.vala:83
+#: src/Widgets/TimeoutComboBox.vala:85
 msgid "10 min"
 msgstr "10 분"
 
-#: src/Widgets/TimeoutComboBox.vala:84
+#: src/Widgets/TimeoutComboBox.vala:86
 msgid "15 min"
 msgstr "15 분"
 
-#: src/Widgets/TimeoutComboBox.vala:85
+#: src/Widgets/TimeoutComboBox.vala:87
 msgid "30 min"
 msgstr "30 분"
 
-#: src/Widgets/TimeoutComboBox.vala:86
+#: src/Widgets/TimeoutComboBox.vala:88
 msgid "45 min"
 msgstr "45 분"
 
-#: src/Widgets/TimeoutComboBox.vala:87
+#: src/Widgets/TimeoutComboBox.vala:89
 msgid "1 hour"
 msgstr "1 시간"
 
-#: src/Widgets/TimeoutComboBox.vala:88
+#: src/Widgets/TimeoutComboBox.vala:90
 msgid "2 hours"
 msgstr "2 시간"
 

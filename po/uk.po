@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:46+0200\n"
+"POT-Creation-Date: 2019-11-07 16:43+0000\n"
 "PO-Revision-Date: 2016-06-14 21:57+0000\n"
 "Last-Translator: Roman Sytnyk <Unknown>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -128,35 +128,35 @@ msgstr ""
 msgid "Suspend inactive"
 msgstr "Вимкнення дисплея при неактивності для:"
 
-#: src/Widgets/TimeoutComboBox.vala:81
+#: src/Widgets/TimeoutComboBox.vala:83
 msgid "Never"
 msgstr "Ніколи"
 
-#: src/Widgets/TimeoutComboBox.vala:82
+#: src/Widgets/TimeoutComboBox.vala:84
 msgid "5 min"
 msgstr "5 хв"
 
-#: src/Widgets/TimeoutComboBox.vala:83
+#: src/Widgets/TimeoutComboBox.vala:85
 msgid "10 min"
 msgstr "10 хв"
 
-#: src/Widgets/TimeoutComboBox.vala:84
+#: src/Widgets/TimeoutComboBox.vala:86
 msgid "15 min"
 msgstr "15 хв"
 
-#: src/Widgets/TimeoutComboBox.vala:85
+#: src/Widgets/TimeoutComboBox.vala:87
 msgid "30 min"
 msgstr "30 хв"
 
-#: src/Widgets/TimeoutComboBox.vala:86
+#: src/Widgets/TimeoutComboBox.vala:88
 msgid "45 min"
 msgstr "45 хв"
 
-#: src/Widgets/TimeoutComboBox.vala:87
+#: src/Widgets/TimeoutComboBox.vala:89
 msgid "1 hour"
 msgstr "1 год"
 
-#: src/Widgets/TimeoutComboBox.vala:88
+#: src/Widgets/TimeoutComboBox.vala:90
 msgid "2 hours"
 msgstr "2 години"
 
