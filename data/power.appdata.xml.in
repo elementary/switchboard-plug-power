@@ -4,6 +4,15 @@
   <extends>io.elementary.switchboard</extends>
   <name>Power</name>
   <summary>Configure display brightness, power buttons, and suspend behavior</summary>
+  <releases>
+    <release version="2.4.0" date="2019-11-05" urgency="medium">
+      <description>
+        <p>Remove broken hibernate option</p>
+        <p>Add prompt to shutdown to power button actions</p>
+        <p>Updated translations</p>
+      </description>
+    </release>
+  </releases>
   <screenshots>
     <screenshot type="default">
       <image>https://raw.githubusercontent.com/elementary/switchboard-plug-power/master/data/screenshot.png</image>
