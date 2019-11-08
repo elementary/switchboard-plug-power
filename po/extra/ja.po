@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-07 16:43+0000\n"
-"PO-Revision-Date: 2019-05-19 14:15+0000\n"
+"PO-Revision-Date: 2019-11-09 15:24+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "power-plug-extra/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 3.7.1\n"
 
 #: data/power.appdata.xml.in:5
 msgid "Power"
@@ -29,12 +29,12 @@ msgstr "ディスプレイの明るさ、電源ボタン、サスペンドの動
 
 #: data/power.appdata.xml.in:10
 msgid "Remove broken hibernate option"
-msgstr ""
+msgstr "機能しないハイバーネートオプションを削除"
 
 #: data/power.appdata.xml.in:11
 msgid "Add prompt to shutdown to power button actions"
-msgstr ""
+msgstr "電源ボタンを押したときの動作に“シャットダウンの確認”を追加"
 
 #: data/power.appdata.xml.in:12
 msgid "Updated translations"
-msgstr ""
+msgstr "翻訳の更新"
