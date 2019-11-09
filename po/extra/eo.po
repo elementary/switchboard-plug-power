@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-07 16:43+0000\n"
-"PO-Revision-Date: 2019-11-09 15:24+0000\n"
+"PO-Revision-Date: 2019-11-11 12:24+0000\n"
 "Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
 "power-plug-extra/eo/>\n"
@@ -29,11 +29,11 @@ msgstr "Agordi ekranan brilecon, energiajn butonojn, kaj paŭzan konduton"
 
 #: data/power.appdata.xml.in:10
 msgid "Remove broken hibernate option"
-msgstr ""
+msgstr "Forigi malfunkciantan letargiigan opcion"
 
 #: data/power.appdata.xml.in:11
 msgid "Add prompt to shutdown to power button actions"
-msgstr ""
+msgstr "Aldoni invitofenestron ĉe premo de la ŝaltilo"
 
 #: data/power.appdata.xml.in:12
 msgid "Updated translations"
