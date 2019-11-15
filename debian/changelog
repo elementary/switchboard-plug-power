@@ -1,3 +1,31 @@
+switchboard-plug-power (2.4.0) bionic; urgency=medium
+
+  * Release 2.4.0 (#130)
+  * Update translation template
+  * AppData: Add 2.4.0 release info
+  * Add Release to Actions
+  * Add Gettext Updates to Actions
+  * Split deb packaging into its own branch
+  * run installation in CI (#128)
+  * Add Lint to CI (#127)
+  * Fix code style errors
+  * Build with GitHub CI (#126)
+  * Delete CODE_OF_CONDUCT.md
+  * build: use define_variable with pkgconfig paths  (#121)
+  * Set AccountsService power keys (#123)
+  * Delete FUNDING.yml
+  * Plug: Change code name to RDNN
+  * Fix eo.po file
+  * Add Silesian and update translation template
+  * Add Silesian and update translation template
+  * Added prompt to shutdown option to power button action options.
+    (#115)
+  * Create FUNDING.yml
+  * Add appdata file (#113)
+  * Remove broken hibernate option (#112)
+
+ -- elementary OS Team <builds@elementary.io>  Fri, 15 Nov 2019 22:49:54 +0000
+
 switchboard-plug-power (2.3.5) bionic; urgency=medium
 
   * New upstream release.
