@@ -1,0 +1,37 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the extra package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: extra\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-07 16:43+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: nv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/power.appdata.xml.in:5
+msgid "Power"
+msgstr ""
+
+#: data/power.appdata.xml.in:6
+msgid "Configure display brightness, power buttons, and suspend behavior"
+msgstr ""
+
+#: data/power.appdata.xml.in:10
+msgid "Remove broken hibernate option"
+msgstr ""
+
+#: data/power.appdata.xml.in:11
+msgid "Add prompt to shutdown to power button actions"
+msgstr ""
+
+#: data/power.appdata.xml.in:12
+msgid "Updated translations"
+msgstr ""
