@@ -8,31 +8,34 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-07 16:43+0000\n"
-"PO-Revision-Date: 2019-05-09 18:04-0700\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2020-01-01 16:07+0000\n"
+"Last-Translator: Jaimie85 <alsemgeest@gmail.com>\n"
+"Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
+"power-plug-extra/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 #: data/power.appdata.xml.in:5
 msgid "Power"
-msgstr ""
+msgstr "Energie"
 
 #: data/power.appdata.xml.in:6
 msgid "Configure display brightness, power buttons, and suspend behavior"
-msgstr ""
+msgstr "Configureer schermhelderheid, stroomknoppen en slaapstand"
 
 #: data/power.appdata.xml.in:10
 msgid "Remove broken hibernate option"
-msgstr ""
+msgstr "Verwijder de kapotte slaapstand optie"
 
 #: data/power.appdata.xml.in:11
 msgid "Add prompt to shutdown to power button actions"
 msgstr ""
+"De vraag om uit te schakelen toegevoegd aan de aan/uit schakelaar acties"
 
 #: data/power.appdata.xml.in:12
 msgid "Updated translations"
-msgstr ""
+msgstr "Bijgewerkte vertalingen"
