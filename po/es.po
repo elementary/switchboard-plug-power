@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-07 16:43+0000\n"
-"PO-Revision-Date: 2019-10-09 17:23+0000\n"
-"Last-Translator: Daniel R. <riesp@pm.me>\n"
+"PO-Revision-Date: 2020-03-10 17:09+0000\n"
+"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/es/>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-01-09 05:39+0000\n"
 
 #: data/io.elementary.switchboard.power.policy.in:10
@@ -30,7 +30,7 @@ msgstr "Se requiere autenticación para administrar la configuración de energí
 
 #: src/MainView.vala:24
 msgid "You do not have permission to change this"
-msgstr "No tienes permisos para realizar estos cambios"
+msgstr "No tiene permiso para realizar este cambio"
 
 #: src/MainView.vala:68
 msgid "Display brightness:"
@@ -52,8 +52,7 @@ msgstr ""
 
 #: src/MainView.vala:132
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
-"Algunos ajustes requieren permisos de administrador para ser modificados"
+msgstr "Se necesitan privilegios administrativos para cambiar algunas opciones"
 
 #: src/MainView.vala:153
 msgid "Turn off display when inactive for:"
@@ -127,7 +126,7 @@ msgstr "Cierre de la tapa acoplada"
 
 #: src/Plug.vala:77
 msgid "Suspend inactive"
-msgstr "Dormir inactivo"
+msgstr "Inactividad en suspensión"
 
 #: src/Widgets/TimeoutComboBox.vala:83
 msgid "Never"
