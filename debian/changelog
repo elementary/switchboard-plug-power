@@ -1,3 +1,13 @@
+switchboard-plug-power (2.4.1) bionic; urgency=medium
+
+  * Release 2.4.1 (#140)
+  * Update translation files
+  * Update translation template
+  * Update power.appdata.xml.in
+  * Update translation files
+
+ -- elementary OS Team <builds@elementary.io>  Wed, 01 Apr 2020 23:34:57 +0000
+
 switchboard-plug-power (2.4.0) bionic; urgency=medium
 
   * Release 2.4.0 (#130)
