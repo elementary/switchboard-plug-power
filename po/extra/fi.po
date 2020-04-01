@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-07 16:43+0000\n"
+"POT-Creation-Date: 2020-04-01 22:29+0000\n"
 "PO-Revision-Date: 2020-02-22 14:09+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
@@ -27,14 +27,14 @@ msgstr "Virransäästö"
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "Määritä näytön kirkkaus sekä virtapainikkeiden ja lepotilan toiminta"
 
-#: data/power.appdata.xml.in:10
+#: data/power.appdata.xml.in:10 data/power.appdata.xml.in:17
+msgid "Updated translations"
+msgstr "Päivitetyt käännökset"
+
+#: data/power.appdata.xml.in:15
 msgid "Remove broken hibernate option"
 msgstr ""
 
-#: data/power.appdata.xml.in:11
+#: data/power.appdata.xml.in:16
 msgid "Add prompt to shutdown to power button actions"
 msgstr ""
-
-#: data/power.appdata.xml.in:12
-msgid "Updated translations"
-msgstr "Päivitetyt käännökset"
