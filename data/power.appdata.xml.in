@@ -5,6 +5,11 @@
   <name>Power</name>
   <summary>Configure display brightness, power buttons, and suspend behavior</summary>
   <releases>
+    <release version="2.4.1" date="2020-03-31" urgency="medium">
+      <description>
+        <p>Updated translations</p>
+      </description>
+    </release>
     <release version="2.4.0" date="2019-11-15" urgency="medium">
       <description>
         <p>Remove broken hibernate option</p>
