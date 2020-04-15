@@ -4,6 +4,8 @@
   <extends>io.elementary.switchboard</extends>
   <name>Power</name>
   <summary>Configure display brightness, power buttons, and suspend behavior</summary>
+  <icon type="stock">preferences-system-power</icon>
+  <translation type="gettext">power-plug</translation>
   <releases>
     <release version="2.4.1" date="2020-04-01" urgency="medium">
       <description>
