@@ -2,7 +2,7 @@
 <component type="addon">
   <id>io.elementary.switchboard.power</id>
   <extends>io.elementary.switchboard</extends>
-  <name>Power</name>
+  <name>Power Settings</name>
   <summary>Configure display brightness, power buttons, and suspend behavior</summary>
   <icon type="stock">preferences-system-power</icon>
   <translation type="gettext">power-plug</translation>
