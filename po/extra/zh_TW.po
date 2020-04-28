@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-01 22:29+0000\n"
+"POT-Creation-Date: 2020-04-28 22:18+0000\n"
 "PO-Revision-Date: 2020-03-01 14:09+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
@@ -20,21 +20,24 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 #: data/power.appdata.xml.in:5
-msgid "Power"
-msgstr "電源"
+msgid "Power Settings"
+msgstr ""
 
 #: data/power.appdata.xml.in:6
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "調整顯示器亮度、電源按鈕、暫停行為等設定"
 
-#: data/power.appdata.xml.in:10 data/power.appdata.xml.in:17
+#: data/power.appdata.xml.in:12 data/power.appdata.xml.in:19
 msgid "Updated translations"
 msgstr "翻譯更新"
 
-#: data/power.appdata.xml.in:15
+#: data/power.appdata.xml.in:17
 msgid "Remove broken hibernate option"
 msgstr "移除壞掉的休眠選項"
 
-#: data/power.appdata.xml.in:16
+#: data/power.appdata.xml.in:18
 msgid "Add prompt to shutdown to power button actions"
 msgstr "加入提請關機到電源按鈕動作中"
+
+#~ msgid "Power"
+#~ msgstr "電源"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-01 22:29+0000\n"
+"POT-Creation-Date: 2020-04-28 22:18+0000\n"
 "PO-Revision-Date: 2019-11-22 03:25+0000\n"
 "Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
@@ -20,8 +20,8 @@ msgstr ""
 "X-Generator: Weblate 3.7.1\n"
 
 #: data/power.appdata.xml.in:5
-msgid "Power"
-msgstr "Energia"
+msgid "Power Settings"
+msgstr ""
 
 #: data/power.appdata.xml.in:6
 msgid "Configure display brightness, power buttons, and suspend behavior"
@@ -29,14 +29,17 @@ msgstr ""
 "Configurar o brilho da tela, os botões de energia e o comportamento de "
 "suspensão"
 
-#: data/power.appdata.xml.in:10 data/power.appdata.xml.in:17
+#: data/power.appdata.xml.in:12 data/power.appdata.xml.in:19
 msgid "Updated translations"
 msgstr "Traduções atualizadas"
 
-#: data/power.appdata.xml.in:15
+#: data/power.appdata.xml.in:17
 msgid "Remove broken hibernate option"
 msgstr "Remover opção de hibernação quebrada"
 
-#: data/power.appdata.xml.in:16
+#: data/power.appdata.xml.in:18
 msgid "Add prompt to shutdown to power button actions"
 msgstr "Adicionar aviso para o desligamento às ações do botão de energia"
+
+#~ msgid "Power"
+#~ msgstr "Energia"
