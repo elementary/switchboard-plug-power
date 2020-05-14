@@ -42,7 +42,7 @@ public class Power.HardwareView : Granite.SimpleSettingsPage {
 
     public HardwareView () {
         Object (
-            icon_name: "mouse-touchpad-clicking",
+            icon_name: "application-x-firmware",
             title: _("Hardware")
         );
     }
