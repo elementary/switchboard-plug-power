@@ -64,22 +64,6 @@ public class Power.SuspendView : Granite.SimpleSettingsPage {
         sleep_timeout.enum_never_value = PowerActionType.NOTHING;
         sleep_timeout.enum_normal_value = PowerActionType.SUSPEND;
 
-        var infobar_label = new Gtk.Label (_("Some changes will not take effect until you restart this computer"));
-
-        var infobar = new Gtk.InfoBar ();
-        infobar.message_type = Gtk.MessageType.WARNING;
-        infobar.revealed = false;
-        infobar.get_content_area ().add (infobar_label);
-
-        var helper = LogindHelper.get_logind_helper ();
-        if (helper != null) {
-            helper.changed.connect (() => {
-                infobar.revealed = true;
-            });
-        }
-
-        add (infobar);
-
         content_area.attach (sleep_timeout_label, 0, 1);
         content_area.attach (sleep_timeout, 1, 1);
         show_all ();
