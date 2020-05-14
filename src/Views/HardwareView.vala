@@ -17,7 +17,7 @@
  * Boston, MA  02110-1301, USA.
  */
 
-public class Power.MainView : Gtk.Grid {
+public class Power.HardwareView : Granite.SimpleSettingsPage {
     public Battery battery { get; private set; }
     public Gtk.Stack stack { get; private set; }
 
@@ -40,8 +40,15 @@ public class Power.MainView : Gtk.Grid {
         LOGOUT
     }
 
+    public HardwareView () {
+        Object (
+            icon_name: "mouse-touchpad-clicking",
+            title: _("Hardware")
+        );
+    }
+
     construct {
-        orientation = Gtk.Orientation.VERTICAL;
+        content_area.row_spacing = 6;
         margin_bottom = 12;
 
         var label_size = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
@@ -51,50 +58,6 @@ public class Power.MainView : Gtk.Grid {
 
         battery = new Battery ();
         power_supply = new PowerSupply ();
-
-        try {
-            screen = Bus.get_proxy_sync (BusType.SESSION, SETTINGS_DAEMON_NAME,
-                SETTINGS_DAEMON_PATH, DBusProxyFlags.GET_INVALIDATED_PROPERTIES);
-        } catch (IOError e) {
-            warning ("Failed to get settings daemon for brightness setting");
-        }
-
-        var main_grid = new Gtk.Grid ();
-        main_grid.margin = 24;
-        main_grid.column_spacing = 12;
-        main_grid.row_spacing = 12;
-
-        if (backlight_detect ()) {
-            var brightness_label = new Gtk.Label (_("Display brightness:"));
-            brightness_label.halign = Gtk.Align.END;
-            brightness_label.xalign = 1;
-
-            var als_label = new Gtk.Label (_("Automatically adjust brightness:"));
-            als_label.xalign = 1;
-
-            var als_switch = new Gtk.Switch ();
-            als_switch.halign = Gtk.Align.START;
-
-            settings.bind ("ambient-enabled", als_switch, "active", SettingsBindFlags.DEFAULT);
-
-            scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 100, 10);
-            scale.draw_value = false;
-            scale.hexpand = true;
-            scale.width_request = 480;
-
-            scale.set_value (screen.brightness);
-
-            scale.value_changed.connect (on_scale_value_changed);
-            (screen as DBusProxy).g_properties_changed.connect (on_screen_properties_changed);
-
-            main_grid.attach (brightness_label, 0, 0, 1, 1);
-            main_grid.attach (scale, 1, 0, 1, 1);
-            main_grid.attach (als_label, 0, 1, 1, 1);
-            main_grid.attach (als_switch, 1, 1, 1, 1);
-
-            label_size.add_widget (brightness_label);
-            label_size.add_widget (als_label);
-        }
 
         if (lid_detect ()) {
             var lid_closed_label = new Gtk.Label (_("When lid is closed:"));
@@ -120,12 +83,12 @@ public class Power.MainView : Gtk.Grid {
             lock_image2.sensitive = false;
             lock_image2.tooltip_text = NO_PERMISSION_STRING;
 
-            main_grid.attach (lid_closed_label, 0, 5, 1, 1);
-            main_grid.attach (lid_closed_box, 1, 5, 1, 1);
-            main_grid.attach (lock_image2, 2, 5, 1, 1);
-            main_grid.attach (lid_dock_label, 0, 6, 1, 1);
-            main_grid.attach (lid_dock_box, 1, 6, 1, 1);
-            main_grid.attach (lock_image, 2, 6, 1, 1);
+            content_area.attach (lid_closed_label, 0, 5, 1, 1);
+            content_area.attach (lid_closed_box, 1, 5, 1, 1);
+            content_area.attach (lock_image2, 2, 5, 1, 1);
+            content_area.attach (lid_dock_label, 0, 6, 1, 1);
+            content_area.attach (lid_dock_box, 1, 6, 1, 1);
+            content_area.attach (lock_image, 2, 6, 1, 1);
 
             var lock_button = new Gtk.LockButton (get_permission ());
 
@@ -150,37 +113,18 @@ public class Power.MainView : Gtk.Grid {
             permission.bind_property ("allowed", permission_infobar, "revealed", GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN);
         }
 
-        var screen_timeout_label = new Gtk.Label (_("Turn off display when inactive for:"));
-        screen_timeout_label.halign = Gtk.Align.END;
-        screen_timeout_label.xalign = 1;
-
-        var screen_timeout = new TimeoutComboBox (elementary_dpms_settings, "standby-time");
-        screen_timeout.changed.connect (run_dpms_helper);
-
         var power_label = new Gtk.Label (_("Power button:"));
         power_label.halign = Gtk.Align.END;
         power_label.xalign = 1;
 
         var power_combobox = new ActionComboBox ("power-button-action");
 
-        main_grid.attach (screen_timeout_label, 0, 3, 1, 1);
-        main_grid.attach (screen_timeout, 1, 3, 1, 1);
-        main_grid.attach (power_label, 0, 4, 1, 1);
-        main_grid.attach (power_combobox, 1, 4, 1, 1);
-
-        var sleep_timeout_label = new Gtk.Label (_("Suspend when inactive for:"));
-        sleep_timeout_label.xalign = 1;
-
-        var sleep_timeout = new TimeoutComboBox (settings, "sleep-inactive-ac-timeout");
-        sleep_timeout.enum_property = "sleep-inactive-ac-type";
-        sleep_timeout.enum_never_value = PowerActionType.NOTHING;
-        sleep_timeout.enum_normal_value = PowerActionType.SUSPEND;
+        content_area.attach (power_label, 0, 4, 1, 1);
+        content_area.attach (power_combobox, 1, 4, 1, 1);
 
         var ac_grid = new Gtk.Grid ();
         ac_grid.column_spacing = 12;
         ac_grid.row_spacing = 12;
-        ac_grid.attach (sleep_timeout_label, 0, 1);
-        ac_grid.attach (sleep_timeout, 1, 1);
 
         stack = new Gtk.Stack ();
         stack.add_titled (ac_grid, "ac", _("Plugged In"));
@@ -222,10 +166,10 @@ public class Power.MainView : Gtk.Grid {
             switcher_grid.add (stack_switcher);
             switcher_grid.add (right_sep);
 
-            main_grid.attach (switcher_grid, 0, 7, 2, 1);
+            content_area.attach (switcher_grid, 0, 7, 2, 1);
         }
 
-        main_grid.attach (stack, 0, 8, 2, 1);
+        content_area.attach (stack, 0, 8, 2, 1);
 
         var infobar_label = new Gtk.Label (_("Some changes will not take effect until you restart this computer"));
 
@@ -243,11 +187,8 @@ public class Power.MainView : Gtk.Grid {
 
         add (infobar);
 
-        add (main_grid);
         show_all ();
 
-        label_size.add_widget (sleep_timeout_label);
-        label_size.add_widget (screen_timeout_label);
         label_size.add_widget (power_label);
 
         // hide stack switcher if we only have ac line
