@@ -62,11 +62,7 @@ namespace Power {
         }
 
         public override void shown () {
-            if (hardware_view.battery.is_present ()) {
-                hardware_view.stack.visible_child_name = "battery";
-            } else {
-                hardware_view.stack.visible_child_name = "ac";
-            }
+
         }
 
         public override void hidden () {
