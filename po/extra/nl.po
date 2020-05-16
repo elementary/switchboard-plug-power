@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-28 22:18+0000\n"
+"POT-Creation-Date: 2020-05-16 21:25+0000\n"
 "PO-Revision-Date: 2020-01-01 16:07+0000\n"
 "Last-Translator: Jaimie85 <alsemgeest@gmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/power-"
@@ -27,15 +27,20 @@ msgstr ""
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "Configureer schermhelderheid, stroomknoppen en slaapstand"
 
-#: data/power.appdata.xml.in:12 data/power.appdata.xml.in:19
+#: data/power.appdata.xml.in:12
+msgid "Fix potential freeze when changing settings from multiple panes"
+msgstr ""
+
+#: data/power.appdata.xml.in:13 data/power.appdata.xml.in:18
+#: data/power.appdata.xml.in:25
 msgid "Updated translations"
 msgstr "Bijgewerkte vertalingen"
 
-#: data/power.appdata.xml.in:17
+#: data/power.appdata.xml.in:23
 msgid "Remove broken hibernate option"
 msgstr "Verwijder de kapotte slaapstand optie"
 
-#: data/power.appdata.xml.in:18
+#: data/power.appdata.xml.in:24
 msgid "Add prompt to shutdown to power button actions"
 msgstr ""
 "De vraag om uit te schakelen toegevoegd aan de aan/uit schakelaar acties"
