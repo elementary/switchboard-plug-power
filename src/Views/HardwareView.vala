@@ -122,55 +122,6 @@ public class Power.HardwareView : Granite.SimpleSettingsPage {
         content_area.attach (power_label, 0, 4, 1, 1);
         content_area.attach (power_combobox, 1, 4, 1, 1);
 
-        var ac_grid = new Gtk.Grid ();
-        ac_grid.column_spacing = 12;
-        ac_grid.row_spacing = 12;
-
-        stack = new Gtk.Stack ();
-        stack.add_titled (ac_grid, "ac", _("Plugged In"));
-
-        var stack_switcher = new Gtk.StackSwitcher ();
-        stack_switcher.homogeneous = true;
-        stack_switcher.stack = stack;
-
-        if (battery.is_present ()) {
-            var battery_timeout_label = new Gtk.Label (_("Suspend when inactive for:"));
-            battery_timeout_label.xalign = 1;
-            label_size.add_widget (battery_timeout_label);
-
-            var battery_timeout = new TimeoutComboBox (settings, "sleep-inactive-battery-timeout");
-            battery_timeout.enum_property = "sleep-inactive-battery-type";
-            battery_timeout.enum_never_value = PowerActionType.NOTHING;
-            battery_timeout.enum_normal_value = PowerActionType.SUSPEND;
-
-            var battery_grid = new Gtk.Grid ();
-            battery_grid.column_spacing = 12;
-            battery_grid.row_spacing = 12;
-            battery_grid.attach (battery_timeout_label, 0, 1);
-            battery_grid.attach (battery_timeout, 1, 1);
-
-            stack.add_titled (battery_grid, "battery", _("On Battery"));
-
-            var left_sep = new Gtk.Separator (Gtk.Orientation.HORIZONTAL);
-            left_sep.hexpand = true;
-            left_sep.valign = Gtk.Align.CENTER;
-
-            var right_sep = new Gtk.Separator (Gtk.Orientation.HORIZONTAL);
-            right_sep.hexpand = true;
-            right_sep.valign = Gtk.Align.CENTER;
-
-            var switcher_grid = new Gtk.Grid ();
-            switcher_grid.margin_top = 24;
-            switcher_grid.margin_bottom = 12;
-            switcher_grid.add (left_sep);
-            switcher_grid.add (stack_switcher);
-            switcher_grid.add (right_sep);
-
-            content_area.attach (switcher_grid, 0, 7, 2, 1);
-        }
-
-        content_area.attach (stack, 0, 8, 2, 1);
-
         var infobar_label = new Gtk.Label (_("Some changes will not take effect until you restart this computer"));
 
         var infobar = new Gtk.InfoBar ();
