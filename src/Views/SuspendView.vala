@@ -118,8 +118,8 @@ public class Power.SuspendView : Granite.SimpleSettingsPage {
 
         label_size.add_widget (sleep_timeout_label);
 
-        // hide stack switcher if we only have ac line
-        stack_switcher.visible = stack.get_children ().length () > 1;
+        // // hide stack switcher if we only have ac line
+        // stack_switcher.visible = stack.get_children ().length () > 1;
     }
 
     private void on_scale_value_changed () {
