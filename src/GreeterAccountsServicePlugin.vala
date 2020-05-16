@@ -1,5 +1,5 @@
 [DBus (name = "io.elementary.pantheon.AccountsService")]
-interface Greeter.AccountsService : Object {
+interface Power.Greeter.AccountsService : Object {
     [DBus (name = "SleepInactiveACTimeout")]
     public abstract int sleep_inactive_ac_timeout { get; set; }
     [DBus (name = "SleepInactiveACType")]
@@ -10,6 +10,6 @@ interface Greeter.AccountsService : Object {
 }
 
 [DBus (name = "org.freedesktop.Accounts")]
-interface FDO.Accounts : Object {
+interface Power.FDO.Accounts : Object {
     public abstract string find_user_by_name (string username) throws GLib.Error;
 }
