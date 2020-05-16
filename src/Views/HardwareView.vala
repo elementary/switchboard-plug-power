@@ -195,28 +195,6 @@ public class Power.HardwareView : Granite.SimpleSettingsPage {
         stack_switcher.visible = stack.get_children ().length () > 1;
     }
 
-    private static bool backlight_detect () {
-        var interface_path = File.new_for_path ("/sys/class/backlight/");
-
-        try {
-            var enumerator = interface_path.enumerate_children (
-            GLib.FileAttribute.STANDARD_NAME,
-            FileQueryInfoFlags.NONE);
-            FileInfo backlight;
-            if ((backlight = enumerator.next_file ()) != null) {
-                debug ("Detected backlight interface");
-                return true;
-            }
-
-        enumerator.close ();
-
-        } catch (GLib.Error err) {
-            critical ("%s", err.message);
-        }
-
-        return false;
-    }
-
     private static bool lid_detect () {
         var interface_path = File.new_for_path ("/proc/acpi/button/lid/");
 
@@ -253,17 +231,6 @@ public class Power.HardwareView : Granite.SimpleSettingsPage {
             scale.value_changed.disconnect (on_scale_value_changed);
             scale.set_value (val);
             scale.value_changed.connect (on_scale_value_changed);
-        }
-    }
-
-    private static void run_dpms_helper () {
-        try {
-            string[] argv = { "io.elementary.dpms-helper" };
-            Process.spawn_async (null, argv, Environ.get (),
-                SpawnFlags.SEARCH_PATH | SpawnFlags.STDERR_TO_DEV_NULL | SpawnFlags.STDOUT_TO_DEV_NULL,
-                null, null);
-        } catch (SpawnError e) {
-            warning ("Failed to reset dpms settings: %s", e.message);
         }
     }
 }

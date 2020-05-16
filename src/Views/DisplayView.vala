@@ -28,7 +28,6 @@ public class Power.DisplayView : Granite.SimpleSettingsPage {
     private GLib.Settings elementary_dpms_settings;
     private Gtk.Scale scale;
     private PowerSettings screen;
-    private PowerSupply power_supply;
 
     private enum PowerActionType {
         BLANK,
@@ -126,28 +125,6 @@ public class Power.DisplayView : Granite.SimpleSettingsPage {
             }
 
         enumerator.close ();
-
-        } catch (GLib.Error err) {
-            critical ("%s", err.message);
-        }
-
-        return false;
-    }
-
-    private static bool lid_detect () {
-        var interface_path = File.new_for_path ("/proc/acpi/button/lid/");
-
-        try {
-            var enumerator = interface_path.enumerate_children (
-            GLib.FileAttribute.STANDARD_NAME,
-            FileQueryInfoFlags.NONE);
-            FileInfo lid;
-            if ((lid = enumerator.next_file ()) != null) {
-                debug ("Detected lid switch");
-                return true;
-            }
-
-            enumerator.close ();
 
         } catch (GLib.Error err) {
             critical ("%s", err.message);
