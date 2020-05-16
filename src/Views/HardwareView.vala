@@ -141,9 +141,6 @@ public class Power.HardwareView : Granite.SimpleSettingsPage {
         show_all ();
 
         label_size.add_widget (power_label);
-
-        // hide stack switcher if we only have ac line
-        stack_switcher.visible = stack.get_children ().length () > 1;
     }
 
     private static bool lid_detect () {
