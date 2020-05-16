@@ -7,6 +7,12 @@
   <icon type="stock">preferences-system-power</icon>
   <translation type="gettext">power-plug</translation>
   <releases>
+    <release version="2.4.2" date="2020-05-15" urgency="medium">
+      <description>
+        <p>Fix potential freeze when changing settings from multiple panes</p>
+        <p>Updated translations</p>
+      </description>
+    </release>
     <release version="2.4.1" date="2020-04-01" urgency="medium">
       <description>
         <p>Updated translations</p>
