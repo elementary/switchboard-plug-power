@@ -1,3 +1,17 @@
+switchboard-plug-power (2.4.2) bionic; urgency=medium
+
+  * Release 2.4.2 (#154)
+  * Update translation files
+  * Update translation template
+  * Update power.appdata.xml.in
+  * Namespace AccountsService interfaces (#153)
+  * Update translation files
+  * Update translation template
+  * AppData: Add "Settings" to name (#144)
+  * AppData: Add Icon & Gettext domain (#143)
+
+ -- elementary OS Team <builds@elementary.io>  Sat, 16 May 2020 21:32:36 +0000
+
 switchboard-plug-power (2.4.1) bionic; urgency=medium
 
   * Release 2.4.1 (#140)
