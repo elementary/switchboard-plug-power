@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-28 22:18+0000\n"
+"POT-Creation-Date: 2020-05-16 21:25+0000\n"
 "PO-Revision-Date: 2019-11-22 03:25+0000\n"
 "Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
@@ -29,15 +29,20 @@ msgstr ""
 "Configurar o brilho da tela, os botões de energia e o comportamento de "
 "suspensão"
 
-#: data/power.appdata.xml.in:12 data/power.appdata.xml.in:19
+#: data/power.appdata.xml.in:12
+msgid "Fix potential freeze when changing settings from multiple panes"
+msgstr ""
+
+#: data/power.appdata.xml.in:13 data/power.appdata.xml.in:18
+#: data/power.appdata.xml.in:25
 msgid "Updated translations"
 msgstr "Traduções atualizadas"
 
-#: data/power.appdata.xml.in:17
+#: data/power.appdata.xml.in:23
 msgid "Remove broken hibernate option"
 msgstr "Remover opção de hibernação quebrada"
 
-#: data/power.appdata.xml.in:18
+#: data/power.appdata.xml.in:24
 msgid "Add prompt to shutdown to power button actions"
 msgstr "Adicionar aviso para o desligamento às ações do botão de energia"
 

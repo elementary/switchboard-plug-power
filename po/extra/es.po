@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-28 22:18+0000\n"
+"POT-Creation-Date: 2020-05-16 21:25+0000\n"
 "PO-Revision-Date: 2020-05-11 20:10+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
@@ -29,15 +29,20 @@ msgstr ""
 "Configurar el brillo de pantalla, los botones de encendido y las opciones de "
 "suspensión"
 
-#: data/power.appdata.xml.in:12 data/power.appdata.xml.in:19
+#: data/power.appdata.xml.in:12
+msgid "Fix potential freeze when changing settings from multiple panes"
+msgstr ""
+
+#: data/power.appdata.xml.in:13 data/power.appdata.xml.in:18
+#: data/power.appdata.xml.in:25
 msgid "Updated translations"
 msgstr "Traducciones actualizadas"
 
-#: data/power.appdata.xml.in:17
+#: data/power.appdata.xml.in:23
 msgid "Remove broken hibernate option"
 msgstr "Eliminar la opción de hibernación rota"
 
-#: data/power.appdata.xml.in:18
+#: data/power.appdata.xml.in:24
 msgid "Add prompt to shutdown to power button actions"
 msgstr "Añadir solicitud para apagar en las acciones del botón de encendido"
 
