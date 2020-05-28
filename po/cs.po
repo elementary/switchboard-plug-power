@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-07 16:43+0000\n"
-"PO-Revision-Date: 2020-05-11 20:10+0000\n"
+"PO-Revision-Date: 2020-05-29 15:23+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/cs/>\n"
@@ -50,7 +50,7 @@ msgstr "Když je víko zavřeno a připojen externí monitor:"
 
 #: src/MainView.vala:132
 msgid "Some settings require administrator rights to be changed"
-msgstr "Některá nastavení vyžadují administrátorská oprávnění"
+msgstr "Některá nastavení vyžadují oprávnění na úrovni správce systému"
 
 #: src/MainView.vala:153
 msgid "Turn off display when inactive for:"
