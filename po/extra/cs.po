@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-16 21:25+0000\n"
-"PO-Revision-Date: 2020-05-11 20:10+0000\n"
+"PO-Revision-Date: 2020-05-29 15:23+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
-"Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/power-"
-"plug-extra/cs/>\n"
+"Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
+"power-plug-extra/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,12 +29,12 @@ msgstr "Nastavuje jas obrazovky, tlačítka napájení a chování uspávání"
 
 #: data/power.appdata.xml.in:12
 msgid "Fix potential freeze when changing settings from multiple panes"
-msgstr ""
+msgstr "Opraveno potenciální mrznutí při změně nastavení z vícero podoken"
 
 #: data/power.appdata.xml.in:13 data/power.appdata.xml.in:18
 #: data/power.appdata.xml.in:25
 msgid "Updated translations"
-msgstr "Aktualizované překlady"
+msgstr "Aktualizovány překlady"
 
 #: data/power.appdata.xml.in:23
 msgid "Remove broken hibernate option"
