@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-16 21:25+0000\n"
-"PO-Revision-Date: 2020-05-21 03:11+0000\n"
+"PO-Revision-Date: 2020-05-29 15:23+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "power-plug-extra/es/>\n"
@@ -32,7 +32,7 @@ msgstr ""
 #: data/power.appdata.xml.in:12
 msgid "Fix potential freeze when changing settings from multiple panes"
 msgstr ""
-"Se corrigió un bloqueo pontencial al modificar opciones de diversos paneles"
+"Se corrigió un bloqueo potencial al modificar opciones de diversos paneles"
 
 #: data/power.appdata.xml.in:13 data/power.appdata.xml.in:18
 #: data/power.appdata.xml.in:25
