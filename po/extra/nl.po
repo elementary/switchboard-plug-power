@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-16 21:25+0000\n"
-"PO-Revision-Date: 2020-01-01 16:07+0000\n"
+"PO-Revision-Date: 2020-06-09 10:11+0000\n"
 "Last-Translator: Jaimie85 <alsemgeest@gmail.com>\n"
-"Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/power-"
-"plug-extra/nl/>\n"
+"Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
+"power-plug-extra/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: data/power.appdata.xml.in:5
 msgid "Power Settings"
-msgstr ""
+msgstr "Stroom instellingen"
 
 #: data/power.appdata.xml.in:6
 msgid "Configure display brightness, power buttons, and suspend behavior"
@@ -30,6 +30,8 @@ msgstr "Configureer schermhelderheid, stroomknoppen en slaapstand"
 #: data/power.appdata.xml.in:12
 msgid "Fix potential freeze when changing settings from multiple panes"
 msgstr ""
+"Een probleem verholpen met het wijzigen van instellingen vanuit meerdere "
+"deelvensters"
 
 #: data/power.appdata.xml.in:13 data/power.appdata.xml.in:18
 #: data/power.appdata.xml.in:25
