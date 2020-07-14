@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-16 21:25+0000\n"
-"PO-Revision-Date: 2020-03-19 19:09+0000\n"
+"PO-Revision-Date: 2020-07-15 23:12+0000\n"
 "Last-Translator: Ciarán Ainsworth <ciaranainsworth@posteo.net>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "switchboard/power-plug-extra/en_GB/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: data/power.appdata.xml.in:5
 msgid "Power Settings"
-msgstr ""
+msgstr "Power Settings"
 
 #: data/power.appdata.xml.in:6
 msgid "Configure display brightness, power buttons, and suspend behavior"
@@ -29,7 +29,7 @@ msgstr "Configure display brightness, power buttons, and suspend behaviour"
 
 #: data/power.appdata.xml.in:12
 msgid "Fix potential freeze when changing settings from multiple panes"
-msgstr ""
+msgstr "Fix potential freeze when changing settings from multiple panes"
 
 #: data/power.appdata.xml.in:13 data/power.appdata.xml.in:18
 #: data/power.appdata.xml.in:25
