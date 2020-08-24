@@ -19,7 +19,9 @@
 
 namespace Power {
     class ActionComboBox : Gtk.ComboBoxText {
-        private string key;
+        public string key { get; construct; }
+
+        private static GLib.Settings settings;
 
         // this maps combobox indices to gsettings enums
         private int[] map_to_sett = {0, 1, 3};
@@ -27,8 +29,14 @@ namespace Power {
         private int[] map_to_list = {0, 1, -1, 2};
 
         public ActionComboBox (string key_value) {
-            key = key_value;
+            Object (key: key_value);
+        }
 
+        static construct {
+            settings = new GLib.Settings ("org.gnome.settings-daemon.plugins.power");
+        }
+
+        construct {
             append_text (_("Do nothing"));
             append_text (_("Suspend"));
             append_text (_("Prompt to shutdown"));

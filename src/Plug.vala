@@ -18,8 +18,6 @@
  */
 
 namespace Power {
-    private GLib.Settings settings;
-
     public class Plug : Switchboard.Plug {
         private MainView main_view;
 
