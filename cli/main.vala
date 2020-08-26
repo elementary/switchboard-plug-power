@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2015 elementary Developers (https://launchpad.net/elementary)
+ * Copyright 2011-2020 elementary, Inc. (https://elementary.io)
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -63,15 +63,6 @@ public class LoginDHelper.Application : GLib.Application {
         });
     }
 
-    private void reload_logind () {
-        try {
-            systemd_bus_proxy = Bus.get_proxy_sync (BusType.SYSTEM, "org.freedesktop.systemd1", "/org/freedesktop/systemd1");
-            systemd_bus_proxy.reload_or_try_restart_unit ("systemd-logind.service", "fail");
-        } catch (Error e) {
-            warning (e.message);
-        }
-    }
-
     public override void activate () {
         own_id = Bus.own_name (BusType.SYSTEM, Power.LOGIND_HELPER_NAME, BusNameOwnerFlags.REPLACE,
                     on_bus_acquired,
@@ -85,7 +76,13 @@ public class LoginDHelper.Application : GLib.Application {
             Bus.unown_name (own_id);
         }
 
-        reload_logind ();
+        /* We need to restart systemd-logind to ensure that the lid settings are taken into account */
+        try {
+            systemd_bus_proxy = Bus.get_proxy_sync (BusType.SYSTEM, "org.freedesktop.systemd1", "/org/freedesktop/systemd1");
+            systemd_bus_proxy.reload_or_try_restart_unit ("systemd-logind.service", "fail");
+        } catch (Error e) {
+            warning (e.message);
+        }
 
         base.shutdown ();
     }
