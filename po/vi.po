@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-07 16:43+0000\n"
+"POT-Creation-Date: 2020-08-26 18:14+0000\n"
 "PO-Revision-Date: 2013-01-27 06:49+0000\n"
 "Last-Translator: Trung Ngô <ndtrung4419@gmail.com>\n"
 "Language-Team: Vietnamese <vi@li.org>\n"
@@ -30,48 +30,44 @@ msgstr ""
 msgid "You do not have permission to change this"
 msgstr ""
 
-#: src/MainView.vala:68
+#: src/MainView.vala:66
 msgid "Display brightness:"
 msgstr ""
 
-#: src/MainView.vala:72
+#: src/MainView.vala:70
 msgid "Automatically adjust brightness:"
 msgstr ""
 
-#: src/MainView.vala:100
+#: src/MainView.vala:98
 msgid "When lid is closed:"
 msgstr ""
 
-#: src/MainView.vala:106
+#: src/MainView.vala:104
 msgid "When lid is closed with external monitor:"
 msgstr ""
 
-#: src/MainView.vala:132
+#: src/MainView.vala:130
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 
-#: src/MainView.vala:153
+#: src/MainView.vala:151
 msgid "Turn off display when inactive for:"
 msgstr ""
 
-#: src/MainView.vala:160
+#: src/MainView.vala:157
 msgid "Power button:"
 msgstr ""
 
-#: src/MainView.vala:171 src/MainView.vala:193
+#: src/MainView.vala:168 src/MainView.vala:190
 msgid "Suspend when inactive for:"
 msgstr ""
 
-#: src/MainView.vala:186
+#: src/MainView.vala:183
 msgid "Plugged In"
 msgstr "Cắm điện"
 
-#: src/MainView.vala:208
+#: src/MainView.vala:205
 msgid "On Battery"
-msgstr ""
-
-#: src/MainView.vala:230
-msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
 
 #: src/Plug.vala:32
@@ -124,35 +120,35 @@ msgstr ""
 msgid "Suspend inactive"
 msgstr "Tạm dừng"
 
-#: src/Widgets/TimeoutComboBox.vala:83
+#: src/Widgets/TimeoutComboBox.vala:91
 msgid "Never"
 msgstr "Không bao giờ"
 
-#: src/Widgets/TimeoutComboBox.vala:84
+#: src/Widgets/TimeoutComboBox.vala:92
 msgid "5 min"
 msgstr "5 phút"
 
-#: src/Widgets/TimeoutComboBox.vala:85
+#: src/Widgets/TimeoutComboBox.vala:93
 msgid "10 min"
 msgstr "10 phút"
 
-#: src/Widgets/TimeoutComboBox.vala:86
+#: src/Widgets/TimeoutComboBox.vala:94
 msgid "15 min"
 msgstr ""
 
-#: src/Widgets/TimeoutComboBox.vala:87
+#: src/Widgets/TimeoutComboBox.vala:95
 msgid "30 min"
 msgstr "30 phút"
 
-#: src/Widgets/TimeoutComboBox.vala:88
+#: src/Widgets/TimeoutComboBox.vala:96
 msgid "45 min"
 msgstr ""
 
-#: src/Widgets/TimeoutComboBox.vala:89
+#: src/Widgets/TimeoutComboBox.vala:97
 msgid "1 hour"
 msgstr "1 giờ"
 
-#: src/Widgets/TimeoutComboBox.vala:90
+#: src/Widgets/TimeoutComboBox.vala:98
 msgid "2 hours"
 msgstr ""
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-07 16:43+0000\n"
+"POT-Creation-Date: 2020-08-26 18:14+0000\n"
 "PO-Revision-Date: 2018-03-21 19:52+0000\n"
 "Last-Translator: Jernej Virag <jernej@virag.si>\n"
 "Language-Team: Slovenian <https://weblate.elementary.io/projects/switchboard/"
@@ -33,49 +33,45 @@ msgstr "Skrbniške pravice so potrebne za spreminjanje vseh nastavitev"
 msgid "You do not have permission to change this"
 msgstr "Nimate dovoljenja za spreminjanje teh nastavitev"
 
-#: src/MainView.vala:68
+#: src/MainView.vala:66
 msgid "Display brightness:"
 msgstr "Svetlost zaslona:"
 
-#: src/MainView.vala:72
+#: src/MainView.vala:70
 msgid "Automatically adjust brightness:"
 msgstr "Samodejno prilagajanje svetlosti:"
 
-#: src/MainView.vala:100
+#: src/MainView.vala:98
 msgid "When lid is closed:"
 msgstr "Ob zaprtju pokrova:"
 
-#: src/MainView.vala:106
+#: src/MainView.vala:104
 msgid "When lid is closed with external monitor:"
 msgstr "Ob zaprtju pokrova s priključenim zunanjim zaslonom:"
 
-#: src/MainView.vala:132
+#: src/MainView.vala:130
 msgid "Some settings require administrator rights to be changed"
 msgstr "Za spreminjanje nekaterih nastavitev so potrebne skrbniške pravice"
 
-#: src/MainView.vala:153
+#: src/MainView.vala:151
 msgid "Turn off display when inactive for:"
 msgstr "Ob nedejavnosti izklopi zaslon po:"
 
-#: src/MainView.vala:160
+#: src/MainView.vala:157
 msgid "Power button:"
 msgstr "Ob pritisku gumba za vklop:"
 
-#: src/MainView.vala:171 src/MainView.vala:193
+#: src/MainView.vala:168 src/MainView.vala:190
 msgid "Suspend when inactive for:"
 msgstr "Ob nedejavnosti v spanje po:"
 
-#: src/MainView.vala:186
+#: src/MainView.vala:183
 msgid "Plugged In"
 msgstr "Priključeno"
 
-#: src/MainView.vala:208
+#: src/MainView.vala:205
 msgid "On Battery"
 msgstr "Na bateriji"
-
-#: src/MainView.vala:230
-msgid "Some changes will not take effect until you restart this computer"
-msgstr "Nekatere spremembe bodo vidne samo po ponovnem zagonu sistema"
 
 #: src/Plug.vala:32
 msgid "Power"
@@ -125,35 +121,35 @@ msgstr "Zaprje pokrova na postaji"
 msgid "Suspend inactive"
 msgstr "Spanje neaktivno"
 
-#: src/Widgets/TimeoutComboBox.vala:83
+#: src/Widgets/TimeoutComboBox.vala:91
 msgid "Never"
 msgstr "Nikoli"
 
-#: src/Widgets/TimeoutComboBox.vala:84
+#: src/Widgets/TimeoutComboBox.vala:92
 msgid "5 min"
 msgstr "5 minutah"
 
-#: src/Widgets/TimeoutComboBox.vala:85
+#: src/Widgets/TimeoutComboBox.vala:93
 msgid "10 min"
 msgstr "10 minutah"
 
-#: src/Widgets/TimeoutComboBox.vala:86
+#: src/Widgets/TimeoutComboBox.vala:94
 msgid "15 min"
 msgstr "15 minutah"
 
-#: src/Widgets/TimeoutComboBox.vala:87
+#: src/Widgets/TimeoutComboBox.vala:95
 msgid "30 min"
 msgstr "30 minutah"
 
-#: src/Widgets/TimeoutComboBox.vala:88
+#: src/Widgets/TimeoutComboBox.vala:96
 msgid "45 min"
 msgstr "45 minutah"
 
-#: src/Widgets/TimeoutComboBox.vala:89
+#: src/Widgets/TimeoutComboBox.vala:97
 msgid "1 hour"
 msgstr "1 uri"
 
-#: src/Widgets/TimeoutComboBox.vala:90
+#: src/Widgets/TimeoutComboBox.vala:98
 msgid "2 hours"
 msgstr "2 urah"
 
@@ -186,6 +182,9 @@ msgstr "Ni podprto"
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
 msgstr ""
+
+#~ msgid "Some changes will not take effect until you restart this computer"
+#~ msgstr "Nekatere spremembe bodo vidne samo po ponovnem zagonu sistema"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Ob nedejavnosti zatemni zaslon:"

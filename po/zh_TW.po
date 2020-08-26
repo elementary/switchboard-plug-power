@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-07 16:43+0000\n"
+"POT-Creation-Date: 2020-08-26 18:14+0000\n"
 "PO-Revision-Date: 2020-03-01 14:09+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
@@ -32,49 +32,45 @@ msgstr "需要核對身份才能管理電源設定值"
 msgid "You do not have permission to change this"
 msgstr "您無權更改此設定"
 
-#: src/MainView.vala:68
+#: src/MainView.vala:66
 msgid "Display brightness:"
 msgstr "顯示器亮度："
 
-#: src/MainView.vala:72
+#: src/MainView.vala:70
 msgid "Automatically adjust brightness:"
 msgstr "自動調整亮度："
 
-#: src/MainView.vala:100
+#: src/MainView.vala:98
 msgid "When lid is closed:"
 msgstr "當闔起上蓋時："
 
-#: src/MainView.vala:106
+#: src/MainView.vala:104
 msgid "When lid is closed with external monitor:"
 msgstr "當上蓋關閉但有外部螢幕時："
 
-#: src/MainView.vala:132
+#: src/MainView.vala:130
 msgid "Some settings require administrator rights to be changed"
 msgstr "有些設定值需要有管理員權利才能變更"
 
-#: src/MainView.vala:153
+#: src/MainView.vala:151
 msgid "Turn off display when inactive for:"
 msgstr "關閉顯示器前的不使用時間："
 
-#: src/MainView.vala:160
+#: src/MainView.vala:157
 msgid "Power button:"
 msgstr "電源按鈕："
 
-#: src/MainView.vala:171 src/MainView.vala:193
+#: src/MainView.vala:168 src/MainView.vala:190
 msgid "Suspend when inactive for:"
 msgstr "電腦暫停前的不使用時間："
 
-#: src/MainView.vala:186
+#: src/MainView.vala:183
 msgid "Plugged In"
 msgstr "插入電源線"
 
-#: src/MainView.vala:208
+#: src/MainView.vala:205
 msgid "On Battery"
 msgstr "使用電池"
-
-#: src/MainView.vala:230
-msgid "Some changes will not take effect until you restart this computer"
-msgstr "有些更改在您重新啟動電腦之前還不會生效"
 
 #: src/Plug.vala:32
 msgid "Power"
@@ -124,35 +120,35 @@ msgstr "臺座上蓋關閉"
 msgid "Suspend inactive"
 msgstr "暫停停用"
 
-#: src/Widgets/TimeoutComboBox.vala:83
+#: src/Widgets/TimeoutComboBox.vala:91
 msgid "Never"
 msgstr "永不"
 
-#: src/Widgets/TimeoutComboBox.vala:84
+#: src/Widgets/TimeoutComboBox.vala:92
 msgid "5 min"
 msgstr "5 分鐘"
 
-#: src/Widgets/TimeoutComboBox.vala:85
+#: src/Widgets/TimeoutComboBox.vala:93
 msgid "10 min"
 msgstr "10 分鐘"
 
-#: src/Widgets/TimeoutComboBox.vala:86
+#: src/Widgets/TimeoutComboBox.vala:94
 msgid "15 min"
 msgstr "15 分鐘"
 
-#: src/Widgets/TimeoutComboBox.vala:87
+#: src/Widgets/TimeoutComboBox.vala:95
 msgid "30 min"
 msgstr "30 分鐘"
 
-#: src/Widgets/TimeoutComboBox.vala:88
+#: src/Widgets/TimeoutComboBox.vala:96
 msgid "45 min"
 msgstr "45 分鐘"
 
-#: src/Widgets/TimeoutComboBox.vala:89
+#: src/Widgets/TimeoutComboBox.vala:97
 msgid "1 hour"
 msgstr "1 小時"
 
-#: src/Widgets/TimeoutComboBox.vala:90
+#: src/Widgets/TimeoutComboBox.vala:98
 msgid "2 hours"
 msgstr "2 小時"
 
@@ -185,6 +181,9 @@ msgstr "未支援"
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
 msgstr "提請關機"
+
+#~ msgid "Some changes will not take effect until you restart this computer"
+#~ msgstr "有些更改在您重新啟動電腦之前還不會生效"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "不使用時便轉暗顯示器："

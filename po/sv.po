@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-07 16:43+0000\n"
+"POT-Creation-Date: 2020-08-26 18:14+0000\n"
 "PO-Revision-Date: 2018-10-21 12:06+0000\n"
 "Last-Translator: Fredrik B <frbo9002@gmail.com>\n"
 "Language-Team: Swedish <https://weblate.elementary.io/projects/switchboard/"
@@ -32,49 +32,45 @@ msgstr "Autentisering krävs för att hantera ströminställningar"
 msgid "You do not have permission to change this"
 msgstr "Du har inte behörighet att ändra detta"
 
-#: src/MainView.vala:68
+#: src/MainView.vala:66
 msgid "Display brightness:"
 msgstr "Skärmens ljusstyrka:"
 
-#: src/MainView.vala:72
+#: src/MainView.vala:70
 msgid "Automatically adjust brightness:"
 msgstr "Justera skärmens ljusstyrka automatiskt:"
 
-#: src/MainView.vala:100
+#: src/MainView.vala:98
 msgid "When lid is closed:"
 msgstr "När skärmen fälls ned:"
 
-#: src/MainView.vala:106
+#: src/MainView.vala:104
 msgid "When lid is closed with external monitor:"
 msgstr "När skärmen fälls ned med extern bildskärm:"
 
-#: src/MainView.vala:132
+#: src/MainView.vala:130
 msgid "Some settings require administrator rights to be changed"
 msgstr "Vissa inställningar kräver administratörsrättigheter för att ändras"
 
-#: src/MainView.vala:153
+#: src/MainView.vala:151
 msgid "Turn off display when inactive for:"
 msgstr "Stäng av skärm vid inaktivitet i:"
 
-#: src/MainView.vala:160
+#: src/MainView.vala:157
 msgid "Power button:"
 msgstr "Avstängningsknapp:"
 
-#: src/MainView.vala:171 src/MainView.vala:193
+#: src/MainView.vala:168 src/MainView.vala:190
 msgid "Suspend when inactive for:"
 msgstr "Vänteläge vid inaktivitet i:"
 
-#: src/MainView.vala:186
+#: src/MainView.vala:183
 msgid "Plugged In"
 msgstr "Inkopplad"
 
-#: src/MainView.vala:208
+#: src/MainView.vala:205
 msgid "On Battery"
 msgstr "På batteri"
-
-#: src/MainView.vala:230
-msgid "Some changes will not take effect until you restart this computer"
-msgstr "Vissa ändringar verkställs inte förren du startar om datorn"
 
 #: src/Plug.vala:32
 msgid "Power"
@@ -124,35 +120,35 @@ msgstr "Dockad lockstängning"
 msgid "Suspend inactive"
 msgstr "Vänteläge inaktiverat"
 
-#: src/Widgets/TimeoutComboBox.vala:83
+#: src/Widgets/TimeoutComboBox.vala:91
 msgid "Never"
 msgstr "Aldrig"
 
-#: src/Widgets/TimeoutComboBox.vala:84
+#: src/Widgets/TimeoutComboBox.vala:92
 msgid "5 min"
 msgstr "Fem minuter"
 
-#: src/Widgets/TimeoutComboBox.vala:85
+#: src/Widgets/TimeoutComboBox.vala:93
 msgid "10 min"
 msgstr "Tio minuter"
 
-#: src/Widgets/TimeoutComboBox.vala:86
+#: src/Widgets/TimeoutComboBox.vala:94
 msgid "15 min"
 msgstr "15 minuter"
 
-#: src/Widgets/TimeoutComboBox.vala:87
+#: src/Widgets/TimeoutComboBox.vala:95
 msgid "30 min"
 msgstr "30 minuter"
 
-#: src/Widgets/TimeoutComboBox.vala:88
+#: src/Widgets/TimeoutComboBox.vala:96
 msgid "45 min"
 msgstr "45 minuter"
 
-#: src/Widgets/TimeoutComboBox.vala:89
+#: src/Widgets/TimeoutComboBox.vala:97
 msgid "1 hour"
 msgstr "En timme"
 
-#: src/Widgets/TimeoutComboBox.vala:90
+#: src/Widgets/TimeoutComboBox.vala:98
 msgid "2 hours"
 msgstr "2 timmar"
 
@@ -185,6 +181,9 @@ msgstr "Stöds ej"
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
 msgstr ""
+
+#~ msgid "Some changes will not take effect until you restart this computer"
+#~ msgstr "Vissa ändringar verkställs inte förren du startar om datorn"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Dämpa skärmens ljusstyrka vid inaktivitet:"

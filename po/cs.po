@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-07 16:43+0000\n"
+"POT-Creation-Date: 2020-08-26 18:14+0000\n"
 "PO-Revision-Date: 2020-05-29 15:23+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
@@ -32,49 +32,45 @@ msgstr "Pro nastavení napájení je vyžadováno ověření uživatele"
 msgid "You do not have permission to change this"
 msgstr "Nemáte oprávnění k této změně"
 
-#: src/MainView.vala:68
+#: src/MainView.vala:66
 msgid "Display brightness:"
 msgstr "Jas displeje:"
 
-#: src/MainView.vala:72
+#: src/MainView.vala:70
 msgid "Automatically adjust brightness:"
 msgstr "Automaticky přizpůsobit jas:"
 
-#: src/MainView.vala:100
+#: src/MainView.vala:98
 msgid "When lid is closed:"
 msgstr "Když je víko zavřeno:"
 
-#: src/MainView.vala:106
+#: src/MainView.vala:104
 msgid "When lid is closed with external monitor:"
 msgstr "Když je víko zavřeno a připojen externí monitor:"
 
-#: src/MainView.vala:132
+#: src/MainView.vala:130
 msgid "Some settings require administrator rights to be changed"
 msgstr "Některá nastavení vyžadují oprávnění na úrovni správce systému"
 
-#: src/MainView.vala:153
+#: src/MainView.vala:151
 msgid "Turn off display when inactive for:"
 msgstr "Vypnout obrazovku, když je neaktivní po dobu:"
 
-#: src/MainView.vala:160
+#: src/MainView.vala:157
 msgid "Power button:"
 msgstr "Tlačítko napájení:"
 
-#: src/MainView.vala:171 src/MainView.vala:193
+#: src/MainView.vala:168 src/MainView.vala:190
 msgid "Suspend when inactive for:"
 msgstr "Uspat, když je neaktivní po dobu:"
 
-#: src/MainView.vala:186
+#: src/MainView.vala:183
 msgid "Plugged In"
 msgstr "Připojeno"
 
-#: src/MainView.vala:208
+#: src/MainView.vala:205
 msgid "On Battery"
 msgstr "Z baterie"
-
-#: src/MainView.vala:230
-msgid "Some changes will not take effect until you restart this computer"
-msgstr "Některé změny se neprojeví dokud nerestartujete tento počítač"
 
 #: src/Plug.vala:32
 msgid "Power"
@@ -124,35 +120,35 @@ msgstr "Zavření víka při připojeném doku"
 msgid "Suspend inactive"
 msgstr "Uspat neaktivní"
 
-#: src/Widgets/TimeoutComboBox.vala:83
+#: src/Widgets/TimeoutComboBox.vala:91
 msgid "Never"
 msgstr "Nikdy"
 
-#: src/Widgets/TimeoutComboBox.vala:84
+#: src/Widgets/TimeoutComboBox.vala:92
 msgid "5 min"
 msgstr "5 min"
 
-#: src/Widgets/TimeoutComboBox.vala:85
+#: src/Widgets/TimeoutComboBox.vala:93
 msgid "10 min"
 msgstr "10 min"
 
-#: src/Widgets/TimeoutComboBox.vala:86
+#: src/Widgets/TimeoutComboBox.vala:94
 msgid "15 min"
 msgstr "15 min"
 
-#: src/Widgets/TimeoutComboBox.vala:87
+#: src/Widgets/TimeoutComboBox.vala:95
 msgid "30 min"
 msgstr "30 min"
 
-#: src/Widgets/TimeoutComboBox.vala:88
+#: src/Widgets/TimeoutComboBox.vala:96
 msgid "45 min"
 msgstr "45 min"
 
-#: src/Widgets/TimeoutComboBox.vala:89
+#: src/Widgets/TimeoutComboBox.vala:97
 msgid "1 hour"
 msgstr "1 hod"
 
-#: src/Widgets/TimeoutComboBox.vala:90
+#: src/Widgets/TimeoutComboBox.vala:98
 msgid "2 hours"
 msgstr "2 hodiny"
 
@@ -185,6 +181,9 @@ msgstr "Nepodporováno"
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
 msgstr "Výzva ohledně vypnutí"
+
+#~ msgid "Some changes will not take effect until you restart this computer"
+#~ msgstr "Některé změny se neprojeví dokud nerestartujete tento počítač"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Ztmavit obrazovku, když je neaktivní:"
