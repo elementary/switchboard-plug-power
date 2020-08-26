@@ -27,8 +27,6 @@ public class LoginDHelper.Application : GLib.Application {
     private uint timeout_id = 0;
     private uint own_id = -1;
 
-    private SystemDBus? systemd_bus_proxy = null;
-
     construct {
         application_id = Power.LOGIND_HELPER_NAME;
     }
@@ -78,7 +76,7 @@ public class LoginDHelper.Application : GLib.Application {
 
         /* We need to restart systemd-logind to ensure that the lid settings are taken into account */
         try {
-            systemd_bus_proxy = Bus.get_proxy_sync (BusType.SYSTEM, "org.freedesktop.systemd1", "/org/freedesktop/systemd1");
+            var systemd_bus_proxy = Bus.get_proxy_sync (BusType.SYSTEM, "org.freedesktop.systemd1", "/org/freedesktop/systemd1");
             systemd_bus_proxy.reload_or_try_restart_unit ("systemd-logind.service", "fail");
         } catch (Error e) {
             warning (e.message);
