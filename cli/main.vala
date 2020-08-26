@@ -19,7 +19,7 @@
 
 [DBus (name = "org.freedesktop.systemd1.Manager")]
 interface SystemDBus : Object {
-    public abstract GLib.ObjectPath reload_or_try_restart_unit (string unit, string mode) throws IOError;
+    public abstract GLib.ObjectPath reload_or_try_restart_unit (string unit, string mode) throws GLib.Error;
 }
 
 public class LoginDHelper.Application : GLib.Application {
@@ -27,7 +27,7 @@ public class LoginDHelper.Application : GLib.Application {
     private uint timeout_id = 0;
     private uint own_id = -1;
 
-    private static SystemDBus? systemd_bus_proxy = null;
+    private SystemDBus? systemd_bus_proxy = null;
 
     construct {
         application_id = Power.LOGIND_HELPER_NAME;
