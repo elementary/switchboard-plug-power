@@ -61,8 +61,9 @@ namespace Power {
             }
         }
 
-        private GLib.Settings schema;
-        private string key;
+        public GLib.Settings schema { get; construct; }
+        public string key { get; construct; }
+        private VariantType key_type;
 
         private const int SECS_IN_MINUTE = 60;
         private const int[] TIMEOUT = {
@@ -76,9 +77,16 @@ namespace Power {
             120 * SECS_IN_MINUTE
         };
 
-        public TimeoutComboBox (GLib.Settings schema_name, string key_value) {
-            key = key_value;
-            schema = schema_name;
+        public TimeoutComboBox (GLib.Settings schema, string key) {
+            Object (key: key, schema: schema);
+
+            update_combo ();
+        }
+
+        construct {
+            key_type = schema.get_value (key).get_type ();
+
+            hexpand = true;
 
             append_text (_("Never"));
             append_text (_("5 min"));
@@ -89,11 +97,7 @@ namespace Power {
             append_text (_("1 hour"));
             append_text (_("2 hours"));
 
-            hexpand = true;
-
             setup_accountsservice.begin ();
-
-            update_combo ();
 
             changed.connect (update_settings);
             schema.changed[key].connect (update_combo);
@@ -124,7 +128,17 @@ namespace Power {
                 }
             }
 
-            schema.set_int (key, TIMEOUT[active]);
+            schema.changed[key].disconnect (update_combo);
+
+            if (key_type.equal (VariantType.UINT32)) {
+                schema.set_uint (key, (uint)TIMEOUT[active]);
+            } else if (key_type.equal (VariantType.INT32)) {
+                schema.set_int (key, TIMEOUT[active]);
+            } else {
+                critical ("Unsupported key type in schema");
+            }
+
+            schema.changed[key].connect (update_combo);
 
             if (greeter_act != null) {
                 if (key == "sleep-inactive-ac-timeout") {
@@ -152,7 +166,15 @@ namespace Power {
         }
 
         private void update_combo () {
-            int val = schema.get_int (key);
+            int val = 0;
+
+            if (key_type.equal (VariantType.UINT32)) {
+                val = (int)schema.get_uint (key);
+            } else if (key_type.equal (VariantType.INT32)) {
+                val = schema.get_int (key);
+            } else {
+                critical ("Unsupported key type in schema");
+            }
 
             if (enum_property != null && enum_never_value != -1 && enum_normal_value != -1) {
                 var enum_value = schema.get_enum (enum_property);
@@ -163,7 +185,9 @@ namespace Power {
             }
 
             // need to process value to comply our timeout level
+            changed.disconnect (update_settings);
             active = find_closest (val);
+            changed.connect (update_settings);
         }
     }
 }
