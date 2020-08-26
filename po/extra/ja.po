@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:46+0200\n"
-"PO-Revision-Date: 2019-05-19 14:15+0000\n"
+"POT-Creation-Date: 2020-05-16 21:25+0000\n"
+"PO-Revision-Date: 2020-06-07 13:11+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "power-plug-extra/ja/>\n"
@@ -17,12 +17,32 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 3.9.1\n"
 
 #: data/power.appdata.xml.in:5
-msgid "Power"
-msgstr "電源"
+msgid "Power Settings"
+msgstr "電源の設定"
 
 #: data/power.appdata.xml.in:6
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "ディスプレイの明るさ、電源ボタン、サスペンドの動作を設定します"
+
+#: data/power.appdata.xml.in:12
+msgid "Fix potential freeze when changing settings from multiple panes"
+msgstr "複数のペインから設定を変更した際にフリーズすることがある不具合を修正"
+
+#: data/power.appdata.xml.in:13 data/power.appdata.xml.in:18
+#: data/power.appdata.xml.in:25
+msgid "Updated translations"
+msgstr "翻訳の更新"
+
+#: data/power.appdata.xml.in:23
+msgid "Remove broken hibernate option"
+msgstr "機能しないハイバーネートオプションを削除"
+
+#: data/power.appdata.xml.in:24
+msgid "Add prompt to shutdown to power button actions"
+msgstr "電源ボタンを押したときの動作に“シャットダウンの確認”を追加"
+
+#~ msgid "Power"
+#~ msgstr "電源"

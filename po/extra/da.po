@@ -7,20 +7,40 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:46+0200\n"
-"PO-Revision-Date: 2019-05-09 18:04-0700\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"POT-Creation-Date: 2020-05-16 21:25+0000\n"
+"PO-Revision-Date: 2020-05-28 13:11+0000\n"
+"Last-Translator: Rantyrant <diseasemonger@gmail.com>\n"
+"Language-Team: Danish <https://l10n.elementary.io/projects/switchboard/"
+"power-plug-extra/da/>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 #: data/power.appdata.xml.in:5
-msgid "Power"
+msgid "Power Settings"
 msgstr ""
 
 #: data/power.appdata.xml.in:6
 msgid "Configure display brightness, power buttons, and suspend behavior"
+msgstr ""
+"Konfigurer skærmens lysstyrke, tænd / sluk-knapper og suspenderings opførsel"
+
+#: data/power.appdata.xml.in:12
+msgid "Fix potential freeze when changing settings from multiple panes"
+msgstr ""
+
+#: data/power.appdata.xml.in:13 data/power.appdata.xml.in:18
+#: data/power.appdata.xml.in:25
+msgid "Updated translations"
+msgstr "Opdaterede oversættelser"
+
+#: data/power.appdata.xml.in:23
+msgid "Remove broken hibernate option"
+msgstr ""
+
+#: data/power.appdata.xml.in:24
+msgid "Add prompt to shutdown to power button actions"
 msgstr ""

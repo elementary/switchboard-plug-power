@@ -36,7 +36,7 @@ public class LoginDHelper.Server : Object {
     private KeyFile file;
 
     private bool _present = false;
-    public bool present { 
+    public bool present {
         get {
             reset_timeout ();
             return _present;
@@ -61,7 +61,7 @@ public class LoginDHelper.Server : Object {
         } catch (Error e) {
             warning (e.message);
             bus_proxy = null;
-        }        
+        }
     }
 
     construct {
@@ -119,7 +119,7 @@ public class LoginDHelper.Server : Object {
 
         try {
             return file.get_string (CONFIG_GROUP, key);
-        }  catch (Error e) {
+        } catch (Error e) {
             throw e;
         }
     }
@@ -148,18 +148,23 @@ public class LoginDHelper.Server : Object {
         } catch (Error e) {
             warning (e.message);
             return false;
-        }            
+        }
 
         var subject = new Polkit.UnixProcess.for_owner ((int)pid, 0, (int)user);
 
         try {
             var authority = Polkit.Authority.get_sync (null);
-            var auth_result = authority.check_authorization_sync (subject, ACTION_ID, null, Polkit.CheckAuthorizationFlags.NONE);
+            var auth_result = authority.check_authorization_sync (
+                subject,
+                ACTION_ID,
+                null,
+                Polkit.CheckAuthorizationFlags.NONE
+            );
             return auth_result.get_is_authorized ();
         } catch (Error e) {
             warning (e.message);
         }
 
         return false;
-    } 
+    }
 }

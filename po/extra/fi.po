@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-09 18:04-0700\n"
-"PO-Revision-Date: 2019-06-20 21:07+0000\n"
+"POT-Creation-Date: 2020-05-16 21:25+0000\n"
+"PO-Revision-Date: 2020-02-22 14:09+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "power-plug-extra/fi/>\n"
@@ -17,12 +17,32 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 3.9.1\n"
 
 #: data/power.appdata.xml.in:5
-msgid "Power"
-msgstr "Virransäästö"
+msgid "Power Settings"
+msgstr ""
 
 #: data/power.appdata.xml.in:6
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "Määritä näytön kirkkaus sekä virtapainikkeiden ja lepotilan toiminta"
+
+#: data/power.appdata.xml.in:12
+msgid "Fix potential freeze when changing settings from multiple panes"
+msgstr ""
+
+#: data/power.appdata.xml.in:13 data/power.appdata.xml.in:18
+#: data/power.appdata.xml.in:25
+msgid "Updated translations"
+msgstr "Päivitetyt käännökset"
+
+#: data/power.appdata.xml.in:23
+msgid "Remove broken hibernate option"
+msgstr ""
+
+#: data/power.appdata.xml.in:24
+msgid "Add prompt to shutdown to power button actions"
+msgstr ""
+
+#~ msgid "Power"
+#~ msgstr "Virransäästö"

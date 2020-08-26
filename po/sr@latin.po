@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-27 12:22-0800\n"
+"POT-Creation-Date: 2019-11-07 16:43+0000\n"
 "PO-Revision-Date: 2013-08-19 09:36+0000\n"
 "Last-Translator: Иван Благојевић <ivan_blagojevic@mail.com>\n"
 "Language-Team: Serbian Latin <sr@latin@li.org>\n"
@@ -18,189 +18,175 @@ msgstr ""
 "X-Launchpad-Export-Date: 2016-11-21 05:42+0000\n"
 "X-Generator: Launchpad (build 18269)\n"
 
-#. //launchpad.net/switchboard-plug-power)
-#. *
-#. * This program is free software; you can redistribute it and/or
-#. * modify it under the terms of the GNU General Public
-#. * License as published by the Free Software Foundation; either
-#. * version 2 of the License, or (at your option) any later version.
-#. *
-#. * This program is distributed in the hope that it will be useful,
-#. * but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-#. * General Public License for more details.
-#. *
-#. * You should have received a copy of the GNU General Public License
-#. * along with this program; if not, write to the Free Software
-#. * Foundation, Inc., 51 Franklin Street, Fifth Floor,
-#. * Boston, MA  02110-1301, USA.
-#.
-#: ../src/Translations.vala:20
-msgid "Manage power settings "
+#: data/io.elementary.switchboard.power.policy.in:10
+msgid "Manage power settings"
 msgstr ""
 
-#: ../src/Translations.vala:21
+#: data/io.elementary.switchboard.power.policy.in:11
 msgid "Authentication is required to manage power settings"
 msgstr ""
 
-#: ../src/Plug.vala:35
+#: src/MainView.vala:24
 msgid "You do not have permission to change this"
 msgstr ""
 
-#: ../src/Plug.vala:55
-msgid "Power"
-msgstr "Snaga"
-
-#: ../src/Plug.vala:56
-msgid "Configure display brightness, power buttons, and sleep behavior"
-msgstr ""
-
-#: ../src/Plug.vala:75
-msgid "Plugged In"
-msgstr "Prikopčan"
-
-#: ../src/Plug.vala:83
-msgid "On Battery"
-msgstr ""
-
-#: ../src/Plug.vala:143
-msgid "Sleep button"
-msgstr ""
-
-#: ../src/Plug.vala:144
-msgid "Power button"
-msgstr ""
-
-#: ../src/Plug.vala:145
-msgid "Display inactive"
-msgstr ""
-
-#: ../src/Plug.vala:146
-msgid "Dim display"
-msgstr ""
-
-#: ../src/Plug.vala:147
-msgid "Lid close"
-msgstr ""
-
-#: ../src/Plug.vala:148
-msgid "Display brightness"
-msgstr ""
-
-#: ../src/Plug.vala:149
-msgid "Automatic brightness adjustment"
-msgstr ""
-
-#: ../src/Plug.vala:150
-msgid "Inactive display off"
-msgstr ""
-
-#: ../src/Plug.vala:151
-msgid "Docked lid close"
-msgstr ""
-
-#: ../src/Plug.vala:152
-msgid "Sleep inactive"
-msgstr ""
-
-#: ../src/Plug.vala:166
-msgid "Some changes will not take effect until you restart this computer"
-msgstr ""
-
-#: ../src/Plug.vala:187
-msgid "Some settings require administrator rights to be changed"
-msgstr ""
-
-#: ../src/Plug.vala:212
+#: src/MainView.vala:68
 msgid "Display brightness:"
 msgstr ""
 
-#: ../src/Plug.vala:216
+#: src/MainView.vala:72
 msgid "Automatically adjust brightness:"
 msgstr ""
 
-#: ../src/Plug.vala:244
+#: src/MainView.vala:100
 msgid "When lid is closed:"
 msgstr ""
 
-#: ../src/Plug.vala:252
+#: src/MainView.vala:106
 msgid "When lid is closed with external monitor:"
 msgstr ""
 
-#: ../src/Plug.vala:300
+#: src/MainView.vala:132
+msgid "Some settings require administrator rights to be changed"
+msgstr ""
+
+#: src/MainView.vala:153
 msgid "Turn off display when inactive for:"
 msgstr ""
 
-#: ../src/Plug.vala:307
+#: src/MainView.vala:160
 msgid "Power button:"
 msgstr "Дугме за укључивање:"
 
-#: ../src/Plug.vala:342
-msgid "Sleep when inactive for:"
+#: src/MainView.vala:171 src/MainView.vala:193
+msgid "Suspend when inactive for:"
 msgstr ""
 
-#: ../src/Plug.vala:361
-msgid "Dim display when inactive:"
+#: src/MainView.vala:186
+msgid "Plugged In"
+msgstr "Prikopčan"
+
+#: src/MainView.vala:208
+msgid "On Battery"
 msgstr ""
 
-#: ../src/Widgets/LidCloseActionComboBox.vala:32
-#: ../src/Widgets/ActionComboBox.vala:33
-msgid "Suspend"
+#: src/MainView.vala:230
+msgid "Some changes will not take effect until you restart this computer"
+msgstr ""
+
+#: src/Plug.vala:32
+msgid "Power"
+msgstr "Snaga"
+
+#: src/Plug.vala:33
+msgid "Configure display brightness, power buttons, and suspend behavior"
+msgstr ""
+
+#: src/Plug.vala:68
+#, fuzzy
+#| msgid "Suspend"
+msgid "Suspend button"
 msgstr "Suspenduj"
 
-#: ../src/Widgets/LidCloseActionComboBox.vala:33
-msgid "Shutdown"
-msgstr "Isključi"
-
-#: ../src/Widgets/LidCloseActionComboBox.vala:34
-msgid "Lock"
+#: src/Plug.vala:69
+msgid "Power button"
 msgstr ""
 
-#: ../src/Widgets/LidCloseActionComboBox.vala:35
-msgid "Halt"
+#: src/Plug.vala:70
+msgid "Display inactive"
 msgstr ""
 
-#: ../src/Widgets/LidCloseActionComboBox.vala:36
-#: ../src/Widgets/ActionComboBox.vala:32
-msgid "Do nothing"
-msgstr "Ne radi ništa"
-
-#: ../src/Widgets/LidCloseActionComboBox.vala:38
-msgid "Not supported"
+#: src/Plug.vala:71
+msgid "Dim display"
 msgstr ""
 
-#: ../src/Widgets/ActionComboBox.vala:34
-msgid "Hibernate"
-msgstr "Primeni hibernaciju"
+#: src/Plug.vala:72
+msgid "Lid close"
+msgstr ""
 
-#: ../src/Widgets/TimeoutComboBox.vala:42
+#: src/Plug.vala:73
+msgid "Display brightness"
+msgstr ""
+
+#: src/Plug.vala:74
+msgid "Automatic brightness adjustment"
+msgstr ""
+
+#: src/Plug.vala:75
+msgid "Inactive display off"
+msgstr ""
+
+#: src/Plug.vala:76
+msgid "Docked lid close"
+msgstr ""
+
+#: src/Plug.vala:77
+#, fuzzy
+#| msgid "Suspend"
+msgid "Suspend inactive"
+msgstr "Suspenduj"
+
+#: src/Widgets/TimeoutComboBox.vala:83
 msgid "Never"
 msgstr "Nikada"
 
-#: ../src/Widgets/TimeoutComboBox.vala:43
+#: src/Widgets/TimeoutComboBox.vala:84
 msgid "5 min"
 msgstr "5 min."
 
-#: ../src/Widgets/TimeoutComboBox.vala:44
+#: src/Widgets/TimeoutComboBox.vala:85
 msgid "10 min"
 msgstr "10 min"
 
-#: ../src/Widgets/TimeoutComboBox.vala:45
+#: src/Widgets/TimeoutComboBox.vala:86
 msgid "15 min"
 msgstr ""
 
-#: ../src/Widgets/TimeoutComboBox.vala:46
+#: src/Widgets/TimeoutComboBox.vala:87
 msgid "30 min"
 msgstr "30 min"
 
-#: ../src/Widgets/TimeoutComboBox.vala:47
+#: src/Widgets/TimeoutComboBox.vala:88
 msgid "45 min"
 msgstr ""
 
-#: ../src/Widgets/TimeoutComboBox.vala:48
+#: src/Widgets/TimeoutComboBox.vala:89
 msgid "1 hour"
 msgstr "1 sat"
 
-#: ../src/Widgets/TimeoutComboBox.vala:49
+#: src/Widgets/TimeoutComboBox.vala:90
 msgid "2 hours"
 msgstr ""
+
+#: src/Widgets/LidCloseActionComboBox.vala:32
+#: src/Widgets/ActionComboBox.vala:33
+msgid "Suspend"
+msgstr "Suspenduj"
+
+#: src/Widgets/LidCloseActionComboBox.vala:33
+msgid "Shutdown"
+msgstr "Isključi"
+
+#: src/Widgets/LidCloseActionComboBox.vala:34
+msgid "Lock"
+msgstr ""
+
+#: src/Widgets/LidCloseActionComboBox.vala:35
+msgid "Halt"
+msgstr ""
+
+#: src/Widgets/LidCloseActionComboBox.vala:36
+#: src/Widgets/ActionComboBox.vala:32
+msgid "Do nothing"
+msgstr "Ne radi ništa"
+
+#: src/Widgets/LidCloseActionComboBox.vala:38
+msgid "Not supported"
+msgstr ""
+
+#: src/Widgets/ActionComboBox.vala:34
+msgid "Prompt to shutdown"
+msgstr ""
+
+#~ msgid "Hibernate"
+#~ msgstr "Primeni hibernaciju"

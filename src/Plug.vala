@@ -75,7 +75,7 @@ namespace Power {
             search_results.set ("%s → %s".printf (display_name, _("Inactive display off")), "");
             search_results.set ("%s → %s".printf (display_name, _("Docked lid close")), "");
             search_results.set ("%s → %s".printf (display_name, _("Suspend inactive")), "");
-            return search_results;;
+            return search_results;
         }
     }
 }

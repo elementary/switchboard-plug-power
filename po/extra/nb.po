@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-09 18:04-0700\n"
+"POT-Creation-Date: 2020-05-16 21:25+0000\n"
 "PO-Revision-Date: 2019-06-27 14:12+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
@@ -20,9 +20,29 @@ msgstr ""
 "X-Generator: Weblate 3.6.1\n"
 
 #: data/power.appdata.xml.in:5
-msgid "Power"
-msgstr "Strøm"
+msgid "Power Settings"
+msgstr ""
 
 #: data/power.appdata.xml.in:6
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "Sett opp skjermlysstyrke, på-knapper, og dvalgangsoppførsel"
+
+#: data/power.appdata.xml.in:12
+msgid "Fix potential freeze when changing settings from multiple panes"
+msgstr ""
+
+#: data/power.appdata.xml.in:13 data/power.appdata.xml.in:18
+#: data/power.appdata.xml.in:25
+msgid "Updated translations"
+msgstr ""
+
+#: data/power.appdata.xml.in:23
+msgid "Remove broken hibernate option"
+msgstr ""
+
+#: data/power.appdata.xml.in:24
+msgid "Add prompt to shutdown to power button actions"
+msgstr ""
+
+#~ msgid "Power"
+#~ msgstr "Strøm"

@@ -27,7 +27,7 @@ namespace Power {
     public interface DBus : Object {
         [DBus (name = "GetConnectionUnixProcessID")]
         public abstract uint32 get_connection_unix_process_id (string name) throws IOError;
-        
+
         public abstract uint32 get_connection_unix_user (string name) throws IOError;
     }
 

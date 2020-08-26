@@ -60,7 +60,7 @@ namespace Power {
                     }
                 }
             } catch (Error e) {
-                critical("acpi couldn't get upower devices");
+                critical ("acpi couldn't get upower devices");
             }
 
             return path;

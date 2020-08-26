@@ -7,20 +7,39 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:46+0200\n"
-"PO-Revision-Date: 2019-05-09 18:04-0700\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"POT-Creation-Date: 2020-05-16 21:25+0000\n"
+"PO-Revision-Date: 2020-05-29 15:23+0000\n"
+"Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
+"Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
+"power-plug-extra/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 #: data/power.appdata.xml.in:5
-msgid "Power"
-msgstr ""
+msgid "Power Settings"
+msgstr "Nastavení správy napájení"
 
 #: data/power.appdata.xml.in:6
 msgid "Configure display brightness, power buttons, and suspend behavior"
-msgstr ""
+msgstr "Nastavuje jas obrazovky, tlačítka napájení a chování uspávání"
+
+#: data/power.appdata.xml.in:12
+msgid "Fix potential freeze when changing settings from multiple panes"
+msgstr "Opraveno potenciální mrznutí při změně nastavení z vícero podoken"
+
+#: data/power.appdata.xml.in:13 data/power.appdata.xml.in:18
+#: data/power.appdata.xml.in:25
+msgid "Updated translations"
+msgstr "Aktualizovány překlady"
+
+#: data/power.appdata.xml.in:23
+msgid "Remove broken hibernate option"
+msgstr "Odebrání rozbité volby pro hibernaci"
+
+#: data/power.appdata.xml.in:24
+msgid "Add prompt to shutdown to power button actions"
+msgstr "Přidání výzvy ohledně vypnutí při akci tlačítka napájení"

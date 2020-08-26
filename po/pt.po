@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:46+0200\n"
-"PO-Revision-Date: 2019-08-27 22:23+0000\n"
+"POT-Creation-Date: 2019-11-07 16:43+0000\n"
+"PO-Revision-Date: 2020-03-30 18:09+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/pt/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-01-01 05:31+0000\n"
 
 #: data/io.elementary.switchboard.power.policy.in:10
@@ -34,7 +34,7 @@ msgstr "Não tem permissão para modificar isto"
 
 #: src/MainView.vala:68
 msgid "Display brightness:"
-msgstr "Brilho do Ecrã:"
+msgstr "Brilho do ecrã:"
 
 #: src/MainView.vala:72
 msgid "Automatically adjust brightness:"
@@ -51,7 +51,7 @@ msgstr "Quando a tampa for fechada com monitor externo:"
 #: src/MainView.vala:132
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
-"Algumas definições requerem privilégios administrativos para serem alteradas"
+"Algumas definições requerem privilégios de administrador para serem alteradas"
 
 #: src/MainView.vala:153
 msgid "Turn off display when inactive for:"
@@ -71,7 +71,7 @@ msgstr "Ligado"
 
 #: src/MainView.vala:208
 msgid "On Battery"
-msgstr "Bateria"
+msgstr "A Bateria"
 
 #: src/MainView.vala:230
 msgid "Some changes will not take effect until you restart this computer"
@@ -119,41 +119,41 @@ msgstr "Ecrã inativo desligado"
 
 #: src/Plug.vala:76
 msgid "Docked lid close"
-msgstr "Tampa fechada com Dock"
+msgstr "Tampa fechada com fechadura"
 
 #: src/Plug.vala:77
 msgid "Suspend inactive"
 msgstr "Suspensão inativa"
 
-#: src/Widgets/TimeoutComboBox.vala:81
+#: src/Widgets/TimeoutComboBox.vala:83
 msgid "Never"
 msgstr "Nunca"
 
-#: src/Widgets/TimeoutComboBox.vala:82
+#: src/Widgets/TimeoutComboBox.vala:84
 msgid "5 min"
 msgstr "5 min"
 
-#: src/Widgets/TimeoutComboBox.vala:83
+#: src/Widgets/TimeoutComboBox.vala:85
 msgid "10 min"
 msgstr "10 min"
 
-#: src/Widgets/TimeoutComboBox.vala:84
+#: src/Widgets/TimeoutComboBox.vala:86
 msgid "15 min"
 msgstr "15 min"
 
-#: src/Widgets/TimeoutComboBox.vala:85
+#: src/Widgets/TimeoutComboBox.vala:87
 msgid "30 min"
 msgstr "30 min"
 
-#: src/Widgets/TimeoutComboBox.vala:86
+#: src/Widgets/TimeoutComboBox.vala:88
 msgid "45 min"
 msgstr "45 min"
 
-#: src/Widgets/TimeoutComboBox.vala:87
+#: src/Widgets/TimeoutComboBox.vala:89
 msgid "1 hour"
 msgstr "1 hora"
 
-#: src/Widgets/TimeoutComboBox.vala:88
+#: src/Widgets/TimeoutComboBox.vala:90
 msgid "2 hours"
 msgstr "2 horas"
 

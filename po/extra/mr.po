@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:46+0200\n"
-"PO-Revision-Date: 2019-05-15 17:14+0000\n"
+"POT-Creation-Date: 2020-05-16 21:25+0000\n"
+"PO-Revision-Date: 2019-11-28 16:25+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
 "power-plug-extra/mr/>\n"
@@ -17,12 +17,32 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 3.7.1\n"
 
 #: data/power.appdata.xml.in:5
-msgid "Power"
-msgstr "ऊर्जा"
+msgid "Power Settings"
+msgstr ""
 
 #: data/power.appdata.xml.in:6
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "डिस्प्ले ब्राइटनेस, पॉवर बटणे आणि निलंबन वर्तन कॉन्फिगर करा"
+
+#: data/power.appdata.xml.in:12
+msgid "Fix potential freeze when changing settings from multiple panes"
+msgstr ""
+
+#: data/power.appdata.xml.in:13 data/power.appdata.xml.in:18
+#: data/power.appdata.xml.in:25
+msgid "Updated translations"
+msgstr "अद्ययावत भाषांतर"
+
+#: data/power.appdata.xml.in:23
+msgid "Remove broken hibernate option"
+msgstr "बिघडलेला हायबरनेट पर्याय हटवा"
+
+#: data/power.appdata.xml.in:24
+msgid "Add prompt to shutdown to power button actions"
+msgstr "पॉवर बटण क्रियांमध्ये शटडाउनवर प्रॉम्प्ट जोडा"
+
+#~ msgid "Power"
+#~ msgstr "ऊर्जा"

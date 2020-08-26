@@ -2,8 +2,30 @@
 <component type="addon">
   <id>io.elementary.switchboard.power</id>
   <extends>io.elementary.switchboard</extends>
-  <name>Power</name>
+  <name>Power Settings</name>
   <summary>Configure display brightness, power buttons, and suspend behavior</summary>
+  <icon type="stock">preferences-system-power</icon>
+  <translation type="gettext">power-plug</translation>
+  <releases>
+    <release version="2.4.2" date="2020-05-16" urgency="medium">
+      <description>
+        <p>Fix potential freeze when changing settings from multiple panes</p>
+        <p>Updated translations</p>
+      </description>
+    </release>
+    <release version="2.4.1" date="2020-04-01" urgency="medium">
+      <description>
+        <p>Updated translations</p>
+      </description>
+    </release>
+    <release version="2.4.0" date="2019-11-15" urgency="medium">
+      <description>
+        <p>Remove broken hibernate option</p>
+        <p>Add prompt to shutdown to power button actions</p>
+        <p>Updated translations</p>
+      </description>
+    </release>
+  </releases>
   <screenshots>
     <screenshot type="default">
       <image>https://raw.githubusercontent.com/elementary/switchboard-plug-power/master/data/screenshot.png</image>
