@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2015 elementary Developers (https://launchpad.net/elementary)
+ * Copyright 2011-2020 elementary, Inc. (https://elementary.io)
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -16,6 +16,11 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor,
  * Boston, MA  02110-1301, USA.
  */
+
+[DBus (name = "org.freedesktop.systemd1.Manager")]
+interface SystemDBus : Object {
+    public abstract GLib.ObjectPath reload_or_try_restart_unit (string unit, string mode) throws GLib.Error;
+}
 
 public class LoginDHelper.Application : GLib.Application {
     private const uint ACTIVE_TIMEOUT_SECONDS = 5;
@@ -67,6 +72,14 @@ public class LoginDHelper.Application : GLib.Application {
     public override void shutdown () {
         if (own_id != -1) {
             Bus.unown_name (own_id);
+        }
+
+        /* We need to restart systemd-logind to ensure that the lid settings are taken into account */
+        try {
+            var systemd_bus_proxy = Bus.get_proxy_sync<SystemDBus> (BusType.SYSTEM, "org.freedesktop.systemd1", "/org/freedesktop/systemd1");
+            systemd_bus_proxy.reload_or_try_restart_unit ("systemd-logind.service", "fail");
+        } catch (Error e) {
+            warning (e.message);
         }
 
         base.shutdown ();
