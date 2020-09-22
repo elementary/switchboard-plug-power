@@ -130,7 +130,7 @@ public class LoginDHelper.Server : Object {
      * Gets a full path to the current used logind config file (at the moment this
      * will always return "/etc/systemd/logind.conf")
      */
-    public string get_config_file () {
+    public string get_config_file () throws Error {
         reset_timeout ();
         return CONFIG_FILE;
     }

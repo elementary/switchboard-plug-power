@@ -26,16 +26,16 @@ namespace Power {
     [DBus (name = "org.freedesktop.DBus")]
     public interface DBus : Object {
         [DBus (name = "GetConnectionUnixProcessID")]
-        public abstract uint32 get_connection_unix_process_id (string name) throws IOError;
+        public abstract uint32 get_connection_unix_process_id (string name) throws Error;
 
-        public abstract uint32 get_connection_unix_user (string name) throws IOError;
+        public abstract uint32 get_connection_unix_user (string name) throws Error;
     }
 
     [DBus (name = "io.elementary.logind.helper")]
     public interface LogindHelperIface : Object {
         public abstract bool present { get; }
-        public abstract void set_key (string key, string value) throws IOError;
-        public abstract string get_key (string key) throws IOError;
+        public abstract void set_key (string key, string value) throws Error;
+        public abstract string get_key (string key) throws Error;
         public signal void changed ();
     }
 
@@ -47,7 +47,7 @@ namespace Power {
     [DBus (name = "org.freedesktop.UPower.Device")]
     interface UpowerDevice : Object {
         public signal void changed ();
-        public abstract void refresh () throws IOError;
+        public abstract void refresh () throws Error;
         public abstract bool online { owned get; }
         public abstract bool power_supply { owned get; }
         public abstract bool is_present { owned get; }
@@ -61,6 +61,6 @@ namespace Power {
         public signal void changed ();
         public abstract bool on_battery { owned get; }
         public abstract bool low_on_battery { owned get; }
-        public abstract ObjectPath[] enumerate_devices () throws IOError;
+        public abstract ObjectPath[] enumerate_devices () throws Error;
     }
 }
