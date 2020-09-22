@@ -56,7 +56,7 @@ namespace Power {
                 } else {
                     helper.set_key (HANDLE_LID_SWITCH_KEY, action.to_string ());
                 }
-            } catch (IOError e) {
+            } catch (Error e) {
                 warning (e.message);
             }
 
