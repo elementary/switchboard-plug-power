@@ -83,7 +83,7 @@ public class Power.MainView : Gtk.Grid {
             scale.set_value (screen.brightness);
 
             scale.value_changed.connect (on_scale_value_changed);
-            (screen as DBusProxy).g_properties_changed.connect (on_screen_properties_changed);
+            ((DBusProxy)screen).g_properties_changed.connect (on_screen_properties_changed);
 
             main_grid.attach (brightness_label, 0, 0, 1, 1);
             main_grid.attach (scale, 1, 0, 1, 1);
@@ -281,9 +281,9 @@ public class Power.MainView : Gtk.Grid {
 
     private void on_scale_value_changed () {
         var val = (int) scale.get_value ();
-        (screen as DBusProxy).g_properties_changed.disconnect (on_screen_properties_changed);
+        ((DBusProxy)screen).g_properties_changed.disconnect (on_screen_properties_changed);
         screen.brightness = val;
-        (screen as DBusProxy).g_properties_changed.connect (on_screen_properties_changed);
+        ((DBusProxy)screen).g_properties_changed.connect (on_screen_properties_changed);
     }
 
     private void on_screen_properties_changed (Variant changed_properties, string[] invalidated_properties) {
