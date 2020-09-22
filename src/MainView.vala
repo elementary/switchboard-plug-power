@@ -273,7 +273,7 @@ public class Power.MainView : Gtk.Grid {
             enumerator.close ();
 
         } catch (GLib.Error err) {
-            critical ("%s", err.message);
+            warning ("%s", err.message); //Not critical as this eventuality is dealt with
         }
 
         return false;
