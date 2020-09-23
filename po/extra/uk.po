@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-16 21:25+0000\n"
-"PO-Revision-Date: 2020-09-17 00:14+0000\n"
+"PO-Revision-Date: 2020-09-24 16:44+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "power-plug-extra/uk/>\n"
@@ -22,15 +22,18 @@ msgstr ""
 
 #: data/power.appdata.xml.in:5
 msgid "Power Settings"
-msgstr ""
+msgstr "Параметри живлення"
 
 #: data/power.appdata.xml.in:6
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr ""
+"Налаштування яскравості екрана, кнопок живлення та поведінки переходу в "
+"режим сну"
 
 #: data/power.appdata.xml.in:12
 msgid "Fix potential freeze when changing settings from multiple panes"
 msgstr ""
+"Виправлено ймовірні зависання під час зміни параметрів у кількох панелях"
 
 #: data/power.appdata.xml.in:13 data/power.appdata.xml.in:18
 #: data/power.appdata.xml.in:25
@@ -39,8 +42,8 @@ msgstr "Оновлено переклади"
 
 #: data/power.appdata.xml.in:23
 msgid "Remove broken hibernate option"
-msgstr ""
+msgstr "Вилучено зламаний параметр гібернації"
 
 #: data/power.appdata.xml.in:24
 msgid "Add prompt to shutdown to power button actions"
-msgstr ""
+msgstr "Додано підказку вимкнення до дій кнопки живлення"
