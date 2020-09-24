@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-26 18:14+0000\n"
-"PO-Revision-Date: 2020-09-24 16:44+0000\n"
+"PO-Revision-Date: 2020-09-24 20:20+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/uk/>\n"
@@ -31,7 +31,7 @@ msgstr "Для управління параметрами електрожив�
 
 #: src/MainView.vala:24
 msgid "You do not have permission to change this"
-msgstr "У вас не має дозволу щоб змінити це"
+msgstr "У вас немає дозволу щоб змінити це"
 
 #: src/MainView.vala:66
 msgid "Display brightness:"
