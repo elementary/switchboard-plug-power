@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-26 18:14+0000\n"
-"PO-Revision-Date: 2020-09-24 20:20+0000\n"
+"PO-Revision-Date: 2020-09-30 02:14+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/uk/>\n"
@@ -23,11 +23,11 @@ msgstr ""
 
 #: data/io.elementary.switchboard.power.policy.in:10
 msgid "Manage power settings"
-msgstr ""
+msgstr "Керування параметрами живлення"
 
 #: data/io.elementary.switchboard.power.policy.in:11
 msgid "Authentication is required to manage power settings"
-msgstr "Для управління параметрами електроживлення необхідна аутентифікація"
+msgstr "Для керування параметрами електроживлення необхідна автентифікація"
 
 #: src/MainView.vala:24
 msgid "You do not have permission to change this"
@@ -47,7 +47,7 @@ msgstr "Коли закрито кришку:"
 
 #: src/MainView.vala:104
 msgid "When lid is closed with external monitor:"
-msgstr ""
+msgstr "Коли закрито кришку із зовнішнім монітором:"
 
 #: src/MainView.vala:130
 msgid "Some settings require administrator rights to be changed"
@@ -55,24 +55,23 @@ msgstr "Для зміни деяких налаштувань необхідно
 
 #: src/MainView.vala:151
 msgid "Turn off display when inactive for:"
-msgstr "Вимкнення дисплея при неактивності для:"
+msgstr "Вимикати екран за бездіяльності впродовж:"
 
 #: src/MainView.vala:157
 msgid "Power button:"
 msgstr "Кнопка живлення:"
 
 #: src/MainView.vala:168 src/MainView.vala:190
-#, fuzzy
 msgid "Suspend when inactive for:"
-msgstr "Вимкнення дисплея при неактивності для:"
+msgstr "Призупиняти за бездіяльності впродовж:"
 
 #: src/MainView.vala:183
 msgid "Plugged In"
-msgstr "Увімкнений в електромережу"
+msgstr "Під'єднано до електромережі"
 
 #: src/MainView.vala:205
 msgid "On Battery"
-msgstr "Робота на акумуляторах"
+msgstr "Робота від акумулятора"
 
 #: src/Plug.vala:32
 msgid "Power"
@@ -85,46 +84,44 @@ msgstr ""
 "режим сну"
 
 #: src/Plug.vala:68
-#, fuzzy
 msgid "Suspend button"
-msgstr "Призупинити"
+msgstr "Кнопка призупинення"
 
 #: src/Plug.vala:69
 msgid "Power button"
-msgstr ""
+msgstr "Кнопка живлення"
 
 #: src/Plug.vala:70
 msgid "Display inactive"
-msgstr ""
+msgstr "Екран бездіяльний"
 
 #: src/Plug.vala:71
 msgid "Dim display"
-msgstr ""
+msgstr "Притлумлення екрана"
 
 #: src/Plug.vala:72
 msgid "Lid close"
-msgstr ""
+msgstr "Закрити кришку"
 
 #: src/Plug.vala:73
 msgid "Display brightness"
-msgstr ""
+msgstr "Яскравість екрана"
 
 #: src/Plug.vala:74
 msgid "Automatic brightness adjustment"
-msgstr ""
+msgstr "Автоматичне регулювання яскравості"
 
 #: src/Plug.vala:75
 msgid "Inactive display off"
-msgstr ""
+msgstr "Вимикання бездіяльного екрана"
 
 #: src/Plug.vala:76
 msgid "Docked lid close"
-msgstr ""
+msgstr "Закрити під'єднану кришку"
 
 #: src/Plug.vala:77
-#, fuzzy
 msgid "Suspend inactive"
-msgstr "Вимкнення дисплея при неактивності для:"
+msgstr "Вимикання за бездіяльності"
 
 #: src/Widgets/TimeoutComboBox.vala:91
 msgid "Never"
@@ -186,7 +183,7 @@ msgstr "Не підтримується"
 
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
-msgstr ""
+msgstr "Запит вимкнення"
 
 #~ msgid "Some changes will not take effect until you restart this computer"
 #~ msgstr "Деякі зміни не набудуть чинності до перезавантаження комп'ютера"
