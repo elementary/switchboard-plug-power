@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-26 18:14+0000\n"
-"PO-Revision-Date: 2020-05-21 03:11+0000\n"
+"PO-Revision-Date: 2020-10-11 21:36+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/es/>\n"
@@ -22,11 +22,11 @@ msgstr ""
 
 #: data/io.elementary.switchboard.power.policy.in:10
 msgid "Manage power settings"
-msgstr "Administrar la configuración de energía"
+msgstr "Gestione la configuración de energía"
 
 #: data/io.elementary.switchboard.power.policy.in:11
 msgid "Authentication is required to manage power settings"
-msgstr "Se requiere autenticación para administrar la configuración de energía"
+msgstr "Necesita autenticarse para gestionar la configuración de energía"
 
 #: src/MainView.vala:24
 msgid "You do not have permission to change this"
@@ -42,13 +42,11 @@ msgstr "Ajustar brillo automáticamente:"
 
 #: src/MainView.vala:98
 msgid "When lid is closed:"
-msgstr "Cuando la tapa está cerrada:"
+msgstr "Cuando se cierre la tapa:"
 
 #: src/MainView.vala:104
 msgid "When lid is closed with external monitor:"
-msgstr ""
-"Cuando la tapa está cerrada mientras el equipo está conectado a un monitor "
-"externo:"
+msgstr "Cuando se cierre la tapa y esté conectado un monitor externo:"
 
 #: src/MainView.vala:130
 msgid "Some settings require administrator rights to be changed"
@@ -56,7 +54,7 @@ msgstr "Se necesitan privilegios administrativos para cambiar algunas opciones"
 
 #: src/MainView.vala:151
 msgid "Turn off display when inactive for:"
-msgstr "Apagar la pantalla cuando esté inactivo durante:"
+msgstr "Apagar pantalla si hay inactividad durante:"
 
 #: src/MainView.vala:157
 msgid "Power button:"
@@ -90,7 +88,7 @@ msgstr "Botón de suspensión"
 
 #: src/Plug.vala:69
 msgid "Power button"
-msgstr "Botón de energía"
+msgstr "Botón de encendido"
 
 #: src/Plug.vala:70
 msgid "Display inactive"
@@ -180,7 +178,7 @@ msgstr "No hacer nada"
 
 #: src/Widgets/LidCloseActionComboBox.vala:38
 msgid "Not supported"
-msgstr "No soportado"
+msgstr "No admitido"
 
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
