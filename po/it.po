@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-26 18:14+0000\n"
+"POT-Creation-Date: 2021-01-21 17:41+0000\n"
 "PO-Revision-Date: 2020-10-24 13:15+0000\n"
 "Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
 "Language-Team: Italian <https://l10n.elementary.io/projects/switchboard/"
@@ -121,6 +121,10 @@ msgid "Docked lid close"
 msgstr "Ancorato a una dock con coperchio chiuso"
 
 #: src/Plug.vala:77
+msgid "Sleep inactivity timeout"
+msgstr ""
+
+#: src/Plug.vala:78
 msgid "Suspend inactive"
 msgstr "Inattività in sospensione"
 

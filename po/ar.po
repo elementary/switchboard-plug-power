@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-26 18:14+0000\n"
+"POT-Creation-Date: 2021-01-21 17:41+0000\n"
 "PO-Revision-Date: 2019-08-29 15:22+0000\n"
 "Last-Translator: nasserbinlaboun <nasser1990com@gmail.com>\n"
 "Language-Team: Arabic <https://l10n.elementary.io/projects/switchboard/"
@@ -119,6 +119,10 @@ msgid "Docked lid close"
 msgstr ""
 
 #: src/Plug.vala:77
+msgid "Sleep inactivity timeout"
+msgstr ""
+
+#: src/Plug.vala:78
 #, fuzzy
 msgid "Suspend inactive"
 msgstr "تعليق"

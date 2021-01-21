@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-26 18:14+0000\n"
+"POT-Creation-Date: 2021-01-21 17:41+0000\n"
 "PO-Revision-Date: 2014-01-06 21:58+0000\n"
 "Last-Translator: Ibai Oihanguren Sala <Unknown>\n"
 "Language-Team: Basque <eu@li.org>\n"
@@ -116,6 +116,10 @@ msgid "Docked lid close"
 msgstr ""
 
 #: src/Plug.vala:77
+msgid "Sleep inactivity timeout"
+msgstr ""
+
+#: src/Plug.vala:78
 #, fuzzy
 msgid "Suspend inactive"
 msgstr "Eseki"

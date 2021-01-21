@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-26 18:14+0000\n"
+"POT-Creation-Date: 2021-01-21 17:41+0000\n"
 "PO-Revision-Date: 2019-08-29 15:22+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://l10n.elementary.io/projects/switchboard/"
@@ -113,6 +113,10 @@ msgid "Docked lid close"
 msgstr "Nešiojamojo kompiuterio dangtis uždarytas"
 
 #: src/Plug.vala:77
+msgid "Sleep inactivity timeout"
+msgstr ""
+
+#: src/Plug.vala:78
 msgid "Suspend inactive"
 msgstr "Pristabdymas esant neveiklumui"
 

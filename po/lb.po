@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-26 18:14+0000\n"
+"POT-Creation-Date: 2021-01-21 17:41+0000\n"
 "PO-Revision-Date: 2015-02-11 16:36+0000\n"
 "Last-Translator: Yvo Marques <macghivo@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -111,6 +111,10 @@ msgid "Docked lid close"
 msgstr ""
 
 #: src/Plug.vala:77
+msgid "Sleep inactivity timeout"
+msgstr ""
+
+#: src/Plug.vala:78
 #, fuzzy
 msgid "Suspend inactive"
 msgstr "Bereetschaft"
