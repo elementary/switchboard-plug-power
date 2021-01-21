@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-16 21:25+0000\n"
+"POT-Creation-Date: 2021-01-21 17:41+0000\n"
 "PO-Revision-Date: 2020-10-29 18:15+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -29,8 +29,7 @@ msgstr "डिस्प्ले ब्राइटनेस, पॉवर ब�
 
 #: data/power.appdata.xml.in:12
 msgid "Fix potential freeze when changing settings from multiple panes"
-msgstr ""
-"एकाधिक पॅनमधून सेटिंग्ज बदलताना संभाव्य फ्रीझशी संबंधित समस्यांचे निराकरण करा"
+msgstr "एकाधिक पॅनमधून सेटिंग्ज बदलताना संभाव्य फ्रीझशी संबंधित समस्यांचे निराकरण करा"
 
 #: data/power.appdata.xml.in:13 data/power.appdata.xml.in:18
 #: data/power.appdata.xml.in:25
