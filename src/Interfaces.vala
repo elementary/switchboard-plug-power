@@ -55,12 +55,16 @@ namespace Power {
         public abstract uint device_type { owned get; }
     }
 
-
     [DBus (name = "org.freedesktop.UPower")]
     interface Upower : Object {
         public signal void changed ();
         public abstract bool on_battery { owned get; }
         public abstract bool low_on_battery { owned get; }
         public abstract ObjectPath[] enumerate_devices () throws Error;
+    }
+
+    [DBus (name = "org.freedesktop.login1.Manager")]
+    interface SystemInterface : Object {
+        public abstract string can_hibernate () throws GLib.Error;
     }
 }

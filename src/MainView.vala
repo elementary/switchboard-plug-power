@@ -28,6 +28,9 @@ public class Power.MainView : Gtk.Grid {
     private Gtk.Scale scale;
     private PowerSettings screen;
     private PowerSupply power_supply;
+    private SystemInterface system_interface;
+
+    private bool can_hibernate = false;
 
     private enum PowerActionType {
         BLANK,
@@ -55,6 +58,17 @@ public class Power.MainView : Gtk.Grid {
                 SETTINGS_DAEMON_PATH, DBusProxyFlags.GET_INVALIDATED_PROPERTIES);
         } catch (IOError e) {
             warning ("Failed to get settings daemon for brightness setting");
+        }
+
+        try {
+            system_interface = Bus.get_proxy_sync (BusType.SYSTEM, "org.freedesktop.login1", "/org/freedesktop/login1");
+        } catch (IOError e) {
+            warning ("Failed to connect to the login interface");
+        }
+        try {
+            can_hibernate = system_interface.can_hibernate () == "yes";
+        } catch (GLib.Error e) {
+            warning ("CanHibernate Error: %s", e.message);
         }
 
         var main_grid = new Gtk.Grid ();
@@ -99,13 +113,13 @@ public class Power.MainView : Gtk.Grid {
             lid_closed_label.halign = Gtk.Align.END;
             lid_closed_label.xalign = 1;
 
-            var lid_closed_box = new LidCloseActionComboBox (false);
+            var lid_closed_box = new LidCloseActionComboBox (false, can_hibernate);
 
             var lid_dock_label = new Gtk.Label (_("When lid is closed with external monitor:"));
             lid_dock_label.halign = Gtk.Align.END;
             lid_dock_label.xalign = 1;
 
-            var lid_dock_box = new LidCloseActionComboBox (true);
+            var lid_dock_box = new LidCloseActionComboBox (true, can_hibernate);
 
             label_size.add_widget (lid_closed_label);
             label_size.add_widget (lid_dock_label);
@@ -158,7 +172,7 @@ public class Power.MainView : Gtk.Grid {
         power_label.halign = Gtk.Align.END;
         power_label.xalign = 1;
 
-        var power_combobox = new ActionComboBox ("power-button-action");
+        var power_combobox = new ActionComboBox ("power-button-action", can_hibernate);
 
         main_grid.attach (screen_timeout_label, 0, 3, 1, 1);
         main_grid.attach (screen_timeout, 1, 3, 1, 1);

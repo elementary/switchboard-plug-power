@@ -25,6 +25,7 @@ namespace Power {
             LOCK,
             SUSPEND,
             HALT,
+            HIBERNATE,
             UNKNOWN;
 
             public static Action from_string (string str) {
@@ -39,6 +40,8 @@ namespace Power {
                         return Action.SUSPEND;
                     case "halt":
                         return Action.HALT;
+                    case "hibernate":
+                        return Action.HIBERNATE;
                     default:
                         return Action.UNKNOWN;
                 }
@@ -56,6 +59,8 @@ namespace Power {
                         return "suspend";
                     case Action.HALT:
                         return "halt";
+                    case Action.HIBERNATE:
+                        return "hibernate";
                     default:
                         return "unknown";
                 }

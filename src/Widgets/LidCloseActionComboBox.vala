@@ -24,7 +24,7 @@ namespace Power {
 
         private bool dock;
 
-        public LidCloseActionComboBox (bool dock) {
+        public LidCloseActionComboBox (bool dock, bool can_hibernate) {
             this.dock = dock;
 
             var helper = LogindHelper.get_logind_helper ();
@@ -34,6 +34,9 @@ namespace Power {
                 append_text (_("Lock"));
                 append_text (_("Halt"));
                 append_text (_("Do nothing"));
+                if (can_hibernate) {
+                    append_text (_("Hibernate"));
+                }
             } else {
                 append_text (_("Not supported"));
             }
@@ -103,6 +106,8 @@ namespace Power {
                     return LogindHelper.Action.HALT;
                 case 4:
                     return LogindHelper.Action.IGNORE;
+                case 5:
+                    return LogindHelper.Action.HIBERNATE;
                 default:
                     return LogindHelper.Action.UNKNOWN;
             }
@@ -124,6 +129,9 @@ namespace Power {
                     break;
                 case LogindHelper.Action.IGNORE:
                     active = 4;
+                    break;
+                case LogindHelper.Action.HIBERNATE:
+                    active = 5;
                     break;
                 default:
                     break;
