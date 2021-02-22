@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-21 17:41+0000\n"
-"PO-Revision-Date: 2020-10-27 23:15+0000\n"
+"PO-Revision-Date: 2021-01-29 20:28+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/de/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2016-12-27 04:59+0000\n"
 
 #: data/io.elementary.switchboard.power.policy.in:10
@@ -120,8 +120,9 @@ msgid "Docked lid close"
 msgstr "Am Dock Deckel geschlossen"
 
 #: src/Plug.vala:77
+#, fuzzy
 msgid "Sleep inactivity timeout"
-msgstr ""
+msgstr "Verzögerung bis zum automatischen Bereitschaftsmodus"
 
 #: src/Plug.vala:78
 msgid "Suspend inactive"
@@ -186,9 +187,8 @@ msgid "Not supported"
 msgstr "Nicht unterstützt"
 
 #: src/Widgets/ActionComboBox.vala:34
-#, fuzzy
 msgid "Prompt to shutdown"
-msgstr "Aufforderung zum Ausschalten"
+msgstr "Bestätigung vor dem Ausschalten"
 
 #~ msgid "Some changes will not take effect until you restart this computer"
 #~ msgstr ""

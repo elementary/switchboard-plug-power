@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-21 17:41+0000\n"
-"PO-Revision-Date: 2019-08-27 22:23+0000\n"
+"PO-Revision-Date: 2021-01-25 07:22+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-power/zh_Hans/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-03-14 07:03+0000\n"
 
 #: data/io.elementary.switchboard.power.policy.in:10
@@ -38,15 +38,15 @@ msgstr "屏幕亮度："
 
 #: src/MainView.vala:70
 msgid "Automatically adjust brightness:"
-msgstr "自动调整亮度："
+msgstr "自动调整："
 
 #: src/MainView.vala:98
 msgid "When lid is closed:"
-msgstr "关闭盖子时："
+msgstr "关闭盖子："
 
 #: src/MainView.vala:104
 msgid "When lid is closed with external monitor:"
-msgstr "外部显示器盖子关闭时："
+msgstr "关闭外部显示器盖子："
 
 #: src/MainView.vala:130
 msgid "Some settings require administrator rights to be changed"
@@ -54,15 +54,15 @@ msgstr "某些设置需要管理员权限才能更改"
 
 #: src/MainView.vala:151
 msgid "Turn off display when inactive for:"
-msgstr "闲时关闭屏幕："
+msgstr "关闭屏幕："
 
 #: src/MainView.vala:157
 msgid "Power button:"
-msgstr "电源按钮操作："
+msgstr "电源按钮："
 
 #: src/MainView.vala:168 src/MainView.vala:190
 msgid "Suspend when inactive for:"
-msgstr "闲时进入睡眠："
+msgstr "睡眠模式："
 
 #: src/MainView.vala:183
 msgid "Plugged In"
@@ -118,7 +118,7 @@ msgstr "关闭盖子"
 
 #: src/Plug.vala:77
 msgid "Sleep inactivity timeout"
-msgstr ""
+msgstr "闲时进入睡眠"
 
 #: src/Plug.vala:78
 msgid "Suspend inactive"

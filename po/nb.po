@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-21 17:41+0000\n"
-"PO-Revision-Date: 2019-06-27 14:12+0000\n"
+"PO-Revision-Date: 2021-02-13 13:01+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-power/nb/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: data/io.elementary.switchboard.power.policy.in:10
@@ -118,8 +118,9 @@ msgid "Docked lid close"
 msgstr "Tilkoblet skjermlukking"
 
 #: src/Plug.vala:77
+#, fuzzy
 msgid "Sleep inactivity timeout"
-msgstr ""
+msgstr "Tidsavbrudd for dvalgangsinaktivitet"
 
 #: src/Plug.vala:78
 #, fuzzy
@@ -186,7 +187,7 @@ msgstr "Ikke støttet"
 
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
-msgstr ""
+msgstr "Spør om å skru av"
 
 #~ msgid "Some changes will not take effect until you restart this computer"
 #~ msgstr "Noen endringer trår ikke i kraft før omstart av maskinen"

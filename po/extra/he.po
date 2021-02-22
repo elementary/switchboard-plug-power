@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-21 17:41+0000\n"
-"PO-Revision-Date: 2020-08-09 22:13+0000\n"
+"PO-Revision-Date: 2021-01-24 14:30+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
-"Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/power-"
-"plug-extra/he/>\n"
+"Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
+"power-plug-extra/he/>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 
 #: data/power.appdata.xml.in:5
 msgid "Power Settings"
@@ -29,7 +29,7 @@ msgstr "הגדרת בהירות המסך, כפתורי הכיבוי והתנהג
 
 #: data/power.appdata.xml.in:12
 msgid "Fix potential freeze when changing settings from multiple panes"
-msgstr "תיקון קיפאון פוטנציאלי בעת החלפת הגדרות ממגוון לוחות"
+msgstr "תיקון קיפאון שעשוי להתרחש בעת החלפת הגדרות ממגוון לוחות"
 
 #: data/power.appdata.xml.in:13 data/power.appdata.xml.in:18
 #: data/power.appdata.xml.in:25
