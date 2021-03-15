@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-21 17:41+0000\n"
-"PO-Revision-Date: 2018-03-23 15:27+0000\n"
-"Last-Translator: Kirill Romanov <djaler1@gmail.com>\n"
-"Language-Team: Russian <https://weblate.elementary.io/projects/switchboard/"
+"PO-Revision-Date: 2021-03-15 22:59+0000\n"
+"Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
+"Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2016-12-02 05:21+0000\n"
 
 #: data/io.elementary.switchboard.power.policy.in:10
@@ -79,7 +79,8 @@ msgstr "Питание"
 
 #: src/Plug.vala:33
 msgid "Configure display brightness, power buttons, and suspend behavior"
-msgstr "Настройка яркости экрана, сна и кнопок питания"
+msgstr ""
+"Настройка яркости экрана, кнопок питания и поведения перехода в спящий режим"
 
 #: src/Plug.vala:68
 msgid "Suspend button"
@@ -119,7 +120,7 @@ msgstr "Крышка закрыта"
 
 #: src/Plug.vala:77
 msgid "Sleep inactivity timeout"
-msgstr ""
+msgstr "Время бездействия для перехода в спящий режим"
 
 #: src/Plug.vala:78
 msgid "Suspend inactive"
@@ -185,7 +186,7 @@ msgstr "Не поддерживается"
 
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
-msgstr ""
+msgstr "Запрос на выключение"
 
 #~ msgid "Some changes will not take effect until you restart this computer"
 #~ msgstr "Некоторые изменения вступят в силу после перезагрузки компьютера"
