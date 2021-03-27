@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-21 17:41+0000\n"
-"PO-Revision-Date: 2021-01-22 08:41+0000\n"
+"PO-Revision-Date: 2021-03-27 07:58+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/ja/>\n"
@@ -125,31 +125,31 @@ msgstr "なし"
 
 #: src/Widgets/TimeoutComboBox.vala:92
 msgid "5 min"
-msgstr "5 分"
+msgstr "5分"
 
 #: src/Widgets/TimeoutComboBox.vala:93
 msgid "10 min"
-msgstr "10 分"
+msgstr "10分"
 
 #: src/Widgets/TimeoutComboBox.vala:94
 msgid "15 min"
-msgstr "15 分"
+msgstr "15分"
 
 #: src/Widgets/TimeoutComboBox.vala:95
 msgid "30 min"
-msgstr "30 分"
+msgstr "30分"
 
 #: src/Widgets/TimeoutComboBox.vala:96
 msgid "45 min"
-msgstr "45 分"
+msgstr "45分"
 
 #: src/Widgets/TimeoutComboBox.vala:97
 msgid "1 hour"
-msgstr "1 時間"
+msgstr "1時間"
 
 #: src/Widgets/TimeoutComboBox.vala:98
 msgid "2 hours"
-msgstr "2 時間"
+msgstr "2時間"
 
 #: src/Widgets/LidCloseActionComboBox.vala:32
 #: src/Widgets/ActionComboBox.vala:33
@@ -175,7 +175,7 @@ msgstr "何もしない"
 
 #: src/Widgets/LidCloseActionComboBox.vala:38
 msgid "Not supported"
-msgstr "サポートされていません"
+msgstr "非対応"
 
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
