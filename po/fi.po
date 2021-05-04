@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-21 17:41+0000\n"
-"PO-Revision-Date: 2019-09-16 16:23+0000\n"
+"PO-Revision-Date: 2021-05-04 12:26+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/fi/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2016-11-22 06:03+0000\n"
 
 #: data/io.elementary.switchboard.power.policy.in:10
@@ -74,7 +74,7 @@ msgstr "Akkuvirralla"
 
 #: src/Plug.vala:32
 msgid "Power"
-msgstr "Virransäästö"
+msgstr "Virranhallinta"
 
 #: src/Plug.vala:33
 msgid "Configure display brightness, power buttons, and suspend behavior"
