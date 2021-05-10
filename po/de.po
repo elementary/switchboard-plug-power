@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-21 17:41+0000\n"
-"PO-Revision-Date: 2021-01-29 20:28+0000\n"
+"PO-Revision-Date: 2021-05-10 20:45+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/de/>\n"
@@ -120,7 +120,6 @@ msgid "Docked lid close"
 msgstr "Am Dock Deckel geschlossen"
 
 #: src/Plug.vala:77
-#, fuzzy
 msgid "Sleep inactivity timeout"
 msgstr "Verzögerung bis zum automatischen Bereitschaftsmodus"
 
