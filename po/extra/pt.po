@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:00+0000\n"
-"PO-Revision-Date: 2020-05-19 18:11+0000\n"
+"PO-Revision-Date: 2021-07-15 01:01+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "power-plug-extra/pt/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 
 #: data/power.appdata.xml.in:5
 msgid "Power Settings"
@@ -29,15 +29,16 @@ msgstr "Configurar o brilho do ecrã, botões de energia e modo de suspensão"
 
 #: data/power.appdata.xml.in:12
 msgid "Minor updates:"
-msgstr ""
+msgstr "Pequenas atualizações:"
 
 #: data/power.appdata.xml.in:14
 msgid "Change lid settings without restarting"
-msgstr ""
+msgstr "Alterar as definições do fecho da tampa sem reiniciar"
 
 #: data/power.appdata.xml.in:15
 msgid "Show in search results for \"sleep\" and \"timeout\""
 msgstr ""
+"Mostrar em resultados de pesquisa para \"hibernação\" e \"tempo limite\""
 
 #: data/power.appdata.xml.in:16 data/power.appdata.xml.in:23
 #: data/power.appdata.xml.in:28 data/power.appdata.xml.in:35
