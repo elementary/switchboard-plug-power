@@ -7,6 +7,16 @@
   <icon type="stock">preferences-system-power</icon>
   <translation type="gettext">power-plug</translation>
   <releases>
+    <release version="2.5.0" date="2021-07-14" urgency="medium">
+      <description>
+        <p>Minor updates:</p>
+        <ul>
+          <li>Change lid settings without restarting</li>
+          <li>Show in search results for "sleep" and "timeout"</li>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.4.2" date="2020-05-16" urgency="medium">
       <description>
         <p>Fix potential freeze when changing settings from multiple panes</p>
