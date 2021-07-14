@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-21 17:41+0000\n"
+"POT-Creation-Date: 2021-07-14 21:00+0000\n"
 "PO-Revision-Date: 2021-07-05 13:54+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
@@ -31,19 +31,31 @@ msgstr ""
 "режим сну"
 
 #: data/power.appdata.xml.in:12
+msgid "Minor updates:"
+msgstr ""
+
+#: data/power.appdata.xml.in:14
+msgid "Change lid settings without restarting"
+msgstr ""
+
+#: data/power.appdata.xml.in:15
+msgid "Show in search results for \"sleep\" and \"timeout\""
+msgstr ""
+
+#: data/power.appdata.xml.in:16 data/power.appdata.xml.in:23
+#: data/power.appdata.xml.in:28 data/power.appdata.xml.in:35
+msgid "Updated translations"
+msgstr "Оновлено переклади"
+
+#: data/power.appdata.xml.in:22
 msgid "Fix potential freeze when changing settings from multiple panes"
 msgstr ""
 "Виправлено ймовірні зависання під час зміни налаштувань у кількох панелях"
 
-#: data/power.appdata.xml.in:13 data/power.appdata.xml.in:18
-#: data/power.appdata.xml.in:25
-msgid "Updated translations"
-msgstr "Оновлено переклади"
-
-#: data/power.appdata.xml.in:23
+#: data/power.appdata.xml.in:33
 msgid "Remove broken hibernate option"
 msgstr "Вилучено зламане налаштування гібернації"
 
-#: data/power.appdata.xml.in:24
+#: data/power.appdata.xml.in:34
 msgid "Add prompt to shutdown to power button actions"
 msgstr "Додано підказку вимкнення до дій кнопки живлення"
