@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:00+0000\n"
-"PO-Revision-Date: 2021-07-05 13:54+0000\n"
+"PO-Revision-Date: 2021-07-14 21:06+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "power-plug-extra/uk/>\n"
@@ -32,15 +32,15 @@ msgstr ""
 
 #: data/power.appdata.xml.in:12
 msgid "Minor updates:"
-msgstr ""
+msgstr "Незначні оновлення:"
 
 #: data/power.appdata.xml.in:14
 msgid "Change lid settings without restarting"
-msgstr ""
+msgstr "Зміна налаштувань дії закривання кришки без перезавантаження"
 
 #: data/power.appdata.xml.in:15
 msgid "Show in search results for \"sleep\" and \"timeout\""
-msgstr ""
+msgstr "До результатів пошуку додано «sleep» і \"timeout\""
 
 #: data/power.appdata.xml.in:16 data/power.appdata.xml.in:23
 #: data/power.appdata.xml.in:28 data/power.appdata.xml.in:35
