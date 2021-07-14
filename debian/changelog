@@ -1,3 +1,16 @@
+switchboard-plug-power (2.5.0) bionic; urgency=medium
+
+  * Release 2.5.0 (#191)
+  * Update translation files
+  * Update translation template
+  * Plug: Add search terms for sleep timeout (#170)
+  * LINGUAS: sort, remove en_US
+  * Fix some terminal warnings (#164)
+  * Allow changing lid settings without restarting the system (#119)
+  * Use correct screen timeout key (#163)
+
+ -- elementary OS Team <builds@elementary.io>  Wed, 14 Jul 2021 21:00:36 +0000
+
 switchboard-plug-power (2.4.2) bionic; urgency=medium
 
   * Release 2.4.2 (#154)
