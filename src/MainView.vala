@@ -224,6 +224,15 @@ public class Power.MainView : Gtk.Grid {
 
         main_grid.attach (stack, 0, 8, 2, 1);
 
+        var power_mode_label = new Gtk.Label (_("Power management mode:"));
+        power_mode_label.xalign = 1;
+
+        var power_mode_button = new PowerModeButton ();
+        power_mode_button.halign = Gtk.Align.START;
+
+        main_grid.attach (power_mode_label, 0, 9);
+        main_grid.attach (power_mode_button, 1, 9);
+
         add (main_grid);
         show_all ();
 
