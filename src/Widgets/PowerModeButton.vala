@@ -25,12 +25,12 @@ namespace Power {
         Gtk.Image automatic_icon;
         Gtk.Image high_performance_icon;
         public PowerModeButton () {
-            power_saving_icon = new Gtk.Image.from_icon_name ("battery-full-charged", Gtk.IconSize.DND);
-            automatic_icon = new Gtk.Image.from_icon_name ("emblem-synchronized", Gtk.IconSize.DND);
-            high_performance_icon = new Gtk.Image.from_icon_name ("preferences-system-power", Gtk.IconSize.DND);
-            power_saving_icon.tooltip_text = _("Power Saving Mode");
-            automatic_icon.tooltip_text = _("Automatic Mode");
-            high_performance_icon.tooltip_text = _("High Performance Mode");
+            power_saving_icon = new Gtk.Image.from_resource ("/io/elementary/switchboard/plug/power/32x32/apps/power-mode-powersaving.svg");
+            automatic_icon = new Gtk.Image.from_resource ("/io/elementary/switchboard/plug/power/32x32/apps/power-mode-automatic.svg");
+            high_performance_icon = new Gtk.Image.from_resource ("/io/elementary/switchboard/plug/power/32x32/apps/power-mode-performance.svg");
+            power_saving_icon.tooltip_text = _("Power Saver");
+            automatic_icon.tooltip_text = _("Automatic");
+            high_performance_icon.tooltip_text = _("High Performance");
             append (power_saving_icon);
             append (automatic_icon);
             append (high_performance_icon);

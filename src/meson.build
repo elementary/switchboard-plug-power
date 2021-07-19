@@ -20,6 +20,7 @@ switchboard_plugsdir = switchboard_dep.get_pkgconfig_variable('plugsdir', define
 shared_module(
     meson.project_name(),
     plug_files,
+    plug_resources,
     interfaces_file,
     dependencies: [
         glib_dep,
