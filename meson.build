@@ -23,6 +23,12 @@ glib_dep = dependency('glib-2.0')
 gio_dep = dependency('gio-2.0')
 polkit_dep = dependency('polkit-gobject-1')
 
+plug_resources = gnome.compile_resources (
+    'plug_resources',
+    'data/icons.gresource.xml',
+    source_dir: 'data'
+)
+
 subdir('src')
 subdir('cli')
 subdir('data')
