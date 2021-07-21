@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:00+0000\n"
-"PO-Revision-Date: 2021-07-20 18:18+0000\n"
+"PO-Revision-Date: 2021-07-21 14:31+0000\n"
 "Last-Translator: supaeasy <ismo+github@wolffson.ch>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "power-plug-extra/de/>\n"
@@ -34,11 +34,11 @@ msgstr "Kleinere Aktualisierungen:"
 
 #: data/power.appdata.xml.in:14
 msgid "Change lid settings without restarting"
-msgstr ""
+msgstr "Klappeneinstellungen ohne Neustart ändern"
 
 #: data/power.appdata.xml.in:15
 msgid "Show in search results for \"sleep\" and \"timeout\""
-msgstr ""
+msgstr "Zeige in Suchergebnissen für \"Bereitschaftsmodus\" und \"Verzögerung\""
 
 #: data/power.appdata.xml.in:16 data/power.appdata.xml.in:23
 #: data/power.appdata.xml.in:28 data/power.appdata.xml.in:35
@@ -48,11 +48,14 @@ msgstr "Aktualisierte Übersetzungen"
 #: data/power.appdata.xml.in:22
 msgid "Fix potential freeze when changing settings from multiple panes"
 msgstr ""
+"Mögliches Einfrieren verhindert, das beim Ändern von Einstellungen auf "
+"mehreren Reitern auftrat"
 
 #: data/power.appdata.xml.in:33
 msgid "Remove broken hibernate option"
-msgstr ""
+msgstr "Entferne defekte Ruhemodus Optionen"
 
 #: data/power.appdata.xml.in:34
 msgid "Add prompt to shutdown to power button actions"
 msgstr ""
+"Bestätigung für das Herunterfahren hinzugefügt bei Ein/Ausschalter-Buttons"
