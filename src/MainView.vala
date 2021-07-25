@@ -46,6 +46,7 @@ public class Power.MainView : Gtk.Grid {
         var label_size = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
 
         settings = new GLib.Settings ("org.gnome.settings-daemon.plugins.power");
+        var wingpanel_power_settings = new GLib.Settings ("io.elementary.desktop.wingpanel.power");
 
         battery = new Battery ();
         power_supply = new PowerSupply ();
@@ -62,33 +63,43 @@ public class Power.MainView : Gtk.Grid {
         main_grid.column_spacing = 12;
         main_grid.row_spacing = 12;
 
+        var show_percent_label = new Gtk.Label (_("Show Percentage"));
+        show_percent_label.halign = Gtk.Align.END;
+        show_percent_label.xalign = 1;
+        var show_percent_switch = new Gtk.Switch ();
+        show_percent_switch.halign = Gtk.Align.START;
+        wingpanel_power_settings.bind ("show-percentage", show_percent_switch, "active", SettingsBindFlags.DEFAULT);
+
+        main_grid.attach (show_percent_label, 0, 0, 1, 1);
+        main_grid.attach (show_percent_switch, 1, 0, 1, 1);
+        
         if (backlight_detect ()) {
             var brightness_label = new Gtk.Label (_("Display brightness:"));
             brightness_label.halign = Gtk.Align.END;
             brightness_label.xalign = 1;
-
+            
             var als_label = new Gtk.Label (_("Automatically adjust brightness:"));
             als_label.xalign = 1;
-
+            
             var als_switch = new Gtk.Switch ();
             als_switch.halign = Gtk.Align.START;
-
+            
             settings.bind ("ambient-enabled", als_switch, "active", SettingsBindFlags.DEFAULT);
-
+            
             scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 100, 10);
             scale.draw_value = false;
             scale.hexpand = true;
             scale.width_request = 480;
-
+            
             scale.set_value (screen.brightness);
-
+            
             scale.value_changed.connect (on_scale_value_changed);
             ((DBusProxy)screen).g_properties_changed.connect (on_screen_properties_changed);
-
-            main_grid.attach (brightness_label, 0, 0, 1, 1);
-            main_grid.attach (scale, 1, 0, 1, 1);
-            main_grid.attach (als_label, 0, 1, 1, 1);
-            main_grid.attach (als_switch, 1, 1, 1, 1);
+            
+            main_grid.attach (brightness_label, 0, 1, 1, 1);
+            main_grid.attach (scale, 1, 1, 1, 1);
+            main_grid.attach (als_label, 0, 2, 1, 1);
+            main_grid.attach (als_switch, 1, 2, 1, 1);
 
             label_size.add_widget (brightness_label);
             label_size.add_widget (als_label);
