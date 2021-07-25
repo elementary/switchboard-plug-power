@@ -72,30 +72,30 @@ public class Power.MainView : Gtk.Grid {
 
         main_grid.attach (show_percent_label, 0, 0, 1, 1);
         main_grid.attach (show_percent_switch, 1, 0, 1, 1);
-        
+
         if (backlight_detect ()) {
             var brightness_label = new Gtk.Label (_("Display brightness:"));
             brightness_label.halign = Gtk.Align.END;
             brightness_label.xalign = 1;
-            
+
             var als_label = new Gtk.Label (_("Automatically adjust brightness:"));
             als_label.xalign = 1;
-            
+
             var als_switch = new Gtk.Switch ();
             als_switch.halign = Gtk.Align.START;
-            
+
             settings.bind ("ambient-enabled", als_switch, "active", SettingsBindFlags.DEFAULT);
-            
+
             scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 100, 10);
             scale.draw_value = false;
             scale.hexpand = true;
             scale.width_request = 480;
-            
+
             scale.set_value (screen.brightness);
-            
+
             scale.value_changed.connect (on_scale_value_changed);
             ((DBusProxy)screen).g_properties_changed.connect (on_screen_properties_changed);
-            
+
             main_grid.attach (brightness_label, 0, 1, 1, 1);
             main_grid.attach (scale, 1, 1, 1, 1);
             main_grid.attach (als_label, 0, 2, 1, 1);
