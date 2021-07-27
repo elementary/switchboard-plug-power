@@ -63,7 +63,7 @@ public class Power.MainView : Gtk.Grid {
         main_grid.column_spacing = 12;
         main_grid.row_spacing = 12;
 
-        var show_percent_label = new Gtk.Label (_("Show Percentage")) {
+        var show_percent_label = new Gtk.Label (_("Show percentage:")) {
             halign = Gtk.Align.END,
             xalign = 1
         };
