@@ -72,8 +72,8 @@ public class Power.MainView : Gtk.Grid {
         show_percent_switch.halign = Gtk.Align.START;
         wingpanel_power_settings.bind ("show-percentage", show_percent_switch, "active", SettingsBindFlags.DEFAULT);
 
-        main_grid.attach (show_percent_label, 0, 0, 1, 1);
-        main_grid.attach (show_percent_switch, 1, 0, 1, 1);
+        main_grid.attach (show_percent_label, 0, 0);
+        main_grid.attach (show_percent_switch, 1, 0);
 
         if (backlight_detect ()) {
             var brightness_label = new Gtk.Label (_("Display brightness:"));
