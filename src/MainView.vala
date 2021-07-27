@@ -98,10 +98,10 @@ public class Power.MainView : Gtk.Grid {
             scale.value_changed.connect (on_scale_value_changed);
             ((DBusProxy)screen).g_properties_changed.connect (on_screen_properties_changed);
 
-            main_grid.attach (brightness_label, 0, 1, 1, 1);
-            main_grid.attach (scale, 1, 1, 1, 1);
-            main_grid.attach (als_label, 0, 2, 1, 1);
-            main_grid.attach (als_switch, 1, 2, 1, 1);
+            main_grid.attach (brightness_label, 0, 1);
+            main_grid.attach (scale, 1, 1);
+            main_grid.attach (als_label, 0, 2);
+            main_grid.attach (als_switch, 1, 2);
 
             label_size.add_widget (brightness_label);
             label_size.add_widget (als_label);
