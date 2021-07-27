@@ -63,9 +63,11 @@ public class Power.MainView : Gtk.Grid {
         main_grid.column_spacing = 12;
         main_grid.row_spacing = 12;
 
-        var show_percent_label = new Gtk.Label (_("Show Percentage"));
-        show_percent_label.halign = Gtk.Align.END;
-        show_percent_label.xalign = 1;
+        var show_percent_label = new Gtk.Label (_("Show Percentage")) {
+            halign = Gtk.Align.END,
+            xalign = 1
+        };
+
         var show_percent_switch = new Gtk.Switch ();
         show_percent_switch.halign = Gtk.Align.START;
         wingpanel_power_settings.bind ("show-percentage", show_percent_switch, "active", SettingsBindFlags.DEFAULT);
