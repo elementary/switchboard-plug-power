@@ -68,8 +68,9 @@ public class Power.MainView : Gtk.Grid {
             xalign = 1
         };
 
-        var show_percent_switch = new Gtk.Switch ();
-        show_percent_switch.halign = Gtk.Align.START;
+        var show_percent_switch = new Gtk.Switch () {
+            halign = Gtk.Align.START
+        };
         wingpanel_power_settings.bind ("show-percentage", show_percent_switch, "active", SettingsBindFlags.DEFAULT);
 
         main_grid.attach (show_percent_label, 0, 0);
