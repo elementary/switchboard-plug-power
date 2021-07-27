@@ -14,7 +14,7 @@ Homepage: https://github.com/elementary/switchboard-plug-power
 
 Package: switchboard-plug-power
 Architecture: any
-Depends: io.elementary.dpms-helper, ${misc:Depends}, ${shlibs:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
 Enhances: switchboard
 Description: Power plug for Switchboard
  This plug configures system power consumption.
