@@ -49,7 +49,7 @@ namespace Power {
             if (main_grid == null) {
                 manufacturer_logo = new Gtk.Image () {
                     halign = Gtk.Align.END,
-                    pixel_size = 48,
+                    pixel_size = 32,
                     use_fallback = true
                 };
                 var fileicon = new FileIcon (File.new_for_path (manufacturer_icon_path));
@@ -64,7 +64,7 @@ namespace Power {
                 stack.add_named (main_view, "Power");
 
                 if (main_view.battery.is_present ()) {
-                  var badge_icon = new Gtk.Image.from_icon_name ("battery-full-charged", Gtk.IconSize.LARGE_TOOLBAR) {
+                  var badge_icon = new Gtk.Image.from_icon_name ("battery-full-charged", Gtk.IconSize.BUTTON) {
                     halign = Gtk.Align.END,
                     valign = Gtk.Align.END
                   };
