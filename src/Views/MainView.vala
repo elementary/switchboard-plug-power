@@ -27,6 +27,7 @@ public class Power.MainView : Granite.SimpleSettingsPage {
     private GLib.Settings elementary_dpms_settings;
     private Gtk.Scale scale;
     private PowerSettings screen;
+    private PowerSupply power_supply;
 
     private enum PowerActionType {
         BLANK,
@@ -54,7 +55,10 @@ public class Power.MainView : Granite.SimpleSettingsPage {
 			settings = new GLib.Settings ("org.gnome.settings-daemon.plugins.power");
 			elementary_dpms_settings = new GLib.Settings ("io.elementary.dpms");
 
-			try {
+      battery = new Battery ();
+      power_supply = new PowerSupply ();
+			
+      try {
 					screen = Bus.get_proxy_sync (BusType.SESSION, SETTINGS_DAEMON_NAME,
 							SETTINGS_DAEMON_PATH, DBusProxyFlags.GET_INVALIDATED_PROPERTIES);
 			} catch (IOError e) {
