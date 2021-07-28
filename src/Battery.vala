@@ -147,7 +147,7 @@ namespace Power {
             } catch (Error e) {
                 critical ("Updating the upower upower_device parameters failed: %s", e.message);
             }
-    
+
             has_history = upower_device.has_history;
             has_statistics = upower_device.has_statistics;
             is_rechargeable = upower_device.is_rechargeable;
@@ -173,7 +173,7 @@ namespace Power {
             state = (State) upower_device.state;
             technology = (Technology) upower_device.technology;
             update_time = upower_device.update_time;
-    
+
             is_charging = state == State.FULLY_CHARGED || state == State.CHARGING;
             is_a_battery = device_type != Type.UNKNOWN && device_type != Type.LINE_POWER;
     
@@ -213,12 +213,12 @@ namespace Power {
             if (percent <= 0) {
               return _("Calculating…");
             }
-            
+
             if (percent == 100) {
               return _("Fully charged");
             }
-            
-            var info = _("%i%% charged").printf (percent); 
+
+            var info = _("%i%% charged").printf (percent);
             return info;
         }
 

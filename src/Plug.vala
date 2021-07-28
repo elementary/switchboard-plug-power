@@ -143,7 +143,7 @@ namespace Power {
                     "org.freedesktop.hostname1",
                     "/org/freedesktop/hostname1"
                 );
-    
+
                 manufacturer_logo.icon_name = system_interface.icon_name;
             } catch (IOError e) {
                 critical (e.message);
