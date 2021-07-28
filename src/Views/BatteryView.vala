@@ -18,11 +18,12 @@
  */
 public class Power.BatteryView : Granite.SimpleSettingsPage {
   
-    public BatteryView () {
+    public BatteryView (Gtk.Widget icon) {
         Object (
             header: _("Devices"),
-            icon_name: "battery-full-charged",
-            title: _("Battery")
+            title: _("Battery"),
+            status: _("100% remaining"),
+            display_widget: icon
         );
     }
 
