@@ -21,6 +21,8 @@ namespace Power {
     private GLib.Settings settings;
 
     public class Plug : Switchboard.Plug {
+        private string manufacturer_icon_path;
+
         private BehaviorView main_view;
         private BatteryView battery_view;
         private Gtk.Stack stack;
@@ -28,6 +30,8 @@ namespace Power {
         private Gtk.Grid main_grid;
         private Gtk.InfoBar infobar;
         private Gtk.LockButton lock_button;
+        private SystemInterface system_interface;
+        private Gtk.Image manufacturer_logo;
 
         public Plug () {
             var supported_settings = new Gee.TreeMap<string, string?> (null, null);
@@ -43,22 +47,33 @@ namespace Power {
 
         public override Gtk.Widget get_widget () {
             if (main_grid == null) {
+                manufacturer_logo = new Gtk.Image () {
+                    halign = Gtk.Align.END,
+                    pixel_size = 48,
+                    use_fallback = true
+                };
+                var fileicon = new FileIcon (File.new_for_path (manufacturer_icon_path));
+                if (manufacturer_icon_path != null) {
+                  manufacturer_logo.gicon = fileicon;
+                }
+                if (manufacturer_logo.gicon == null) {
+                  load_fallback_manufacturer_icon.begin ();
+                }
                 stack = new Gtk.Stack ();
                 main_view = new BehaviorView ();
                 stack.add_named (main_view, "Power");
 
                 if (main_view.battery.is_present ()) {
-                  var icon_image = new Gtk.Image.from_icon_name ("computer-laptop", Gtk.IconSize.DIALOG);
                   var badge_icon = new Gtk.Image.from_icon_name ("battery-full-charged", Gtk.IconSize.LARGE_TOOLBAR) {
                     halign = Gtk.Align.END,
                     valign = Gtk.Align.END
                   };
 
                   var overlay = new Gtk.Overlay ();
-                  overlay.add (icon_image);
+                  overlay.add (manufacturer_logo);
                   overlay.add_overlay (badge_icon);
                   battery_view = new BatteryView (overlay);
-                  stack.add_named (battery_view, "Battery");
+                  stack.add_named (battery_view, "Built-in");
                 }
 
                 var switcher = new Granite.SettingsSidebar (stack);
@@ -120,6 +135,20 @@ namespace Power {
             search_results.set ("%s → %s".printf (display_name, _("Suspend inactive")), "");
             return search_results;
         }
+
+        public async void load_fallback_manufacturer_icon () {
+            try {
+                system_interface = yield Bus.get_proxy (
+                    BusType.SYSTEM,
+                    "org.freedesktop.hostname1",
+                    "/org/freedesktop/hostname1"
+                );
+    
+                manufacturer_logo.icon_name = system_interface.icon_name;
+            } catch (IOError e) {
+                critical (e.message);
+            }
+        }
     }
 }
 
@@ -127,4 +156,10 @@ public Switchboard.Plug get_plug (Module module) {
     debug ("Activating Power plug");
     var plug = new Power.Plug ();
     return plug;
+}
+
+[DBus (name = "org.freedesktop.hostname1")]
+public interface SystemInterface : Object {
+    [DBus (name = "IconName")]
+    public abstract string icon_name { owned get; }
 }
