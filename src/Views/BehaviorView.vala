@@ -16,7 +16,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor,
  * Boston, MA  02110-1301, USA.
  */
-public class Power.MainView : Granite.SimpleSettingsPage {
+public class Power.BehaviorView : Granite.SimpleSettingsPage {
     public Battery battery { get; private set; }
     public Gtk.Stack stack { get; private set; }
 
@@ -39,7 +39,7 @@ public class Power.MainView : Granite.SimpleSettingsPage {
         LOGOUT
     }
 
-	public MainView () {
+	public BehaviorView () {
 			Object (
 					icon_name: "preferences-system-power",
 					title: _("Behavior")

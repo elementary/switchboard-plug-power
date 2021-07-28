@@ -21,8 +21,7 @@ namespace Power {
     private GLib.Settings settings;
 
     public class Plug : Switchboard.Plug {
-        private MainView main_view;
-        private BatteryView battery_view;
+        private BehaviorView main_view;
         private Gtk.Stack stack;
         private Gtk.Paned hpaned;
         private Gtk.Grid main_grid;
@@ -44,22 +43,9 @@ namespace Power {
         public override Gtk.Widget get_widget () {
             if (main_grid == null) {
                 stack = new Gtk.Stack ();
-                main_view = new MainView ();
+                main_view = new BehaviorView ();
                 stack.add_named (main_view, "Power");
 
-                if (main_view.battery.is_present ()) {
-                  var icon_image = new Gtk.Image.from_icon_name ("computer-laptop", Gtk.IconSize.DIALOG);
-                  var badge_icon = new Gtk.Image.from_icon_name ("battery-full-charged", Gtk.IconSize.LARGE_TOOLBAR) {
-                    halign = Gtk.Align.END,
-                    valign = Gtk.Align.END
-                  };
-                  
-                  var overlay = new Gtk.Overlay ();
-                  overlay.add (icon_image);
-                  overlay.add_overlay (badge_icon);
-                  battery_view = new BatteryView (overlay);
-                  stack.add_named (battery_view, "Battery");
-                }
                 var switcher = new Granite.SettingsSidebar (stack);
 
                 hpaned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
@@ -92,15 +78,7 @@ namespace Power {
         }
 
         public override void shown () {
-            //  if (main_view.stack == null) {
-            //      return;
-            //  }
 
-            //  if (main_view.battery.is_present ()) {
-            //      main_view.stack.visible_child_name = "battery";
-            //  } else {
-            //      main_view.stack.visible_child_name = "ac";
-            //  }
         }
 
         public override void hidden () {
