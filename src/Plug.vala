@@ -47,6 +47,20 @@ namespace Power {
                 main_view = new BehaviorView ();
                 stack.add_named (main_view, "Power");
 
+                if (main_view.battery.is_present ()) {
+                  var icon_image = new Gtk.Image.from_icon_name ("computer-laptop", Gtk.IconSize.DIALOG);
+                  var badge_icon = new Gtk.Image.from_icon_name ("battery-full-charged", Gtk.IconSize.LARGE_TOOLBAR) {
+                    halign = Gtk.Align.END,
+                    valign = Gtk.Align.END
+                  };
+
+                  var overlay = new Gtk.Overlay ();
+                  overlay.add (icon_image);
+                  overlay.add_overlay (badge_icon);
+                  battery_view = new BatteryView (overlay);
+                  stack.add_named (battery_view, "Battery");
+                }
+
                 var switcher = new Granite.SettingsSidebar (stack);
 
                 hpaned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);

@@ -24,7 +24,6 @@ public class Power.BehaviorView : Granite.SimpleSettingsPage {
     private const string SETTINGS_DAEMON_NAME = "org.gnome.SettingsDaemon.Power";
     private const string SETTINGS_DAEMON_PATH = "/org/gnome/SettingsDaemon/Power";
 
-    private GLib.Settings elementary_dpms_settings;
     private Gtk.Scale scale;
     private PowerSettings screen;
     private PowerSupply power_supply;
@@ -53,7 +52,6 @@ public class Power.BehaviorView : Granite.SimpleSettingsPage {
         var label_size = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
 
         settings = new GLib.Settings ("org.gnome.settings-daemon.plugins.power");
-        elementary_dpms_settings = new GLib.Settings ("io.elementary.dpms");
 
         battery = new Battery ();
         power_supply = new PowerSupply ();
@@ -141,8 +139,8 @@ public class Power.BehaviorView : Granite.SimpleSettingsPage {
         screen_timeout_label.halign = Gtk.Align.END;
         screen_timeout_label.xalign = 1;
 
-        var screen_timeout = new TimeoutComboBox (elementary_dpms_settings, "standby-time");
-        screen_timeout.changed.connect (run_dpms_helper);
+        var screen_timeout = new TimeoutComboBox (new GLib.Settings ("org.gnome.desktop.session"), "idle-delay");
+
         var power_label = new Gtk.Label (_("Power button:"));
         power_label.halign = Gtk.Align.END;
         power_label.xalign = 1;
@@ -281,17 +279,6 @@ public class Power.BehaviorView : Granite.SimpleSettingsPage {
             scale.value_changed.disconnect (on_scale_value_changed);
             scale.set_value (val);
             scale.value_changed.connect (on_scale_value_changed);
-        }
-    }
-
-    private static void run_dpms_helper () {
-        try {
-            string[] argv = { "io.elementary.dpms-helper" };
-            Process.spawn_async (null, argv, Environ.get (),
-                SpawnFlags.SEARCH_PATH | SpawnFlags.STDERR_TO_DEV_NULL | SpawnFlags.STDOUT_TO_DEV_NULL,
-                null, null);
-        } catch (SpawnError e) {
-            warning ("Failed to reset dpms settings: %s", e.message);
         }
     }
 }
