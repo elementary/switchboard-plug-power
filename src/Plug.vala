@@ -52,7 +52,7 @@ namespace Power {
                 hpaned.pack1 (switcher, false, false);
                 hpaned.add (stack);
                 hpaned.show_all ();
-                
+
                 infobar = new Gtk.InfoBar ();
                 infobar.message_type = Gtk.MessageType.INFO;
 
