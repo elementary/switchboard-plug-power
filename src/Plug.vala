@@ -25,6 +25,9 @@ namespace Power {
         private BatteryView battery_view;
         private Gtk.Stack stack;
         private Gtk.Paned hpaned;
+        private Gtk.Grid main_grid;
+        private Gtk.InfoBar infobar;
+        private Gtk.LockButton lock_button;
 
         public Plug () {
             var supported_settings = new Gee.TreeMap<string, string?> (null, null);
@@ -39,7 +42,7 @@ namespace Power {
         }
 
         public override Gtk.Widget get_widget () {
-            if (hpaned == null) {
+            if (main_grid == null) {
                 stack = new Gtk.Stack ();
                 main_view = new MainView ();
                 stack.add_named (main_view, "Power");
@@ -58,13 +61,34 @@ namespace Power {
                   stack.add_named (battery_view, "Battery");
                 }
                 var switcher = new Granite.SettingsSidebar (stack);
-    
+
                 hpaned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
                 hpaned.pack1 (switcher, false, false);
                 hpaned.add (stack);
                 hpaned.show_all ();
+                
+                infobar = new Gtk.InfoBar ();
+                infobar.message_type = Gtk.MessageType.INFO;
+
+                lock_button = new Gtk.LockButton (get_permission ());
+
+                var area = infobar.get_action_area () as Gtk.Container;
+                area.add (lock_button);
+
+                var content = infobar.get_content_area ();
+                content.add (new Gtk.Label (_("Some settings require administrator rights to be changed")));
+                var permission = get_permission ();
+                permission.bind_property ("allowed", infobar, "revealed", GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN);
+
+                main_grid = new Gtk.Grid () {
+                  orientation = Gtk.Orientation.VERTICAL
+                };
+                main_grid.add (infobar);
+                main_grid.add (hpaned);
+                main_grid.show_all ();
             }
-            return hpaned;
+
+            return main_grid;
         }
 
         public override void shown () {
