@@ -7,7 +7,7 @@ plug_files = files(
     'Permission.vala',
     'Plug.vala',
     'PowerSupply.vala',
-    'Views/MainView.vala',
+    'Views/BehaviorView.vala',
     'Views/BatteryView.vala',
     'Widgets/TimeoutComboBox.vala',
     'Widgets/LidCloseActionComboBox.vala',

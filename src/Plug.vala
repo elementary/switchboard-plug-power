@@ -21,7 +21,7 @@ namespace Power {
     private GLib.Settings settings;
 
     public class Plug : Switchboard.Plug {
-        private MainView main_view;
+        private BehaviorView main_view;
         private BatteryView battery_view;
         private Gtk.Stack stack;
         private Gtk.Paned hpaned;
@@ -44,7 +44,7 @@ namespace Power {
         public override Gtk.Widget get_widget () {
             if (main_grid == null) {
                 stack = new Gtk.Stack ();
-                main_view = new MainView ();
+                main_view = new BehaviorView ();
                 stack.add_named (main_view, "Power");
 
                 if (main_view.battery.is_present ()) {

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2018 elementary, Inc. (https://elementary.io)
+ * Copyright (c) 2011-2021 elementary, Inc. (https://elementary.io)
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -16,8 +16,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor,
  * Boston, MA  02110-1301, USA.
  */
-
-public class Power.MainView : Gtk.Grid {
+public class Power.BehaviorView : Granite.SimpleSettingsPage {
     public Battery battery { get; private set; }
     public Gtk.Stack stack { get; private set; }
 
@@ -25,6 +24,7 @@ public class Power.MainView : Gtk.Grid {
     private const string SETTINGS_DAEMON_NAME = "org.gnome.SettingsDaemon.Power";
     private const string SETTINGS_DAEMON_PATH = "/org/gnome/SettingsDaemon/Power";
 
+    private GLib.Settings elementary_dpms_settings;
     private Gtk.Scale scale;
     private PowerSettings screen;
     private PowerSupply power_supply;
@@ -39,13 +39,21 @@ public class Power.MainView : Gtk.Grid {
         LOGOUT
     }
 
+    public BehaviorView () {
+        Object (
+            icon_name: "preferences-system-power",
+            title: _("Behavior")
+        );
+    }
+
     construct {
-        orientation = Gtk.Orientation.VERTICAL;
+        content_area.row_spacing = 6;
         margin_bottom = 12;
 
         var label_size = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
 
         settings = new GLib.Settings ("org.gnome.settings-daemon.plugins.power");
+        elementary_dpms_settings = new GLib.Settings ("io.elementary.dpms");
 
         battery = new Battery ();
         power_supply = new PowerSupply ();
@@ -56,11 +64,6 @@ public class Power.MainView : Gtk.Grid {
         } catch (IOError e) {
             warning ("Failed to get settings daemon for brightness setting");
         }
-
-        var main_grid = new Gtk.Grid ();
-        main_grid.margin = 24;
-        main_grid.column_spacing = 12;
-        main_grid.row_spacing = 12;
 
         if (backlight_detect ()) {
             var brightness_label = new Gtk.Label (_("Display brightness:"));
@@ -83,12 +86,12 @@ public class Power.MainView : Gtk.Grid {
             scale.set_value (screen.brightness);
 
             scale.value_changed.connect (on_scale_value_changed);
-            ((DBusProxy)screen).g_properties_changed.connect (on_screen_properties_changed);
+            (screen as DBusProxy).g_properties_changed.connect (on_screen_properties_changed);
 
-            main_grid.attach (brightness_label, 0, 0, 1, 1);
-            main_grid.attach (scale, 1, 0, 1, 1);
-            main_grid.attach (als_label, 0, 1, 1, 1);
-            main_grid.attach (als_switch, 1, 1, 1, 1);
+            content_area.attach (brightness_label, 0, 0, 1, 1);
+            content_area.attach (scale, 1, 0, 1, 1);
+            content_area.attach (als_label, 0, 1, 1, 1);
+            content_area.attach (als_switch, 1, 1, 1, 1);
 
             label_size.add_widget (brightness_label);
             label_size.add_widget (als_label);
@@ -118,25 +121,12 @@ public class Power.MainView : Gtk.Grid {
             lock_image2.sensitive = false;
             lock_image2.tooltip_text = NO_PERMISSION_STRING;
 
-            main_grid.attach (lid_closed_label, 0, 5, 1, 1);
-            main_grid.attach (lid_closed_box, 1, 5, 1, 1);
-            main_grid.attach (lock_image2, 2, 5, 1, 1);
-            main_grid.attach (lid_dock_label, 0, 6, 1, 1);
-            main_grid.attach (lid_dock_box, 1, 6, 1, 1);
-            main_grid.attach (lock_image, 2, 6, 1, 1);
-
-            var lock_button = new Gtk.LockButton (get_permission ());
-
-            var permission_label = new Gtk.Label (_("Some settings require administrator rights to be changed"));
-
-            var permission_infobar = new Gtk.InfoBar ();
-            permission_infobar.message_type = Gtk.MessageType.INFO;
-            permission_infobar.get_content_area ().add (permission_label);
-
-            var area_infobar = permission_infobar.get_action_area () as Gtk.Container;
-            area_infobar.add (lock_button);
-
-            add (permission_infobar);
+            content_area.attach (lid_closed_label, 0, 5, 1, 1);
+            content_area.attach (lid_closed_box, 1, 5, 1, 1);
+            content_area.attach (lock_image2, 2, 5, 1, 1);
+            content_area.attach (lid_dock_label, 0, 6, 1, 1);
+            content_area.attach (lid_dock_box, 1, 6, 1, 1);
+            content_area.attach (lock_image, 2, 6, 1, 1);
 
             var permission = get_permission ();
             permission.bind_property ("allowed", lid_closed_box, "sensitive", GLib.BindingFlags.SYNC_CREATE);
@@ -145,25 +135,24 @@ public class Power.MainView : Gtk.Grid {
             permission.bind_property ("allowed", lid_dock_label, "sensitive", GLib.BindingFlags.SYNC_CREATE);
             permission.bind_property ("allowed", lock_image, "visible", GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN);
             permission.bind_property ("allowed", lock_image2, "visible", GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN);
-            permission.bind_property ("allowed", permission_infobar, "revealed", GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN);
         }
 
         var screen_timeout_label = new Gtk.Label (_("Turn off display when inactive for:"));
         screen_timeout_label.halign = Gtk.Align.END;
         screen_timeout_label.xalign = 1;
 
-        var screen_timeout = new TimeoutComboBox (new GLib.Settings ("org.gnome.desktop.session"), "idle-delay");
-
+        var screen_timeout = new TimeoutComboBox (elementary_dpms_settings, "standby-time");
+        screen_timeout.changed.connect (run_dpms_helper);
         var power_label = new Gtk.Label (_("Power button:"));
         power_label.halign = Gtk.Align.END;
         power_label.xalign = 1;
 
         var power_combobox = new ActionComboBox ("power-button-action");
 
-        main_grid.attach (screen_timeout_label, 0, 3, 1, 1);
-        main_grid.attach (screen_timeout, 1, 3, 1, 1);
-        main_grid.attach (power_label, 0, 4, 1, 1);
-        main_grid.attach (power_combobox, 1, 4, 1, 1);
+        content_area.attach (screen_timeout_label, 0, 3, 1, 1);
+        content_area.attach (screen_timeout, 1, 3, 1, 1);
+        content_area.attach (power_label, 0, 4, 1, 1);
+        content_area.attach (power_combobox, 1, 4, 1, 1);
 
         var sleep_timeout_label = new Gtk.Label (_("Suspend when inactive for:"));
         sleep_timeout_label.xalign = 1;
@@ -219,12 +208,12 @@ public class Power.MainView : Gtk.Grid {
             switcher_grid.add (stack_switcher);
             switcher_grid.add (right_sep);
 
-            main_grid.attach (switcher_grid, 0, 7, 2, 1);
+            content_area.attach (switcher_grid, 0, 7, 2, 1);
         }
 
-        main_grid.attach (stack, 0, 8, 2, 1);
+        content_area.attach (stack, 0, 8, 2, 1);
 
-        add (main_grid);
+        add (content_area);
         show_all ();
 
         label_size.add_widget (sleep_timeout_label);
@@ -278,12 +267,11 @@ public class Power.MainView : Gtk.Grid {
 
         return false;
     }
-
     private void on_scale_value_changed () {
         var val = (int) scale.get_value ();
-        ((DBusProxy)screen).g_properties_changed.disconnect (on_screen_properties_changed);
+        (screen as DBusProxy).g_properties_changed.disconnect (on_screen_properties_changed);
         screen.brightness = val;
-        ((DBusProxy)screen).g_properties_changed.connect (on_screen_properties_changed);
+        (screen as DBusProxy).g_properties_changed.connect (on_screen_properties_changed);
     }
 
     private void on_screen_properties_changed (Variant changed_properties, string[] invalidated_properties) {
@@ -293,6 +281,17 @@ public class Power.MainView : Gtk.Grid {
             scale.value_changed.disconnect (on_scale_value_changed);
             scale.set_value (val);
             scale.value_changed.connect (on_scale_value_changed);
+        }
+    }
+
+    private static void run_dpms_helper () {
+        try {
+            string[] argv = { "io.elementary.dpms-helper" };
+            Process.spawn_async (null, argv, Environ.get (),
+                SpawnFlags.SEARCH_PATH | SpawnFlags.STDERR_TO_DEV_NULL | SpawnFlags.STDOUT_TO_DEV_NULL,
+                null, null);
+        } catch (SpawnError e) {
+            warning ("Failed to reset dpms settings: %s", e.message);
         }
     }
 }
