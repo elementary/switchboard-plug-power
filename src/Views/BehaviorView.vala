@@ -87,10 +87,10 @@ public class Power.BehaviorView : Granite.SimpleSettingsPage {
             scale.value_changed.connect (on_scale_value_changed);
             (screen as DBusProxy).g_properties_changed.connect (on_screen_properties_changed);
 
-            content_area.attach (brightness_label, 0, 0, 1, 1);
-            content_area.attach (scale, 1, 0, 1, 1);
-            content_area.attach (als_label, 0, 1, 1, 1);
-            content_area.attach (als_switch, 1, 1, 1, 1);
+            content_area.attach (brightness_label, 0, 0);
+            content_area.attach (scale, 1, 0);
+            content_area.attach (als_label, 0, 1);
+            content_area.attach (als_switch, 1, 1);
 
             label_size.add_widget (brightness_label);
             label_size.add_widget (als_label);
