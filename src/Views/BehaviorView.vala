@@ -120,12 +120,12 @@ public class Power.BehaviorView : Granite.SimpleSettingsPage {
             lock_image2.sensitive = false;
             lock_image2.tooltip_text = NO_PERMISSION_STRING;
 
-            content_area.attach (lid_closed_label, 0, 5, 1, 1);
-            content_area.attach (lid_closed_box, 1, 5, 1, 1);
-            content_area.attach (lock_image2, 2, 5, 1, 1);
-            content_area.attach (lid_dock_label, 0, 6, 1, 1);
-            content_area.attach (lid_dock_box, 1, 6, 1, 1);
-            content_area.attach (lock_image, 2, 6, 1, 1);
+            content_area.attach (lid_closed_label, 0, 5);
+            content_area.attach (lid_closed_box, 1, 5);
+            content_area.attach (lock_image2, 2, 5);
+            content_area.attach (lid_dock_label, 0, 6);
+            content_area.attach (lid_dock_box, 1, 6);
+            content_area.attach (lock_image, 2, 6);
 
             var permission = get_permission ();
             permission.bind_property ("allowed", lid_closed_box, "sensitive", GLib.BindingFlags.SYNC_CREATE);
