@@ -131,11 +131,7 @@ namespace Power {
                 upower = Bus.get_proxy_sync (BusType.SYSTEM, DBUS_UPOWER_NAME, DBUS_UPOWER_PATH, DBusProxyFlags.NONE);
                 dbus_upower_battery_path = get_dbus_path (upower);
                 if (dbus_upower_battery_path != "" && dbus_upower_battery_path != null) {
-                    upower_device = Bus.get_proxy_sync (
-                        BusType.SYSTEM, DBUS_UPOWER_NAME,
-                        dbus_upower_battery_path,
-                        DBusProxyFlags.GET_INVALIDATED_PROPERTIES
-                    );
+                    upower_device = Bus.get_proxy_sync (BusType.SYSTEM, DBUS_UPOWER_NAME, dbus_upower_battery_path, DBusProxyFlags.GET_INVALIDATED_PROPERTIES);
                     debug ("Connection to UPower bus established");
                     debug ("Battery detected at path: %s", dbus_upower_battery_path);
                 }
