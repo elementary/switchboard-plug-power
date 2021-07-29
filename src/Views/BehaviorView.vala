@@ -76,10 +76,10 @@ public class Power.BehaviorView : Granite.SimpleSettingsPage {
 
             settings.bind ("ambient-enabled", als_switch, "active", SettingsBindFlags.DEFAULT);
 
-            scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 100, 10);
-            scale.draw_value = false;
-            scale.hexpand = true;
-            scale.width_request = 480;
+            scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 100, 10) {
+                draw_value = false,
+                hexpand = true
+            };
 
             scale.set_value (screen.brightness);
 
