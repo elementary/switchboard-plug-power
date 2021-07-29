@@ -127,8 +127,8 @@ namespace Power {
         // 'search' returns results like ("Keyboard → Behavior → Duration", "keyboard<sep>behavior")
         public override async Gee.TreeMap<string, string> search (string search) {
             var search_results = new Gee.TreeMap<string, string> (
-              (GLib.CompareDataFunc<string>)strcmp,
-              (Gee.EqualDataFunc<string>)str_equal
+                (GLib.CompareDataFunc<string>)strcmp,
+                (Gee.EqualDataFunc<string>)str_equal
             );
             search_results.set ("%s → %s".printf (display_name, _("Suspend button")), "");
             search_results.set ("%s → %s".printf (display_name, _("Power button")), "");
