@@ -54,7 +54,7 @@
           xalign = 1
       };
 
-      var max_capacity_label = new Gtk.Label (_("Maximum Capacity:")) {
+      var max_capacity_label = new Gtk.Label (_("Maximum capacity:")) {
           halign = Gtk.Align.END,
           xalign = 1
       };
