@@ -32,6 +32,7 @@
     construct {
       battery = new Battery ();
       status = battery.get_info ();
+      content_area.column_spacing = 6;
       content_area.row_spacing = 6;
       content_area.margin_left = 50;
       content_area.margin_top = 20;
