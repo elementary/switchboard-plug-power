@@ -94,8 +94,12 @@ namespace Power {
                 var content = infobar.get_content_area ();
                 content.add (new Gtk.Label (_("Some settings require administrator rights to be changed")));
                 var permission = get_permission ();
-                permission.bind_property ("allowed", infobar, "revealed",
-                    GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN);
+                permission.bind_property (
+                    "allowed",
+                    infobar,
+                    "revealed",
+                    GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN
+                );
 
                 main_grid = new Gtk.Grid () {
                   orientation = Gtk.Orientation.VERTICAL
