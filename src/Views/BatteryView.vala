@@ -34,8 +34,7 @@
       status = battery.get_info ();
       content_area.column_spacing = 6;
       content_area.row_spacing = 6;
-      content_area.margin_left = 50;
-      content_area.margin_top = 20;
+      content_area.halign = Gtk.Align.CENTER;
 
       var charge_label = new Gtk.Label (_("Current Charge:")) {
           halign = Gtk.Align.END,
