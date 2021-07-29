@@ -64,7 +64,7 @@
           xalign = 1
       };
 
-      var capacity_label = new Gtk.Label (_("Design Energy:")) {
+      var capacity_label = new Gtk.Label (_("Design energy:")) {
           halign = Gtk.Align.END,
           xalign = 1
       };
