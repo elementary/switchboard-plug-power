@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2021 elementary, Inc. (https://elementary.io)
+ * Copyright 2011–2021 elementary, Inc. (https://elementary.io)
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -16,6 +16,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor,
  * Boston, MA  02110-1301, USA.
  */
+
  public class Power.BatteryView : Granite.SimpleSettingsPage {
     private Battery battery;
     //  private Services.DeviceManager dm;
@@ -30,58 +31,62 @@
     }
 
     construct {
-      battery = new Battery ();
-      status = battery.get_info ();
-      content_area.column_spacing = 6;
-      content_area.row_spacing = 6;
-      content_area.halign = Gtk.Align.CENTER;
+        battery = new Battery ();
+        status = battery.get_info ();
+        content_area.column_spacing = 6;
+        content_area.row_spacing = 6;
+        content_area.halign = Gtk.Align.CENTER;
 
-      var charge_label = new Gtk.Label (_("Current charge:")) {
-          halign = Gtk.Align.END,
-          xalign = 1
-      };
-      var charge_percent = new Gtk.Label (battery.percentage.to_string () + "%") {
-          halign = Gtk.Align.START,
-          xalign = 1
-      };
+        var charge_label = new Gtk.Label (_("Current charge:")) {
+            halign = Gtk.Align.END,
+            xalign = 1
+        };
 
-      var health_label = new Gtk.Label (_("Health:")) {
-          halign = Gtk.Align.END,
-          xalign = 1
-      };
-      var health = new Gtk.Label (battery.get_health ()) {
-          halign = Gtk.Align.START,
-          xalign = 1
-      };
+        var charge_percent = new Gtk.Label (battery.percentage.to_string () + "%") {
+            halign = Gtk.Align.START,
+            xalign = 1
+        };
 
-      var max_capacity_label = new Gtk.Label (_("Maximum capacity:")) {
-          halign = Gtk.Align.END,
-          xalign = 1
-      };
-      var max_capacity_number = (int) Math.round (battery.capacity);
-      var max_capacity = new Gtk.Label (max_capacity_number.to_string () + "%") {
-          halign = Gtk.Align.START,
-          xalign = 1
-      };
+        var health_label = new Gtk.Label (_("Health:")) {
+            halign = Gtk.Align.END,
+            xalign = 1
+        };
 
-      var capacity_label = new Gtk.Label (_("Design energy:")) {
-          halign = Gtk.Align.END,
-          xalign = 1
-      };
-      var battery_capacity = (int) Math.round (battery.energy_full_design);
-      var capacity = new Gtk.Label (battery_capacity.to_string () + " Wh") {
-          halign = Gtk.Align.START,
-          xalign = 1
-      };
+        var health = new Gtk.Label (battery.get_health ()) {
+            halign = Gtk.Align.START,
+            xalign = 1
+        };
 
-      content_area.attach (health_label, 0, 0);
-      content_area.attach (health, 1, 0);
-      content_area.attach (max_capacity_label, 0, 1);
-      content_area.attach (max_capacity, 1, 1);
-      content_area.attach (charge_label, 0, 2);
-      content_area.attach (charge_percent, 1, 2);
-      content_area.attach (capacity_label, 0, 3);
-      content_area.attach (capacity, 1, 3);
+        var max_capacity_label = new Gtk.Label (_("Maximum capacity:")) {
+            halign = Gtk.Align.END,
+            xalign = 1
+        };
+
+        var max_capacity_number = (int) Math.round (battery.capacity);
+        var max_capacity = new Gtk.Label (max_capacity_number.to_string () + "%") {
+            halign = Gtk.Align.START,
+            xalign = 1
+        };
+
+        var capacity_label = new Gtk.Label (_("Design energy:")) {
+            halign = Gtk.Align.END,
+            xalign = 1
+        };
+
+        var battery_capacity = (int) Math.round (battery.energy_full_design);
+        var capacity = new Gtk.Label (battery_capacity.to_string () + " Wh") {
+            halign = Gtk.Align.START,
+            xalign = 1
+        };
+
+        content_area.attach (health_label, 0, 0);
+        content_area.attach (health, 1, 0);
+        content_area.attach (max_capacity_label, 0, 1);
+        content_area.attach (max_capacity, 1, 1);
+        content_area.attach (charge_label, 0, 2);
+        content_area.attach (charge_percent, 1, 2);
+        content_area.attach (capacity_label, 0, 3);
+        content_area.attach (capacity, 1, 3);
     }
 
 }
