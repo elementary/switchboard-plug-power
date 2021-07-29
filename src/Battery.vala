@@ -60,7 +60,6 @@ namespace Power {
             PEN = 13;
             public unowned string? get_name () {
                 switch (this) {
-                    /* TODO: Do we want to differentiate between batteries and rechargeable batteries? (See German: Batterie <-> Akku) */
                     case BATTERY:
                         return _("Battery");
                     case UPS:
@@ -128,16 +127,19 @@ namespace Power {
                 upower = Bus.get_proxy_sync (BusType.SYSTEM, DBUS_UPOWER_NAME, DBUS_UPOWER_PATH, DBusProxyFlags.NONE);
                 dbus_upower_battery_path = get_dbus_path (upower);
                 if (dbus_upower_battery_path != "" && dbus_upower_battery_path != null) {
-                    upower_device = Bus.get_proxy_sync (BusType.SYSTEM, DBUS_UPOWER_NAME, dbus_upower_battery_path, DBusProxyFlags.GET_INVALIDATED_PROPERTIES);
+                    upower_device = Bus.get_proxy_sync (
+                        BusType.SYSTEM, DBUS_UPOWER_NAME,
+                        dbus_upower_battery_path,
+                        DBusProxyFlags.GET_INVALIDATED_PROPERTIES
+                    );
                     debug ("Connection to UPower bus established");
                     debug ("Battery detected at path: %s", dbus_upower_battery_path);
                 }
             } catch (Error e) {
                 critical ("Connecting to UPower bus failed: %s", e.message);
             }
+
             update_properties ();
-            //  percentage = upower_device.percentage;
-            //  is_charging = state == State.FULLY_CHARGED || state == State.CHARGING;
         }
 
         private void update_properties () {
@@ -175,7 +177,7 @@ namespace Power {
 
             is_charging = state == State.FULLY_CHARGED || state == State.CHARGING;
             is_a_battery = device_type != Type.UNKNOWN && device_type != Type.LINE_POWER;
-    
+
             properties_updated ();
         }
 
@@ -193,7 +195,11 @@ namespace Power {
             try {
                 ObjectPath[] devs = upow.enumerate_devices ();
                 for (int i = 0; i < devs.length; i++) {
-                    UpowerDevice device = Bus.get_proxy_sync (BusType.SYSTEM, DBUS_UPOWER_NAME, devs[i].to_string (), DBusProxyFlags.GET_INVALIDATED_PROPERTIES);
+                    UpowerDevice device = Bus.get_proxy_sync (
+                        BusType.SYSTEM, DBUS_UPOWER_NAME,
+                        devs[i].to_string (),
+                        DBusProxyFlags.GET_INVALIDATED_PROPERTIES
+                    );
 
                     if (device.device_type == 2) {
                         path = devs[i].to_string ();

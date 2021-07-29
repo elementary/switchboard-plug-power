@@ -94,7 +94,8 @@ namespace Power {
                 var content = infobar.get_content_area ();
                 content.add (new Gtk.Label (_("Some settings require administrator rights to be changed")));
                 var permission = get_permission ();
-                permission.bind_property ("allowed", infobar, "revealed", GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN);
+                permission.bind_property ("allowed", infobar, "revealed",
+                    GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN);
 
                 main_grid = new Gtk.Grid () {
                   orientation = Gtk.Orientation.VERTICAL
@@ -121,7 +122,10 @@ namespace Power {
 
         // 'search' returns results like ("Keyboard → Behavior → Duration", "keyboard<sep>behavior")
         public override async Gee.TreeMap<string, string> search (string search) {
-            var search_results = new Gee.TreeMap<string, string> ((GLib.CompareDataFunc<string>)strcmp, (Gee.EqualDataFunc<string>)str_equal);
+            var search_results = new Gee.TreeMap<string, string> (
+              (GLib.CompareDataFunc<string>)strcmp,
+              (Gee.EqualDataFunc<string>)str_equal
+            );
             search_results.set ("%s → %s".printf (display_name, _("Suspend button")), "");
             search_results.set ("%s → %s".printf (display_name, _("Power button")), "");
             search_results.set ("%s → %s".printf (display_name, _("Display inactive")), "");

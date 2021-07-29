@@ -26,7 +26,10 @@ namespace Power {
         }
 
         try {
-            permission = new Polkit.Permission.sync ("io.elementary.switchboard.power.administration", new Polkit.UnixProcess (Posix.getpid ()));
+            permission = new Polkit.Permission.sync (
+                "io.elementary.switchboard.power.administration",
+                new Polkit.UnixProcess (Posix.getpid ())
+            );
             return permission;
         } catch (Error e) {
             critical (e.message);

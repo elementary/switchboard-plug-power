@@ -76,7 +76,11 @@ public class LoginDHelper.Application : GLib.Application {
 
         /* We need to restart systemd-logind to ensure that the lid settings are taken into account */
         try {
-            var systemd_bus_proxy = Bus.get_proxy_sync<SystemDBus> (BusType.SYSTEM, "org.freedesktop.systemd1", "/org/freedesktop/systemd1");
+            var systemd_bus_proxy = Bus.get_proxy_sync<SystemDBus> (
+              BusType.SYSTEM,
+              "org.freedesktop.systemd1",
+              "/org/freedesktop/systemd1"
+            );
             systemd_bus_proxy.reload_or_try_restart_unit ("systemd-logind.service", "fail");
         } catch (Error e) {
             warning (e.message);

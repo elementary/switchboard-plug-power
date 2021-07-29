@@ -60,7 +60,11 @@ namespace Power {
 
     [DBus (name = "org.freedesktop.UPower.Device")]
     interface UpowerDevice : Object {
-        public abstract HistoryDataPoint[] get_history (string type, uint32 timespan, uint32 resolution) throws GLib.Error;
+        public abstract HistoryDataPoint[] get_history (
+            string type,
+            uint32 timespan,
+            uint32 resolution
+        ) throws GLib.Error;
 
         public abstract StatisticsDataPoint[] get_statistics (string type) throws GLib.Error;
         public abstract void refresh () throws Error;

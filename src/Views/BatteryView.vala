@@ -58,7 +58,7 @@
           halign = Gtk.Align.END,
           xalign = 1
       };
-      var max_capacity_number  = (int) Math.round (battery.capacity);
+      var max_capacity_number = (int) Math.round (battery.capacity);
       var max_capacity = new Gtk.Label (max_capacity_number.to_string () + "%") {
           halign = Gtk.Align.START,
           xalign = 1
