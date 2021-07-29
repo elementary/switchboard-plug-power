@@ -226,16 +226,25 @@ namespace Power {
 
         public string get_health () {
             var capacity = (int)Math.round (capacity);
-            if (capacity <= 60) {
+
+            if (capacity < 60) {
+                return _("Critical");
+            }
+
+            if (capacity < 70) {
                 return _("Poor");
             }
 
-            if (capacity > 60) {
-                return _("Normal");
+            if (capacity < 80) {
+                return _("Fair");
             }
 
-            if (capacity > 90) {
-                return _("Excelent");
+            if (capacity < 90) {
+                return _("Good");
+            }
+
+            if (capacity >= 90) {
+                return _("Excellent");
             }
 
             return _("Unknown");
