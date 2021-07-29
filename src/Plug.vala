@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2018 elementary, Inc. (https://elementary.io)
+ * Copyright 2011–2021 elementary, Inc. (https://elementary.io)
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -52,28 +52,32 @@ namespace Power {
                     pixel_size = 32,
                     use_fallback = true
                 };
+
                 var fileicon = new FileIcon (File.new_for_path (manufacturer_icon_path));
                 if (manufacturer_icon_path != null) {
-                  manufacturer_logo.gicon = fileicon;
+                    manufacturer_logo.gicon = fileicon;
                 }
+
                 if (manufacturer_logo.gicon == null) {
-                  load_fallback_manufacturer_icon.begin ();
+                    load_fallback_manufacturer_icon.begin ();
                 }
+
                 stack = new Gtk.Stack ();
                 main_view = new BehaviorView ();
                 stack.add_named (main_view, "Power");
 
                 if (main_view.battery.is_present ()) {
-                  var badge_icon = new Gtk.Image.from_icon_name ("battery-full-charged", Gtk.IconSize.BUTTON) {
-                    halign = Gtk.Align.END,
-                    valign = Gtk.Align.END
-                  };
+                    var badge_icon = new Gtk.Image.from_icon_name ("battery-full-charged", Gtk.IconSize.BUTTON) {
+                        halign = Gtk.Align.END,
+                        valign = Gtk.Align.END
+                    };
 
-                  var overlay = new Gtk.Overlay ();
-                  overlay.add (manufacturer_logo);
-                  overlay.add_overlay (badge_icon);
-                  battery_view = new BatteryView (overlay);
-                  stack.add_named (battery_view, "Built-in");
+                    var overlay = new Gtk.Overlay ();
+                    overlay.add (manufacturer_logo);
+                    overlay.add_overlay (badge_icon);
+
+                    battery_view = new BatteryView (overlay);
+                    stack.add_named (battery_view, "Built-in");
                 }
 
                 var switcher = new Granite.SettingsSidebar (stack);
@@ -93,6 +97,7 @@ namespace Power {
 
                 var content = infobar.get_content_area ();
                 content.add (new Gtk.Label (_("Some settings require administrator rights to be changed")));
+
                 var permission = get_permission ();
                 permission.bind_property (
                     "allowed",
@@ -102,7 +107,7 @@ namespace Power {
                 );
 
                 main_grid = new Gtk.Grid () {
-                  orientation = Gtk.Orientation.VERTICAL
+                    orientation = Gtk.Orientation.VERTICAL
                 };
                 main_grid.add (infobar);
                 main_grid.add (hpaned);
