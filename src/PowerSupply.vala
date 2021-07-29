@@ -58,11 +58,7 @@ namespace Power {
             try {
                 ObjectPath[] devs = upow.enumerate_devices ();
                 for (int i = 0; i < devs.length; i++) {
-                    UpowerDevice dev = Bus.get_proxy_sync (
-                        BusType.SYSTEM, DBUS_UPOWER_NAME,
-                        devs[i],
-                        DBusProxyFlags.GET_INVALIDATED_PROPERTIES
-                    );
+                    UpowerDevice dev = Bus.get_proxy_sync (BusType.SYSTEM, DBUS_UPOWER_NAME, devs[i], DBusProxyFlags.GET_INVALIDATED_PROPERTIES);
                     if (dev.device_type == LINE_POWER_TYPE) {
                         upower_device = dev;
                         dbus_upower_power_supply = true;
