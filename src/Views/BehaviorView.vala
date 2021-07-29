@@ -16,6 +16,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor,
  * Boston, MA  02110-1301, USA.
  */
+
 public class Power.BehaviorView : Granite.SimpleSettingsPage {
     public Battery battery { get; private set; }
     public Gtk.Stack stack { get; private set; }
