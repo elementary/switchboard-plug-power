@@ -36,7 +36,7 @@
       content_area.row_spacing = 6;
       content_area.halign = Gtk.Align.CENTER;
 
-      var charge_label = new Gtk.Label (_("Current Charge:")) {
+      var charge_label = new Gtk.Label (_("Current charge:")) {
           halign = Gtk.Align.END,
           xalign = 1
       };
