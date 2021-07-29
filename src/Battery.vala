@@ -98,7 +98,6 @@ namespace Power {
         public bool is_a_battery { get; private set; }
         public bool has_history { get; private set; }
         public bool has_statistics { get; private set; }
-        //  public bool is_present { get; private set; }
         public bool is_rechargeable { get; private set; }
         public bool online { get; private set; }
         public bool power_supply { get; private set; }
@@ -220,6 +219,23 @@ namespace Power {
 
             var info = _("%i%% charged").printf (percent);
             return info;
+        }
+
+        public string get_health () {
+            var capacity = (int)Math.round (capacity);
+            if (capacity <= 60) {
+              return _("Poor");
+            }
+
+            if (capacity > 60) {
+              return _("Normal");
+            }
+
+            if (capacity > 90) {
+              return _("Excelent");
+            }
+
+            return _("Unknown");
         }
 
         private Type determine_device_type () {
