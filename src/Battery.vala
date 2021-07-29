@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2016 elementary LLC. (https://launchpad.net/switchboard-plug-power)
+ * Copyright 2011–2021 elementary, Inc. (https://launchpad.net/switchboard-plug-power)
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -32,6 +32,7 @@ namespace Power {
             PENDING_CHARGE = 5,
             PENDING_DISCHARGE = 6
         }
+
         [CCode (type_signature = "u")]
         public enum Technology {
             UNKNOWN = 0,
@@ -42,6 +43,7 @@ namespace Power {
             NICKEL_CADMIUM = 5,
             NICKEL_METAL_HYDRIDE = 6
         }
+
         [CCode (type_signature = "u")]
         public enum Type {
             UNKNOWN = 0,
@@ -58,6 +60,7 @@ namespace Power {
             COMPUTER = 11,
             GAMING_INPUT = 12,
             PEN = 13;
+
             public unowned string? get_name () {
                 switch (this) {
                     case BATTERY:
@@ -91,6 +94,7 @@ namespace Power {
                 }
             }
         }
+
         private string dbus_upower_battery_path;
         public double percentage { get; private set; }
         public bool is_charging { get; private set; }
@@ -207,7 +211,7 @@ namespace Power {
                     }
                 }
             } catch (Error e) {
-                critical ("acpi couldn't get upower devices");
+                critical ("ACPI couldn't get UPower devices");
             }
 
             return path;
@@ -216,40 +220,44 @@ namespace Power {
         public string get_info () {
             var percent = (int)Math.round (percentage);
             if (percent <= 0) {
-              return _("Calculating…");
+                return _("Calculating…");
             }
 
             if (percent == 100) {
-              return _("Fully charged");
+                return _("Fully charged");
             }
 
             var info = _("%i%% charged").printf (percent);
+
             return info;
         }
 
         public string get_health () {
             var capacity = (int)Math.round (capacity);
             if (capacity <= 60) {
-              return _("Poor");
+                return _("Poor");
             }
 
             if (capacity > 60) {
-              return _("Normal");
+                return _("Normal");
             }
 
             if (capacity > 90) {
-              return _("Excelent");
+                return _("Excelent");
             }
 
             return _("Unknown");
         }
 
         private Type determine_device_type () {
-            // In case a all-in-one keyboard is clasified as mouse because of a mouse pointer. we should show it as keyboard.
-            // referenced upstream issue https://gitlab.freedesktop.org/upower/upower/-/issues/139
+            // In case an all-in-one keyboard is clasified as mouse because of a
+            // mouse pointer, we should show it as keyboard.
+            //
+            // Upstream issue https://gitlab.freedesktop.org/upower/upower/-/issues/139
             if (upower_device.Type == Type.MOUSE && upower_device.model.contains ("keyboard")) {
                 return (Type) Type.KEYBOARD;
             }
+
             return (Type) upower_device.Type;
         }
     }
