@@ -280,7 +280,7 @@
             return _("Calculating…");
         }
 
-        if (percent == 100) {
+        if (percent == 100 && is_charging) {
             return _("Fully charged");
         }
 
