@@ -106,5 +106,9 @@ namespace Power {
         public abstract bool on_battery { owned get; }
         public abstract bool low_on_battery { owned get; }
         public abstract ObjectPath[] enumerate_devices () throws Error;
+        public abstract ObjectPath get_display_device () throws GLib.Error;
+
+        public signal void DeviceAdded (ObjectPath device_path);
+        public signal void DeviceRemoved (ObjectPath device_path);
     }
 }

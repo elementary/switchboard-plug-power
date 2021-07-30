@@ -21,7 +21,10 @@ namespace Power {
     private GLib.Settings settings;
 
     public class Plug : Switchboard.Plug {
+        private Upower? upower = null;
         private string manufacturer_icon_path;
+        public Gee.HashMap<string, Gtk.Widget> entries;
+        public Gee.HashMap<string, Services.Device> devices { get; private set; }
 
         private BehaviorView main_view;
         private BatteryView battery_view;
@@ -32,6 +35,14 @@ namespace Power {
         private Gtk.LockButton lock_button;
         private SystemInterface system_interface;
         private Gtk.Image manufacturer_logo;
+
+        construct {
+            try {
+                upower = Bus.get_proxy_sync (BusType.SYSTEM, DBUS_UPOWER_NAME, DBUS_UPOWER_PATH, DBusProxyFlags.NONE);
+            } catch (Error e) {
+                critical ("Connecting to UPower bus failed: %s", e.message);
+            }
+        }
 
         public Plug () {
             var supported_settings = new Gee.TreeMap<string, string?> (null, null);
@@ -76,9 +87,11 @@ namespace Power {
                     overlay.add (manufacturer_logo);
                     overlay.add_overlay (badge_icon);
 
-                    battery_view = new BatteryView (overlay);
+                    battery_view = new BatteryView (overlay, null, "Built-in", true);
                     stack.add_named (battery_view, "Built-in");
                 }
+                // TODO: add all other devices
+                fetch_devices ();
 
                 var switcher = new Granite.SettingsSidebar (stack);
 
@@ -115,6 +128,44 @@ namespace Power {
             }
 
             return main_grid;
+        }
+
+        public void fetch_devices () {
+            if (upower != null) {
+                try {
+                    var devices = upower.enumerate_devices ();
+                    foreach (ObjectPath device_path in devices) {
+                        if (device_with_battery (device_path) == true) {
+                            var device_widget = get_device_row (device_path);
+                            stack.add_named (device_widget, device_path);
+                        }
+                    }
+                } catch (Error e) {
+                    critical ("Reading UPower devices failed: %s", e.message);
+                }
+            }
+        }
+
+        private bool device_with_battery (ObjectPath device_path) {
+            var device = new Services.Device (device_path);
+            devices.@set (device_path, device);
+            return (device.is_a_battery && device.is_present && device.device_type != Services.Device.Type.BATTERY);
+        }
+
+        public Gtk.Widget get_device_row (ObjectPath device_path) {
+            var device = new Services.Device (device_path);
+            var device_icon = new Gtk.Image.from_icon_name (device.device_type.get_icon_name (), Gtk.IconSize.DND);
+            var badge_icon = new Gtk.Image.from_icon_name ("battery-full-charged", Gtk.IconSize.BUTTON) {
+                halign = Gtk.Align.END,
+                valign = Gtk.Align.END
+            };
+
+            var overlay = new Gtk.Overlay ();
+            overlay.add (device_icon);
+            overlay.add_overlay (badge_icon);
+
+            var battery_view = new BatteryView (overlay, device_path, device.device_type.get_name (), false);
+            return battery_view;
         }
 
         public override void shown () {

@@ -17,21 +17,25 @@
  * Boston, MA  02110-1301, USA.
  */
 
- public class Power.BatteryView : Granite.SimpleSettingsPage {
+public class Power.BatteryView : Granite.SimpleSettingsPage {
+    //  public Services.Device battery;
     private Battery battery;
-
-    public BatteryView (Gtk.Widget icon) {
+    public ObjectPath device_path { get; set; }
+    
+    public BatteryView (Gtk.Widget icon, ObjectPath? device_path, string title, bool show_header) {
+        this.device_path = device_path;
         Object (
-            header: _("Devices"),
-            title: _("Built-in"),
+            header: show_header ? _("Devices") : null,
+            title: title,
             display_widget: icon,
-            description: _("Rechargeable batteries naturally lose capacity over time and when used. To maximize battery health, avoid leaving your device connected to power after it is charged.")
+            description: _("Rechargeable batteries naturally lose capacity over time and when used.\nTo maximize battery health, avoid leaving your device connected to power after it is charged.")
         );
     }
 
     construct {
         battery = new Battery ();
         status = battery.get_info ();
+
         content_area.column_spacing = 6;
         content_area.row_spacing = 6;
         content_area.halign = Gtk.Align.CENTER;
@@ -51,7 +55,7 @@
             xalign = 1
         };
 
-        var health = new Gtk.Label (battery.get_health ()) {
+        var health = new Gtk.Label ("NICE") {
             halign = Gtk.Align.START,
             xalign = 1
         };
