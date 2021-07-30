@@ -243,23 +243,23 @@ namespace Power {
             if (percentage <= 0) {
                 return "battery-good";
             }
-    
+
             if (percentage < 10 && (time_to_empty == 0 || time_to_empty < 30 * 60)) {
                 return "battery-empty";
             }
-    
+
             if (percentage < 30) {
                 return "battery-caution";
             }
-    
+
             if (percentage < 60) {
                 return "battery-low";
             }
-    
+
             if (percentage < 80) {
                 return "battery-good";
             }
-    
+
             return "battery-full";
         }
 

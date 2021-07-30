@@ -1,7 +1,6 @@
 interfaces_file = files('Interfaces.vala')
 
 plug_files = files(
-    'Battery.vala',
     'GreeterAccountsServicePlugin.vala',
     'LogindHelper.vala',
     'Permission.vala',
@@ -12,6 +11,7 @@ plug_files = files(
     'Widgets/TimeoutComboBox.vala',
     'Widgets/LidCloseActionComboBox.vala',
     'Widgets/ActionComboBox.vala',
+    'Services/Battery.vala',
     'Services/Device.vala',
 )
 
