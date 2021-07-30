@@ -224,6 +224,45 @@ namespace Power {
             return info;
         }
 
+        public string get_icon_name_for_battery () {
+            if (!is_a_battery) {
+                return "preferences-system-power-symbolic";
+            }
+            if (percentage == 100 && is_charging) {
+                return "battery-full-charged";
+            }
+            var battery_icon = get_battery_icon ();
+            if (is_charging) {
+                return battery_icon + "-charging";
+            } else {
+                return battery_icon;
+            }
+        }
+
+        public string get_battery_icon () {
+            if (percentage <= 0) {
+                return "battery-good";
+            }
+    
+            if (percentage < 10 && (time_to_empty == 0 || time_to_empty < 30 * 60)) {
+                return "battery-empty";
+            }
+    
+            if (percentage < 30) {
+                return "battery-caution";
+            }
+    
+            if (percentage < 60) {
+                return "battery-low";
+            }
+    
+            if (percentage < 80) {
+                return "battery-good";
+            }
+    
+            return "battery-full";
+        }
+
         public string get_health () {
             var capacity = (int)Math.round (capacity);
 

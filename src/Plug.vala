@@ -78,7 +78,7 @@ namespace Power {
                 stack.add_named (main_view, "Power");
 
                 if (main_view.battery.is_present ()) {
-                    var badge_icon = new Gtk.Image.from_icon_name ("battery-full-charged", Gtk.IconSize.BUTTON) {
+                    var badge_icon = new Gtk.Image.from_icon_name (main_view.battery.get_icon_name_for_battery (), Gtk.IconSize.BUTTON) {
                         halign = Gtk.Align.END,
                         valign = Gtk.Align.END
                     };
@@ -155,7 +155,7 @@ namespace Power {
         public Gtk.Widget get_device_row (ObjectPath device_path) {
             var device = new Services.Device (device_path);
             var device_icon = new Gtk.Image.from_icon_name (device.device_type.get_icon_name (), Gtk.IconSize.DND);
-            var badge_icon = new Gtk.Image.from_icon_name ("battery-full-charged", Gtk.IconSize.BUTTON) {
+            var badge_icon = new Gtk.Image.from_icon_name (device.get_icon_name_for_battery (), Gtk.IconSize.BUTTON) {
                 halign = Gtk.Align.END,
                 valign = Gtk.Align.END
             };
