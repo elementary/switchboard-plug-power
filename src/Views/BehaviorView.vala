@@ -85,7 +85,7 @@ public class Power.BehaviorView : Granite.SimpleSettingsPage {
             scale.set_value (screen.brightness);
 
             scale.value_changed.connect (on_scale_value_changed);
-            (screen as DBusProxy).g_properties_changed.connect (on_screen_properties_changed);
+            ((DBusProxy)screen).g_properties_changed.connect (on_screen_properties_changed);
 
             content_area.attach (brightness_label, 0, 0);
             content_area.attach (scale, 1, 0);
@@ -268,9 +268,9 @@ public class Power.BehaviorView : Granite.SimpleSettingsPage {
     }
     private void on_scale_value_changed () {
         var val = (int) scale.get_value ();
-        (screen as DBusProxy).g_properties_changed.disconnect (on_screen_properties_changed);
+        ((DBusProxy)screen).g_properties_changed.disconnect (on_screen_properties_changed);
         screen.brightness = val;
-        (screen as DBusProxy).g_properties_changed.connect (on_screen_properties_changed);
+        ((DBusProxy)screen).g_properties_changed.connect (on_screen_properties_changed);
     }
 
     private void on_screen_properties_changed (Variant changed_properties, string[] invalidated_properties) {
