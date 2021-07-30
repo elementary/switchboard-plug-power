@@ -19,7 +19,6 @@
 
  public class Power.BatteryView : Granite.SimpleSettingsPage {
     private Battery battery;
-    //  private Services.DeviceManager dm;
 
     public BatteryView (Gtk.Widget icon) {
         Object (
