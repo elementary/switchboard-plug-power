@@ -18,10 +18,10 @@
  */
 
 public class Power.BatteryView : Granite.SimpleSettingsPage {
-    //  public Services.Device battery;
+
     private Battery battery;
     public ObjectPath device_path { get; set; }
-    
+
     public BatteryView (Gtk.Widget icon, ObjectPath? device_path, string title, bool show_header) {
         this.device_path = device_path;
         Object (
@@ -55,7 +55,7 @@ public class Power.BatteryView : Granite.SimpleSettingsPage {
             xalign = 1
         };
 
-        var health = new Gtk.Label ("NICE") {
+        var health = new Gtk.Label (battery.get_health ()) {
             halign = Gtk.Align.START,
             xalign = 1
         };
