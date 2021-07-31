@@ -24,10 +24,9 @@ namespace Power {
         private Upower? upower = null;
         private string manufacturer_icon_path;
         public Gee.HashMap<string, Gtk.Widget> entries;
-        public Gee.HashMap<string, Services.Device> devices { get; private set; }
 
         private BehaviorView main_view;
-        private BatteryView battery_view;
+        private DeviceView device_view;
         private Gtk.Stack stack;
         private Gtk.Paned hpaned;
         private Gtk.Grid main_grid;
@@ -86,9 +85,14 @@ namespace Power {
                     var overlay = new Gtk.Overlay ();
                     overlay.add (manufacturer_logo);
                     overlay.add_overlay (badge_icon);
-
-                    battery_view = new BatteryView (overlay, null, "Built-in", true);
-                    stack.add_named (battery_view, "Built-in");
+                    device_view = new DeviceView (
+                        main_view.battery.native_path,
+                        overlay,
+                        main_view.battery.get_info (),
+                        "Built-in",
+                        true
+                    );
+                    stack.add_named (device_view, "Built-in");
                 }
                 // TODO: add all other devices
                 fetch_devices ();
@@ -146,25 +150,23 @@ namespace Power {
             }
         }
 
-        private bool device_with_battery (ObjectPath device_path) {
+        private bool device_with_battery (string device_path) {
             var device = new Services.Device (device_path);
-            devices.@set (device_path, device);
-            return (device.is_a_battery && device.is_present && device.device_type != Services.Device.Type.BATTERY);
+            //  devices.@set (device_path, device);
+            return (device.is_a_battery && device.is_present() && device.device_type != Services.Device.Type.BATTERY);
         }
 
-        public Gtk.Widget get_device_row (ObjectPath device_path) {
+        public Gtk.Widget get_device_row (string device_path) {
             var device = new Services.Device (device_path);
             var device_icon = new Gtk.Image.from_icon_name (device.device_type.get_icon_name (), Gtk.IconSize.DND);
             var badge_icon = new Gtk.Image.from_icon_name (device.get_icon_name_for_battery (), Gtk.IconSize.BUTTON) {
                 halign = Gtk.Align.END,
                 valign = Gtk.Align.END
             };
-
             var overlay = new Gtk.Overlay ();
             overlay.add (device_icon);
             overlay.add_overlay (badge_icon);
-
-            var battery_view = new BatteryView (overlay, device_path, device.device_type.get_name (), false);
+            var battery_view = new DeviceView (device_path, overlay, device.get_info (), device.device_type.get_name (), false);
             return battery_view;
         }
 

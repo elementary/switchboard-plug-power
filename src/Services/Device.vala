@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2015 elementary LLC. (https://elementary.io)
+ * Copyright 2011–2021 elementary, Inc. (https://launchpad.net/switchboard-plug-power)
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -11,15 +11,14 @@
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * General Public License for more details.
  *
- * You should have received a copy of the GNU General Public
- * License along with this program; if not, write to the
- * Free Software Foundation, Inc., 51 Franklin Street - Fifth Floor,
- * Boston, MA 02110-1301, USA.
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor,
+ * Boston, MA  02110-1301, USA.
  */
 
- public class Power.Services.Device : Object {
-    private const string DEVICE_INTERFACE = "org.freedesktop.UPower";
 
+public class Power.Services.Device : Object {
     [CCode (type_signature = "u")]
     public enum State {
         UNKNOWN = 0,
@@ -58,9 +57,9 @@
         COMPUTER = 11,
         GAMING_INPUT = 12,
         PEN = 13;
+
         public unowned string? get_name () {
             switch (this) {
-                /* TODO: Do we want to differentiate between batteries and rechargeable batteries? (See German: Batterie <-> Akku) */
                 case BATTERY:
                     return _("Battery");
                 case UPS:
@@ -121,14 +120,17 @@
         }
     }
 
+    private Upower? upower;
+    private UpowerDevice? upower_device;
+    
     private string device_path = "";
-
-    private UpowerDevice? device = null;
-
+    public double percentage { get; private set; }
+    public bool is_charging { get; private set; }
+    public bool is_a_battery { get; private set; }
     public bool has_history { get; private set; }
     public bool has_statistics { get; private set; }
-    public bool is_present { get; private set; }
     public bool is_rechargeable { get; private set; }
+    //  public bool is_present { get; private set; }
     public bool online { get; private set; }
     public bool power_supply { get; private set; }
     public double capacity { get; private set; }
@@ -138,7 +140,6 @@
     public double energy_full_design { get; private set; }
     public double energy_rate { get; private set; }
     public double luminosity { get; private set; }
-    public double percentage { get; private set; }
     public double temperature { get; private set; }
     public double voltage { get; private set; }
     public int64 time_to_empty { get; private set; }
@@ -147,14 +148,10 @@
     public string native_path { get; private set; }
     public string serial { get; private set; }
     public string vendor { get; private set; }
-    public Power.Services.Device.State state { get; private set; }
-    public Power.Services.Device.Technology technology { get; private set; }
-    public Power.Services.Device.Type device_type { get; private set; }
     public uint64 update_time { get; private set; }
-
-    // Extra property
-    public bool is_charging { get; private set; }
-    public bool is_a_battery { get; private set; }
+    public Type device_type { get; private set; }
+    public Technology technology { get; private set; }
+    public State state { get; private set; }
 
     public signal void properties_updated ();
 
@@ -163,76 +160,86 @@
 
         if (connect_to_bus ()) {
             update_properties ();
-            //  connect_signals ();
+            connect_signals ();
         }
     }
 
     private bool connect_to_bus () {
         try {
-            device = Bus.get_proxy_sync (BusType.SYSTEM, DEVICE_INTERFACE, device_path, DBusProxyFlags.NONE);
-            debug ("Connection to UPower device established");
+            upower_device = Bus.get_proxy_sync (BusType.SYSTEM, DBUS_UPOWER_NAME, device_path, DBusProxyFlags.NONE);
+            debug (("Connection to UPower device %s established").printf (device_path));
         } catch (Error e) {
             critical ("Connecting to UPower device failed: %s", e.message);
         }
 
-        return device != null;
+        return upower_device != null;
     }
 
-    //  private void connect_signals () {
-    //      device.g_properties_changed.connect (update_properties);
-    //  }
+    private void connect_signals () {
+        //  upower_device.g_properties_changed.connect (update_properties);
+    }
 
     private void update_properties () {
         try {
-            device.refresh ();
+            upower_device.refresh ();
         } catch (Error e) {
-            critical ("Updating the upower device parameters failed: %s", e.message);
+            critical ("Updating the upower upower_device parameters failed: %s", e.message);
         }
 
-        has_history = device.has_history;
-        has_statistics = device.has_statistics;
-        is_present = device.is_present;
-        is_rechargeable = device.is_rechargeable;
-        online = device.online;
-        power_supply = device.power_supply;
-        capacity = device.capacity;
-        energy = device.energy;
-        energy_empty = device.energy_empty;
-        energy_full = device.energy_full;
-        energy_full_design = device.energy_full_design;
-        energy_rate = device.energy_rate;
-        luminosity = device.luminosity;
-        percentage = device.percentage;
-        temperature = device.temperature;
-        voltage = device.voltage;
-        time_to_empty = device.time_to_empty;
-        time_to_full = device.time_to_full;
-        model = device.model;
-        native_path = device.native_path;
-        serial = device.serial;
-        vendor = device.vendor;
+        has_history = upower_device.has_history;
+        has_statistics = upower_device.has_statistics;
+        is_rechargeable = upower_device.is_rechargeable;
+        online = upower_device.online;
+        power_supply = upower_device.power_supply;
+        capacity = upower_device.capacity;
+        energy = upower_device.energy;
+        energy_empty = upower_device.energy_empty;
+        energy_full = upower_device.energy_full;
+        energy_full_design = upower_device.energy_full_design;
+        energy_rate = upower_device.energy_rate;
+        luminosity = upower_device.luminosity;
+        percentage = upower_device.percentage;
+        temperature = upower_device.temperature;
+        voltage = upower_device.voltage;
+        time_to_empty = upower_device.time_to_empty;
+        time_to_full = upower_device.time_to_full;
+        model = upower_device.model;
+        native_path = upower_device.native_path;
+        serial = upower_device.serial;
+        vendor = upower_device.vendor;
         device_type = determine_device_type ();
-        state = (Power.Services.Device.State) device.state;
-        technology = (Power.Services.Device.Technology) device.technology;
-        update_time = device.update_time;
+        state = (State) upower_device.state;
+        technology = (Technology) upower_device.technology;
+        update_time = upower_device.update_time;
 
-        is_charging = state == Power.Services.Device.State.FULLY_CHARGED || state == Power.Services.Device.State.CHARGING;
-        is_a_battery = device_type != Power.Services.Device.Type.UNKNOWN && device_type != Power.Services.Device.Type.LINE_POWER;
+        is_charging = state == State.FULLY_CHARGED || state == State.CHARGING;
+        is_a_battery = device_type != Type.UNKNOWN && device_type != Type.LINE_POWER;
 
         properties_updated ();
     }
 
-    private Power.Services.Device.Type determine_device_type () {
-        // In case a all-in-one keyboard is clasified as mouse because of a mouse pointer. we should show it as keyboard.
-        // referenced upstream issue https://gitlab.freedesktop.org/upower/upower/-/issues/139
-        if (device.Type == Type.MOUSE && device.model.contains ("keyboard")) {
-            return (Power.Services.Device.Type) Type.KEYBOARD;
+    public bool is_present () {
+        bool present = false;
+        if (upower.on_battery || upower_device.is_present) {
+            present = true;
         }
-        return (Power.Services.Device.Type) device.Type;
+
+        return present;
     }
 
-    public string get_symbolic_icon_name_for_battery () {
-        return get_icon_name_for_battery () + "-symbolic";
+    public string get_info () {
+        var percent = (int)Math.round (percentage);
+        if (percent <= 0) {
+            return _("Calculating…");
+        }
+
+        if (percent == 100 && is_charging) {
+            return _("Fully charged");
+        }
+
+        var info = _("%i%% charged").printf (percent);
+
+        return info;
     }
 
     public string get_icon_name_for_battery () {
@@ -242,7 +249,7 @@
         if (percentage == 100 && is_charging) {
             return "battery-full-charged";
         }
-        unowned string battery_icon = get_battery_icon ();
+        var battery_icon = get_battery_icon ();
         if (is_charging) {
             return battery_icon + "-charging";
         } else {
@@ -250,7 +257,7 @@
         }
     }
 
-    private unowned string get_battery_icon () {
+    public string get_battery_icon () {
         if (percentage <= 0) {
             return "battery-good";
         }
@@ -274,18 +281,42 @@
         return "battery-full";
     }
 
-    public string get_info () {
-        var percent = (int)Math.round (percentage);
-        if (percent <= 0) {
-            return _("Calculating…");
+    public string get_health () {
+        var capacity = (int)Math.round (capacity);
+
+        if (capacity < 60) {
+            return _("Critical");
         }
 
-        if (percent == 100 && is_charging) {
-            return _("Fully charged");
+        if (capacity < 70) {
+            return _("Poor");
         }
 
-        var info = _("%i%% charged").printf (percent);
+        if (capacity < 80) {
+            return _("Fair");
+        }
 
-        return info;
+        if (capacity < 90) {
+            return _("Good");
+        }
+
+        if (capacity >= 90) {
+            return _("Excellent");
+        }
+
+        return _("Unknown");
+    }
+
+    private Type determine_device_type () {
+        // In case an all-in-one keyboard is clasified as mouse because of a
+        // mouse pointer, we should show it as keyboard.
+        //
+        // Upstream issue https://gitlab.freedesktop.org/upower/upower/-/issues/139
+        if (upower_device.Type == Type.MOUSE && upower_device.model.contains ("keyboard")) {
+            return (Type) Type.KEYBOARD;
+        }
+
+        return (Type) upower_device.Type;
     }
 }
+

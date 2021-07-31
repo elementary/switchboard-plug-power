@@ -18,8 +18,10 @@
  */
 
 public class Power.BehaviorView : Granite.SimpleSettingsPage {
-    public Battery battery { get; private set; }
+    public Services.Device battery { get; private set; }
     public Gtk.Stack stack { get; private set; }
+    private string path_battery = "";
+    private Upower? upower = null;
 
     private const string NO_PERMISSION_STRING = _("You do not have permission to change this");
     private const string SETTINGS_DAEMON_NAME = "org.gnome.SettingsDaemon.Power";
@@ -28,6 +30,7 @@ public class Power.BehaviorView : Granite.SimpleSettingsPage {
     private Gtk.Scale scale;
     private PowerSettings screen;
     private PowerSupply power_supply;
+    
 
     private enum PowerActionType {
         BLANK,
@@ -47,14 +50,21 @@ public class Power.BehaviorView : Granite.SimpleSettingsPage {
     }
 
     construct {
+        try {
+            upower = Bus.get_proxy_sync (BusType.SYSTEM, DBUS_UPOWER_NAME, DBUS_UPOWER_PATH, DBusProxyFlags.NONE);
+        } catch (Error e) {
+            critical ("Connecting to UPower bus failed: %s", e.message);
+        }
+        get_dbus_main_battery_path ();
         content_area.row_spacing = 6;
         margin_bottom = 12;
 
         var label_size = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
 
         settings = new GLib.Settings ("org.gnome.settings-daemon.plugins.power");
-
-        battery = new Battery ();
+        if (path_battery != "") {
+            battery = new Services.Device (path_battery);
+        }
         power_supply = new PowerSupply ();
 
         try {
@@ -266,6 +276,7 @@ public class Power.BehaviorView : Granite.SimpleSettingsPage {
 
         return false;
     }
+
     private void on_scale_value_changed () {
         var val = (int) scale.get_value ();
         ((DBusProxy)screen).g_properties_changed.disconnect (on_screen_properties_changed);
@@ -280,6 +291,22 @@ public class Power.BehaviorView : Granite.SimpleSettingsPage {
             scale.value_changed.disconnect (on_scale_value_changed);
             scale.set_value (val);
             scale.value_changed.connect (on_scale_value_changed);
+        }
+    }
+
+    private void get_dbus_main_battery_path () {
+        try {
+            ObjectPath[] devs = upower.enumerate_devices ();
+            for (int i = 0; i < devs.length; i++) {
+                UpowerDevice device = Bus.get_proxy_sync (BusType.SYSTEM, DBUS_UPOWER_NAME, devs[i].to_string (), DBusProxyFlags.GET_INVALIDATED_PROPERTIES);
+
+                if (device.device_type == 2) {
+                    path_battery = devs[i].to_string ();
+                    break;
+                }
+            }
+        } catch (Error e) {
+            critical ("acpi couldn't get upower devices");
         }
     }
 }
