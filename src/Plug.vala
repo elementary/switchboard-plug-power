@@ -153,7 +153,7 @@ namespace Power {
         private bool device_with_battery (string device_path) {
             var device = new Services.Device (device_path);
             //  devices.@set (device_path, device);
-            return (device.is_a_battery && device.is_present() && device.device_type != Services.Device.Type.BATTERY);
+            return (device.is_a_battery && device.is_present () && device.device_type != Services.Device.Type.BATTERY);
         }
 
         public Gtk.Widget get_device_row (string device_path) {

@@ -30,7 +30,7 @@ public class Power.BehaviorView : Granite.SimpleSettingsPage {
     private Gtk.Scale scale;
     private PowerSettings screen;
     private PowerSupply power_supply;
-    
+
 
     private enum PowerActionType {
         BLANK,

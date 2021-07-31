@@ -122,7 +122,7 @@ public class Power.Services.Device : Object {
 
     private Upower? upower;
     private UpowerDevice? upower_device;
-    
+
     private string device_path = "";
     public double percentage { get; private set; }
     public bool is_charging { get; private set; }
@@ -319,4 +319,3 @@ public class Power.Services.Device : Object {
         return (Type) upower_device.Type;
     }
 }
-
