@@ -19,85 +19,91 @@
 
 public class Power.DeviceView : Granite.SimpleSettingsPage {
 
-    private Services.Device battery;
-    private string device_path = "";
+    public Services.Device battery { get; construct; default = null; }
+    public string device_path { get; construct; default = ""; }
 
     public DeviceView (
-        string path,
+        Services.Device device,
         Gtk.Widget icon,
         string status_device,
         string title,
         bool show_header
     ) {
-        //  this.device_path = path; // TODO: FIX 
         Object (
             header: show_header ? _("Devices") : null,
             title: title,
             display_widget: icon,
-            description: _("Rechargeable batteries naturally lose capacity over time and when used.\nTo maximize battery health, avoid leaving your device connected to power after it is charged."),
-            status: status_device
+            description: "",
+            status: status_device,
+            battery: device
         );
     }
 
     construct {
-        // TODO: need help here to set the device path
-        //  content_area.column_spacing = 6;
-        //  content_area.row_spacing = 6;
-        //  content_area.halign = Gtk.Align.CENTER;
-        //  battery = new Services.Device (device_path);
-        //  this.status = status_device;
+        content_area.column_spacing = 6;
+        content_area.row_spacing = 6;
+        content_area.halign = Gtk.Align.CENTER;
+        content_area.expand = true;
 
+        if (battery.is_rechargeable) {
+            description = _("Rechargeable batteries naturally lose capacity over time and when used.\nTo maximize battery health, avoid leaving your device connected to power after it is charged.");
+        } else {
+            description = _("Non-reachargeable battery.");
+        }
 
-        //  var charge_label = new Gtk.Label (_("Current charge:")) {
-        //      halign = Gtk.Align.END,
-        //      xalign = 1
-        //  };
+        var charge_label = new Gtk.Label (_("Current charge:")) {
+            halign = Gtk.Align.END,
+            xalign = 1
+        };
 
-        //  var charge_percent = new Gtk.Label (battery.percentage.to_string () + "%") {
-        //      halign = Gtk.Align.START,
-        //      xalign = 1
-        //  };
+        var charge_percent = new Gtk.Label (battery.percentage.to_string () + "%") {
+            halign = Gtk.Align.START,
+            xalign = 1
+        };
 
-        //  var health_label = new Gtk.Label (_("Health:")) {
-        //      halign = Gtk.Align.END,
-        //      xalign = 1
-        //  };
+        var health_label = new Gtk.Label (_("Health:")) {
+            halign = Gtk.Align.END,
+            xalign = 1
+        };
 
-        //  var health = new Gtk.Label (battery.get_health ()) {
-        //      halign = Gtk.Align.START,
-        //      xalign = 1
-        //  };
+        var health = new Gtk.Label (battery.get_health ()) {
+            halign = Gtk.Align.START,
+            xalign = 1
+        };
 
-        //  var max_capacity_label = new Gtk.Label (_("Maximum capacity:")) {
-        //      halign = Gtk.Align.END,
-        //      xalign = 1
-        //  };
+        var max_capacity_label = new Gtk.Label (_("Maximum capacity:")) {
+            halign = Gtk.Align.END,
+            xalign = 1
+        };
 
-        //  var max_capacity_number = (int) Math.round (battery.capacity);
-        //  var max_capacity = new Gtk.Label (max_capacity_number.to_string () + "%") {
-        //      halign = Gtk.Align.START,
-        //      xalign = 1
-        //  };
+        var max_capacity_number = (int) Math.round (battery.capacity);
+        var max_capacity = new Gtk.Label (max_capacity_number.to_string () + "%") {
+            halign = Gtk.Align.START,
+            xalign = 1
+        };
 
-        //  var capacity_label = new Gtk.Label (_("Design energy:")) {
-        //      halign = Gtk.Align.END,
-        //      xalign = 1
-        //  };
+        var capacity_label = new Gtk.Label (_("Design energy:")) {
+            halign = Gtk.Align.END,
+            xalign = 1
+        };
 
-        //  var battery_capacity = (int) Math.round (battery.energy_full_design);
-        //  var capacity = new Gtk.Label (battery_capacity.to_string () + " Wh") {
-        //      halign = Gtk.Align.START,
-        //      xalign = 1
-        //  };
+        var battery_capacity = (int) Math.round (battery.energy_full_design);
+        var capacity = new Gtk.Label (battery_capacity.to_string () + " Wh") {
+            halign = Gtk.Align.START,
+            xalign = 1
+        };
 
-        //  content_area.attach (health_label, 0, 0);
-        //  content_area.attach (health, 1, 0);
-        //  content_area.attach (max_capacity_label, 0, 1);
-        //  content_area.attach (max_capacity, 1, 1);
-        //  content_area.attach (charge_label, 0, 2);
-        //  content_area.attach (charge_percent, 1, 2);
-        //  content_area.attach (capacity_label, 0, 3);
-        //  content_area.attach (capacity, 1, 3);
+        if (battery.capacity != 0) {
+            content_area.attach (health_label, 0, 0);
+            content_area.attach (health, 1, 0);
+            content_area.attach (capacity_label, 0, 3);
+            content_area.attach (capacity, 1, 3);
+            content_area.attach (max_capacity_label, 0, 1);
+            content_area.attach (max_capacity, 1, 1);
+        }
+
+        content_area.attach (charge_label, 0, 2);
+        content_area.attach (charge_percent, 1, 2);
     }
 
 }

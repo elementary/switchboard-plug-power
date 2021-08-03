@@ -86,15 +86,14 @@ namespace Power {
                     overlay.add (manufacturer_logo);
                     overlay.add_overlay (badge_icon);
                     device_view = new DeviceView (
-                        main_view.battery.native_path,
+                        main_view.battery,
                         overlay,
                         main_view.battery.get_info (),
                         "Built-in",
                         true
                     );
-                    stack.add_named (device_view, "Built-in");
+                    stack.add_named (device_view, main_view.battery.native_path);
                 }
-                // TODO: add all other devices
                 fetch_devices ();
 
                 var switcher = new Granite.SettingsSidebar (stack);
@@ -152,7 +151,6 @@ namespace Power {
 
         private bool device_with_battery (string device_path) {
             var device = new Services.Device (device_path);
-            //  devices.@set (device_path, device);
             return (device.is_a_battery && device.is_present () && device.device_type != Services.Device.Type.BATTERY);
         }
 
@@ -166,7 +164,7 @@ namespace Power {
             var overlay = new Gtk.Overlay ();
             overlay.add (device_icon);
             overlay.add_overlay (badge_icon);
-            var battery_view = new DeviceView (device_path, overlay, device.get_info (), device.device_type.get_name (), false);
+            var battery_view = new DeviceView (device, overlay, device.get_info (), device.device_type.get_name (), false);
             return battery_view;
         }
 
