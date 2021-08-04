@@ -97,7 +97,7 @@ public class Power.DeviceView : Granite.SimpleSettingsPage {
             content_area.attach (health_label, 0, 0);
             content_area.attach (health, 1, 0);
             content_area.attach (charge_label, 0, 2);
-            content_area.attach (charge_percent, 1, 2);  
+            content_area.attach (charge_percent, 1, 2);
             content_area.attach (capacity_label, 0, 3);
             content_area.attach (capacity, 1, 3);
             content_area.attach (max_capacity_label, 0, 1);
