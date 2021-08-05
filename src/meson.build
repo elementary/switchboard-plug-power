@@ -4,6 +4,7 @@ plug_files = files(
     'GreeterAccountsServicePlugin.vala',
     'LogindHelper.vala',
     'Permission.vala',
+    'Services/Device.vala',
     'Plug.vala',
     'PowerSupply.vala',
     'Views/BehaviorView.vala',
@@ -11,7 +12,6 @@ plug_files = files(
     'Widgets/TimeoutComboBox.vala',
     'Widgets/LidCloseActionComboBox.vala',
     'Widgets/ActionComboBox.vala',
-    'Services/Device.vala',
 )
 
 switchboard_dep = dependency('switchboard-2.0')
