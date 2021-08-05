@@ -304,11 +304,7 @@ public class Power.Services.Device : Object {
             return _("Good");
         }
 
-        if (capacity >= 90) {
-            return _("Excellent");
-        }
-
-        return _("Unknown");
+        return _("Excellent");
     }
 
     private Type determine_device_type () {
