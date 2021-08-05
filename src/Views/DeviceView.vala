@@ -56,7 +56,7 @@ public class Power.DeviceView : Granite.SimpleSettingsPage {
             xalign = 1
         };
 
-        var charge_percent = new Gtk.Label (battery.percentage.to_string () + "%") {
+        var charge_percent = new Gtk.Label (battery.get_current_charge ()) {
             halign = Gtk.Align.START,
             xalign = 1
         };
@@ -76,8 +76,7 @@ public class Power.DeviceView : Granite.SimpleSettingsPage {
             xalign = 1
         };
 
-        var max_capacity_number = (int) Math.round (battery.capacity);
-        var max_capacity = new Gtk.Label (max_capacity_number.to_string () + "%") {
+        var max_capacity = new Gtk.Label (battery.get_max_capacity ()) {
             halign = Gtk.Align.START,
             xalign = 1
         };
@@ -87,8 +86,7 @@ public class Power.DeviceView : Granite.SimpleSettingsPage {
             xalign = 1
         };
 
-        var battery_capacity = (int) Math.round (battery.energy_full_design);
-        var capacity = new Gtk.Label (battery_capacity.to_string () + " Wh") {
+        var capacity = new Gtk.Label (battery.get_design_energy ()) {
             halign = Gtk.Align.START,
             xalign = 1
         };

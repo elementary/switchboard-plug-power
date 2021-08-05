@@ -281,6 +281,26 @@ public class Power.Services.Device : Object {
         return "battery-full";
     }
 
+    public string get_current_charge () {
+        return format_capacity ((int)Math.round (percentage), "%");
+    }
+
+    public string get_max_capacity () {
+        return format_capacity ((int)Math.round (capacity), "%");
+    }
+
+    public string get_design_energy () {
+        return format_capacity ((int)Math.round (energy_full_design), "Wh");
+    }
+
+    private static string format_capacity (int value, string unit) {
+        if (value == 0) {
+            return _("Unknown");
+        }
+
+        return value.to_string () + unit;
+    }
+
     public string get_health () {
         var capacity = (int)Math.round (capacity);
 
