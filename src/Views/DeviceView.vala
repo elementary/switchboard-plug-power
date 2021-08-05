@@ -107,5 +107,4 @@ public class Power.DeviceView : Granite.SimpleSettingsPage {
             content_area.attach (charge_percent, 1, 0);
         }
     }
-
 }
