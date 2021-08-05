@@ -284,6 +284,10 @@ public class Power.Services.Device : Object {
     public string get_health () {
         var capacity = (int)Math.round (capacity);
 
+        if (capacity == 0) {
+            return _("Unknown");
+        }
+
         if (capacity < 60) {
             return _("Critical");
         }
