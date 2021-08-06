@@ -63,18 +63,20 @@ public class Power.MainView : Gtk.Grid {
         main_grid.column_spacing = 12;
         main_grid.row_spacing = 12;
 
-        var show_percent_label = new Gtk.Label (_("Show percentage:")) {
-            halign = Gtk.Align.END,
-            xalign = 1
-        };
+        if (battery.is_present ()) {
+            var show_percent_label = new Gtk.Label (_("Show percentage:")) {
+                halign = Gtk.Align.END,
+                xalign = 1
+            };
 
-        var show_percent_switch = new Gtk.Switch () {
-            halign = Gtk.Align.START
-        };
-        wingpanel_power_settings.bind ("show-percentage", show_percent_switch, "active", SettingsBindFlags.DEFAULT);
+            var show_percent_switch = new Gtk.Switch () {
+                halign = Gtk.Align.START
+            };
+            wingpanel_power_settings.bind ("show-percentage", show_percent_switch, "active", SettingsBindFlags.DEFAULT);
 
-        main_grid.attach (show_percent_label, 0, 0);
-        main_grid.attach (show_percent_switch, 1, 0);
+            main_grid.attach (show_percent_label, 0, 0);
+            main_grid.attach (show_percent_switch, 1, 0);
+        }
 
         if (backlight_detect ()) {
             var brightness_label = new Gtk.Label (_("Display brightness:"));

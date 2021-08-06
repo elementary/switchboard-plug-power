@@ -40,7 +40,7 @@ namespace Power {
 
         public bool is_present () {
             bool present = false;
-            if (upower.on_battery || upower_device.is_present) {
+            if (upower != null && upower_device != null && (upower.on_battery || upower_device.is_present)) {
                 present = true;
             }
 
