@@ -31,7 +31,6 @@ public class Power.BehaviorView : Granite.SimpleSettingsPage {
     private PowerSettings screen;
     private PowerSupply power_supply;
 
-
     private enum PowerActionType {
         BLANK,
         SUSPEND,
