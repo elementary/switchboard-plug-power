@@ -282,23 +282,24 @@ public class Power.Services.Device : Object {
     }
 
     public string get_current_charge () {
-        return format_capacity ((int)Math.round (percentage), "%");
+        return format_capacity (percentage, "%");
     }
 
     public string get_max_capacity () {
-        return format_capacity ((int)Math.round (capacity), "%");
+        return format_capacity (capacity, "%");
     }
 
     public string get_design_energy () {
-        return format_capacity ((int)Math.round (energy_full_design), "Wh");
+        return format_capacity (energy_full_design, " Wh");
     }
 
-    private static string format_capacity (int value, string unit) {
-        if (value == 0) {
+    private static string format_capacity (double value, string unit) {
+        var value_int = (int)Math.round (value);
+        if (value_int == 0) {
             return _("Unknown");
         }
 
-        return value.to_string () + unit;
+        return value_int.to_string () + unit;
     }
 
     public string get_health () {
