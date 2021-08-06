@@ -39,12 +39,11 @@ namespace Power {
         }
 
         public bool is_present () {
-            bool present = false;
             if (upower != null && upower_device != null && (upower.on_battery || upower_device.is_present)) {
-                present = true;
+                return true;
             }
 
-            return present;
+            return false;
         }
 
         private string get_dbus_path (Upower upow) {
