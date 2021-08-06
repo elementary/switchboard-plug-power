@@ -46,7 +46,6 @@ public class Power.MainView : Gtk.Grid {
         var label_size = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
 
         settings = new GLib.Settings ("org.gnome.settings-daemon.plugins.power");
-        var wingpanel_power_settings = new GLib.Settings ("io.elementary.desktop.wingpanel.power");
 
         battery = new Battery ();
         power_supply = new PowerSupply ();
@@ -64,6 +63,8 @@ public class Power.MainView : Gtk.Grid {
         main_grid.row_spacing = 12;
 
         if (battery.is_present ()) {
+            var wingpanel_power_settings = new GLib.Settings ("io.elementary.desktop.wingpanel.power");
+
             var show_percent_label = new Gtk.Label (_("Show percentage:")) {
                 halign = Gtk.Align.END,
                 xalign = 1
