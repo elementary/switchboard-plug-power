@@ -130,7 +130,6 @@ public class Power.Services.Device : Object {
     public bool has_history { get; private set; }
     public bool has_statistics { get; private set; }
     public bool is_rechargeable { get; private set; }
-    //  public bool is_present { get; private set; }
     public bool online { get; private set; }
     public bool power_supply { get; private set; }
     public double capacity { get; private set; }
@@ -299,7 +298,7 @@ public class Power.Services.Device : Object {
             return _("Unknown");
         }
 
-        return value_int.to_string () + unit;
+        return _("%i%s").printf (value_int, unit);
     }
 
     public string get_health () {
