@@ -89,7 +89,7 @@ namespace Power {
                         main_view.battery,
                         overlay,
                         main_view.battery.get_info (),
-                        "Built-in",
+                        _("Built-in Battery"),
                         true
                     );
                     stack.add_named (device_view, main_view.battery.native_path);
