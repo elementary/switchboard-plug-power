@@ -332,6 +332,24 @@ public class Power.Services.Device : Object {
         return _("Excellent");
     }
 
+    public string get_health_style_class () {
+        var capacity = (int)Math.round (capacity);
+
+        if (capacity == 0) {
+            return "";
+        }
+
+        if (capacity < 60) {
+            return "error";
+        }
+
+        if (capacity < 80) {
+            return "warning";
+        }
+
+        return "success";
+    }
+
     private Type determine_device_type () {
         // In case an all-in-one keyboard is clasified as mouse because of a
         // mouse pointer, we should show it as keyboard.

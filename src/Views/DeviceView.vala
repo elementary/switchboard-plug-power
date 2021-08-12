@@ -61,18 +61,23 @@ public class Power.DeviceView : Granite.SimpleSettingsPage {
 
         var charge_percent = new Gtk.Label (battery.get_current_charge ()) {
             halign = Gtk.Align.START,
-            xalign = 1
+            xalign = 0
         };
 
         var health_label = new Gtk.Label (_("Health:")) {
             halign = Gtk.Align.END,
             xalign = 1
         };
+        health_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
 
         var health = new Gtk.Label (battery.get_health ()) {
             halign = Gtk.Align.START,
-            xalign = 1
+            xalign = 0
         };
+
+        var health_context = health.get_style_context ();
+        health_context.add_class (Granite.STYLE_CLASS_H3_LABEL);
+        health_context.add_class (battery.get_health_style_class ());
 
         var max_capacity_label = new Gtk.Label (_("Maximum capacity:")) {
             halign = Gtk.Align.END,
@@ -81,7 +86,7 @@ public class Power.DeviceView : Granite.SimpleSettingsPage {
 
         var max_capacity = new Gtk.Label (battery.get_max_capacity ()) {
             halign = Gtk.Align.START,
-            xalign = 1
+            xalign = 0
         };
 
         var capacity_label = new Gtk.Label (_("Design energy:")) {
@@ -91,7 +96,7 @@ public class Power.DeviceView : Granite.SimpleSettingsPage {
 
         var capacity = new Gtk.Label (battery.get_design_energy ()) {
             halign = Gtk.Align.START,
-            xalign = 1
+            xalign = 0
         };
 
         if (battery.is_rechargeable) {
