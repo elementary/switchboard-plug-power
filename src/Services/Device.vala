@@ -309,21 +309,26 @@ public class Power.Services.Device : Object {
         }
 
         if (capacity < 60) {
+            ///TRANSLATORS: Battery capacity below 60%, considered critically low battery health
             return _("Critical");
         }
 
         if (capacity < 70) {
+            ///TRANSLATORS: Battery capacity from 60 to 69%, considered poor battery health
             return _("Poor");
         }
 
         if (capacity < 80) {
+            ///TRANSLATORS: Battery capacity from 70 to 79%, considered fair battery health
             return _("Fair");
         }
 
         if (capacity < 90) {
+            ///TRANSLATORS: Battery capacity from 80 to 90%, considered good battery health
             return _("Good");
         }
 
+        ///TRANSLATORS: Battery capacity above 90%, considered excellent battery health
         return _("Excellent");
     }
 
