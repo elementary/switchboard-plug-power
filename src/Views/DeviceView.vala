@@ -46,8 +46,10 @@ public class Power.DeviceView : Granite.SimpleSettingsPage {
         content_area.expand = true;
 
         if (battery.is_rechargeable) {
-            description = _("Rechargeable batteries naturally lose capacity over time and when used.") + "\n" +
-                          _("To maximize battery health, avoid leaving your device connected to power after it is charged.");
+            description = "%s %s".printf (
+                _("Rechargeable batteries naturally lose capacity over time and when used."),
+                _("To maximize battery health, avoid leaving your device connected to power after it is charged.")
+            );
         } else {
             description = _("Non-reachargeable battery.");
         }
