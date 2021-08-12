@@ -18,6 +18,15 @@ add_project_arguments(
     language:'c'
 )
 
+conf_data = configuration_data()
+conf_data.set_quoted('LOCALEDIR', join_paths(get_option('prefix'), get_option('localedir')))
+conf_data.set_quoted('GETTEXT_PACKAGE', meson.project_name() + '-plug')
+conf_file = configure_file(
+    input: 'src/Config.vala.in',
+    output: '@BASENAME@',
+    configuration: conf_data
+)
+
 dbus_dep = dependency('dbus-1')
 glib_dep = dependency('glib-2.0')
 gio_dep = dependency('gio-2.0')
