@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:00+0000\n"
-"PO-Revision-Date: 2021-07-22 17:45+0000\n"
-"Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
+"PO-Revision-Date: 2021-08-13 22:30+0000\n"
+"Last-Translator: DartDeaDia <DartDeaDia@protonmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "power-plug-extra/ru/>\n"
 "Language: ru\n"
@@ -39,7 +39,7 @@ msgstr ""
 
 #: data/power.appdata.xml.in:15
 msgid "Show in search results for \"sleep\" and \"timeout\""
-msgstr ""
+msgstr "К результатам поиска добавлены «спящий режим» и «бездействие»"
 
 #: data/power.appdata.xml.in:16 data/power.appdata.xml.in:23
 #: data/power.appdata.xml.in:28 data/power.appdata.xml.in:35
@@ -54,8 +54,8 @@ msgstr ""
 
 #: data/power.appdata.xml.in:33
 msgid "Remove broken hibernate option"
-msgstr ""
+msgstr "Удалена неработающая опция гибернации"
 
 #: data/power.appdata.xml.in:34
 msgid "Add prompt to shutdown to power button actions"
-msgstr ""
+msgstr "Добавлен запрос на выключение к действиям с кнопкой питания"
