@@ -99,7 +99,11 @@ public class Power.DeviceView : Granite.SimpleSettingsPage {
             xalign = 0
         };
 
-        if (battery.is_rechargeable) {
+        /*
+        * Some devices have (is_rechargeable = true), but dont have more details about battery 
+        * See: https://github.com/elementary/switchboard-plug-power/pull/194#issuecomment-898913791    
+        */   
+        if (battery.is_rechargeable && battery.energy_full_design != 0) {
             content_area.attach (health_label, 0, 0);
             content_area.attach (health, 1, 0);
             content_area.attach (max_capacity_label, 0, 1);
