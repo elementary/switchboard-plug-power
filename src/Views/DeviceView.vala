@@ -99,23 +99,18 @@ public class Power.DeviceView : Granite.SimpleSettingsPage {
             xalign = 0
         };
 
-        var percentage_bar = new Gtk.ProgressBar () {
-            halign = Gtk.Align.START,
-            fraction = battery.percentage / 100,
-            text = _("Charge: ") + battery.get_current_charge (),
-            show_text = true,
-        };
-
         if (battery.is_rechargeable) {
-            content_area.attach (percentage_bar, 0, 0, 2);
-            content_area.attach (health_label, 0, 1);
-            content_area.attach (health, 1, 1);
-            content_area.attach (max_capacity_label, 0, 2);
-            content_area.attach (max_capacity, 1, 2);
+            content_area.attach (health_label, 0, 0);
+            content_area.attach (health, 1, 0);
+            content_area.attach (max_capacity_label, 0, 1);
+            content_area.attach (max_capacity, 1, 1);
+            content_area.attach (charge_label, 0, 2);
+            content_area.attach (charge_percent, 1, 2);
             content_area.attach (capacity_label, 0, 3);
             content_area.attach (capacity, 1, 3);
         } else {
-            content_area.attach (percentage_bar, 0, 0, 2);
+            content_area.attach (charge_label, 0, 0);
+            content_area.attach (charge_percent, 1, 0);
         }
     }
 }
