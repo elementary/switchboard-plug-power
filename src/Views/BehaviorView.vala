@@ -254,7 +254,7 @@ public class Power.BehaviorView : Granite.SimpleSettingsPage {
         return false;
     }
 
-    private static bool lid_detect () {
+    public static bool lid_detect () {
         var interface_path = File.new_for_path ("/proc/acpi/button/lid/");
 
         try {

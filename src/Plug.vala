@@ -128,7 +128,9 @@ namespace Power {
                 main_grid = new Gtk.Grid () {
                     orientation = Gtk.Orientation.VERTICAL
                 };
-                main_grid.add (infobar);
+                if (BehaviorView.lid_detect ()) {
+                    main_grid.add (infobar);
+                }
                 main_grid.add (hpaned);
                 main_grid.show_all ();
             }
