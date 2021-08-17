@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:00+0000\n"
+"POT-Creation-Date: 2021-08-17 03:15+0000\n"
 "PO-Revision-Date: 2017-01-26 15:11+0000\n"
 "Last-Translator: Marius Albina <marius.albina@gmail.com>\n"
 "Language-Team: Romanian <ro@li.org>\n"
@@ -31,101 +31,105 @@ msgstr "Autentificarea este necesară pentru a gestiona setările de alimentare"
 msgid "You do not have permission to change this"
 msgstr "Nu aveți permisiunea de a schimba acest lucru"
 
-#: src/MainView.vala:66
+#: src/MainView.vala:68
+msgid "Show percentage:"
+msgstr ""
+
+#: src/MainView.vala:83
 msgid "Display brightness:"
 msgstr "Luminozitatea ecranului:"
 
-#: src/MainView.vala:70
+#: src/MainView.vala:87
 msgid "Automatically adjust brightness:"
 msgstr "Reglează automat luminozitatea:"
 
-#: src/MainView.vala:98
+#: src/MainView.vala:115
 msgid "When lid is closed:"
 msgstr "Când capacul este închis:"
 
-#: src/MainView.vala:104
+#: src/MainView.vala:121
 msgid "When lid is closed with external monitor:"
 msgstr "Când capacul este închis cu un monitor extern:"
 
-#: src/MainView.vala:130
+#: src/MainView.vala:147
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Anumite setări necesită drepturi de administrator pentru a fi schimbate"
 
-#: src/MainView.vala:151
+#: src/MainView.vala:168
 msgid "Turn off display when inactive for:"
 msgstr "Stinge ecranul când este inactiv pentru:"
 
-#: src/MainView.vala:157
+#: src/MainView.vala:174
 msgid "Power button:"
 msgstr "Butonul de pornire:"
 
-#: src/MainView.vala:168 src/MainView.vala:190
+#: src/MainView.vala:185 src/MainView.vala:207
 #, fuzzy
 msgid "Suspend when inactive for:"
 msgstr "Suspendă atunci când este inactiv pentru:"
 
-#: src/MainView.vala:183
+#: src/MainView.vala:200
 msgid "Plugged In"
 msgstr "Conectat la priză"
 
-#: src/MainView.vala:205
+#: src/MainView.vala:222
 msgid "On Battery"
 msgstr "Pe baterie"
 
-#: src/Plug.vala:32
+#: src/Plug.vala:35
 msgid "Power"
 msgstr "Alimentare"
 
-#: src/Plug.vala:33
+#: src/Plug.vala:36
 #, fuzzy
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr ""
 "Configurați luminozitatea ecranului, butoanele de putere, și un comportament "
 "de somn"
 
-#: src/Plug.vala:68
+#: src/Plug.vala:71
 #, fuzzy
 msgid "Suspend button"
 msgstr "Buton somn"
 
-#: src/Plug.vala:69
+#: src/Plug.vala:72
 msgid "Power button"
 msgstr "Buton pornire"
 
-#: src/Plug.vala:70
+#: src/Plug.vala:73
 msgid "Display inactive"
 msgstr "Afişaj inactiv"
 
-#: src/Plug.vala:71
+#: src/Plug.vala:74
 msgid "Dim display"
 msgstr "Intunecă afişaj"
 
-#: src/Plug.vala:72
+#: src/Plug.vala:75
 msgid "Lid close"
 msgstr "Inchide capac"
 
-#: src/Plug.vala:73
+#: src/Plug.vala:76
 msgid "Display brightness"
 msgstr "Luminozitate afișaj"
 
-#: src/Plug.vala:74
+#: src/Plug.vala:77
 msgid "Automatic brightness adjustment"
 msgstr "Ajustare strălucire automat"
 
-#: src/Plug.vala:75
+#: src/Plug.vala:78
 msgid "Inactive display off"
 msgstr ""
 
-#: src/Plug.vala:76
+#: src/Plug.vala:79
 msgid "Docked lid close"
 msgstr ""
 
-#: src/Plug.vala:77
+#: src/Plug.vala:80
 msgid "Sleep inactivity timeout"
 msgstr ""
 
-#: src/Plug.vala:78
+#: src/Plug.vala:81
 #, fuzzy
 msgid "Suspend inactive"
 msgstr "Mod somn inactiv"
