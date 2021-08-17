@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:00+0000\n"
-"PO-Revision-Date: 2021-03-15 22:59+0000\n"
-"Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
+"POT-Creation-Date: 2021-08-17 03:15+0000\n"
+"PO-Revision-Date: 2021-08-17 12:07+0000\n"
+"Last-Translator: asdffdsdaf <asdffdsdaf@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/ru/>\n"
 "Language: ru\n"
@@ -33,96 +33,100 @@ msgstr "Для изменения параметров питания требу
 msgid "You do not have permission to change this"
 msgstr "У вас недостаточно прав для изменения"
 
-#: src/MainView.vala:66
+#: src/MainView.vala:68
+msgid "Show percentage:"
+msgstr "Показать заряд аккумулятора:"
+
+#: src/MainView.vala:83
 msgid "Display brightness:"
 msgstr "Яркость экрана:"
 
-#: src/MainView.vala:70
+#: src/MainView.vala:87
 msgid "Automatically adjust brightness:"
 msgstr "Автоматическая регулировка яркости:"
 
-#: src/MainView.vala:98
+#: src/MainView.vala:115
 msgid "When lid is closed:"
 msgstr "Когда крышка закрыта:"
 
-#: src/MainView.vala:104
+#: src/MainView.vala:121
 msgid "When lid is closed with external monitor:"
 msgstr "Когда крышка закрыта с внешним монитором:"
 
-#: src/MainView.vala:130
+#: src/MainView.vala:147
 msgid "Some settings require administrator rights to be changed"
 msgstr "Для изменения некоторых настроек требуются права администратора"
 
-#: src/MainView.vala:151
+#: src/MainView.vala:168
 msgid "Turn off display when inactive for:"
 msgstr "Отключать экран через:"
 
-#: src/MainView.vala:157
+#: src/MainView.vala:174
 msgid "Power button:"
 msgstr "Кнопка питания:"
 
-#: src/MainView.vala:168 src/MainView.vala:190
+#: src/MainView.vala:185 src/MainView.vala:207
 msgid "Suspend when inactive for:"
 msgstr "Перейти в ждущий режим через:"
 
-#: src/MainView.vala:183
+#: src/MainView.vala:200
 msgid "Plugged In"
 msgstr "На зарядке"
 
-#: src/MainView.vala:205
+#: src/MainView.vala:222
 msgid "On Battery"
 msgstr "От батареи"
 
-#: src/Plug.vala:32
+#: src/Plug.vala:35
 msgid "Power"
 msgstr "Питание"
 
-#: src/Plug.vala:33
+#: src/Plug.vala:36
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr ""
 "Настройка яркости экрана, кнопок питания и поведения перехода в спящий режим"
 
-#: src/Plug.vala:68
+#: src/Plug.vala:71
 msgid "Suspend button"
 msgstr "Кнопка сна"
 
-#: src/Plug.vala:69
+#: src/Plug.vala:72
 msgid "Power button"
 msgstr "Кнопка питания"
 
-#: src/Plug.vala:70
+#: src/Plug.vala:73
 msgid "Display inactive"
 msgstr "Экран при простое"
 
-#: src/Plug.vala:71
+#: src/Plug.vala:74
 msgid "Dim display"
 msgstr "Затемнение экрана"
 
-#: src/Plug.vala:72
+#: src/Plug.vala:75
 msgid "Lid close"
 msgstr "Крышка закрыта"
 
-#: src/Plug.vala:73
+#: src/Plug.vala:76
 msgid "Display brightness"
 msgstr "Яркость экрана"
 
-#: src/Plug.vala:74
+#: src/Plug.vala:77
 msgid "Automatic brightness adjustment"
 msgstr "Автоматическая настройка яркости"
 
-#: src/Plug.vala:75
+#: src/Plug.vala:78
 msgid "Inactive display off"
 msgstr "Выключение экрана в простое"
 
-#: src/Plug.vala:76
+#: src/Plug.vala:79
 msgid "Docked lid close"
 msgstr "Крышка закрыта"
 
-#: src/Plug.vala:77
+#: src/Plug.vala:80
 msgid "Sleep inactivity timeout"
 msgstr "Время бездействия для перехода в спящий режим"
 
-#: src/Plug.vala:78
+#: src/Plug.vala:81
 msgid "Suspend inactive"
 msgstr "Сон при простое"
 

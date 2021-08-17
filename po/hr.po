@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:00+0000\n"
+"POT-Creation-Date: 2021-08-17 03:15+0000\n"
 "PO-Revision-Date: 2017-08-16 11:38+0000\n"
 "Last-Translator: gogogogi <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <https://weblate.elementary.io/projects/switchboard/"
@@ -34,99 +34,103 @@ msgstr "Potrebna je ovjera za upravljanje postavkama energije"
 msgid "You do not have permission to change this"
 msgstr "Nemate dozvolu za ovu promjenu"
 
-#: src/MainView.vala:66
+#: src/MainView.vala:68
+msgid "Show percentage:"
+msgstr ""
+
+#: src/MainView.vala:83
 msgid "Display brightness:"
 msgstr "Svjetlina zaslona:"
 
-#: src/MainView.vala:70
+#: src/MainView.vala:87
 msgid "Automatically adjust brightness:"
 msgstr "Automatski prilagodi svjetlinu:"
 
-#: src/MainView.vala:98
+#: src/MainView.vala:115
 msgid "When lid is closed:"
 msgstr "Kada se zaslon spusti:"
 
-#: src/MainView.vala:104
+#: src/MainView.vala:121
 msgid "When lid is closed with external monitor:"
 msgstr ""
 
-#: src/MainView.vala:130
+#: src/MainView.vala:147
 msgid "Some settings require administrator rights to be changed"
 msgstr "Neke postavke zahtijevaju administratorske ovlasti"
 
-#: src/MainView.vala:151
+#: src/MainView.vala:168
 msgid "Turn off display when inactive for:"
 msgstr "Isključi zaslon kada je neaktivan:"
 
-#: src/MainView.vala:157
+#: src/MainView.vala:174
 msgid "Power button:"
 msgstr "Tipka isključivanja:"
 
-#: src/MainView.vala:168 src/MainView.vala:190
+#: src/MainView.vala:185 src/MainView.vala:207
 #, fuzzy
 msgid "Suspend when inactive for:"
 msgstr "Isključi zaslon kada je neaktivan:"
 
-#: src/MainView.vala:183
+#: src/MainView.vala:200
 msgid "Plugged In"
 msgstr "Na napajanju"
 
-#: src/MainView.vala:205
+#: src/MainView.vala:222
 msgid "On Battery"
 msgstr "Na bateriji"
 
-#: src/Plug.vala:32
+#: src/Plug.vala:35
 msgid "Power"
 msgstr "Energija"
 
-#: src/Plug.vala:33
+#: src/Plug.vala:36
 #, fuzzy
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr ""
 "Prilagodite svjetlinu zaslona, tipku isključivanja i ponašanje spavanja"
 
-#: src/Plug.vala:68
+#: src/Plug.vala:71
 #, fuzzy
 msgid "Suspend button"
 msgstr "Tipka spavanja"
 
-#: src/Plug.vala:69
+#: src/Plug.vala:72
 msgid "Power button"
 msgstr "Tipka isključivanja"
 
-#: src/Plug.vala:70
+#: src/Plug.vala:73
 msgid "Display inactive"
 msgstr ""
 
-#: src/Plug.vala:71
+#: src/Plug.vala:74
 msgid "Dim display"
 msgstr ""
 
-#: src/Plug.vala:72
+#: src/Plug.vala:75
 msgid "Lid close"
 msgstr ""
 
-#: src/Plug.vala:73
+#: src/Plug.vala:76
 msgid "Display brightness"
 msgstr ""
 
-#: src/Plug.vala:74
+#: src/Plug.vala:77
 msgid "Automatic brightness adjustment"
 msgstr ""
 
-#: src/Plug.vala:75
+#: src/Plug.vala:78
 msgid "Inactive display off"
 msgstr ""
 
-#: src/Plug.vala:76
+#: src/Plug.vala:79
 msgid "Docked lid close"
 msgstr ""
 
-#: src/Plug.vala:77
+#: src/Plug.vala:80
 msgid "Sleep inactivity timeout"
 msgstr ""
 
-#: src/Plug.vala:78
+#: src/Plug.vala:81
 #, fuzzy
 msgid "Suspend inactive"
 msgstr "Isključi zaslon kada je neaktivan:"

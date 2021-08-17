@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:00+0000\n"
+"POT-Creation-Date: 2021-08-17 03:15+0000\n"
 "PO-Revision-Date: 2018-06-12 07:34+0000\n"
 "Last-Translator: Eri Hidayat <eriwhidayat@gmail.com>\n"
 "Language-Team: Indonesian <https://weblate.elementary.io/projects/"
@@ -31,95 +31,99 @@ msgstr "Otentikasi diperlukan untuk mengatur pengaturan daya"
 msgid "You do not have permission to change this"
 msgstr "Anda tidak memiliki izin untuk mengubah ini"
 
-#: src/MainView.vala:66
+#: src/MainView.vala:68
+msgid "Show percentage:"
+msgstr ""
+
+#: src/MainView.vala:83
 msgid "Display brightness:"
 msgstr "Kecerahan layar:"
 
-#: src/MainView.vala:70
+#: src/MainView.vala:87
 msgid "Automatically adjust brightness:"
 msgstr "Secara otomatis mengatur kecerahan:"
 
-#: src/MainView.vala:98
+#: src/MainView.vala:115
 msgid "When lid is closed:"
 msgstr "Ketika lid ditutup:"
 
-#: src/MainView.vala:104
+#: src/MainView.vala:121
 msgid "When lid is closed with external monitor:"
 msgstr "Ketika lid ditutup dengan monitor eksternal:"
 
-#: src/MainView.vala:130
+#: src/MainView.vala:147
 msgid "Some settings require administrator rights to be changed"
 msgstr "Beberapa pengaturan memerlukan hak administrator untuk diubah"
 
-#: src/MainView.vala:151
+#: src/MainView.vala:168
 msgid "Turn off display when inactive for:"
 msgstr "Matikan tampilan saat tidak aktif untuk:"
 
-#: src/MainView.vala:157
+#: src/MainView.vala:174
 msgid "Power button:"
 msgstr "Tombol power:"
 
-#: src/MainView.vala:168 src/MainView.vala:190
+#: src/MainView.vala:185 src/MainView.vala:207
 msgid "Suspend when inactive for:"
 msgstr "Tidur bila tidak aktif untuk:"
 
-#: src/MainView.vala:183
+#: src/MainView.vala:200
 msgid "Plugged In"
 msgstr "Tersambung ke Listrik"
 
-#: src/MainView.vala:205
+#: src/MainView.vala:222
 msgid "On Battery"
 msgstr "Pada daya baterai"
 
-#: src/Plug.vala:32
+#: src/Plug.vala:35
 msgid "Power"
 msgstr "Daya"
 
-#: src/Plug.vala:33
+#: src/Plug.vala:36
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "Konfigurasi kecerahan tampilan, tombol daya, dan perilaku tidur"
 
-#: src/Plug.vala:68
+#: src/Plug.vala:71
 msgid "Suspend button"
 msgstr "Tombol tidur"
 
-#: src/Plug.vala:69
+#: src/Plug.vala:72
 msgid "Power button"
 msgstr "Tombol daya"
 
-#: src/Plug.vala:70
+#: src/Plug.vala:73
 msgid "Display inactive"
 msgstr "Tampilan tidak aktif"
 
-#: src/Plug.vala:71
+#: src/Plug.vala:74
 msgid "Dim display"
 msgstr "Tampilan dim"
 
-#: src/Plug.vala:72
+#: src/Plug.vala:75
 msgid "Lid close"
 msgstr "Tutup lid"
 
-#: src/Plug.vala:73
+#: src/Plug.vala:76
 msgid "Display brightness"
 msgstr "Tampilkan kecerahan"
 
-#: src/Plug.vala:74
+#: src/Plug.vala:77
 msgid "Automatic brightness adjustment"
 msgstr "Penyesuaian kecerahan otomatis"
 
-#: src/Plug.vala:75
+#: src/Plug.vala:78
 msgid "Inactive display off"
 msgstr "Tampilan tidak aktif"
 
-#: src/Plug.vala:76
+#: src/Plug.vala:79
 msgid "Docked lid close"
 msgstr "Tutup lid dok"
 
-#: src/Plug.vala:77
+#: src/Plug.vala:80
 msgid "Sleep inactivity timeout"
 msgstr ""
 
-#: src/Plug.vala:78
+#: src/Plug.vala:81
 msgid "Suspend inactive"
 msgstr "Tidur tidak aktif"
 

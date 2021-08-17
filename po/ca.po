@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:00+0000\n"
-"PO-Revision-Date: 2021-01-23 15:39+0000\n"
+"POT-Creation-Date: 2021-08-17 03:15+0000\n"
+"PO-Revision-Date: 2021-08-17 07:45+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/ca/>\n"
@@ -32,97 +32,101 @@ msgstr "Cal autenticació per gestionar els paràmetres de l'energia."
 msgid "You do not have permission to change this"
 msgstr "No teniu permís per canviar això."
 
-#: src/MainView.vala:66
+#: src/MainView.vala:68
+msgid "Show percentage:"
+msgstr "Mostra el percentatge:"
+
+#: src/MainView.vala:83
 msgid "Display brightness:"
 msgstr "Brillantor de la pantalla:"
 
-#: src/MainView.vala:70
+#: src/MainView.vala:87
 msgid "Automatically adjust brightness:"
 msgstr "Ajusta automàticament la brillantor:"
 
-#: src/MainView.vala:98
+#: src/MainView.vala:115
 msgid "When lid is closed:"
 msgstr "Quan la tapa estigui tancada:"
 
-#: src/MainView.vala:104
+#: src/MainView.vala:121
 msgid "When lid is closed with external monitor:"
 msgstr "Quan la tapa estigui tancada amb una pantalla externa:"
 
-#: src/MainView.vala:130
+#: src/MainView.vala:147
 msgid "Some settings require administrator rights to be changed"
 msgstr "Alguns paràmetres necessiten permisos d'administrador per modificar-se"
 
-#: src/MainView.vala:151
+#: src/MainView.vala:168
 msgid "Turn off display when inactive for:"
 msgstr "Apaga la pantalla quan estigui inactiva durant:"
 
-#: src/MainView.vala:157
+#: src/MainView.vala:174
 msgid "Power button:"
 msgstr "Botó d'engegada:"
 
-#: src/MainView.vala:168 src/MainView.vala:190
+#: src/MainView.vala:185 src/MainView.vala:207
 msgid "Suspend when inactive for:"
 msgstr "Atura temporalment quan estigui inactiu durant..."
 
-#: src/MainView.vala:183
+#: src/MainView.vala:200
 msgid "Plugged In"
 msgstr "Endollat"
 
-#: src/MainView.vala:205
+#: src/MainView.vala:222
 msgid "On Battery"
 msgstr "Amb la bateria"
 
-#: src/Plug.vala:32
+#: src/Plug.vala:35
 msgid "Power"
 msgstr "Energia"
 
-#: src/Plug.vala:33
+#: src/Plug.vala:36
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr ""
 "Configureu la brillantor de la pantalla, els botons d'engegar i el "
 "comportament de la suspensió."
 
-#: src/Plug.vala:68
+#: src/Plug.vala:71
 msgid "Suspend button"
 msgstr "Botó d'aturada temporal"
 
-#: src/Plug.vala:69
+#: src/Plug.vala:72
 msgid "Power button"
 msgstr "Botó d'engegada"
 
-#: src/Plug.vala:70
+#: src/Plug.vala:73
 msgid "Display inactive"
 msgstr "Pantalla inactiva"
 
-#: src/Plug.vala:71
+#: src/Plug.vala:74
 msgid "Dim display"
 msgstr "Atenua la pantalla"
 
-#: src/Plug.vala:72
+#: src/Plug.vala:75
 msgid "Lid close"
 msgstr "Tancament de la tapa"
 
-#: src/Plug.vala:73
+#: src/Plug.vala:76
 msgid "Display brightness"
 msgstr "Brillantor de la pantalla"
 
-#: src/Plug.vala:74
+#: src/Plug.vala:77
 msgid "Automatic brightness adjustment"
 msgstr "Ajustament automàtica de la brillantor"
 
-#: src/Plug.vala:75
+#: src/Plug.vala:78
 msgid "Inactive display off"
 msgstr "Pantalla inactiva desactivada"
 
-#: src/Plug.vala:76
+#: src/Plug.vala:79
 msgid "Docked lid close"
 msgstr "Tancament de la pantalla acoblada"
 
-#: src/Plug.vala:77
+#: src/Plug.vala:80
 msgid "Sleep inactivity timeout"
 msgstr "Temps d'inactivitat per dormir"
 
-#: src/Plug.vala:78
+#: src/Plug.vala:81
 msgid "Suspend inactive"
 msgstr "Aturada temporal inactiva"
 

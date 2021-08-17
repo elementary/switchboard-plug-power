@@ -73,6 +73,28 @@ public class Power.BehaviorView : Granite.SimpleSettingsPage {
             warning ("Failed to get settings daemon for brightness setting");
         }
 
+        var main_grid = new Gtk.Grid ();
+        main_grid.margin = 24;
+        main_grid.column_spacing = 12;
+        main_grid.row_spacing = 12;
+
+        if (battery.is_present ()) {
+            var wingpanel_power_settings = new GLib.Settings ("io.elementary.desktop.wingpanel.power");
+
+            var show_percent_label = new Gtk.Label (_("Show percentage:")) {
+                halign = Gtk.Align.END,
+                xalign = 1
+            };
+
+            var show_percent_switch = new Gtk.Switch () {
+                halign = Gtk.Align.START
+            };
+            wingpanel_power_settings.bind ("show-percentage", show_percent_switch, "active", SettingsBindFlags.DEFAULT);
+
+            main_grid.attach (show_percent_label, 0, 0);
+            main_grid.attach (show_percent_switch, 1, 0);
+        }
+
         if (backlight_detect ()) {
             var brightness_label = new Gtk.Label (_("Display brightness:"));
             brightness_label.halign = Gtk.Align.END;
@@ -96,10 +118,10 @@ public class Power.BehaviorView : Granite.SimpleSettingsPage {
             scale.value_changed.connect (on_scale_value_changed);
             ((DBusProxy)screen).g_properties_changed.connect (on_screen_properties_changed);
 
-            content_area.attach (brightness_label, 0, 0);
-            content_area.attach (scale, 1, 0);
-            content_area.attach (als_label, 0, 1);
-            content_area.attach (als_switch, 1, 1);
+            main_grid.attach (brightness_label, 0, 1);
+            main_grid.attach (scale, 1, 1);
+            main_grid.attach (als_label, 0, 2);
+            main_grid.attach (als_switch, 1, 2);
 
             label_size.add_widget (brightness_label);
             label_size.add_widget (als_label);
