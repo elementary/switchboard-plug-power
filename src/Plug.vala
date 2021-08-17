@@ -24,6 +24,9 @@ namespace Power {
         private MainView main_view;
 
         public Plug () {
+            GLib.Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
+            GLib.Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+
             var supported_settings = new Gee.TreeMap<string, string?> (null, null);
             supported_settings["power"] = null;
 
