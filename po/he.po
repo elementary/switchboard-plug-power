@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-17 03:15+0000\n"
-"PO-Revision-Date: 2021-04-21 21:24+0000\n"
+"PO-Revision-Date: 2021-08-17 07:45+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/he/>\n"
@@ -34,7 +34,7 @@ msgstr "אין לך הרשאה לשנות את זה"
 
 #: src/MainView.vala:68
 msgid "Show percentage:"
-msgstr ""
+msgstr "הצגת אחוזים:"
 
 #: src/MainView.vala:83
 msgid "Display brightness:"
