@@ -133,13 +133,15 @@ public class Power.MainView : Gtk.Grid {
             label_size.add_widget (lid_closed_label);
             label_size.add_widget (lid_dock_label);
 
-            var lock_image = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-            lock_image.sensitive = false;
-            lock_image.tooltip_text = NO_PERMISSION_STRING;
+            var lock_image = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON) {
+                sensitive = false,
+                tooltip_text = NO_PERMISSION_STRING
+            };
 
-            var lock_image2 = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON);
-            lock_image2.sensitive = false;
-            lock_image2.tooltip_text = NO_PERMISSION_STRING;
+            var lock_image2 = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON) {
+                sensitive = false,
+                tooltip_text = NO_PERMISSION_STRING
+            };
 
             main_grid.attach (lid_closed_label, 0, 5);
             main_grid.attach (lid_closed_box, 1, 5);
@@ -152,8 +154,9 @@ public class Power.MainView : Gtk.Grid {
 
             var permission_label = new Gtk.Label (_("Some settings require administrator rights to be changed"));
 
-            var permission_infobar = new Gtk.InfoBar ();
-            permission_infobar.message_type = Gtk.MessageType.INFO;
+            var permission_infobar = new Gtk.InfoBar () {
+                message_type = Gtk.MessageType.INFO
+            };
             permission_infobar.get_content_area ().add (permission_label);
 
             var area_infobar = permission_infobar.get_action_area () as Gtk.Container;
@@ -171,15 +174,17 @@ public class Power.MainView : Gtk.Grid {
             permission.bind_property ("allowed", permission_infobar, "revealed", GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN);
         }
 
-        var screen_timeout_label = new Gtk.Label (_("Turn off display when inactive for:"));
-        screen_timeout_label.halign = Gtk.Align.END;
-        screen_timeout_label.xalign = 1;
+        var screen_timeout_label = new Gtk.Label (_("Turn off display when inactive for:")) {
+            halign = Gtk.Align.END,
+            xalign = 1
+        };
 
         var screen_timeout = new TimeoutComboBox (new GLib.Settings ("org.gnome.desktop.session"), "idle-delay");
 
-        var power_label = new Gtk.Label (_("Power button:"));
-        power_label.halign = Gtk.Align.END;
-        power_label.xalign = 1;
+        var power_label = new Gtk.Label (_("Power button:")) {
+            halign = Gtk.Align.END,
+            xalign = 1
+        };
 
         var power_combobox = new ActionComboBox ("power-button-action");
 
@@ -188,64 +193,74 @@ public class Power.MainView : Gtk.Grid {
         main_grid.attach (power_label, 0, 4);
         main_grid.attach (power_combobox, 1, 4);
 
-        var sleep_timeout_label = new Gtk.Label (_("Suspend when inactive for:"));
-        sleep_timeout_label.xalign = 1;
+        var sleep_timeout_label = new Gtk.Label (_("Suspend when inactive for:")) {
+            xalign = 1
+        };
 
-        var sleep_timeout = new TimeoutComboBox (settings, "sleep-inactive-ac-timeout");
-        sleep_timeout.enum_property = "sleep-inactive-ac-type";
-        sleep_timeout.enum_never_value = PowerActionType.NOTHING;
-        sleep_timeout.enum_normal_value = PowerActionType.SUSPEND;
+        var sleep_timeout = new TimeoutComboBox (settings, "sleep-inactive-ac-timeout") {
+            enum_property = "sleep-inactive-ac-type",
+            enum_never_value = PowerActionType.NOTHING,
+            enum_normal_value = PowerActionType.SUSPEND
+        };
 
-        var ac_grid = new Gtk.Grid ();
-        ac_grid.column_spacing = 12;
-        ac_grid.row_spacing = 12;
+        var ac_grid = new Gtk.Grid () {
+            column_spacing = 12,
+            row_spacing = 12
+        };
         ac_grid.attach (sleep_timeout_label, 0, 1);
         ac_grid.attach (sleep_timeout, 1, 1);
 
         stack = new Gtk.Stack ();
         stack.add_titled (ac_grid, "ac", _("Plugged In"));
 
-        var stack_switcher = new Gtk.StackSwitcher ();
-        stack_switcher.homogeneous = true;
-        stack_switcher.stack = stack;
+        var stack_switcher = new Gtk.StackSwitcher () {
+            homogeneous = true,
+            stack = stack
+        };
 
         if (battery.is_present ()) {
-            var battery_timeout_label = new Gtk.Label (_("Suspend when inactive for:"));
-            battery_timeout_label.xalign = 1;
+            var battery_timeout_label = new Gtk.Label (_("Suspend when inactive for:")) {
+                xalign = 1
+            };
             label_size.add_widget (battery_timeout_label);
 
-            var battery_timeout = new TimeoutComboBox (settings, "sleep-inactive-battery-timeout");
-            battery_timeout.enum_property = "sleep-inactive-battery-type";
-            battery_timeout.enum_never_value = PowerActionType.NOTHING;
-            battery_timeout.enum_normal_value = PowerActionType.SUSPEND;
+            var battery_timeout = new TimeoutComboBox (settings, "sleep-inactive-battery-timeout") {
+                enum_property = "sleep-inactive-battery-type",
+                enum_never_value = PowerActionType.NOTHING,
+                enum_normal_value = PowerActionType.SUSPEND
+            };
 
-            var battery_grid = new Gtk.Grid ();
-            battery_grid.column_spacing = 12;
-            battery_grid.row_spacing = 12;
+            var battery_grid = new Gtk.Grid () {
+                column_spacing = 12,
+                row_spacing = 12
+            };
             battery_grid.attach (battery_timeout_label, 0, 1);
             battery_grid.attach (battery_timeout, 1, 1);
 
             stack.add_titled (battery_grid, "battery", _("On Battery"));
 
-            var left_sep = new Gtk.Separator (Gtk.Orientation.HORIZONTAL);
-            left_sep.hexpand = true;
-            left_sep.valign = Gtk.Align.CENTER;
+            var left_sep = new Gtk.Separator (Gtk.Orientation.HORIZONTAL) {
+                hexpand = true,
+                valign = Gtk.Align.CENTER
+            };
 
-            var right_sep = new Gtk.Separator (Gtk.Orientation.HORIZONTAL);
-            right_sep.hexpand = true;
-            right_sep.valign = Gtk.Align.CENTER;
+            var right_sep = new Gtk.Separator (Gtk.Orientation.HORIZONTAL) {
+                hexpand = true,
+                valign = Gtk.Align.CENTER
+            };
 
-            var switcher_grid = new Gtk.Grid ();
-            switcher_grid.margin_top = 24;
-            switcher_grid.margin_bottom = 12;
+            var switcher_grid = new Gtk.Grid () {
+                margin_top = 24,
+                margin_bottom = 12
+            };
             switcher_grid.add (left_sep);
             switcher_grid.add (stack_switcher);
             switcher_grid.add (right_sep);
 
-            main_grid.attach (switcher_grid, 0, 7, 2, 1);
+            main_grid.attach (switcher_grid, 0, 7, 2);
         }
 
-        main_grid.attach (stack, 0, 8, 2, 1);
+        main_grid.attach (stack, 0, 8, 2);
 
         add (main_grid);
         show_all ();
@@ -274,7 +289,7 @@ public class Power.MainView : Gtk.Grid {
         enumerator.close ();
 
         } catch (GLib.Error err) {
-            critical ("%s", err.message);
+            critical (err.message);
         }
 
         return false;
@@ -296,7 +311,7 @@ public class Power.MainView : Gtk.Grid {
             enumerator.close ();
 
         } catch (GLib.Error err) {
-            warning ("%s", err.message); //Not critical as this eventuality is dealt with
+            warning (err.message); // Not critical as this is eventually dealt with
         }
 
         return false;
