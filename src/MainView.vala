@@ -65,7 +65,7 @@ public class Power.MainView : Gtk.Grid {
         if (battery.is_present ()) {
             var wingpanel_power_settings = new GLib.Settings ("io.elementary.desktop.wingpanel.power");
 
-            var show_percent_label = new Gtk.Label (_("Show percentage:")) {
+            var show_percent_label = new Gtk.Label (_("Show battery percentage in Panel:")) {
                 halign = Gtk.Align.END,
                 xalign = 1
             };
@@ -135,12 +135,12 @@ public class Power.MainView : Gtk.Grid {
             lock_image2.sensitive = false;
             lock_image2.tooltip_text = NO_PERMISSION_STRING;
 
-            main_grid.attach (lid_closed_label, 0, 5, 1, 1);
-            main_grid.attach (lid_closed_box, 1, 5, 1, 1);
-            main_grid.attach (lock_image2, 2, 5, 1, 1);
-            main_grid.attach (lid_dock_label, 0, 6, 1, 1);
-            main_grid.attach (lid_dock_box, 1, 6, 1, 1);
-            main_grid.attach (lock_image, 2, 6, 1, 1);
+            main_grid.attach (lid_closed_label, 0, 5);
+            main_grid.attach (lid_closed_box, 1, 5);
+            main_grid.attach (lock_image2, 2, 5);
+            main_grid.attach (lid_dock_label, 0, 6);
+            main_grid.attach (lid_dock_box, 1, 6);
+            main_grid.attach (lock_image, 2, 6);
 
             var lock_button = new Gtk.LockButton (get_permission ());
 
@@ -177,10 +177,10 @@ public class Power.MainView : Gtk.Grid {
 
         var power_combobox = new ActionComboBox ("power-button-action");
 
-        main_grid.attach (screen_timeout_label, 0, 3, 1, 1);
-        main_grid.attach (screen_timeout, 1, 3, 1, 1);
-        main_grid.attach (power_label, 0, 4, 1, 1);
-        main_grid.attach (power_combobox, 1, 4, 1, 1);
+        main_grid.attach (screen_timeout_label, 0, 3);
+        main_grid.attach (screen_timeout, 1, 3);
+        main_grid.attach (power_label, 0, 4);
+        main_grid.attach (power_combobox, 1, 4);
 
         var sleep_timeout_label = new Gtk.Label (_("Suspend when inactive for:"));
         sleep_timeout_label.xalign = 1;
