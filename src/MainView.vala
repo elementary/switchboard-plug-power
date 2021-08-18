@@ -57,10 +57,11 @@ public class Power.MainView : Gtk.Grid {
             warning ("Failed to get settings daemon for brightness setting");
         }
 
-        var main_grid = new Gtk.Grid ();
-        main_grid.margin = 24;
-        main_grid.column_spacing = 12;
-        main_grid.row_spacing = 12;
+        var main_grid = new Gtk.Grid () {
+            column_spacing = 12,
+            margin = 24,
+            row_spacing = 12
+        };
 
         if (battery.is_present ()) {
             var wingpanel_power_settings = new GLib.Settings ("io.elementary.desktop.wingpanel.power");
@@ -80,22 +81,25 @@ public class Power.MainView : Gtk.Grid {
         }
 
         if (backlight_detect ()) {
-            var brightness_label = new Gtk.Label (_("Display brightness:"));
-            brightness_label.halign = Gtk.Align.END;
-            brightness_label.xalign = 1;
+            var brightness_label = new Gtk.Label (_("Display brightness:")) {
+                halign = Gtk.Align.END,
+                xalign = 1
+            };
 
-            var als_label = new Gtk.Label (_("Automatically adjust brightness:"));
-            als_label.xalign = 1;
+            var als_label = new Gtk.Label (_("Automatically adjust brightness:")) {
+                xalign = 1
+            };
 
             var als_switch = new Gtk.Switch ();
             als_switch.halign = Gtk.Align.START;
 
             settings.bind ("ambient-enabled", als_switch, "active", SettingsBindFlags.DEFAULT);
 
-            scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 100, 10);
-            scale.draw_value = false;
-            scale.hexpand = true;
-            scale.width_request = 480;
+            scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 100, 10) {
+                draw_value = false,
+                hexpand = true,
+                width_request = 480
+            };
 
             scale.set_value (screen.brightness);
 
@@ -112,15 +116,17 @@ public class Power.MainView : Gtk.Grid {
         }
 
         if (lid_detect ()) {
-            var lid_closed_label = new Gtk.Label (_("When lid is closed:"));
-            lid_closed_label.halign = Gtk.Align.END;
-            lid_closed_label.xalign = 1;
+            var lid_closed_label = new Gtk.Label (_("When lid is closed:")) {
+                halign = Gtk.Align.END,
+                xalign = 1
+            };
 
             var lid_closed_box = new LidCloseActionComboBox (false);
 
-            var lid_dock_label = new Gtk.Label (_("When lid is closed with external monitor:"));
-            lid_dock_label.halign = Gtk.Align.END;
-            lid_dock_label.xalign = 1;
+            var lid_dock_label = new Gtk.Label (_("When lid is closed with external monitor:")) {
+                halign = Gtk.Align.END,
+                xalign = 1
+            };
 
             var lid_dock_box = new LidCloseActionComboBox (true);
 
