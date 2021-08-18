@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-17 03:15+0000\n"
-"PO-Revision-Date: 2021-03-27 07:58+0000\n"
+"PO-Revision-Date: 2021-08-18 12:02+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/ja/>\n"
@@ -29,7 +29,7 @@ msgstr "これを変更する権限がありません"
 
 #: src/MainView.vala:68
 msgid "Show percentage:"
-msgstr ""
+msgstr "割合を表示:"
 
 #: src/MainView.vala:83
 msgid "Display brightness:"
