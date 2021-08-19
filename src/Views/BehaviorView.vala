@@ -189,10 +189,10 @@ public class Power.BehaviorView : Granite.SimpleSettingsPage {
 
         var power_combobox = new ActionComboBox ("power-button-action");
 
-        main_grid.attach (screen_timeout_label, 0, 3);
-        main_grid.attach (screen_timeout, 1, 3);
-        main_grid.attach (power_label, 0, 4);
-        main_grid.attach (power_combobox, 1, 4);
+        content_area.attach (screen_timeout_label, 0, 3);
+        content_area.attach (screen_timeout, 1, 3);
+        content_area.attach (power_label, 0, 4);
+        content_area.attach (power_combobox, 1, 4);
 
         var sleep_timeout_label = new Gtk.Label (_("Suspend when inactive for:")) {
             xalign = 1
