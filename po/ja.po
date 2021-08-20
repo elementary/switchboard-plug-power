@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-20 04:18+0000\n"
-"PO-Revision-Date: 2021-08-18 12:02+0000\n"
+"PO-Revision-Date: 2021-08-20 07:24+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/ja/>\n"
@@ -28,10 +28,8 @@ msgid "You do not have permission to change this"
 msgstr "これを変更する権限がありません"
 
 #: src/MainView.vala:69
-#, fuzzy
-#| msgid "Show percentage:"
 msgid "Show battery percentage in Panel:"
-msgstr "割合を表示:"
+msgstr "バッテリーの割合をパネルに表示:"
 
 #: src/MainView.vala:84
 msgid "Display brightness:"
