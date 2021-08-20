@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-20 04:18+0000\n"
-"PO-Revision-Date: 2021-08-17 07:45+0000\n"
+"PO-Revision-Date: 2021-08-20 11:55+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/he/>\n"
@@ -33,10 +33,8 @@ msgid "You do not have permission to change this"
 msgstr "אין לך הרשאה לשנות את זה"
 
 #: src/MainView.vala:69
-#, fuzzy
-#| msgid "Show percentage:"
 msgid "Show battery percentage in Panel:"
-msgstr "הצגת אחוזים:"
+msgstr "הצגת אחוזי סוללה בלוח:"
 
 #: src/MainView.vala:84
 msgid "Display brightness:"
