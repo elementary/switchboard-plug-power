@@ -55,8 +55,9 @@ public class Power.BehaviorView : Granite.SimpleSettingsPage {
             critical ("Connecting to UPower bus failed: %s", e.message);
         }
         get_dbus_main_battery_path ();
+        content_area.halign = Gtk.Align.CENTER;
+        content_area.expand = true;
         content_area.row_spacing = 6;
-        margin_bottom = 12;
 
         var label_size = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
 
