@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-17 03:15+0000\n"
-"PO-Revision-Date: 2021-08-17 07:45+0000\n"
+"POT-Creation-Date: 2021-08-20 04:18+0000\n"
+"PO-Revision-Date: 2021-08-20 11:55+0000\n"
 "Last-Translator: supaeasy <ismo+github@wolffson.ch>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/de/>\n"
@@ -32,49 +32,49 @@ msgstr "Sie müssen sich legitimieren, um die Energieeinstellungen einzurichten"
 msgid "You do not have permission to change this"
 msgstr "Sie besitzen nicht die notwendigen Zugriffsrechte, um dies zu ändern"
 
-#: src/MainView.vala:68
-msgid "Show percentage:"
-msgstr "Prozentanzeige:"
+#: src/MainView.vala:69
+msgid "Show battery percentage in Panel:"
+msgstr "Ladezustand im Panel in Prozent anzeigen:"
 
-#: src/MainView.vala:83
+#: src/MainView.vala:84
 msgid "Display brightness:"
 msgstr "Bildschirmhelligkeit:"
 
-#: src/MainView.vala:87
+#: src/MainView.vala:89
 msgid "Automatically adjust brightness:"
 msgstr "Bildschirmhelligkeit automatisch einstellen:"
 
-#: src/MainView.vala:115
+#: src/MainView.vala:119
 msgid "When lid is closed:"
 msgstr "Deckel geschlossen:"
 
-#: src/MainView.vala:121
+#: src/MainView.vala:126
 msgid "When lid is closed with external monitor:"
 msgstr "Deckel bei angeschlossenem externen Bildschirm geschlossen:"
 
-#: src/MainView.vala:147
+#: src/MainView.vala:155
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Bei einigen Einstellungen werden Systemverwalterberechtigungen benötigt, um "
 "sie ändern zu können"
 
-#: src/MainView.vala:168
+#: src/MainView.vala:177
 msgid "Turn off display when inactive for:"
 msgstr "Bildschirm ausschalten, wenn inaktiv seit:"
 
-#: src/MainView.vala:174
+#: src/MainView.vala:184
 msgid "Power button:"
 msgstr "Ein-/Ausschalter:"
 
-#: src/MainView.vala:185 src/MainView.vala:207
+#: src/MainView.vala:196 src/MainView.vala:222
 msgid "Suspend when inactive for:"
 msgstr "In Bereitschaft versetzen, wenn inaktiv seit:"
 
-#: src/MainView.vala:200
+#: src/MainView.vala:214
 msgid "Plugged In"
 msgstr "Netzbetrieb"
 
-#: src/MainView.vala:222
+#: src/MainView.vala:240
 msgid "On Battery"
 msgstr "Akkubetrieb"
 

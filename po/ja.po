@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-17 03:15+0000\n"
-"PO-Revision-Date: 2021-08-18 12:02+0000\n"
+"POT-Creation-Date: 2021-08-20 04:18+0000\n"
+"PO-Revision-Date: 2021-08-20 07:24+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/ja/>\n"
@@ -27,47 +27,47 @@ msgstr "電源設定を管理するには認証が必要です"
 msgid "You do not have permission to change this"
 msgstr "これを変更する権限がありません"
 
-#: src/MainView.vala:68
-msgid "Show percentage:"
-msgstr "割合を表示:"
+#: src/MainView.vala:69
+msgid "Show battery percentage in Panel:"
+msgstr "バッテリーの割合をパネルに表示:"
 
-#: src/MainView.vala:83
+#: src/MainView.vala:84
 msgid "Display brightness:"
 msgstr "ディスプレイの明るさ:"
 
-#: src/MainView.vala:87
+#: src/MainView.vala:89
 msgid "Automatically adjust brightness:"
 msgstr "明るさを自動調整:"
 
-#: src/MainView.vala:115
+#: src/MainView.vala:119
 msgid "When lid is closed:"
 msgstr "カバーが閉じられたとき:"
 
-#: src/MainView.vala:121
+#: src/MainView.vala:126
 msgid "When lid is closed with external monitor:"
 msgstr "外部モニターとカバーが閉じられたとき:"
 
-#: src/MainView.vala:147
+#: src/MainView.vala:155
 msgid "Some settings require administrator rights to be changed"
 msgstr "一部の設定変更には管理者権限が必要です"
 
-#: src/MainView.vala:168
+#: src/MainView.vala:177
 msgid "Turn off display when inactive for:"
 msgstr "非アクティブ時はディスプレイをオフにする:"
 
-#: src/MainView.vala:174
+#: src/MainView.vala:184
 msgid "Power button:"
 msgstr "電源ボタン:"
 
-#: src/MainView.vala:185 src/MainView.vala:207
+#: src/MainView.vala:196 src/MainView.vala:222
 msgid "Suspend when inactive for:"
 msgstr "非アクティブ時にサスペンド:"
 
-#: src/MainView.vala:200
+#: src/MainView.vala:214
 msgid "Plugged In"
 msgstr "電源接続時"
 
-#: src/MainView.vala:222
+#: src/MainView.vala:240
 msgid "On Battery"
 msgstr "バッテリー時"
 

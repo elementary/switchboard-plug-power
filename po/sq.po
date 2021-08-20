@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-17 03:15+0000\n"
+"POT-Creation-Date: 2021-08-20 04:18+0000\n"
 "PO-Revision-Date: 2016-06-23 15:25+0000\n"
 "Last-Translator: Indrit Bashkimi <indrit.bashkimi@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,48 +25,48 @@ msgstr ""
 msgid "You do not have permission to change this"
 msgstr "Nuk ke lejen për të ndryshuar këtë"
 
-#: src/MainView.vala:68
-msgid "Show percentage:"
+#: src/MainView.vala:69
+msgid "Show battery percentage in Panel:"
 msgstr ""
 
-#: src/MainView.vala:83
+#: src/MainView.vala:84
 msgid "Display brightness:"
 msgstr "Ndriçimi i ekranit:"
 
-#: src/MainView.vala:87
+#: src/MainView.vala:89
 msgid "Automatically adjust brightness:"
 msgstr "Përshtat automatikisht ndriçimin:"
 
-#: src/MainView.vala:115
+#: src/MainView.vala:119
 msgid "When lid is closed:"
 msgstr ""
 
-#: src/MainView.vala:121
+#: src/MainView.vala:126
 msgid "When lid is closed with external monitor:"
 msgstr ""
 
-#: src/MainView.vala:147
+#: src/MainView.vala:155
 msgid "Some settings require administrator rights to be changed"
 msgstr "Disa parametra kërkojnë të drejtat e administratorit për tu ndryshuar"
 
-#: src/MainView.vala:168
+#: src/MainView.vala:177
 msgid "Turn off display when inactive for:"
 msgstr "Fik ekranin kur të jetë joaktiv për:"
 
-#: src/MainView.vala:174
+#: src/MainView.vala:184
 msgid "Power button:"
 msgstr "Butoni i ndezjes:"
 
-#: src/MainView.vala:185 src/MainView.vala:207
+#: src/MainView.vala:196 src/MainView.vala:222
 #, fuzzy
 msgid "Suspend when inactive for:"
 msgstr "Fik ekranin kur të jetë joaktiv për:"
 
-#: src/MainView.vala:200
+#: src/MainView.vala:214
 msgid "Plugged In"
 msgstr "I lidhur"
 
-#: src/MainView.vala:222
+#: src/MainView.vala:240
 msgid "On Battery"
 msgstr "Me bateri"
 

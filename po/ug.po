@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-17 03:15+0000\n"
+"POT-Creation-Date: 2021-08-20 04:18+0000\n"
 "PO-Revision-Date: 2016-12-10 05:00+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
@@ -31,48 +31,48 @@ msgstr "توك مەنبەسى تەڭشىكىنى باشقۇرۇش ئۈچۈن س�
 msgid "You do not have permission to change this"
 msgstr "سىزنىڭ بۇنى ئۆزگەرتىش سالاھىيىتىڭىز يوق"
 
-#: src/MainView.vala:68
-msgid "Show percentage:"
+#: src/MainView.vala:69
+msgid "Show battery percentage in Panel:"
 msgstr ""
 
-#: src/MainView.vala:83
+#: src/MainView.vala:84
 msgid "Display brightness:"
 msgstr "ئىكران يورۇقلىقى:"
 
-#: src/MainView.vala:87
+#: src/MainView.vala:89
 msgid "Automatically adjust brightness:"
 msgstr "ئىكران يورۇقلۇقىنى ئاپتوماتىك تەڭشەش"
 
-#: src/MainView.vala:115
+#: src/MainView.vala:119
 msgid "When lid is closed:"
 msgstr "قاپقاق تاقالغان ۋاقىتتا:"
 
-#: src/MainView.vala:121
+#: src/MainView.vala:126
 msgid "When lid is closed with external monitor:"
 msgstr "تاشقى كۆزەتكۈچى ئارقىلىق قاپقاق تاقالغان ۋاقىتتا:"
 
-#: src/MainView.vala:147
+#: src/MainView.vala:155
 msgid "Some settings require administrator rights to be changed"
 msgstr "بەزى تەڭشەكلەرنى ئۆزگەرتىش ئۈچۈن باشقۇرغۇچىلىق سالاھىيىتى بولىشى كىرەك"
 
-#: src/MainView.vala:168
+#: src/MainView.vala:177
 msgid "Turn off display when inactive for:"
 msgstr "مەشغۇلات قىلمىغان ۋاقىتتا ئىكراننى ئۆچۈرۈش"
 
-#: src/MainView.vala:174
+#: src/MainView.vala:184
 msgid "Power button:"
 msgstr "توك مەنبەسى كۇنۇپكىسى"
 
-#: src/MainView.vala:185 src/MainView.vala:207
+#: src/MainView.vala:196 src/MainView.vala:222
 #, fuzzy
 msgid "Suspend when inactive for:"
 msgstr "مەشغۇلات قىلمىغان ۋاقىتتا كومپىيۇتىرنى توڭلىتىش"
 
-#: src/MainView.vala:200
+#: src/MainView.vala:214
 msgid "Plugged In"
 msgstr "توك مەنبەسىگە چىتىلدى"
 
-#: src/MainView.vala:222
+#: src/MainView.vala:240
 msgid "On Battery"
 msgstr "باتارىيەنى ئىشلىتىۋاتىدۇ"
 

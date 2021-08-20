@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-17 03:15+0000\n"
+"POT-Creation-Date: 2021-08-20 04:18+0000\n"
 "PO-Revision-Date: 2021-01-22 19:40+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
@@ -32,48 +32,48 @@ msgstr "É necessário autenticação para modificar as definições de energia"
 msgid "You do not have permission to change this"
 msgstr "Não tem permissão para modificar isto"
 
-#: src/MainView.vala:68
-msgid "Show percentage:"
+#: src/MainView.vala:69
+msgid "Show battery percentage in Panel:"
 msgstr ""
 
-#: src/MainView.vala:83
+#: src/MainView.vala:84
 msgid "Display brightness:"
 msgstr "Brilho do ecrã:"
 
-#: src/MainView.vala:87
+#: src/MainView.vala:89
 msgid "Automatically adjust brightness:"
 msgstr "Ajustar brilho automaticamente:"
 
-#: src/MainView.vala:115
+#: src/MainView.vala:119
 msgid "When lid is closed:"
 msgstr "Quando a tampa for fechada:"
 
-#: src/MainView.vala:121
+#: src/MainView.vala:126
 msgid "When lid is closed with external monitor:"
 msgstr "Quando a tampa for fechada com monitor externo:"
 
-#: src/MainView.vala:147
+#: src/MainView.vala:155
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Algumas definições requerem privilégios de administrador para serem alteradas"
 
-#: src/MainView.vala:168
+#: src/MainView.vala:177
 msgid "Turn off display when inactive for:"
 msgstr "Desligar ecrã quando inativo por:"
 
-#: src/MainView.vala:174
+#: src/MainView.vala:184
 msgid "Power button:"
 msgstr "Botão ligar/desligar:"
 
-#: src/MainView.vala:185 src/MainView.vala:207
+#: src/MainView.vala:196 src/MainView.vala:222
 msgid "Suspend when inactive for:"
 msgstr "Suspender quando inativo durante:"
 
-#: src/MainView.vala:200
+#: src/MainView.vala:214
 msgid "Plugged In"
 msgstr "Ligado"
 
-#: src/MainView.vala:222
+#: src/MainView.vala:240
 msgid "On Battery"
 msgstr "A Bateria"
 
