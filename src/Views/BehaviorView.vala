@@ -56,8 +56,8 @@ public class Power.BehaviorView : Granite.SimpleSettingsPage {
         }
         get_dbus_main_battery_path ();
         content_area.halign = Gtk.Align.CENTER;
-        content_area.expand = true;
-        content_area.row_spacing = 6;
+        content_area.row_spacing = 12;
+        content_area.column_spacing = 12;
 
         var label_size = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
 
