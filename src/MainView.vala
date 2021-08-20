@@ -66,7 +66,7 @@ public class Power.MainView : Gtk.Grid {
         if (battery.is_present ()) {
             var wingpanel_power_settings = new GLib.Settings ("io.elementary.desktop.wingpanel.power");
 
-            var show_percent_label = new Gtk.Label (_("Show percentage:")) {
+            var show_percent_label = new Gtk.Label (_("Show battery percentage in Panel:")) {
                 halign = Gtk.Align.END,
                 xalign = 1
             };
