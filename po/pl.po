@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-17 03:15+0000\n"
+"POT-Creation-Date: 2021-08-20 04:18+0000\n"
 "PO-Revision-Date: 2018-03-20 00:12+0000\n"
 "Last-Translator: Piotr Strebski <strebski@gmail.com>\n"
 "Language-Team: Polish <https://weblate.elementary.io/projects/switchboard/"
@@ -33,47 +33,47 @@ msgstr "Wymagane jest uwierzytelnienie, aby zmienić ustawienia zasilania"
 msgid "You do not have permission to change this"
 msgstr "Nie masz uprawnień, aby to zmienić"
 
-#: src/MainView.vala:68
-msgid "Show percentage:"
+#: src/MainView.vala:69
+msgid "Show battery percentage in Panel:"
 msgstr ""
 
-#: src/MainView.vala:83
+#: src/MainView.vala:84
 msgid "Display brightness:"
 msgstr "Jasność ekranu:"
 
-#: src/MainView.vala:87
+#: src/MainView.vala:89
 msgid "Automatically adjust brightness:"
 msgstr "Automatyczne dostosowanie jasności:"
 
-#: src/MainView.vala:115
+#: src/MainView.vala:119
 msgid "When lid is closed:"
 msgstr "Gdy pokrywa jest zamknięta:"
 
-#: src/MainView.vala:121
+#: src/MainView.vala:126
 msgid "When lid is closed with external monitor:"
 msgstr "Kiedy pokrywa jest zamknięta z zewnętrznym monitorem:"
 
-#: src/MainView.vala:147
+#: src/MainView.vala:155
 msgid "Some settings require administrator rights to be changed"
 msgstr "Zmiana niektórych ustawień wymaga uprawnień administratora"
 
-#: src/MainView.vala:168
+#: src/MainView.vala:177
 msgid "Turn off display when inactive for:"
 msgstr "Wyłącz ekran, gdy bezczynny przez:"
 
-#: src/MainView.vala:174
+#: src/MainView.vala:184
 msgid "Power button:"
 msgstr "Przycisk zasilania:"
 
-#: src/MainView.vala:185 src/MainView.vala:207
+#: src/MainView.vala:196 src/MainView.vala:222
 msgid "Suspend when inactive for:"
 msgstr "Uśpienie, gdy nieaktywność przez:"
 
-#: src/MainView.vala:200
+#: src/MainView.vala:214
 msgid "Plugged In"
 msgstr "Zasilacz sieciowy"
 
-#: src/MainView.vala:222
+#: src/MainView.vala:240
 msgid "On Battery"
 msgstr "Na baterii"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-17 03:15+0000\n"
+"POT-Creation-Date: 2021-08-20 04:18+0000\n"
 "PO-Revision-Date: 2018-06-18 00:05+0000\n"
 "Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
 "Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard/"
@@ -32,48 +32,48 @@ msgstr "Hitelesítés szükséges az energiagazdálkodási beállítások kezel�
 msgid "You do not have permission to change this"
 msgstr "Nincs jogosultságod megváltoztatni"
 
-#: src/MainView.vala:68
-msgid "Show percentage:"
+#: src/MainView.vala:69
+msgid "Show battery percentage in Panel:"
 msgstr ""
 
-#: src/MainView.vala:83
+#: src/MainView.vala:84
 msgid "Display brightness:"
 msgstr "Kijelző fényereje:"
 
-#: src/MainView.vala:87
+#: src/MainView.vala:89
 msgid "Automatically adjust brightness:"
 msgstr "A fényerő automatikus beállítása:"
 
-#: src/MainView.vala:115
+#: src/MainView.vala:119
 msgid "When lid is closed:"
 msgstr "Ha le van csukva a fedél:"
 
-#: src/MainView.vala:121
+#: src/MainView.vala:126
 msgid "When lid is closed with external monitor:"
 msgstr "Ha le van csukva a fedél és egy külső monitor van csatlakoztatva:"
 
-#: src/MainView.vala:147
+#: src/MainView.vala:155
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Egyes beállítások megváltoztatásához rendszergazdai jogokra van szükség"
 
-#: src/MainView.vala:168
+#: src/MainView.vala:177
 msgid "Turn off display when inactive for:"
 msgstr "Kijelző kikapcsolása ennyi inaktivitás után:"
 
-#: src/MainView.vala:174
+#: src/MainView.vala:184
 msgid "Power button:"
 msgstr "Bekapcsolás gomb:"
 
-#: src/MainView.vala:185 src/MainView.vala:207
+#: src/MainView.vala:196 src/MainView.vala:222
 msgid "Suspend when inactive for:"
 msgstr "Felfüggesztés ennyi inaktivitás után:"
 
-#: src/MainView.vala:200
+#: src/MainView.vala:214
 msgid "Plugged In"
 msgstr "Csatlakoztatva"
 
-#: src/MainView.vala:222
+#: src/MainView.vala:240
 msgid "On Battery"
 msgstr "Akkumulátorról"
 
