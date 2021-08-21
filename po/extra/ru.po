@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-20 21:48+0000\n"
-"PO-Revision-Date: 2021-08-14 15:23+0000\n"
-"Last-Translator: DartDeaDia <DartDeaDia@protonmail.com>\n"
+"PO-Revision-Date: 2021-08-21 13:10+0000\n"
+"Last-Translator: DartDeaDia <dartdeadia@protonmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "power-plug-extra/ru/>\n"
 "Language: ru\n"
@@ -31,11 +31,12 @@ msgstr ""
 
 #: data/power.appdata.xml.in:12
 msgid "New features:"
-msgstr ""
+msgstr "Новые возможности:"
 
 #: data/power.appdata.xml.in:14
 msgid "Add toggle for showing battery percentage in Panel"
 msgstr ""
+"Добавлен переключатель для отображения процента заряда батареи на панели"
 
 #: data/power.appdata.xml.in:16 data/power.appdata.xml.in:24
 msgid "Minor updates:"
