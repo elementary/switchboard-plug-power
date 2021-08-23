@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-20 21:48+0000\n"
-"PO-Revision-Date: 2021-05-04 12:26+0000\n"
+"PO-Revision-Date: 2021-08-23 11:33+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/fi/>\n"
@@ -34,7 +34,7 @@ msgstr "Oikeutesi eivät riitä tämän kohdan muuttamiseen"
 
 #: src/MainView.vala:69
 msgid "Show battery percentage in Panel:"
-msgstr ""
+msgstr "Näytä akun varauksen prosentti paneelissa:"
 
 #: src/MainView.vala:84
 msgid "Display brightness:"
