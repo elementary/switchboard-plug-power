@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-20 21:48+0000\n"
+"POT-Creation-Date: 2021-08-24 15:58+0000\n"
 "PO-Revision-Date: 2021-08-21 13:10+0000\n"
 "Last-Translator: DartDeaDia <dartdeadia@protonmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -76,6 +76,10 @@ msgstr "На зарядке"
 #: src/MainView.vala:240
 msgid "On Battery"
 msgstr "От батареи"
+
+#: src/MainView.vala:265
+msgid "Some changes will not take effect until you restart this computer"
+msgstr "Некоторые изменения вступят в силу после перезагрузки компьютера"
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -191,9 +195,6 @@ msgstr "Не поддерживается"
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
 msgstr "Запрос на выключение"
-
-#~ msgid "Some changes will not take effect until you restart this computer"
-#~ msgstr "Некоторые изменения вступят в силу после перезагрузки компьютера"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Погасить экран при неактивности:"

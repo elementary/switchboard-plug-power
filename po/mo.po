@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-20 21:48+0000\n"
+"POT-Creation-Date: 2021-08-24 15:58+0000\n"
 "PO-Revision-Date: 2018-05-28 08:56+0000\n"
 "Last-Translator: Romanic Ion Nicușor <contact.romanic@gmail.com>\n"
 "Language-Team: Moldovan <https://weblate.elementary.io/projects/switchboard/"
@@ -68,6 +68,11 @@ msgstr "Conectat"
 #: src/MainView.vala:240
 msgid "On Battery"
 msgstr "La baterie"
+
+#: src/MainView.vala:265
+msgid "Some changes will not take effect until you restart this computer"
+msgstr ""
+"Unele modificări nu vor avea efect până când nu reporniți acest computer"
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -184,10 +189,6 @@ msgstr "Nu sunt acceptate"
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
 msgstr ""
-
-#~ msgid "Some changes will not take effect until you restart this computer"
-#~ msgstr ""
-#~ "Unele modificări nu vor avea efect până când nu reporniți acest computer"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Dim afișare când este inactivă:"

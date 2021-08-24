@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-20 21:48+0000\n"
+"POT-Creation-Date: 2021-08-24 15:58+0000\n"
 "PO-Revision-Date: 2017-01-26 15:11+0000\n"
 "Last-Translator: Marius Albina <marius.albina@gmail.com>\n"
 "Language-Team: Romanian <ro@li.org>\n"
@@ -76,6 +76,10 @@ msgstr "Conectat la priză"
 #: src/MainView.vala:240
 msgid "On Battery"
 msgstr "Pe baterie"
+
+#: src/MainView.vala:265
+msgid "Some changes will not take effect until you restart this computer"
+msgstr "Anumite modificări nu vor avea efect până la restart"
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -195,9 +199,6 @@ msgstr "Nesuportat"
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
 msgstr ""
-
-#~ msgid "Some changes will not take effect until you restart this computer"
-#~ msgstr "Anumite modificări nu vor avea efect până la restart"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Intunecă afişaj cand este inactiv:"

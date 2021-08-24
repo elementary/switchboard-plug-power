@@ -15,6 +15,7 @@
         </ul>
         <p>Minor updates:</p>
         <ul>
+          <li>Fix a potential issue with resuming from sleep</li>
           <li>Updated translations</li>
         </ul>
       </description>

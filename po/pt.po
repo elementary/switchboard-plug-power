@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-20 21:48+0000\n"
+"POT-Creation-Date: 2021-08-24 15:58+0000\n"
 "PO-Revision-Date: 2021-01-22 19:40+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
@@ -76,6 +76,10 @@ msgstr "Ligado"
 #: src/MainView.vala:240
 msgid "On Battery"
 msgstr "A Bateria"
+
+#: src/MainView.vala:265
+msgid "Some changes will not take effect until you restart this computer"
+msgstr "Algumas alterações não serão aplicadas até reiniciar o computador"
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -190,9 +194,6 @@ msgstr "Não suportado"
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
 msgstr "Avisar para encerrar"
-
-#~ msgid "Some changes will not take effect until you restart this computer"
-#~ msgstr "Algumas alterações não serão aplicadas até reiniciar o computador"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Escurecer ecrã quando inativo:"

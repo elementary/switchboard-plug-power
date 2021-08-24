@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-20 21:48+0000\n"
+"POT-Creation-Date: 2021-08-24 15:58+0000\n"
 "PO-Revision-Date: 2014-12-29 08:26+0000\n"
 "Last-Translator: ERX <eriksh@inbox.lv>\n"
 "Language-Team: Latvian <lv@li.org>\n"
@@ -73,6 +73,10 @@ msgstr "Pievienots strāvas avotam"
 #: src/MainView.vala:240
 msgid "On Battery"
 msgstr "No akumulatora"
+
+#: src/MainView.vala:265
+msgid "Some changes will not take effect until you restart this computer"
+msgstr ""
 
 #: src/Plug.vala:35
 msgid "Power"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-20 21:48+0000\n"
+"POT-Creation-Date: 2021-08-24 15:58+0000\n"
 "PO-Revision-Date: 2020-05-27 12:11+0000\n"
 "Last-Translator: Rantyrant <diseasemonger@gmail.com>\n"
 "Language-Team: Danish <https://l10n.elementary.io/projects/switchboard/"
@@ -76,6 +76,10 @@ msgstr "Tilsluttet"
 #: src/MainView.vala:240
 msgid "On Battery"
 msgstr "På batteri"
+
+#: src/MainView.vala:265
+msgid "Some changes will not take effect until you restart this computer"
+msgstr "Nogle ændringer vil ikke træde i kræft før du genstarter computeren"
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -191,9 +195,6 @@ msgstr "Ikke understøttet"
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
 msgstr "Spørg om der skal lukkes ned"
-
-#~ msgid "Some changes will not take effect until you restart this computer"
-#~ msgstr "Nogle ændringer vil ikke træde i kræft før du genstarter computeren"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Nedton skærm når inaktiv:"

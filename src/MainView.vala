@@ -262,6 +262,22 @@ public class Power.MainView : Gtk.Grid {
 
         main_grid.attach (stack, 0, 8, 2);
 
+        var infobar_label = new Gtk.Label (_("Some changes will not take effect until you restart this computer"));
+
+        var infobar = new Gtk.InfoBar ();
+        infobar.message_type = Gtk.MessageType.WARNING;
+        infobar.revealed = false;
+        infobar.get_content_area ().add (infobar_label);
+
+        var helper = LogindHelper.get_logind_helper ();
+        if (helper != null) {
+            helper.changed.connect (() => {
+                infobar.revealed = true;
+            });
+        }
+
+        add (infobar);
+
         add (main_grid);
         show_all ();
 

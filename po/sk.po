@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-20 21:48+0000\n"
+"POT-Creation-Date: 2021-08-24 15:58+0000\n"
 "PO-Revision-Date: 2016-12-11 20:57+0000\n"
 "Last-Translator: Martin Korpala <Unknown>\n"
 "Language-Team: Slovak <>\n"
@@ -76,6 +76,10 @@ msgstr "Pripojené"
 #: src/MainView.vala:240
 msgid "On Battery"
 msgstr "Na batérii"
+
+#: src/MainView.vala:265
+msgid "Some changes will not take effect until you restart this computer"
+msgstr "Tieto zmeny sa prejavia až po reštarte počítača"
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -194,9 +198,6 @@ msgstr "Nepodporované"
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
 msgstr ""
-
-#~ msgid "Some changes will not take effect until you restart this computer"
-#~ msgstr "Tieto zmeny sa prejavia až po reštarte počítača"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Stmaviť monitor počas nečinnosti"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-20 21:48+0000\n"
+"POT-Creation-Date: 2021-08-24 15:58+0000\n"
 "PO-Revision-Date: 2019-08-29 15:22+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://l10n.elementary.io/projects/switchboard/"
@@ -71,6 +71,12 @@ msgstr "Įjungtas kištukas"
 #: src/MainView.vala:240
 msgid "On Battery"
 msgstr "Naudojama baterija"
+
+#: src/MainView.vala:265
+msgid "Some changes will not take effect until you restart this computer"
+msgstr ""
+"Kai kurie pakeitimai neįsigalios tol, kol iš naujo nepaleisite šio "
+"kompiuterio"
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -185,11 +191,6 @@ msgstr "Nepalaikoma"
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
 msgstr "Klausti ar išjungti"
-
-#~ msgid "Some changes will not take effect until you restart this computer"
-#~ msgstr ""
-#~ "Kai kurie pakeitimai neįsigalios tol, kol iš naujo nepaleisite šio "
-#~ "kompiuterio"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Užtemdyti ekraną, kai kompiuteris neaktyvus:"

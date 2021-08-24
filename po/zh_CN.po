@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-20 21:48+0000\n"
+"POT-Creation-Date: 2021-08-24 15:58+0000\n"
 "PO-Revision-Date: 2021-01-25 07:22+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -75,6 +75,10 @@ msgstr "接入电源"
 #: src/MainView.vala:240
 msgid "On Battery"
 msgstr "使用电池"
+
+#: src/MainView.vala:265
+msgid "Some changes will not take effect until you restart this computer"
+msgstr "某些变更需要重启系统才会生效"
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -189,9 +193,6 @@ msgstr "不支持"
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
 msgstr "立刻关机"
-
-#~ msgid "Some changes will not take effect until you restart this computer"
-#~ msgstr "某些变更需要重启系统才会生效"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "闲时调暗屏幕："
