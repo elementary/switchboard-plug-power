@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-20 21:48+0000\n"
+"POT-Creation-Date: 2021-08-24 15:58+0000\n"
 "PO-Revision-Date: 2021-08-23 11:33+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
@@ -75,6 +75,12 @@ msgstr "Verkkovirralla"
 #: src/MainView.vala:240
 msgid "On Battery"
 msgstr "Akkuvirralla"
+
+#: src/MainView.vala:265
+msgid "Some changes will not take effect until you restart this computer"
+msgstr ""
+"Jotkin asetukset tulevat voimaan vasta tietokoneen uudelleenkäynnistyksen "
+"myötä"
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -189,11 +195,6 @@ msgstr "Ei tuettu"
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
 msgstr "Vahvistus sammutukselle"
-
-#~ msgid "Some changes will not take effect until you restart this computer"
-#~ msgstr ""
-#~ "Jotkin asetukset tulevat voimaan vasta tietokoneen uudelleenkäynnistyksen "
-#~ "myötä"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Himmennä näyttö kun käyttämättä:"

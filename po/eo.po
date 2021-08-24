@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-20 21:48+0000\n"
+"POT-Creation-Date: 2021-08-24 15:58+0000\n"
 "PO-Revision-Date: 2019-08-30 21:22+0000\n"
 "Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
@@ -75,6 +75,10 @@ msgstr "Konektita"
 #: src/MainView.vala:240
 msgid "On Battery"
 msgstr "Uzante baterion"
+
+#: src/MainView.vala:265
+msgid "Some changes will not take effect until you restart this computer"
+msgstr "Kelkaj ŝanĝoj ne okazos ĝis vi restartigos ĉi tiun komputilon"
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -189,9 +193,6 @@ msgstr "Ne subtenata"
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
 msgstr "Invito je malŝalto"
-
-#~ msgid "Some changes will not take effect until you restart this computer"
-#~ msgstr "Kelkaj ŝanĝoj ne okazos ĝis vi restartigos ĉi tiun komputilon"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Malheligi ekranon kiam neaktiva:"

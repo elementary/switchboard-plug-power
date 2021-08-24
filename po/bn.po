@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-20 21:48+0000\n"
+"POT-Creation-Date: 2021-08-24 15:58+0000\n"
 "PO-Revision-Date: 2013-07-11 04:38+0000\n"
 "Last-Translator: Muntasim Ul Haque <tranjeeshan@tuta.io>\n"
 "Language-Team: Bengali <bn@li.org>\n"
@@ -72,6 +72,10 @@ msgstr "চার্জার যুক্তাবস্হায়"
 
 #: src/MainView.vala:240
 msgid "On Battery"
+msgstr ""
+
+#: src/MainView.vala:265
+msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
 
 #: src/Plug.vala:35

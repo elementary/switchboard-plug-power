@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-20 21:48+0000\n"
+"POT-Creation-Date: 2021-08-24 15:58+0000\n"
 "PO-Revision-Date: 2017-08-16 11:38+0000\n"
 "Last-Translator: gogogogi <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <https://weblate.elementary.io/projects/switchboard/"
@@ -78,6 +78,10 @@ msgstr "Na napajanju"
 #: src/MainView.vala:240
 msgid "On Battery"
 msgstr "Na bateriji"
+
+#: src/MainView.vala:265
+msgid "Some changes will not take effect until you restart this computer"
+msgstr "Neke promjene neće biti primijenjene dok ponovno ne pokrenete računalo"
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -196,10 +200,6 @@ msgstr "Nije podržano"
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
 msgstr ""
-
-#~ msgid "Some changes will not take effect until you restart this computer"
-#~ msgstr ""
-#~ "Neke promjene neće biti primijenjene dok ponovno ne pokrenete računalo"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Zatamni zaslon kada je neaktivan:"
