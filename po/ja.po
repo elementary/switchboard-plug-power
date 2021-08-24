@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-20 04:18+0000\n"
+"POT-Creation-Date: 2021-08-24 16:00+0000\n"
 "PO-Revision-Date: 2021-08-20 07:24+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -70,6 +70,10 @@ msgstr "電源接続時"
 #: src/MainView.vala:240
 msgid "On Battery"
 msgstr "バッテリー時"
+
+#: src/MainView.vala:265
+msgid "Some changes will not take effect until you restart this computer"
+msgstr "一部の変更は、このコンピューターの再起動後に反映されます"
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -184,9 +188,6 @@ msgstr "非対応"
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
 msgstr "シャットダウンの確認"
-
-#~ msgid "Some changes will not take effect until you restart this computer"
-#~ msgstr "一部の変更は、このコンピューターの再起動後に反映されます"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "非アクティブ時にディスプレイを暗くする:"

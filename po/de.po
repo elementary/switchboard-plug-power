@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-20 04:18+0000\n"
+"POT-Creation-Date: 2021-08-24 16:00+0000\n"
 "PO-Revision-Date: 2021-08-20 11:55+0000\n"
 "Last-Translator: supaeasy <ismo+github@wolffson.ch>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
@@ -77,6 +77,10 @@ msgstr "Netzbetrieb"
 #: src/MainView.vala:240
 msgid "On Battery"
 msgstr "Akkubetrieb"
+
+#: src/MainView.vala:265
+msgid "Some changes will not take effect until you restart this computer"
+msgstr "Einige Änderungen werden erst nach einem Neustart des Rechners wirksam"
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -192,10 +196,6 @@ msgstr "Nicht unterstützt"
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
 msgstr "Bestätigung vor dem Ausschalten"
-
-#~ msgid "Some changes will not take effect until you restart this computer"
-#~ msgstr ""
-#~ "Einige Änderungen werden erst nach einem Neustart des Rechners wirksam"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Bildschirm bei Inaktivität verdunkeln:"

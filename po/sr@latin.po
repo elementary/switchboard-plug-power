@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-20 04:18+0000\n"
+"POT-Creation-Date: 2021-08-24 16:00+0000\n"
 "PO-Revision-Date: 2013-08-19 09:36+0000\n"
 "Last-Translator: Иван Благојевић <ivan_blagojevic@mail.com>\n"
 "Language-Team: Serbian Latin <sr@latin@li.org>\n"
@@ -72,6 +72,10 @@ msgstr "Prikopčan"
 
 #: src/MainView.vala:240
 msgid "On Battery"
+msgstr ""
+
+#: src/MainView.vala:265
+msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
 
 #: src/Plug.vala:35

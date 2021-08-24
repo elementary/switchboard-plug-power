@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-20 04:18+0000\n"
-"PO-Revision-Date: 2021-08-17 07:45+0000\n"
+"POT-Creation-Date: 2021-08-24 16:00+0000\n"
+"PO-Revision-Date: 2021-08-20 18:21+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/fr/>\n"
@@ -35,10 +35,8 @@ msgid "You do not have permission to change this"
 msgstr "Vous n'avez pas la permission de modifier cela"
 
 #: src/MainView.vala:69
-#, fuzzy
-#| msgid "Show percentage:"
 msgid "Show battery percentage in Panel:"
-msgstr "Afficher le pourcentage :"
+msgstr "Afficher le pourcentage de la batterie dans le panneau :"
 
 #: src/MainView.vala:84
 msgid "Display brightness:"
@@ -80,6 +78,12 @@ msgstr "Sur secteur"
 #: src/MainView.vala:240
 msgid "On Battery"
 msgstr "Sur batterie"
+
+#: src/MainView.vala:265
+msgid "Some changes will not take effect until you restart this computer"
+msgstr ""
+"Certaines modifications ne prendront effet qu'après un redémarrage de votre "
+"ordinateur"
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -196,11 +200,6 @@ msgstr "Non pris en charge"
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
 msgstr "Demander pour éteindre"
-
-#~ msgid "Some changes will not take effect until you restart this computer"
-#~ msgstr ""
-#~ "Certaines modifications ne prendront effet qu'après un redémarrage de "
-#~ "votre ordinateur"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Réduire la luminosité après une longue période d'inactivité :"

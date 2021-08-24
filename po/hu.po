@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-20 04:18+0000\n"
-"PO-Revision-Date: 2018-06-18 00:05+0000\n"
-"Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
-"Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard/"
+"POT-Creation-Date: 2021-08-24 16:00+0000\n"
+"PO-Revision-Date: 2021-08-24 21:51+0000\n"
+"Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
+"Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/hu/>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2016-11-21 05:42+0000\n"
 
 #: data/io.elementary.switchboard.power.policy.in:10
@@ -30,11 +30,11 @@ msgstr "Hitelesítés szükséges az energiagazdálkodási beállítások kezel�
 
 #: src/MainView.vala:24
 msgid "You do not have permission to change this"
-msgstr "Nincs jogosultságod megváltoztatni"
+msgstr "Nincs jogosultsága megváltoztatni"
 
 #: src/MainView.vala:69
 msgid "Show battery percentage in Panel:"
-msgstr ""
+msgstr "Akkumulátor százalékának megjelenítése a felső állapotsoron:"
 
 #: src/MainView.vala:84
 msgid "Display brightness:"
@@ -63,7 +63,7 @@ msgstr "Kijelző kikapcsolása ennyi inaktivitás után:"
 
 #: src/MainView.vala:184
 msgid "Power button:"
-msgstr "Bekapcsolás gomb:"
+msgstr "Bekapcsológomb:"
 
 #: src/MainView.vala:196 src/MainView.vala:222
 msgid "Suspend when inactive for:"
@@ -76,6 +76,10 @@ msgstr "Csatlakoztatva"
 #: src/MainView.vala:240
 msgid "On Battery"
 msgstr "Akkumulátorról"
+
+#: src/MainView.vala:265
+msgid "Some changes will not take effect until you restart this computer"
+msgstr "Néhány módosítás csak a számítógép újraindítása után lép érvénybe"
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -97,7 +101,7 @@ msgstr "Bekapcsológomb"
 
 #: src/Plug.vala:73
 msgid "Display inactive"
-msgstr "Kijelző inaktív"
+msgstr "Inaktív kijelző"
 
 #: src/Plug.vala:74
 msgid "Dim display"
@@ -125,11 +129,11 @@ msgstr "Dokkolt fedél lecsukása"
 
 #: src/Plug.vala:80
 msgid "Sleep inactivity timeout"
-msgstr ""
+msgstr "Elalvás inaktivitáskor"
 
 #: src/Plug.vala:81
 msgid "Suspend inactive"
-msgstr "Felfüggesztés inaktív"
+msgstr "Felfüggesztés inaktivitáskor"
 
 #: src/Widgets/TimeoutComboBox.vala:91
 msgid "Never"
@@ -178,7 +182,7 @@ msgstr "Lezárás"
 
 #: src/Widgets/LidCloseActionComboBox.vala:35
 msgid "Halt"
-msgstr "Leállítás"
+msgstr "Megállítás"
 
 #: src/Widgets/LidCloseActionComboBox.vala:36
 #: src/Widgets/ActionComboBox.vala:32
@@ -191,10 +195,7 @@ msgstr "Nem támogatott"
 
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
-msgstr ""
-
-#~ msgid "Some changes will not take effect until you restart this computer"
-#~ msgstr "Néhány módosítás csak a számítógép újraindítása után lép érvénybe"
+msgstr "Kikapcsolási panel"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Kijelző elsötétítése ennyi inaktivitás után:"

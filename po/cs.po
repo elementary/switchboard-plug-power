@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-20 04:18+0000\n"
+"POT-Creation-Date: 2021-08-24 16:00+0000\n"
 "PO-Revision-Date: 2020-05-29 15:23+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
@@ -75,6 +75,10 @@ msgstr "Připojeno"
 #: src/MainView.vala:240
 msgid "On Battery"
 msgstr "Z baterie"
+
+#: src/MainView.vala:265
+msgid "Some changes will not take effect until you restart this computer"
+msgstr "Některé změny se neprojeví dokud nerestartujete tento počítač"
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -189,9 +193,6 @@ msgstr "Nepodporováno"
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
 msgstr "Výzva ohledně vypnutí"
-
-#~ msgid "Some changes will not take effect until you restart this computer"
-#~ msgstr "Některé změny se neprojeví dokud nerestartujete tento počítač"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Ztmavit obrazovku, když je neaktivní:"

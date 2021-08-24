@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-20 04:18+0000\n"
+"POT-Creation-Date: 2021-08-24 16:00+0000\n"
 "PO-Revision-Date: 2016-06-14 15:46+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: Estonian <et@li.org>\n"
@@ -75,6 +75,10 @@ msgstr "Aku laadimisel"
 #: src/MainView.vala:240
 msgid "On Battery"
 msgstr "Aku kasutamisel"
+
+#: src/MainView.vala:265
+msgid "Some changes will not take effect until you restart this computer"
+msgstr "Mõningate seadmete toimimiseks on vajalik arvuti taaskäivitamine."
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -192,9 +196,6 @@ msgstr "Pole toetatud"
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
 msgstr ""
-
-#~ msgid "Some changes will not take effect until you restart this computer"
-#~ msgstr "Mõningate seadmete toimimiseks on vajalik arvuti taaskäivitamine."
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Ekraani tumendamine, kui ollakse eemal:"

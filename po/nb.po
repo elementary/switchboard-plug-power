@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-20 04:18+0000\n"
+"POT-Creation-Date: 2021-08-24 16:00+0000\n"
 "PO-Revision-Date: 2021-02-13 13:01+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
@@ -75,6 +75,10 @@ msgstr "Tilkoblet nettspenning"
 #: src/MainView.vala:240
 msgid "On Battery"
 msgstr "På batteri"
+
+#: src/MainView.vala:265
+msgid "Some changes will not take effect until you restart this computer"
+msgstr "Noen endringer trår ikke i kraft før omstart av maskinen"
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -192,9 +196,6 @@ msgstr "Ikke støttet"
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
 msgstr "Spør om å skru av"
-
-#~ msgid "Some changes will not take effect until you restart this computer"
-#~ msgstr "Noen endringer trår ikke i kraft før omstart av maskinen"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Senk lysstyrke på skjerm når inaktiv i:"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-20 04:18+0000\n"
+"POT-Creation-Date: 2021-08-24 16:00+0000\n"
 "PO-Revision-Date: 2021-08-20 11:55+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
@@ -75,6 +75,10 @@ msgstr "מחובר"
 #: src/MainView.vala:240
 msgid "On Battery"
 msgstr "על סוללה"
+
+#: src/MainView.vala:265
+msgid "Some changes will not take effect until you restart this computer"
+msgstr "חלק מהשינויים לא יכנסו לתוקף עד להפעלת המחשב מחדש"
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -189,9 +193,6 @@ msgstr "לא נתמך"
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
 msgstr "בקשה לכיבוי"
-
-#~ msgid "Some changes will not take effect until you restart this computer"
-#~ msgstr "חלק מהשינויים לא יכנסו לתוקף עד להפעלת המחשב מחדש"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "יש לעמעם את התצוגה כאשר אין פעילות במשך:"

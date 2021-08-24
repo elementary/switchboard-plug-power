@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-20 04:18+0000\n"
+"POT-Creation-Date: 2021-08-24 16:00+0000\n"
 "PO-Revision-Date: 2019-09-07 20:22+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -70,6 +70,10 @@ msgstr "प्लग इन"
 #: src/MainView.vala:240
 msgid "On Battery"
 msgstr "बॅटरी"
+
+#: src/MainView.vala:265
+msgid "Some changes will not take effect until you restart this computer"
+msgstr "आपण हे संगणक रीस्टार्ट करेपर्यंत काही बदल प्रभावी होणार नाहीत"
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -184,9 +188,6 @@ msgstr "समर्थित नाही"
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
 msgstr "शटडाउनला सूचित करा"
-
-#~ msgid "Some changes will not take effect until you restart this computer"
-#~ msgstr "आपण हे संगणक रीस्टार्ट करेपर्यंत काही बदल प्रभावी होणार नाहीत"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "निष्क्रिय असताना प्रदर्शन निस्तेज करा:"

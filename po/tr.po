@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-20 04:18+0000\n"
-"PO-Revision-Date: 2021-08-17 12:07+0000\n"
+"POT-Creation-Date: 2021-08-24 16:00+0000\n"
+"PO-Revision-Date: 2021-08-21 05:11+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/tr/>\n"
@@ -33,10 +33,8 @@ msgid "You do not have permission to change this"
 msgstr "Bunu değiştirmek için izniniz yok"
 
 #: src/MainView.vala:69
-#, fuzzy
-#| msgid "Show percentage:"
 msgid "Show battery percentage in Panel:"
-msgstr "Yüzdeyi göster:"
+msgstr "Panelde pil yüzdesini göster:"
 
 #: src/MainView.vala:84
 msgid "Display brightness:"
@@ -78,6 +76,12 @@ msgstr "Fişe Takılı"
 #: src/MainView.vala:240
 msgid "On Battery"
 msgstr "Pilde"
+
+#: src/MainView.vala:265
+msgid "Some changes will not take effect until you restart this computer"
+msgstr ""
+"Bazı değişiklikler bilgisayarınızı yeniden başlatana kadar etkili "
+"olmayacaktır"
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -193,11 +197,6 @@ msgstr "Desteklenmiyor"
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
 msgstr "Kapatmadan önce sor"
-
-#~ msgid "Some changes will not take effect until you restart this computer"
-#~ msgstr ""
-#~ "Bazı değişiklikler bilgisayarınızı yeniden başlatana kadar etkili "
-#~ "olmayacaktır"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Etkin olmadığında ekranı karart:"

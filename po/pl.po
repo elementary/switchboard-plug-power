@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-20 04:18+0000\n"
+"POT-Creation-Date: 2021-08-24 16:00+0000\n"
 "PO-Revision-Date: 2018-03-20 00:12+0000\n"
 "Last-Translator: Piotr Strebski <strebski@gmail.com>\n"
 "Language-Team: Polish <https://weblate.elementary.io/projects/switchboard/"
@@ -76,6 +76,11 @@ msgstr "Zasilacz sieciowy"
 #: src/MainView.vala:240
 msgid "On Battery"
 msgstr "Na baterii"
+
+#: src/MainView.vala:265
+msgid "Some changes will not take effect until you restart this computer"
+msgstr ""
+"Niektóre ustawienia zaczną obowiązywać po ponownym uruchomieniu komputera"
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -191,10 +196,6 @@ msgstr "Nieobsługiwane"
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
 msgstr ""
-
-#~ msgid "Some changes will not take effect until you restart this computer"
-#~ msgstr ""
-#~ "Niektóre ustawienia zaczną obowiązywać po ponownym uruchomieniu komputera"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Wygaś ekran, gdy bezczynny:"
