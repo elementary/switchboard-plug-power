@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 15:58+0000\n"
+"POT-Creation-Date: 2021-08-24 16:00+0000\n"
 "PO-Revision-Date: 2021-08-21 13:10+0000\n"
 "Last-Translator: DartDeaDia <dartdeadia@protonmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -38,34 +38,38 @@ msgid "Add toggle for showing battery percentage in Panel"
 msgstr ""
 "Добавлен переключатель для отображения процента заряда батареи на панели"
 
-#: data/power.appdata.xml.in:16 data/power.appdata.xml.in:24
+#: data/power.appdata.xml.in:16 data/power.appdata.xml.in:25
 msgid "Minor updates:"
 msgstr "Незначительные обновления:"
 
-#: data/power.appdata.xml.in:18 data/power.appdata.xml.in:28
-#: data/power.appdata.xml.in:35 data/power.appdata.xml.in:40
-#: data/power.appdata.xml.in:47
+#: data/power.appdata.xml.in:18
+msgid "Fix a potential issue with resuming from sleep"
+msgstr ""
+
+#: data/power.appdata.xml.in:19 data/power.appdata.xml.in:29
+#: data/power.appdata.xml.in:36 data/power.appdata.xml.in:41
+#: data/power.appdata.xml.in:48
 msgid "Updated translations"
 msgstr "Обновлены переводы"
 
-#: data/power.appdata.xml.in:26
+#: data/power.appdata.xml.in:27
 msgid "Change lid settings without restarting"
 msgstr "Изменение настроек действия для закрывания крышки без перезагрузки"
 
-#: data/power.appdata.xml.in:27
+#: data/power.appdata.xml.in:28
 msgid "Show in search results for \"sleep\" and \"timeout\""
 msgstr "К результатам поиска добавлены «спящий режим» и «бездействие»"
 
-#: data/power.appdata.xml.in:34
+#: data/power.appdata.xml.in:35
 msgid "Fix potential freeze when changing settings from multiple panes"
 msgstr ""
 "Исправлено потенциальное зависание при изменении параметров из нескольких "
 "панелей"
 
-#: data/power.appdata.xml.in:45
+#: data/power.appdata.xml.in:46
 msgid "Remove broken hibernate option"
 msgstr "Удалена неработающая опция гибернации"
 
-#: data/power.appdata.xml.in:46
+#: data/power.appdata.xml.in:47
 msgid "Add prompt to shutdown to power button actions"
 msgstr "Добавлен запрос на выключение к действиям с кнопкой питания"

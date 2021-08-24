@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 15:58+0000\n"
-"PO-Revision-Date: 2021-08-21 05:11+0000\n"
+"POT-Creation-Date: 2021-08-24 16:00+0000\n"
+"PO-Revision-Date: 2021-08-24 18:20+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "power-plug-extra/uk/>\n"
@@ -38,33 +38,37 @@ msgstr "Нові можливості:"
 msgid "Add toggle for showing battery percentage in Panel"
 msgstr "Додано перемикач показу відсотків заряду акумулятора на панелі"
 
-#: data/power.appdata.xml.in:16 data/power.appdata.xml.in:24
+#: data/power.appdata.xml.in:16 data/power.appdata.xml.in:25
 msgid "Minor updates:"
 msgstr "Незначні оновлення:"
 
-#: data/power.appdata.xml.in:18 data/power.appdata.xml.in:28
-#: data/power.appdata.xml.in:35 data/power.appdata.xml.in:40
-#: data/power.appdata.xml.in:47
+#: data/power.appdata.xml.in:18
+msgid "Fix a potential issue with resuming from sleep"
+msgstr "Виправлено ймовірну можливість самостійного пробудження"
+
+#: data/power.appdata.xml.in:19 data/power.appdata.xml.in:29
+#: data/power.appdata.xml.in:36 data/power.appdata.xml.in:41
+#: data/power.appdata.xml.in:48
 msgid "Updated translations"
 msgstr "Оновлено переклади"
 
-#: data/power.appdata.xml.in:26
+#: data/power.appdata.xml.in:27
 msgid "Change lid settings without restarting"
 msgstr "Зміна налаштувань дії закривання кришки без перезавантаження"
 
-#: data/power.appdata.xml.in:27
+#: data/power.appdata.xml.in:28
 msgid "Show in search results for \"sleep\" and \"timeout\""
 msgstr "До результатів пошуку додано «сон» і «час»"
 
-#: data/power.appdata.xml.in:34
+#: data/power.appdata.xml.in:35
 msgid "Fix potential freeze when changing settings from multiple panes"
 msgstr ""
 "Виправлено ймовірні зависання під час зміни налаштувань у кількох панелях"
 
-#: data/power.appdata.xml.in:45
+#: data/power.appdata.xml.in:46
 msgid "Remove broken hibernate option"
 msgstr "Вилучено зламане налаштування гібернації"
 
-#: data/power.appdata.xml.in:46
+#: data/power.appdata.xml.in:47
 msgid "Add prompt to shutdown to power button actions"
 msgstr "Додано підказку вимкнення до дій кнопки живлення"
