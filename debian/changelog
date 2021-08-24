@@ -1,3 +1,17 @@
+switchboard-plug-power (2.6.0) bionic; urgency=medium
+
+  * Release 2.6.0 (#201)
+  * Update translation files
+  * Update translation template
+  * Revert "Allow changing lid settings without restarting the system
+    (#119)" (#202)
+  * MainView: clarify battery percent label (#198)
+  * MainView: Modern code style (#199)
+  * Show percentage switch (#193)
+  * l10n: Correctly setup the locales (#196)
+
+ -- elementary OS Team <builds@elementary.io>  Tue, 24 Aug 2021 20:45:31 +0000
+
 switchboard-plug-power (2.5.0) bionic; urgency=medium
 
   * Release 2.5.0 (#191)
