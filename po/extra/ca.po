@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 16:00+0000\n"
-"PO-Revision-Date: 2021-08-21 08:13+0000\n"
+"PO-Revision-Date: 2021-08-25 18:30+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "power-plug-extra/ca/>\n"
@@ -44,7 +44,7 @@ msgstr "Actualitzacions menors:"
 
 #: data/power.appdata.xml.in:18
 msgid "Fix a potential issue with resuming from sleep"
-msgstr ""
+msgstr "Correcció d'un problema potencial en despertar"
 
 #: data/power.appdata.xml.in:19 data/power.appdata.xml.in:29
 #: data/power.appdata.xml.in:36 data/power.appdata.xml.in:41

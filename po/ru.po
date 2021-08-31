@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 16:00+0000\n"
-"PO-Revision-Date: 2021-08-21 13:10+0000\n"
+"PO-Revision-Date: 2021-08-27 14:50+0000\n"
 "Last-Translator: DartDeaDia <dartdeadia@protonmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/ru/>\n"
@@ -59,7 +59,7 @@ msgstr "Для изменения некоторых настроек требу
 
 #: src/MainView.vala:177
 msgid "Turn off display when inactive for:"
-msgstr "Отключать экран через:"
+msgstr "Выключать экран при бездействии в течении:"
 
 #: src/MainView.vala:184
 msgid "Power button:"
@@ -67,7 +67,7 @@ msgstr "Кнопка питания:"
 
 #: src/MainView.vala:196 src/MainView.vala:222
 msgid "Suspend when inactive for:"
-msgstr "Перейти в ждущий режим через:"
+msgstr "Перейти в ждущий режим при бездействии в течении:"
 
 #: src/MainView.vala:214
 msgid "Plugged In"
