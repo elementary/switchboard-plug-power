@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:00+0000\n"
+"POT-Creation-Date: 2021-08-24 16:00+0000\n"
 "PO-Revision-Date: 2019-08-30 21:22+0000\n"
 "Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
@@ -32,95 +32,103 @@ msgstr "Aŭtentigo estas postulata por mastrumi energiajn agordojn"
 msgid "You do not have permission to change this"
 msgstr "Vi ne havas la permeson ŝanĝi tion"
 
-#: src/MainView.vala:66
+#: src/MainView.vala:69
+msgid "Show battery percentage in Panel:"
+msgstr ""
+
+#: src/MainView.vala:84
 msgid "Display brightness:"
 msgstr "Brileco de ekrano:"
 
-#: src/MainView.vala:70
+#: src/MainView.vala:89
 msgid "Automatically adjust brightness:"
 msgstr "Aŭtomate alĝustigi brilecon de ekrano:"
 
-#: src/MainView.vala:98
+#: src/MainView.vala:119
 msgid "When lid is closed:"
 msgstr "Je fermo de la platekrano:"
 
-#: src/MainView.vala:104
+#: src/MainView.vala:126
 msgid "When lid is closed with external monitor:"
 msgstr "Je fermo de la platekrano, kun ekstera ekrano:"
 
-#: src/MainView.vala:130
+#: src/MainView.vala:155
 msgid "Some settings require administrator rights to be changed"
 msgstr "Kelkaj agordaj ŝanĝoj postulas administrajn permesojn"
 
-#: src/MainView.vala:151
+#: src/MainView.vala:177
 msgid "Turn off display when inactive for:"
 msgstr "Malŝalti ekranon kiam neaktiva dum:"
 
-#: src/MainView.vala:157
+#: src/MainView.vala:184
 msgid "Power button:"
 msgstr "Ŝalta butono:"
 
-#: src/MainView.vala:168 src/MainView.vala:190
+#: src/MainView.vala:196 src/MainView.vala:222
 msgid "Suspend when inactive for:"
 msgstr "Paŭziĝi kiam neaktiva dum:"
 
-#: src/MainView.vala:183
+#: src/MainView.vala:214
 msgid "Plugged In"
 msgstr "Konektita"
 
-#: src/MainView.vala:205
+#: src/MainView.vala:240
 msgid "On Battery"
 msgstr "Uzante baterion"
 
-#: src/Plug.vala:32
+#: src/MainView.vala:265
+msgid "Some changes will not take effect until you restart this computer"
+msgstr "Kelkaj ŝanĝoj ne okazos ĝis vi restartigos ĉi tiun komputilon"
+
+#: src/Plug.vala:35
 msgid "Power"
 msgstr "Energio"
 
-#: src/Plug.vala:33
+#: src/Plug.vala:36
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "Agordi ekranan brilecon, energiajn butonojn, kaj paŭzan konduton"
 
-#: src/Plug.vala:68
+#: src/Plug.vala:71
 msgid "Suspend button"
 msgstr "Paŭziga butono"
 
-#: src/Plug.vala:69
+#: src/Plug.vala:72
 msgid "Power button"
 msgstr "Ŝalta butono"
 
-#: src/Plug.vala:70
+#: src/Plug.vala:73
 msgid "Display inactive"
 msgstr "Neaktiva ekrano"
 
-#: src/Plug.vala:71
+#: src/Plug.vala:74
 msgid "Dim display"
 msgstr "Malheligi ekranon"
 
-#: src/Plug.vala:72
+#: src/Plug.vala:75
 msgid "Lid close"
 msgstr "Fermi ekran-platon"
 
-#: src/Plug.vala:73
+#: src/Plug.vala:76
 msgid "Display brightness"
 msgstr "Ekrana brileco"
 
-#: src/Plug.vala:74
+#: src/Plug.vala:77
 msgid "Automatic brightness adjustment"
 msgstr "Aŭtomata brila alĝustiĝo"
 
-#: src/Plug.vala:75
+#: src/Plug.vala:78
 msgid "Inactive display off"
 msgstr "Malŝalti neaktivan ekranon"
 
-#: src/Plug.vala:76
+#: src/Plug.vala:79
 msgid "Docked lid close"
 msgstr "Fermita platekrano, sur doko"
 
-#: src/Plug.vala:77
+#: src/Plug.vala:80
 msgid "Sleep inactivity timeout"
 msgstr ""
 
-#: src/Plug.vala:78
+#: src/Plug.vala:81
 msgid "Suspend inactive"
 msgstr "Neaktiva paŭzigo"
 
@@ -185,9 +193,6 @@ msgstr "Ne subtenata"
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
 msgstr "Invito je malŝalto"
-
-#~ msgid "Some changes will not take effect until you restart this computer"
-#~ msgstr "Kelkaj ŝanĝoj ne okazos ĝis vi restartigos ĉi tiun komputilon"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Malheligi ekranon kiam neaktiva:"

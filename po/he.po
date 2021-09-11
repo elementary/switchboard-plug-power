@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:00+0000\n"
-"PO-Revision-Date: 2021-04-21 21:24+0000\n"
+"POT-Creation-Date: 2021-08-24 16:00+0000\n"
+"PO-Revision-Date: 2021-08-20 11:55+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/he/>\n"
@@ -32,95 +32,103 @@ msgstr "נדרש אימות לצורך ניהול הגדרות צריכת חשמ
 msgid "You do not have permission to change this"
 msgstr "אין לך הרשאה לשנות את זה"
 
-#: src/MainView.vala:66
+#: src/MainView.vala:69
+msgid "Show battery percentage in Panel:"
+msgstr "הצגת אחוזי סוללה בלוח:"
+
+#: src/MainView.vala:84
 msgid "Display brightness:"
 msgstr "בהירות התצוגה:"
 
-#: src/MainView.vala:70
+#: src/MainView.vala:89
 msgid "Automatically adjust brightness:"
 msgstr "התאמת בהירות התצוגה אוטומטית:"
 
-#: src/MainView.vala:98
+#: src/MainView.vala:119
 msgid "When lid is closed:"
 msgstr "כאשר המכסה סגור:"
 
-#: src/MainView.vala:104
+#: src/MainView.vala:126
 msgid "When lid is closed with external monitor:"
 msgstr "כאשר המכסה סגור עם צג חיצוני:"
 
-#: src/MainView.vala:130
+#: src/MainView.vala:155
 msgid "Some settings require administrator rights to be changed"
 msgstr "לצורך שינוי של חלק מההגדרות נדרשות הרשאות ניהול"
 
-#: src/MainView.vala:151
+#: src/MainView.vala:177
 msgid "Turn off display when inactive for:"
 msgstr "יש לכבות את התצוגה כאשר אין פעילות במשך:"
 
-#: src/MainView.vala:157
+#: src/MainView.vala:184
 msgid "Power button:"
 msgstr "כפתור הפעלה:"
 
-#: src/MainView.vala:168 src/MainView.vala:190
+#: src/MainView.vala:196 src/MainView.vala:222
 msgid "Suspend when inactive for:"
 msgstr "יש לעבור למצב השהיה בעת חוסר פעילות למשך:"
 
-#: src/MainView.vala:183
+#: src/MainView.vala:214
 msgid "Plugged In"
 msgstr "מחובר"
 
-#: src/MainView.vala:205
+#: src/MainView.vala:240
 msgid "On Battery"
 msgstr "על סוללה"
 
-#: src/Plug.vala:32
+#: src/MainView.vala:265
+msgid "Some changes will not take effect until you restart this computer"
+msgstr "חלק מהשינויים לא יכנסו לתוקף עד להפעלת המחשב מחדש"
+
+#: src/Plug.vala:35
 msgid "Power"
 msgstr "חשמל"
 
-#: src/Plug.vala:33
+#: src/Plug.vala:36
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "הגדרת בהירות המסך, כפתורי הכיבוי והתנהגות מצב ההשהיה"
 
-#: src/Plug.vala:68
+#: src/Plug.vala:71
 msgid "Suspend button"
 msgstr "כפתור השהיה"
 
-#: src/Plug.vala:69
+#: src/Plug.vala:72
 msgid "Power button"
 msgstr "כפתור הפעלה"
 
-#: src/Plug.vala:70
+#: src/Plug.vala:73
 msgid "Display inactive"
 msgstr "תצוגה בלתי פעילה"
 
-#: src/Plug.vala:71
+#: src/Plug.vala:74
 msgid "Dim display"
 msgstr "עמעום התצוגה"
 
-#: src/Plug.vala:72
+#: src/Plug.vala:75
 msgid "Lid close"
 msgstr "מכסה סגור"
 
-#: src/Plug.vala:73
+#: src/Plug.vala:76
 msgid "Display brightness"
 msgstr "בהירות תצוגה"
 
-#: src/Plug.vala:74
+#: src/Plug.vala:77
 msgid "Automatic brightness adjustment"
 msgstr "התאמת בהירות אוטומטית"
 
-#: src/Plug.vala:75
+#: src/Plug.vala:78
 msgid "Inactive display off"
 msgstr "כיבוי תצוגה בלתי פעילה"
 
-#: src/Plug.vala:76
+#: src/Plug.vala:79
 msgid "Docked lid close"
 msgstr "סגירת מכסה בתחנת עגינה"
 
-#: src/Plug.vala:77
+#: src/Plug.vala:80
 msgid "Sleep inactivity timeout"
 msgstr "תום זמן חוסר פעילות שינה"
 
-#: src/Plug.vala:78
+#: src/Plug.vala:81
 msgid "Suspend inactive"
 msgstr "השהיה בלתי פעילה"
 
@@ -185,9 +193,6 @@ msgstr "לא נתמך"
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
 msgstr "בקשה לכיבוי"
-
-#~ msgid "Some changes will not take effect until you restart this computer"
-#~ msgstr "חלק מהשינויים לא יכנסו לתוקף עד להפעלת המחשב מחדש"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "יש לעמעם את התצוגה כאשר אין פעילות במשך:"

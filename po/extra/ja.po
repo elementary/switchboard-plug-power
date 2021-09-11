@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:00+0000\n"
-"PO-Revision-Date: 2021-07-18 12:03+0000\n"
+"POT-Creation-Date: 2021-08-24 16:00+0000\n"
+"PO-Revision-Date: 2021-08-25 03:03+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "power-plug-extra/ja/>\n"
@@ -28,31 +28,44 @@ msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "ディスプレイの明るさ、電源ボタン、サスペンドの動作を設定します"
 
 #: data/power.appdata.xml.in:12
+msgid "New features:"
+msgstr "新機能:"
+
+#: data/power.appdata.xml.in:14
+msgid "Add toggle for showing battery percentage in Panel"
+msgstr "パネルにバッテリー残量割合の表示を切り替えるスイッチを追加"
+
+#: data/power.appdata.xml.in:16 data/power.appdata.xml.in:25
 msgid "Minor updates:"
 msgstr "軽微なアップデート:"
 
-#: data/power.appdata.xml.in:14
-msgid "Change lid settings without restarting"
-msgstr "カバーの設定を再起動せず変更できるように修正"
+#: data/power.appdata.xml.in:18
+msgid "Fix a potential issue with resuming from sleep"
+msgstr "スリープからの復帰時に発生することがある不具合を修正"
 
-#: data/power.appdata.xml.in:15
-msgid "Show in search results for \"sleep\" and \"timeout\""
-msgstr "\"スリープ\"や\"時間\"といった単語でプラグを検索できるように変更"
-
-#: data/power.appdata.xml.in:16 data/power.appdata.xml.in:23
-#: data/power.appdata.xml.in:28 data/power.appdata.xml.in:35
+#: data/power.appdata.xml.in:19 data/power.appdata.xml.in:29
+#: data/power.appdata.xml.in:36 data/power.appdata.xml.in:41
+#: data/power.appdata.xml.in:48
 msgid "Updated translations"
 msgstr "翻訳の更新"
 
-#: data/power.appdata.xml.in:22
+#: data/power.appdata.xml.in:27
+msgid "Change lid settings without restarting"
+msgstr "カバーの設定を再起動せず変更できるように修正"
+
+#: data/power.appdata.xml.in:28
+msgid "Show in search results for \"sleep\" and \"timeout\""
+msgstr "\"スリープ\"や\"時間\"といった単語でプラグを検索できるように変更"
+
+#: data/power.appdata.xml.in:35
 msgid "Fix potential freeze when changing settings from multiple panes"
 msgstr "複数のペインから設定を変更した際にフリーズすることがある不具合を修正"
 
-#: data/power.appdata.xml.in:33
+#: data/power.appdata.xml.in:46
 msgid "Remove broken hibernate option"
 msgstr "機能しないハイバーネートオプションを削除"
 
-#: data/power.appdata.xml.in:34
+#: data/power.appdata.xml.in:47
 msgid "Add prompt to shutdown to power button actions"
 msgstr "電源ボタンを押したときの動作に “シャットダウンの確認” を追加"
 

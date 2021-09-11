@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:00+0000\n"
+"POT-Creation-Date: 2021-08-24 16:00+0000\n"
 "PO-Revision-Date: 2020-01-01 16:07+0000\n"
 "Last-Translator: Jaimie85 <alsemgeest@gmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
@@ -33,95 +33,105 @@ msgstr ""
 msgid "You do not have permission to change this"
 msgstr "U heeft geen rechten om dit te veranderen"
 
-#: src/MainView.vala:66
+#: src/MainView.vala:69
+msgid "Show battery percentage in Panel:"
+msgstr ""
+
+#: src/MainView.vala:84
 msgid "Display brightness:"
 msgstr "Helderheid:"
 
-#: src/MainView.vala:70
+#: src/MainView.vala:89
 msgid "Automatically adjust brightness:"
 msgstr "Pas de helderheid automatisch aan:"
 
-#: src/MainView.vala:98
+#: src/MainView.vala:119
 msgid "When lid is closed:"
 msgstr "Wanneer laptop is dichtgeklapt:"
 
-#: src/MainView.vala:104
+#: src/MainView.vala:126
 msgid "When lid is closed with external monitor:"
 msgstr "Wanneer deksel dicht is met extern beeldscherm aangesloten:"
 
-#: src/MainView.vala:130
+#: src/MainView.vala:155
 msgid "Some settings require administrator rights to be changed"
 msgstr "Sommige instellingen vereisen beheerdersrechten om te worden gewijzigd"
 
-#: src/MainView.vala:151
+#: src/MainView.vala:177
 msgid "Turn off display when inactive for:"
 msgstr "Schakel het scherm uit wanneer het inactief is voor:"
 
-#: src/MainView.vala:157
+#: src/MainView.vala:184
 msgid "Power button:"
 msgstr "Aan-/uit-knop:"
 
-#: src/MainView.vala:168 src/MainView.vala:190
+#: src/MainView.vala:196 src/MainView.vala:222
 msgid "Suspend when inactive for:"
 msgstr "Naar slaapstand wanneer inactief voor:"
 
-#: src/MainView.vala:183
+#: src/MainView.vala:214
 msgid "Plugged In"
 msgstr "Aangesloten"
 
-#: src/MainView.vala:205
+#: src/MainView.vala:240
 msgid "On Battery"
 msgstr "Op accustroom"
 
-#: src/Plug.vala:32
+#: src/MainView.vala:265
+msgid "Some changes will not take effect until you restart this computer"
+msgstr ""
+"sommige verraderingen zijn pas van kracht nadat deze computer opnieuw is "
+"opgestart"
+
+#: src/Plug.vala:35
 msgid "Power"
 msgstr "Energie"
 
-#: src/Plug.vala:33
+#: src/Plug.vala:36
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "Configureer schermhelderheid, stroomknoppen en slaapstand"
 
-#: src/Plug.vala:68
+#: src/Plug.vala:71
 msgid "Suspend button"
 msgstr "Slaapstandknop"
 
-#: src/Plug.vala:69
+#: src/Plug.vala:72
 msgid "Power button"
 msgstr "Stroomknop"
 
-#: src/Plug.vala:70
+#: src/Plug.vala:73
 msgid "Display inactive"
 msgstr "Scherm inactief"
 
-#: src/Plug.vala:71
+#: src/Plug.vala:74
 msgid "Dim display"
 msgstr "Verduister beeldscherm"
 
-#: src/Plug.vala:72
+#: src/Plug.vala:75
 msgid "Lid close"
 msgstr "Deksel gesloten"
 
-#: src/Plug.vala:73
+#: src/Plug.vala:76
 msgid "Display brightness"
 msgstr "Helderheid beeldscherm"
 
-#: src/Plug.vala:74
+#: src/Plug.vala:77
 msgid "Automatic brightness adjustment"
 msgstr "Automatisch helderheid aanpassen"
 
-#: src/Plug.vala:75
+#: src/Plug.vala:78
 msgid "Inactive display off"
 msgstr "Inactief beeldscherm uit"
 
-#: src/Plug.vala:76
+#: src/Plug.vala:79
 msgid "Docked lid close"
 msgstr "In standaard gesloten deksel"
 
-#: src/Plug.vala:77
+#: src/Plug.vala:80
 msgid "Sleep inactivity timeout"
 msgstr ""
 
-#: src/Plug.vala:78
+#: src/Plug.vala:81
 msgid "Suspend inactive"
 msgstr "Slaapstand inactiviteit"
 
@@ -186,11 +196,6 @@ msgstr "Niet ondersteund"
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
 msgstr "Vragen om uit te schakelen"
-
-#~ msgid "Some changes will not take effect until you restart this computer"
-#~ msgstr ""
-#~ "sommige verraderingen zijn pas van kracht nadat deze computer opnieuw is "
-#~ "opgestart"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Dim het scherm wanneer het inactief is:"

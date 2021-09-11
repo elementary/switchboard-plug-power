@@ -7,49 +7,65 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:00+0000\n"
-"PO-Revision-Date: 2019-05-09 18:04-0700\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"POT-Creation-Date: 2021-08-24 16:00+0000\n"
+"PO-Revision-Date: 2021-08-26 08:31+0000\n"
+"Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
+"Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
+"power-plug-extra/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 4.4.2\n"
 
 #: data/power.appdata.xml.in:5
 msgid "Power Settings"
-msgstr ""
+msgstr "Nastavenia napájania"
 
 #: data/power.appdata.xml.in:6
 msgid "Configure display brightness, power buttons, and suspend behavior"
-msgstr ""
+msgstr "Nastavujte jas obrazovky, tlačidlá napájania a správanie uspávania"
 
 #: data/power.appdata.xml.in:12
-msgid "Minor updates:"
-msgstr ""
+msgid "New features:"
+msgstr "Nové funkcie:"
 
 #: data/power.appdata.xml.in:14
-msgid "Change lid settings without restarting"
-msgstr ""
+msgid "Add toggle for showing battery percentage in Panel"
+msgstr "Pridaný prepínač zobrazovania percent batérie v Paneli"
 
-#: data/power.appdata.xml.in:15
-msgid "Show in search results for \"sleep\" and \"timeout\""
-msgstr ""
+#: data/power.appdata.xml.in:16 data/power.appdata.xml.in:25
+msgid "Minor updates:"
+msgstr "Menšie aktualizácie:"
 
-#: data/power.appdata.xml.in:16 data/power.appdata.xml.in:23
-#: data/power.appdata.xml.in:28 data/power.appdata.xml.in:35
+#: data/power.appdata.xml.in:18
+msgid "Fix a potential issue with resuming from sleep"
+msgstr "Opravený potenciálny problém pri zobúdzaní zo spánku"
+
+#: data/power.appdata.xml.in:19 data/power.appdata.xml.in:29
+#: data/power.appdata.xml.in:36 data/power.appdata.xml.in:41
+#: data/power.appdata.xml.in:48
 msgid "Updated translations"
-msgstr ""
+msgstr "Aktualizované preklady"
 
-#: data/power.appdata.xml.in:22
+#: data/power.appdata.xml.in:27
+msgid "Change lid settings without restarting"
+msgstr "Upravujte nastavenia veka bez potreby reštartovania"
+
+#: data/power.appdata.xml.in:28
+msgid "Show in search results for \"sleep\" and \"timeout\""
+msgstr "Zobrazovať výsledky vyhľadávania pre „spánok“ a „časovač“"
+
+#: data/power.appdata.xml.in:35
 msgid "Fix potential freeze when changing settings from multiple panes"
 msgstr ""
+"Opravené potenciálne zamrznutie pri zmene nastavení z viacerých panelov"
 
-#: data/power.appdata.xml.in:33
+#: data/power.appdata.xml.in:46
 msgid "Remove broken hibernate option"
-msgstr ""
+msgstr "Odstránená nefunkčná možnosť hibernácie"
 
-#: data/power.appdata.xml.in:34
+#: data/power.appdata.xml.in:47
 msgid "Add prompt to shutdown to power button actions"
-msgstr ""
+msgstr "Pridanie výzvy ohľadom vypnutia pri akcii tlačidla napájania"

@@ -8,126 +8,130 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:00+0000\n"
-"PO-Revision-Date: 2016-12-11 20:57+0000\n"
-"Last-Translator: Martin Korpala <Unknown>\n"
-"Language-Team: Slovak <>\n"
+"POT-Creation-Date: 2021-08-24 16:00+0000\n"
+"PO-Revision-Date: 2021-08-26 08:31+0000\n"
+"Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
+"Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-power/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2016-12-12 05:18+0000\n"
-"X-Generator: Launchpad (build 18292)\n"
 
 #: data/io.elementary.switchboard.power.policy.in:10
-#, fuzzy
 msgid "Manage power settings"
-msgstr "Spravovať nastavenia napájania "
+msgstr "Spravujte nastavenia napájania"
 
 #: data/io.elementary.switchboard.power.policy.in:11
 msgid "Authentication is required to manage power settings"
-msgstr "Autentifikácia je potrebná pre správu nastavenia napájania"
+msgstr "Pre zmenu nastavení napájania je potrebné overenie"
 
 #: src/MainView.vala:24
 msgid "You do not have permission to change this"
 msgstr "Nemáte oprávnenie na túto zmenu"
 
-#: src/MainView.vala:66
-msgid "Display brightness:"
-msgstr "Jas displeja:"
+#: src/MainView.vala:69
+msgid "Show battery percentage in Panel:"
+msgstr "Zobrazovať percentá batérie v Paneli:"
 
-#: src/MainView.vala:70
+#: src/MainView.vala:84
+msgid "Display brightness:"
+msgstr "Jas obrazovky:"
+
+#: src/MainView.vala:89
 msgid "Automatically adjust brightness:"
 msgstr "Automatická úprava jasu:"
 
-#: src/MainView.vala:98
+#: src/MainView.vala:119
 msgid "When lid is closed:"
-msgstr "Ak je zatvorený kryt:"
+msgstr "Ak je veko zatvorené:"
 
-#: src/MainView.vala:104
+#: src/MainView.vala:126
 msgid "When lid is closed with external monitor:"
-msgstr "Keď je veko zavreté v pripojení s externým monitorom:"
+msgstr "Ak je veko zatvorené a pripojený externý monitor:"
 
-#: src/MainView.vala:130
+#: src/MainView.vala:155
 msgid "Some settings require administrator rights to be changed"
 msgstr "Na zmenu niektorých nastavení sú potrebné administrátorské práva"
 
-#: src/MainView.vala:151
+#: src/MainView.vala:177
 msgid "Turn off display when inactive for:"
-msgstr "Vypnúť monitor ak neaktívny:"
+msgstr "Vypnúť monitor, ak je neaktívny po dobu:"
 
-#: src/MainView.vala:157
+#: src/MainView.vala:184
 msgid "Power button:"
 msgstr "Tlačidlo napájania:"
 
-#: src/MainView.vala:168 src/MainView.vala:190
-#, fuzzy
+#: src/MainView.vala:196 src/MainView.vala:222
 msgid "Suspend when inactive for:"
-msgstr "Odložiť ak neaktívny počas:"
+msgstr "Uspať, ak je neaktívny po dobu:"
 
-#: src/MainView.vala:183
+#: src/MainView.vala:214
 msgid "Plugged In"
 msgstr "Pripojené"
 
-#: src/MainView.vala:205
+#: src/MainView.vala:240
 msgid "On Battery"
 msgstr "Na batérii"
 
-#: src/Plug.vala:32
+#: src/MainView.vala:265
+msgid "Some changes will not take effect until you restart this computer"
+msgstr "Niektoré zmeny sa prejavia až po reštarte počítača"
+
+#: src/Plug.vala:35
 msgid "Power"
 msgstr "Napájanie"
 
-#: src/Plug.vala:33
-#, fuzzy
+#: src/Plug.vala:36
 msgid "Configure display brightness, power buttons, and suspend behavior"
-msgstr ""
-"Nastavenie jasu monitora, tlačidla napájania a správania sa v režime spánku"
+msgstr "Nastavujte jas obrazovky, tlačidlá napájania a správanie uspávania"
 
-#: src/Plug.vala:68
-#, fuzzy
+#: src/Plug.vala:71
 msgid "Suspend button"
 msgstr "Tlačidlo uspania"
 
-#: src/Plug.vala:69
+#: src/Plug.vala:72
 msgid "Power button"
 msgstr "Tlačidlo napájania"
 
-#: src/Plug.vala:70
-msgid "Display inactive"
-msgstr "Zobraz neaktívne"
-
-#: src/Plug.vala:71
-msgid "Dim display"
-msgstr "Stlmiť displej"
-
-#: src/Plug.vala:72
-msgid "Lid close"
-msgstr "Uzavretie veka"
-
 #: src/Plug.vala:73
-msgid "Display brightness"
-msgstr "Jas displeja"
+msgid "Display inactive"
+msgstr "Neaktívna obrazovka"
 
 #: src/Plug.vala:74
+msgid "Dim display"
+msgstr "Stmaviť obrazovku"
+
+#: src/Plug.vala:75
+msgid "Lid close"
+msgstr "Zatvorenie veka"
+
+#: src/Plug.vala:76
+msgid "Display brightness"
+msgstr "Jas obrazovky"
+
+#: src/Plug.vala:77
 msgid "Automatic brightness adjustment"
 msgstr "Automatická úprava jasu"
 
-#: src/Plug.vala:75
-msgid "Inactive display off"
-msgstr "Vypnutie neaktívneho displeja"
-
-#: src/Plug.vala:76
-msgid "Docked lid close"
-msgstr "Zavreté veko v doku"
-
-#: src/Plug.vala:77
-msgid "Sleep inactivity timeout"
-msgstr ""
-
 #: src/Plug.vala:78
-#, fuzzy
+msgid "Inactive display off"
+msgstr "Vypnutá neaktívna obrazovka"
+
+#: src/Plug.vala:79
+msgid "Docked lid close"
+msgstr "Zatvorenie veka pri pripojenom doku"
+
+#: src/Plug.vala:80
+msgid "Sleep inactivity timeout"
+msgstr "Časovač neaktivity počas spánku"
+
+#: src/Plug.vala:81
 msgid "Suspend inactive"
-msgstr "Neaktívne uspanie"
+msgstr "Uspať neaktívne"
 
 #: src/Widgets/TimeoutComboBox.vala:91
 msgid "Never"
@@ -189,10 +193,7 @@ msgstr "Nepodporované"
 
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
-msgstr ""
-
-#~ msgid "Some changes will not take effect until you restart this computer"
-#~ msgstr "Tieto zmeny sa prejavia až po reštarte počítača"
+msgstr "Výzva na vypnutie"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Stmaviť monitor počas nečinnosti"

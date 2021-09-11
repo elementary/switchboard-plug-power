@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-power-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:00+0000\n"
+"POT-Creation-Date: 2021-08-24 16:00+0000\n"
 "PO-Revision-Date: 2021-02-16 02:40+0000\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <https://l10n.elementary.io/projects/switchboard/"
@@ -33,95 +33,103 @@ msgstr "Потребно је потврђивање идентитета за �
 msgid "You do not have permission to change this"
 msgstr "Немате овлашћење да измените ово"
 
-#: src/MainView.vala:66
+#: src/MainView.vala:69
+msgid "Show battery percentage in Panel:"
+msgstr ""
+
+#: src/MainView.vala:84
 msgid "Display brightness:"
 msgstr "Осветљеност екрана:"
 
-#: src/MainView.vala:70
+#: src/MainView.vala:89
 msgid "Automatically adjust brightness:"
 msgstr "Сам подеси осветљеност:"
 
-#: src/MainView.vala:98
+#: src/MainView.vala:119
 msgid "When lid is closed:"
 msgstr "Кад је поклопац спуштен:"
 
-#: src/MainView.vala:104
+#: src/MainView.vala:126
 msgid "When lid is closed with external monitor:"
 msgstr "Када је поклопац спуштен са спољним монитором:"
 
-#: src/MainView.vala:130
+#: src/MainView.vala:155
 msgid "Some settings require administrator rights to be changed"
 msgstr "Нека подешавања захтевају администраторска права да би се изменила"
 
-#: src/MainView.vala:151
+#: src/MainView.vala:177
 msgid "Turn off display when inactive for:"
 msgstr "Искључи екран када је нерадан након:"
 
-#: src/MainView.vala:157
+#: src/MainView.vala:184
 msgid "Power button:"
 msgstr "Дугме напајања:"
 
-#: src/MainView.vala:168 src/MainView.vala:190
+#: src/MainView.vala:196 src/MainView.vala:222
 msgid "Suspend when inactive for:"
 msgstr "Обустави када је нерадан након:"
 
-#: src/MainView.vala:183
+#: src/MainView.vala:214
 msgid "Plugged In"
 msgstr "На ел. мрежи"
 
-#: src/MainView.vala:205
+#: src/MainView.vala:240
 msgid "On Battery"
 msgstr "На батерији"
 
-#: src/Plug.vala:32
+#: src/MainView.vala:265
+msgid "Some changes will not take effect until you restart this computer"
+msgstr "Неке промене неће ступити на снагу све док поново не покренете рачунар"
+
+#: src/Plug.vala:35
 msgid "Power"
 msgstr "Напајање"
 
-#: src/Plug.vala:33
+#: src/Plug.vala:36
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "Подесите осветљеност екрана, дугмад напајања и понашање обустављања"
 
-#: src/Plug.vala:68
+#: src/Plug.vala:71
 msgid "Suspend button"
 msgstr "Дугме обуставе"
 
-#: src/Plug.vala:69
+#: src/Plug.vala:72
 msgid "Power button"
 msgstr "Дугме напајања"
 
-#: src/Plug.vala:70
+#: src/Plug.vala:73
 msgid "Display inactive"
 msgstr "Екран је нерадан"
 
-#: src/Plug.vala:71
+#: src/Plug.vala:74
 msgid "Dim display"
 msgstr "Затамни екран"
 
-#: src/Plug.vala:72
+#: src/Plug.vala:75
 msgid "Lid close"
 msgstr "Поклопац је спуштен"
 
-#: src/Plug.vala:73
+#: src/Plug.vala:76
 msgid "Display brightness"
 msgstr "Осветљеност екрана"
 
-#: src/Plug.vala:74
+#: src/Plug.vala:77
 msgid "Automatic brightness adjustment"
 msgstr "Самостално подешавање осветљености"
 
-#: src/Plug.vala:75
+#: src/Plug.vala:78
 msgid "Inactive display off"
 msgstr "Нерадан екран је искључен"
 
-#: src/Plug.vala:76
+#: src/Plug.vala:79
 msgid "Docked lid close"
 msgstr "Затвори прикачени поклопац"
 
-#: src/Plug.vala:77
+#: src/Plug.vala:80
 msgid "Sleep inactivity timeout"
 msgstr "Истек времена мировања спавања"
 
-#: src/Plug.vala:78
+#: src/Plug.vala:81
 msgid "Suspend inactive"
 msgstr "Обустава је неактивна"
 
@@ -186,10 +194,6 @@ msgstr "Није подржано"
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
 msgstr "Постави упит гашења"
-
-#~ msgid "Some changes will not take effect until you restart this computer"
-#~ msgstr ""
-#~ "Неке промене неће ступити на снагу све док поново не покренете рачунар"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Затамни екран када је нерадан:"

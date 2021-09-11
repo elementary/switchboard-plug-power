@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:00+0000\n"
-"PO-Revision-Date: 2021-03-15 22:59+0000\n"
-"Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
+"POT-Creation-Date: 2021-08-24 16:00+0000\n"
+"PO-Revision-Date: 2021-08-27 14:50+0000\n"
+"Last-Translator: DartDeaDia <dartdeadia@protonmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/ru/>\n"
 "Language: ru\n"
@@ -33,96 +33,104 @@ msgstr "Для изменения параметров питания требу
 msgid "You do not have permission to change this"
 msgstr "У вас недостаточно прав для изменения"
 
-#: src/MainView.vala:66
+#: src/MainView.vala:69
+msgid "Show battery percentage in Panel:"
+msgstr "Показывать заряд аккумулятора на палени:"
+
+#: src/MainView.vala:84
 msgid "Display brightness:"
 msgstr "Яркость экрана:"
 
-#: src/MainView.vala:70
+#: src/MainView.vala:89
 msgid "Automatically adjust brightness:"
 msgstr "Автоматическая регулировка яркости:"
 
-#: src/MainView.vala:98
+#: src/MainView.vala:119
 msgid "When lid is closed:"
 msgstr "Когда крышка закрыта:"
 
-#: src/MainView.vala:104
+#: src/MainView.vala:126
 msgid "When lid is closed with external monitor:"
 msgstr "Когда крышка закрыта с внешним монитором:"
 
-#: src/MainView.vala:130
+#: src/MainView.vala:155
 msgid "Some settings require administrator rights to be changed"
 msgstr "Для изменения некоторых настроек требуются права администратора"
 
-#: src/MainView.vala:151
+#: src/MainView.vala:177
 msgid "Turn off display when inactive for:"
-msgstr "Отключать экран через:"
+msgstr "Выключать экран при бездействии в течении:"
 
-#: src/MainView.vala:157
+#: src/MainView.vala:184
 msgid "Power button:"
 msgstr "Кнопка питания:"
 
-#: src/MainView.vala:168 src/MainView.vala:190
+#: src/MainView.vala:196 src/MainView.vala:222
 msgid "Suspend when inactive for:"
-msgstr "Перейти в ждущий режим через:"
+msgstr "Перейти в ждущий режим при бездействии в течении:"
 
-#: src/MainView.vala:183
+#: src/MainView.vala:214
 msgid "Plugged In"
 msgstr "На зарядке"
 
-#: src/MainView.vala:205
+#: src/MainView.vala:240
 msgid "On Battery"
 msgstr "От батареи"
 
-#: src/Plug.vala:32
+#: src/MainView.vala:265
+msgid "Some changes will not take effect until you restart this computer"
+msgstr "Некоторые изменения вступят в силу после перезагрузки компьютера"
+
+#: src/Plug.vala:35
 msgid "Power"
 msgstr "Питание"
 
-#: src/Plug.vala:33
+#: src/Plug.vala:36
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr ""
 "Настройка яркости экрана, кнопок питания и поведения перехода в спящий режим"
 
-#: src/Plug.vala:68
+#: src/Plug.vala:71
 msgid "Suspend button"
 msgstr "Кнопка сна"
 
-#: src/Plug.vala:69
+#: src/Plug.vala:72
 msgid "Power button"
 msgstr "Кнопка питания"
 
-#: src/Plug.vala:70
+#: src/Plug.vala:73
 msgid "Display inactive"
 msgstr "Экран при простое"
 
-#: src/Plug.vala:71
+#: src/Plug.vala:74
 msgid "Dim display"
 msgstr "Затемнение экрана"
 
-#: src/Plug.vala:72
+#: src/Plug.vala:75
 msgid "Lid close"
 msgstr "Крышка закрыта"
 
-#: src/Plug.vala:73
+#: src/Plug.vala:76
 msgid "Display brightness"
 msgstr "Яркость экрана"
 
-#: src/Plug.vala:74
+#: src/Plug.vala:77
 msgid "Automatic brightness adjustment"
 msgstr "Автоматическая настройка яркости"
 
-#: src/Plug.vala:75
+#: src/Plug.vala:78
 msgid "Inactive display off"
 msgstr "Выключение экрана в простое"
 
-#: src/Plug.vala:76
+#: src/Plug.vala:79
 msgid "Docked lid close"
 msgstr "Крышка закрыта"
 
-#: src/Plug.vala:77
+#: src/Plug.vala:80
 msgid "Sleep inactivity timeout"
 msgstr "Время бездействия для перехода в спящий режим"
 
-#: src/Plug.vala:78
+#: src/Plug.vala:81
 msgid "Suspend inactive"
 msgstr "Сон при простое"
 
@@ -187,9 +195,6 @@ msgstr "Не поддерживается"
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
 msgstr "Запрос на выключение"
-
-#~ msgid "Some changes will not take effect until you restart this computer"
-#~ msgstr "Некоторые изменения вступят в силу после перезагрузки компьютера"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Погасить экран при неактивности:"

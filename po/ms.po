@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:00+0000\n"
+"POT-Creation-Date: 2021-08-24 16:00+0000\n"
 "PO-Revision-Date: 2016-12-27 02:16+0000\n"
 "Last-Translator: Timothy <timothy.wong@rocketmail.com>\n"
 "Language-Team: Malay <ms@li.org>\n"
@@ -31,98 +31,108 @@ msgstr "Pengesahihan diperlukan untuk mengurus tetapan kuasa"
 msgid "You do not have permission to change this"
 msgstr "Anda tidak mempunyai keizinan untuk mengubah ini"
 
-#: src/MainView.vala:66
+#: src/MainView.vala:69
+msgid "Show battery percentage in Panel:"
+msgstr ""
+
+#: src/MainView.vala:84
 msgid "Display brightness:"
 msgstr "Kecerahan paparan:"
 
-#: src/MainView.vala:70
+#: src/MainView.vala:89
 msgid "Automatically adjust brightness:"
 msgstr "Laras kecerahan secara automatik:"
 
-#: src/MainView.vala:98
+#: src/MainView.vala:119
 msgid "When lid is closed:"
 msgstr "Bila penutup ditutup:"
 
-#: src/MainView.vala:104
+#: src/MainView.vala:126
 msgid "When lid is closed with external monitor:"
 msgstr "Jika penutup ditutup dengan monitor luar:"
 
-#: src/MainView.vala:130
+#: src/MainView.vala:155
 msgid "Some settings require administrator rights to be changed"
 msgstr "Beberapa tetapan memerlukan hak pentadbir yang perlu diubah"
 
-#: src/MainView.vala:151
+#: src/MainView.vala:177
 msgid "Turn off display when inactive for:"
 msgstr "Matikan paparan jika tidak aktif selama:"
 
-#: src/MainView.vala:157
+#: src/MainView.vala:184
 msgid "Power button:"
 msgstr "Butang kuasa:"
 
-#: src/MainView.vala:168 src/MainView.vala:190
+#: src/MainView.vala:196 src/MainView.vala:222
 #, fuzzy
 msgid "Suspend when inactive for:"
 msgstr "Tangguh bila tidak aktif selama:"
 
-#: src/MainView.vala:183
+#: src/MainView.vala:214
 msgid "Plugged In"
 msgstr "Dipalam Masuk"
 
-#: src/MainView.vala:205
+#: src/MainView.vala:240
 msgid "On Battery"
 msgstr "Mod Bateri"
 
-#: src/Plug.vala:32
+#: src/MainView.vala:265
+msgid "Some changes will not take effect until you restart this computer"
+msgstr ""
+"Beberapa perubahan tidak akan berkesan sehinggalah anda memulakan semula "
+"komputer ini"
+
+#: src/Plug.vala:35
 msgid "Power"
 msgstr "Kuasa"
 
-#: src/Plug.vala:33
+#: src/Plug.vala:36
 #, fuzzy
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "Konfigut kecerahan paparan ,butang kuasa, dan kelakuan tidur"
 
-#: src/Plug.vala:68
+#: src/Plug.vala:71
 #, fuzzy
 msgid "Suspend button"
 msgstr "Butang tidur"
 
-#: src/Plug.vala:69
+#: src/Plug.vala:72
 msgid "Power button"
 msgstr "Butang kuasa"
 
-#: src/Plug.vala:70
+#: src/Plug.vala:73
 msgid "Display inactive"
 msgstr "Papar tidak aktif"
 
-#: src/Plug.vala:71
+#: src/Plug.vala:74
 msgid "Dim display"
 msgstr "Malapkan paparan"
 
-#: src/Plug.vala:72
+#: src/Plug.vala:75
 msgid "Lid close"
 msgstr "Tutup penutup"
 
-#: src/Plug.vala:73
+#: src/Plug.vala:76
 msgid "Display brightness"
 msgstr "Papar kecerahan"
 
-#: src/Plug.vala:74
+#: src/Plug.vala:77
 msgid "Automatic brightness adjustment"
 msgstr "Pelarasan kecerahan secara automatik"
 
-#: src/Plug.vala:75
+#: src/Plug.vala:78
 msgid "Inactive display off"
 msgstr "Paparan tidak aktif dimatikan"
 
-#: src/Plug.vala:76
+#: src/Plug.vala:79
 msgid "Docked lid close"
 msgstr "Penutup terlabuh ditutup"
 
-#: src/Plug.vala:77
+#: src/Plug.vala:80
 msgid "Sleep inactivity timeout"
 msgstr ""
 
-#: src/Plug.vala:78
+#: src/Plug.vala:81
 #, fuzzy
 msgid "Suspend inactive"
 msgstr "Tidur tidak aktif"
@@ -188,11 +198,6 @@ msgstr "Tidak disokong"
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
 msgstr ""
-
-#~ msgid "Some changes will not take effect until you restart this computer"
-#~ msgstr ""
-#~ "Beberapa perubahan tidak akan berkesan sehinggalah anda memulakan semula "
-#~ "komputer ini"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Malapkan paparan jika tidak aktif:"

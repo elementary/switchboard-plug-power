@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:00+0000\n"
+"POT-Creation-Date: 2021-08-24 16:00+0000\n"
 "PO-Revision-Date: 2021-02-13 13:01+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
@@ -32,97 +32,105 @@ msgstr "Godkjennelse kreves for å behandle strøm-innstillinger"
 msgid "You do not have permission to change this"
 msgstr "Du har ikke rettigheter til å endre dette"
 
-#: src/MainView.vala:66
+#: src/MainView.vala:69
+msgid "Show battery percentage in Panel:"
+msgstr ""
+
+#: src/MainView.vala:84
 msgid "Display brightness:"
 msgstr "Lysstyrke på skjerm:"
 
-#: src/MainView.vala:70
+#: src/MainView.vala:89
 msgid "Automatically adjust brightness:"
 msgstr "Juster lysstyrken automatisk:"
 
-#: src/MainView.vala:98
+#: src/MainView.vala:119
 msgid "When lid is closed:"
 msgstr "Når lokket lukkes:"
 
-#: src/MainView.vala:104
+#: src/MainView.vala:126
 msgid "When lid is closed with external monitor:"
 msgstr "Når lokket lukkes med ekstern skjerm:"
 
-#: src/MainView.vala:130
+#: src/MainView.vala:155
 msgid "Some settings require administrator rights to be changed"
 msgstr "Noen innstillinger krever administrasjonsrettigheter for å endres"
 
-#: src/MainView.vala:151
+#: src/MainView.vala:177
 msgid "Turn off display when inactive for:"
 msgstr "Skru av skjerm når inaktiv i:"
 
-#: src/MainView.vala:157
+#: src/MainView.vala:184
 msgid "Power button:"
 msgstr "Av/på-knapp:"
 
-#: src/MainView.vala:168 src/MainView.vala:190
+#: src/MainView.vala:196 src/MainView.vala:222
 msgid "Suspend when inactive for:"
 msgstr "Hvilemodus hvis inaktiv i:"
 
-#: src/MainView.vala:183
+#: src/MainView.vala:214
 msgid "Plugged In"
 msgstr "Tilkoblet nettspenning"
 
-#: src/MainView.vala:205
+#: src/MainView.vala:240
 msgid "On Battery"
 msgstr "På batteri"
 
-#: src/Plug.vala:32
+#: src/MainView.vala:265
+msgid "Some changes will not take effect until you restart this computer"
+msgstr "Noen endringer trår ikke i kraft før omstart av maskinen"
+
+#: src/Plug.vala:35
 msgid "Power"
 msgstr "Strøm"
 
-#: src/Plug.vala:33
+#: src/Plug.vala:36
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "Sett opp skjermlysstyrke, på-knapper, og dvalgangsoppførsel"
 
-#: src/Plug.vala:68
+#: src/Plug.vala:71
 msgid "Suspend button"
 msgstr "Dvaleknapp"
 
-#: src/Plug.vala:69
+#: src/Plug.vala:72
 msgid "Power button"
 msgstr "På-knapp"
 
-#: src/Plug.vala:70
+#: src/Plug.vala:73
 msgid "Display inactive"
 msgstr "Skjerm inaktiv"
 
-#: src/Plug.vala:71
+#: src/Plug.vala:74
 msgid "Dim display"
 msgstr "Senk lysstyrke på skjerm"
 
-#: src/Plug.vala:72
+#: src/Plug.vala:75
 msgid "Lid close"
 msgstr "Lukk lokket"
 
-#: src/Plug.vala:73
+#: src/Plug.vala:76
 msgid "Display brightness"
 msgstr "Skjermlysstyrke"
 
-#: src/Plug.vala:74
+#: src/Plug.vala:77
 msgid "Automatic brightness adjustment"
 msgstr "Automatisk justering av lysstyrke"
 
-#: src/Plug.vala:75
+#: src/Plug.vala:78
 msgid "Inactive display off"
 msgstr "Avslag av inaktiv skjerm"
 
-#: src/Plug.vala:76
+#: src/Plug.vala:79
 #, fuzzy
 msgid "Docked lid close"
 msgstr "Tilkoblet skjermlukking"
 
-#: src/Plug.vala:77
+#: src/Plug.vala:80
 #, fuzzy
 msgid "Sleep inactivity timeout"
 msgstr "Tidsavbrudd for dvalgangsinaktivitet"
 
-#: src/Plug.vala:78
+#: src/Plug.vala:81
 #, fuzzy
 msgid "Suspend inactive"
 msgstr "Dvalgang inaktiv"
@@ -188,9 +196,6 @@ msgstr "Ikke støttet"
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
 msgstr "Spør om å skru av"
-
-#~ msgid "Some changes will not take effect until you restart this computer"
-#~ msgstr "Noen endringer trår ikke i kraft før omstart av maskinen"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Senk lysstyrke på skjerm når inaktiv i:"

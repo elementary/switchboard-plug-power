@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:00+0000\n"
+"POT-Creation-Date: 2021-08-24 16:00+0000\n"
 "PO-Revision-Date: 2019-12-20 16:09+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -28,31 +28,44 @@ msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "配置显示器亮度、电源按键和睡眠方式"
 
 #: data/power.appdata.xml.in:12
-msgid "Minor updates:"
+msgid "New features:"
 msgstr ""
 
 #: data/power.appdata.xml.in:14
-msgid "Change lid settings without restarting"
+msgid "Add toggle for showing battery percentage in Panel"
 msgstr ""
 
-#: data/power.appdata.xml.in:15
-msgid "Show in search results for \"sleep\" and \"timeout\""
+#: data/power.appdata.xml.in:16 data/power.appdata.xml.in:25
+msgid "Minor updates:"
 msgstr ""
 
-#: data/power.appdata.xml.in:16 data/power.appdata.xml.in:23
-#: data/power.appdata.xml.in:28 data/power.appdata.xml.in:35
+#: data/power.appdata.xml.in:18
+msgid "Fix a potential issue with resuming from sleep"
+msgstr ""
+
+#: data/power.appdata.xml.in:19 data/power.appdata.xml.in:29
+#: data/power.appdata.xml.in:36 data/power.appdata.xml.in:41
+#: data/power.appdata.xml.in:48
 msgid "Updated translations"
 msgstr "翻译更新"
 
-#: data/power.appdata.xml.in:22
+#: data/power.appdata.xml.in:27
+msgid "Change lid settings without restarting"
+msgstr ""
+
+#: data/power.appdata.xml.in:28
+msgid "Show in search results for \"sleep\" and \"timeout\""
+msgstr ""
+
+#: data/power.appdata.xml.in:35
 msgid "Fix potential freeze when changing settings from multiple panes"
 msgstr ""
 
-#: data/power.appdata.xml.in:33
+#: data/power.appdata.xml.in:46
 msgid "Remove broken hibernate option"
 msgstr ""
 
-#: data/power.appdata.xml.in:34
+#: data/power.appdata.xml.in:47
 msgid "Add prompt to shutdown to power button actions"
 msgstr ""
 

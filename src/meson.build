@@ -21,6 +21,7 @@ shared_module(
     meson.project_name(),
     plug_files,
     plug_resources,
+    conf_file,
     interfaces_file,
     dependencies: [
         glib_dep,

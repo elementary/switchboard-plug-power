@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:00+0000\n"
+"POT-Creation-Date: 2021-08-24 16:00+0000\n"
 "PO-Revision-Date: 2019-09-07 20:22+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -27,95 +27,103 @@ msgstr "पॉवर सेटिंग्ज व्यवस्थापित 
 msgid "You do not have permission to change this"
 msgstr "आपल्याला हे बदलण्याची परवानगी नाही"
 
-#: src/MainView.vala:66
+#: src/MainView.vala:69
+msgid "Show battery percentage in Panel:"
+msgstr ""
+
+#: src/MainView.vala:84
 msgid "Display brightness:"
 msgstr "प्रदर्शनाचा ब्राइटनेस:"
 
-#: src/MainView.vala:70
+#: src/MainView.vala:89
 msgid "Automatically adjust brightness:"
 msgstr "ब्राइटनेस स्वयंचलितपणे समायोजित करा:"
 
-#: src/MainView.vala:98
+#: src/MainView.vala:119
 msgid "When lid is closed:"
 msgstr "झाकण बंद असताना:"
 
-#: src/MainView.vala:104
+#: src/MainView.vala:126
 msgid "When lid is closed with external monitor:"
 msgstr "बाह्य मॉनिटरसह झाकण बंद असताना:"
 
-#: src/MainView.vala:130
+#: src/MainView.vala:155
 msgid "Some settings require administrator rights to be changed"
 msgstr "काही सेटिंग्जसाठी प्रशासकीय अधिकार बदलण्याची आवश्यकता आहे"
 
-#: src/MainView.vala:151
+#: src/MainView.vala:177
 msgid "Turn off display when inactive for:"
 msgstr "पर्यंत निष्क्रिय असताना प्रदर्शन बंद करा:"
 
-#: src/MainView.vala:157
+#: src/MainView.vala:184
 msgid "Power button:"
 msgstr "पॉवर बटण:"
 
-#: src/MainView.vala:168 src/MainView.vala:190
+#: src/MainView.vala:196 src/MainView.vala:222
 msgid "Suspend when inactive for:"
 msgstr "पर्यंत निष्क्रिय असेल तेव्हा निलंबित करा:"
 
-#: src/MainView.vala:183
+#: src/MainView.vala:214
 msgid "Plugged In"
 msgstr "प्लग इन"
 
-#: src/MainView.vala:205
+#: src/MainView.vala:240
 msgid "On Battery"
 msgstr "बॅटरी"
 
-#: src/Plug.vala:32
+#: src/MainView.vala:265
+msgid "Some changes will not take effect until you restart this computer"
+msgstr "आपण हे संगणक रीस्टार्ट करेपर्यंत काही बदल प्रभावी होणार नाहीत"
+
+#: src/Plug.vala:35
 msgid "Power"
 msgstr "ऊर्जा"
 
-#: src/Plug.vala:33
+#: src/Plug.vala:36
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "डिस्प्ले ब्राइटनेस, पॉवर बटणे आणि निलंबन वर्तन कॉन्फिगर करा"
 
-#: src/Plug.vala:68
+#: src/Plug.vala:71
 msgid "Suspend button"
 msgstr "निलंबन बटण"
 
-#: src/Plug.vala:69
+#: src/Plug.vala:72
 msgid "Power button"
 msgstr "पॉवर बटण"
 
-#: src/Plug.vala:70
+#: src/Plug.vala:73
 msgid "Display inactive"
 msgstr "निष्क्रिय प्रदर्शन"
 
-#: src/Plug.vala:71
+#: src/Plug.vala:74
 msgid "Dim display"
 msgstr "मंद प्रदर्शन"
 
-#: src/Plug.vala:72
+#: src/Plug.vala:75
 msgid "Lid close"
 msgstr "बंद झाकण"
 
-#: src/Plug.vala:73
+#: src/Plug.vala:76
 msgid "Display brightness"
 msgstr "प्रदर्शन ब्राईटनेस"
 
-#: src/Plug.vala:74
+#: src/Plug.vala:77
 msgid "Automatic brightness adjustment"
 msgstr "स्वयंचलित ब्राईटनेस समायोजन"
 
-#: src/Plug.vala:75
+#: src/Plug.vala:78
 msgid "Inactive display off"
 msgstr "निष्क्रिय प्रदर्शन बंद"
 
-#: src/Plug.vala:76
+#: src/Plug.vala:79
 msgid "Docked lid close"
 msgstr "डॉक केलेले झाकण बंद"
 
-#: src/Plug.vala:77
+#: src/Plug.vala:80
 msgid "Sleep inactivity timeout"
 msgstr ""
 
-#: src/Plug.vala:78
+#: src/Plug.vala:81
 msgid "Suspend inactive"
 msgstr "निष्क्रिय निलंबित"
 
@@ -180,9 +188,6 @@ msgstr "समर्थित नाही"
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
 msgstr "शटडाउनला सूचित करा"
-
-#~ msgid "Some changes will not take effect until you restart this computer"
-#~ msgstr "आपण हे संगणक रीस्टार्ट करेपर्यंत काही बदल प्रभावी होणार नाहीत"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "निष्क्रिय असताना प्रदर्शन निस्तेज करा:"
