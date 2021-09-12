@@ -8,5 +8,7 @@
     <file alias="32x32/apps/power-mode-powersaving.svg" compressed="true" preprocess="xml-stripblanks">icons/power-mode-powersaving.svg</file>
     <file alias="32x32@2/apps/power-mode-performance.svg" compressed="true" preprocess="xml-stripblanks">icons/power-mode-performance.svg</file>
     <file alias="32x32/apps/power-mode-performance.svg" compressed="true" preprocess="xml-stripblanks">icons/power-mode-performance.svg</file>
+    <file alias="32x32@2/apps/power-mode-balanced.svg" compressed="true" preprocess="xml-stripblanks">icons/power-mode-balanced.svg</file>
+    <file alias="32x32/apps/power-mode-balanced.svg" compressed="true" preprocess="xml-stripblanks">icons/power-mode-balanced.svg</file>
   </gresource>
 </gresources>

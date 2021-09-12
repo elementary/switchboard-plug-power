@@ -22,31 +22,60 @@
 namespace Power {
     public class PowerModeButton : Granite.Widgets.ModeButton {
         Gtk.Image power_saving_icon;
-        Gtk.Image automatic_icon;
+        Gtk.Image balanced_icon;
         Gtk.Image high_performance_icon;
+
+        public bool profiles_available = true;
+
         public PowerModeButton () {
-            power_saving_icon = new Gtk.Image.from_resource ("/io/elementary/switchboard/plug/power/32x32/apps/power-mode-powersaving.svg");
-            automatic_icon = new Gtk.Image.from_resource ("/io/elementary/switchboard/plug/power/32x32/apps/power-mode-automatic.svg");
-            high_performance_icon = new Gtk.Image.from_resource ("/io/elementary/switchboard/plug/power/32x32/apps/power-mode-performance.svg");
-            power_saving_icon.tooltip_text = _("Power Saver");
-            automatic_icon.tooltip_text = _("Automatic");
-            high_performance_icon.tooltip_text = _("High Performance");
-            append (power_saving_icon);
-            append (automatic_icon);
-            append (high_performance_icon);
+            try {
+                PowerProfile pprofile = Bus.get_proxy_sync (BusType.SYSTEM, POWER_PROFILES_DAEMON_NAME, POWER_PROFILES_DAEMON_PATH, DBusProxyFlags.NONE);
+                List<string> available_profiles = get_available_power_profiles (pprofile);
+                if (available_profiles.length () > 1) {
+                    for (int i = 0; i < available_profiles.length (); i++) {
+                        switch (available_profiles.nth_data (i)) {
+                            case "power-saver":
+                            power_saving_icon = new Gtk.Image.from_resource ("/io/elementary/switchboard/plug/power/32x32/apps/power-mode-powersaving.svg");
+                            power_saving_icon.tooltip_text = _("Power Saver");
+                            append (power_saving_icon);
+                            break;
+                            case "balanced":
+                            balanced_icon = new Gtk.Image.from_resource ("/io/elementary/switchboard/plug/power/32x32/apps/power-mode-balanced.svg");
+                            balanced_icon.tooltip_text = _("Balanced");
+                            append (balanced_icon);
+                            break;
+                            case "performance":
+                            high_performance_icon = new Gtk.Image.from_resource ("/io/elementary/switchboard/plug/power/32x32/apps/power-mode-performance.svg");
+                            high_performance_icon.tooltip_text = _("High Performance");
+                            append (high_performance_icon);
+                            break;
+                        }
+                    }
+                    for (int i = 0; i < available_profiles.length (); i++) {
+                        if (pprofile.active_profile == available_profiles.nth_data (i)) {
+                            this.selected = i;
+                            break;
+                        }
+                    }
 
-            var default_schema = SettingsSchemaSource.get_default ();
-            GLib.Settings power_daemon_settings = null;
-            if (default_schema.lookup ("io.elementary.power-manager-daemon.powermode", false) != null) {
-                power_daemon_settings = new GLib.Settings ("io.elementary.power-manager-daemon.powermode");
-                this.selected = power_daemon_settings.get_int ("power-mode");
-            }
-
-            this.mode_changed.connect (() => {
-                if (power_daemon_settings != null) {
-                    power_daemon_settings.set_int ("power-mode", this.selected);
+                    this.mode_changed.connect (() => {
+                        pprofile.active_profile = available_profiles.nth_data (this.selected);
+                    });
+                } else {
+                    profiles_available = false;
                 }
-            });
+            } catch (Error e) {
+                profiles_available = false;
+                append (new Gtk.Label (_("Not Available!")));
+            }
+        }
+
+        private List<string> get_available_power_profiles (PowerProfile pprofile) {
+            List<string> profiles = new List<string> ();
+            for (int j = 0; j < pprofile.profiles.length; j++) {
+                profiles.append (pprofile.profiles[j].get ("Profile").get_string ());
+            }
+            return profiles;
         }
     }
 }
