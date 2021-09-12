@@ -36,18 +36,27 @@ namespace Power {
                         switch (available_profiles.nth_data (i)) {
                             case "power-saver":
                             power_saving_icon = new Gtk.Image.from_resource ("/io/elementary/switchboard/plug/power/32x32/apps/power-mode-powersaving.svg");
-                            power_saving_icon.tooltip_text = _("Power Saver");
-                            append (power_saving_icon);
+                            var power_saving_label = new Gtk.Label(_("Power Saver"));
+                            var power_saving_button_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+                            power_saving_button_box.pack_start (power_saving_icon);
+                            power_saving_button_box.pack_end (power_saving_label);
+                            append (power_saving_button_box);
                             break;
                             case "balanced":
                             balanced_icon = new Gtk.Image.from_resource ("/io/elementary/switchboard/plug/power/32x32/apps/power-mode-balanced.svg");
-                            balanced_icon.tooltip_text = _("Balanced");
-                            append (balanced_icon);
+                            var balanced_label = new Gtk.Label(_("Balanced"));
+                            var balanced_button_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+                            balanced_button_box.pack_start (balanced_icon);
+                            balanced_button_box.pack_end (balanced_label);
+                            append (balanced_button_box);
                             break;
                             case "performance":
                             high_performance_icon = new Gtk.Image.from_resource ("/io/elementary/switchboard/plug/power/32x32/apps/power-mode-performance.svg");
-                            high_performance_icon.tooltip_text = _("High Performance");
-                            append (high_performance_icon);
+                            var high_performance_label = new Gtk.Label(_("High Performance"));
+                            var high_performance_button_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+                            high_performance_button_box.pack_start (high_performance_icon);
+                            high_performance_button_box.pack_end (high_performance_label);
+                            append (high_performance_button_box);
                             break;
                         }
                     }
