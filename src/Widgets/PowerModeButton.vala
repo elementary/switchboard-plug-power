@@ -52,7 +52,7 @@ namespace Power {
                             break;
                             case "performance":
                             high_performance_icon = new Gtk.Image.from_resource ("/io/elementary/switchboard/plug/power/32x32/apps/power-mode-performance.svg");
-                            var high_performance_label = new Gtk.Label(_("High Performance"));
+                            var high_performance_label = new Gtk.Label (_("High Performance"));
                             var high_performance_button_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
                             high_performance_button_box.pack_start (high_performance_icon);
                             high_performance_button_box.pack_end (high_performance_label);
