@@ -44,7 +44,7 @@ namespace Power {
                             break;
                             case "balanced":
                             balanced_icon = new Gtk.Image.from_resource ("/io/elementary/switchboard/plug/power/32x32/apps/power-mode-balanced.svg");
-                            var balanced_label = new Gtk.Label(_("Balanced"));
+                            var balanced_label = new Gtk.Label (_("Balanced"));
                             var balanced_button_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
                             balanced_button_box.pack_start (balanced_icon);
                             balanced_button_box.pack_end (balanced_label);
