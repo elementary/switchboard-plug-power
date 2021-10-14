@@ -36,7 +36,7 @@ namespace Power {
                         switch (available_profiles.nth_data (i)) {
                             case "power-saver":
                             power_saving_icon = new Gtk.Image.from_resource ("/io/elementary/switchboard/plug/power/32x32/apps/power-mode-powersaving.svg");
-                            var power_saving_label = new Gtk.Label(_("Power Saver"));
+                            var power_saving_label = new Gtk.Label (_("Power Saver"));
                             var power_saving_button_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
                             power_saving_button_box.pack_start (power_saving_icon);
                             power_saving_button_box.pack_end (power_saving_label);
