@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 16:00+0000\n"
-"PO-Revision-Date: 2021-11-01 10:01+0000\n"
+"PO-Revision-Date: 2021-11-02 05:56+0000\n"
 "Last-Translator: Yuchen Deng <loaden@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/power-plug-extra/zh_Hans/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: data/power.appdata.xml.in:5
 msgid "Power Settings"
-msgstr ""
+msgstr "电源设置"
 
 #: data/power.appdata.xml.in:6
 msgid "Configure display brightness, power buttons, and suspend behavior"
@@ -33,7 +33,7 @@ msgstr "新特性："
 
 #: data/power.appdata.xml.in:14
 msgid "Add toggle for showing battery percentage in Panel"
-msgstr ""
+msgstr "可以在面板中切换显示电池百分比"
 
 #: data/power.appdata.xml.in:16 data/power.appdata.xml.in:25
 msgid "Minor updates:"
@@ -41,7 +41,7 @@ msgstr "次要更新："
 
 #: data/power.appdata.xml.in:18
 msgid "Fix a potential issue with resuming from sleep"
-msgstr ""
+msgstr "修复从睡眠中恢复的潜在问题"
 
 #: data/power.appdata.xml.in:19 data/power.appdata.xml.in:29
 #: data/power.appdata.xml.in:36 data/power.appdata.xml.in:41
@@ -51,11 +51,11 @@ msgstr "翻译更新"
 
 #: data/power.appdata.xml.in:27
 msgid "Change lid settings without restarting"
-msgstr ""
+msgstr "无需重新启动即可修改合上笔记本的设置"
 
 #: data/power.appdata.xml.in:28
 msgid "Show in search results for \"sleep\" and \"timeout\""
-msgstr ""
+msgstr "在搜索结果中显示“sleep”和“timeout”"
 
 #: data/power.appdata.xml.in:35
 msgid "Fix potential freeze when changing settings from multiple panes"
@@ -63,11 +63,11 @@ msgstr "修复从多个窗格更改设置时潜在的冻结"
 
 #: data/power.appdata.xml.in:46
 msgid "Remove broken hibernate option"
-msgstr ""
+msgstr "删除损坏的休眠选项"
 
 #: data/power.appdata.xml.in:47
 msgid "Add prompt to shutdown to power button actions"
-msgstr ""
+msgstr "将关机提示添加到电源按钮操作"
 
 #~ msgid "Power"
 #~ msgstr "电源"
