@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 16:00+0000\n"
-"PO-Revision-Date: 2021-11-03 11:54+0000\n"
+"PO-Revision-Date: 2021-11-05 18:59+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "power-plug-extra/pl/>\n"
@@ -27,6 +27,7 @@ msgstr ""
 #: data/power.appdata.xml.in:6
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr ""
+"Konfiguruj jasność ekranu, zachowanie przycisków zasilania i trybu usypiania"
 
 #: data/power.appdata.xml.in:12
 msgid "New features:"
