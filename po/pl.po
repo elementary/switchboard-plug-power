@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 16:00+0000\n"
 "PO-Revision-Date: 2021-11-05 18:59+0000\n"
-"Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
+"Last-Translator: DarkKnightComes <darkknightcomes@gmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/pl/>\n"
 "Language: pl\n"
@@ -129,7 +129,7 @@ msgstr "Zamknięcie pokrywy w doku"
 
 #: src/Plug.vala:80
 msgid "Sleep inactivity timeout"
-msgstr ""
+msgstr "Limit czasu nieaktywności uśpienia"
 
 #: src/Plug.vala:81
 msgid "Suspend inactive"
@@ -195,7 +195,7 @@ msgstr "Nieobsługiwane"
 
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
-msgstr ""
+msgstr "Zapytaj o wyłączenie"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Wygaś ekran, gdy bezczynny:"
