@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 16:00+0000\n"
-"PO-Revision-Date: 2018-03-20 00:12+0000\n"
-"Last-Translator: Piotr Strebski <strebski@gmail.com>\n"
-"Language-Team: Polish <https://weblate.elementary.io/projects/switchboard/"
+"PO-Revision-Date: 2021-11-05 18:59+0000\n"
+"Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
+"Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2016-12-13 05:25+0000\n"
 
 #: data/io.elementary.switchboard.power.policy.in:10
@@ -35,7 +35,7 @@ msgstr "Nie masz uprawnień, aby to zmienić"
 
 #: src/MainView.vala:69
 msgid "Show battery percentage in Panel:"
-msgstr ""
+msgstr "Pokaż procent baterii w panelu:"
 
 #: src/MainView.vala:84
 msgid "Display brightness:"
