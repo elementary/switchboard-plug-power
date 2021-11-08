@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 16:00+0000\n"
-"PO-Revision-Date: 2021-11-06 12:00+0000\n"
+"PO-Revision-Date: 2021-11-08 09:18+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "power-plug-extra/pl/>\n"
@@ -61,7 +61,7 @@ msgstr ""
 
 #: data/power.appdata.xml.in:35
 msgid "Fix potential freeze when changing settings from multiple panes"
-msgstr ""
+msgstr "Naprawiono potencjalne zawieszenie przy zmianie ustawień z wielu paneli"
 
 #: data/power.appdata.xml.in:46
 msgid "Remove broken hibernate option"
