@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 16:00+0000\n"
-"PO-Revision-Date: 2021-11-08 09:18+0000\n"
+"PO-Revision-Date: 2021-11-14 18:24+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "power-plug-extra/pl/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: data/power.appdata.xml.in:5
 msgid "Power Settings"
-msgstr ""
+msgstr "Ustawienia zasialania"
 
 #: data/power.appdata.xml.in:6
 msgid "Configure display brightness, power buttons, and suspend behavior"
@@ -35,7 +35,7 @@ msgstr "Nowe funkcje:"
 
 #: data/power.appdata.xml.in:14
 msgid "Add toggle for showing battery percentage in Panel"
-msgstr ""
+msgstr "Dodano przełącznik pokazywania procent baterii w panelu"
 
 #: data/power.appdata.xml.in:16 data/power.appdata.xml.in:25
 msgid "Minor updates:"
@@ -43,7 +43,7 @@ msgstr "Mniejsze aktualizacje:"
 
 #: data/power.appdata.xml.in:18
 msgid "Fix a potential issue with resuming from sleep"
-msgstr ""
+msgstr "Naprawiono potencjalny problem przy wybudzaniu urządzenia"
 
 #: data/power.appdata.xml.in:19 data/power.appdata.xml.in:29
 #: data/power.appdata.xml.in:36 data/power.appdata.xml.in:41
@@ -53,11 +53,13 @@ msgstr "Zaktualizowane tłumaczenia"
 
 #: data/power.appdata.xml.in:27
 msgid "Change lid settings without restarting"
-msgstr ""
+msgstr "Możliwość zmiany ustawień klapki bez ponownego uruchamiania"
 
 #: data/power.appdata.xml.in:28
 msgid "Show in search results for \"sleep\" and \"timeout\""
 msgstr ""
+"Pokazano w wynikach wyszukiwania rezultaty dla „uśpienia” oraz „czas "
+"nieaktywności”"
 
 #: data/power.appdata.xml.in:35
 msgid "Fix potential freeze when changing settings from multiple panes"
@@ -65,8 +67,8 @@ msgstr "Naprawiono potencjalne zawieszenie przy zmianie ustawień z wielu paneli
 
 #: data/power.appdata.xml.in:46
 msgid "Remove broken hibernate option"
-msgstr ""
+msgstr "Usunięto zepsutą opcję hibernacji"
 
 #: data/power.appdata.xml.in:47
 msgid "Add prompt to shutdown to power button actions"
-msgstr ""
+msgstr "Dodano zapytanie o wyłączenie przyciskowi zasilania"
