@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 16:00+0000\n"
-"PO-Revision-Date: 2021-08-24 21:51+0000\n"
+"PO-Revision-Date: 2021-12-19 14:33+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/hu/>\n"
@@ -195,7 +195,7 @@ msgstr "Nem támogatott"
 
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
-msgstr "Kikapcsolási panel"
+msgstr "Kikapcsolási menü"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Kijelző elsötétítése ennyi inaktivitás után:"
