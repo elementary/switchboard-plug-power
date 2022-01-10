@@ -1,0 +1,14 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/io/elementary/switchboard/plug/power">
+    <file alias="32x32@2/apps/power-mode-automatic.svg" compressed="true" preprocess="xml-stripblanks">icons/power-mode-automatic.svg</file>
+    <file alias="32x32/apps/power-mode-automatic.svg" compressed="true" preprocess="xml-stripblanks">icons/power-mode-automatic.svg</file>
+    <file alias="32x32@2/apps/power-mode-powersaving.svg" compressed="true" preprocess="xml-stripblanks">icons/power-mode-powersaving.svg</file>
+    <file alias="32x32/apps/power-mode-powersaving.svg" compressed="true" preprocess="xml-stripblanks">icons/power-mode-powersaving.svg</file>
+    <file alias="32x32@2/apps/power-mode-performance.svg" compressed="true" preprocess="xml-stripblanks">icons/power-mode-performance.svg</file>
+    <file alias="32x32/apps/power-mode-performance.svg" compressed="true" preprocess="xml-stripblanks">icons/power-mode-performance.svg</file>
+    <file alias="32x32@2/apps/power-mode-balanced.svg" compressed="true" preprocess="xml-stripblanks">icons/power-mode-balanced.svg</file>
+    <file alias="32x32/apps/power-mode-balanced.svg" compressed="true" preprocess="xml-stripblanks">icons/power-mode-balanced.svg</file>
+  </gresource>
+</gresources>

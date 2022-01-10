@@ -11,6 +11,7 @@ plug_files = files(
     'Widgets/TimeoutComboBox.vala',
     'Widgets/LidCloseActionComboBox.vala',
     'Widgets/ActionComboBox.vala',
+    'Widgets/PowerModeButton.vala',
 )
 
 switchboard_dep = dependency('switchboard-2.0')
@@ -19,6 +20,7 @@ switchboard_plugsdir = switchboard_dep.get_pkgconfig_variable('plugsdir', define
 shared_module(
     meson.project_name(),
     plug_files,
+    plug_resources,
     conf_file,
     interfaces_file,
     dependencies: [
