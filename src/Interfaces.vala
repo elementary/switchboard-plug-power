@@ -67,7 +67,7 @@ namespace Power {
     }
 
     [DBus (name = "net.hadess.PowerProfiles")]
-    interface PowerProfile : Object {
+    public interface PowerProfile : Object {
         public signal void changed ();
         public abstract HashTable<string, Variant>[] profiles { owned get; }
         public abstract string active_profile { owned get; set; }
