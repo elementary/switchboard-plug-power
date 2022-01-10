@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 16:00+0000\n"
-"PO-Revision-Date: 2021-07-15 01:01+0000\n"
+"PO-Revision-Date: 2021-11-23 23:34+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "power-plug-extra/pt/>\n"
@@ -29,19 +29,19 @@ msgstr "Configurar o brilho do ecrã, botões de energia e modo de suspensão"
 
 #: data/power.appdata.xml.in:12
 msgid "New features:"
-msgstr ""
+msgstr "Novas funcionalidades:"
 
 #: data/power.appdata.xml.in:14
 msgid "Add toggle for showing battery percentage in Panel"
-msgstr ""
+msgstr "Adiciona comutador para mostrar a percentagem de bateria no Painel"
 
 #: data/power.appdata.xml.in:16 data/power.appdata.xml.in:25
 msgid "Minor updates:"
-msgstr "Pequenas atualizações:"
+msgstr "Pequena atualizações:"
 
 #: data/power.appdata.xml.in:18
 msgid "Fix a potential issue with resuming from sleep"
-msgstr ""
+msgstr "Correção de um problema potencial com o retomar da suspensão"
 
 #: data/power.appdata.xml.in:19 data/power.appdata.xml.in:29
 #: data/power.appdata.xml.in:36 data/power.appdata.xml.in:41

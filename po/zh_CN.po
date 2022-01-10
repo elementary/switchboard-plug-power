@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 16:00+0000\n"
-"PO-Revision-Date: 2021-01-25 07:22+0000\n"
+"PO-Revision-Date: 2021-12-07 05:49+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-power/zh_Hans/>\n"
@@ -34,7 +34,7 @@ msgstr "您没有权限更改此项内容"
 
 #: src/MainView.vala:69
 msgid "Show battery percentage in Panel:"
-msgstr ""
+msgstr "显示电池百分比："
 
 #: src/MainView.vala:84
 msgid "Display brightness:"
