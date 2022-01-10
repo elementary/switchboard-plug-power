@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-10 18:54+0000\n"
-"PO-Revision-Date: 2021-12-19 14:33+0000\n"
+"PO-Revision-Date: 2022-01-11 00:14+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/hu/>\n"
@@ -83,7 +83,7 @@ msgstr "Néhány módosítás csak a számítógép újraindítása után lép �
 
 #: src/MainView.vala:285
 msgid "Power management mode:"
-msgstr ""
+msgstr "Energiakezelési mód:"
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -202,22 +202,20 @@ msgid "Prompt to shutdown"
 msgstr "Kikapcsolási menü"
 
 #: src/Widgets/PowerModeButton.vala:39
-#, fuzzy
-#| msgid "Power"
 msgid "Power Saver"
-msgstr "Energiagazdálkodás"
+msgstr "Energiamegtakarítás"
 
 #: src/Widgets/PowerModeButton.vala:47
 msgid "Balanced"
-msgstr ""
+msgstr "Kiegyensúlyozott"
 
 #: src/Widgets/PowerModeButton.vala:55
 msgid "High Performance"
-msgstr ""
+msgstr "Magas teljesítmény"
 
 #: src/Widgets/PowerModeButton.vala:78
 msgid "Not Available!"
-msgstr ""
+msgstr "Nem érhető el!"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Kijelző elsötétítése ennyi inaktivitás után:"
