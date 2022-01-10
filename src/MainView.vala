@@ -39,7 +39,7 @@ public class Power.MainView : Gtk.Grid {
         LOGOUT
     }
 
-    public static Polkit.Permission? permission = null;
+    private static Polkit.Permission? permission = null;
 
     construct {
         orientation = Gtk.Orientation.VERTICAL;
@@ -302,7 +302,7 @@ public class Power.MainView : Gtk.Grid {
         stack_switcher.visible = stack.get_children ().length () > 1;
     }
 
-    public static Polkit.Permission? get_permission () {
+    private static Polkit.Permission? get_permission () {
         if (permission != null) {
             return permission;
         }
