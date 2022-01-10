@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 16:00+0000\n"
+"POT-Creation-Date: 2022-01-10 18:54+0000\n"
 "PO-Revision-Date: 2014-12-21 18:09+0000\n"
 "Last-Translator: samson <Unknown>\n"
 "Language-Team: Amharic <am@li.org>\n"
@@ -76,6 +76,10 @@ msgstr "በ ባትሪ"
 
 #: src/MainView.vala:265
 msgid "Some changes will not take effect until you restart this computer"
+msgstr ""
+
+#: src/MainView.vala:285
+msgid "Power management mode:"
 msgstr ""
 
 #: src/Plug.vala:35
@@ -192,6 +196,24 @@ msgstr ""
 
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
+msgstr ""
+
+#: src/Widgets/PowerModeButton.vala:39
+#, fuzzy
+#| msgid "Power"
+msgid "Power Saver"
+msgstr "ሐይል"
+
+#: src/Widgets/PowerModeButton.vala:47
+msgid "Balanced"
+msgstr ""
+
+#: src/Widgets/PowerModeButton.vala:55
+msgid "High Performance"
+msgstr ""
+
+#: src/Widgets/PowerModeButton.vala:78
+msgid "Not Available!"
 msgstr ""
 
 #~ msgid "Hibernate"
