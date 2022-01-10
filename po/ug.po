@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 16:00+0000\n"
+"POT-Creation-Date: 2022-01-10 18:54+0000\n"
 "PO-Revision-Date: 2016-12-10 05:00+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
@@ -79,6 +79,10 @@ msgstr "باتارىيەنى ئىشلىتىۋاتىدۇ"
 #: src/MainView.vala:265
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "بەزى تەڭشەكلەر كومپىيۇتىرنى قايتا قوزغاتقاندىن كىيىن ئىشلەيدۇ."
+
+#: src/MainView.vala:285
+msgid "Power management mode:"
+msgstr ""
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -195,6 +199,24 @@ msgstr "قوللىمايدۇ"
 
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
+msgstr ""
+
+#: src/Widgets/PowerModeButton.vala:39
+#, fuzzy
+#| msgid "Power"
+msgid "Power Saver"
+msgstr "توك مەنبەسى"
+
+#: src/Widgets/PowerModeButton.vala:47
+msgid "Balanced"
+msgstr ""
+
+#: src/Widgets/PowerModeButton.vala:55
+msgid "High Performance"
+msgstr ""
+
+#: src/Widgets/PowerModeButton.vala:78
+msgid "Not Available!"
 msgstr ""
 
 #~ msgid "Dim display when inactive:"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 16:00+0000\n"
+"POT-Creation-Date: 2022-01-10 18:54+0000\n"
 "PO-Revision-Date: 2021-08-27 08:04+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
@@ -29,46 +29,51 @@ msgstr ""
 "Configure el brillo de pantalla, los botones de encendido y el "
 "comportamiento al suspender"
 
-#: data/power.appdata.xml.in:12
+#: data/power.appdata.xml.in:12 data/power.appdata.xml.in:24
 msgid "New features:"
 msgstr "Funcionalidades nuevas:"
 
 #: data/power.appdata.xml.in:14
-msgid "Add toggle for showing battery percentage in Panel"
+msgid "Add power profile management"
 msgstr ""
 
-#: data/power.appdata.xml.in:16 data/power.appdata.xml.in:25
+#: data/power.appdata.xml.in:16 data/power.appdata.xml.in:28
+#: data/power.appdata.xml.in:37
 msgid "Minor updates:"
 msgstr "Actualizaciones menores:"
 
-#: data/power.appdata.xml.in:18
-msgid "Fix a potential issue with resuming from sleep"
-msgstr ""
-
-#: data/power.appdata.xml.in:19 data/power.appdata.xml.in:29
-#: data/power.appdata.xml.in:36 data/power.appdata.xml.in:41
-#: data/power.appdata.xml.in:48
+#: data/power.appdata.xml.in:18 data/power.appdata.xml.in:31
+#: data/power.appdata.xml.in:41 data/power.appdata.xml.in:48
+#: data/power.appdata.xml.in:53 data/power.appdata.xml.in:60
 msgid "Updated translations"
 msgstr "Traducciones actualizadas"
 
-#: data/power.appdata.xml.in:27
+#: data/power.appdata.xml.in:26
+msgid "Add toggle for showing battery percentage in Panel"
+msgstr ""
+
+#: data/power.appdata.xml.in:30
+msgid "Fix a potential issue with resuming from sleep"
+msgstr ""
+
+#: data/power.appdata.xml.in:39
 msgid "Change lid settings without restarting"
 msgstr ""
 
-#: data/power.appdata.xml.in:28
+#: data/power.appdata.xml.in:40
 msgid "Show in search results for \"sleep\" and \"timeout\""
 msgstr ""
 
-#: data/power.appdata.xml.in:35
+#: data/power.appdata.xml.in:47
 msgid "Fix potential freeze when changing settings from multiple panes"
 msgstr ""
 "Se corrigió un bloqueo potencial al modificar opciones de diversos paneles"
 
-#: data/power.appdata.xml.in:46
+#: data/power.appdata.xml.in:58
 msgid "Remove broken hibernate option"
 msgstr "Se eliminó la opción para hibernar, que no funcionaba"
 
-#: data/power.appdata.xml.in:47
+#: data/power.appdata.xml.in:59
 msgid "Add prompt to shutdown to power button actions"
 msgstr ""
 "Se añadió una solicitud para apagar en las acciones del botón de encendido"

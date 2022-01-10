@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 16:00+0000\n"
+"POT-Creation-Date: 2022-01-10 18:54+0000\n"
 "PO-Revision-Date: 2018-05-28 08:56+0000\n"
 "Last-Translator: Romanic Ion Nicușor <contact.romanic@gmail.com>\n"
 "Language-Team: Moldovan <https://weblate.elementary.io/projects/switchboard/"
@@ -73,6 +73,10 @@ msgstr "La baterie"
 msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
 "Unele modificări nu vor avea efect până când nu reporniți acest computer"
+
+#: src/MainView.vala:285
+msgid "Power management mode:"
+msgstr ""
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -188,6 +192,24 @@ msgstr "Nu sunt acceptate"
 
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
+msgstr ""
+
+#: src/Widgets/PowerModeButton.vala:39
+#, fuzzy
+#| msgid "Power"
+msgid "Power Saver"
+msgstr "Aprinde"
+
+#: src/Widgets/PowerModeButton.vala:47
+msgid "Balanced"
+msgstr ""
+
+#: src/Widgets/PowerModeButton.vala:55
+msgid "High Performance"
+msgstr ""
+
+#: src/Widgets/PowerModeButton.vala:78
+msgid "Not Available!"
 msgstr ""
 
 #~ msgid "Dim display when inactive:"

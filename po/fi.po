@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 16:00+0000\n"
+"POT-Creation-Date: 2022-01-10 18:54+0000\n"
 "PO-Revision-Date: 2021-08-23 11:33+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
@@ -81,6 +81,10 @@ msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
 "Jotkin asetukset tulevat voimaan vasta tietokoneen uudelleenkäynnistyksen "
 "myötä"
+
+#: src/MainView.vala:285
+msgid "Power management mode:"
+msgstr ""
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -195,6 +199,24 @@ msgstr "Ei tuettu"
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
 msgstr "Vahvistus sammutukselle"
+
+#: src/Widgets/PowerModeButton.vala:39
+#, fuzzy
+#| msgid "Power"
+msgid "Power Saver"
+msgstr "Virranhallinta"
+
+#: src/Widgets/PowerModeButton.vala:47
+msgid "Balanced"
+msgstr ""
+
+#: src/Widgets/PowerModeButton.vala:55
+msgid "High Performance"
+msgstr ""
+
+#: src/Widgets/PowerModeButton.vala:78
+msgid "Not Available!"
+msgstr ""
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Himmennä näyttö kun käyttämättä:"

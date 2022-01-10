@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 16:00+0000\n"
+"POT-Creation-Date: 2022-01-10 18:54+0000\n"
 "PO-Revision-Date: 2019-08-27 22:23+0000\n"
 "Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
@@ -82,6 +82,10 @@ msgstr "Na bateria"
 msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
 "Algumas alterações não serão aplicadas até que você reinicie este computador"
+
+#: src/MainView.vala:285
+msgid "Power management mode:"
+msgstr ""
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -198,6 +202,24 @@ msgstr "Não suportado"
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
 msgstr "Avisar para desligar"
+
+#: src/Widgets/PowerModeButton.vala:39
+#, fuzzy
+#| msgid "Power"
+msgid "Power Saver"
+msgstr "Energia"
+
+#: src/Widgets/PowerModeButton.vala:47
+msgid "Balanced"
+msgstr ""
+
+#: src/Widgets/PowerModeButton.vala:55
+msgid "High Performance"
+msgstr ""
+
+#: src/Widgets/PowerModeButton.vala:78
+msgid "Not Available!"
+msgstr ""
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Escurecer o monitor quando inativo:"

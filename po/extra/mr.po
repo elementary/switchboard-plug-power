@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 16:00+0000\n"
+"POT-Creation-Date: 2022-01-10 18:54+0000\n"
 "PO-Revision-Date: 2020-10-29 18:15+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -27,45 +27,50 @@ msgstr "उर्जा सेटिंग्ज"
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "डिस्प्ले ब्राइटनेस, पॉवर बटणे आणि निलंबन वर्तन कॉन्फिगर करा"
 
-#: data/power.appdata.xml.in:12
+#: data/power.appdata.xml.in:12 data/power.appdata.xml.in:24
 msgid "New features:"
 msgstr ""
 
 #: data/power.appdata.xml.in:14
-msgid "Add toggle for showing battery percentage in Panel"
+msgid "Add power profile management"
 msgstr ""
 
-#: data/power.appdata.xml.in:16 data/power.appdata.xml.in:25
+#: data/power.appdata.xml.in:16 data/power.appdata.xml.in:28
+#: data/power.appdata.xml.in:37
 msgid "Minor updates:"
 msgstr ""
 
-#: data/power.appdata.xml.in:18
-msgid "Fix a potential issue with resuming from sleep"
-msgstr ""
-
-#: data/power.appdata.xml.in:19 data/power.appdata.xml.in:29
-#: data/power.appdata.xml.in:36 data/power.appdata.xml.in:41
-#: data/power.appdata.xml.in:48
+#: data/power.appdata.xml.in:18 data/power.appdata.xml.in:31
+#: data/power.appdata.xml.in:41 data/power.appdata.xml.in:48
+#: data/power.appdata.xml.in:53 data/power.appdata.xml.in:60
 msgid "Updated translations"
 msgstr "अद्ययावत भाषांतर"
 
-#: data/power.appdata.xml.in:27
+#: data/power.appdata.xml.in:26
+msgid "Add toggle for showing battery percentage in Panel"
+msgstr ""
+
+#: data/power.appdata.xml.in:30
+msgid "Fix a potential issue with resuming from sleep"
+msgstr ""
+
+#: data/power.appdata.xml.in:39
 msgid "Change lid settings without restarting"
 msgstr ""
 
-#: data/power.appdata.xml.in:28
+#: data/power.appdata.xml.in:40
 msgid "Show in search results for \"sleep\" and \"timeout\""
 msgstr ""
 
-#: data/power.appdata.xml.in:35
+#: data/power.appdata.xml.in:47
 msgid "Fix potential freeze when changing settings from multiple panes"
 msgstr "एकाधिक पॅनमधून सेटिंग्ज बदलताना संभाव्य फ्रीझशी संबंधित समस्यांचे निराकरण करा"
 
-#: data/power.appdata.xml.in:46
+#: data/power.appdata.xml.in:58
 msgid "Remove broken hibernate option"
 msgstr "बिघडलेला हायबरनेट पर्याय हटवा"
 
-#: data/power.appdata.xml.in:47
+#: data/power.appdata.xml.in:59
 msgid "Add prompt to shutdown to power button actions"
 msgstr "पॉवर बटण क्रियांमध्ये शटडाउनवर प्रॉम्प्ट जोडा"
 
