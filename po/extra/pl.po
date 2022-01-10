@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 16:00+0000\n"
+"POT-Creation-Date: 2022-01-10 18:54+0000\n"
 "PO-Revision-Date: 2021-11-14 18:24+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
-"Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
-"power-plug-extra/pl/>\n"
+"Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/power-"
+"plug-extra/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,46 +29,52 @@ msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr ""
 "Konfiguruj jasność ekranu, zachowanie przycisków zasilania i trybu usypiania"
 
-#: data/power.appdata.xml.in:12
+#: data/power.appdata.xml.in:12 data/power.appdata.xml.in:24
 msgid "New features:"
 msgstr "Nowe funkcje:"
 
 #: data/power.appdata.xml.in:14
-msgid "Add toggle for showing battery percentage in Panel"
-msgstr "Dodano przełącznik pokazywania procent baterii w panelu"
+msgid "Add power profile management"
+msgstr ""
 
-#: data/power.appdata.xml.in:16 data/power.appdata.xml.in:25
+#: data/power.appdata.xml.in:16 data/power.appdata.xml.in:28
+#: data/power.appdata.xml.in:37
 msgid "Minor updates:"
 msgstr "Mniejsze aktualizacje:"
 
-#: data/power.appdata.xml.in:18
-msgid "Fix a potential issue with resuming from sleep"
-msgstr "Naprawiono potencjalny problem przy wybudzaniu urządzenia"
-
-#: data/power.appdata.xml.in:19 data/power.appdata.xml.in:29
-#: data/power.appdata.xml.in:36 data/power.appdata.xml.in:41
-#: data/power.appdata.xml.in:48
+#: data/power.appdata.xml.in:18 data/power.appdata.xml.in:31
+#: data/power.appdata.xml.in:41 data/power.appdata.xml.in:48
+#: data/power.appdata.xml.in:53 data/power.appdata.xml.in:60
 msgid "Updated translations"
 msgstr "Zaktualizowane tłumaczenia"
 
-#: data/power.appdata.xml.in:27
+#: data/power.appdata.xml.in:26
+msgid "Add toggle for showing battery percentage in Panel"
+msgstr "Dodano przełącznik pokazywania procent baterii w panelu"
+
+#: data/power.appdata.xml.in:30
+msgid "Fix a potential issue with resuming from sleep"
+msgstr "Naprawiono potencjalny problem przy wybudzaniu urządzenia"
+
+#: data/power.appdata.xml.in:39
 msgid "Change lid settings without restarting"
 msgstr "Możliwość zmiany ustawień klapki bez ponownego uruchamiania"
 
-#: data/power.appdata.xml.in:28
+#: data/power.appdata.xml.in:40
 msgid "Show in search results for \"sleep\" and \"timeout\""
 msgstr ""
 "Pokazano w wynikach wyszukiwania rezultaty dla „uśpienia” oraz „czas "
 "nieaktywności”"
 
-#: data/power.appdata.xml.in:35
+#: data/power.appdata.xml.in:47
 msgid "Fix potential freeze when changing settings from multiple panes"
-msgstr "Naprawiono potencjalne zawieszenie przy zmianie ustawień z wielu paneli"
+msgstr ""
+"Naprawiono potencjalne zawieszenie przy zmianie ustawień z wielu paneli"
 
-#: data/power.appdata.xml.in:46
+#: data/power.appdata.xml.in:58
 msgid "Remove broken hibernate option"
 msgstr "Usunięto zepsutą opcję hibernacji"
 
-#: data/power.appdata.xml.in:47
+#: data/power.appdata.xml.in:59
 msgid "Add prompt to shutdown to power button actions"
 msgstr "Dodano zapytanie o wyłączenie przyciskowi zasilania"
