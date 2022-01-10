@@ -7,6 +7,18 @@
   <icon type="stock">preferences-system-power</icon>
   <translation type="gettext">power-plug</translation>
   <releases>
+    <release version="2.7.0" date="2022-18-10" urgency="medium">
+      <description>
+        <p>New features:</p>
+        <ul>
+          <li>Add power profile management</li>
+        </ul>
+        <p>Minor updates:</p>
+        <ul>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.6.0" date="2021-08-24" urgency="medium">
       <description>
         <p>New features:</p>
