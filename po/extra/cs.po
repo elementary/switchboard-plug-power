@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 16:00+0000\n"
-"PO-Revision-Date: 2022-01-10 12:16+0000\n"
+"PO-Revision-Date: 2022-01-10 18:54+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
 "power-plug-extra/cs/>\n"
@@ -33,7 +33,7 @@ msgstr "Nové funkce:"
 
 #: data/power.appdata.xml.in:14
 msgid "Add toggle for showing battery percentage in Panel"
-msgstr ""
+msgstr "Přidáno zobraz./nezobraz. procent nabití akumulátoru na Panel"
 
 #: data/power.appdata.xml.in:16 data/power.appdata.xml.in:25
 msgid "Minor updates:"
