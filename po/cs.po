@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-10 18:54+0000\n"
-"PO-Revision-Date: 2022-01-10 18:54+0000\n"
+"PO-Revision-Date: 2022-01-10 21:58+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/cs/>\n"
@@ -82,7 +82,7 @@ msgstr "Některé změny se neprojeví dokud nerestartujete tento počítač"
 
 #: src/MainView.vala:285
 msgid "Power management mode:"
-msgstr ""
+msgstr "Režim správy napájení:"
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -130,7 +130,7 @@ msgstr "Zavření víka při připojeném doku"
 
 #: src/Plug.vala:80
 msgid "Sleep inactivity timeout"
-msgstr ""
+msgstr "Časový limit neaktivity ve spánku"
 
 #: src/Plug.vala:81
 msgid "Suspend inactive"
@@ -199,22 +199,20 @@ msgid "Prompt to shutdown"
 msgstr "Výzva ohledně vypnutí"
 
 #: src/Widgets/PowerModeButton.vala:39
-#, fuzzy
-#| msgid "Power"
 msgid "Power Saver"
-msgstr "Napájení"
+msgstr "Šetření energií"
 
 #: src/Widgets/PowerModeButton.vala:47
 msgid "Balanced"
-msgstr ""
+msgstr "Vyváženo"
 
 #: src/Widgets/PowerModeButton.vala:55
 msgid "High Performance"
-msgstr ""
+msgstr "Vysoký výkon"
 
 #: src/Widgets/PowerModeButton.vala:78
 msgid "Not Available!"
-msgstr ""
+msgstr "Není k dispozici!"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Ztmavit obrazovku, když je neaktivní:"

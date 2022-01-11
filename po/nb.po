@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-10 18:54+0000\n"
-"PO-Revision-Date: 2021-02-13 13:01+0000\n"
+"PO-Revision-Date: 2022-01-10 21:58+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-power/nb/>\n"
@@ -34,7 +34,7 @@ msgstr "Du har ikke rettigheter til å endre dette"
 
 #: src/MainView.vala:69
 msgid "Show battery percentage in Panel:"
-msgstr ""
+msgstr "Vis gjenværende batteriprosent i panel:"
 
 #: src/MainView.vala:84
 msgid "Display brightness:"
@@ -82,7 +82,7 @@ msgstr "Noen endringer trår ikke i kraft før omstart av maskinen"
 
 #: src/MainView.vala:285
 msgid "Power management mode:"
-msgstr ""
+msgstr "Effekthåndteringsmodul:"
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -209,15 +209,15 @@ msgstr "Strøm"
 
 #: src/Widgets/PowerModeButton.vala:47
 msgid "Balanced"
-msgstr ""
+msgstr "Balansert"
 
 #: src/Widgets/PowerModeButton.vala:55
 msgid "High Performance"
-msgstr ""
+msgstr "Høy ytelse"
 
 #: src/Widgets/PowerModeButton.vala:78
 msgid "Not Available!"
-msgstr ""
+msgstr "Ikke tilgjengelig."
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Senk lysstyrke på skjerm når inaktiv i:"
