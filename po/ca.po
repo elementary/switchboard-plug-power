@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-10 18:54+0000\n"
-"PO-Revision-Date: 2021-08-20 11:55+0000\n"
+"PO-Revision-Date: 2022-01-11 09:19+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/ca/>\n"
@@ -82,7 +82,7 @@ msgstr "Alguns canvis no tindran efecte fins que reinicieu l'ordinador."
 
 #: src/MainView.vala:285
 msgid "Power management mode:"
-msgstr ""
+msgstr "Mode de gestió d'energia:"
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -201,22 +201,20 @@ msgid "Prompt to shutdown"
 msgstr "Suggereix l'aturada"
 
 #: src/Widgets/PowerModeButton.vala:39
-#, fuzzy
-#| msgid "Power"
 msgid "Power Saver"
-msgstr "Energia"
+msgstr "Estalvi d'energia"
 
 #: src/Widgets/PowerModeButton.vala:47
 msgid "Balanced"
-msgstr ""
+msgstr "Equilibrada"
 
 #: src/Widgets/PowerModeButton.vala:55
 msgid "High Performance"
-msgstr ""
+msgstr "Rendiment alt"
 
 #: src/Widgets/PowerModeButton.vala:78
 msgid "Not Available!"
-msgstr ""
+msgstr "No disponible!"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Atenua la pantalla quan estigui inactiva:"

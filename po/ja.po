@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-10 18:54+0000\n"
-"PO-Revision-Date: 2021-11-16 00:50+0000\n"
+"PO-Revision-Date: 2022-01-11 09:19+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/ja/>\n"
@@ -77,7 +77,7 @@ msgstr "一部の変更は、このコンピューターの再起動後に反映
 
 #: src/MainView.vala:285
 msgid "Power management mode:"
-msgstr ""
+msgstr "電源管理モード:"
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -194,22 +194,20 @@ msgid "Prompt to shutdown"
 msgstr "シャットダウンの確認"
 
 #: src/Widgets/PowerModeButton.vala:39
-#, fuzzy
-#| msgid "Power"
 msgid "Power Saver"
-msgstr "電源"
+msgstr "省電力"
 
 #: src/Widgets/PowerModeButton.vala:47
 msgid "Balanced"
-msgstr ""
+msgstr "バランスモード"
 
 #: src/Widgets/PowerModeButton.vala:55
 msgid "High Performance"
-msgstr ""
+msgstr "高パフォーマンス"
 
 #: src/Widgets/PowerModeButton.vala:78
 msgid "Not Available!"
-msgstr ""
+msgstr "利用できません"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "非アクティブ時にディスプレイを暗くする:"

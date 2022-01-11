@@ -39,6 +39,8 @@ public class Power.MainView : Gtk.Grid {
         LOGOUT
     }
 
+    private static Polkit.Permission? permission = null;
+
     construct {
         orientation = Gtk.Orientation.VERTICAL;
         margin_bottom = 12;
@@ -299,6 +301,20 @@ public class Power.MainView : Gtk.Grid {
 
         // hide stack switcher if we only have ac line
         stack_switcher.visible = stack.get_children ().length () > 1;
+    }
+
+    private static Polkit.Permission? get_permission () {
+        if (permission != null) {
+            return permission;
+        }
+
+        try {
+            permission = new Polkit.Permission.sync ("io.elementary.switchboard.power.administration", new Polkit.UnixProcess (Posix.getpid ()));
+            return permission;
+        } catch (Error e) {
+            critical (e.message);
+            return null;
+        }
     }
 
     private static bool backlight_detect () {
