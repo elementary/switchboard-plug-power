@@ -4,7 +4,6 @@ cli/main.vala
 src/MainView.vala
 src/PowerSupply.vala
 src/Plug.vala
-src/Permission.vala
 src/LogindHelper.vala
 src/Interfaces.vala
 src/Battery.vala

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-10 18:54+0000\n"
-"PO-Revision-Date: 2021-08-20 18:21+0000\n"
+"PO-Revision-Date: 2022-01-11 14:06+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/fr/>\n"
@@ -87,7 +87,7 @@ msgstr ""
 
 #: src/MainView.vala:285
 msgid "Power management mode:"
-msgstr ""
+msgstr "Mode de gestion de l'énergie :"
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -206,22 +206,20 @@ msgid "Prompt to shutdown"
 msgstr "Demander pour éteindre"
 
 #: src/Widgets/PowerModeButton.vala:39
-#, fuzzy
-#| msgid "Power"
 msgid "Power Saver"
-msgstr "Alimentation"
+msgstr "Économie d'énergie"
 
 #: src/Widgets/PowerModeButton.vala:47
 msgid "Balanced"
-msgstr ""
+msgstr "Équilibré"
 
 #: src/Widgets/PowerModeButton.vala:55
 msgid "High Performance"
-msgstr ""
+msgstr "Performances élevées"
 
 #: src/Widgets/PowerModeButton.vala:78
 msgid "Not Available!"
-msgstr ""
+msgstr "Non disponible !"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Réduire la luminosité après une longue période d'inactivité :"
