@@ -5,7 +5,6 @@ plug_files = files(
     'GreeterAccountsServicePlugin.vala',
     'LogindHelper.vala',
     'MainView.vala',
-    'Permission.vala',
     'Plug.vala',
     'PowerSupply.vala',
     'Widgets/TimeoutComboBox.vala',
