@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-10 18:54+0000\n"
-"PO-Revision-Date: 2021-08-21 05:11+0000\n"
+"PO-Revision-Date: 2022-01-11 14:06+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/tr/>\n"
@@ -85,7 +85,7 @@ msgstr ""
 
 #: src/MainView.vala:285
 msgid "Power management mode:"
-msgstr ""
+msgstr "Güç yönetimi modu:"
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -203,22 +203,20 @@ msgid "Prompt to shutdown"
 msgstr "Kapatmadan önce sor"
 
 #: src/Widgets/PowerModeButton.vala:39
-#, fuzzy
-#| msgid "Power"
 msgid "Power Saver"
-msgstr "Güç"
+msgstr "Güç Tasarrufu"
 
 #: src/Widgets/PowerModeButton.vala:47
 msgid "Balanced"
-msgstr ""
+msgstr "Dengeli"
 
 #: src/Widgets/PowerModeButton.vala:55
 msgid "High Performance"
-msgstr ""
+msgstr "Yüksek Performans"
 
 #: src/Widgets/PowerModeButton.vala:78
 msgid "Not Available!"
-msgstr ""
+msgstr "Mevcut Değil!"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Etkin olmadığında ekranı karart:"
