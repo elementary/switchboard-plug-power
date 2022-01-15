@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-10 18:54+0000\n"
-"PO-Revision-Date: 2021-12-07 05:49+0000\n"
-"Last-Translator: colindemian <colindemian@outlook.com>\n"
+"PO-Revision-Date: 2022-01-15 12:35+0000\n"
+"Last-Translator: Yuchen Deng <loaden@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-power/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -82,7 +82,7 @@ msgstr "某些变更需要重启系统才会生效"
 
 #: src/MainView.vala:285
 msgid "Power management mode:"
-msgstr ""
+msgstr "电源管理模式："
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -199,22 +199,20 @@ msgid "Prompt to shutdown"
 msgstr "立刻关机"
 
 #: src/Widgets/PowerModeButton.vala:39
-#, fuzzy
-#| msgid "Power"
 msgid "Power Saver"
-msgstr "电源"
+msgstr "省电器"
 
 #: src/Widgets/PowerModeButton.vala:47
 msgid "Balanced"
-msgstr ""
+msgstr "均衡"
 
 #: src/Widgets/PowerModeButton.vala:55
 msgid "High Performance"
-msgstr ""
+msgstr "高性能"
 
 #: src/Widgets/PowerModeButton.vala:78
 msgid "Not Available!"
-msgstr ""
+msgstr "无法使用！"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "闲时调暗屏幕："
