@@ -15,6 +15,7 @@ Homepage: https://github.com/elementary/switchboard-plug-power
 Package: switchboard-plug-power
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
+Recommends: power-profiles-daemon
 Enhances: switchboard
 Description: Power plug for Switchboard
  This plug configures system power consumption.
