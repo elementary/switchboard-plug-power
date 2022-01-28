@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-10 18:54+0000\n"
-"PO-Revision-Date: 2021-11-23 23:34+0000\n"
+"PO-Revision-Date: 2022-01-13 17:48+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "power-plug-extra/pt/>\n"
@@ -33,7 +33,7 @@ msgstr "Novas funcionalidades:"
 
 #: data/power.appdata.xml.in:14
 msgid "Add power profile management"
-msgstr ""
+msgstr "Adiciona gestão de perfil de energia"
 
 #: data/power.appdata.xml.in:16 data/power.appdata.xml.in:28
 #: data/power.appdata.xml.in:37
