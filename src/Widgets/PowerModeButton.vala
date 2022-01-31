@@ -84,14 +84,15 @@ public class Power.PowerModeButton : Gtk.Box {
                 case "performance":
                     add (performance_radio);
                     break;
+                default:
+                    // Nothing to do for modes we don't support
+                    break;
             }
         }
 
         update_active_profile ();
 
-        pprofile.changed.connect (() => {
-            update_active_profile ();
-        });
+        ((DBusProxy) pprofile).g_properties_changed.connect (update_active_profile);
 
         saver_radio.clicked.connect (() => {
             pprofile.active_profile = "power-saver";
