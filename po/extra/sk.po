@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-10 18:54+0000\n"
-"PO-Revision-Date: 2021-08-26 08:31+0000\n"
+"PO-Revision-Date: 2022-02-05 22:24+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
-"Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/power-"
-"plug-extra/sk/>\n"
+"Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
+"power-plug-extra/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,7 +33,7 @@ msgstr "Nové funkcie:"
 
 #: data/power.appdata.xml.in:14
 msgid "Add power profile management"
-msgstr ""
+msgstr "Pridaná správa profilov napájania"
 
 #: data/power.appdata.xml.in:16 data/power.appdata.xml.in:28
 #: data/power.appdata.xml.in:37
