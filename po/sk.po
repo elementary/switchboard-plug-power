@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-10 18:54+0000\n"
-"PO-Revision-Date: 2021-08-26 08:31+0000\n"
+"PO-Revision-Date: 2022-02-05 22:24+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/sk/>\n"
@@ -83,7 +83,7 @@ msgstr "Niektoré zmeny sa prejavia až po reštarte počítača"
 
 #: src/MainView.vala:285
 msgid "Power management mode:"
-msgstr ""
+msgstr "Režim správy napájania:"
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -200,22 +200,20 @@ msgid "Prompt to shutdown"
 msgstr "Výzva na vypnutie"
 
 #: src/Widgets/PowerModeButton.vala:39
-#, fuzzy
-#| msgid "Power"
 msgid "Power Saver"
-msgstr "Napájanie"
+msgstr "Šetrenie batérie"
 
 #: src/Widgets/PowerModeButton.vala:47
 msgid "Balanced"
-msgstr ""
+msgstr "Vyvážený"
 
 #: src/Widgets/PowerModeButton.vala:55
 msgid "High Performance"
-msgstr ""
+msgstr "Vysoký výkon"
 
 #: src/Widgets/PowerModeButton.vala:78
 msgid "Not Available!"
-msgstr ""
+msgstr "Nie je k dispozícii!"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Stmaviť monitor počas nečinnosti"
