@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2018 elementary LLC. (https://elementary.io)
+ * Copyright 2021-2022 elementary, Inc. (https://elementary.io)
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -19,72 +19,105 @@
  * Authored by: Subhadeep Jasu <subhajasu@gmail.com>
  */
 
-namespace Power {
-    public class PowerModeButton : Granite.Widgets.ModeButton {
-        Gtk.Image power_saving_icon;
-        Gtk.Image balanced_icon;
-        Gtk.Image high_performance_icon;
+public class Power.PowerModeButton : Gtk.Box {
+    public PowerProfile? pprofile { get; private set; default = null; }
 
-        public bool profiles_available = true;
+    private Gtk.RadioButton saver_radio;
+    private Gtk.RadioButton balanced_radio;
+    private Gtk.RadioButton performance_radio;
 
-        public PowerModeButton () {
-            try {
-                PowerProfile pprofile = Bus.get_proxy_sync (BusType.SYSTEM, POWER_PROFILES_DAEMON_NAME, POWER_PROFILES_DAEMON_PATH, DBusProxyFlags.NONE);
-                List<string> available_profiles = get_available_power_profiles (pprofile);
-                if (available_profiles.length () > 1) {
-                    for (int i = 0; i < available_profiles.length (); i++) {
-                        switch (available_profiles.nth_data (i)) {
-                            case "power-saver":
-                            power_saving_icon = new Gtk.Image.from_resource ("/io/elementary/switchboard/plug/power/32x32/apps/power-mode-powersaving.svg");
-                            var power_saving_label = new Gtk.Label (_("Power Saver"));
-                            var power_saving_button_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-                            power_saving_button_box.pack_start (power_saving_icon);
-                            power_saving_button_box.pack_end (power_saving_label);
-                            append (power_saving_button_box);
-                            break;
-                            case "balanced":
-                            balanced_icon = new Gtk.Image.from_resource ("/io/elementary/switchboard/plug/power/32x32/apps/power-mode-balanced.svg");
-                            var balanced_label = new Gtk.Label (_("Balanced"));
-                            var balanced_button_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-                            balanced_button_box.pack_start (balanced_icon);
-                            balanced_button_box.pack_end (balanced_label);
-                            append (balanced_button_box);
-                            break;
-                            case "performance":
-                            high_performance_icon = new Gtk.Image.from_resource ("/io/elementary/switchboard/plug/power/32x32/apps/power-mode-performance.svg");
-                            var high_performance_label = new Gtk.Label (_("High Performance"));
-                            var high_performance_button_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-                            high_performance_button_box.pack_start (high_performance_icon);
-                            high_performance_button_box.pack_end (high_performance_label);
-                            append (high_performance_button_box);
-                            break;
-                        }
-                    }
-                    for (int i = 0; i < available_profiles.length (); i++) {
-                        if (pprofile.active_profile == available_profiles.nth_data (i)) {
-                            this.selected = i;
-                            break;
-                        }
-                    }
+    construct {
+        try {
+            pprofile = Bus.get_proxy_sync (BusType.SYSTEM, POWER_PROFILES_DAEMON_NAME, POWER_PROFILES_DAEMON_PATH, DBusProxyFlags.NONE);
+        } catch (Error e) {
+            critical (e.message);
+            return;
+        }
 
-                    this.mode_changed.connect (() => {
-                        pprofile.active_profile = available_profiles.nth_data (this.selected);
-                    });
-                } else {
-                    profiles_available = false;
-                }
-            } catch (Error e) {
-                profiles_available = false;
-                append (new Gtk.Label (_("Not Available!")));
+        var saver_icon = new Gtk.Image.from_resource ("/io/elementary/switchboard/plug/power/32x32/apps/power-mode-powersaving.svg");
+
+        var saver_label = new Gtk.Label (_("Power Saver"));
+
+        var saver_button_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 3);
+        saver_button_box.pack_start (saver_icon);
+        saver_button_box.pack_end (saver_label);
+
+        saver_radio = new Gtk.RadioButton (null);
+        saver_radio.get_style_context ().add_class ("image-button");
+        saver_radio.add (saver_button_box);
+
+        var balanced_icon = new Gtk.Image.from_resource ("/io/elementary/switchboard/plug/power/32x32/apps/power-mode-balanced.svg");
+
+        var balanced_label = new Gtk.Label (_("Balanced"));
+
+        var balanced_button_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 3);
+        balanced_button_box.pack_start (balanced_icon);
+        balanced_button_box.pack_end (balanced_label);
+
+        balanced_radio = new Gtk.RadioButton.from_widget (saver_radio);
+        balanced_radio.get_style_context ().add_class ("image-button");
+        balanced_radio.add (balanced_button_box);
+
+        var performance_icon = new Gtk.Image.from_resource ("/io/elementary/switchboard/plug/power/32x32/apps/power-mode-performance.svg");
+
+        var performance_label = new Gtk.Label (_("Performance"));
+
+        var performance_button_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 3);
+        performance_button_box.pack_start (performance_icon);
+        performance_button_box.pack_end (performance_label);
+
+        performance_radio = new Gtk.RadioButton.from_widget (saver_radio);
+        performance_radio.get_style_context ().add_class ("image-button");
+        performance_radio.add (performance_button_box);
+
+        homogeneous = true;
+        spacing = 6;
+
+        for (int i = 0; i < pprofile.profiles.length; i++) {
+            switch (pprofile.profiles[i].get ("Profile").get_string ()) {
+                case "power-saver":
+                    add (saver_radio);
+                    break;
+                case "balanced":
+                    add (balanced_radio);
+                    break;
+                case "performance":
+                    add (performance_radio);
+                    break;
+                default:
+                    // Nothing to do for modes we don't support
+                    break;
             }
         }
 
-        private List<string> get_available_power_profiles (PowerProfile pprofile) {
-            List<string> profiles = new List<string> ();
-            for (int j = 0; j < pprofile.profiles.length; j++) {
-                profiles.append (pprofile.profiles[j].get ("Profile").get_string ());
-            }
-            return profiles;
+        update_active_profile ();
+
+        ((DBusProxy) pprofile).g_properties_changed.connect (update_active_profile);
+
+        saver_radio.clicked.connect (() => {
+            pprofile.active_profile = "power-saver";
+        });
+
+        balanced_radio.clicked.connect (() => {
+            pprofile.active_profile = "balanced";
+        });
+
+        performance_radio.clicked.connect (() => {
+            pprofile.active_profile = "performance";
+        });
+    }
+
+    private void update_active_profile () {
+        switch (pprofile.active_profile) {
+            case "power-saver":
+                saver_radio.active = true;
+                break;
+            case "balanced":
+                balanced_radio.active = true;
+                break;
+            case "performance":
+                performance_radio.active = true;
+                break;
         }
     }
 }
