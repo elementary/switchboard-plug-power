@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-10 18:54+0000\n"
+"POT-Creation-Date: 2022-04-03 19:29+0000\n"
 "PO-Revision-Date: 2018-05-28 08:56+0000\n"
 "Last-Translator: Romanic Ion Nicușor <contact.romanic@gmail.com>\n"
 "Language-Team: Moldovan <https://weblate.elementary.io/projects/switchboard/"
@@ -25,56 +25,56 @@ msgstr "Este necesară autentificarea pentru a gestiona setările de alimentare"
 msgid "You do not have permission to change this"
 msgstr "Nu aveți permisiunea de a schimba"
 
-#: src/MainView.vala:69
+#: src/MainView.vala:71
 msgid "Show battery percentage in Panel:"
 msgstr ""
 
-#: src/MainView.vala:84
+#: src/MainView.vala:86
 msgid "Display brightness:"
 msgstr "Luminozitatea ecranului:"
 
-#: src/MainView.vala:89
+#: src/MainView.vala:91
 msgid "Automatically adjust brightness:"
 msgstr "Reglați automat luminozitatea:"
 
-#: src/MainView.vala:119
+#: src/MainView.vala:121
 msgid "When lid is closed:"
 msgstr "Când capacul este închis:"
 
-#: src/MainView.vala:126
+#: src/MainView.vala:128
 msgid "When lid is closed with external monitor:"
 msgstr "Când capacul este închis cu un monitor extern:"
 
-#: src/MainView.vala:155
+#: src/MainView.vala:157
 msgid "Some settings require administrator rights to be changed"
 msgstr "Unele setări necesită modificarea drepturilor de administrator"
 
-#: src/MainView.vala:177
+#: src/MainView.vala:179
 msgid "Turn off display when inactive for:"
 msgstr "Dezactivați afișarea atunci când este inactivă pentru:"
 
-#: src/MainView.vala:184
+#: src/MainView.vala:186
 msgid "Power button:"
 msgstr "Butonul de pornire:"
 
-#: src/MainView.vala:196 src/MainView.vala:222
+#: src/MainView.vala:198 src/MainView.vala:224
 msgid "Suspend when inactive for:"
 msgstr "Suspendați când este inactivă pentru:"
 
-#: src/MainView.vala:214
+#: src/MainView.vala:216
 msgid "Plugged In"
 msgstr "Conectat"
 
-#: src/MainView.vala:240
+#: src/MainView.vala:242
 msgid "On Battery"
 msgstr "La baterie"
 
-#: src/MainView.vala:265
+#: src/MainView.vala:267
 msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
 "Unele modificări nu vor avea efect până când nu reporniți acest computer"
 
-#: src/MainView.vala:285
+#: src/MainView.vala:287
 msgid "Power management mode:"
 msgstr ""
 
@@ -200,16 +200,12 @@ msgstr ""
 msgid "Power Saver"
 msgstr "Aprinde"
 
-#: src/Widgets/PowerModeButton.vala:47
+#: src/Widgets/PowerModeButton.vala:51
 msgid "Balanced"
 msgstr ""
 
-#: src/Widgets/PowerModeButton.vala:55
-msgid "High Performance"
-msgstr ""
-
-#: src/Widgets/PowerModeButton.vala:78
-msgid "Not Available!"
+#: src/Widgets/PowerModeButton.vala:63
+msgid "Performance"
 msgstr ""
 
 #~ msgid "Dim display when inactive:"

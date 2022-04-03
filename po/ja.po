@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-10 18:54+0000\n"
+"POT-Creation-Date: 2022-04-03 19:29+0000\n"
 "PO-Revision-Date: 2022-01-11 09:19+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -27,55 +27,55 @@ msgstr "電源設定を管理するには認証が必要です"
 msgid "You do not have permission to change this"
 msgstr "これを変更する権限がありません"
 
-#: src/MainView.vala:69
+#: src/MainView.vala:71
 msgid "Show battery percentage in Panel:"
 msgstr "バッテリーの割合をパネルに表示:"
 
-#: src/MainView.vala:84
+#: src/MainView.vala:86
 msgid "Display brightness:"
 msgstr "ディスプレイの明るさ:"
 
-#: src/MainView.vala:89
+#: src/MainView.vala:91
 msgid "Automatically adjust brightness:"
 msgstr "明るさを自動調整:"
 
-#: src/MainView.vala:119
+#: src/MainView.vala:121
 msgid "When lid is closed:"
 msgstr "カバーが閉じられたとき:"
 
-#: src/MainView.vala:126
+#: src/MainView.vala:128
 msgid "When lid is closed with external monitor:"
 msgstr "外部モニターとカバーが閉じられたとき:"
 
-#: src/MainView.vala:155
+#: src/MainView.vala:157
 msgid "Some settings require administrator rights to be changed"
 msgstr "一部の設定変更には管理者権限が必要です"
 
-#: src/MainView.vala:177
+#: src/MainView.vala:179
 msgid "Turn off display when inactive for:"
 msgstr "非アクティブ時はディスプレイをオフにする:"
 
-#: src/MainView.vala:184
+#: src/MainView.vala:186
 msgid "Power button:"
 msgstr "電源ボタン:"
 
-#: src/MainView.vala:196 src/MainView.vala:222
+#: src/MainView.vala:198 src/MainView.vala:224
 msgid "Suspend when inactive for:"
 msgstr "非アクティブ時にサスペンド:"
 
-#: src/MainView.vala:214
+#: src/MainView.vala:216
 msgid "Plugged In"
 msgstr "電源接続時"
 
-#: src/MainView.vala:240
+#: src/MainView.vala:242
 msgid "On Battery"
 msgstr "バッテリー時"
 
-#: src/MainView.vala:265
+#: src/MainView.vala:267
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "一部の変更は、このコンピューターの再起動後に反映されます"
 
-#: src/MainView.vala:285
+#: src/MainView.vala:287
 msgid "Power management mode:"
 msgstr "電源管理モード:"
 
@@ -197,17 +197,18 @@ msgstr "シャットダウンの確認"
 msgid "Power Saver"
 msgstr "省電力"
 
-#: src/Widgets/PowerModeButton.vala:47
+#: src/Widgets/PowerModeButton.vala:51
 msgid "Balanced"
 msgstr "バランスモード"
 
-#: src/Widgets/PowerModeButton.vala:55
-msgid "High Performance"
+#: src/Widgets/PowerModeButton.vala:63
+#, fuzzy
+#| msgid "High Performance"
+msgid "Performance"
 msgstr "高パフォーマンス"
 
-#: src/Widgets/PowerModeButton.vala:78
-msgid "Not Available!"
-msgstr "利用できません"
+#~ msgid "Not Available!"
+#~ msgstr "利用できません"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "非アクティブ時にディスプレイを暗くする:"

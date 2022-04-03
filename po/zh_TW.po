@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-10 18:54+0000\n"
+"POT-Creation-Date: 2022-04-03 19:29+0000\n"
 "PO-Revision-Date: 2020-03-01 14:09+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
@@ -32,55 +32,55 @@ msgstr "需要核對身份才能管理電源設定值"
 msgid "You do not have permission to change this"
 msgstr "您無權更改此設定"
 
-#: src/MainView.vala:69
+#: src/MainView.vala:71
 msgid "Show battery percentage in Panel:"
 msgstr ""
 
-#: src/MainView.vala:84
+#: src/MainView.vala:86
 msgid "Display brightness:"
 msgstr "顯示器亮度："
 
-#: src/MainView.vala:89
+#: src/MainView.vala:91
 msgid "Automatically adjust brightness:"
 msgstr "自動調整亮度："
 
-#: src/MainView.vala:119
+#: src/MainView.vala:121
 msgid "When lid is closed:"
 msgstr "當闔起上蓋時："
 
-#: src/MainView.vala:126
+#: src/MainView.vala:128
 msgid "When lid is closed with external monitor:"
 msgstr "當上蓋關閉但有外部螢幕時："
 
-#: src/MainView.vala:155
+#: src/MainView.vala:157
 msgid "Some settings require administrator rights to be changed"
 msgstr "有些設定值需要有管理員權利才能變更"
 
-#: src/MainView.vala:177
+#: src/MainView.vala:179
 msgid "Turn off display when inactive for:"
 msgstr "關閉顯示器前的不使用時間："
 
-#: src/MainView.vala:184
+#: src/MainView.vala:186
 msgid "Power button:"
 msgstr "電源按鈕："
 
-#: src/MainView.vala:196 src/MainView.vala:222
+#: src/MainView.vala:198 src/MainView.vala:224
 msgid "Suspend when inactive for:"
 msgstr "電腦暫停前的不使用時間："
 
-#: src/MainView.vala:214
+#: src/MainView.vala:216
 msgid "Plugged In"
 msgstr "插入電源線"
 
-#: src/MainView.vala:240
+#: src/MainView.vala:242
 msgid "On Battery"
 msgstr "使用電池"
 
-#: src/MainView.vala:265
+#: src/MainView.vala:267
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "有些更改在您重新啟動電腦之前還不會生效"
 
-#: src/MainView.vala:285
+#: src/MainView.vala:287
 msgid "Power management mode:"
 msgstr ""
 
@@ -204,16 +204,12 @@ msgstr "提請關機"
 msgid "Power Saver"
 msgstr "電源"
 
-#: src/Widgets/PowerModeButton.vala:47
+#: src/Widgets/PowerModeButton.vala:51
 msgid "Balanced"
 msgstr ""
 
-#: src/Widgets/PowerModeButton.vala:55
-msgid "High Performance"
-msgstr ""
-
-#: src/Widgets/PowerModeButton.vala:78
-msgid "Not Available!"
+#: src/Widgets/PowerModeButton.vala:63
+msgid "Performance"
 msgstr ""
 
 #~ msgid "Dim display when inactive:"

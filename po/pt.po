@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-10 18:54+0000\n"
+"POT-Creation-Date: 2022-04-03 19:29+0000\n"
 "PO-Revision-Date: 2022-03-31 16:24+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
@@ -32,56 +32,56 @@ msgstr "É necessário autenticação para modificar as definições de energia"
 msgid "You do not have permission to change this"
 msgstr "Não tem permissão para modificar isto"
 
-#: src/MainView.vala:69
+#: src/MainView.vala:71
 msgid "Show battery percentage in Panel:"
 msgstr "Mostrar percentagem de bateria no Painel:"
 
-#: src/MainView.vala:84
+#: src/MainView.vala:86
 msgid "Display brightness:"
 msgstr "Brilho do ecrã:"
 
-#: src/MainView.vala:89
+#: src/MainView.vala:91
 msgid "Automatically adjust brightness:"
 msgstr "Ajustar brilho automaticamente:"
 
-#: src/MainView.vala:119
+#: src/MainView.vala:121
 msgid "When lid is closed:"
 msgstr "Quando a tampa for fechada:"
 
-#: src/MainView.vala:126
+#: src/MainView.vala:128
 msgid "When lid is closed with external monitor:"
 msgstr "Quando a tampa for fechada com monitor externo:"
 
-#: src/MainView.vala:155
+#: src/MainView.vala:157
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Algumas definições requerem privilégios de administrador para serem alteradas"
 
-#: src/MainView.vala:177
+#: src/MainView.vala:179
 msgid "Turn off display when inactive for:"
 msgstr "Desligar ecrã quando inativo por:"
 
-#: src/MainView.vala:184
+#: src/MainView.vala:186
 msgid "Power button:"
 msgstr "Botão ligar/desligar:"
 
-#: src/MainView.vala:196 src/MainView.vala:222
+#: src/MainView.vala:198 src/MainView.vala:224
 msgid "Suspend when inactive for:"
 msgstr "Suspender quando inativo durante:"
 
-#: src/MainView.vala:214
+#: src/MainView.vala:216
 msgid "Plugged In"
 msgstr "Ligado"
 
-#: src/MainView.vala:240
+#: src/MainView.vala:242
 msgid "On Battery"
 msgstr "A Bateria"
 
-#: src/MainView.vala:265
+#: src/MainView.vala:267
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Algumas alterações não serão aplicadas até reiniciar o computador"
 
-#: src/MainView.vala:285
+#: src/MainView.vala:287
 msgid "Power management mode:"
 msgstr "Modo de gestão de energia:"
 
@@ -203,17 +203,18 @@ msgstr "Avisar para encerrar"
 msgid "Power Saver"
 msgstr "Poupança de energia"
 
-#: src/Widgets/PowerModeButton.vala:47
+#: src/Widgets/PowerModeButton.vala:51
 msgid "Balanced"
 msgstr "Equilibrado"
 
-#: src/Widgets/PowerModeButton.vala:55
-msgid "High Performance"
+#: src/Widgets/PowerModeButton.vala:63
+#, fuzzy
+#| msgid "High Performance"
+msgid "Performance"
 msgstr "Alto desempenho"
 
-#: src/Widgets/PowerModeButton.vala:78
-msgid "Not Available!"
-msgstr "Não disponível!"
+#~ msgid "Not Available!"
+#~ msgstr "Não disponível!"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Escurecer ecrã quando inativo:"

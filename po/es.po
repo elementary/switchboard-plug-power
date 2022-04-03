@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-10 18:54+0000\n"
+"POT-Creation-Date: 2022-04-03 19:29+0000\n"
 "PO-Revision-Date: 2021-03-04 07:57+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
@@ -32,55 +32,55 @@ msgstr "Necesita autenticarse para gestionar la configuración de energía"
 msgid "You do not have permission to change this"
 msgstr "No tiene permiso para realizar este cambio"
 
-#: src/MainView.vala:69
+#: src/MainView.vala:71
 msgid "Show battery percentage in Panel:"
 msgstr ""
 
-#: src/MainView.vala:84
+#: src/MainView.vala:86
 msgid "Display brightness:"
 msgstr "Brillo de pantalla:"
 
-#: src/MainView.vala:89
+#: src/MainView.vala:91
 msgid "Automatically adjust brightness:"
 msgstr "Ajustar brillo automáticamente:"
 
-#: src/MainView.vala:119
+#: src/MainView.vala:121
 msgid "When lid is closed:"
 msgstr "Cuando se cierre la tapa:"
 
-#: src/MainView.vala:126
+#: src/MainView.vala:128
 msgid "When lid is closed with external monitor:"
 msgstr "Cuando se cierre la tapa y esté conectado un monitor externo:"
 
-#: src/MainView.vala:155
+#: src/MainView.vala:157
 msgid "Some settings require administrator rights to be changed"
 msgstr "Se necesitan privilegios administrativos para cambiar algunas opciones"
 
-#: src/MainView.vala:177
+#: src/MainView.vala:179
 msgid "Turn off display when inactive for:"
 msgstr "Apagar pantalla si hay inactividad durante:"
 
-#: src/MainView.vala:184
+#: src/MainView.vala:186
 msgid "Power button:"
 msgstr "Botón de encendido:"
 
-#: src/MainView.vala:196 src/MainView.vala:222
+#: src/MainView.vala:198 src/MainView.vala:224
 msgid "Suspend when inactive for:"
 msgstr "Suspender cuando esté inactivo por:"
 
-#: src/MainView.vala:214
+#: src/MainView.vala:216
 msgid "Plugged In"
 msgstr "Conectado"
 
-#: src/MainView.vala:240
+#: src/MainView.vala:242
 msgid "On Battery"
 msgstr "Con batería"
 
-#: src/MainView.vala:265
+#: src/MainView.vala:267
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Algunos cambios no tendrán efecto hasta que reinicies el equipo"
 
-#: src/MainView.vala:285
+#: src/MainView.vala:287
 msgid "Power management mode:"
 msgstr ""
 
@@ -206,16 +206,12 @@ msgstr "Aviso de apagado"
 msgid "Power Saver"
 msgstr "Energía"
 
-#: src/Widgets/PowerModeButton.vala:47
+#: src/Widgets/PowerModeButton.vala:51
 msgid "Balanced"
 msgstr ""
 
-#: src/Widgets/PowerModeButton.vala:55
-msgid "High Performance"
-msgstr ""
-
-#: src/Widgets/PowerModeButton.vala:78
-msgid "Not Available!"
+#: src/Widgets/PowerModeButton.vala:63
+msgid "Performance"
 msgstr ""
 
 #~ msgid "Dim display when inactive:"
