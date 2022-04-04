@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-04-03 19:29+0000\n"
-"PO-Revision-Date: 2022-01-11 09:19+0000\n"
+"PO-Revision-Date: 2022-04-04 21:20+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/ja/>\n"
@@ -199,13 +199,11 @@ msgstr "省電力"
 
 #: src/Widgets/PowerModeButton.vala:51
 msgid "Balanced"
-msgstr "バランスモード"
+msgstr "バランス"
 
 #: src/Widgets/PowerModeButton.vala:63
-#, fuzzy
-#| msgid "High Performance"
 msgid "Performance"
-msgstr "高パフォーマンス"
+msgstr "パフォーマンス"
 
 #~ msgid "Not Available!"
 #~ msgstr "利用できません"
