@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-04-03 19:29+0000\n"
-"PO-Revision-Date: 2022-03-31 16:24+0000\n"
+"PO-Revision-Date: 2022-04-30 21:30+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/pt/>\n"
@@ -208,10 +208,8 @@ msgid "Balanced"
 msgstr "Equilibrado"
 
 #: src/Widgets/PowerModeButton.vala:63
-#, fuzzy
-#| msgid "High Performance"
 msgid "Performance"
-msgstr "Alto desempenho"
+msgstr "Desempenho"
 
 #~ msgid "Not Available!"
 #~ msgstr "Não disponível!"
