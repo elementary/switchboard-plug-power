@@ -7,7 +7,7 @@
   <icon type="stock">preferences-system-power</icon>
   <translation type="gettext">power-plug</translation>
   <releases>
-    <release version="2.7.0" date="2022-18-10" urgency="medium">
+    <release version="2.7.0" date="2022-05-16" urgency="medium">
       <description>
         <p>New features:</p>
         <ul>
