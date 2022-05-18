@@ -1,3 +1,17 @@
+switchboard-plug-power (2.7.0) bionic; urgency=medium
+
+  * Release 2.7.0 (#216)
+  * Update screenshot
+  * Actions: bump release to Horus
+  * Update translation files
+  * Update translation template
+  * PowerModeButton: rewrite as radiobuttons (#209)
+  * PowerSupply: subclass object (#211)
+  * Move get_permission to MainView (#212)
+  * Enable Power Profile Management (#192)
+
+ -- elementary OS Team <builds@elementary.io>  Wed, 18 May 2022 05:02:51 +0000
+
 switchboard-plug-power (2.6.0) bionic; urgency=medium
 
   * Release 2.6.0 (#201)
