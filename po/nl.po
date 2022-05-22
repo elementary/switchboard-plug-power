@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-04-03 19:29+0000\n"
-"PO-Revision-Date: 2022-05-22 08:05+0000\n"
+"PO-Revision-Date: 2022-05-23 00:21+0000\n"
 "Last-Translator: Dennis ten Hoove <dennistenhoove@protonmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/nl/>\n"
@@ -59,15 +59,15 @@ msgstr "Sommige instellingen vereisen beheerdersrechten om te worden gewijzigd"
 
 #: src/MainView.vala:179
 msgid "Turn off display when inactive for:"
-msgstr "Schakel het scherm uit wanneer het inactief is voor:"
+msgstr "Automatisch het scherm uitschakelen bij inactiviteit na:"
 
 #: src/MainView.vala:186
 msgid "Power button:"
-msgstr "Aan-/uit-knop:"
+msgstr "Aan/uit-knop:"
 
 #: src/MainView.vala:198 src/MainView.vala:224
 msgid "Suspend when inactive for:"
-msgstr "Naar slaapstand wanneer inactief voor:"
+msgstr "Automatisch in slaapstaand gaan na:"
 
 #: src/MainView.vala:216
 msgid "Plugged In"
