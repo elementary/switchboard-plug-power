@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-04-03 19:29+0000\n"
-"PO-Revision-Date: 2022-01-10 21:58+0000\n"
+"PO-Revision-Date: 2022-05-29 23:10+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "power-plug-extra/uk/>\n"
@@ -47,7 +47,7 @@ msgstr "Незначні оновлення:"
 #: data/power.appdata.xml.in:41 data/power.appdata.xml.in:48
 #: data/power.appdata.xml.in:53 data/power.appdata.xml.in:60
 msgid "Updated translations"
-msgstr "Оновлено переклади"
+msgstr "Оновлені переклади"
 
 #: data/power.appdata.xml.in:26
 msgid "Add toggle for showing battery percentage in Panel"
