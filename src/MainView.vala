@@ -42,7 +42,6 @@ public class Power.MainView : Gtk.Grid {
     private static Polkit.Permission? permission = null;
 
     construct {
-        orientation = Gtk.Orientation.VERTICAL;
         margin_bottom = 12;
 
         var label_size = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
@@ -61,7 +60,10 @@ public class Power.MainView : Gtk.Grid {
 
         var main_grid = new Gtk.Grid () {
             column_spacing = 12,
-            margin = 24,
+            margin_start = 24,
+            margin_end = 24,
+            margin_top = 24,
+            margin_bottom = 24,
             row_spacing = 12
         };
 
@@ -135,14 +137,16 @@ public class Power.MainView : Gtk.Grid {
             label_size.add_widget (lid_closed_label);
             label_size.add_widget (lid_dock_label);
 
-            var lock_image = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON) {
+            var lock_image = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
                 sensitive = false,
-                tooltip_text = NO_PERMISSION_STRING
+                tooltip_text = NO_PERMISSION_STRING,
+                pixel_size = 16
             };
 
-            var lock_image2 = new Gtk.Image.from_icon_name ("changes-prevent-symbolic", Gtk.IconSize.BUTTON) {
+            var lock_image2 = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
                 sensitive = false,
-                tooltip_text = NO_PERMISSION_STRING
+                tooltip_text = NO_PERMISSION_STRING,
+                pixel_size = 16
             };
 
             main_grid.attach (lid_closed_label, 0, 5);
@@ -159,12 +163,10 @@ public class Power.MainView : Gtk.Grid {
             var permission_infobar = new Gtk.InfoBar () {
                 message_type = Gtk.MessageType.INFO
             };
-            permission_infobar.get_content_area ().add (permission_label);
+            permission_infobar.add_child (permission_label);
+            permission_infobar.add_child (lock_button);
 
-            var area_infobar = permission_infobar.get_action_area () as Gtk.Container;
-            area_infobar.add (lock_button);
-
-            add (permission_infobar);
+            attach (permission_infobar, 0, 0);
 
             var permission = get_permission ();
             permission.bind_property ("allowed", lid_closed_box, "sensitive", GLib.BindingFlags.SYNC_CREATE);
@@ -216,9 +218,16 @@ public class Power.MainView : Gtk.Grid {
         stack.add_titled (ac_grid, "ac", _("Plugged In"));
 
         var stack_switcher = new Gtk.StackSwitcher () {
-            homogeneous = true,
             stack = stack
         };
+
+        var size_group = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
+        if (size_group.get_widgets ().length () == 0) {
+            var children = stack_switcher.observe_children ();
+            for (var index = 0; index < children.get_n_items (); index++) {
+                size_group.add_widget ((Gtk.ToggleButton) children.get_item (index));
+            }
+        }
 
         if (battery.is_present ()) {
             var battery_timeout_label = new Gtk.Label (_("Suspend when inactive for:")) {
@@ -251,25 +260,26 @@ public class Power.MainView : Gtk.Grid {
                 valign = Gtk.Align.CENTER
             };
 
-            var switcher_grid = new Gtk.Grid () {
+            var switcher_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0) {
                 margin_top = 24,
                 margin_bottom = 12
             };
-            switcher_grid.add (left_sep);
-            switcher_grid.add (stack_switcher);
-            switcher_grid.add (right_sep);
+            switcher_box.append (left_sep);
+            switcher_box.append (stack_switcher);
+            switcher_box.append (right_sep);
 
-            main_grid.attach (switcher_grid, 0, 7, 2);
+            main_grid.attach (switcher_box, 0, 7, 2);
         }
 
         main_grid.attach (stack, 0, 8, 2);
 
         var infobar_label = new Gtk.Label (_("Some changes will not take effect until you restart this computer"));
 
-        var infobar = new Gtk.InfoBar ();
-        infobar.message_type = Gtk.MessageType.WARNING;
-        infobar.revealed = false;
-        infobar.get_content_area ().add (infobar_label);
+        var infobar = new Gtk.InfoBar () {
+            message_type = Gtk.MessageType.WARNING,
+            revealed = false
+        };
+        infobar.add_child (infobar_label);
 
         var helper = LogindHelper.get_logind_helper ();
         if (helper != null) {
@@ -278,7 +288,7 @@ public class Power.MainView : Gtk.Grid {
             });
         }
 
-        add (infobar);
+        attach (infobar, 0, 1);
 
         var power_mode_button = new PowerModeButton () {
             halign = Gtk.Align.START
@@ -292,15 +302,14 @@ public class Power.MainView : Gtk.Grid {
             main_grid.attach (power_mode_button, 1, 9);
         }
 
-        add (main_grid);
-        show_all ();
+        attach (main_grid, 0, 2);
 
         label_size.add_widget (sleep_timeout_label);
         label_size.add_widget (screen_timeout_label);
         label_size.add_widget (power_label);
 
         // hide stack switcher if we only have ac line
-        stack_switcher.visible = stack.get_children ().length () > 1;
+        stack_switcher.visible = stack.observe_children ().get_n_items () > 1;
     }
 
     private static Polkit.Permission? get_permission () {

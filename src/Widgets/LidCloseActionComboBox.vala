@@ -18,29 +18,42 @@
  */
 
 namespace Power {
-    class LidCloseActionComboBox : Gtk.ComboBoxText {
+    class LidCloseActionComboBox : Gtk.Widget {
         private const string HANDLE_LID_SWITCH_DOCKED_KEY = "HandleLidSwitchDocked";
         private const string HANDLE_LID_SWITCH_KEY = "HandleLidSwitch";
 
-        private bool dock;
+        public bool dock { get; construct; }
+
+        private Gtk.ComboBoxText main_widget;
 
         public LidCloseActionComboBox (bool dock) {
-            this.dock = dock;
+            Object (dock: dock);
+        }
+
+        static construct {
+            set_layout_manager_type (typeof (Gtk.BinLayout));
+        }
+
+        construct {
+            main_widget = new Gtk.ComboBoxText () {
+                hexpand = true
+            };
+            main_widget.set_parent (this);
+            hexpand = true;
 
             var helper = LogindHelper.get_logind_helper ();
             if (helper != null && helper.present) {
-                append_text (_("Suspend"));
-                append_text (_("Shutdown"));
-                append_text (_("Lock"));
-                append_text (_("Halt"));
-                append_text (_("Do nothing"));
+                main_widget.append_text (_("Suspend"));
+                main_widget.append_text (_("Shutdown"));
+                main_widget.append_text (_("Lock"));
+                main_widget.append_text (_("Halt"));
+                main_widget.append_text (_("Do nothing"));
             } else {
-                append_text (_("Not supported"));
+                main_widget.append_text (_("Not supported"));
             }
 
-            hexpand = true;
             update_current_action ();
-            changed.connect (on_changed);
+            main_widget.changed.connect (on_changed);
         }
 
         private void on_changed () {
@@ -92,7 +105,7 @@ namespace Power {
         }
 
         private LogindHelper.Action get_action () {
-            switch (active) {
+            switch (main_widget.active) {
                 case 0:
                     return LogindHelper.Action.SUSPEND;
                 case 1:
@@ -111,22 +124,28 @@ namespace Power {
         private void set_active_item (LogindHelper.Action action) {
             switch (action) {
                 case LogindHelper.Action.SUSPEND:
-                    active = 0;
+                    main_widget.active = 0;
                     break;
                 case LogindHelper.Action.POWEROFF:
-                    active = 1;
+                    main_widget.active = 1;
                     break;
                 case LogindHelper.Action.LOCK:
-                    active = 2;
+                    main_widget.active = 2;
                     break;
                 case LogindHelper.Action.HALT:
-                    active = 3;
+                    main_widget.active = 3;
                     break;
                 case LogindHelper.Action.IGNORE:
-                    active = 4;
+                    main_widget.active = 4;
                     break;
                 default:
                     break;
+            }
+        }
+
+        ~LidCloseActionComboBox () {
+            while (this.get_last_child () != null) {
+                this.get_last_child ().unparent ();
             }
         }
     }
