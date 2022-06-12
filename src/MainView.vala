@@ -94,8 +94,9 @@ public class Power.MainView : Gtk.Grid {
                 xalign = 1
             };
 
-            var als_switch = new Gtk.Switch ();
-            als_switch.halign = Gtk.Align.START;
+            var als_switch = new Gtk.Switch () {
+                halign = Gtk.Align.START
+            };
 
             settings.bind ("ambient-enabled", als_switch, "active", SettingsBindFlags.DEFAULT);
 

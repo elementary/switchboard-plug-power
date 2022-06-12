@@ -50,7 +50,7 @@ public class Power.PowerModeButton : Gtk.Box {
         saver_button_box.append (saver_label);
 
         saver_radio = new Gtk.CheckButton ();
-        saver_radio.get_style_context ().add_class ("image-button");
+        saver_radio.add_css_class ("image-button");
         saver_button_box.set_parent (saver_radio);
 
         var balanced_icon = new Gtk.Image.from_resource ("/io/elementary/switchboard/plug/power/32x32/apps/power-mode-balanced.svg") {
@@ -71,7 +71,7 @@ public class Power.PowerModeButton : Gtk.Box {
         balanced_radio = new Gtk.CheckButton () {
             group = saver_radio
         };
-        balanced_radio.get_style_context ().add_class ("image-button");
+        balanced_radio.add_css_class ("image-button");
         balanced_button_box.set_parent (balanced_radio);
 
         var performance_icon = new Gtk.Image.from_resource ("/io/elementary/switchboard/plug/power/32x32/apps/power-mode-performance.svg") {
@@ -92,7 +92,7 @@ public class Power.PowerModeButton : Gtk.Box {
         performance_radio = new Gtk.CheckButton () {
             group = saver_radio
         };
-        performance_radio.get_style_context ().add_class ("image-button");
+        performance_radio.add_css_class ("image-button");
         performance_button_box.set_parent (performance_radio);
 
         homogeneous = true;
