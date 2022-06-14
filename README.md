@@ -9,8 +9,8 @@
 You'll need the following dependencies:
 
 * libdbus-1-dev
-* libswitchboard-2.0-dev
-* libgranite-dev
+* libswitchboard-3-dev
+* libgranite-7-dev
 * libpolkit-gobject-1-dev
 * meson
 * valac
