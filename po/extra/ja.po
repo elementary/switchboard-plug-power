@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-04-03 19:29+0000\n"
-"PO-Revision-Date: 2022-04-09 01:40+0000\n"
+"PO-Revision-Date: 2022-07-16 22:55+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "power-plug-extra/ja/>\n"
@@ -48,7 +48,7 @@ msgstr "翻訳の更新"
 
 #: data/power.appdata.xml.in:26
 msgid "Add toggle for showing battery percentage in Panel"
-msgstr "パネルにバッテリー残量割合の表示を切り替えるスイッチを追加"
+msgstr "パネルにバッテリー残量割合の表示／非表示を切り替えるスイッチを追加"
 
 #: data/power.appdata.xml.in:30
 msgid "Fix a potential issue with resuming from sleep"
