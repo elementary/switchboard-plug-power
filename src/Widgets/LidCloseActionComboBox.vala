@@ -76,6 +76,8 @@ namespace Power {
                     active = previous_active;
                     return;
                 }
+            } else {
+                return;
             }
 
             LogindHelper.Action action = get_action ();
