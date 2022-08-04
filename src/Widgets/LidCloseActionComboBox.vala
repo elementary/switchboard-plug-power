@@ -88,8 +88,6 @@ namespace Power {
             } catch (Error e) {
                 warning (e.message);
             }
-
-            //  update_current_action ();
         }
 
         private void update_current_action () {
