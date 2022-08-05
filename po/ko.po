@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-04-03 19:29+0000\n"
-"PO-Revision-Date: 2019-05-25 19:03+0000\n"
+"PO-Revision-Date: 2022-08-05 16:24+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/ko/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2016-11-23 06:29+0000\n"
 
 #: data/io.elementary.switchboard.power.policy.in:10
@@ -196,7 +196,7 @@ msgstr "지원하지 않음"
 
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
-msgstr ""
+msgstr "종료 프롬프트"
 
 #: src/Widgets/PowerModeButton.vala:39
 #, fuzzy
