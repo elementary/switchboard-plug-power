@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-04-03 19:29+0000\n"
-"PO-Revision-Date: 2019-05-25 19:03+0000\n"
+"PO-Revision-Date: 2022-08-06 22:53+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/ko/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2016-11-23 06:29+0000\n"
 
 #: data/io.elementary.switchboard.power.policy.in:10
@@ -34,7 +34,7 @@ msgstr "이 설정을 바꿀 권한이 없습니다"
 
 #: src/MainView.vala:71
 msgid "Show battery percentage in Panel:"
-msgstr ""
+msgstr "패널에 배터리 백분율 표시:"
 
 #: src/MainView.vala:86
 msgid "Display brightness:"
@@ -82,7 +82,7 @@ msgstr "몇 가지 바뀐 설정은 이 컴퓨터를 다시 시작해야 적용�
 
 #: src/MainView.vala:287
 msgid "Power management mode:"
-msgstr ""
+msgstr "전력 관리 모드:"
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -130,7 +130,7 @@ msgstr "고정 덮개 닫기"
 
 #: src/Plug.vala:80
 msgid "Sleep inactivity timeout"
-msgstr ""
+msgstr "잠자기 모드 정지 시간 초과"
 
 #: src/Plug.vala:81
 msgid "Suspend inactive"
@@ -175,7 +175,7 @@ msgstr "절전"
 
 #: src/Widgets/LidCloseActionComboBox.vala:33
 msgid "Shutdown"
-msgstr "시스템 종료"
+msgstr "컴퓨터 끄기"
 
 #: src/Widgets/LidCloseActionComboBox.vala:34
 msgid "Lock"
@@ -196,21 +196,19 @@ msgstr "지원하지 않음"
 
 #: src/Widgets/ActionComboBox.vala:34
 msgid "Prompt to shutdown"
-msgstr ""
+msgstr "종료 프롬프트"
 
 #: src/Widgets/PowerModeButton.vala:39
-#, fuzzy
-#| msgid "Power"
 msgid "Power Saver"
-msgstr "전력"
+msgstr "절전"
 
 #: src/Widgets/PowerModeButton.vala:51
 msgid "Balanced"
-msgstr ""
+msgstr "밸런스"
 
 #: src/Widgets/PowerModeButton.vala:63
 msgid "Performance"
-msgstr ""
+msgstr "성능"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "화면 점점 흐리게:"
