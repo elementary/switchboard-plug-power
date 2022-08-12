@@ -120,15 +120,21 @@ public class Power.PowerModeButton : Gtk.Box {
         ((DBusProxy) pprofile).g_properties_changed.connect (update_active_profile);
 
         saver_radio.toggled.connect (() => {
-            pprofile.active_profile = "power-saver";
+            if (saver_radio.active) {
+                pprofile.active_profile = "power-saver";
+            }
         });
 
         balanced_radio.toggled.connect (() => {
-            pprofile.active_profile = "balanced";
+            if (balanced_radio.active) {
+                pprofile.active_profile = "balanced";
+            }
         });
 
         performance_radio.toggled.connect (() => {
-            pprofile.active_profile = "performance";
+            if (performance_radio.active) {
+                pprofile.active_profile = "performance";
+            }
         });
     }
 
