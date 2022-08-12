@@ -26,6 +26,8 @@ namespace Power {
 
         private Gtk.ComboBoxText main_widget;
 
+        private int previous_active;
+
         public LidCloseActionComboBox (bool dock) {
             Object (dock: dock);
         }
@@ -53,6 +55,7 @@ namespace Power {
             }
 
             update_current_action ();
+            previous_active = main_widget.active;
 
             main_widget.changed.connect (on_changed);
             main_widget.popup.connect (() => {
@@ -80,9 +83,41 @@ namespace Power {
             });
         }
 
+        private bool set_active_with_permission (int index_) {
+            // Returns true on success
+
+            var permission = MainView.get_permission ();
+            if (permission == null) {
+                return false;
+            }
+
+            if (!permission.allowed) {
+                try {
+                    permission.acquire ();
+                } catch (Error e) {
+                    warning (e.message);
+                    return false;
+                }
+            }
+
+            previous_active = main_widget.active;
+            main_widget.active = index_;
+            return true;
+        }
+
         private void on_changed () {
             var helper = LogindHelper.get_logind_helper ();
             if (helper == null) {
+                return;
+            }
+
+            if (main_widget.active != previous_active) {
+                var success = set_active_with_permission (main_widget.active);
+                if (!success) {
+                    main_widget.active = previous_active;
+                    return;
+                }
+            } else {
                 return;
             }
 
