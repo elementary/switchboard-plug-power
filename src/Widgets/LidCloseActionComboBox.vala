@@ -24,6 +24,8 @@ namespace Power {
 
         private bool dock;
 
+        private int previous_active;
+
         public LidCloseActionComboBox (bool dock) {
             this.dock = dock;
 
@@ -40,12 +42,45 @@ namespace Power {
 
             hexpand = true;
             update_current_action ();
+            previous_active = active;
             changed.connect (on_changed);
+        }
+
+        private bool set_active_with_permission (int index_) {
+            // Returns true on success
+
+            var permission = MainView.get_permission ();
+            if (permission == null) {
+                return false;
+            }
+
+            if (!permission.allowed) {
+                try {
+                    permission.acquire ();
+                } catch (Error e) {
+                    warning (e.message);
+                    return false;
+                }
+            }
+
+            previous_active = active;
+            active = index_;
+            return true;
         }
 
         private void on_changed () {
             var helper = LogindHelper.get_logind_helper ();
             if (helper == null) {
+                return;
+            }
+
+            if (active != previous_active) {
+                var success = set_active_with_permission (active);
+                if (!success) {
+                    active = previous_active;
+                    return;
+                }
+            } else {
                 return;
             }
 
@@ -59,8 +94,6 @@ namespace Power {
             } catch (Error e) {
                 warning (e.message);
             }
-
-            update_current_action ();
         }
 
         private void update_current_action () {
