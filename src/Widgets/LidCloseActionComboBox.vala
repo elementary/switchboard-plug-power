@@ -50,6 +50,10 @@ namespace Power {
             // Returns true on success
 
             var permission = MainView.get_permission ();
+            if (permission == null) {
+                return false;
+            }
+
             if (!permission.allowed) {
                 try {
                     permission.acquire ();
