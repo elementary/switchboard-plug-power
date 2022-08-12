@@ -21,7 +21,6 @@ public class Power.MainView : Gtk.Grid {
     public Battery battery { get; private set; }
     public Gtk.Stack stack { get; private set; }
 
-    private const string NO_PERMISSION_STRING = _("You do not have permission to change this");
     private const string SETTINGS_DAEMON_NAME = "org.gnome.SettingsDaemon.Power";
     private const string SETTINGS_DAEMON_PATH = "/org/gnome/SettingsDaemon/Power";
 
@@ -138,45 +137,10 @@ public class Power.MainView : Gtk.Grid {
             label_size.add_widget (lid_closed_label);
             label_size.add_widget (lid_dock_label);
 
-            var lock_image = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
-                sensitive = false,
-                tooltip_text = NO_PERMISSION_STRING,
-                pixel_size = 16
-            };
-
-            var lock_image2 = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
-                sensitive = false,
-                tooltip_text = NO_PERMISSION_STRING,
-                pixel_size = 16
-            };
-
             main_grid.attach (lid_closed_label, 0, 5);
             main_grid.attach (lid_closed_box, 1, 5);
-            main_grid.attach (lock_image2, 2, 5);
             main_grid.attach (lid_dock_label, 0, 6);
             main_grid.attach (lid_dock_box, 1, 6);
-            main_grid.attach (lock_image, 2, 6);
-
-            var lock_button = new Gtk.LockButton (get_permission ());
-
-            var permission_label = new Gtk.Label (_("Some settings require administrator rights to be changed"));
-
-            var permission_infobar = new Gtk.InfoBar () {
-                message_type = Gtk.MessageType.INFO
-            };
-            permission_infobar.add_child (permission_label);
-            permission_infobar.add_child (lock_button);
-
-            attach (permission_infobar, 0, 0);
-
-            var permission = get_permission ();
-            permission.bind_property ("allowed", lid_closed_box, "sensitive", GLib.BindingFlags.SYNC_CREATE);
-            permission.bind_property ("allowed", lid_closed_label, "sensitive", GLib.BindingFlags.SYNC_CREATE);
-            permission.bind_property ("allowed", lid_dock_box, "sensitive", GLib.BindingFlags.SYNC_CREATE);
-            permission.bind_property ("allowed", lid_dock_label, "sensitive", GLib.BindingFlags.SYNC_CREATE);
-            permission.bind_property ("allowed", lock_image, "visible", GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN);
-            permission.bind_property ("allowed", lock_image2, "visible", GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN);
-            permission.bind_property ("allowed", permission_infobar, "revealed", GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN);
         }
 
         var screen_timeout_label = new Gtk.Label (_("Turn off display when inactive for:")) {
@@ -313,7 +277,7 @@ public class Power.MainView : Gtk.Grid {
         stack_switcher.visible = stack.observe_children ().get_n_items () > 1;
     }
 
-    private static Polkit.Permission? get_permission () {
+    public static Polkit.Permission? get_permission () {
         if (permission != null) {
             return permission;
         }

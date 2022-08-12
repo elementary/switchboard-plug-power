@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-03 19:29+0000\n"
+"POT-Creation-Date: 2022-08-12 10:54+0000\n"
 "PO-Revision-Date: 2019-08-30 21:22+0000\n"
 "Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
@@ -52,35 +52,31 @@ msgstr "Je fermo de la platekrano:"
 msgid "When lid is closed with external monitor:"
 msgstr "Je fermo de la platekrano, kun ekstera ekrano:"
 
-#: src/MainView.vala:157
-msgid "Some settings require administrator rights to be changed"
-msgstr "Kelkaj agordaj ŝanĝoj postulas administrajn permesojn"
-
-#: src/MainView.vala:179
+#: src/MainView.vala:144
 msgid "Turn off display when inactive for:"
 msgstr "Malŝalti ekranon kiam neaktiva dum:"
 
-#: src/MainView.vala:186
+#: src/MainView.vala:151
 msgid "Power button:"
 msgstr "Ŝalta butono:"
 
-#: src/MainView.vala:198 src/MainView.vala:224
+#: src/MainView.vala:163 src/MainView.vala:189
 msgid "Suspend when inactive for:"
 msgstr "Paŭziĝi kiam neaktiva dum:"
 
-#: src/MainView.vala:216
+#: src/MainView.vala:181
 msgid "Plugged In"
 msgstr "Konektita"
 
-#: src/MainView.vala:242
+#: src/MainView.vala:207
 msgid "On Battery"
 msgstr "Uzante baterion"
 
-#: src/MainView.vala:267
+#: src/MainView.vala:232
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Kelkaj ŝanĝoj ne okazos ĝis vi restartigos ĉi tiun komputilon"
 
-#: src/MainView.vala:287
+#: src/MainView.vala:252
 msgid "Power management mode:"
 msgstr ""
 
@@ -168,29 +164,29 @@ msgstr "1 horo"
 msgid "2 hours"
 msgstr "2 horoj"
 
-#: src/Widgets/LidCloseActionComboBox.vala:32
+#: src/Widgets/LidCloseActionComboBox.vala:34
 #: src/Widgets/ActionComboBox.vala:33
 msgid "Suspend"
 msgstr "Paŭzigi"
 
-#: src/Widgets/LidCloseActionComboBox.vala:33
+#: src/Widgets/LidCloseActionComboBox.vala:35
 msgid "Shutdown"
 msgstr "Malŝalti"
 
-#: src/Widgets/LidCloseActionComboBox.vala:34
+#: src/Widgets/LidCloseActionComboBox.vala:36
 msgid "Lock"
 msgstr "Ŝlosi"
 
-#: src/Widgets/LidCloseActionComboBox.vala:35
+#: src/Widgets/LidCloseActionComboBox.vala:37
 msgid "Halt"
 msgstr "Ŝalti"
 
-#: src/Widgets/LidCloseActionComboBox.vala:36
+#: src/Widgets/LidCloseActionComboBox.vala:38
 #: src/Widgets/ActionComboBox.vala:32
 msgid "Do nothing"
 msgstr "Fari nenion"
 
-#: src/Widgets/LidCloseActionComboBox.vala:38
+#: src/Widgets/LidCloseActionComboBox.vala:40
 msgid "Not supported"
 msgstr "Ne subtenata"
 
@@ -211,6 +207,9 @@ msgstr ""
 #: src/Widgets/PowerModeButton.vala:63
 msgid "Performance"
 msgstr ""
+
+#~ msgid "Some settings require administrator rights to be changed"
+#~ msgstr "Kelkaj agordaj ŝanĝoj postulas administrajn permesojn"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Malheligi ekranon kiam neaktiva:"

@@ -53,7 +53,31 @@ namespace Power {
             }
 
             update_current_action ();
+
             main_widget.changed.connect (on_changed);
+            main_widget.popup.connect (() => {
+                var permission = MainView.get_permission ();
+                if (permission == null) {
+                    critical ("Permission is null");
+                    return;
+                }
+    
+                if (!permission.allowed) {
+                    try {
+                        permission.acquire ();
+                    } catch (Error e) {
+                        warning (e.message);
+                        return;
+                    }
+                }
+            });
+            // main_widget.popdown (); does not work in connect
+            main_widget.popup.connect_after (() => {
+                var permission = MainView.get_permission ();
+                if (permission == null || !permission.allowed) {
+                    main_widget.popdown ();
+                }
+            });
         }
 
         private void on_changed () {
@@ -72,8 +96,6 @@ namespace Power {
             } catch (Error e) {
                 warning (e.message);
             }
-
-            update_current_action ();
         }
 
         private void update_current_action () {

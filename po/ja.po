@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-03 19:29+0000\n"
+"POT-Creation-Date: 2022-08-12 10:54+0000\n"
 "PO-Revision-Date: 2022-04-04 21:20+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -47,35 +47,31 @@ msgstr "カバーが閉じられたとき:"
 msgid "When lid is closed with external monitor:"
 msgstr "外部モニターとカバーが閉じられたとき:"
 
-#: src/MainView.vala:157
-msgid "Some settings require administrator rights to be changed"
-msgstr "一部の設定変更には管理者権限が必要です"
-
-#: src/MainView.vala:179
+#: src/MainView.vala:144
 msgid "Turn off display when inactive for:"
 msgstr "非アクティブ時はディスプレイをオフにする:"
 
-#: src/MainView.vala:186
+#: src/MainView.vala:151
 msgid "Power button:"
 msgstr "電源ボタン:"
 
-#: src/MainView.vala:198 src/MainView.vala:224
+#: src/MainView.vala:163 src/MainView.vala:189
 msgid "Suspend when inactive for:"
 msgstr "非アクティブ時にサスペンド:"
 
-#: src/MainView.vala:216
+#: src/MainView.vala:181
 msgid "Plugged In"
 msgstr "電源接続時"
 
-#: src/MainView.vala:242
+#: src/MainView.vala:207
 msgid "On Battery"
 msgstr "バッテリー時"
 
-#: src/MainView.vala:267
+#: src/MainView.vala:232
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "一部の変更は、このコンピューターの再起動後に反映されます"
 
-#: src/MainView.vala:287
+#: src/MainView.vala:252
 msgid "Power management mode:"
 msgstr "電源管理モード:"
 
@@ -163,29 +159,29 @@ msgstr "1時間"
 msgid "2 hours"
 msgstr "2時間"
 
-#: src/Widgets/LidCloseActionComboBox.vala:32
+#: src/Widgets/LidCloseActionComboBox.vala:34
 #: src/Widgets/ActionComboBox.vala:33
 msgid "Suspend"
 msgstr "サスペンド"
 
-#: src/Widgets/LidCloseActionComboBox.vala:33
+#: src/Widgets/LidCloseActionComboBox.vala:35
 msgid "Shutdown"
 msgstr "シャットダウン"
 
-#: src/Widgets/LidCloseActionComboBox.vala:34
+#: src/Widgets/LidCloseActionComboBox.vala:36
 msgid "Lock"
 msgstr "ロック"
 
-#: src/Widgets/LidCloseActionComboBox.vala:35
+#: src/Widgets/LidCloseActionComboBox.vala:37
 msgid "Halt"
 msgstr "終了"
 
-#: src/Widgets/LidCloseActionComboBox.vala:36
+#: src/Widgets/LidCloseActionComboBox.vala:38
 #: src/Widgets/ActionComboBox.vala:32
 msgid "Do nothing"
 msgstr "何もしない"
 
-#: src/Widgets/LidCloseActionComboBox.vala:38
+#: src/Widgets/LidCloseActionComboBox.vala:40
 msgid "Not supported"
 msgstr "非対応"
 
@@ -204,6 +200,9 @@ msgstr "バランス"
 #: src/Widgets/PowerModeButton.vala:63
 msgid "Performance"
 msgstr "パフォーマンス"
+
+#~ msgid "Some settings require administrator rights to be changed"
+#~ msgstr "一部の設定変更には管理者権限が必要です"
 
 #~ msgid "Not Available!"
 #~ msgstr "利用できません"

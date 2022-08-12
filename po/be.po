@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-03 19:29+0000\n"
+"POT-Creation-Date: 2022-08-12 10:54+0000\n"
 "PO-Revision-Date: 2016-02-14 09:33+0000\n"
 "Last-Translator: Dmitry Taranovich <vorbissmcgregor@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,35 +45,31 @@ msgstr ""
 msgid "When lid is closed with external monitor:"
 msgstr ""
 
-#: src/MainView.vala:157
-msgid "Some settings require administrator rights to be changed"
-msgstr ""
-
-#: src/MainView.vala:179
+#: src/MainView.vala:144
 msgid "Turn off display when inactive for:"
 msgstr ""
 
-#: src/MainView.vala:186
+#: src/MainView.vala:151
 msgid "Power button:"
 msgstr "Кнопка сілкавання:"
 
-#: src/MainView.vala:198 src/MainView.vala:224
+#: src/MainView.vala:163 src/MainView.vala:189
 msgid "Suspend when inactive for:"
 msgstr ""
 
-#: src/MainView.vala:216
+#: src/MainView.vala:181
 msgid "Plugged In"
 msgstr "Падключана"
 
-#: src/MainView.vala:242
+#: src/MainView.vala:207
 msgid "On Battery"
 msgstr "Ад батарэі"
 
-#: src/MainView.vala:267
+#: src/MainView.vala:232
 msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
 
-#: src/MainView.vala:287
+#: src/MainView.vala:252
 msgid "Power management mode:"
 msgstr ""
 
@@ -163,29 +159,29 @@ msgstr "1 гадзіна"
 msgid "2 hours"
 msgstr "2 гадзіны"
 
-#: src/Widgets/LidCloseActionComboBox.vala:32
+#: src/Widgets/LidCloseActionComboBox.vala:34
 #: src/Widgets/ActionComboBox.vala:33
 msgid "Suspend"
 msgstr "Чаканне"
 
-#: src/Widgets/LidCloseActionComboBox.vala:33
+#: src/Widgets/LidCloseActionComboBox.vala:35
 msgid "Shutdown"
 msgstr "Выключыць камп'ютар"
 
-#: src/Widgets/LidCloseActionComboBox.vala:34
+#: src/Widgets/LidCloseActionComboBox.vala:36
 msgid "Lock"
 msgstr ""
 
-#: src/Widgets/LidCloseActionComboBox.vala:35
+#: src/Widgets/LidCloseActionComboBox.vala:37
 msgid "Halt"
 msgstr ""
 
-#: src/Widgets/LidCloseActionComboBox.vala:36
+#: src/Widgets/LidCloseActionComboBox.vala:38
 #: src/Widgets/ActionComboBox.vala:32
 msgid "Do nothing"
 msgstr "Нічога не рабіць"
 
-#: src/Widgets/LidCloseActionComboBox.vala:38
+#: src/Widgets/LidCloseActionComboBox.vala:40
 msgid "Not supported"
 msgstr ""
 

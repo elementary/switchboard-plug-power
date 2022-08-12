@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-03 19:29+0000\n"
+"POT-Creation-Date: 2022-08-12 10:54+0000\n"
 "PO-Revision-Date: 2018-10-21 12:06+0000\n"
 "Last-Translator: Fredrik B <frbo9002@gmail.com>\n"
 "Language-Team: Swedish <https://weblate.elementary.io/projects/switchboard/"
@@ -52,35 +52,31 @@ msgstr "När skärmen fälls ned:"
 msgid "When lid is closed with external monitor:"
 msgstr "När skärmen fälls ned med extern bildskärm:"
 
-#: src/MainView.vala:157
-msgid "Some settings require administrator rights to be changed"
-msgstr "Vissa inställningar kräver administratörsrättigheter för att ändras"
-
-#: src/MainView.vala:179
+#: src/MainView.vala:144
 msgid "Turn off display when inactive for:"
 msgstr "Stäng av skärm vid inaktivitet i:"
 
-#: src/MainView.vala:186
+#: src/MainView.vala:151
 msgid "Power button:"
 msgstr "Avstängningsknapp:"
 
-#: src/MainView.vala:198 src/MainView.vala:224
+#: src/MainView.vala:163 src/MainView.vala:189
 msgid "Suspend when inactive for:"
 msgstr "Vänteläge vid inaktivitet i:"
 
-#: src/MainView.vala:216
+#: src/MainView.vala:181
 msgid "Plugged In"
 msgstr "Inkopplad"
 
-#: src/MainView.vala:242
+#: src/MainView.vala:207
 msgid "On Battery"
 msgstr "På batteri"
 
-#: src/MainView.vala:267
+#: src/MainView.vala:232
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Vissa ändringar verkställs inte förren du startar om datorn"
 
-#: src/MainView.vala:287
+#: src/MainView.vala:252
 msgid "Power management mode:"
 msgstr ""
 
@@ -168,29 +164,29 @@ msgstr "En timme"
 msgid "2 hours"
 msgstr "2 timmar"
 
-#: src/Widgets/LidCloseActionComboBox.vala:32
+#: src/Widgets/LidCloseActionComboBox.vala:34
 #: src/Widgets/ActionComboBox.vala:33
 msgid "Suspend"
 msgstr "Vänteläge"
 
-#: src/Widgets/LidCloseActionComboBox.vala:33
+#: src/Widgets/LidCloseActionComboBox.vala:35
 msgid "Shutdown"
 msgstr "Stäng av"
 
-#: src/Widgets/LidCloseActionComboBox.vala:34
+#: src/Widgets/LidCloseActionComboBox.vala:36
 msgid "Lock"
 msgstr "Lås"
 
-#: src/Widgets/LidCloseActionComboBox.vala:35
+#: src/Widgets/LidCloseActionComboBox.vala:37
 msgid "Halt"
 msgstr "Stopp"
 
-#: src/Widgets/LidCloseActionComboBox.vala:36
+#: src/Widgets/LidCloseActionComboBox.vala:38
 #: src/Widgets/ActionComboBox.vala:32
 msgid "Do nothing"
 msgstr "Gör ingenting"
 
-#: src/Widgets/LidCloseActionComboBox.vala:38
+#: src/Widgets/LidCloseActionComboBox.vala:40
 msgid "Not supported"
 msgstr "Stöds ej"
 
@@ -211,6 +207,9 @@ msgstr ""
 #: src/Widgets/PowerModeButton.vala:63
 msgid "Performance"
 msgstr ""
+
+#~ msgid "Some settings require administrator rights to be changed"
+#~ msgstr "Vissa inställningar kräver administratörsrättigheter för att ändras"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Dämpa skärmens ljusstyrka vid inaktivitet:"
