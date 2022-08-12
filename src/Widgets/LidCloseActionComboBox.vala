@@ -61,7 +61,7 @@ namespace Power {
                     critical ("Permission is null");
                     return;
                 }
-    
+
                 if (!permission.allowed) {
                     try {
                         permission.acquire ();
