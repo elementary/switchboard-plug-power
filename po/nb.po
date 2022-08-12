@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-03 19:29+0000\n"
+"POT-Creation-Date: 2022-08-12 10:54+0000\n"
 "PO-Revision-Date: 2022-01-10 21:58+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
@@ -52,35 +52,31 @@ msgstr "Når lokket lukkes:"
 msgid "When lid is closed with external monitor:"
 msgstr "Når lokket lukkes med ekstern skjerm:"
 
-#: src/MainView.vala:157
-msgid "Some settings require administrator rights to be changed"
-msgstr "Noen innstillinger krever administrasjonsrettigheter for å endres"
-
-#: src/MainView.vala:179
+#: src/MainView.vala:144
 msgid "Turn off display when inactive for:"
 msgstr "Skru av skjerm når inaktiv i:"
 
-#: src/MainView.vala:186
+#: src/MainView.vala:151
 msgid "Power button:"
 msgstr "Av/på-knapp:"
 
-#: src/MainView.vala:198 src/MainView.vala:224
+#: src/MainView.vala:163 src/MainView.vala:189
 msgid "Suspend when inactive for:"
 msgstr "Hvilemodus hvis inaktiv i:"
 
-#: src/MainView.vala:216
+#: src/MainView.vala:181
 msgid "Plugged In"
 msgstr "Tilkoblet nettspenning"
 
-#: src/MainView.vala:242
+#: src/MainView.vala:207
 msgid "On Battery"
 msgstr "På batteri"
 
-#: src/MainView.vala:267
+#: src/MainView.vala:232
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Noen endringer trår ikke i kraft før omstart av maskinen"
 
-#: src/MainView.vala:287
+#: src/MainView.vala:252
 msgid "Power management mode:"
 msgstr "Effekthåndteringsmodul:"
 
@@ -171,29 +167,29 @@ msgstr "1 time"
 msgid "2 hours"
 msgstr "2 timer"
 
-#: src/Widgets/LidCloseActionComboBox.vala:32
+#: src/Widgets/LidCloseActionComboBox.vala:34
 #: src/Widgets/ActionComboBox.vala:33
 msgid "Suspend"
 msgstr "Hvilemodus"
 
-#: src/Widgets/LidCloseActionComboBox.vala:33
+#: src/Widgets/LidCloseActionComboBox.vala:35
 msgid "Shutdown"
 msgstr "Slå av"
 
-#: src/Widgets/LidCloseActionComboBox.vala:34
+#: src/Widgets/LidCloseActionComboBox.vala:36
 msgid "Lock"
 msgstr "Lås"
 
-#: src/Widgets/LidCloseActionComboBox.vala:35
+#: src/Widgets/LidCloseActionComboBox.vala:37
 msgid "Halt"
 msgstr "Stans"
 
-#: src/Widgets/LidCloseActionComboBox.vala:36
+#: src/Widgets/LidCloseActionComboBox.vala:38
 #: src/Widgets/ActionComboBox.vala:32
 msgid "Do nothing"
 msgstr "Ikke gjør noe"
 
-#: src/Widgets/LidCloseActionComboBox.vala:38
+#: src/Widgets/LidCloseActionComboBox.vala:40
 msgid "Not supported"
 msgstr "Ikke støttet"
 
@@ -216,6 +212,9 @@ msgstr "Balansert"
 #| msgid "High Performance"
 msgid "Performance"
 msgstr "Høy ytelse"
+
+#~ msgid "Some settings require administrator rights to be changed"
+#~ msgstr "Noen innstillinger krever administrasjonsrettigheter for å endres"
 
 #~ msgid "Not Available!"
 #~ msgstr "Ikke tilgjengelig."

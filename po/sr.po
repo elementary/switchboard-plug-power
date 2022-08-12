@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-power-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-03 19:29+0000\n"
+"POT-Creation-Date: 2022-08-12 10:54+0000\n"
 "PO-Revision-Date: 2021-02-16 02:40+0000\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <https://l10n.elementary.io/projects/switchboard/"
@@ -53,35 +53,31 @@ msgstr "Кад је поклопац спуштен:"
 msgid "When lid is closed with external monitor:"
 msgstr "Када је поклопац спуштен са спољним монитором:"
 
-#: src/MainView.vala:157
-msgid "Some settings require administrator rights to be changed"
-msgstr "Нека подешавања захтевају администраторска права да би се изменила"
-
-#: src/MainView.vala:179
+#: src/MainView.vala:144
 msgid "Turn off display when inactive for:"
 msgstr "Искључи екран када је нерадан након:"
 
-#: src/MainView.vala:186
+#: src/MainView.vala:151
 msgid "Power button:"
 msgstr "Дугме напајања:"
 
-#: src/MainView.vala:198 src/MainView.vala:224
+#: src/MainView.vala:163 src/MainView.vala:189
 msgid "Suspend when inactive for:"
 msgstr "Обустави када је нерадан након:"
 
-#: src/MainView.vala:216
+#: src/MainView.vala:181
 msgid "Plugged In"
 msgstr "На ел. мрежи"
 
-#: src/MainView.vala:242
+#: src/MainView.vala:207
 msgid "On Battery"
 msgstr "На батерији"
 
-#: src/MainView.vala:267
+#: src/MainView.vala:232
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Неке промене неће ступити на снагу све док поново не покренете рачунар"
 
-#: src/MainView.vala:287
+#: src/MainView.vala:252
 msgid "Power management mode:"
 msgstr ""
 
@@ -169,29 +165,29 @@ msgstr "1 сат"
 msgid "2 hours"
 msgstr "2 сата"
 
-#: src/Widgets/LidCloseActionComboBox.vala:32
+#: src/Widgets/LidCloseActionComboBox.vala:34
 #: src/Widgets/ActionComboBox.vala:33
 msgid "Suspend"
 msgstr "Обустави"
 
-#: src/Widgets/LidCloseActionComboBox.vala:33
+#: src/Widgets/LidCloseActionComboBox.vala:35
 msgid "Shutdown"
 msgstr "Угаси"
 
-#: src/Widgets/LidCloseActionComboBox.vala:34
+#: src/Widgets/LidCloseActionComboBox.vala:36
 msgid "Lock"
 msgstr "Закључај"
 
-#: src/Widgets/LidCloseActionComboBox.vala:35
+#: src/Widgets/LidCloseActionComboBox.vala:37
 msgid "Halt"
 msgstr "Заустави"
 
-#: src/Widgets/LidCloseActionComboBox.vala:36
+#: src/Widgets/LidCloseActionComboBox.vala:38
 #: src/Widgets/ActionComboBox.vala:32
 msgid "Do nothing"
 msgstr "Не ради ништа"
 
-#: src/Widgets/LidCloseActionComboBox.vala:38
+#: src/Widgets/LidCloseActionComboBox.vala:40
 msgid "Not supported"
 msgstr "Није подржано"
 
@@ -212,6 +208,9 @@ msgstr ""
 #: src/Widgets/PowerModeButton.vala:63
 msgid "Performance"
 msgstr ""
+
+#~ msgid "Some settings require administrator rights to be changed"
+#~ msgstr "Нека подешавања захтевају администраторска права да би се изменила"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Затамни екран када је нерадан:"

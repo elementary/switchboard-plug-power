@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-03 19:29+0000\n"
+"POT-Creation-Date: 2022-08-12 10:54+0000\n"
 "PO-Revision-Date: 2016-07-25 15:35+0000\n"
 "Last-Translator: Адмирал АнимЕ <Unknown>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
@@ -50,38 +50,33 @@ msgstr "Когато капака е затворен:"
 msgid "When lid is closed with external monitor:"
 msgstr ""
 
-#: src/MainView.vala:157
-msgid "Some settings require administrator rights to be changed"
-msgstr ""
-"Някои настройки изискват правомощия на администратор, за да бъдат променени"
-
-#: src/MainView.vala:179
+#: src/MainView.vala:144
 msgid "Turn off display when inactive for:"
 msgstr "Изключване на екрана при бездействие за:"
 
-#: src/MainView.vala:186
+#: src/MainView.vala:151
 msgid "Power button:"
 msgstr "Копче за включване:"
 
-#: src/MainView.vala:198 src/MainView.vala:224
+#: src/MainView.vala:163 src/MainView.vala:189
 #, fuzzy
 msgid "Suspend when inactive for:"
 msgstr "Изключване на екрана при бездействие за:"
 
-#: src/MainView.vala:216
+#: src/MainView.vala:181
 msgid "Plugged In"
 msgstr "Зарядно включено"
 
-#: src/MainView.vala:242
+#: src/MainView.vala:207
 msgid "On Battery"
 msgstr "На батерия"
 
-#: src/MainView.vala:267
+#: src/MainView.vala:232
 msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
 "Някои промени няма да бъдат приложени, докато не пуснете повторно компютъра"
 
-#: src/MainView.vala:287
+#: src/MainView.vala:252
 msgid "Power management mode:"
 msgstr ""
 
@@ -174,29 +169,29 @@ msgstr "1 час"
 msgid "2 hours"
 msgstr "2 часа"
 
-#: src/Widgets/LidCloseActionComboBox.vala:32
+#: src/Widgets/LidCloseActionComboBox.vala:34
 #: src/Widgets/ActionComboBox.vala:33
 msgid "Suspend"
 msgstr "Приспиване"
 
-#: src/Widgets/LidCloseActionComboBox.vala:33
+#: src/Widgets/LidCloseActionComboBox.vala:35
 msgid "Shutdown"
 msgstr "Изключване"
 
-#: src/Widgets/LidCloseActionComboBox.vala:34
+#: src/Widgets/LidCloseActionComboBox.vala:36
 msgid "Lock"
 msgstr "Заключване"
 
-#: src/Widgets/LidCloseActionComboBox.vala:35
+#: src/Widgets/LidCloseActionComboBox.vala:37
 msgid "Halt"
 msgstr ""
 
-#: src/Widgets/LidCloseActionComboBox.vala:36
+#: src/Widgets/LidCloseActionComboBox.vala:38
 #: src/Widgets/ActionComboBox.vala:32
 msgid "Do nothing"
 msgstr "Не прави нищо"
 
-#: src/Widgets/LidCloseActionComboBox.vala:38
+#: src/Widgets/LidCloseActionComboBox.vala:40
 msgid "Not supported"
 msgstr "Не се поддържа"
 
@@ -217,6 +212,11 @@ msgstr ""
 #: src/Widgets/PowerModeButton.vala:63
 msgid "Performance"
 msgstr ""
+
+#~ msgid "Some settings require administrator rights to be changed"
+#~ msgstr ""
+#~ "Някои настройки изискват правомощия на администратор, за да бъдат "
+#~ "променени"
 
 #~ msgid "Dim display when inactive:"
 #~ msgstr "Затъмняване на екрана при бездействие:"
