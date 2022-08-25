@@ -26,7 +26,7 @@ public class Power.MainView : Gtk.Grid {
     public bool natural_scroll_mouse { get; set; }
     private double total_x_delta = 0;
     private double total_y_delta= 0;
-    private const double SCROLL_MULTIPLIER = 5.0;
+    private const double BRIGHTNESS_STEP = 5;
 
     private const string SETTINGS_DAEMON_NAME = "org.gnome.SettingsDaemon.Power";
     private const string SETTINGS_DAEMON_PATH = "/org/gnome/SettingsDaemon/Power";
@@ -117,7 +117,7 @@ public class Power.MainView : Gtk.Grid {
             scale.scroll_event.connect ((e) => {
                 double dir = 0.0;
                 if (handle_scroll_event (e, out dir)) {
-                    scale.set_value (Math.round ((scale.get_value () + dir * SCROLL_MULTIPLIER)));
+                    scale.set_value ((int) (Math.round (dir) * BRIGHTNESS_STEP));
                 }
 
                 return true;
@@ -385,17 +385,16 @@ public class Power.MainView : Gtk.Grid {
 
         switch (e.direction) {
             case Gdk.ScrollDirection.SMOOTH:
-                    var abs_x = double.max (e.delta_x.abs (), 0.0001);
-                    var abs_y = double.max (e.delta_y.abs (), 0.0001);
+                var abs_x = double.max (e.delta_x.abs (), 0.0001);
+                var abs_y = double.max (e.delta_y.abs (), 0.0001);
 
-                    if (abs_y / abs_x > 2.0) {
-                        total_y_delta += e.delta_y;
-                    } else if (abs_x / abs_y > 2.0) {
-                        total_x_delta += e.delta_x;
-                    }
+                if (abs_y / abs_x > 2.0) {
+                    total_y_delta += e.delta_y;
+                } else if (abs_x / abs_y > 2.0) {
+                    total_x_delta += e.delta_x;
+                }
 
                 break;
-
             case Gdk.ScrollDirection.UP:
                 total_y_delta = -1.0;
                 break;
