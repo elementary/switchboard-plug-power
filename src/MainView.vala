@@ -27,7 +27,6 @@ public class Power.MainView : Gtk.Grid {
     private double total_x_delta = 0;
     private double total_y_delta= 0;
     private const double BRIGHTNESS_STEP = 5.0;
-    private double scale_value;
 
     private const string SETTINGS_DAEMON_NAME = "org.gnome.SettingsDaemon.Power";
     private const string SETTINGS_DAEMON_PATH = "/org/gnome/SettingsDaemon/Power";
@@ -115,20 +114,16 @@ public class Power.MainView : Gtk.Grid {
             var scale_scroll_controller = new Gtk.EventControllerLegacy ();
 
             scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 100, 10) {
-                hexpand = true,
-                width_request = 480
+                hexpand = true
             };
             scale.add_controller (scale_scroll_controller);
 
-            // Since you can't disable scroll event on Gtk.Scale in GTK4,
-            // Every scroll event sets scroll.value to latest saved value
             scale_scroll_controller.event.connect ((e) => {
                 if (e.get_event_type () == Gdk.EventType.SCROLL) {
                     double dir = 0.0;
                     if (handle_scroll_event ((Gdk.ScrollEvent) e, out dir)) {
-                        scale_value = scale.get_value () + (int) (Math.round (dir) * BRIGHTNESS_STEP);
+                        scale.set_value (scale.get_value () + (int) (Math.round (dir) * BRIGHTNESS_STEP));
                     }
-                    scale.set_value (scale_value);
 
                     return Gdk.EVENT_STOP;
                 }
@@ -137,7 +132,6 @@ public class Power.MainView : Gtk.Grid {
             });
 
             scale.set_value (screen.brightness);
-            scale_value = screen.brightness;
 
             scale.value_changed.connect (on_scale_value_changed);
             ((DBusProxy)screen).g_properties_changed.connect (on_screen_properties_changed);
