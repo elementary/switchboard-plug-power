@@ -128,9 +128,12 @@ public class Power.MainView : Gtk.Grid {
                     if (handle_scroll_event ((Gdk.ScrollEvent) e, out dir)) {
                         scale_value = scale.get_value () + (int) (Math.round (dir) * BRIGHTNESS_STEP);
                     }
+                    scale.set_value (scale_value);
+
+                    return Gdk.EVENT_STOP;
                 }
 
-                scale.set_value (scale_value);
+                return Gdk.EVENT_PROPAGATE;
             });
 
             scale.set_value (screen.brightness);
