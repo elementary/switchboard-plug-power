@@ -111,7 +111,7 @@ public class Power.MainView : Gtk.Grid {
             };
 
             settings.bind ("ambient-enabled", als_switch, "active", SettingsBindFlags.DEFAULT);
-            
+
             var scale_scroll_controller = new Gtk.EventControllerLegacy ();
 
             scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 100, 10) {
@@ -119,7 +119,7 @@ public class Power.MainView : Gtk.Grid {
                 width_request = 480
             };
             scale.add_controller (scale_scroll_controller);
-            
+
             // Since you can't disable scroll event on Gtk.Scale in GTK4,
             // Every scroll event sets scroll.value to latest saved value
             scale_scroll_controller.event.connect ((e) => {
@@ -312,7 +312,11 @@ public class Power.MainView : Gtk.Grid {
         }
 
         try {
-            permission = new Polkit.Permission.sync ("io.elementary.switchboard.power.administration", new Polkit.UnixProcess (Posix.getpid ()));
+            permission = new Polkit.Permission.sync (
+                "io.elementary.switchboard.power.administration",
+                new Polkit.UnixProcess (Posix.getpid ())
+            );
+
             return permission;
         } catch (Error e) {
             critical (e.message);
