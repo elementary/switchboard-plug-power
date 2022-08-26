@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-12 10:54+0000\n"
+"POT-Creation-Date: 2022-08-26 10:25+0000\n"
 "PO-Revision-Date: 2022-01-10 21:58+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
@@ -28,55 +28,51 @@ msgstr "Spravovat nastavení napájení"
 msgid "Authentication is required to manage power settings"
 msgstr "Pro nastavení napájení je vyžadováno ověření uživatele"
 
-#: src/MainView.vala:24
-msgid "You do not have permission to change this"
-msgstr "Nemáte oprávnění k této změně"
-
-#: src/MainView.vala:71
+#: src/MainView.vala:82
 msgid "Show battery percentage in Panel:"
 msgstr "Zobrazovat na panelu procento nabití akumulátoru:"
 
-#: src/MainView.vala:86
+#: src/MainView.vala:97
 msgid "Display brightness:"
 msgstr "Jas displeje:"
 
-#: src/MainView.vala:91
+#: src/MainView.vala:102
 msgid "Automatically adjust brightness:"
 msgstr "Automaticky přizpůsobit jas:"
 
-#: src/MainView.vala:121
+#: src/MainView.vala:141
 msgid "When lid is closed:"
 msgstr "Když je víko zavřeno:"
 
-#: src/MainView.vala:128
+#: src/MainView.vala:148
 msgid "When lid is closed with external monitor:"
 msgstr "Když je víko zavřeno a připojen externí monitor:"
 
-#: src/MainView.vala:144
+#: src/MainView.vala:164
 msgid "Turn off display when inactive for:"
 msgstr "Vypnout obrazovku, když je neaktivní po dobu:"
 
-#: src/MainView.vala:151
+#: src/MainView.vala:171
 msgid "Power button:"
 msgstr "Tlačítko napájení:"
 
-#: src/MainView.vala:163 src/MainView.vala:189
+#: src/MainView.vala:183 src/MainView.vala:209
 msgid "Suspend when inactive for:"
 msgstr "Uspat, když je neaktivní po dobu:"
 
-#: src/MainView.vala:181
+#: src/MainView.vala:201
 msgid "Plugged In"
 msgstr "Připojeno"
 
-#: src/MainView.vala:207
+#: src/MainView.vala:227
 msgid "On Battery"
 msgstr "Z baterie"
 
-#: src/MainView.vala:232
+#: src/MainView.vala:252
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Některé změny se neprojeví dokud nerestartujete tento počítač"
 
-#: src/MainView.vala:252
+#: src/MainView.vala:272
 msgid "Power management mode:"
 msgstr "Režim správy napájení:"
 
@@ -207,6 +203,9 @@ msgstr "Vyváženo"
 #| msgid "High Performance"
 msgid "Performance"
 msgstr "Vysoký výkon"
+
+#~ msgid "You do not have permission to change this"
+#~ msgstr "Nemáte oprávnění k této změně"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "Některá nastavení vyžadují oprávnění na úrovni správce systému"

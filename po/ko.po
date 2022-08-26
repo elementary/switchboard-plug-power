@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-12 10:54+0000\n"
+"POT-Creation-Date: 2022-08-26 10:25+0000\n"
 "PO-Revision-Date: 2022-08-06 22:53+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
@@ -28,55 +28,51 @@ msgstr "전력 설정 관리"
 msgid "Authentication is required to manage power settings"
 msgstr "전력 설정 관리에는 인증이 필요합니다"
 
-#: src/MainView.vala:24
-msgid "You do not have permission to change this"
-msgstr "이 설정을 바꿀 권한이 없습니다"
-
-#: src/MainView.vala:71
+#: src/MainView.vala:82
 msgid "Show battery percentage in Panel:"
 msgstr "패널에 배터리 백분율 표시:"
 
-#: src/MainView.vala:86
+#: src/MainView.vala:97
 msgid "Display brightness:"
 msgstr "화면 밝기:"
 
-#: src/MainView.vala:91
+#: src/MainView.vala:102
 msgid "Automatically adjust brightness:"
 msgstr "밝기 자동 조절:"
 
-#: src/MainView.vala:121
+#: src/MainView.vala:141
 msgid "When lid is closed:"
 msgstr "덮개가 닫혀있을 때:"
 
-#: src/MainView.vala:128
+#: src/MainView.vala:148
 msgid "When lid is closed with external monitor:"
 msgstr "외부 모니터에 연결된 채 덮개가 닫혀있을 때:"
 
-#: src/MainView.vala:144
+#: src/MainView.vala:164
 msgid "Turn off display when inactive for:"
 msgstr "다음 시간 동안 활동이 없으면 화면 끄기:"
 
-#: src/MainView.vala:151
+#: src/MainView.vala:171
 msgid "Power button:"
 msgstr "전원 버튼:"
 
-#: src/MainView.vala:163 src/MainView.vala:189
+#: src/MainView.vala:183 src/MainView.vala:209
 msgid "Suspend when inactive for:"
 msgstr "다음 시간 동안 활동이 없으면 잠자기:"
 
-#: src/MainView.vala:181
+#: src/MainView.vala:201
 msgid "Plugged In"
 msgstr "플러그 연결"
 
-#: src/MainView.vala:207
+#: src/MainView.vala:227
 msgid "On Battery"
 msgstr "배터리 사용"
 
-#: src/MainView.vala:232
+#: src/MainView.vala:252
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "몇 가지 바뀐 설정은 이 컴퓨터를 다시 시작해야 적용됩니다"
 
-#: src/MainView.vala:252
+#: src/MainView.vala:272
 msgid "Power management mode:"
 msgstr "전력 관리 모드:"
 
@@ -205,6 +201,9 @@ msgstr "밸런스"
 #: src/Widgets/PowerModeButton.vala:63
 msgid "Performance"
 msgstr "성능"
+
+#~ msgid "You do not have permission to change this"
+#~ msgstr "이 설정을 바꿀 권한이 없습니다"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "일부 설정은 변경할 때 관리자 권한이 필요합니다"

@@ -21,6 +21,13 @@ public class Power.MainView : Gtk.Grid {
     public Battery battery { get; private set; }
     public Gtk.Stack stack { get; private set; }
 
+    /* Smooth scrolling support */
+    public bool natural_scroll_touchpad { get; set; }
+    public bool natural_scroll_mouse { get; set; }
+    private double total_x_delta = 0;
+    private double total_y_delta= 0;
+    private const double BRIGHTNESS_STEP = 5.0;
+
     private const string SETTINGS_DAEMON_NAME = "org.gnome.SettingsDaemon.Power";
     private const string SETTINGS_DAEMON_PATH = "/org/gnome/SettingsDaemon/Power";
 
@@ -41,6 +48,11 @@ public class Power.MainView : Gtk.Grid {
     private static Polkit.Permission? permission = null;
 
     construct {
+        var touchpad_settings = new GLib.Settings ("org.gnome.desktop.peripherals.touchpad");
+        touchpad_settings.bind ("natural-scroll", this, "natural-scroll-touchpad", SettingsBindFlags.GET);
+        var mouse_settings = new GLib.Settings ("org.gnome.desktop.peripherals.mouse");
+        mouse_settings.bind ("natural-scroll", this, "natural-scroll-mouse", SettingsBindFlags.GET);
+
         margin_bottom = 12;
 
         var label_size = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
@@ -104,6 +116,15 @@ public class Power.MainView : Gtk.Grid {
                 hexpand = true,
                 width_request = 480
             };
+
+            scale.scroll_event.connect ((e) => {
+                double dir = 0.0;
+                if (handle_scroll_event (e, out dir)) {
+                    scale.set_value (scale.get_value () + (int) (Math.round (dir) * BRIGHTNESS_STEP));
+                }
+
+                return true;
+            });
 
             scale.set_value (screen.brightness);
 
@@ -350,5 +371,68 @@ public class Power.MainView : Gtk.Grid {
             scale.set_value (val);
             scale.value_changed.connect (on_scale_value_changed);
         }
+    }
+
+    /* Handles both SMOOTH and non-SMOOTH events.
+     * In order to deliver smooth brightness changes it:
+     * * accumulates very small changes until they become significant.
+     * * ignores rapid changes in direction.
+     * * responds to both horizontal and vertical scrolling.
+     * In the case of diagonal scrolling, it ignores the event unless movement in one direction
+     * is more than twice the movement in the other direction.
+     */
+     private bool handle_scroll_event (Gdk.EventScroll e, out double dir) {
+        dir = 0.0;
+        bool natural_scroll;
+        var event_source = e.get_source_device ().input_source;
+        if (event_source == Gdk.InputSource.MOUSE) {
+            natural_scroll = natural_scroll_mouse;
+        } else if (event_source == Gdk.InputSource.TOUCHPAD) {
+            natural_scroll = natural_scroll_touchpad;
+        } else {
+            natural_scroll = false;
+        }
+
+        switch (e.direction) {
+            case Gdk.ScrollDirection.SMOOTH:
+                var abs_x = double.max (e.delta_x.abs (), 0.0001);
+                var abs_y = double.max (e.delta_y.abs (), 0.0001);
+
+                if (abs_y / abs_x > 2.0) {
+                    total_y_delta += e.delta_y;
+                } else if (abs_x / abs_y > 2.0) {
+                    total_x_delta += e.delta_x;
+                }
+
+                break;
+            case Gdk.ScrollDirection.UP:
+                total_y_delta = -1.0;
+                break;
+            case Gdk.ScrollDirection.DOWN:
+                total_y_delta = 1.0;
+                break;
+            case Gdk.ScrollDirection.LEFT:
+                total_x_delta = -1.0;
+                break;
+            case Gdk.ScrollDirection.RIGHT:
+                total_x_delta = 1.0;
+                break;
+            default:
+                break;
+        }
+
+        if (total_y_delta.abs () > 0.5) {
+            dir = natural_scroll ? total_y_delta : -total_y_delta;
+        } else if (total_x_delta.abs () > 0.5) {
+            dir = natural_scroll ? -total_x_delta : total_x_delta;
+        }
+
+        if (dir.abs () > 0.0) {
+            total_y_delta = 0.0;
+            total_x_delta = 0.0;
+            return true;
+        }
+
+        return false;
     }
 }
