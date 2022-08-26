@@ -27,6 +27,7 @@ public class Power.MainView : Gtk.Grid {
     private double total_x_delta = 0;
     private double total_y_delta= 0;
     private const double BRIGHTNESS_STEP = 5.0;
+    private double scale_value;
 
     private const string SETTINGS_DAEMON_NAME = "org.gnome.SettingsDaemon.Power";
     private const string SETTINGS_DAEMON_PATH = "/org/gnome/SettingsDaemon/Power";
@@ -110,23 +111,30 @@ public class Power.MainView : Gtk.Grid {
             };
 
             settings.bind ("ambient-enabled", als_switch, "active", SettingsBindFlags.DEFAULT);
+            
+            var scale_scroll_controller = new Gtk.EventControllerLegacy ();
 
             scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 100, 10) {
-                draw_value = false,
                 hexpand = true,
                 width_request = 480
             };
-
-            scale.scroll_event.connect ((e) => {
-                double dir = 0.0;
-                if (handle_scroll_event (e, out dir)) {
-                    scale.set_value (scale.get_value () + (int) (Math.round (dir) * BRIGHTNESS_STEP));
+            scale.add_controller (scale_scroll_controller);
+            
+            // Since you can't disable scroll event on Gtk.Scale in GTK4,
+            // Every scroll event sets scroll.value to latest saved value
+            scale_scroll_controller.event.connect ((e) => {
+                if (e.get_event_type () == Gdk.EventType.SCROLL) {
+                    double dir = 0.0;
+                    if (handle_scroll_event ((Gdk.ScrollEvent) e, out dir)) {
+                        scale_value = scale.get_value () + (int) (Math.round (dir) * BRIGHTNESS_STEP);
+                    }
                 }
 
-                return true;
+                scale.set_value (scale_value);
             });
 
             scale.set_value (screen.brightness);
+            scale_value = screen.brightness;
 
             scale.value_changed.connect (on_scale_value_changed);
             ((DBusProxy)screen).g_properties_changed.connect (on_screen_properties_changed);
@@ -381,27 +389,32 @@ public class Power.MainView : Gtk.Grid {
      * In the case of diagonal scrolling, it ignores the event unless movement in one direction
      * is more than twice the movement in the other direction.
      */
-     private bool handle_scroll_event (Gdk.EventScroll e, out double dir) {
+     private bool handle_scroll_event (Gdk.ScrollEvent e, out double dir) {
         dir = 0.0;
         bool natural_scroll;
-        var event_source = e.get_source_device ().input_source;
-        if (event_source == Gdk.InputSource.MOUSE) {
-            natural_scroll = natural_scroll_mouse;
-        } else if (event_source == Gdk.InputSource.TOUCHPAD) {
+        var event_source = e.get_device ().get_source ();
+
+        // If scroll is smooth it's probably a touchpad
+        if (event_source == Gdk.InputSource.TOUCHPAD || e.get_direction () == Gdk.ScrollDirection.SMOOTH) {
             natural_scroll = natural_scroll_touchpad;
+        } else if (event_source == Gdk.InputSource.MOUSE) {
+            natural_scroll = natural_scroll_mouse;
         } else {
             natural_scroll = false;
         }
 
-        switch (e.direction) {
+        switch (e.get_direction ()) {
             case Gdk.ScrollDirection.SMOOTH:
-                var abs_x = double.max (e.delta_x.abs (), 0.0001);
-                var abs_y = double.max (e.delta_y.abs (), 0.0001);
+                double dx, dy;
+                e.get_deltas (out dx, out dy);
+
+                var abs_x = double.max (dx.abs (), 0.0001);
+                var abs_y = double.max (dy.abs (), 0.0001);
 
                 if (abs_y / abs_x > 2.0) {
-                    total_y_delta += e.delta_y;
+                    total_y_delta += dy;
                 } else if (abs_x / abs_y > 2.0) {
-                    total_x_delta += e.delta_x;
+                    total_x_delta += dx;
                 }
 
                 break;
