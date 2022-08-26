@@ -364,7 +364,7 @@ public class Power.MainView : Gtk.Grid {
     }
 
     /* Handles both SMOOTH and non-SMOOTH events.
-     * In order to deliver smooth volume changes it:
+     * In order to deliver smooth brightness changes it:
      * * accumulates very small changes until they become significant.
      * * ignores rapid changes in direction.
      * * responds to both horizontal and vertical scrolling.
