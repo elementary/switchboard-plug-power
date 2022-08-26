@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-12 10:54+0000\n"
+"POT-Creation-Date: 2022-08-26 10:25+0000\n"
 "PO-Revision-Date: 2022-04-04 21:20+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
@@ -29,55 +29,51 @@ msgstr "Керування налаштуваннями живлення"
 msgid "Authentication is required to manage power settings"
 msgstr "Для керування налаштування живлення необхідна автентифікація"
 
-#: src/MainView.vala:24
-msgid "You do not have permission to change this"
-msgstr "У вас немає дозволу щоб змінити це"
-
-#: src/MainView.vala:71
+#: src/MainView.vala:82
 msgid "Show battery percentage in Panel:"
 msgstr "Показувати відсоток заряду акумулятора на панелі:"
 
-#: src/MainView.vala:86
+#: src/MainView.vala:97
 msgid "Display brightness:"
 msgstr "Яскравість екрана:"
 
-#: src/MainView.vala:91
+#: src/MainView.vala:102
 msgid "Automatically adjust brightness:"
 msgstr "Автоматичне регулювання яскравості:"
 
-#: src/MainView.vala:121
+#: src/MainView.vala:141
 msgid "When lid is closed:"
 msgstr "Коли закрито кришку:"
 
-#: src/MainView.vala:128
+#: src/MainView.vala:148
 msgid "When lid is closed with external monitor:"
 msgstr "Коли закрито кришку із зовнішнім монітором:"
 
-#: src/MainView.vala:144
+#: src/MainView.vala:164
 msgid "Turn off display when inactive for:"
 msgstr "Вимикати екран за бездіяльності впродовж:"
 
-#: src/MainView.vala:151
+#: src/MainView.vala:171
 msgid "Power button:"
 msgstr "Кнопка живлення:"
 
-#: src/MainView.vala:163 src/MainView.vala:189
+#: src/MainView.vala:183 src/MainView.vala:209
 msgid "Suspend when inactive for:"
 msgstr "Призупиняти за бездіяльності впродовж:"
 
-#: src/MainView.vala:181
+#: src/MainView.vala:201
 msgid "Plugged In"
 msgstr "Під'єднано до електромережі"
 
-#: src/MainView.vala:207
+#: src/MainView.vala:227
 msgid "On Battery"
 msgstr "Робота від акумулятора"
 
-#: src/MainView.vala:232
+#: src/MainView.vala:252
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Деякі зміни не набудуть чинності до перезавантаження комп'ютера"
 
-#: src/MainView.vala:252
+#: src/MainView.vala:272
 msgid "Power management mode:"
 msgstr "Режим енергоспоживання:"
 
@@ -208,6 +204,9 @@ msgstr "Збалансований"
 #: src/Widgets/PowerModeButton.vala:63
 msgid "Performance"
 msgstr "Швидкодійний"
+
+#~ msgid "You do not have permission to change this"
+#~ msgstr "У вас немає дозволу щоб змінити це"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "Для зміни деяких налаштувань необхідно мати права адміністратора"

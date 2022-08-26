@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-12 10:54+0000\n"
+"POT-Creation-Date: 2022-08-26 10:25+0000\n"
 "PO-Revision-Date: 2022-04-04 21:20+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
@@ -28,55 +28,51 @@ msgstr "ניהול הגדרות צריכת חשמל"
 msgid "Authentication is required to manage power settings"
 msgstr "נדרש אימות לצורך ניהול הגדרות צריכת חשמל"
 
-#: src/MainView.vala:24
-msgid "You do not have permission to change this"
-msgstr "אין לך הרשאה לשנות את זה"
-
-#: src/MainView.vala:71
+#: src/MainView.vala:82
 msgid "Show battery percentage in Panel:"
 msgstr "הצגת אחוזי סוללה בלוח:"
 
-#: src/MainView.vala:86
+#: src/MainView.vala:97
 msgid "Display brightness:"
 msgstr "בהירות התצוגה:"
 
-#: src/MainView.vala:91
+#: src/MainView.vala:102
 msgid "Automatically adjust brightness:"
 msgstr "התאמת בהירות התצוגה אוטומטית:"
 
-#: src/MainView.vala:121
+#: src/MainView.vala:141
 msgid "When lid is closed:"
 msgstr "כאשר המכסה סגור:"
 
-#: src/MainView.vala:128
+#: src/MainView.vala:148
 msgid "When lid is closed with external monitor:"
 msgstr "כאשר המכסה סגור עם צג חיצוני:"
 
-#: src/MainView.vala:144
+#: src/MainView.vala:164
 msgid "Turn off display when inactive for:"
 msgstr "יש לכבות את התצוגה כאשר אין פעילות במשך:"
 
-#: src/MainView.vala:151
+#: src/MainView.vala:171
 msgid "Power button:"
 msgstr "כפתור הפעלה:"
 
-#: src/MainView.vala:163 src/MainView.vala:189
+#: src/MainView.vala:183 src/MainView.vala:209
 msgid "Suspend when inactive for:"
 msgstr "יש לעבור למצב השהיה בעת חוסר פעילות למשך:"
 
-#: src/MainView.vala:181
+#: src/MainView.vala:201
 msgid "Plugged In"
 msgstr "מחובר"
 
-#: src/MainView.vala:207
+#: src/MainView.vala:227
 msgid "On Battery"
 msgstr "על סוללה"
 
-#: src/MainView.vala:232
+#: src/MainView.vala:252
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "חלק מהשינויים לא יכנסו לתוקף עד להפעלת המחשב מחדש"
 
-#: src/MainView.vala:252
+#: src/MainView.vala:272
 msgid "Power management mode:"
 msgstr "מצב ניהול חשמל:"
 
@@ -205,6 +201,9 @@ msgstr "מאוזן"
 #: src/Widgets/PowerModeButton.vala:63
 msgid "Performance"
 msgstr "ביצועים"
+
+#~ msgid "You do not have permission to change this"
+#~ msgstr "אין לך הרשאה לשנות את זה"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "לצורך שינוי של חלק מההגדרות נדרשות הרשאות ניהול"

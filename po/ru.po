@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-12 10:54+0000\n"
+"POT-Creation-Date: 2022-08-26 10:25+0000\n"
 "PO-Revision-Date: 2022-08-01 18:54+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -29,55 +29,51 @@ msgstr "Управление параметрами питания"
 msgid "Authentication is required to manage power settings"
 msgstr "Для изменения параметров питания требуется аутентификация"
 
-#: src/MainView.vala:24
-msgid "You do not have permission to change this"
-msgstr "У вас недостаточно прав для изменения"
-
-#: src/MainView.vala:71
+#: src/MainView.vala:82
 msgid "Show battery percentage in Panel:"
 msgstr "Показывать заряд аккумулятора на палени:"
 
-#: src/MainView.vala:86
+#: src/MainView.vala:97
 msgid "Display brightness:"
 msgstr "Яркость экрана:"
 
-#: src/MainView.vala:91
+#: src/MainView.vala:102
 msgid "Automatically adjust brightness:"
 msgstr "Автоматическая регулировка яркости:"
 
-#: src/MainView.vala:121
+#: src/MainView.vala:141
 msgid "When lid is closed:"
 msgstr "Когда крышка закрыта:"
 
-#: src/MainView.vala:128
+#: src/MainView.vala:148
 msgid "When lid is closed with external monitor:"
 msgstr "Когда крышка закрыта с внешним монитором:"
 
-#: src/MainView.vala:144
+#: src/MainView.vala:164
 msgid "Turn off display when inactive for:"
 msgstr "Выключать экран при бездействии в течении:"
 
-#: src/MainView.vala:151
+#: src/MainView.vala:171
 msgid "Power button:"
 msgstr "Кнопка питания:"
 
-#: src/MainView.vala:163 src/MainView.vala:189
+#: src/MainView.vala:183 src/MainView.vala:209
 msgid "Suspend when inactive for:"
 msgstr "Перейти в ждущий режим при бездействии в течении:"
 
-#: src/MainView.vala:181
+#: src/MainView.vala:201
 msgid "Plugged In"
 msgstr "На зарядке"
 
-#: src/MainView.vala:207
+#: src/MainView.vala:227
 msgid "On Battery"
 msgstr "От батареи"
 
-#: src/MainView.vala:232
+#: src/MainView.vala:252
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Некоторые изменения вступят в силу после перезагрузки компьютера"
 
-#: src/MainView.vala:252
+#: src/MainView.vala:272
 msgid "Power management mode:"
 msgstr "Режим энергопотребления:"
 
@@ -207,6 +203,9 @@ msgstr "Сбалансированный"
 #: src/Widgets/PowerModeButton.vala:63
 msgid "Performance"
 msgstr "Производительность"
+
+#~ msgid "You do not have permission to change this"
+#~ msgstr "У вас недостаточно прав для изменения"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "Для изменения некоторых настроек требуются права администратора"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-12 10:54+0000\n"
+"POT-Creation-Date: 2022-08-26 10:25+0000\n"
 "PO-Revision-Date: 2020-05-27 12:11+0000\n"
 "Last-Translator: Rantyrant <diseasemonger@gmail.com>\n"
 "Language-Team: Danish <https://l10n.elementary.io/projects/switchboard/"
@@ -28,55 +28,51 @@ msgstr "Administrer strømindstillinger"
 msgid "Authentication is required to manage power settings"
 msgstr "Godkendelse er påkrævet for at administrere strømindstillinger"
 
-#: src/MainView.vala:24
-msgid "You do not have permission to change this"
-msgstr "Du har ikke rettigheder til at ændre dette"
-
-#: src/MainView.vala:71
+#: src/MainView.vala:82
 msgid "Show battery percentage in Panel:"
 msgstr ""
 
-#: src/MainView.vala:86
+#: src/MainView.vala:97
 msgid "Display brightness:"
 msgstr "Lysstyrke:"
 
-#: src/MainView.vala:91
+#: src/MainView.vala:102
 msgid "Automatically adjust brightness:"
 msgstr "Juster lysstyrke automatisk:"
 
-#: src/MainView.vala:121
+#: src/MainView.vala:141
 msgid "When lid is closed:"
 msgstr "Når låget er lukket:"
 
-#: src/MainView.vala:128
+#: src/MainView.vala:148
 msgid "When lid is closed with external monitor:"
 msgstr "Når låget er lukket med ekstern skærm:"
 
-#: src/MainView.vala:144
+#: src/MainView.vala:164
 msgid "Turn off display when inactive for:"
 msgstr "Sluk skærmen ved inaktivitet i:"
 
-#: src/MainView.vala:151
+#: src/MainView.vala:171
 msgid "Power button:"
 msgstr "Tænd/sluk-knap:"
 
-#: src/MainView.vala:163 src/MainView.vala:189
+#: src/MainView.vala:183 src/MainView.vala:209
 msgid "Suspend when inactive for:"
 msgstr "Suspension når inaktiv i:"
 
-#: src/MainView.vala:181
+#: src/MainView.vala:201
 msgid "Plugged In"
 msgstr "Tilsluttet"
 
-#: src/MainView.vala:207
+#: src/MainView.vala:227
 msgid "On Battery"
 msgstr "På batteri"
 
-#: src/MainView.vala:232
+#: src/MainView.vala:252
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Nogle ændringer vil ikke træde i kræft før du genstarter computeren"
 
-#: src/MainView.vala:252
+#: src/MainView.vala:272
 msgid "Power management mode:"
 msgstr ""
 
@@ -208,6 +204,9 @@ msgstr ""
 #: src/Widgets/PowerModeButton.vala:63
 msgid "Performance"
 msgstr ""
+
+#~ msgid "You do not have permission to change this"
+#~ msgstr "Du har ikke rettigheder til at ændre dette"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr ""

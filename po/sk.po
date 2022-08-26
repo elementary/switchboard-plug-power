@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-12 10:54+0000\n"
+"POT-Creation-Date: 2022-08-26 10:25+0000\n"
 "PO-Revision-Date: 2022-04-20 07:04+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
@@ -29,55 +29,51 @@ msgstr "Spravujte nastavenia napájania"
 msgid "Authentication is required to manage power settings"
 msgstr "Pre zmenu nastavení napájania je potrebné overenie"
 
-#: src/MainView.vala:24
-msgid "You do not have permission to change this"
-msgstr "Nemáte oprávnenie na túto zmenu"
-
-#: src/MainView.vala:71
+#: src/MainView.vala:82
 msgid "Show battery percentage in Panel:"
 msgstr "Zobrazovať percentá batérie v Paneli:"
 
-#: src/MainView.vala:86
+#: src/MainView.vala:97
 msgid "Display brightness:"
 msgstr "Jas obrazovky:"
 
-#: src/MainView.vala:91
+#: src/MainView.vala:102
 msgid "Automatically adjust brightness:"
 msgstr "Automatická úprava jasu:"
 
-#: src/MainView.vala:121
+#: src/MainView.vala:141
 msgid "When lid is closed:"
 msgstr "Ak je veko zatvorené:"
 
-#: src/MainView.vala:128
+#: src/MainView.vala:148
 msgid "When lid is closed with external monitor:"
 msgstr "Ak je veko zatvorené a pripojený externý monitor:"
 
-#: src/MainView.vala:144
+#: src/MainView.vala:164
 msgid "Turn off display when inactive for:"
 msgstr "Vypnúť monitor, ak je neaktívny po dobu:"
 
-#: src/MainView.vala:151
+#: src/MainView.vala:171
 msgid "Power button:"
 msgstr "Tlačidlo napájania:"
 
-#: src/MainView.vala:163 src/MainView.vala:189
+#: src/MainView.vala:183 src/MainView.vala:209
 msgid "Suspend when inactive for:"
 msgstr "Uspať, ak je neaktívny po dobu:"
 
-#: src/MainView.vala:181
+#: src/MainView.vala:201
 msgid "Plugged In"
 msgstr "Pripojené"
 
-#: src/MainView.vala:207
+#: src/MainView.vala:227
 msgid "On Battery"
 msgstr "Na batérii"
 
-#: src/MainView.vala:232
+#: src/MainView.vala:252
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Niektoré zmeny sa prejavia až po reštarte počítača"
 
-#: src/MainView.vala:252
+#: src/MainView.vala:272
 msgid "Power management mode:"
 msgstr "Režim správy napájania:"
 
@@ -206,6 +202,9 @@ msgstr "Vyvážený"
 #: src/Widgets/PowerModeButton.vala:63
 msgid "Performance"
 msgstr "Výkon"
+
+#~ msgid "You do not have permission to change this"
+#~ msgstr "Nemáte oprávnenie na túto zmenu"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "Na zmenu niektorých nastavení sú potrebné administrátorské práva"
