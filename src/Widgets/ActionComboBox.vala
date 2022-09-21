@@ -18,8 +18,9 @@
  */
 
 namespace Power {
-    class ActionComboBox : Gtk.ComboBoxText {
-        private string key;
+    class ActionComboBox : Gtk.Widget {
+        public string key { get; construct; }
+        private Gtk.ComboBoxText main_widget;
 
         // this maps combobox indices to gsettings enums
         private int[] map_to_sett = {0, 1, 3};
@@ -27,27 +28,43 @@ namespace Power {
         private int[] map_to_list = {0, 1, -1, 2};
 
         public ActionComboBox (string key_value) {
-            key = key_value;
+            Object (key: key_value);
+        }
 
-            append_text (_("Do nothing"));
-            append_text (_("Suspend"));
-            append_text (_("Prompt to shutdown"));
+        static construct {
+            set_layout_manager_type (typeof (Gtk.BinLayout));
+        }
 
+        construct {
+            main_widget = new Gtk.ComboBoxText () {
+                hexpand = true
+            };
+            main_widget.set_parent (this);
             hexpand = true;
+
+            main_widget.append_text (_("Do nothing"));
+            main_widget.append_text (_("Suspend"));
+            main_widget.append_text (_("Prompt to shutdown"));
 
             update_combo ();
 
-            changed.connect (update_settings);
+            main_widget.changed.connect (update_settings);
             settings.changed[key].connect (update_combo);
         }
 
         private void update_settings () {
-            settings.set_enum (key, map_to_sett[active]);
+            settings.set_enum (key, map_to_sett[main_widget.active]);
         }
 
         private void update_combo () {
             int val = settings.get_enum (key);
-            active = map_to_list [val];
+            main_widget.active = map_to_list [val];
+        }
+
+        ~ActionComboBox () {
+            while (this.get_last_child () != null) {
+                this.get_last_child ().unparent ();
+            }
         }
     }
 }

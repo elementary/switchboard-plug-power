@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2016 elementary LLC. (https://launchpad.net/switchboard-plug-power)
+ * Copyright (c) 2011-2016 elementary, Inc. (https://elementary.io)
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -18,7 +18,7 @@
  */
 
 namespace Power {
-    class TimeoutComboBox : Gtk.ComboBoxText {
+    class TimeoutComboBox : Gtk.Widget {
 
         private Greeter.AccountsService? greeter_act = null;
 
@@ -61,6 +61,7 @@ namespace Power {
             }
         }
 
+        private Gtk.ComboBoxText main_widget;
         public GLib.Settings schema { get; construct; }
         public string key { get; construct; }
         private VariantType key_type;
@@ -83,23 +84,31 @@ namespace Power {
             update_combo ();
         }
 
+        static construct {
+            set_layout_manager_type (typeof (Gtk.BinLayout));
+        }
+
         construct {
             key_type = schema.get_value (key).get_type ();
 
+            main_widget = new Gtk.ComboBoxText () {
+                hexpand = true
+            };
+            main_widget.set_parent (this);
             hexpand = true;
 
-            append_text (_("Never"));
-            append_text (_("5 min"));
-            append_text (_("10 min"));
-            append_text (_("15 min"));
-            append_text (_("30 min"));
-            append_text (_("45 min"));
-            append_text (_("1 hour"));
-            append_text (_("2 hours"));
+            main_widget.append_text (_("Never"));
+            main_widget.append_text (_("5 min"));
+            main_widget.append_text (_("10 min"));
+            main_widget.append_text (_("15 min"));
+            main_widget.append_text (_("30 min"));
+            main_widget.append_text (_("45 min"));
+            main_widget.append_text (_("1 hour"));
+            main_widget.append_text (_("2 hours"));
 
             setup_accountsservice.begin ();
 
-            changed.connect (update_settings);
+            main_widget.changed.connect (update_settings);
             schema.changed[key].connect (update_combo);
         }
 
@@ -121,7 +130,7 @@ namespace Power {
 
         private void update_settings () {
             if (enum_property != null && enum_never_value != -1 && enum_normal_value != -1) {
-                if (active == 0) {
+                if (main_widget.active == 0) {
                     schema.set_enum (enum_property, enum_never_value);
                 } else {
                     schema.set_enum (enum_property, enum_normal_value);
@@ -131,9 +140,9 @@ namespace Power {
             schema.changed[key].disconnect (update_combo);
 
             if (key_type.equal (VariantType.UINT32)) {
-                schema.set_uint (key, (uint)TIMEOUT[active]);
+                schema.set_uint (key, (uint) TIMEOUT[main_widget.active]);
             } else if (key_type.equal (VariantType.INT32)) {
-                schema.set_int (key, TIMEOUT[active]);
+                schema.set_int (key, TIMEOUT[main_widget.active]);
             } else {
                 critical ("Unsupported key type in schema");
             }
@@ -142,10 +151,10 @@ namespace Power {
 
             if (greeter_act != null) {
                 if (key == "sleep-inactive-ac-timeout") {
-                    greeter_act.sleep_inactive_ac_timeout = TIMEOUT[active];
+                    greeter_act.sleep_inactive_ac_timeout = TIMEOUT[main_widget.active];
                     greeter_act.sleep_inactive_ac_type = schema.get_enum (enum_property);
                 } else if (key == "sleep-inactive-battery-timeout") {
-                    greeter_act.sleep_inactive_battery_timeout = TIMEOUT[active];
+                    greeter_act.sleep_inactive_battery_timeout = TIMEOUT[main_widget.active];
                     greeter_act.sleep_inactive_battery_type = schema.get_enum (enum_property);
                 }
             }
@@ -169,7 +178,7 @@ namespace Power {
             int val = 0;
 
             if (key_type.equal (VariantType.UINT32)) {
-                val = (int)schema.get_uint (key);
+                val = (int) schema.get_uint (key);
             } else if (key_type.equal (VariantType.INT32)) {
                 val = schema.get_int (key);
             } else {
@@ -179,15 +188,21 @@ namespace Power {
             if (enum_property != null && enum_never_value != -1 && enum_normal_value != -1) {
                 var enum_value = schema.get_enum (enum_property);
                 if (enum_value == enum_never_value) {
-                    active = 0;
+                    main_widget.active = 0;
                     return;
                 }
             }
 
             // need to process value to comply our timeout level
-            changed.disconnect (update_settings);
-            active = find_closest (val);
-            changed.connect (update_settings);
+            main_widget.changed.disconnect (update_settings);
+            main_widget.active = find_closest (val);
+            main_widget.changed.connect (update_settings);
+        }
+
+        ~TimeoutComboBox () {
+            while (this.get_last_child () != null) {
+                this.get_last_child ().unparent ();
+            }
         }
     }
 }

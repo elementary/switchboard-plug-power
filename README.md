@@ -1,4 +1,4 @@
-# Switchboard Power Plug
+# Power Settings
 [![Packaging status](https://repology.org/badge/tiny-repos/switchboard-plug-power.svg)](https://repology.org/metapackage/switchboard-plug-power)
 [![Translation status](https://l10n.elementary.io/widgets/switchboard/-/switchboard-plug-power/svg-badge.svg)](https://l10n.elementary.io/engage/switchboard/?utm_source=widget)
 
@@ -9,8 +9,8 @@
 You'll need the following dependencies:
 
 * libdbus-1-dev
-* libswitchboard-2.0-dev
-* libgranite-dev
+* libswitchboard-3-dev
+* libgranite-7-dev
 * libpolkit-gobject-1-dev
 * meson
 * valac
@@ -23,4 +23,4 @@ Run `meson` to configure the build environment and then `ninja` to build
 
 To install, use `ninja install`
 
-    sudo ninja install
+    ninja install

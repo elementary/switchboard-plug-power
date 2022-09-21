@@ -13,7 +13,7 @@ plug_files = files(
     'Widgets/PowerModeButton.vala',
 )
 
-switchboard_dep = dependency('switchboard-2.0')
+switchboard_dep = dependency('switchboard-3')
 switchboard_plugsdir = switchboard_dep.get_pkgconfig_variable('plugsdir', define_variable: ['libdir', libdir])
 
 shared_module(
@@ -26,8 +26,8 @@ shared_module(
         glib_dep,
         gio_dep,
         dependency('gobject-2.0'),
-        dependency('granite'),
-        dependency('gtk+-3.0'),
+        dependency('granite-7'),
+        dependency('gtk4'),
         polkit_dep,
         meson.get_compiler('vala').find_library('posix'),
         switchboard_dep

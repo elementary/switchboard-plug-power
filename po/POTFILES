@@ -1,4 +1,4 @@
-data/io.elementary.switchboard.power.policy.in
+data/power.policy.in
 cli/Server.vala
 cli/main.vala
 src/MainView.vala

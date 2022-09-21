@@ -18,37 +18,55 @@
  */
 
 namespace Power {
-    class LidCloseActionComboBox : Gtk.ComboBoxText {
+    class LidCloseActionComboBox : Gtk.Widget {
         private const string HANDLE_LID_SWITCH_DOCKED_KEY = "HandleLidSwitchDocked";
         private const string HANDLE_LID_SWITCH_KEY = "HandleLidSwitch";
 
-        private bool dock;
+        public bool dock { get; construct; }
+
+        private Gtk.ComboBoxText main_widget;
 
         private int previous_active;
 
         public LidCloseActionComboBox (bool dock) {
-            this.dock = dock;
+            Object (dock: dock);
+        }
+
+        static construct {
+            set_layout_manager_type (typeof (Gtk.BinLayout));
+        }
+
+        construct {
+            main_widget = new Gtk.ComboBoxText () {
+                hexpand = true
+            };
+            main_widget.set_parent (this);
+            hexpand = true;
 
             var helper = LogindHelper.get_logind_helper ();
             if (helper != null && helper.present) {
-                append_text (_("Suspend"));
-                append_text (_("Shutdown"));
-                append_text (_("Lock"));
-                append_text (_("Halt"));
-                append_text (_("Do nothing"));
+                main_widget.append_text (_("Suspend"));
+                main_widget.append_text (_("Shutdown"));
+                main_widget.append_text (_("Lock"));
+                main_widget.append_text (_("Halt"));
+                main_widget.append_text (_("Do nothing"));
             } else {
-                append_text (_("Not supported"));
+                main_widget.append_text (_("Not supported"));
             }
 
-            hexpand = true;
             update_current_action ();
-            previous_active = active;
-            changed.connect (on_changed);
+            previous_active = main_widget.active;
+
+            main_widget.changed.connect (() => {
+                Idle.add (() => {
+                    on_changed ();
+                    return Source.REMOVE;
+                });
+            });
         }
 
         private bool set_active_with_permission (int index_) {
             // Returns true on success
-
             var permission = MainView.get_permission ();
             if (permission == null) {
                 return false;
@@ -63,8 +81,8 @@ namespace Power {
                 }
             }
 
-            previous_active = active;
-            active = index_;
+            previous_active = main_widget.active;
+            main_widget.active = index_;
             return true;
         }
 
@@ -74,10 +92,10 @@ namespace Power {
                 return;
             }
 
-            if (active != previous_active) {
-                var success = set_active_with_permission (active);
+            if (main_widget.active != previous_active) {
+                var success = set_active_with_permission (main_widget.active);
                 if (!success) {
-                    active = previous_active;
+                    main_widget.active = previous_active;
                     return;
                 }
             } else {
@@ -125,7 +143,7 @@ namespace Power {
         }
 
         private LogindHelper.Action get_action () {
-            switch (active) {
+            switch (main_widget.active) {
                 case 0:
                     return LogindHelper.Action.SUSPEND;
                 case 1:
@@ -144,22 +162,28 @@ namespace Power {
         private void set_active_item (LogindHelper.Action action) {
             switch (action) {
                 case LogindHelper.Action.SUSPEND:
-                    active = 0;
+                    main_widget.active = 0;
                     break;
                 case LogindHelper.Action.POWEROFF:
-                    active = 1;
+                    main_widget.active = 1;
                     break;
                 case LogindHelper.Action.LOCK:
-                    active = 2;
+                    main_widget.active = 2;
                     break;
                 case LogindHelper.Action.HALT:
-                    active = 3;
+                    main_widget.active = 3;
                     break;
                 case LogindHelper.Action.IGNORE:
-                    active = 4;
+                    main_widget.active = 4;
                     break;
                 default:
                     break;
+            }
+        }
+
+        ~LidCloseActionComboBox () {
+            while (this.get_last_child () != null) {
+                this.get_last_child ().unparent ();
             }
         }
     }
