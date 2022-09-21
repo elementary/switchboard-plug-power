@@ -17,7 +17,7 @@
  * Boston, MA  02110-1301, USA.
  */
 
-class Power.LidCloseActionComboBox : Gtk.Bin {
+class Power.LidCloseActionComboBox : Gtk.Widget {
     private const string HANDLE_LID_SWITCH_DOCKED_KEY = "HandleLidSwitchDocked";
     private const string HANDLE_LID_SWITCH_KEY = "HandleLidSwitch";
 
@@ -30,12 +30,16 @@ class Power.LidCloseActionComboBox : Gtk.Bin {
         Object (dock: dock);
     }
 
+    static construct {
+        set_layout_manager_type (typeof (Gtk.BinLayout));
+    }
+
     construct {
         combobox = new Gtk.ComboBoxText () {
             hexpand = true
         };
 
-        child = combobox;
+        combobox.set_parent (this);
 
         var helper = LogindHelper.get_logind_helper ();
         if (helper != null && helper.present) {
@@ -167,6 +171,12 @@ class Power.LidCloseActionComboBox : Gtk.Bin {
                 break;
             default:
                 break;
+        }
+    }
+
+    ~LidCloseActionComboBox () {
+        while (this.get_last_child () != null) {
+            this.get_last_child ().unparent ();
         }
     }
 }

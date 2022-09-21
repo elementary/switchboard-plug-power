@@ -22,9 +22,9 @@
 public class Power.PowerModeButton : Gtk.Box {
     public PowerProfile? pprofile { get; private set; default = null; }
 
-    private Gtk.RadioButton saver_radio;
-    private Gtk.RadioButton balanced_radio;
-    private Gtk.RadioButton performance_radio;
+    private Gtk.CheckButton saver_radio;
+    private Gtk.CheckButton balanced_radio;
+    private Gtk.CheckButton performance_radio;
 
     construct {
         try {
@@ -34,41 +34,66 @@ public class Power.PowerModeButton : Gtk.Box {
             return;
         }
 
-        var saver_icon = new Gtk.Image.from_resource ("/io/elementary/switchboard/plug/power/32x32/apps/power-mode-powersaving.svg");
+        var saver_icon = new Gtk.Image.from_resource ("/io/elementary/settings/power/32x32/apps/power-mode-powersaving.svg") {
+            valign = Gtk.Align.FILL,
+            vexpand = true,
+            pixel_size = 32
+        };
 
-        var saver_label = new Gtk.Label (_("Power Saver"));
+        var saver_label = new Gtk.Label (_("Power Saver")) {
+            valign = Gtk.Align.FILL,
+            vexpand = true
+        };
 
         var saver_button_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 3);
-        saver_button_box.add (saver_icon);
-        saver_button_box.add (saver_label);
+        saver_button_box.append (saver_icon);
+        saver_button_box.append (saver_label);
 
-        saver_radio = new Gtk.RadioButton (null);
-        saver_radio.get_style_context ().add_class ("image-button");
-        saver_radio.add (saver_button_box);
+        saver_radio = new Gtk.CheckButton ();
+        saver_radio.add_css_class ("image-button");
+        saver_button_box.set_parent (saver_radio);
 
-        var balanced_icon = new Gtk.Image.from_resource ("/io/elementary/switchboard/plug/power/32x32/apps/power-mode-balanced.svg");
+        var balanced_icon = new Gtk.Image.from_resource ("/io/elementary/settings/power/32x32/apps/power-mode-balanced.svg") {
+            valign = Gtk.Align.FILL,
+            vexpand = true,
+            pixel_size = 32
+        };
 
-        var balanced_label = new Gtk.Label (_("Balanced"));
+        var balanced_label = new Gtk.Label (_("Balanced")) {
+            valign = Gtk.Align.FILL,
+            vexpand = true
+        };
 
         var balanced_button_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 3);
-        balanced_button_box.add (balanced_icon);
-        balanced_button_box.add (balanced_label);
+        balanced_button_box.append (balanced_icon);
+        balanced_button_box.append (balanced_label);
 
-        balanced_radio = new Gtk.RadioButton.from_widget (saver_radio);
-        balanced_radio.get_style_context ().add_class ("image-button");
-        balanced_radio.add (balanced_button_box);
+        balanced_radio = new Gtk.CheckButton () {
+            group = saver_radio
+        };
+        balanced_radio.add_css_class ("image-button");
+        balanced_button_box.set_parent (balanced_radio);
 
-        var performance_icon = new Gtk.Image.from_resource ("/io/elementary/switchboard/plug/power/32x32/apps/power-mode-performance.svg");
+        var performance_icon = new Gtk.Image.from_resource ("/io/elementary/settings/power/32x32/apps/power-mode-performance.svg") {
+            valign = Gtk.Align.FILL,
+            vexpand = true,
+            pixel_size = 32
+        };
 
-        var performance_label = new Gtk.Label (_("Performance"));
+        var performance_label = new Gtk.Label (_("Performance")) {
+            valign = Gtk.Align.FILL,
+            vexpand = true
+        };
 
         var performance_button_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 3);
-        performance_button_box.add (performance_icon);
-        performance_button_box.add (performance_label);
+        performance_button_box.append (performance_icon);
+        performance_button_box.append (performance_label);
 
-        performance_radio = new Gtk.RadioButton.from_widget (saver_radio);
-        performance_radio.get_style_context ().add_class ("image-button");
-        performance_radio.add (performance_button_box);
+        performance_radio = new Gtk.CheckButton () {
+            group = saver_radio
+        };
+        performance_radio.add_css_class ("image-button");
+        performance_button_box.set_parent (performance_radio);
 
         homogeneous = true;
         spacing = 6;
@@ -76,13 +101,13 @@ public class Power.PowerModeButton : Gtk.Box {
         for (int i = 0; i < pprofile.profiles.length; i++) {
             switch (pprofile.profiles[i].get ("Profile").get_string ()) {
                 case "power-saver":
-                    add (saver_radio);
+                    append (saver_radio);
                     break;
                 case "balanced":
-                    add (balanced_radio);
+                    append (balanced_radio);
                     break;
                 case "performance":
-                    add (performance_radio);
+                    append (performance_radio);
                     break;
                 default:
                     // Nothing to do for modes we don't support
@@ -94,16 +119,22 @@ public class Power.PowerModeButton : Gtk.Box {
 
         ((DBusProxy) pprofile).g_properties_changed.connect (update_active_profile);
 
-        saver_radio.clicked.connect (() => {
-            pprofile.active_profile = "power-saver";
+        saver_radio.toggled.connect (() => {
+            if (saver_radio.active) {
+                pprofile.active_profile = "power-saver";
+            }
         });
 
-        balanced_radio.clicked.connect (() => {
-            pprofile.active_profile = "balanced";
+        balanced_radio.toggled.connect (() => {
+            if (balanced_radio.active) {
+                pprofile.active_profile = "balanced";
+            }
         });
 
-        performance_radio.clicked.connect (() => {
-            pprofile.active_profile = "performance";
+        performance_radio.toggled.connect (() => {
+            if (performance_radio.active) {
+                pprofile.active_profile = "performance";
+            }
         });
     }
 

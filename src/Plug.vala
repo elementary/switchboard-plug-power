@@ -31,7 +31,7 @@ namespace Power {
             supported_settings["power"] = null;
 
             Object (category: Category.HARDWARE,
-                code_name: "io.elementary.switchboard.power",
+                code_name: "io.elementary.settings.power",
                 display_name: _("Power"),
                 description: _("Configure display brightness, power buttons, and suspend behavior"),
                 icon: "preferences-system-power",

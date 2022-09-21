@@ -17,7 +17,7 @@
  * Boston, MA  02110-1301, USA.
  */
 
-class Power.ActionComboBox : Gtk.Bin {
+class Power.ActionComboBox : Gtk.Widget {
     public string key { get; construct; }
     private Gtk.ComboBoxText combobox;
 
@@ -30,6 +30,10 @@ class Power.ActionComboBox : Gtk.Bin {
         Object (key: key);
     }
 
+    static construct {
+        set_layout_manager_type (typeof (Gtk.BinLayout));
+    }
+
     construct {
         combobox = new Gtk.ComboBoxText () {
             hexpand = true
@@ -38,7 +42,7 @@ class Power.ActionComboBox : Gtk.Bin {
         combobox.append_text (_("Suspend"));
         combobox.append_text (_("Prompt to shutdown"));
 
-        child = combobox;
+        combobox.set_parent (this);
 
         update_combo ();
 
@@ -52,5 +56,11 @@ class Power.ActionComboBox : Gtk.Bin {
     private void update_combo () {
         int val = settings.get_enum (key);
         combobox.active = map_to_list [val];
+    }
+
+    ~ActionComboBox () {
+        while (this.get_last_child () != null) {
+            this.get_last_child ().unparent ();
+        }
     }
 }

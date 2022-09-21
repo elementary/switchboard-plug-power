@@ -109,19 +109,24 @@ public class Power.MainView : Gtk.Box {
 
             settings.bind ("ambient-enabled", als_switch, "active", SettingsBindFlags.DEFAULT);
 
-            scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 100, 10) {
-                draw_value = false,
-                hexpand = true,
-                width_request = 480
-            };
+            var scale_scroll_controller = new Gtk.EventControllerLegacy ();
 
-            scale.scroll_event.connect ((e) => {
-                double dir = 0.0;
-                if (handle_scroll_event (e, out dir)) {
-                    scale.set_value (scale.get_value () + Math.round (dir * BRIGHTNESS_STEP));
+            scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 100, 10) {
+                hexpand = true
+            };
+            scale.add_controller (scale_scroll_controller);
+
+            scale_scroll_controller.event.connect ((e) => {
+                if (e.get_event_type () == Gdk.EventType.SCROLL) {
+                    double dir = 0.0;
+                    if (handle_scroll_event ((Gdk.ScrollEvent) e, out dir)) {
+                        scale.set_value (scale.get_value () + Math.round (dir * BRIGHTNESS_STEP));
+                    }
+
+                    return Gdk.EVENT_STOP;
                 }
 
-                return true;
+                return Gdk.EVENT_PROPAGATE;
             });
 
             scale.set_value (screen.brightness);
@@ -202,9 +207,16 @@ public class Power.MainView : Gtk.Box {
         stack.add_titled (ac_grid, "ac", _("Plugged In"));
 
         var stack_switcher = new Gtk.StackSwitcher () {
-            homogeneous = true,
             stack = stack
         };
+
+        var size_group = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
+        if (size_group.get_widgets ().length () == 0) {
+            var children = stack_switcher.observe_children ();
+            for (var index = 0; index < children.get_n_items (); index++) {
+                size_group.add_widget ((Gtk.ToggleButton) children.get_item (index));
+            }
+        }
 
         if (battery.is_present ()) {
             var battery_timeout_label = new Gtk.Label (_("Suspend when inactive for:")) {
@@ -241,9 +253,9 @@ public class Power.MainView : Gtk.Box {
                 margin_top = 24,
                 margin_bottom = 12
             };
-            switcher_box.add (left_sep);
-            switcher_box.add (stack_switcher);
-            switcher_box.add (right_sep);
+            switcher_box.append (left_sep);
+            switcher_box.append (stack_switcher);
+            switcher_box.append (right_sep);
 
             main_grid.attach (switcher_box, 0, 7, 2);
         }
@@ -256,7 +268,7 @@ public class Power.MainView : Gtk.Box {
             message_type = Gtk.MessageType.WARNING,
             revealed = false
         };
-        infobar.get_content_area ().add (infobar_label);
+        infobar.add_child (infobar_label);
 
         var helper = LogindHelper.get_logind_helper ();
         if (helper != null) {
@@ -279,16 +291,15 @@ public class Power.MainView : Gtk.Box {
 
         orientation = VERTICAL;
         margin_bottom = 12;
-        add (infobar);
-        add (main_grid);
-        show_all ();
+        append (infobar);
+        append (main_grid);
 
         label_size.add_widget (sleep_timeout_label);
         label_size.add_widget (screen_timeout_label);
         label_size.add_widget (power_label);
 
         // hide stack switcher if we only have ac line
-        stack_switcher.visible = stack.get_children ().length () > 1;
+        stack_switcher.visible = stack.observe_children ().get_n_items () > 1;
     }
 
     public static Polkit.Permission? get_permission () {
@@ -297,7 +308,11 @@ public class Power.MainView : Gtk.Box {
         }
 
         try {
-            permission = new Polkit.Permission.sync ("io.elementary.switchboard.power.administration", new Polkit.UnixProcess (Posix.getpid ()));
+            permission = new Polkit.Permission.sync (
+                "io.elementary.settings.power.administration",
+                new Polkit.UnixProcess (Posix.getpid ())
+            );
+
             return permission;
         } catch (Error e) {
             critical (e.message);
@@ -374,27 +389,32 @@ public class Power.MainView : Gtk.Box {
      * In the case of diagonal scrolling, it ignores the event unless movement in one direction
      * is more than twice the movement in the other direction.
      */
-     private bool handle_scroll_event (Gdk.EventScroll e, out double dir) {
+     private bool handle_scroll_event (Gdk.ScrollEvent e, out double dir) {
         dir = 0.0;
         bool natural_scroll;
-        var event_source = e.get_source_device ().input_source;
-        if (event_source == Gdk.InputSource.MOUSE) {
-            natural_scroll = natural_scroll_mouse;
-        } else if (event_source == Gdk.InputSource.TOUCHPAD) {
+        var event_source = e.get_device ().get_source ();
+
+        // If scroll is smooth it's probably a touchpad
+        if (event_source == Gdk.InputSource.TOUCHPAD || e.get_direction () == Gdk.ScrollDirection.SMOOTH) {
             natural_scroll = natural_scroll_touchpad;
+        } else if (event_source == Gdk.InputSource.MOUSE) {
+            natural_scroll = natural_scroll_mouse;
         } else {
             natural_scroll = false;
         }
 
-        switch (e.direction) {
+        switch (e.get_direction ()) {
             case Gdk.ScrollDirection.SMOOTH:
-                var abs_x = double.max (e.delta_x.abs (), 0.0001);
-                var abs_y = double.max (e.delta_y.abs (), 0.0001);
+                double dx, dy;
+                e.get_deltas (out dx, out dy);
+
+                var abs_x = double.max (dx.abs (), 0.0001);
+                var abs_y = double.max (dy.abs (), 0.0001);
 
                 if (abs_y / abs_x > 2.0) {
-                    total_y_delta += e.delta_y;
+                    total_y_delta += dy;
                 } else if (abs_x / abs_y > 2.0) {
-                    total_x_delta += e.delta_x;
+                    total_x_delta += dx;
                 }
 
                 break;

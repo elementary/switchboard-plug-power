@@ -6,7 +6,7 @@
   <vendor>elementary</vendor>
   <vendor_url>https://elementary.io/</vendor_url>
 
-  <action id="io.elementary.switchboard.power.administration">
+  <action id="io.elementary.settings.power.administration">
     <description gettext-domain="@GETTEXT_PACKAGE@">Manage power settings</description>
     <message gettext-domain="@GETTEXT_PACKAGE@">Authentication is required to manage power settings</message>
     <icon_name>preferences-system-power</icon_name>

@@ -1,5 +1,9 @@
 /*
+<<<<<<< HEAD
  * Copyright 2011-2016 elementary, Inc. (https://elementary.io)
+=======
+ * Copyright (c) 2011-2016 elementary, Inc. (https://elementary.io)
+>>>>>>> c5e6b8b (Port to Gtk4 (#217))
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -17,8 +21,7 @@
  * Boston, MA  02110-1301, USA.
  */
 
-class Power.TimeoutComboBox : Gtk.Bin {
-
+class Power.TimeoutComboBox : Gtk.Widget {
     private Greeter.AccountsService? greeter_act = null;
 
     private string? _enum_property = null;
@@ -83,6 +86,10 @@ class Power.TimeoutComboBox : Gtk.Bin {
         update_combo ();
     }
 
+    static construct {
+        set_layout_manager_type (typeof (Gtk.BinLayout));
+    }
+
     construct {
         key_type = schema.get_value (key).get_type ();
 
@@ -98,7 +105,7 @@ class Power.TimeoutComboBox : Gtk.Bin {
         combobox.append_text (_("1 hour"));
         combobox.append_text (_("2 hours"));
 
-        child = combobox;
+        combobox.set_parent (this);
 
         setup_accountsservice.begin ();
 
@@ -191,5 +198,11 @@ class Power.TimeoutComboBox : Gtk.Bin {
         combobox.changed.disconnect (update_settings);
         combobox.active = find_closest (val);
         combobox.changed.connect (update_settings);
+    }
+
+    ~TimeoutComboBox () {
+        while (this.get_last_child () != null) {
+            this.get_last_child ().unparent ();
+        }
     }
 }
