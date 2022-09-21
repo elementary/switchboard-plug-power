@@ -310,7 +310,7 @@ public class Power.MainView : Gtk.Grid {
 
         try {
             permission = new Polkit.Permission.sync (
-                "io.elementary.switchboard.power.administration",
+                "io.elementary.settings.power.administration",
                 new Polkit.UnixProcess (Posix.getpid ())
             );
 

@@ -34,7 +34,7 @@ public class Power.PowerModeButton : Gtk.Box {
             return;
         }
 
-        var saver_icon = new Gtk.Image.from_resource ("/io/elementary/switchboard/plug/power/32x32/apps/power-mode-powersaving.svg") {
+        var saver_icon = new Gtk.Image.from_resource ("/io/elementary/settings/power/32x32/apps/power-mode-powersaving.svg") {
             valign = Gtk.Align.FILL,
             vexpand = true,
             pixel_size = 32
@@ -53,7 +53,7 @@ public class Power.PowerModeButton : Gtk.Box {
         saver_radio.add_css_class ("image-button");
         saver_button_box.set_parent (saver_radio);
 
-        var balanced_icon = new Gtk.Image.from_resource ("/io/elementary/switchboard/plug/power/32x32/apps/power-mode-balanced.svg") {
+        var balanced_icon = new Gtk.Image.from_resource ("/io/elementary/settings/power/32x32/apps/power-mode-balanced.svg") {
             valign = Gtk.Align.FILL,
             vexpand = true,
             pixel_size = 32
@@ -74,7 +74,7 @@ public class Power.PowerModeButton : Gtk.Box {
         balanced_radio.add_css_class ("image-button");
         balanced_button_box.set_parent (balanced_radio);
 
-        var performance_icon = new Gtk.Image.from_resource ("/io/elementary/switchboard/plug/power/32x32/apps/power-mode-performance.svg") {
+        var performance_icon = new Gtk.Image.from_resource ("/io/elementary/settings/power/32x32/apps/power-mode-performance.svg") {
             valign = Gtk.Align.FILL,
             vexpand = true,
             pixel_size = 32
