@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-26 10:25+0000\n"
-"PO-Revision-Date: 2022-09-23 23:35+0000\n"
+"PO-Revision-Date: 2022-09-25 06:58+0000\n"
 "Last-Translator: Aga Ismael <agaesmaeel@gmail.com>\n"
 "Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-power/ckb/>\n"
@@ -166,7 +166,7 @@ msgstr ""
 
 #: src/Widgets/LidCloseActionComboBox.vala:36
 msgid "Lock"
-msgstr ""
+msgstr "قوفڵکردنی سیستەم"
 
 #: src/Widgets/LidCloseActionComboBox.vala:37
 msgid "Halt"
@@ -175,7 +175,7 @@ msgstr ""
 #: src/Widgets/LidCloseActionComboBox.vala:38
 #: src/Widgets/ActionComboBox.vala:32
 msgid "Do nothing"
-msgstr "هیچ با ڕوونەدات"
+msgstr "با هیچ ڕوونەدات"
 
 #: src/Widgets/LidCloseActionComboBox.vala:40
 msgid "Not supported"
