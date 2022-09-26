@@ -435,13 +435,13 @@ public class Power.MainView : Gtk.Grid {
                 break;
         }
 
-        if (total_y_delta.abs () > 0.0) {
+        if (total_y_delta.abs () * BRIGHTNESS_STEP > 1.0) {
             dir = natural_scroll ? total_y_delta : -total_y_delta;
-        } else if (total_x_delta.abs () > 0.0) {
+        } else if (total_x_delta.abs () * BRIGHTNESS_STEP > 1.0) {
             dir = natural_scroll ? -total_x_delta : total_x_delta;
         }
 
-        if (dir.abs () * BRIGHTNESS_STEP > 1.0) {
+        if (dir.abs () > 0.0) {
             total_y_delta = 0.0;
             total_x_delta = 0.0;
             return true;
