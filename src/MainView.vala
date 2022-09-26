@@ -26,7 +26,7 @@ public class Power.MainView : Gtk.Grid {
     public bool natural_scroll_mouse { get; set; }
     private double total_x_delta = 0;
     private double total_y_delta= 0;
-    private const double BRIGHTNESS_STEP = 5.0;
+    private const double BRIGHTNESS_STEP = 4.0;
 
     private const string SETTINGS_DAEMON_NAME = "org.gnome.SettingsDaemon.Power";
     private const string SETTINGS_DAEMON_PATH = "/org/gnome/SettingsDaemon/Power";
@@ -122,7 +122,7 @@ public class Power.MainView : Gtk.Grid {
                 if (e.get_event_type () == Gdk.EventType.SCROLL) {
                     double dir = 0.0;
                     if (handle_scroll_event ((Gdk.ScrollEvent) e, out dir)) {
-                        scale.set_value (scale.get_value () + (int) (Math.round (dir) * BRIGHTNESS_STEP));
+                        scale.set_value (scale.get_value () + Math.round (dir * BRIGHTNESS_STEP));
                     }
 
                     return Gdk.EVENT_STOP;
@@ -435,9 +435,9 @@ public class Power.MainView : Gtk.Grid {
                 break;
         }
 
-        if (total_y_delta.abs () > 0.5) {
+        if (total_y_delta.abs () * BRIGHTNESS_STEP > 1.0) {
             dir = natural_scroll ? total_y_delta : -total_y_delta;
-        } else if (total_x_delta.abs () > 0.5) {
+        } else if (total_x_delta.abs () * BRIGHTNESS_STEP > 1.0) {
             dir = natural_scroll ? -total_x_delta : total_x_delta;
         }
 
