@@ -122,7 +122,7 @@ public class Power.MainView : Gtk.Grid {
                 if (e.get_event_type () == Gdk.EventType.SCROLL) {
                     double dir = 0.0;
                     if (handle_scroll_event ((Gdk.ScrollEvent) e, out dir)) {
-                        scale.set_value (scale.get_value () + Math.round(dir * BRIGHTNESS_STEP));
+                        scale.set_value (scale.get_value () + Math.round (dir * BRIGHTNESS_STEP));
                     }
 
                     return Gdk.EVENT_STOP;
