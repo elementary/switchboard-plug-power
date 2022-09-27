@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-26 10:25+0000\n"
+"POT-Creation-Date: 2022-09-21 12:35-0700\n"
 "PO-Revision-Date: 2022-04-04 21:20+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
@@ -21,60 +21,60 @@ msgstr ""
 "X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2016-12-13 05:25+0000\n"
 
-#: data/io.elementary.switchboard.power.policy.in:10
+#: data/power.policy.in:10
 msgid "Manage power settings"
 msgstr "Zarządzanie ustawieniami zasilania"
 
-#: data/io.elementary.switchboard.power.policy.in:11
+#: data/power.policy.in:11
 msgid "Authentication is required to manage power settings"
 msgstr "Wymagane jest uwierzytelnienie, aby zmienić ustawienia zasilania"
 
-#: src/MainView.vala:82
+#: src/MainView.vala:84
 msgid "Show battery percentage in Panel:"
 msgstr "Pokaż procent baterii w panelu:"
 
-#: src/MainView.vala:97
+#: src/MainView.vala:99
 msgid "Display brightness:"
 msgstr "Jasność ekranu:"
 
-#: src/MainView.vala:102
+#: src/MainView.vala:104
 msgid "Automatically adjust brightness:"
 msgstr "Automatyczne dostosowanie jasności:"
 
-#: src/MainView.vala:141
+#: src/MainView.vala:149
 msgid "When lid is closed:"
 msgstr "Gdy pokrywa jest zamknięta:"
 
-#: src/MainView.vala:148
+#: src/MainView.vala:156
 msgid "When lid is closed with external monitor:"
 msgstr "Kiedy pokrywa jest zamknięta z zewnętrznym monitorem:"
 
-#: src/MainView.vala:164
+#: src/MainView.vala:172
 msgid "Turn off display when inactive for:"
 msgstr "Wyłącz ekran, gdy bezczynny przez:"
 
-#: src/MainView.vala:171
+#: src/MainView.vala:179
 msgid "Power button:"
 msgstr "Przycisk zasilania:"
 
-#: src/MainView.vala:183 src/MainView.vala:209
+#: src/MainView.vala:191 src/MainView.vala:224
 msgid "Suspend when inactive for:"
 msgstr "Uśpienie, gdy nieaktywność przez:"
 
-#: src/MainView.vala:201
+#: src/MainView.vala:209
 msgid "Plugged In"
 msgstr "Zasilacz sieciowy"
 
-#: src/MainView.vala:227
+#: src/MainView.vala:242
 msgid "On Battery"
 msgstr "Na baterii"
 
-#: src/MainView.vala:252
+#: src/MainView.vala:267
 msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
 "Niektóre ustawienia zaczną obowiązywać po ponownym uruchomieniu komputera"
 
-#: src/MainView.vala:272
+#: src/MainView.vala:288
 msgid "Power management mode:"
 msgstr "Tryb zarządzania energią:"
 
@@ -131,77 +131,77 @@ msgstr "Limit czasu nieaktywności uśpienia"
 msgid "Suspend inactive"
 msgstr "Nieaktywność usypiania"
 
-#: src/Widgets/TimeoutComboBox.vala:91
+#: src/Widgets/TimeoutComboBox.vala:100
 msgid "Never"
 msgstr "Nigdy"
 
-#: src/Widgets/TimeoutComboBox.vala:92
+#: src/Widgets/TimeoutComboBox.vala:101
 msgid "5 min"
 msgstr "5 minut"
 
-#: src/Widgets/TimeoutComboBox.vala:93
+#: src/Widgets/TimeoutComboBox.vala:102
 msgid "10 min"
 msgstr "10 minut"
 
-#: src/Widgets/TimeoutComboBox.vala:94
+#: src/Widgets/TimeoutComboBox.vala:103
 msgid "15 min"
 msgstr "15 minut"
 
-#: src/Widgets/TimeoutComboBox.vala:95
+#: src/Widgets/TimeoutComboBox.vala:104
 msgid "30 min"
 msgstr "30 minut"
 
-#: src/Widgets/TimeoutComboBox.vala:96
+#: src/Widgets/TimeoutComboBox.vala:105
 msgid "45 min"
 msgstr "45 minut"
 
-#: src/Widgets/TimeoutComboBox.vala:97
+#: src/Widgets/TimeoutComboBox.vala:106
 msgid "1 hour"
 msgstr "1 godzina"
 
-#: src/Widgets/TimeoutComboBox.vala:98
+#: src/Widgets/TimeoutComboBox.vala:107
 msgid "2 hours"
 msgstr "2 godziny"
 
-#: src/Widgets/LidCloseActionComboBox.vala:34
-#: src/Widgets/ActionComboBox.vala:33
+#: src/Widgets/LidCloseActionComboBox.vala:48
+#: src/Widgets/ActionComboBox.vala:46
 msgid "Suspend"
 msgstr "Uśpij"
 
-#: src/Widgets/LidCloseActionComboBox.vala:35
+#: src/Widgets/LidCloseActionComboBox.vala:49
 msgid "Shutdown"
 msgstr "Wyłączenie"
 
-#: src/Widgets/LidCloseActionComboBox.vala:36
+#: src/Widgets/LidCloseActionComboBox.vala:50
 msgid "Lock"
 msgstr "Zablokuj"
 
-#: src/Widgets/LidCloseActionComboBox.vala:37
+#: src/Widgets/LidCloseActionComboBox.vala:51
 msgid "Halt"
 msgstr "Wstrzymaj"
 
-#: src/Widgets/LidCloseActionComboBox.vala:38
-#: src/Widgets/ActionComboBox.vala:32
+#: src/Widgets/LidCloseActionComboBox.vala:52
+#: src/Widgets/ActionComboBox.vala:45
 msgid "Do nothing"
 msgstr "Brak czynności"
 
-#: src/Widgets/LidCloseActionComboBox.vala:40
+#: src/Widgets/LidCloseActionComboBox.vala:54
 msgid "Not supported"
 msgstr "Nieobsługiwane"
 
-#: src/Widgets/ActionComboBox.vala:34
+#: src/Widgets/ActionComboBox.vala:47
 msgid "Prompt to shutdown"
 msgstr "Zapytaj o wyłączenie"
 
-#: src/Widgets/PowerModeButton.vala:39
+#: src/Widgets/PowerModeButton.vala:43
 msgid "Power Saver"
 msgstr "Oszczędzanie energii"
 
-#: src/Widgets/PowerModeButton.vala:51
+#: src/Widgets/PowerModeButton.vala:62
 msgid "Balanced"
 msgstr "Zrównoważony"
 
-#: src/Widgets/PowerModeButton.vala:63
+#: src/Widgets/PowerModeButton.vala:83
 msgid "Performance"
 msgstr "Wydajność"
 

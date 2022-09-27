@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-26 10:25+0000\n"
+"POT-Creation-Date: 2022-09-21 12:35-0700\n"
 "PO-Revision-Date: 2018-06-12 07:34+0000\n"
 "Last-Translator: Eri Hidayat <eriwhidayat@gmail.com>\n"
 "Language-Team: Indonesian <https://weblate.elementary.io/projects/"
@@ -19,61 +19,61 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2016-11-21 05:42+0000\n"
 
-#: data/io.elementary.switchboard.power.policy.in:10
+#: data/power.policy.in:10
 msgid "Manage power settings"
 msgstr "Kelola pengaturan daya"
 
-#: data/io.elementary.switchboard.power.policy.in:11
+#: data/power.policy.in:11
 msgid "Authentication is required to manage power settings"
 msgstr "Otentikasi diperlukan untuk mengatur pengaturan daya"
 
-#: src/MainView.vala:82
+#: src/MainView.vala:84
 msgid "Show battery percentage in Panel:"
 msgstr ""
 
-#: src/MainView.vala:97
+#: src/MainView.vala:99
 msgid "Display brightness:"
 msgstr "Kecerahan layar:"
 
-#: src/MainView.vala:102
+#: src/MainView.vala:104
 msgid "Automatically adjust brightness:"
 msgstr "Secara otomatis mengatur kecerahan:"
 
-#: src/MainView.vala:141
+#: src/MainView.vala:149
 msgid "When lid is closed:"
 msgstr "Ketika lid ditutup:"
 
-#: src/MainView.vala:148
+#: src/MainView.vala:156
 msgid "When lid is closed with external monitor:"
 msgstr "Ketika lid ditutup dengan monitor eksternal:"
 
-#: src/MainView.vala:164
+#: src/MainView.vala:172
 msgid "Turn off display when inactive for:"
 msgstr "Matikan tampilan saat tidak aktif untuk:"
 
-#: src/MainView.vala:171
+#: src/MainView.vala:179
 msgid "Power button:"
 msgstr "Tombol power:"
 
-#: src/MainView.vala:183 src/MainView.vala:209
+#: src/MainView.vala:191 src/MainView.vala:224
 msgid "Suspend when inactive for:"
 msgstr "Tidur bila tidak aktif untuk:"
 
-#: src/MainView.vala:201
+#: src/MainView.vala:209
 msgid "Plugged In"
 msgstr "Tersambung ke Listrik"
 
-#: src/MainView.vala:227
+#: src/MainView.vala:242
 msgid "On Battery"
 msgstr "Pada daya baterai"
 
-#: src/MainView.vala:252
+#: src/MainView.vala:267
 msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
 "Beberapa perubahan tidak akan berpengaruh sampai Anda memulai ulang komputer "
 "ini"
 
-#: src/MainView.vala:272
+#: src/MainView.vala:288
 msgid "Power management mode:"
 msgstr ""
 
@@ -129,79 +129,79 @@ msgstr ""
 msgid "Suspend inactive"
 msgstr "Tidur tidak aktif"
 
-#: src/Widgets/TimeoutComboBox.vala:91
+#: src/Widgets/TimeoutComboBox.vala:100
 msgid "Never"
 msgstr "Jangan"
 
-#: src/Widgets/TimeoutComboBox.vala:92
+#: src/Widgets/TimeoutComboBox.vala:101
 msgid "5 min"
 msgstr "5 menit"
 
-#: src/Widgets/TimeoutComboBox.vala:93
+#: src/Widgets/TimeoutComboBox.vala:102
 msgid "10 min"
 msgstr "10 menit"
 
-#: src/Widgets/TimeoutComboBox.vala:94
+#: src/Widgets/TimeoutComboBox.vala:103
 msgid "15 min"
 msgstr "15 menit"
 
-#: src/Widgets/TimeoutComboBox.vala:95
+#: src/Widgets/TimeoutComboBox.vala:104
 msgid "30 min"
 msgstr "30 menit"
 
-#: src/Widgets/TimeoutComboBox.vala:96
+#: src/Widgets/TimeoutComboBox.vala:105
 msgid "45 min"
 msgstr "45 menit"
 
-#: src/Widgets/TimeoutComboBox.vala:97
+#: src/Widgets/TimeoutComboBox.vala:106
 msgid "1 hour"
 msgstr "1 jam"
 
-#: src/Widgets/TimeoutComboBox.vala:98
+#: src/Widgets/TimeoutComboBox.vala:107
 msgid "2 hours"
 msgstr "2 jam"
 
-#: src/Widgets/LidCloseActionComboBox.vala:34
-#: src/Widgets/ActionComboBox.vala:33
+#: src/Widgets/LidCloseActionComboBox.vala:48
+#: src/Widgets/ActionComboBox.vala:46
 msgid "Suspend"
 msgstr "Suspensi"
 
-#: src/Widgets/LidCloseActionComboBox.vala:35
+#: src/Widgets/LidCloseActionComboBox.vala:49
 msgid "Shutdown"
 msgstr "Matikan"
 
-#: src/Widgets/LidCloseActionComboBox.vala:36
+#: src/Widgets/LidCloseActionComboBox.vala:50
 msgid "Lock"
 msgstr "Kunci"
 
-#: src/Widgets/LidCloseActionComboBox.vala:37
+#: src/Widgets/LidCloseActionComboBox.vala:51
 msgid "Halt"
 msgstr "Berhenti"
 
-#: src/Widgets/LidCloseActionComboBox.vala:38
-#: src/Widgets/ActionComboBox.vala:32
+#: src/Widgets/LidCloseActionComboBox.vala:52
+#: src/Widgets/ActionComboBox.vala:45
 msgid "Do nothing"
 msgstr "Jangan lakukan apapun"
 
-#: src/Widgets/LidCloseActionComboBox.vala:40
+#: src/Widgets/LidCloseActionComboBox.vala:54
 msgid "Not supported"
 msgstr "Tidak didukung"
 
-#: src/Widgets/ActionComboBox.vala:34
+#: src/Widgets/ActionComboBox.vala:47
 msgid "Prompt to shutdown"
 msgstr ""
 
-#: src/Widgets/PowerModeButton.vala:39
+#: src/Widgets/PowerModeButton.vala:43
 #, fuzzy
 #| msgid "Power"
 msgid "Power Saver"
 msgstr "Daya"
 
-#: src/Widgets/PowerModeButton.vala:51
+#: src/Widgets/PowerModeButton.vala:62
 msgid "Balanced"
 msgstr ""
 
-#: src/Widgets/PowerModeButton.vala:63
+#: src/Widgets/PowerModeButton.vala:83
 msgid "Performance"
 msgstr ""
 

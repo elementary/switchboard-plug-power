@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-26 10:25+0000\n"
+"POT-Creation-Date: 2022-09-21 12:35-0700\n"
 "PO-Revision-Date: 2015-02-11 16:36+0000\n"
 "Last-Translator: Yvo Marques <macghivo@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,59 +13,59 @@ msgstr ""
 "X-Launchpad-Export-Date: 2016-11-21 05:42+0000\n"
 "X-Generator: Launchpad (build 18269)\n"
 
-#: data/io.elementary.switchboard.power.policy.in:10
+#: data/power.policy.in:10
 msgid "Manage power settings"
 msgstr ""
 
-#: data/io.elementary.switchboard.power.policy.in:11
+#: data/power.policy.in:11
 msgid "Authentication is required to manage power settings"
 msgstr ""
 
-#: src/MainView.vala:82
+#: src/MainView.vala:84
 msgid "Show battery percentage in Panel:"
 msgstr ""
 
-#: src/MainView.vala:97
+#: src/MainView.vala:99
 msgid "Display brightness:"
 msgstr "Bildschierm Hellegkeet"
 
-#: src/MainView.vala:102
+#: src/MainView.vala:104
 msgid "Automatically adjust brightness:"
 msgstr ""
 
-#: src/MainView.vala:141
+#: src/MainView.vala:149
 msgid "When lid is closed:"
 msgstr ""
 
-#: src/MainView.vala:148
+#: src/MainView.vala:156
 msgid "When lid is closed with external monitor:"
 msgstr ""
 
-#: src/MainView.vala:164
+#: src/MainView.vala:172
 msgid "Turn off display when inactive for:"
 msgstr ""
 
-#: src/MainView.vala:171
+#: src/MainView.vala:179
 msgid "Power button:"
 msgstr ""
 
-#: src/MainView.vala:183 src/MainView.vala:209
+#: src/MainView.vala:191 src/MainView.vala:224
 msgid "Suspend when inactive for:"
 msgstr ""
 
-#: src/MainView.vala:201
+#: src/MainView.vala:209
 msgid "Plugged In"
 msgstr "Um Stroum ugeschloss"
 
-#: src/MainView.vala:227
+#: src/MainView.vala:242
 msgid "On Battery"
 msgstr "Un der Batterie"
 
-#: src/MainView.vala:252
+#: src/MainView.vala:267
 msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
 
-#: src/MainView.vala:272
+#: src/MainView.vala:288
 msgid "Power management mode:"
 msgstr ""
 
@@ -123,79 +123,79 @@ msgstr ""
 msgid "Suspend inactive"
 msgstr "Bereetschaft"
 
-#: src/Widgets/TimeoutComboBox.vala:91
+#: src/Widgets/TimeoutComboBox.vala:100
 msgid "Never"
 msgstr "Ni"
 
-#: src/Widgets/TimeoutComboBox.vala:92
+#: src/Widgets/TimeoutComboBox.vala:101
 msgid "5 min"
 msgstr "5 min"
 
-#: src/Widgets/TimeoutComboBox.vala:93
+#: src/Widgets/TimeoutComboBox.vala:102
 msgid "10 min"
 msgstr "10 min"
 
-#: src/Widgets/TimeoutComboBox.vala:94
+#: src/Widgets/TimeoutComboBox.vala:103
 msgid "15 min"
 msgstr "15 min"
 
-#: src/Widgets/TimeoutComboBox.vala:95
+#: src/Widgets/TimeoutComboBox.vala:104
 msgid "30 min"
 msgstr "30 min"
 
-#: src/Widgets/TimeoutComboBox.vala:96
+#: src/Widgets/TimeoutComboBox.vala:105
 msgid "45 min"
 msgstr "45 min"
 
-#: src/Widgets/TimeoutComboBox.vala:97
+#: src/Widgets/TimeoutComboBox.vala:106
 msgid "1 hour"
 msgstr "1 Stonn"
 
-#: src/Widgets/TimeoutComboBox.vala:98
+#: src/Widgets/TimeoutComboBox.vala:107
 msgid "2 hours"
 msgstr ""
 
-#: src/Widgets/LidCloseActionComboBox.vala:34
-#: src/Widgets/ActionComboBox.vala:33
+#: src/Widgets/LidCloseActionComboBox.vala:48
+#: src/Widgets/ActionComboBox.vala:46
 msgid "Suspend"
 msgstr "Bereetschaft"
 
-#: src/Widgets/LidCloseActionComboBox.vala:35
+#: src/Widgets/LidCloseActionComboBox.vala:49
 msgid "Shutdown"
 msgstr "Ausmaachen"
 
-#: src/Widgets/LidCloseActionComboBox.vala:36
+#: src/Widgets/LidCloseActionComboBox.vala:50
 msgid "Lock"
 msgstr ""
 
-#: src/Widgets/LidCloseActionComboBox.vala:37
+#: src/Widgets/LidCloseActionComboBox.vala:51
 msgid "Halt"
 msgstr ""
 
-#: src/Widgets/LidCloseActionComboBox.vala:38
-#: src/Widgets/ActionComboBox.vala:32
+#: src/Widgets/LidCloseActionComboBox.vala:52
+#: src/Widgets/ActionComboBox.vala:45
 msgid "Do nothing"
 msgstr "Näischt maachen"
 
-#: src/Widgets/LidCloseActionComboBox.vala:40
+#: src/Widgets/LidCloseActionComboBox.vala:54
 msgid "Not supported"
 msgstr ""
 
-#: src/Widgets/ActionComboBox.vala:34
+#: src/Widgets/ActionComboBox.vala:47
 msgid "Prompt to shutdown"
 msgstr ""
 
-#: src/Widgets/PowerModeButton.vala:39
+#: src/Widgets/PowerModeButton.vala:43
 #, fuzzy
 #| msgid "Power"
 msgid "Power Saver"
 msgstr "Stroum"
 
-#: src/Widgets/PowerModeButton.vala:51
+#: src/Widgets/PowerModeButton.vala:62
 msgid "Balanced"
 msgstr ""
 
-#: src/Widgets/PowerModeButton.vala:63
+#: src/Widgets/PowerModeButton.vala:83
 msgid "Performance"
 msgstr ""
 
