@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-26 10:25+0000\n"
+"POT-Creation-Date: 2022-09-21 12:35-0700\n"
 "PO-Revision-Date: 2022-08-01 18:54+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -21,59 +21,59 @@ msgstr ""
 "X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2016-12-02 05:21+0000\n"
 
-#: data/io.elementary.switchboard.power.policy.in:10
+#: data/power.policy.in:10
 msgid "Manage power settings"
 msgstr "Управление параметрами питания"
 
-#: data/io.elementary.switchboard.power.policy.in:11
+#: data/power.policy.in:11
 msgid "Authentication is required to manage power settings"
 msgstr "Для изменения параметров питания требуется аутентификация"
 
-#: src/MainView.vala:82
+#: src/MainView.vala:84
 msgid "Show battery percentage in Panel:"
 msgstr "Показывать заряд аккумулятора на палени:"
 
-#: src/MainView.vala:97
+#: src/MainView.vala:99
 msgid "Display brightness:"
 msgstr "Яркость экрана:"
 
-#: src/MainView.vala:102
+#: src/MainView.vala:104
 msgid "Automatically adjust brightness:"
 msgstr "Автоматическая регулировка яркости:"
 
-#: src/MainView.vala:141
+#: src/MainView.vala:149
 msgid "When lid is closed:"
 msgstr "Когда крышка закрыта:"
 
-#: src/MainView.vala:148
+#: src/MainView.vala:156
 msgid "When lid is closed with external monitor:"
 msgstr "Когда крышка закрыта с внешним монитором:"
 
-#: src/MainView.vala:164
+#: src/MainView.vala:172
 msgid "Turn off display when inactive for:"
 msgstr "Выключать экран при бездействии в течении:"
 
-#: src/MainView.vala:171
+#: src/MainView.vala:179
 msgid "Power button:"
 msgstr "Кнопка питания:"
 
-#: src/MainView.vala:183 src/MainView.vala:209
+#: src/MainView.vala:191 src/MainView.vala:224
 msgid "Suspend when inactive for:"
 msgstr "Перейти в ждущий режим при бездействии в течении:"
 
-#: src/MainView.vala:201
+#: src/MainView.vala:209
 msgid "Plugged In"
 msgstr "На зарядке"
 
-#: src/MainView.vala:227
+#: src/MainView.vala:242
 msgid "On Battery"
 msgstr "От батареи"
 
-#: src/MainView.vala:252
+#: src/MainView.vala:267
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Некоторые изменения вступят в силу после перезагрузки компьютера"
 
-#: src/MainView.vala:272
+#: src/MainView.vala:288
 msgid "Power management mode:"
 msgstr "Режим энергопотребления:"
 
@@ -130,77 +130,77 @@ msgstr "Время бездействия для перехода в спящи�
 msgid "Suspend inactive"
 msgstr "Сон при простое"
 
-#: src/Widgets/TimeoutComboBox.vala:91
+#: src/Widgets/TimeoutComboBox.vala:100
 msgid "Never"
 msgstr "Никогда"
 
-#: src/Widgets/TimeoutComboBox.vala:92
+#: src/Widgets/TimeoutComboBox.vala:101
 msgid "5 min"
 msgstr "5 минут"
 
-#: src/Widgets/TimeoutComboBox.vala:93
+#: src/Widgets/TimeoutComboBox.vala:102
 msgid "10 min"
 msgstr "10 минут"
 
-#: src/Widgets/TimeoutComboBox.vala:94
+#: src/Widgets/TimeoutComboBox.vala:103
 msgid "15 min"
 msgstr "15 минут"
 
-#: src/Widgets/TimeoutComboBox.vala:95
+#: src/Widgets/TimeoutComboBox.vala:104
 msgid "30 min"
 msgstr "30 минут"
 
-#: src/Widgets/TimeoutComboBox.vala:96
+#: src/Widgets/TimeoutComboBox.vala:105
 msgid "45 min"
 msgstr "45 минут"
 
-#: src/Widgets/TimeoutComboBox.vala:97
+#: src/Widgets/TimeoutComboBox.vala:106
 msgid "1 hour"
 msgstr "1 часа"
 
-#: src/Widgets/TimeoutComboBox.vala:98
+#: src/Widgets/TimeoutComboBox.vala:107
 msgid "2 hours"
 msgstr "2 часа"
 
-#: src/Widgets/LidCloseActionComboBox.vala:34
-#: src/Widgets/ActionComboBox.vala:33
+#: src/Widgets/LidCloseActionComboBox.vala:48
+#: src/Widgets/ActionComboBox.vala:46
 msgid "Suspend"
 msgstr "Ждущий режим"
 
-#: src/Widgets/LidCloseActionComboBox.vala:35
+#: src/Widgets/LidCloseActionComboBox.vala:49
 msgid "Shutdown"
 msgstr "Выключение"
 
-#: src/Widgets/LidCloseActionComboBox.vala:36
+#: src/Widgets/LidCloseActionComboBox.vala:50
 msgid "Lock"
 msgstr "Заблокировать"
 
-#: src/Widgets/LidCloseActionComboBox.vala:37
+#: src/Widgets/LidCloseActionComboBox.vala:51
 msgid "Halt"
 msgstr "Завершить работу"
 
-#: src/Widgets/LidCloseActionComboBox.vala:38
-#: src/Widgets/ActionComboBox.vala:32
+#: src/Widgets/LidCloseActionComboBox.vala:52
+#: src/Widgets/ActionComboBox.vala:45
 msgid "Do nothing"
 msgstr "Ничего не делать"
 
-#: src/Widgets/LidCloseActionComboBox.vala:40
+#: src/Widgets/LidCloseActionComboBox.vala:54
 msgid "Not supported"
 msgstr "Не поддерживается"
 
-#: src/Widgets/ActionComboBox.vala:34
+#: src/Widgets/ActionComboBox.vala:47
 msgid "Prompt to shutdown"
 msgstr "Запрос на выключение"
 
-#: src/Widgets/PowerModeButton.vala:39
+#: src/Widgets/PowerModeButton.vala:43
 msgid "Power Saver"
 msgstr "Экономия энергии"
 
-#: src/Widgets/PowerModeButton.vala:51
+#: src/Widgets/PowerModeButton.vala:62
 msgid "Balanced"
 msgstr "Сбалансированный"
 
-#: src/Widgets/PowerModeButton.vala:63
+#: src/Widgets/PowerModeButton.vala:83
 msgid "Performance"
 msgstr "Производительность"
 
