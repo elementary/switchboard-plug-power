@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-21 12:35-0700\n"
-"PO-Revision-Date: 2022-09-30 09:40+0000\n"
+"PO-Revision-Date: 2022-09-30 09:48+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/ru/>\n"
@@ -31,7 +31,7 @@ msgstr "Для изменения параметров питания требу
 
 #: src/MainView.vala:84
 msgid "Show battery percentage in Panel:"
-msgstr "Показывать заряд аккумулятора на палени:"
+msgstr "Отображать заряд аккумулятора на панели:"
 
 #: src/MainView.vala:99
 msgid "Display brightness:"
