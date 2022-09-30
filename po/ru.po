@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-21 12:35-0700\n"
-"PO-Revision-Date: 2022-08-01 18:54+0000\n"
+"PO-Revision-Date: 2022-09-30 09:40+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/ru/>\n"
@@ -51,7 +51,7 @@ msgstr "Когда крышка закрыта с внешним монитор�
 
 #: src/MainView.vala:172
 msgid "Turn off display when inactive for:"
-msgstr "Выключать экран при бездействии в течении:"
+msgstr "Выключать экран при бездействии в течение:"
 
 #: src/MainView.vala:179
 msgid "Power button:"
