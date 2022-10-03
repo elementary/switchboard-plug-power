@@ -21,7 +21,7 @@ jobs:
       image: ghcr.io/elementary/docker:${{ matrix.version }}
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3
     - name: Install Dependencies
       run: |
         apt update
@@ -31,7 +31,6 @@ jobs:
         DESTDIR: out
       run: |
         meson build
-        ninja -C build
         ninja -C build install
 
   lint:
@@ -42,6 +41,6 @@ jobs:
       image: valalang/lint
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3
     - name: Lint
       run: io.elementary.vala-lint -d .
