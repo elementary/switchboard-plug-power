@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-21 12:35-0700\n"
-"PO-Revision-Date: 2022-09-25 06:58+0000\n"
+"PO-Revision-Date: 2022-10-04 21:31+0000\n"
 "Last-Translator: Aga Ismael <agaesmaeel@gmail.com>\n"
 "Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-power/ckb/>\n"
@@ -17,152 +17,154 @@ msgstr ""
 
 #: data/power.policy.in:10
 msgid "Manage power settings"
-msgstr ""
+msgstr "بەڕێوەبردنی ڕێکخستنەکانی وزە"
 
 #: data/power.policy.in:11
 msgid "Authentication is required to manage power settings"
-msgstr ""
+msgstr "پێویستە بیسەلمێنیت کە بەڕێوەبەریت بۆ بەڕێوەبردنی ڕێکجستنەکانی وزە"
 
 #: src/MainView.vala:84
 msgid "Show battery percentage in Panel:"
-msgstr ""
+msgstr "پشاندانی ڕێژەی پاتری لە پانێڵدا:"
 
 #: src/MainView.vala:99
 msgid "Display brightness:"
-msgstr ""
+msgstr "ڕووناکی ڕوونما:"
 
 #: src/MainView.vala:104
 msgid "Automatically adjust brightness:"
-msgstr ""
+msgstr "ڕێکخستنی ڕووناکی خۆکارانە:"
 
 #: src/MainView.vala:149
 msgid "When lid is closed:"
-msgstr ""
+msgstr "کاتێک ڕوونماکە دادەدەیەوە:"
 
 #: src/MainView.vala:156
 msgid "When lid is closed with external monitor:"
-msgstr ""
+msgstr "کاتێک ڕوونماکە دادراوەتەوە لەگەڵ مۆنیتەرێکی دەرەکی:"
 
 #: src/MainView.vala:172
 msgid "Turn off display when inactive for:"
-msgstr ""
+msgstr "ڕوونماکە بکوژێنەوە کاتێک ناچالاک بوو بۆ ماوەی:"
 
 #: src/MainView.vala:179
 msgid "Power button:"
-msgstr ""
+msgstr "دوگمەی وزە:"
 
 #: src/MainView.vala:191 src/MainView.vala:224
 msgid "Suspend when inactive for:"
-msgstr ""
+msgstr "بیوەستێنە کاتێک ناچالاکە بۆ ماوەی:"
 
 #: src/MainView.vala:209
 msgid "Plugged In"
-msgstr ""
+msgstr "وزە وەردەگرێت"
 
 #: src/MainView.vala:242
 msgid "On Battery"
-msgstr ""
+msgstr "لەسەر پاتری"
 
 #: src/MainView.vala:267
 msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
+"هەندێک لە گۆڕانکارییەکان ناچنە جێبەجێ بوونەوە هەتا کۆمپیتەرەکەت پێ نەکەیتەوە"
 
 #: src/MainView.vala:288
 msgid "Power management mode:"
-msgstr ""
+msgstr "دۆخی بەڕێوەبردنی وزە:"
 
 #: src/Plug.vala:35
 msgid "Power"
-msgstr ""
+msgstr "وزە"
 
 #: src/Plug.vala:36
 msgid "Configure display brightness, power buttons, and suspend behavior"
-msgstr ""
+msgstr "ڕووناکی ڕوونما و دوگمەکانی وزە و ڕەفتاری وەستاندن بەڕێوەبەرە"
 
 #: src/Plug.vala:71
 msgid "Suspend button"
-msgstr ""
+msgstr "دوگمەی وەستاندن"
 
 #: src/Plug.vala:72
 msgid "Power button"
-msgstr ""
+msgstr "دوگمەی داگیرساندن"
 
 #: src/Plug.vala:73
 msgid "Display inactive"
-msgstr ""
+msgstr "ناچالاکی ڕوونما"
 
 #: src/Plug.vala:74
 msgid "Dim display"
-msgstr ""
+msgstr "کەم کردنەوەی ڕەونەقی ڕوونما"
 
 #: src/Plug.vala:75
 msgid "Lid close"
-msgstr ""
+msgstr "داخستنی ڕوونما"
 
 #: src/Plug.vala:76
 msgid "Display brightness"
-msgstr ""
+msgstr "ڕووناکی ڕوونما"
 
 #: src/Plug.vala:77
 msgid "Automatic brightness adjustment"
-msgstr ""
+msgstr "ڕێکخستنی ڕووناکی خۆکارانە"
 
 #: src/Plug.vala:78
 msgid "Inactive display off"
-msgstr ""
+msgstr "شاشەی ناچالاك کوژاوەتەوە"
 
 #: src/Plug.vala:79
 msgid "Docked lid close"
-msgstr ""
+msgstr "Docked lid close"
 
 #: src/Plug.vala:80
 msgid "Sleep inactivity timeout"
-msgstr ""
+msgstr "کات بەسەرچوونی ناچالاکی خەو"
 
 #: src/Plug.vala:81
+#, fuzzy
 msgid "Suspend inactive"
-msgstr ""
+msgstr "Suspend inactive"
 
 #: src/Widgets/TimeoutComboBox.vala:100
 msgid "Never"
-msgstr ""
+msgstr "هەرگیز"
 
 #: src/Widgets/TimeoutComboBox.vala:101
 msgid "5 min"
-msgstr ""
+msgstr "٥ خولەک"
 
 #: src/Widgets/TimeoutComboBox.vala:102
 msgid "10 min"
-msgstr ""
+msgstr "١٠ خولەک"
 
 #: src/Widgets/TimeoutComboBox.vala:103
 msgid "15 min"
-msgstr ""
+msgstr "١٥ خولەک"
 
 #: src/Widgets/TimeoutComboBox.vala:104
 msgid "30 min"
-msgstr ""
+msgstr "٣٠ خولەک"
 
 #: src/Widgets/TimeoutComboBox.vala:105
 msgid "45 min"
-msgstr ""
+msgstr "٤٥ خولەک"
 
 #: src/Widgets/TimeoutComboBox.vala:106
 msgid "1 hour"
-msgstr ""
+msgstr "١ کاتژمێر"
 
 #: src/Widgets/TimeoutComboBox.vala:107
 msgid "2 hours"
-msgstr ""
+msgstr "٢ کاتژمێر"
 
 #: src/Widgets/LidCloseActionComboBox.vala:48
 #: src/Widgets/ActionComboBox.vala:46
 msgid "Suspend"
-msgstr ""
+msgstr "وەستاندن"
 
 #: src/Widgets/LidCloseActionComboBox.vala:49
 msgid "Shutdown"
-msgstr ""
+msgstr "کوژاندنەوە"
 
 #: src/Widgets/LidCloseActionComboBox.vala:50
 msgid "Lock"
@@ -170,7 +172,7 @@ msgstr "قوفڵکردنی سیستەم"
 
 #: src/Widgets/LidCloseActionComboBox.vala:51
 msgid "Halt"
-msgstr ""
+msgstr "halt"
 
 #: src/Widgets/LidCloseActionComboBox.vala:52
 #: src/Widgets/ActionComboBox.vala:45
@@ -179,20 +181,20 @@ msgstr "با هیچ ڕوونەدات"
 
 #: src/Widgets/LidCloseActionComboBox.vala:54
 msgid "Not supported"
-msgstr ""
+msgstr "پاڵپشتی نەکراو"
 
 #: src/Widgets/ActionComboBox.vala:47
 msgid "Prompt to shutdown"
-msgstr ""
+msgstr "داواکردنی کوژاندنەوە"
 
 #: src/Widgets/PowerModeButton.vala:43
 msgid "Power Saver"
-msgstr ""
+msgstr "پارێزەرەی وزە"
 
 #: src/Widgets/PowerModeButton.vala:62
 msgid "Balanced"
-msgstr ""
+msgstr "باڵانسکراو"
 
 #: src/Widgets/PowerModeButton.vala:83
 msgid "Performance"
-msgstr ""
+msgstr "ئەدا"
