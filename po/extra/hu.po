@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-26 10:25+0000\n"
-"PO-Revision-Date: 2022-01-11 00:14+0000\n"
+"PO-Revision-Date: 2022-10-13 01:10+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "power-plug-extra/hu/>\n"
@@ -54,11 +54,11 @@ msgstr "Kapcsoló az akkumulátor töltöttségének kijelzéséhez az állapots
 
 #: data/power.appdata.xml.in:30
 msgid "Fix a potential issue with resuming from sleep"
-msgstr ""
+msgstr "Az alvó módból való visszatéréskor jelentkező lehetséges fagyás javítva"
 
 #: data/power.appdata.xml.in:39
 msgid "Change lid settings without restarting"
-msgstr ""
+msgstr "A fedélbeállítások módosítása újraindítás nélkül"
 
 #: data/power.appdata.xml.in:40
 msgid "Show in search results for \"sleep\" and \"timeout\""
@@ -67,11 +67,13 @@ msgstr ""
 #: data/power.appdata.xml.in:47
 msgid "Fix potential freeze when changing settings from multiple panes"
 msgstr ""
+"Lehetséges fagyás javítása a többféle helyről való beállítások "
+"változtatásakor"
 
 #: data/power.appdata.xml.in:58
 msgid "Remove broken hibernate option"
-msgstr ""
+msgstr "Nem működő hibernálási opció eltávolítva"
 
 #: data/power.appdata.xml.in:59
 msgid "Add prompt to shutdown to power button actions"
-msgstr ""
+msgstr "A kikapcsolómenű megjelenítése opció a kikapcsoló gomb műveleteinél"
