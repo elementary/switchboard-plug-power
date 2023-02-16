@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-26 10:25+0000\n"
-"PO-Revision-Date: 2021-09-22 22:06+0000\n"
-"Last-Translator: Ciarán Ainsworth <ciaranainsworth@outlook.com>\n"
+"PO-Revision-Date: 2023-02-17 15:25+0000\n"
+"Last-Translator: Joel Jose <joel750jose@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "switchboard/power-plug-extra/en_GB/>\n"
 "Language: en_GB\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.14.2\n"
 
 #: data/power.appdata.xml.in:5
 msgid "Power Settings"
@@ -33,7 +33,7 @@ msgstr "New features:"
 
 #: data/power.appdata.xml.in:14
 msgid "Add power profile management"
-msgstr ""
+msgstr "Add power profile management"
 
 #: data/power.appdata.xml.in:16 data/power.appdata.xml.in:28
 #: data/power.appdata.xml.in:37
