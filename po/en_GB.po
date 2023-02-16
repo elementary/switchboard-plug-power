@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-21 12:35-0700\n"
 "PO-Revision-Date: 2023-02-17 15:25+0000\n"
-"Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
+"Last-Translator: Joel Jose <joel750jose@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-power/en_GB/>\n"
 "Language: en_GB\n"
@@ -74,7 +74,7 @@ msgstr "Some changes will not take effect until you restart this computer"
 
 #: src/MainView.vala:288
 msgid "Power management mode:"
-msgstr ""
+msgstr "Power management mode:"
 
 #: src/Plug.vala:35
 msgid "Power"
@@ -196,7 +196,7 @@ msgstr "Power Saver"
 
 #: src/Widgets/PowerModeButton.vala:62
 msgid "Balanced"
-msgstr ""
+msgstr "Balanced"
 
 #: src/Widgets/PowerModeButton.vala:83
 msgid "Performance"
