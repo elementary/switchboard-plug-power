@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-21 12:35-0700\n"
-"PO-Revision-Date: 2021-09-22 22:06+0000\n"
-"Last-Translator: Ciarán Ainsworth <ciaranainsworth@outlook.com>\n"
+"PO-Revision-Date: 2023-02-17 15:25+0000\n"
+"Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-power/en_GB/>\n"
 "Language: en_GB\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.14.2\n"
 "X-Launchpad-Export-Date: 2016-11-21 05:42+0000\n"
 
 #: data/power.policy.in:10
@@ -191,10 +191,8 @@ msgid "Prompt to shutdown"
 msgstr "Prompt to shutdown"
 
 #: src/Widgets/PowerModeButton.vala:43
-#, fuzzy
-#| msgid "Power"
 msgid "Power Saver"
-msgstr "Power"
+msgstr "Power Saver"
 
 #: src/Widgets/PowerModeButton.vala:62
 msgid "Balanced"
@@ -202,7 +200,7 @@ msgstr ""
 
 #: src/Widgets/PowerModeButton.vala:83
 msgid "Performance"
-msgstr ""
+msgstr "Performance"
 
 #~ msgid "You do not have permission to change this"
 #~ msgstr "You do not have permission to change this"
