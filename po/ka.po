@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-21 12:35-0700\n"
-"PO-Revision-Date: 2018-02-11 00:09+0000\n"
-"Last-Translator: Lasha-Giorgi Esebua <lashagiorgiesebua@gmail.com>\n"
-"Language-Team: Georgian <https://weblate.elementary.io/projects/switchboard/"
+"PO-Revision-Date: 2023-03-11 15:25+0000\n"
+"Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
+"Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/ka/>\n"
 "Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 4.14.2\n"
 "X-Launchpad-Export-Date: 2016-11-21 05:42+0000\n"
 
 #: data/power.policy.in:10
@@ -168,7 +168,7 @@ msgstr "გამორთვა"
 
 #: src/Widgets/LidCloseActionComboBox.vala:50
 msgid "Lock"
-msgstr ""
+msgstr "ჩაკეტვა"
 
 #: src/Widgets/LidCloseActionComboBox.vala:51
 msgid "Halt"
