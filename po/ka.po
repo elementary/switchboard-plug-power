@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-21 12:35-0700\n"
-"PO-Revision-Date: 2023-03-11 15:25+0000\n"
+"PO-Revision-Date: 2023-03-13 06:25+0000\n"
 "Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-power/ka/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 
 #: data/power.policy.in:10
 msgid "Manage power settings"
-msgstr ""
+msgstr "კვების პარამეტრების მართვა"
 
 #: data/power.policy.in:11
 msgid "Authentication is required to manage power settings"
@@ -37,7 +37,7 @@ msgstr ""
 
 #: src/MainView.vala:149
 msgid "When lid is closed:"
-msgstr ""
+msgstr "როცა ლეპტოპი დახურულია:"
 
 #: src/MainView.vala:156
 msgid "When lid is closed with external monitor:"
@@ -49,7 +49,7 @@ msgstr ""
 
 #: src/MainView.vala:179
 msgid "Power button:"
-msgstr "ენერგიის ღილაკი:"
+msgstr "კვების ღილაკი:"
 
 #: src/MainView.vala:191 src/MainView.vala:224
 msgid "Suspend when inactive for:"
@@ -61,7 +61,7 @@ msgstr "შეერთებული"
 
 #: src/MainView.vala:242
 msgid "On Battery"
-msgstr "ბატარეაზე"
+msgstr "ელემენტზე"
 
 #: src/MainView.vala:267
 msgid "Some changes will not take effect until you restart this computer"
@@ -73,20 +73,19 @@ msgstr ""
 
 #: src/Plug.vala:35
 msgid "Power"
-msgstr "ელექტროენერგია"
+msgstr "კვება"
 
 #: src/Plug.vala:36
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr ""
 
 #: src/Plug.vala:71
-#, fuzzy
 msgid "Suspend button"
-msgstr "შეჩერება"
+msgstr "შეჩერების ღილაკი"
 
 #: src/Plug.vala:72
 msgid "Power button"
-msgstr ""
+msgstr "კვების ღილაკი"
 
 #: src/Plug.vala:73
 msgid "Display inactive"
@@ -94,36 +93,35 @@ msgstr ""
 
 #: src/Plug.vala:74
 msgid "Dim display"
-msgstr ""
+msgstr "ეკრანის ჩაბნელება"
 
 #: src/Plug.vala:75
 msgid "Lid close"
-msgstr ""
+msgstr "ნოუთბუქის სახურავის დახურვა"
 
 #: src/Plug.vala:76
 msgid "Display brightness"
-msgstr ""
+msgstr "ეკრანის სიკაშკაშე"
 
 #: src/Plug.vala:77
 msgid "Automatic brightness adjustment"
-msgstr ""
+msgstr "სიკაშკაშის ავტომატური მორგება"
 
 #: src/Plug.vala:78
 msgid "Inactive display off"
-msgstr ""
+msgstr "უქმე ეკრანის გამორთვა"
 
 #: src/Plug.vala:79
 msgid "Docked lid close"
-msgstr ""
+msgstr "დოკში ჩადებული ნოუთბუქის თავსახურის დახურვა"
 
 #: src/Plug.vala:80
 msgid "Sleep inactivity timeout"
 msgstr ""
 
 #: src/Plug.vala:81
-#, fuzzy
 msgid "Suspend inactive"
-msgstr "შეჩერება"
+msgstr "შეჩერება გამორთულია"
 
 #: src/Widgets/TimeoutComboBox.vala:100
 msgid "Never"
@@ -168,7 +166,7 @@ msgstr "გამორთვა"
 
 #: src/Widgets/LidCloseActionComboBox.vala:50
 msgid "Lock"
-msgstr "ჩაკეტვა"
+msgstr "დაბლოკვა"
 
 #: src/Widgets/LidCloseActionComboBox.vala:51
 msgid "Halt"
@@ -181,25 +179,23 @@ msgstr "უქმად ყოფნა"
 
 #: src/Widgets/LidCloseActionComboBox.vala:54
 msgid "Not supported"
-msgstr ""
+msgstr "მხარდაუჭერელია"
 
 #: src/Widgets/ActionComboBox.vala:47
 msgid "Prompt to shutdown"
 msgstr ""
 
 #: src/Widgets/PowerModeButton.vala:43
-#, fuzzy
-#| msgid "Power"
 msgid "Power Saver"
-msgstr "ელექტროენერგია"
+msgstr "ელემენტის შენახვის რეჟიმი"
 
 #: src/Widgets/PowerModeButton.vala:62
 msgid "Balanced"
-msgstr ""
+msgstr "ბალანსირებული"
 
 #: src/Widgets/PowerModeButton.vala:83
 msgid "Performance"
-msgstr ""
+msgstr "წარმადობა"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "ზოგიერთი პარამეტრი, შესაცვლელად საჭიროებს ადმინისტრატორის უფლებებს"
