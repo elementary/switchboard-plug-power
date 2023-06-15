@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2018 elementary LLC. (https://elementary.io)
+ * Copyright 2011-2018 elementary, Inc. (https://elementary.io)
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -17,37 +17,40 @@
  * Boston, MA  02110-1301, USA.
  */
 
-namespace Power {
-    class ActionComboBox : Gtk.ComboBoxText {
-        private string key;
+class Power.ActionComboBox : Gtk.Bin {
+    public string key { get; construct; }
+    private Gtk.ComboBoxText combobox;
 
-        // this maps combobox indices to gsettings enums
-        private int[] map_to_sett = {0, 1, 3};
-        // and vice-versa
-        private int[] map_to_list = {0, 1, -1, 2};
+    // this maps combobox indices to gsettings enums
+    private int[] map_to_sett = {0, 1, 3};
+    // and vice-versa
+    private int[] map_to_list = {0, 1, -1, 2};
 
-        public ActionComboBox (string key_value) {
-            key = key_value;
+    public ActionComboBox (string key) {
+        Object (key: key);
+    }
 
-            append_text (_("Do nothing"));
-            append_text (_("Suspend"));
-            append_text (_("Prompt to shutdown"));
+    construct {
+        combobox = new Gtk.ComboBoxText () {
+            hexpand = true
+        };
+        combobox.append_text (_("Do nothing"));
+        combobox.append_text (_("Suspend"));
+        combobox.append_text (_("Prompt to shutdown"));
 
-            hexpand = true;
+        child = combobox;
 
-            update_combo ();
+        update_combo ();
 
-            changed.connect (update_settings);
-            settings.changed[key].connect (update_combo);
-        }
+        combobox.changed.connect (() => {
+            settings.set_enum (key, map_to_sett[combobox.active]);
+        });
 
-        private void update_settings () {
-            settings.set_enum (key, map_to_sett[active]);
-        }
+        settings.changed[key].connect (update_combo);
+    }
 
-        private void update_combo () {
-            int val = settings.get_enum (key);
-            active = map_to_list [val];
-        }
+    private void update_combo () {
+        int val = settings.get_enum (key);
+        combobox.active = map_to_list [val];
     }
 }

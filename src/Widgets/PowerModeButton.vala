@@ -39,8 +39,8 @@ public class Power.PowerModeButton : Gtk.Box {
         var saver_label = new Gtk.Label (_("Power Saver"));
 
         var saver_button_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 3);
-        saver_button_box.pack_start (saver_icon);
-        saver_button_box.pack_end (saver_label);
+        saver_button_box.add (saver_icon);
+        saver_button_box.add (saver_label);
 
         saver_radio = new Gtk.RadioButton (null);
         saver_radio.get_style_context ().add_class ("image-button");
@@ -51,8 +51,8 @@ public class Power.PowerModeButton : Gtk.Box {
         var balanced_label = new Gtk.Label (_("Balanced"));
 
         var balanced_button_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 3);
-        balanced_button_box.pack_start (balanced_icon);
-        balanced_button_box.pack_end (balanced_label);
+        balanced_button_box.add (balanced_icon);
+        balanced_button_box.add (balanced_label);
 
         balanced_radio = new Gtk.RadioButton.from_widget (saver_radio);
         balanced_radio.get_style_context ().add_class ("image-button");
@@ -63,8 +63,8 @@ public class Power.PowerModeButton : Gtk.Box {
         var performance_label = new Gtk.Label (_("Performance"));
 
         var performance_button_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 3);
-        performance_button_box.pack_start (performance_icon);
-        performance_button_box.pack_end (performance_label);
+        performance_button_box.add (performance_icon);
+        performance_button_box.add (performance_label);
 
         performance_radio = new Gtk.RadioButton.from_widget (saver_radio);
         performance_radio.get_style_context ().add_class ("image-button");
