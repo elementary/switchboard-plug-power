@@ -98,6 +98,8 @@ class Power.TimeoutComboBox : Gtk.Bin {
         combobox.append_text (_("1 hour"));
         combobox.append_text (_("2 hours"));
 
+        child = combobox;
+
         setup_accountsservice.begin ();
 
         combobox.changed.connect (update_settings);
