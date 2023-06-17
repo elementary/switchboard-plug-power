@@ -17,7 +17,7 @@
  * Boston, MA  02110-1301, USA.
  */
 
-public class Power.MainView : Gtk.Grid {
+public class Power.MainView : Gtk.Box {
     public Battery battery { get; private set; }
     public Gtk.Stack stack { get; private set; }
 
@@ -53,9 +53,6 @@ public class Power.MainView : Gtk.Grid {
         var mouse_settings = new GLib.Settings ("org.gnome.desktop.peripherals.mouse");
         mouse_settings.bind ("natural-scroll", this, "natural-scroll-mouse", SettingsBindFlags.GET);
 
-        orientation = Gtk.Orientation.VERTICAL;
-        margin_bottom = 12;
-
         var label_size = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
 
         settings = new GLib.Settings ("org.gnome.settings-daemon.plugins.power");
@@ -72,7 +69,10 @@ public class Power.MainView : Gtk.Grid {
 
         var main_grid = new Gtk.Grid () {
             column_spacing = 12,
-            margin = 24,
+            margin_start = 24,
+            margin_end = 24,
+            margin_top = 24,
+            margin_bottom = 24,
             row_spacing = 12
         };
 
@@ -103,8 +103,9 @@ public class Power.MainView : Gtk.Grid {
                 xalign = 1
             };
 
-            var als_switch = new Gtk.Switch ();
-            als_switch.halign = Gtk.Align.START;
+            var als_switch = new Gtk.Switch () {
+                halign = Gtk.Align.START
+            };
 
             settings.bind ("ambient-enabled", als_switch, "active", SettingsBindFlags.DEFAULT);
 
@@ -236,24 +237,25 @@ public class Power.MainView : Gtk.Grid {
                 valign = Gtk.Align.CENTER
             };
 
-            var switcher_grid = new Gtk.Grid () {
+            var switcher_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0) {
                 margin_top = 24,
                 margin_bottom = 12
             };
-            switcher_grid.add (left_sep);
-            switcher_grid.add (stack_switcher);
-            switcher_grid.add (right_sep);
+            switcher_box.add (left_sep);
+            switcher_box.add (stack_switcher);
+            switcher_box.add (right_sep);
 
-            main_grid.attach (switcher_grid, 0, 7, 2);
+            main_grid.attach (switcher_box, 0, 7, 2);
         }
 
         main_grid.attach (stack, 0, 8, 2);
 
         var infobar_label = new Gtk.Label (_("Some changes will not take effect until you restart this computer"));
 
-        var infobar = new Gtk.InfoBar ();
-        infobar.message_type = Gtk.MessageType.WARNING;
-        infobar.revealed = false;
+        var infobar = new Gtk.InfoBar () {
+            message_type = Gtk.MessageType.WARNING,
+            revealed = false
+        };
         infobar.get_content_area ().add (infobar_label);
 
         var helper = LogindHelper.get_logind_helper ();
@@ -262,8 +264,6 @@ public class Power.MainView : Gtk.Grid {
                 infobar.revealed = true;
             });
         }
-
-        add (infobar);
 
         var power_mode_button = new PowerModeButton () {
             halign = Gtk.Align.START
@@ -277,6 +277,9 @@ public class Power.MainView : Gtk.Grid {
             main_grid.attach (power_mode_button, 1, 9);
         }
 
+        orientation = VERTICAL;
+        margin_bottom = 12;
+        add (infobar);
         add (main_grid);
         show_all ();
 

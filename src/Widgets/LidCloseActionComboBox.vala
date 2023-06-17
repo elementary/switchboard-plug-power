@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2018 elementary LLC. (https://elementary.io)
+ * Copyright 2011-2018 elementary, Inc. (https://elementary.io)
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -17,150 +17,156 @@
  * Boston, MA  02110-1301, USA.
  */
 
-namespace Power {
-    class LidCloseActionComboBox : Gtk.ComboBoxText {
-        private const string HANDLE_LID_SWITCH_DOCKED_KEY = "HandleLidSwitchDocked";
-        private const string HANDLE_LID_SWITCH_KEY = "HandleLidSwitch";
+class Power.LidCloseActionComboBox : Gtk.Bin {
+    private const string HANDLE_LID_SWITCH_DOCKED_KEY = "HandleLidSwitchDocked";
+    private const string HANDLE_LID_SWITCH_KEY = "HandleLidSwitch";
 
-        private bool dock;
+    public bool dock { get; construct; }
 
-        private int previous_active;
+    private Gtk.ComboBoxText combobox;
+    private int previous_active;
 
-        public LidCloseActionComboBox (bool dock) {
-            this.dock = dock;
+    public LidCloseActionComboBox (bool dock) {
+        Object (dock: dock);
+    }
 
-            var helper = LogindHelper.get_logind_helper ();
-            if (helper != null && helper.present) {
-                append_text (_("Suspend"));
-                append_text (_("Shutdown"));
-                append_text (_("Lock"));
-                append_text (_("Halt"));
-                append_text (_("Do nothing"));
-            } else {
-                append_text (_("Not supported"));
-            }
+    construct {
+        combobox = new Gtk.ComboBoxText () {
+            hexpand = true
+        };
 
-            hexpand = true;
-            update_current_action ();
-            previous_active = active;
-            changed.connect (on_changed);
+        child = combobox;
+
+        var helper = LogindHelper.get_logind_helper ();
+        if (helper != null && helper.present) {
+            combobox.append_text (_("Suspend"));
+            combobox.append_text (_("Shutdown"));
+            combobox.append_text (_("Lock"));
+            combobox.append_text (_("Halt"));
+            combobox.append_text (_("Do nothing"));
+        } else {
+            combobox.append_text (_("Not supported"));
         }
 
-        private bool set_active_with_permission (int index_) {
-            // Returns true on success
+        update_current_action ();
+        previous_active = combobox.active;
+        combobox.changed.connect (on_changed);
+    }
 
-            var permission = MainView.get_permission ();
-            if (permission == null) {
-                return false;
-            }
+    private bool set_active_with_permission (int index_) {
+        // Returns true on success
 
-            if (!permission.allowed) {
-                try {
-                    permission.acquire ();
-                } catch (Error e) {
-                    warning (e.message);
-                    return false;
-                }
-            }
-
-            previous_active = active;
-            active = index_;
-            return true;
+        var permission = MainView.get_permission ();
+        if (permission == null) {
+            return false;
         }
 
-        private void on_changed () {
-            var helper = LogindHelper.get_logind_helper ();
-            if (helper == null) {
-                return;
-            }
-
-            if (active != previous_active) {
-                var success = set_active_with_permission (active);
-                if (!success) {
-                    active = previous_active;
-                    return;
-                }
-            } else {
-                return;
-            }
-
-            LogindHelper.Action action = get_action ();
+        if (!permission.allowed) {
             try {
-                if (dock) {
-                    helper.set_key (HANDLE_LID_SWITCH_DOCKED_KEY, action.to_string ());
-                } else {
-                    helper.set_key (HANDLE_LID_SWITCH_KEY, action.to_string ());
-                }
+                permission.acquire ();
             } catch (Error e) {
                 warning (e.message);
+                return false;
             }
         }
 
-        private void update_current_action () {
-            var helper = LogindHelper.get_logind_helper ();
-            if (helper == null) {
+        previous_active = combobox.active;
+        combobox.active = index_;
+        return true;
+    }
+
+    private void on_changed () {
+        var helper = LogindHelper.get_logind_helper ();
+        if (helper == null) {
+            return;
+        }
+
+        if (combobox.active != previous_active) {
+            var success = set_active_with_permission (combobox.active);
+            if (!success) {
+                combobox.active = previous_active;
                 return;
             }
+        } else {
+            return;
+        }
 
-            LogindHelper.Action action;
+        LogindHelper.Action action = get_action ();
+        try {
             if (dock) {
-                try {
-                    string val = helper.get_key (HANDLE_LID_SWITCH_DOCKED_KEY);
-                    action = LogindHelper.Action.from_string (val);
-                } catch (Error e) {
-                    // Default in logind.conf
-                    action = LogindHelper.Action.IGNORE;
-                }
+                helper.set_key (HANDLE_LID_SWITCH_DOCKED_KEY, action.to_string ());
             } else {
-                try {
-                    string val = helper.get_key (HANDLE_LID_SWITCH_KEY);
-                    action = LogindHelper.Action.from_string (val);
-                } catch (Error e) {
-                    // Default in logind.conf
-                    action = LogindHelper.Action.SUSPEND;
-                }
+                helper.set_key (HANDLE_LID_SWITCH_KEY, action.to_string ());
             }
+        } catch (Error e) {
+            warning (e.message);
+        }
+    }
 
-            set_active_item (action);
+    private void update_current_action () {
+        var helper = LogindHelper.get_logind_helper ();
+        if (helper == null) {
+            return;
         }
 
-        private LogindHelper.Action get_action () {
-            switch (active) {
-                case 0:
-                    return LogindHelper.Action.SUSPEND;
-                case 1:
-                    return LogindHelper.Action.POWEROFF;
-                case 2:
-                    return LogindHelper.Action.LOCK;
-                case 3:
-                    return LogindHelper.Action.HALT;
-                case 4:
-                    return LogindHelper.Action.IGNORE;
-                default:
-                    return LogindHelper.Action.UNKNOWN;
+        LogindHelper.Action action;
+        if (dock) {
+            try {
+                string val = helper.get_key (HANDLE_LID_SWITCH_DOCKED_KEY);
+                action = LogindHelper.Action.from_string (val);
+            } catch (Error e) {
+                // Default in logind.conf
+                action = LogindHelper.Action.IGNORE;
+            }
+        } else {
+            try {
+                string val = helper.get_key (HANDLE_LID_SWITCH_KEY);
+                action = LogindHelper.Action.from_string (val);
+            } catch (Error e) {
+                // Default in logind.conf
+                action = LogindHelper.Action.SUSPEND;
             }
         }
 
-        private void set_active_item (LogindHelper.Action action) {
-            switch (action) {
-                case LogindHelper.Action.SUSPEND:
-                    active = 0;
-                    break;
-                case LogindHelper.Action.POWEROFF:
-                    active = 1;
-                    break;
-                case LogindHelper.Action.LOCK:
-                    active = 2;
-                    break;
-                case LogindHelper.Action.HALT:
-                    active = 3;
-                    break;
-                case LogindHelper.Action.IGNORE:
-                    active = 4;
-                    break;
-                default:
-                    break;
-            }
+        set_active_item (action);
+    }
+
+    private LogindHelper.Action get_action () {
+        switch (combobox.active) {
+            case 0:
+                return LogindHelper.Action.SUSPEND;
+            case 1:
+                return LogindHelper.Action.POWEROFF;
+            case 2:
+                return LogindHelper.Action.LOCK;
+            case 3:
+                return LogindHelper.Action.HALT;
+            case 4:
+                return LogindHelper.Action.IGNORE;
+            default:
+                return LogindHelper.Action.UNKNOWN;
+        }
+    }
+
+    private void set_active_item (LogindHelper.Action action) {
+        switch (action) {
+            case LogindHelper.Action.SUSPEND:
+                combobox.active = 0;
+                break;
+            case LogindHelper.Action.POWEROFF:
+                combobox.active = 1;
+                break;
+            case LogindHelper.Action.LOCK:
+                combobox.active = 2;
+                break;
+            case LogindHelper.Action.HALT:
+                combobox.active = 3;
+                break;
+            case LogindHelper.Action.IGNORE:
+                combobox.active = 4;
+                break;
+            default:
+                break;
         }
     }
 }
