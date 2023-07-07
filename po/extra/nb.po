@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-26 10:25+0000\n"
-"PO-Revision-Date: 2021-07-15 13:41+0000\n"
+"PO-Revision-Date: 2023-07-08 21:07+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
 "switchboard/power-plug-extra/nb/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.17\n"
 
 #: data/power.appdata.xml.in:5
 msgid "Power Settings"
@@ -29,7 +29,7 @@ msgstr "Sett opp skjermlysstyrke, på-knapper, og dvalgangsoppførsel"
 
 #: data/power.appdata.xml.in:12 data/power.appdata.xml.in:24
 msgid "New features:"
-msgstr ""
+msgstr "Nye funksjoner:"
 
 #: data/power.appdata.xml.in:14
 msgid "Add power profile management"
