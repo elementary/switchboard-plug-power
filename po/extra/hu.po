@@ -54,7 +54,8 @@ msgstr "Kapcsoló az akkumulátor töltöttségének kijelzéséhez az állapots
 
 #: data/power.appdata.xml.in:30
 msgid "Fix a potential issue with resuming from sleep"
-msgstr "Az alvó módból való visszatéréskor jelentkező lehetséges fagyás javítva"
+msgstr ""
+"Az alvó módból való visszatéréskor jelentkező lehetséges fagyás javítva"
 
 #: data/power.appdata.xml.in:39
 msgid "Change lid settings without restarting"
