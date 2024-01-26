@@ -1,6 +1,6 @@
 # Power Settings
 [![Packaging status](https://repology.org/badge/tiny-repos/switchboard-plug-power.svg)](https://repology.org/metapackage/switchboard-plug-power)
-[![Translation status](https://l10n.elementary.io/widgets/switchboard/-/switchboard-plug-power/svg-badge.svg)](https://l10n.elementary.io/engage/switchboard/?utm_source=widget)
+[![Translation status](https://l10n.elementary.io/widgets/switchboard/-/power/svg-badge.svg)](https://l10n.elementary.io/engage/switchboard/?utm_source=widget)
 
 ![screenshot](data/screenshot.png?raw=true)
 
