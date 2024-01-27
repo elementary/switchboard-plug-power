@@ -22,7 +22,7 @@
 public class Power.PowerModeButton : Gtk.Box {
     public static bool successfully_initialized { get; private set; default = true; }
 
-    private static PowerProfile? pprofile { get; private set; default = null; }
+    private static PowerProfile? pprofile;
     private static GLib.Settings? settings;
 
     public string settings_key { get; construct; }
