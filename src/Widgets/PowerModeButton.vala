@@ -33,7 +33,7 @@ public class Power.PowerModeButton : Gtk.Box {
 
     public PowerModeButton (string settings_key) {
         Object (settings_key: settings_key);
-    } 
+    }
 
     static construct {
         var schema = SettingsSchemaSource.get_default ().lookup ("io.elementary.settings-daemon.power", true);

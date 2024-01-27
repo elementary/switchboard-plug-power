@@ -253,12 +253,12 @@ public class Power.MainView : Gtk.Box {
             var battery_power_mode_button = new PowerModeButton ("profile-on-battery") {
                 halign = Gtk.Align.START
             };
-    
+
             if (PowerModeButton.successfully_initialized) {
                 var power_mode_label = new Gtk.Label (_("Power management mode:")) {
                     xalign = 1
                 };
-    
+
                 battery_grid.attach (power_mode_label, 0, 1);
                 battery_grid.attach (battery_power_mode_button, 1, 1);
             }
