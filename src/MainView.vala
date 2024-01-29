@@ -148,7 +148,7 @@ public class Power.MainView : Gtk.Box {
                 halign = Gtk.Align.END,
                 xalign = 1
             };
-    
+
             var auto_low_power_switch = new Gtk.Switch () {
                 halign = Gtk.Align.START
             };
