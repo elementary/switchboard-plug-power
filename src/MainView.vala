@@ -143,6 +143,21 @@ public class Power.MainView : Gtk.Box {
             label_size.add_widget (als_label);
         }
 
+        if (battery.is_present ()) {
+            var auto_low_power_label = new Gtk.Label (_("Enable power save on low battery:")) {
+                halign = Gtk.Align.END,
+                xalign = 1
+            };
+
+            var auto_low_power_switch = new Gtk.Switch () {
+                halign = Gtk.Align.START
+            };
+            settings.bind ("power-saver-profile-on-low-battery", auto_low_power_switch, "active", SettingsBindFlags.DEFAULT);
+
+            main_grid.attach (auto_low_power_label, 0, 3);
+            main_grid.attach (auto_low_power_switch, 1, 3);
+        }
+
         if (lid_detect ()) {
             var lid_closed_label = new Gtk.Label (_("When lid is closed:")) {
                 halign = Gtk.Align.END,
@@ -161,10 +176,10 @@ public class Power.MainView : Gtk.Box {
             label_size.add_widget (lid_closed_label);
             label_size.add_widget (lid_dock_label);
 
-            main_grid.attach (lid_closed_label, 0, 5);
-            main_grid.attach (lid_closed_box, 1, 5);
-            main_grid.attach (lid_dock_label, 0, 6);
-            main_grid.attach (lid_dock_box, 1, 6);
+            main_grid.attach (lid_closed_label, 0, 6);
+            main_grid.attach (lid_closed_box, 1, 6);
+            main_grid.attach (lid_dock_label, 0, 7);
+            main_grid.attach (lid_dock_box, 1, 7);
         }
 
         var screen_timeout_label = new Gtk.Label (_("Turn off display when inactive for:")) {
@@ -181,10 +196,10 @@ public class Power.MainView : Gtk.Box {
 
         var power_combobox = new ActionComboBox ("power-button-action");
 
-        main_grid.attach (screen_timeout_label, 0, 3);
-        main_grid.attach (screen_timeout, 1, 3);
-        main_grid.attach (power_label, 0, 4);
-        main_grid.attach (power_combobox, 1, 4);
+        main_grid.attach (screen_timeout_label, 0, 4);
+        main_grid.attach (screen_timeout, 1, 4);
+        main_grid.attach (power_label, 0, 5);
+        main_grid.attach (power_combobox, 1, 5);
 
         var sleep_timeout_label = new Gtk.Label (_("Suspend when inactive for:")) {
             xalign = 1
@@ -257,10 +272,10 @@ public class Power.MainView : Gtk.Box {
             switcher_box.append (stack_switcher);
             switcher_box.append (right_sep);
 
-            main_grid.attach (switcher_box, 0, 7, 2);
+            main_grid.attach (switcher_box, 0, 8, 2);
         }
 
-        main_grid.attach (stack, 0, 8, 2);
+        main_grid.attach (stack, 0, 9, 2);
 
         var infobar_label = new Gtk.Label (_("Some changes will not take effect until you restart this computer"));
 
@@ -285,8 +300,8 @@ public class Power.MainView : Gtk.Box {
                 xalign = 1
             };
 
-            main_grid.attach (power_mode_label, 0, 9);
-            main_grid.attach (power_mode_button, 1, 9);
+            main_grid.attach (power_mode_label, 0, 10);
+            main_grid.attach (power_mode_button, 1, 10);
         }
 
         orientation = VERTICAL;
