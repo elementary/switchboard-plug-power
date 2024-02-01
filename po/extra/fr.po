@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-26 10:25+0000\n"
+"POT-Creation-Date: 2024-02-01 19:35+0000\n"
 "PO-Revision-Date: 2022-05-30 10:51+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/power-"
@@ -29,54 +29,54 @@ msgstr ""
 "Configurer la luminosité de l'écran, le comportement des boutons allumer et "
 "mise en veille"
 
-#: data/power.appdata.xml.in:12 data/power.appdata.xml.in:24
+#: data/power.appdata.xml.in:11 data/power.appdata.xml.in:23
 msgid "New features:"
 msgstr "Nouvelles fonctionnalités :"
 
-#: data/power.appdata.xml.in:14
+#: data/power.appdata.xml.in:13
 msgid "Add power profile management"
 msgstr "Ajouter la gestion des profils d'alimentation"
 
-#: data/power.appdata.xml.in:16 data/power.appdata.xml.in:28
-#: data/power.appdata.xml.in:37
+#: data/power.appdata.xml.in:15 data/power.appdata.xml.in:27
+#: data/power.appdata.xml.in:36
 msgid "Minor updates:"
 msgstr "Mises à jour mineures :"
 
-#: data/power.appdata.xml.in:18 data/power.appdata.xml.in:31
-#: data/power.appdata.xml.in:41 data/power.appdata.xml.in:48
-#: data/power.appdata.xml.in:53 data/power.appdata.xml.in:60
+#: data/power.appdata.xml.in:17 data/power.appdata.xml.in:30
+#: data/power.appdata.xml.in:40 data/power.appdata.xml.in:47
+#: data/power.appdata.xml.in:52 data/power.appdata.xml.in:59
 msgid "Updated translations"
 msgstr "Mise à jour des traductions"
 
-#: data/power.appdata.xml.in:26
+#: data/power.appdata.xml.in:25
 msgid "Add toggle for showing battery percentage in Panel"
 msgstr ""
 "Ajout d'une option pour afficher le pourcentage de la batterie dans le "
 "panneau"
 
-#: data/power.appdata.xml.in:30
+#: data/power.appdata.xml.in:29
 msgid "Fix a potential issue with resuming from sleep"
 msgstr "Correction d'un problème potentiel lors de la sortie de veille"
 
-#: data/power.appdata.xml.in:39
+#: data/power.appdata.xml.in:38
 msgid "Change lid settings without restarting"
 msgstr "Modifier les paramètres du capot sans redémarrer"
 
-#: data/power.appdata.xml.in:40
+#: data/power.appdata.xml.in:39
 msgid "Show in search results for \"sleep\" and \"timeout\""
 msgstr "Apparaît dans les résultats de recherche pour « sleep » et « timeout »"
 
-#: data/power.appdata.xml.in:47
+#: data/power.appdata.xml.in:46
 msgid "Fix potential freeze when changing settings from multiple panes"
 msgstr ""
 "Correction d'un blocage potentiel lors de la modification de paramètre "
 "depuis plusieurs volets"
 
-#: data/power.appdata.xml.in:58
+#: data/power.appdata.xml.in:57
 msgid "Remove broken hibernate option"
 msgstr "Suppression de l'option de mise en veille prolongée non fonctionnelle"
 
-#: data/power.appdata.xml.in:59
+#: data/power.appdata.xml.in:58
 msgid "Add prompt to shutdown to power button actions"
 msgstr ""
 "Ajout de l'option demandant d'afficher une boîte de dialogue lors de l'appui "

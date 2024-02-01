@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-26 10:25+0000\n"
+"POT-Creation-Date: 2024-02-01 19:35+0000\n"
 "PO-Revision-Date: 2022-01-10 21:58+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/power-"
@@ -27,49 +27,49 @@ msgstr "Nastavení správy napájení"
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "Nastavuje jas obrazovky, tlačítka napájení a chování uspávání"
 
-#: data/power.appdata.xml.in:12 data/power.appdata.xml.in:24
+#: data/power.appdata.xml.in:11 data/power.appdata.xml.in:23
 msgid "New features:"
 msgstr "Nové funkce:"
 
-#: data/power.appdata.xml.in:14
+#: data/power.appdata.xml.in:13
 msgid "Add power profile management"
 msgstr "Přidána správa profilů napájení"
 
-#: data/power.appdata.xml.in:16 data/power.appdata.xml.in:28
-#: data/power.appdata.xml.in:37
+#: data/power.appdata.xml.in:15 data/power.appdata.xml.in:27
+#: data/power.appdata.xml.in:36
 msgid "Minor updates:"
 msgstr "Drobné aktualizace:"
 
-#: data/power.appdata.xml.in:18 data/power.appdata.xml.in:31
-#: data/power.appdata.xml.in:41 data/power.appdata.xml.in:48
-#: data/power.appdata.xml.in:53 data/power.appdata.xml.in:60
+#: data/power.appdata.xml.in:17 data/power.appdata.xml.in:30
+#: data/power.appdata.xml.in:40 data/power.appdata.xml.in:47
+#: data/power.appdata.xml.in:52 data/power.appdata.xml.in:59
 msgid "Updated translations"
 msgstr "Aktualizovány překlady"
 
-#: data/power.appdata.xml.in:26
+#: data/power.appdata.xml.in:25
 msgid "Add toggle for showing battery percentage in Panel"
 msgstr "Přidáno zobraz./nezobraz. procent nabití akumulátoru na Panel"
 
-#: data/power.appdata.xml.in:30
+#: data/power.appdata.xml.in:29
 msgid "Fix a potential issue with resuming from sleep"
 msgstr "Opraven potenciální problém s probouzením z režimu spánku"
 
-#: data/power.appdata.xml.in:39
+#: data/power.appdata.xml.in:38
 msgid "Change lid settings without restarting"
 msgstr "Změněno nastavení pro víko aniž by bylo třeba restartovat"
 
-#: data/power.appdata.xml.in:40
+#: data/power.appdata.xml.in:39
 msgid "Show in search results for \"sleep\" and \"timeout\""
 msgstr "Zobrazit ve výsledcích hledání pro „spánek“ a „časový limit“"
 
-#: data/power.appdata.xml.in:47
+#: data/power.appdata.xml.in:46
 msgid "Fix potential freeze when changing settings from multiple panes"
 msgstr "Opraveno potenciální mrznutí při změně nastavení z vícero podoken"
 
-#: data/power.appdata.xml.in:58
+#: data/power.appdata.xml.in:57
 msgid "Remove broken hibernate option"
 msgstr "Odebrání rozbité volby pro hibernaci"
 
-#: data/power.appdata.xml.in:59
+#: data/power.appdata.xml.in:58
 msgid "Add prompt to shutdown to power button actions"
 msgstr "Přidání výzvy ohledně vypnutí při akci tlačítka napájení"
