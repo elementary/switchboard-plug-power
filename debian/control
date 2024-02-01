@@ -5,6 +5,7 @@ Maintainer: elementary, Inc. <builds@elementary.io>
 Build-Depends: debhelper (>= 10.5.1),
                gettext,
                libdbus-1-dev,
+               libadwaita-1-dev,
                libgranite-7-dev,
                libpolkit-gobject-1-dev,
                libswitchboard-3-dev,
