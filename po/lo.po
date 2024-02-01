@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-21 12:35-0700\n"
+"POT-Creation-Date: 2024-02-01 19:35+0000\n"
 "PO-Revision-Date: 2012-10-27 02:17+0000\n"
 "Last-Translator: Corentin Noël <corentin@elementaryos.org>\n"
 "Language-Team: Lao <lo@li.org>\n"
@@ -26,51 +26,55 @@ msgstr ""
 msgid "Authentication is required to manage power settings"
 msgstr ""
 
-#: src/MainView.vala:84
+#: src/MainView.vala:82
 msgid "Show battery percentage in Panel:"
 msgstr ""
 
-#: src/MainView.vala:99
+#: src/MainView.vala:97
 msgid "Display brightness:"
 msgstr ""
 
-#: src/MainView.vala:104
+#: src/MainView.vala:102
 msgid "Automatically adjust brightness:"
 msgstr ""
 
-#: src/MainView.vala:149
+#: src/MainView.vala:147
+msgid "Enable power save on low battery:"
+msgstr ""
+
+#: src/MainView.vala:162
 msgid "When lid is closed:"
 msgstr ""
 
-#: src/MainView.vala:156
+#: src/MainView.vala:169
 msgid "When lid is closed with external monitor:"
 msgstr ""
 
-#: src/MainView.vala:172
+#: src/MainView.vala:185
 msgid "Turn off display when inactive for:"
 msgstr ""
 
-#: src/MainView.vala:179
+#: src/MainView.vala:192
 msgid "Power button:"
 msgstr ""
 
-#: src/MainView.vala:191 src/MainView.vala:224
+#: src/MainView.vala:204 src/MainView.vala:237
 msgid "Suspend when inactive for:"
 msgstr ""
 
-#: src/MainView.vala:209
+#: src/MainView.vala:222
 msgid "Plugged In"
 msgstr ""
 
-#: src/MainView.vala:242
+#: src/MainView.vala:255
 msgid "On Battery"
 msgstr ""
 
-#: src/MainView.vala:267
+#: src/MainView.vala:280
 msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
 
-#: src/MainView.vala:288
+#: src/MainView.vala:299
 msgid "Power management mode:"
 msgstr ""
 
@@ -126,65 +130,65 @@ msgstr ""
 msgid "Suspend inactive"
 msgstr ""
 
-#: src/Widgets/TimeoutComboBox.vala:100
+#: src/Widgets/TimeoutComboBox.vala:99
 msgid "Never"
 msgstr ""
 
-#: src/Widgets/TimeoutComboBox.vala:101
+#: src/Widgets/TimeoutComboBox.vala:100
 msgid "5 min"
 msgstr ""
 
-#: src/Widgets/TimeoutComboBox.vala:102
+#: src/Widgets/TimeoutComboBox.vala:101
 msgid "10 min"
 msgstr ""
 
-#: src/Widgets/TimeoutComboBox.vala:103
+#: src/Widgets/TimeoutComboBox.vala:102
 msgid "15 min"
 msgstr ""
 
-#: src/Widgets/TimeoutComboBox.vala:104
+#: src/Widgets/TimeoutComboBox.vala:103
 msgid "30 min"
 msgstr ""
 
-#: src/Widgets/TimeoutComboBox.vala:105
+#: src/Widgets/TimeoutComboBox.vala:104
 msgid "45 min"
 msgstr ""
 
-#: src/Widgets/TimeoutComboBox.vala:106
+#: src/Widgets/TimeoutComboBox.vala:105
 msgid "1 hour"
 msgstr ""
 
-#: src/Widgets/TimeoutComboBox.vala:107
+#: src/Widgets/TimeoutComboBox.vala:106
 msgid "2 hours"
 msgstr ""
 
-#: src/Widgets/LidCloseActionComboBox.vala:48
-#: src/Widgets/ActionComboBox.vala:46
+#: src/Widgets/LidCloseActionComboBox.vala:46
+#: src/Widgets/ActionComboBox.vala:42
 msgid "Suspend"
 msgstr ""
 
-#: src/Widgets/LidCloseActionComboBox.vala:49
+#: src/Widgets/LidCloseActionComboBox.vala:47
 msgid "Shutdown"
 msgstr ""
 
-#: src/Widgets/LidCloseActionComboBox.vala:50
+#: src/Widgets/LidCloseActionComboBox.vala:48
 msgid "Lock"
 msgstr ""
 
-#: src/Widgets/LidCloseActionComboBox.vala:51
+#: src/Widgets/LidCloseActionComboBox.vala:49
 msgid "Halt"
 msgstr ""
 
-#: src/Widgets/LidCloseActionComboBox.vala:52
-#: src/Widgets/ActionComboBox.vala:45
+#: src/Widgets/LidCloseActionComboBox.vala:50
+#: src/Widgets/ActionComboBox.vala:41
 msgid "Do nothing"
 msgstr ""
 
-#: src/Widgets/LidCloseActionComboBox.vala:54
+#: src/Widgets/LidCloseActionComboBox.vala:52
 msgid "Not supported"
 msgstr ""
 
-#: src/Widgets/ActionComboBox.vala:47
+#: src/Widgets/ActionComboBox.vala:43
 msgid "Prompt to shutdown"
 msgstr ""
 
