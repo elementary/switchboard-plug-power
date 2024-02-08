@@ -18,7 +18,6 @@
  */
 
 public class Power.MainView : Switchboard.SettingsPage {
-    public Battery battery { get; private set; }
     public Gtk.Stack stack { get; private set; }
 
     /* Smooth scrolling support */
@@ -33,7 +32,6 @@ public class Power.MainView : Switchboard.SettingsPage {
 
     private Gtk.Scale scale;
     private PowerSettings screen;
-    private PowerSupply power_supply;
 
     private enum PowerActionType {
         BLANK,
@@ -64,8 +62,7 @@ public class Power.MainView : Switchboard.SettingsPage {
 
         settings = new GLib.Settings ("org.gnome.settings-daemon.plugins.power");
 
-        battery = new Battery ();
-        power_supply = new PowerSupply ();
+        var power_manager = PowerManager.get_default ();
 
         try {
             screen = Bus.get_proxy_sync (BusType.SESSION, SETTINGS_DAEMON_NAME,
@@ -79,7 +76,7 @@ public class Power.MainView : Switchboard.SettingsPage {
             row_spacing = 12
         };
 
-        if (battery.is_present ()) {
+        if (power_manager.has_battery ()) {
             var wingpanel_power_settings = new GLib.Settings ("io.elementary.desktop.wingpanel.power");
 
             var show_percent_label = new Gtk.Label (_("Show battery percentage in Panel:")) {
@@ -146,7 +143,7 @@ public class Power.MainView : Switchboard.SettingsPage {
             label_size.add_widget (als_label);
         }
 
-        if (battery.is_present ()) {
+        if (power_manager.has_battery ()) {
             var auto_low_power_label = new Gtk.Label (_("Enable power save on low battery:")) {
                 halign = Gtk.Align.END,
                 xalign = 1
@@ -161,7 +158,7 @@ public class Power.MainView : Switchboard.SettingsPage {
             main_grid.attach (auto_low_power_switch, 1, 3);
         }
 
-        if (lid_detect ()) {
+        if (power_manager.has_lid ()) {
             var lid_closed_label = new Gtk.Label (_("When lid is closed:")) {
                 halign = Gtk.Align.END,
                 xalign = 1
@@ -236,7 +233,7 @@ public class Power.MainView : Switchboard.SettingsPage {
             }
         }
 
-        if (battery.is_present ()) {
+        if (power_manager.has_battery ()) {
             var battery_timeout_label = new Gtk.Label (_("Suspend when inactive for:")) {
                 xalign = 1
             };
@@ -357,28 +354,6 @@ public class Power.MainView : Switchboard.SettingsPage {
 
         } catch (GLib.Error err) {
             critical (err.message);
-        }
-
-        return false;
-    }
-
-    private static bool lid_detect () {
-        var interface_path = File.new_for_path ("/proc/acpi/button/lid/");
-
-        try {
-            var enumerator = interface_path.enumerate_children (
-            GLib.FileAttribute.STANDARD_NAME,
-            FileQueryInfoFlags.NONE);
-            FileInfo lid;
-            if ((lid = enumerator.next_file ()) != null) {
-                debug ("Detected lid switch");
-                return true;
-            }
-
-            enumerator.close ();
-
-        } catch (GLib.Error err) {
-            warning (err.message); // Not critical as this is eventually dealt with
         }
 
         return false;
