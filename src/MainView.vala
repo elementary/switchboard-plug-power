@@ -290,7 +290,6 @@ public class Power.MainView : Switchboard.SettingsPage {
             main_grid.attach (switcher_box, 0, 8, 2);
         }
 
-
         main_grid.attach (stack, 0, 10, 2);
 
         var infobar_label = new Gtk.Label (_("Some changes will not take effect until you restart this computer"));
