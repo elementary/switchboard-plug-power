@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-26 10:25+0000\n"
+"POT-Creation-Date: 2024-02-08 04:56+0000\n"
 "PO-Revision-Date: 2022-01-12 02:56+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/power-"
@@ -27,50 +27,50 @@ msgstr "הגדרות צריכת חשמל"
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "הגדרת בהירות המסך, כפתורי הכיבוי והתנהגות מצב ההשהיה"
 
-#: data/power.appdata.xml.in:12 data/power.appdata.xml.in:24
+#: data/power.appdata.xml.in:11 data/power.appdata.xml.in:23
 msgid "New features:"
 msgstr "יכולות חדשות:"
 
-#: data/power.appdata.xml.in:14
+#: data/power.appdata.xml.in:13
 msgid "Add power profile management"
 msgstr "נוסף ניהול פרופיל צריכת חשמל"
 
-#: data/power.appdata.xml.in:16 data/power.appdata.xml.in:28
-#: data/power.appdata.xml.in:37
+#: data/power.appdata.xml.in:15 data/power.appdata.xml.in:27
+#: data/power.appdata.xml.in:36
 msgid "Minor updates:"
 msgstr "עדכונים משניים:"
 
-#: data/power.appdata.xml.in:18 data/power.appdata.xml.in:31
-#: data/power.appdata.xml.in:41 data/power.appdata.xml.in:48
-#: data/power.appdata.xml.in:53 data/power.appdata.xml.in:60
+#: data/power.appdata.xml.in:17 data/power.appdata.xml.in:30
+#: data/power.appdata.xml.in:40 data/power.appdata.xml.in:47
+#: data/power.appdata.xml.in:52 data/power.appdata.xml.in:59
 msgid "Updated translations"
 msgstr "תרגומים עודכנו"
 
-#: data/power.appdata.xml.in:26
+#: data/power.appdata.xml.in:25
 msgid "Add toggle for showing battery percentage in Panel"
 msgstr "נוסף בורר להצגת אחוז הסוללה בלוח"
 
-#: data/power.appdata.xml.in:30
+#: data/power.appdata.xml.in:29
 msgid "Fix a potential issue with resuming from sleep"
 msgstr "תיקון בעיה שמתרחשת כשיוצאים ממצב שינה"
 
-#: data/power.appdata.xml.in:39
+#: data/power.appdata.xml.in:38
 msgid "Change lid settings without restarting"
 msgstr "ניתן להחליף הגדרות מכסה בלי להפעיל מחדש"
 
-#: data/power.appdata.xml.in:40
+#: data/power.appdata.xml.in:39
 msgid "Show in search results for \"sleep\" and \"timeout\""
 msgstr "מופיע בתוצאות חיפוש ל„שינה” ול„תום זמן”"
 
-#: data/power.appdata.xml.in:47
+#: data/power.appdata.xml.in:46
 msgid "Fix potential freeze when changing settings from multiple panes"
 msgstr "תיקון קיפאון שעשוי להתרחש בעת החלפת הגדרות ממגוון לוחות"
 
-#: data/power.appdata.xml.in:58
+#: data/power.appdata.xml.in:57
 msgid "Remove broken hibernate option"
 msgstr "הסרת אפשרות התרדמת שאינה עובדת"
 
-#: data/power.appdata.xml.in:59
+#: data/power.appdata.xml.in:58
 msgid "Add prompt to shutdown to power button actions"
 msgstr "הוספת בקשה לכיבוי לפעולות כפתור הכיבוי"
 

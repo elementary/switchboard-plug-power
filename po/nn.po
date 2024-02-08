@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-21 12:35-0700\n"
+"POT-Creation-Date: 2024-02-08 04:56+0000\n"
 "PO-Revision-Date: 2019-01-07 00:03+0000\n"
 "Last-Translator: Simon Dagfinrud <semonje@gmail.com>\n"
 "Language-Team: Norwegian Nynorsk <https://weblate.elementary.io/projects/"
@@ -28,57 +28,61 @@ msgstr "Handsam strauminnstillingar"
 msgid "Authentication is required to manage power settings"
 msgstr "Stadfesting er kravd for å behandle strauminstillingar"
 
-#: src/MainView.vala:84
+#: src/MainView.vala:52 src/Plug.vala:35
+msgid "Power"
+msgstr "Straum"
+
+#: src/MainView.vala:85
 msgid "Show battery percentage in Panel:"
 msgstr ""
 
-#: src/MainView.vala:99
+#: src/MainView.vala:100
 msgid "Display brightness:"
 msgstr "Lysstyrke på skjerm:"
 
-#: src/MainView.vala:104
+#: src/MainView.vala:105
 msgid "Automatically adjust brightness:"
 msgstr "Juster lysstyrka automatisk:"
 
-#: src/MainView.vala:149
+#: src/MainView.vala:150
+msgid "Enable power save on low battery:"
+msgstr ""
+
+#: src/MainView.vala:165
 msgid "When lid is closed:"
 msgstr "Når"
 
-#: src/MainView.vala:156
+#: src/MainView.vala:172
 msgid "When lid is closed with external monitor:"
 msgstr "Når lokket vert lukka med ein ekstern skjerm:"
 
-#: src/MainView.vala:172
+#: src/MainView.vala:188
 msgid "Turn off display when inactive for:"
 msgstr "Slå av skjermen når han har vore inaktiv i:"
 
-#: src/MainView.vala:179
+#: src/MainView.vala:195
 msgid "Power button:"
 msgstr "Av/på-knapp"
 
-#: src/MainView.vala:191 src/MainView.vala:224
+#: src/MainView.vala:207 src/MainView.vala:240
 msgid "Suspend when inactive for:"
 msgstr "Kvilemodus dersom inaktiv i:"
 
-#: src/MainView.vala:209
+#: src/MainView.vala:225
 msgid "Plugged In"
 msgstr "Kopla til"
 
-#: src/MainView.vala:242
+#: src/MainView.vala:258
 msgid "On Battery"
 msgstr "På batteri"
 
-#: src/MainView.vala:267
+#: src/MainView.vala:283
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Nokre endringar trer ikkje i kraft før maskina vert starta om att"
 
-#: src/MainView.vala:288
+#: src/MainView.vala:303
 msgid "Power management mode:"
 msgstr ""
-
-#: src/Plug.vala:35
-msgid "Power"
-msgstr "Straum"
 
 #: src/Plug.vala:36
 msgid "Configure display brightness, power buttons, and suspend behavior"
@@ -128,65 +132,65 @@ msgstr ""
 msgid "Suspend inactive"
 msgstr "Kvilemodus ved inaktivitet"
 
-#: src/Widgets/TimeoutComboBox.vala:100
+#: src/Widgets/TimeoutComboBox.vala:99
 msgid "Never"
 msgstr "Aldri"
 
-#: src/Widgets/TimeoutComboBox.vala:101
+#: src/Widgets/TimeoutComboBox.vala:100
 msgid "5 min"
 msgstr "5 min"
 
-#: src/Widgets/TimeoutComboBox.vala:102
+#: src/Widgets/TimeoutComboBox.vala:101
 msgid "10 min"
 msgstr "10 min"
 
-#: src/Widgets/TimeoutComboBox.vala:103
+#: src/Widgets/TimeoutComboBox.vala:102
 msgid "15 min"
 msgstr "15 min"
 
-#: src/Widgets/TimeoutComboBox.vala:104
+#: src/Widgets/TimeoutComboBox.vala:103
 msgid "30 min"
 msgstr "30 min"
 
-#: src/Widgets/TimeoutComboBox.vala:105
+#: src/Widgets/TimeoutComboBox.vala:104
 msgid "45 min"
 msgstr "45 min"
 
-#: src/Widgets/TimeoutComboBox.vala:106
+#: src/Widgets/TimeoutComboBox.vala:105
 msgid "1 hour"
 msgstr "1 time"
 
-#: src/Widgets/TimeoutComboBox.vala:107
+#: src/Widgets/TimeoutComboBox.vala:106
 msgid "2 hours"
 msgstr "2 timar"
 
-#: src/Widgets/LidCloseActionComboBox.vala:48
-#: src/Widgets/ActionComboBox.vala:46
+#: src/Widgets/LidCloseActionComboBox.vala:46
+#: src/Widgets/ActionComboBox.vala:42
 msgid "Suspend"
 msgstr "Kvilemodus"
 
-#: src/Widgets/LidCloseActionComboBox.vala:49
+#: src/Widgets/LidCloseActionComboBox.vala:47
 msgid "Shutdown"
 msgstr "Slå av"
 
-#: src/Widgets/LidCloseActionComboBox.vala:50
+#: src/Widgets/LidCloseActionComboBox.vala:48
 msgid "Lock"
 msgstr "Lås"
 
-#: src/Widgets/LidCloseActionComboBox.vala:51
+#: src/Widgets/LidCloseActionComboBox.vala:49
 msgid "Halt"
 msgstr "Stopp"
 
-#: src/Widgets/LidCloseActionComboBox.vala:52
-#: src/Widgets/ActionComboBox.vala:45
+#: src/Widgets/LidCloseActionComboBox.vala:50
+#: src/Widgets/ActionComboBox.vala:41
 msgid "Do nothing"
 msgstr "Ikkje gjer noko"
 
-#: src/Widgets/LidCloseActionComboBox.vala:54
+#: src/Widgets/LidCloseActionComboBox.vala:52
 msgid "Not supported"
 msgstr "Ikkje støtta"
 
-#: src/Widgets/ActionComboBox.vala:47
+#: src/Widgets/ActionComboBox.vala:43
 msgid "Prompt to shutdown"
 msgstr ""
 

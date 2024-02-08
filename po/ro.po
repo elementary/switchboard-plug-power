@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-21 12:35-0700\n"
+"POT-Creation-Date: 2024-02-08 04:56+0000\n"
 "PO-Revision-Date: 2017-01-26 15:11+0000\n"
 "Last-Translator: Marius Albina <marius.albina@gmail.com>\n"
 "Language-Team: Romanian <ro@li.org>\n"
@@ -27,58 +27,62 @@ msgstr "Gestionați setările de alimentare "
 msgid "Authentication is required to manage power settings"
 msgstr "Autentificarea este necesară pentru a gestiona setările de alimentare"
 
-#: src/MainView.vala:84
+#: src/MainView.vala:52 src/Plug.vala:35
+msgid "Power"
+msgstr "Alimentare"
+
+#: src/MainView.vala:85
 msgid "Show battery percentage in Panel:"
 msgstr ""
 
-#: src/MainView.vala:99
+#: src/MainView.vala:100
 msgid "Display brightness:"
 msgstr "Luminozitatea ecranului:"
 
-#: src/MainView.vala:104
+#: src/MainView.vala:105
 msgid "Automatically adjust brightness:"
 msgstr "Reglează automat luminozitatea:"
 
-#: src/MainView.vala:149
+#: src/MainView.vala:150
+msgid "Enable power save on low battery:"
+msgstr ""
+
+#: src/MainView.vala:165
 msgid "When lid is closed:"
 msgstr "Când capacul este închis:"
 
-#: src/MainView.vala:156
+#: src/MainView.vala:172
 msgid "When lid is closed with external monitor:"
 msgstr "Când capacul este închis cu un monitor extern:"
 
-#: src/MainView.vala:172
+#: src/MainView.vala:188
 msgid "Turn off display when inactive for:"
 msgstr "Stinge ecranul când este inactiv pentru:"
 
-#: src/MainView.vala:179
+#: src/MainView.vala:195
 msgid "Power button:"
 msgstr "Butonul de pornire:"
 
-#: src/MainView.vala:191 src/MainView.vala:224
+#: src/MainView.vala:207 src/MainView.vala:240
 #, fuzzy
 msgid "Suspend when inactive for:"
 msgstr "Suspendă atunci când este inactiv pentru:"
 
-#: src/MainView.vala:209
+#: src/MainView.vala:225
 msgid "Plugged In"
 msgstr "Conectat la priză"
 
-#: src/MainView.vala:242
+#: src/MainView.vala:258
 msgid "On Battery"
 msgstr "Pe baterie"
 
-#: src/MainView.vala:267
+#: src/MainView.vala:283
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Anumite modificări nu vor avea efect până la restart"
 
-#: src/MainView.vala:288
+#: src/MainView.vala:303
 msgid "Power management mode:"
 msgstr ""
-
-#: src/Plug.vala:35
-msgid "Power"
-msgstr "Alimentare"
 
 #: src/Plug.vala:36
 #, fuzzy
@@ -133,65 +137,65 @@ msgstr ""
 msgid "Suspend inactive"
 msgstr "Mod somn inactiv"
 
-#: src/Widgets/TimeoutComboBox.vala:100
+#: src/Widgets/TimeoutComboBox.vala:99
 msgid "Never"
 msgstr "Niciodată"
 
-#: src/Widgets/TimeoutComboBox.vala:101
+#: src/Widgets/TimeoutComboBox.vala:100
 msgid "5 min"
 msgstr "5 min"
 
-#: src/Widgets/TimeoutComboBox.vala:102
+#: src/Widgets/TimeoutComboBox.vala:101
 msgid "10 min"
 msgstr "10 min"
 
-#: src/Widgets/TimeoutComboBox.vala:103
+#: src/Widgets/TimeoutComboBox.vala:102
 msgid "15 min"
 msgstr "15 min"
 
-#: src/Widgets/TimeoutComboBox.vala:104
+#: src/Widgets/TimeoutComboBox.vala:103
 msgid "30 min"
 msgstr "30 min"
 
-#: src/Widgets/TimeoutComboBox.vala:105
+#: src/Widgets/TimeoutComboBox.vala:104
 msgid "45 min"
 msgstr "45 min"
 
-#: src/Widgets/TimeoutComboBox.vala:106
+#: src/Widgets/TimeoutComboBox.vala:105
 msgid "1 hour"
 msgstr "o oră"
 
-#: src/Widgets/TimeoutComboBox.vala:107
+#: src/Widgets/TimeoutComboBox.vala:106
 msgid "2 hours"
 msgstr "2 ore"
 
-#: src/Widgets/LidCloseActionComboBox.vala:48
-#: src/Widgets/ActionComboBox.vala:46
+#: src/Widgets/LidCloseActionComboBox.vala:46
+#: src/Widgets/ActionComboBox.vala:42
 msgid "Suspend"
 msgstr "Suspendă"
 
-#: src/Widgets/LidCloseActionComboBox.vala:49
+#: src/Widgets/LidCloseActionComboBox.vala:47
 msgid "Shutdown"
 msgstr "Oprire"
 
-#: src/Widgets/LidCloseActionComboBox.vala:50
+#: src/Widgets/LidCloseActionComboBox.vala:48
 msgid "Lock"
 msgstr "Blochează"
 
-#: src/Widgets/LidCloseActionComboBox.vala:51
+#: src/Widgets/LidCloseActionComboBox.vala:49
 msgid "Halt"
 msgstr "Intrerupe"
 
-#: src/Widgets/LidCloseActionComboBox.vala:52
-#: src/Widgets/ActionComboBox.vala:45
+#: src/Widgets/LidCloseActionComboBox.vala:50
+#: src/Widgets/ActionComboBox.vala:41
 msgid "Do nothing"
 msgstr "Nu fă nimic"
 
-#: src/Widgets/LidCloseActionComboBox.vala:54
+#: src/Widgets/LidCloseActionComboBox.vala:52
 msgid "Not supported"
 msgstr "Nesuportat"
 
-#: src/Widgets/ActionComboBox.vala:47
+#: src/Widgets/ActionComboBox.vala:43
 msgid "Prompt to shutdown"
 msgstr ""
 

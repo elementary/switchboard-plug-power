@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-26 10:25+0000\n"
+"POT-Creation-Date: 2024-02-08 04:56+0000\n"
 "PO-Revision-Date: 2022-01-11 14:06+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
@@ -28,52 +28,52 @@ msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr ""
 "Ekran parlaklığı, güç düğmeleri ve askıya alma davranışını yapılandırın"
 
-#: data/power.appdata.xml.in:12 data/power.appdata.xml.in:24
+#: data/power.appdata.xml.in:11 data/power.appdata.xml.in:23
 msgid "New features:"
 msgstr "Yeni özellikler:"
 
-#: data/power.appdata.xml.in:14
+#: data/power.appdata.xml.in:13
 msgid "Add power profile management"
 msgstr "Güç profili yönetimi eklendi"
 
-#: data/power.appdata.xml.in:16 data/power.appdata.xml.in:28
-#: data/power.appdata.xml.in:37
+#: data/power.appdata.xml.in:15 data/power.appdata.xml.in:27
+#: data/power.appdata.xml.in:36
 msgid "Minor updates:"
 msgstr "Küçük güncellemeler:"
 
-#: data/power.appdata.xml.in:18 data/power.appdata.xml.in:31
-#: data/power.appdata.xml.in:41 data/power.appdata.xml.in:48
-#: data/power.appdata.xml.in:53 data/power.appdata.xml.in:60
+#: data/power.appdata.xml.in:17 data/power.appdata.xml.in:30
+#: data/power.appdata.xml.in:40 data/power.appdata.xml.in:47
+#: data/power.appdata.xml.in:52 data/power.appdata.xml.in:59
 msgid "Updated translations"
 msgstr "Çeviriler güncellendi"
 
-#: data/power.appdata.xml.in:26
+#: data/power.appdata.xml.in:25
 msgid "Add toggle for showing battery percentage in Panel"
 msgstr ""
 
-#: data/power.appdata.xml.in:30
+#: data/power.appdata.xml.in:29
 msgid "Fix a potential issue with resuming from sleep"
 msgstr ""
 
-#: data/power.appdata.xml.in:39
+#: data/power.appdata.xml.in:38
 msgid "Change lid settings without restarting"
 msgstr "Yeniden başlatmadan kapak ayarlarını değiştirin"
 
-#: data/power.appdata.xml.in:40
+#: data/power.appdata.xml.in:39
 msgid "Show in search results for \"sleep\" and \"timeout\""
 msgstr "\"uyku\" ve \"zaman aşımı\" seçeneklerini arama sonuçlarında göster"
 
-#: data/power.appdata.xml.in:47
+#: data/power.appdata.xml.in:46
 msgid "Fix potential freeze when changing settings from multiple panes"
 msgstr ""
 "Ayarları birden çok bölmeden değiştirirken oluşabilecek potansiyel donma "
 "düzeltildi"
 
-#: data/power.appdata.xml.in:58
+#: data/power.appdata.xml.in:57
 msgid "Remove broken hibernate option"
 msgstr "Bozuk olan hazırda beklet seçeneği kaldırıldı"
 
-#: data/power.appdata.xml.in:59
+#: data/power.appdata.xml.in:58
 msgid "Add prompt to shutdown to power button actions"
 msgstr "Güç düğmesi eylemlerine kapatmadan önce sor seçeneği eklendi"
 
