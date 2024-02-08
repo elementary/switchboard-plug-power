@@ -218,8 +218,21 @@ public class Power.MainView : Switchboard.SettingsPage {
             column_spacing = 12,
             row_spacing = 12
         };
-        ac_grid.attach (sleep_timeout_label, 0, 1);
-        ac_grid.attach (sleep_timeout, 1, 1);
+        ac_grid.attach (sleep_timeout_label, 0, 0);
+        ac_grid.attach (sleep_timeout, 1, 0);
+
+        var power_mode_button = new PowerModeButton (false) {
+            halign = Gtk.Align.START
+        };
+
+        if (PowerModeButton.successfully_initialized) {
+            var power_mode_label = new Gtk.Label (_("Power management mode:")) {
+                xalign = 1
+            };
+
+            ac_grid.attach (power_mode_label, 0, 1);
+            ac_grid.attach (power_mode_button, 1, 1);
+        }
 
         stack = new Gtk.Stack ();
         stack.add_titled (ac_grid, "ac", _("Plugged In"));
@@ -252,8 +265,21 @@ public class Power.MainView : Switchboard.SettingsPage {
                 column_spacing = 12,
                 row_spacing = 12
             };
-            battery_grid.attach (battery_timeout_label, 0, 1);
-            battery_grid.attach (battery_timeout, 1, 1);
+            battery_grid.attach (battery_timeout_label, 0, 0);
+            battery_grid.attach (battery_timeout, 1, 0);
+
+            var battery_power_mode_button = new PowerModeButton (true) {
+                halign = Gtk.Align.START
+            };
+
+            if (PowerModeButton.successfully_initialized) {
+                var power_mode_label = new Gtk.Label (_("Power management mode:")) {
+                    xalign = 1
+                };
+
+                battery_grid.attach (power_mode_label, 0, 1);
+                battery_grid.attach (battery_power_mode_button, 1, 1);
+            }
 
             stack.add_titled (battery_grid, "battery", _("On Battery"));
 
@@ -294,18 +320,6 @@ public class Power.MainView : Switchboard.SettingsPage {
             helper.changed.connect (() => {
                 infobar.revealed = true;
             });
-        }
-
-        var power_mode_button = new PowerModeButton () {
-            halign = Gtk.Align.START
-        };
-        if (power_mode_button.pprofile != null) {
-            var power_mode_label = new Gtk.Label (_("Power management mode:")) {
-                xalign = 1
-            };
-
-            main_grid.attach (power_mode_label, 0, 10);
-            main_grid.attach (power_mode_button, 1, 10);
         }
 
         var box = new Gtk.Box (VERTICAL, 12);
