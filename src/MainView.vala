@@ -322,22 +322,11 @@ public class Power.MainView : Switchboard.SettingsPage {
             });
         }
 
-        var power_mode_button = new PowerModeButton () {
-            halign = Gtk.Align.START
-        };
-        if (power_mode_button.pprofile != null) {
-            var power_mode_label = new Gtk.Label (_("Power management mode:")) {
-                xalign = 1
-            };
+        var box = new Gtk.Box (VERTICAL, 12);
+        box.append (infobar);
+        box.append (main_grid);
 
-            main_grid.attach (power_mode_label, 0, 10);
-            main_grid.attach (power_mode_button, 1, 10);
-        }
-
-        orientation = VERTICAL;
-        margin_bottom = 12;
-        append (infobar);
-        append (main_grid);
+        child = box;
 
         label_size.add_widget (sleep_timeout_label);
         label_size.add_widget (screen_timeout_label);
