@@ -36,7 +36,7 @@ public class Power.PowerModeButton : Gtk.Box {
 
         var header = new Granite.HeaderLabel (_("Power Mode"));
 
-        var saver_icon = new Gtk.Image.from_icon_name ("power-mode-powersaving") {
+        var saver_icon = new Gtk.Image.from_icon_name ("power-mode-powersaver-symbolic") {
             icon_size = LARGE
         };
 
@@ -50,7 +50,7 @@ public class Power.PowerModeButton : Gtk.Box {
         saver_radio.add_css_class ("image-button");
         saver_button_box.set_parent (saver_radio);
 
-        var balanced_icon = new Gtk.Image.from_icon_name ("power-mode-balanced") {
+        var balanced_icon = new Gtk.Image.from_icon_name ("power-mode-balanced-symbolic") {
             icon_size = LARGE
         };
 
@@ -66,7 +66,7 @@ public class Power.PowerModeButton : Gtk.Box {
         balanced_radio.add_css_class ("image-button");
         balanced_button_box.set_parent (balanced_radio);
 
-        var performance_icon = new Gtk.Image.from_icon_name ("power-mode-performance") {
+        var performance_icon = new Gtk.Image.from_icon_name ("power-mode-performance-symbolic") {
             icon_size = LARGE
         };
 
