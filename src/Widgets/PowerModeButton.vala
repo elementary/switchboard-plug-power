@@ -20,17 +20,40 @@
  */
 
 public class Power.PowerModeButton : Gtk.Box {
-    public PowerProfile? pprofile { get; private set; default = null; }
+    public static bool successfully_initialized { get; private set; default = true; }
+
+    private static PowerProfile? pprofile;
+    private static GLib.Settings? settings;
+
+    public string settings_key { get; construct; }
 
     private Gtk.CheckButton saver_radio;
     private Gtk.CheckButton balanced_radio;
     private Gtk.CheckButton performance_radio;
 
-    construct {
+    public PowerModeButton (bool on_battery) {
+        Object (settings_key: on_battery ? "profile-on-good-battery" : "profile-plugged-in");
+    }
+
+    static construct {
+        var schema = SettingsSchemaSource.get_default ().lookup ("io.elementary.settings-daemon.power", true);
+        if (schema != null && schema.has_key ("profile-plugged-in") && schema.has_key ("profile-on-good-battery")) {
+            settings = new GLib.Settings ("io.elementary.settings-daemon.power");
+        } else {
+            critical ("settings-daemon schema not found");
+            successfully_initialized = false;
+        }
+
         try {
             pprofile = Bus.get_proxy_sync (BusType.SYSTEM, POWER_PROFILES_DAEMON_NAME, POWER_PROFILES_DAEMON_PATH, DBusProxyFlags.NONE);
         } catch (Error e) {
             critical (e.message);
+            successfully_initialized = false;
+        }
+    }
+
+    construct {
+        if (settings == null || pprofile == null) {
             return;
         }
 
@@ -101,29 +124,27 @@ public class Power.PowerModeButton : Gtk.Box {
 
         update_active_profile ();
 
-        ((DBusProxy) pprofile).g_properties_changed.connect (update_active_profile);
-
         saver_radio.toggled.connect (() => {
             if (saver_radio.active) {
-                pprofile.active_profile = "power-saver";
+                settings.set_string (settings_key, "power-saver");
             }
         });
 
         balanced_radio.toggled.connect (() => {
             if (balanced_radio.active) {
-                pprofile.active_profile = "balanced";
+                settings.set_string (settings_key, "balanced");
             }
         });
 
         performance_radio.toggled.connect (() => {
             if (performance_radio.active) {
-                pprofile.active_profile = "performance";
+                settings.set_string (settings_key, "performance");
             }
         });
     }
 
     private void update_active_profile () {
-        switch (pprofile.active_profile) {
+        switch (settings.get_string (settings_key)) {
             case "power-saver":
                 saver_radio.active = true;
                 break;
