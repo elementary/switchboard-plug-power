@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-08 04:56+0000\n"
+"POT-Creation-Date: 2024-02-08 23:42+0000\n"
 "PO-Revision-Date: 2022-01-10 21:58+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
@@ -64,25 +64,25 @@ msgstr "Skru av skjerm når inaktiv i:"
 msgid "Power button:"
 msgstr "Av/på-knapp:"
 
-#: src/MainView.vala:207 src/MainView.vala:240
+#: src/MainView.vala:207 src/MainView.vala:253
 msgid "Suspend when inactive for:"
 msgstr "Hvilemodus hvis inaktiv i:"
 
-#: src/MainView.vala:225
+#: src/MainView.vala:229 src/MainView.vala:276
+msgid "Power management mode:"
+msgstr "Effekthåndteringsmodul:"
+
+#: src/MainView.vala:238
 msgid "Plugged In"
 msgstr "Tilkoblet nettspenning"
 
-#: src/MainView.vala:258
+#: src/MainView.vala:284
 msgid "On Battery"
 msgstr "På batteri"
 
-#: src/MainView.vala:283
+#: src/MainView.vala:309
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Noen endringer trår ikke i kraft før omstart av maskinen"
-
-#: src/MainView.vala:303
-msgid "Power management mode:"
-msgstr "Effekthåndteringsmodul:"
 
 #: src/Plug.vala:36
 msgid "Configure display brightness, power buttons, and suspend behavior"
@@ -197,17 +197,17 @@ msgstr "Ikke støttet"
 msgid "Prompt to shutdown"
 msgstr "Spør om å skru av"
 
-#: src/Widgets/PowerModeButton.vala:43
+#: src/Widgets/PowerModeButton.vala:66
 #, fuzzy
 #| msgid "Power"
 msgid "Power Saver"
 msgstr "Strøm"
 
-#: src/Widgets/PowerModeButton.vala:62
+#: src/Widgets/PowerModeButton.vala:85
 msgid "Balanced"
 msgstr "Balansert"
 
-#: src/Widgets/PowerModeButton.vala:83
+#: src/Widgets/PowerModeButton.vala:106
 #, fuzzy
 #| msgid "High Performance"
 msgid "Performance"
