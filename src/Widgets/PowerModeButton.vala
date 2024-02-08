@@ -57,7 +57,9 @@ public class Power.PowerModeButton : Gtk.Box {
             return;
         }
 
-        var header = new Granite.HeaderLabel (_("Power Mode"));
+        var header = new Granite.HeaderLabel (_("Power Mode")) {
+            hexpand = true
+        };
 
         var saver_icon = new Gtk.Image.from_icon_name ("power-mode-powersaver-symbolic") {
             icon_size = LARGE

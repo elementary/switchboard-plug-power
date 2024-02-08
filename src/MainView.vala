@@ -221,17 +221,10 @@ public class Power.MainView : Switchboard.SettingsPage {
         ac_grid.attach (sleep_timeout_label, 0, 0);
         ac_grid.attach (sleep_timeout, 1, 0);
 
-        var power_mode_button = new PowerModeButton (false) {
-            halign = Gtk.Align.START
-        };
+        var power_mode_button = new PowerModeButton (false);
 
         if (PowerModeButton.successfully_initialized) {
-            var power_mode_label = new Gtk.Label (_("Power management mode:")) {
-                xalign = 1
-            };
-
-            ac_grid.attach (power_mode_label, 0, 1);
-            ac_grid.attach (power_mode_button, 1, 1);
+            ac_grid.attach (power_mode_button, 0, 1, 2);
         }
 
         stack = new Gtk.Stack ();
@@ -268,17 +261,10 @@ public class Power.MainView : Switchboard.SettingsPage {
             battery_grid.attach (battery_timeout_label, 0, 0);
             battery_grid.attach (battery_timeout, 1, 0);
 
-            var battery_power_mode_button = new PowerModeButton (true) {
-                halign = Gtk.Align.START
-            };
+            var battery_power_mode_button = new PowerModeButton (true);
 
             if (PowerModeButton.successfully_initialized) {
-                var power_mode_label = new Gtk.Label (_("Power management mode:")) {
-                    xalign = 1
-                };
-
-                battery_grid.attach (power_mode_label, 0, 1);
-                battery_grid.attach (battery_power_mode_button, 1, 1);
+                battery_grid.attach (battery_power_mode_button, 0, 1, 2);
             }
 
             stack.add_titled (battery_grid, "battery", _("On Battery"));
@@ -304,9 +290,7 @@ public class Power.MainView : Switchboard.SettingsPage {
             main_grid.attach (switcher_box, 0, 8, 2);
         }
 
-        var power_mode_button = new PowerModeButton ();
 
-        main_grid.attach (power_mode_button, 0, 9, 2);
         main_grid.attach (stack, 0, 10, 2);
 
         var infobar_label = new Gtk.Label (_("Some changes will not take effect until you restart this computer"));
