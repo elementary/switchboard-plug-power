@@ -9,5 +9,4 @@ src/Interfaces.vala
 src/Battery.vala
 src/Widgets/TimeoutComboBox.vala
 src/Widgets/LidCloseActionComboBox.vala
-src/Widgets/ActionComboBox.vala
 src/Widgets/PowerModeButton.vala

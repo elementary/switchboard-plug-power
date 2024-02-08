@@ -31,6 +31,7 @@ public class Power.MainView : Switchboard.SettingsPage {
     private const string SETTINGS_DAEMON_NAME = "org.gnome.SettingsDaemon.Power";
     private const string SETTINGS_DAEMON_PATH = "/org/gnome/SettingsDaemon/Power";
 
+    private Gtk.DropDown powerbutton_dropdown;
     private Gtk.Scale scale;
     private PowerSettings screen;
     private PowerSupply power_supply;
@@ -192,17 +193,25 @@ public class Power.MainView : Switchboard.SettingsPage {
 
         var screen_timeout = new TimeoutComboBox (new GLib.Settings ("org.gnome.desktop.session"), "idle-delay");
 
-        var power_label = new Gtk.Label (_("Power button:")) {
-            halign = Gtk.Align.END,
-            xalign = 1
+        // FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
+        powerbutton_dropdown = new Gtk.DropDown.from_strings ({
+            _("Do nothing"),
+            _("Suspend"),
+            _("Ask to shutdown")
+        }) {
+            valign = CENTER
         };
 
-        var power_combobox = new ActionComboBox ("power-button-action");
+        var powerbutton_label = new Gtk.Label (_("Power Button Behavior")) {
+            halign = START,
+            hexpand = true,
+            mnemonic_widget = powerbutton_dropdown
+        };
 
         main_grid.attach (screen_timeout_label, 0, 4);
         main_grid.attach (screen_timeout, 1, 4);
-        main_grid.attach (power_label, 0, 5);
-        main_grid.attach (power_combobox, 1, 5);
+        main_grid.attach (powerbutton_label, 0, 5);
+        main_grid.attach (powerbutton_dropdown, 1, 5);
 
         var sleep_timeout_label = new Gtk.Label (_("Suspend when inactive for:")) {
             xalign = 1
@@ -316,10 +325,21 @@ public class Power.MainView : Switchboard.SettingsPage {
 
         label_size.add_widget (sleep_timeout_label);
         label_size.add_widget (screen_timeout_label);
-        label_size.add_widget (power_label);
+        label_size.add_widget (powerbutton_label);
 
         // hide stack switcher if we only have ac line
         stack_switcher.visible = stack.observe_children ().get_n_items () > 1;
+
+        update_powerbutton_dropdown ();
+        settings.changed["power-button-action"].connect (update_powerbutton_dropdown);
+
+        powerbutton_dropdown.notify["selected"].connect (() => {
+            int[] map = {0, 1, 3};
+            settings.set_enum (
+                "power-button-action",
+                map[powerbutton_dropdown.selected]
+            );
+        });
     }
 
     public static Polkit.Permission? get_permission () {
@@ -467,5 +487,10 @@ public class Power.MainView : Switchboard.SettingsPage {
         }
 
         return false;
+    }
+
+    private void update_powerbutton_dropdown () {
+        int[] map = {0, 1, 1, 2};
+        powerbutton_dropdown.selected = map [settings.get_enum ("power-button-action")];
     }
 }
