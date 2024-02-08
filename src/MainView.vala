@@ -17,7 +17,7 @@
  * Boston, MA  02110-1301, USA.
  */
 
-public class Power.MainView : Gtk.Box {
+public class Power.MainView : Switchboard.SettingsPage {
     public Battery battery { get; private set; }
     public Gtk.Stack stack { get; private set; }
 
@@ -47,6 +47,13 @@ public class Power.MainView : Gtk.Box {
 
     private static Polkit.Permission? permission = null;
 
+    public MainView () {
+        Object (
+            title: _("Power"),
+            icon: new ThemedIcon ("preferences-system-power")
+        );
+    }
+
     construct {
         var touchpad_settings = new GLib.Settings ("org.gnome.desktop.peripherals.touchpad");
         touchpad_settings.bind ("natural-scroll", this, "natural-scroll-touchpad", SettingsBindFlags.GET);
@@ -69,10 +76,6 @@ public class Power.MainView : Gtk.Box {
 
         var main_grid = new Gtk.Grid () {
             column_spacing = 12,
-            margin_start = 24,
-            margin_end = 24,
-            margin_top = 24,
-            margin_bottom = 24,
             row_spacing = 12
         };
 
@@ -278,7 +281,6 @@ public class Power.MainView : Gtk.Box {
         var power_mode_button = new PowerModeButton ();
 
         main_grid.attach (power_mode_button, 0, 9, 2);
-
         main_grid.attach (stack, 0, 10, 2);
 
         var infobar_label = new Gtk.Label (_("Some changes will not take effect until you restart this computer"));
@@ -288,6 +290,7 @@ public class Power.MainView : Gtk.Box {
             revealed = false
         };
         infobar.add_child (infobar_label);
+        infobar.add_css_class (Granite.STYLE_CLASS_FRAME);
 
         var helper = LogindHelper.get_logind_helper ();
         if (helper != null) {
@@ -296,10 +299,11 @@ public class Power.MainView : Gtk.Box {
             });
         }
 
-        orientation = VERTICAL;
-        margin_bottom = 12;
-        append (infobar);
-        append (main_grid);
+        var box = new Gtk.Box (VERTICAL, 12);
+        box.append (infobar);
+        box.append (main_grid);
+
+        child = box;
 
         label_size.add_widget (sleep_timeout_label);
         label_size.add_widget (screen_timeout_label);

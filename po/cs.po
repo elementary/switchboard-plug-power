@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-01 19:35+0000\n"
+"POT-Creation-Date: 2024-02-08 04:56+0000\n"
 "PO-Revision-Date: 2022-01-10 21:58+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
@@ -28,61 +28,61 @@ msgstr "Spravovat nastavení napájení"
 msgid "Authentication is required to manage power settings"
 msgstr "Pro nastavení napájení je vyžadováno ověření uživatele"
 
-#: src/MainView.vala:82
+#: src/MainView.vala:52 src/Plug.vala:35
+msgid "Power"
+msgstr "Napájení"
+
+#: src/MainView.vala:85
 msgid "Show battery percentage in Panel:"
 msgstr "Zobrazovat na panelu procento nabití akumulátoru:"
 
-#: src/MainView.vala:97
+#: src/MainView.vala:100
 msgid "Display brightness:"
 msgstr "Jas displeje:"
 
-#: src/MainView.vala:102
+#: src/MainView.vala:105
 msgid "Automatically adjust brightness:"
 msgstr "Automaticky přizpůsobit jas:"
 
-#: src/MainView.vala:147
+#: src/MainView.vala:150
 msgid "Enable power save on low battery:"
 msgstr ""
 
-#: src/MainView.vala:162
+#: src/MainView.vala:165
 msgid "When lid is closed:"
 msgstr "Když je víko zavřeno:"
 
-#: src/MainView.vala:169
+#: src/MainView.vala:172
 msgid "When lid is closed with external monitor:"
 msgstr "Když je víko zavřeno a připojen externí monitor:"
 
-#: src/MainView.vala:185
+#: src/MainView.vala:188
 msgid "Turn off display when inactive for:"
 msgstr "Vypnout obrazovku, když je neaktivní po dobu:"
 
-#: src/MainView.vala:192
+#: src/MainView.vala:195
 msgid "Power button:"
 msgstr "Tlačítko napájení:"
 
-#: src/MainView.vala:204 src/MainView.vala:237
+#: src/MainView.vala:207 src/MainView.vala:240
 msgid "Suspend when inactive for:"
 msgstr "Uspat, když je neaktivní po dobu:"
 
-#: src/MainView.vala:222
+#: src/MainView.vala:225
 msgid "Plugged In"
 msgstr "Připojeno"
 
-#: src/MainView.vala:255
+#: src/MainView.vala:258
 msgid "On Battery"
 msgstr "Z baterie"
 
-#: src/MainView.vala:280
+#: src/MainView.vala:283
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Některé změny se neprojeví dokud nerestartujete tento počítač"
 
-#: src/MainView.vala:299
+#: src/MainView.vala:303
 msgid "Power management mode:"
 msgstr "Režim správy napájení:"
-
-#: src/Plug.vala:35
-msgid "Power"
-msgstr "Napájení"
 
 #: src/Plug.vala:36
 msgid "Configure display brightness, power buttons, and suspend behavior"

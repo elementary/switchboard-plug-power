@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-01 19:35+0000\n"
+"POT-Creation-Date: 2024-02-08 04:56+0000\n"
 "PO-Revision-Date: 2022-08-06 22:53+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
@@ -28,61 +28,61 @@ msgstr "전력 설정 관리"
 msgid "Authentication is required to manage power settings"
 msgstr "전력 설정 관리에는 인증이 필요합니다"
 
-#: src/MainView.vala:82
+#: src/MainView.vala:52 src/Plug.vala:35
+msgid "Power"
+msgstr "전력"
+
+#: src/MainView.vala:85
 msgid "Show battery percentage in Panel:"
 msgstr "패널에 배터리 백분율 표시:"
 
-#: src/MainView.vala:97
+#: src/MainView.vala:100
 msgid "Display brightness:"
 msgstr "화면 밝기:"
 
-#: src/MainView.vala:102
+#: src/MainView.vala:105
 msgid "Automatically adjust brightness:"
 msgstr "밝기 자동 조절:"
 
-#: src/MainView.vala:147
+#: src/MainView.vala:150
 msgid "Enable power save on low battery:"
 msgstr ""
 
-#: src/MainView.vala:162
+#: src/MainView.vala:165
 msgid "When lid is closed:"
 msgstr "덮개가 닫혀있을 때:"
 
-#: src/MainView.vala:169
+#: src/MainView.vala:172
 msgid "When lid is closed with external monitor:"
 msgstr "외부 모니터에 연결된 채 덮개가 닫혀있을 때:"
 
-#: src/MainView.vala:185
+#: src/MainView.vala:188
 msgid "Turn off display when inactive for:"
 msgstr "다음 시간 동안 활동이 없으면 화면 끄기:"
 
-#: src/MainView.vala:192
+#: src/MainView.vala:195
 msgid "Power button:"
 msgstr "전원 버튼:"
 
-#: src/MainView.vala:204 src/MainView.vala:237
+#: src/MainView.vala:207 src/MainView.vala:240
 msgid "Suspend when inactive for:"
 msgstr "다음 시간 동안 활동이 없으면 잠자기:"
 
-#: src/MainView.vala:222
+#: src/MainView.vala:225
 msgid "Plugged In"
 msgstr "플러그 연결"
 
-#: src/MainView.vala:255
+#: src/MainView.vala:258
 msgid "On Battery"
 msgstr "배터리 사용"
 
-#: src/MainView.vala:280
+#: src/MainView.vala:283
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "몇 가지 바뀐 설정은 이 컴퓨터를 다시 시작해야 적용됩니다"
 
-#: src/MainView.vala:299
+#: src/MainView.vala:303
 msgid "Power management mode:"
 msgstr "전력 관리 모드:"
-
-#: src/Plug.vala:35
-msgid "Power"
-msgstr "전력"
 
 #: src/Plug.vala:36
 msgid "Configure display brightness, power buttons, and suspend behavior"

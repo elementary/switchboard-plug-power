@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-01 19:35+0000\n"
+"POT-Creation-Date: 2024-02-08 04:56+0000\n"
 "PO-Revision-Date: 2022-04-03 21:52+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
@@ -28,63 +28,63 @@ msgstr "Güç ayarlarını yönet"
 msgid "Authentication is required to manage power settings"
 msgstr "Güç ayarlarını yönetmek için kimlik doğrulaması gerekiyor"
 
-#: src/MainView.vala:82
+#: src/MainView.vala:52 src/Plug.vala:35
+msgid "Power"
+msgstr "Güç"
+
+#: src/MainView.vala:85
 msgid "Show battery percentage in Panel:"
 msgstr "Panelde pil yüzdesini göster:"
 
-#: src/MainView.vala:97
+#: src/MainView.vala:100
 msgid "Display brightness:"
 msgstr "Ekran parlaklığı:"
 
-#: src/MainView.vala:102
+#: src/MainView.vala:105
 msgid "Automatically adjust brightness:"
 msgstr "Parlaklığı otomatik ayarla:"
 
-#: src/MainView.vala:147
+#: src/MainView.vala:150
 msgid "Enable power save on low battery:"
 msgstr ""
 
-#: src/MainView.vala:162
+#: src/MainView.vala:165
 msgid "When lid is closed:"
 msgstr "Kapak kapalıyken:"
 
-#: src/MainView.vala:169
+#: src/MainView.vala:172
 msgid "When lid is closed with external monitor:"
 msgstr "Harici monitör varken kapak kapatıldığında:"
 
-#: src/MainView.vala:185
+#: src/MainView.vala:188
 msgid "Turn off display when inactive for:"
 msgstr "Etkin olmadığında ekranı kapat:"
 
-#: src/MainView.vala:192
+#: src/MainView.vala:195
 msgid "Power button:"
 msgstr "Güç düğmesi:"
 
-#: src/MainView.vala:204 src/MainView.vala:237
+#: src/MainView.vala:207 src/MainView.vala:240
 msgid "Suspend when inactive for:"
 msgstr "Etkin olmadığında askıya al:"
 
-#: src/MainView.vala:222
+#: src/MainView.vala:225
 msgid "Plugged In"
 msgstr "Fişe Takılı"
 
-#: src/MainView.vala:255
+#: src/MainView.vala:258
 msgid "On Battery"
 msgstr "Pilde"
 
-#: src/MainView.vala:280
+#: src/MainView.vala:283
 msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
 "Bazı değişiklikler bilgisayarınızı yeniden başlatana kadar etkili "
 "olmayacaktır"
 
-#: src/MainView.vala:299
+#: src/MainView.vala:303
 msgid "Power management mode:"
 msgstr "Güç yönetimi modu:"
-
-#: src/Plug.vala:35
-msgid "Power"
-msgstr "Güç"
 
 #: src/Plug.vala:36
 msgid "Configure display brightness, power buttons, and suspend behavior"

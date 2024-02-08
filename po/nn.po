@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-01 19:35+0000\n"
+"POT-Creation-Date: 2024-02-08 04:56+0000\n"
 "PO-Revision-Date: 2019-01-07 00:03+0000\n"
 "Last-Translator: Simon Dagfinrud <semonje@gmail.com>\n"
 "Language-Team: Norwegian Nynorsk <https://weblate.elementary.io/projects/"
@@ -28,61 +28,61 @@ msgstr "Handsam strauminnstillingar"
 msgid "Authentication is required to manage power settings"
 msgstr "Stadfesting er kravd for å behandle strauminstillingar"
 
-#: src/MainView.vala:82
+#: src/MainView.vala:52 src/Plug.vala:35
+msgid "Power"
+msgstr "Straum"
+
+#: src/MainView.vala:85
 msgid "Show battery percentage in Panel:"
 msgstr ""
 
-#: src/MainView.vala:97
+#: src/MainView.vala:100
 msgid "Display brightness:"
 msgstr "Lysstyrke på skjerm:"
 
-#: src/MainView.vala:102
+#: src/MainView.vala:105
 msgid "Automatically adjust brightness:"
 msgstr "Juster lysstyrka automatisk:"
 
-#: src/MainView.vala:147
+#: src/MainView.vala:150
 msgid "Enable power save on low battery:"
 msgstr ""
 
-#: src/MainView.vala:162
+#: src/MainView.vala:165
 msgid "When lid is closed:"
 msgstr "Når"
 
-#: src/MainView.vala:169
+#: src/MainView.vala:172
 msgid "When lid is closed with external monitor:"
 msgstr "Når lokket vert lukka med ein ekstern skjerm:"
 
-#: src/MainView.vala:185
+#: src/MainView.vala:188
 msgid "Turn off display when inactive for:"
 msgstr "Slå av skjermen når han har vore inaktiv i:"
 
-#: src/MainView.vala:192
+#: src/MainView.vala:195
 msgid "Power button:"
 msgstr "Av/på-knapp"
 
-#: src/MainView.vala:204 src/MainView.vala:237
+#: src/MainView.vala:207 src/MainView.vala:240
 msgid "Suspend when inactive for:"
 msgstr "Kvilemodus dersom inaktiv i:"
 
-#: src/MainView.vala:222
+#: src/MainView.vala:225
 msgid "Plugged In"
 msgstr "Kopla til"
 
-#: src/MainView.vala:255
+#: src/MainView.vala:258
 msgid "On Battery"
 msgstr "På batteri"
 
-#: src/MainView.vala:280
+#: src/MainView.vala:283
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Nokre endringar trer ikkje i kraft før maskina vert starta om att"
 
-#: src/MainView.vala:299
+#: src/MainView.vala:303
 msgid "Power management mode:"
 msgstr ""
-
-#: src/Plug.vala:35
-msgid "Power"
-msgstr "Straum"
 
 #: src/Plug.vala:36
 msgid "Configure display brightness, power buttons, and suspend behavior"
