@@ -2,11 +2,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
   <gresource prefix="/io/elementary/settings/power">
-    <file alias="32x32@2/apps/power-mode-powersaving.svg" compressed="true" preprocess="xml-stripblanks">icons/power-mode-powersaving.svg</file>
-    <file alias="32x32/apps/power-mode-powersaving.svg" compressed="true" preprocess="xml-stripblanks">icons/power-mode-powersaving.svg</file>
-    <file alias="32x32@2/apps/power-mode-performance.svg" compressed="true" preprocess="xml-stripblanks">icons/power-mode-performance.svg</file>
-    <file alias="32x32/apps/power-mode-performance.svg" compressed="true" preprocess="xml-stripblanks">icons/power-mode-performance.svg</file>
-    <file alias="32x32@2/apps/power-mode-balanced.svg" compressed="true" preprocess="xml-stripblanks">icons/power-mode-balanced.svg</file>
-    <file alias="32x32/apps/power-mode-balanced.svg" compressed="true" preprocess="xml-stripblanks">icons/power-mode-balanced.svg</file>
+    <file alias="32x32@2/categories/power-mode-powersaving.svg" compressed="true" preprocess="xml-stripblanks">icons/power-mode-powersaving.svg</file>
+    <file alias="32x32/categories/power-mode-powersaving.svg" compressed="true" preprocess="xml-stripblanks">icons/power-mode-powersaving.svg</file>
+    <file alias="32x32@2/categories/power-mode-performance.svg" compressed="true" preprocess="xml-stripblanks">icons/power-mode-performance.svg</file>
+    <file alias="32x32/categories/power-mode-performance.svg" compressed="true" preprocess="xml-stripblanks">icons/power-mode-performance.svg</file>
+    <file alias="32x32@2/categories/power-mode-balanced.svg" compressed="true" preprocess="xml-stripblanks">icons/power-mode-balanced.svg</file>
+    <file alias="32x32/categories/power-mode-balanced.svg" compressed="true" preprocess="xml-stripblanks">icons/power-mode-balanced.svg</file>
   </gresource>
 </gresources>

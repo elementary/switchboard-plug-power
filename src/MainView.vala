@@ -275,7 +275,11 @@ public class Power.MainView : Gtk.Box {
             main_grid.attach (switcher_box, 0, 8, 2);
         }
 
-        main_grid.attach (stack, 0, 9, 2);
+        var power_mode_button = new PowerModeButton ();
+
+        main_grid.attach (power_mode_button, 0, 9, 2);
+
+        main_grid.attach (stack, 0, 10, 2);
 
         var infobar_label = new Gtk.Label (_("Some changes will not take effect until you restart this computer"));
 
@@ -290,18 +294,6 @@ public class Power.MainView : Gtk.Box {
             helper.changed.connect (() => {
                 infobar.revealed = true;
             });
-        }
-
-        var power_mode_button = new PowerModeButton () {
-            halign = Gtk.Align.START
-        };
-        if (power_mode_button.pprofile != null) {
-            var power_mode_label = new Gtk.Label (_("Power management mode:")) {
-                xalign = 1
-            };
-
-            main_grid.attach (power_mode_label, 0, 10);
-            main_grid.attach (power_mode_button, 1, 10);
         }
 
         orientation = VERTICAL;
