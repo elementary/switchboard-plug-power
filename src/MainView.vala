@@ -198,9 +198,7 @@ public class Power.MainView : Switchboard.SettingsPage {
             _("Do nothing"),
             _("Suspend"),
             _("Ask to shutdown")
-        }) {
-            valign = CENTER
-        };
+        });
 
         var powerbutton_label = new Gtk.Label (_("Power Button Behavior")) {
             halign = START,
