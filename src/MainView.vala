@@ -203,7 +203,7 @@ public class Power.MainView : Gtk.Box {
         ac_grid.attach (sleep_timeout_label, 0, 0);
         ac_grid.attach (sleep_timeout, 1, 0);
 
-        var power_mode_button = new PowerModeButton ("profile-plugged-in") {
+        var power_mode_button = new PowerModeButton (false) {
             halign = Gtk.Align.START
         };
 
@@ -250,7 +250,7 @@ public class Power.MainView : Gtk.Box {
             battery_grid.attach (battery_timeout_label, 0, 0);
             battery_grid.attach (battery_timeout, 1, 0);
 
-            var battery_power_mode_button = new PowerModeButton ("profile-on-battery") {
+            var battery_power_mode_button = new PowerModeButton (true) {
                 halign = Gtk.Align.START
             };
 

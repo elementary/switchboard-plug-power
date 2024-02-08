@@ -31,13 +31,13 @@ public class Power.PowerModeButton : Gtk.Box {
     private Gtk.CheckButton balanced_radio;
     private Gtk.CheckButton performance_radio;
 
-    public PowerModeButton (string settings_key) {
-        Object (settings_key: settings_key);
+    public PowerModeButton (bool on_battery) {
+        Object (settings_key: on_battery ? "profile-on-good-battery" : "profile-plugged-in");
     }
 
     static construct {
         var schema = SettingsSchemaSource.get_default ().lookup ("io.elementary.settings-daemon.power", true);
-        if (schema != null && schema.has_key ("profile-plugged-in") && schema.has_key ("profile-on-battery")) {
+        if (schema != null && schema.has_key ("profile-plugged-in") && schema.has_key ("profile-on-good-battery")) {
             settings = new GLib.Settings ("io.elementary.settings-daemon.power");
         } else {
             critical ("settings-daemon schema not found");
