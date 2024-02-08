@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-08 04:56+0000\n"
+"POT-Creation-Date: 2024-02-08 23:42+0000\n"
 "PO-Revision-Date: 2017-08-16 11:38+0000\n"
 "Last-Translator: gogogogi <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <https://weblate.elementary.io/projects/switchboard/"
@@ -66,26 +66,26 @@ msgstr "Isključi zaslon kada je neaktivan:"
 msgid "Power button:"
 msgstr "Tipka isključivanja:"
 
-#: src/MainView.vala:207 src/MainView.vala:240
+#: src/MainView.vala:207 src/MainView.vala:253
 #, fuzzy
 msgid "Suspend when inactive for:"
 msgstr "Isključi zaslon kada je neaktivan:"
 
-#: src/MainView.vala:225
+#: src/MainView.vala:229 src/MainView.vala:276
+msgid "Power management mode:"
+msgstr ""
+
+#: src/MainView.vala:238
 msgid "Plugged In"
 msgstr "Na napajanju"
 
-#: src/MainView.vala:258
+#: src/MainView.vala:284
 msgid "On Battery"
 msgstr "Na bateriji"
 
-#: src/MainView.vala:283
+#: src/MainView.vala:309
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Neke promjene neće biti primijenjene dok ponovno ne pokrenete računalo"
-
-#: src/MainView.vala:303
-msgid "Power management mode:"
-msgstr ""
 
 #: src/Plug.vala:36
 #, fuzzy
@@ -201,17 +201,17 @@ msgstr "Nije podržano"
 msgid "Prompt to shutdown"
 msgstr ""
 
-#: src/Widgets/PowerModeButton.vala:43
+#: src/Widgets/PowerModeButton.vala:66
 #, fuzzy
 #| msgid "Power"
 msgid "Power Saver"
 msgstr "Energija"
 
-#: src/Widgets/PowerModeButton.vala:62
+#: src/Widgets/PowerModeButton.vala:85
 msgid "Balanced"
 msgstr ""
 
-#: src/Widgets/PowerModeButton.vala:83
+#: src/Widgets/PowerModeButton.vala:106
 msgid "Performance"
 msgstr ""
 

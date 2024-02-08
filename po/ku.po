@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-08 04:56+0000\n"
+"POT-Creation-Date: 2024-02-08 23:42+0000\n"
 "PO-Revision-Date: 2017-02-11 20:54+0000\n"
 "Last-Translator: Rokar <Unknown>\n"
 "Language-Team: Kurdish <ku@li.org>\n"
@@ -62,24 +62,24 @@ msgstr ""
 msgid "Power button:"
 msgstr ""
 
-#: src/MainView.vala:207 src/MainView.vala:240
+#: src/MainView.vala:207 src/MainView.vala:253
 msgid "Suspend when inactive for:"
 msgstr ""
 
-#: src/MainView.vala:225
+#: src/MainView.vala:229 src/MainView.vala:276
+msgid "Power management mode:"
+msgstr ""
+
+#: src/MainView.vala:238
 msgid "Plugged In"
 msgstr ""
 
-#: src/MainView.vala:258
+#: src/MainView.vala:284
 msgid "On Battery"
 msgstr ""
 
-#: src/MainView.vala:283
+#: src/MainView.vala:309
 msgid "Some changes will not take effect until you restart this computer"
-msgstr ""
-
-#: src/MainView.vala:303
-msgid "Power management mode:"
 msgstr ""
 
 #: src/Plug.vala:36
@@ -194,17 +194,17 @@ msgstr "Nayê destekirin"
 msgid "Prompt to shutdown"
 msgstr ""
 
-#: src/Widgets/PowerModeButton.vala:43
+#: src/Widgets/PowerModeButton.vala:66
 #, fuzzy
 #| msgid "Power"
 msgid "Power Saver"
 msgstr "Hêz"
 
-#: src/Widgets/PowerModeButton.vala:62
+#: src/Widgets/PowerModeButton.vala:85
 msgid "Balanced"
 msgstr ""
 
-#: src/Widgets/PowerModeButton.vala:83
+#: src/Widgets/PowerModeButton.vala:106
 msgid "Performance"
 msgstr ""
 
