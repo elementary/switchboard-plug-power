@@ -93,7 +93,7 @@ public class Power.MainView : Switchboard.SettingsPage {
             main_grid.attach (show_percent_switch, 1, 0);
         }
 
-        if (backlight_detect ()) {
+        if (screen.brightness != -1) {
             var brightness_label = new Gtk.Label (_("Display brightness:")) {
                 halign = Gtk.Align.END,
                 xalign = 1
@@ -335,28 +335,6 @@ public class Power.MainView : Switchboard.SettingsPage {
             critical (e.message);
             return null;
         }
-    }
-
-    private static bool backlight_detect () {
-        var interface_path = File.new_for_path ("/sys/class/backlight/");
-
-        try {
-            var enumerator = interface_path.enumerate_children (
-            GLib.FileAttribute.STANDARD_NAME,
-            FileQueryInfoFlags.NONE);
-            FileInfo backlight;
-            if ((backlight = enumerator.next_file ()) != null) {
-                debug ("Detected backlight interface");
-                return true;
-            }
-
-        enumerator.close ();
-
-        } catch (GLib.Error err) {
-            critical (err.message);
-        }
-
-        return false;
     }
 
     private void on_scale_value_changed () {
