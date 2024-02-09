@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-08 04:56+0000\n"
+"POT-Creation-Date: 2024-02-08 23:42+0000\n"
 "PO-Revision-Date: 2018-10-21 12:06+0000\n"
 "Last-Translator: Fredrik B <frbo9002@gmail.com>\n"
 "Language-Team: Swedish <https://weblate.elementary.io/projects/switchboard/"
@@ -64,25 +64,25 @@ msgstr "Stäng av skärm vid inaktivitet i:"
 msgid "Power button:"
 msgstr "Avstängningsknapp:"
 
-#: src/MainView.vala:207 src/MainView.vala:240
+#: src/MainView.vala:207 src/MainView.vala:253
 msgid "Suspend when inactive for:"
 msgstr "Vänteläge vid inaktivitet i:"
 
-#: src/MainView.vala:225
+#: src/MainView.vala:229 src/MainView.vala:276
+msgid "Power management mode:"
+msgstr ""
+
+#: src/MainView.vala:238
 msgid "Plugged In"
 msgstr "Inkopplad"
 
-#: src/MainView.vala:258
+#: src/MainView.vala:284
 msgid "On Battery"
 msgstr "På batteri"
 
-#: src/MainView.vala:283
+#: src/MainView.vala:309
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Vissa ändringar verkställs inte förren du startar om datorn"
-
-#: src/MainView.vala:303
-msgid "Power management mode:"
-msgstr ""
 
 #: src/Plug.vala:36
 msgid "Configure display brightness, power buttons, and suspend behavior"
@@ -194,17 +194,17 @@ msgstr "Stöds ej"
 msgid "Prompt to shutdown"
 msgstr ""
 
-#: src/Widgets/PowerModeButton.vala:43
+#: src/Widgets/PowerModeButton.vala:66
 #, fuzzy
 #| msgid "Power"
 msgid "Power Saver"
 msgstr "Ström"
 
-#: src/Widgets/PowerModeButton.vala:62
+#: src/Widgets/PowerModeButton.vala:85
 msgid "Balanced"
 msgstr ""
 
-#: src/Widgets/PowerModeButton.vala:83
+#: src/Widgets/PowerModeButton.vala:106
 msgid "Performance"
 msgstr ""
 

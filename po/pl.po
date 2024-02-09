@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-08 04:56+0000\n"
+"POT-Creation-Date: 2024-02-08 23:42+0000\n"
 "PO-Revision-Date: 2022-04-04 21:20+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
@@ -65,26 +65,26 @@ msgstr "Wyłącz ekran, gdy bezczynny przez:"
 msgid "Power button:"
 msgstr "Przycisk zasilania:"
 
-#: src/MainView.vala:207 src/MainView.vala:240
+#: src/MainView.vala:207 src/MainView.vala:253
 msgid "Suspend when inactive for:"
 msgstr "Uśpienie, gdy nieaktywność przez:"
 
-#: src/MainView.vala:225
+#: src/MainView.vala:229 src/MainView.vala:276
+msgid "Power management mode:"
+msgstr "Tryb zarządzania energią:"
+
+#: src/MainView.vala:238
 msgid "Plugged In"
 msgstr "Zasilacz sieciowy"
 
-#: src/MainView.vala:258
+#: src/MainView.vala:284
 msgid "On Battery"
 msgstr "Na baterii"
 
-#: src/MainView.vala:283
+#: src/MainView.vala:309
 msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
 "Niektóre ustawienia zaczną obowiązywać po ponownym uruchomieniu komputera"
-
-#: src/MainView.vala:303
-msgid "Power management mode:"
-msgstr "Tryb zarządzania energią:"
 
 #: src/Plug.vala:36
 msgid "Configure display brightness, power buttons, and suspend behavior"
@@ -197,15 +197,15 @@ msgstr "Nieobsługiwane"
 msgid "Prompt to shutdown"
 msgstr "Zapytaj o wyłączenie"
 
-#: src/Widgets/PowerModeButton.vala:43
+#: src/Widgets/PowerModeButton.vala:66
 msgid "Power Saver"
 msgstr "Oszczędzanie energii"
 
-#: src/Widgets/PowerModeButton.vala:62
+#: src/Widgets/PowerModeButton.vala:85
 msgid "Balanced"
 msgstr "Zrównoważony"
 
-#: src/Widgets/PowerModeButton.vala:83
+#: src/Widgets/PowerModeButton.vala:106
 msgid "Performance"
 msgstr "Wydajność"
 
