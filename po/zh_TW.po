@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-08 04:56+0000\n"
+"POT-Creation-Date: 2024-02-08 23:42+0000\n"
 "PO-Revision-Date: 2020-03-01 14:09+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
@@ -64,25 +64,25 @@ msgstr "關閉顯示器前的不使用時間："
 msgid "Power button:"
 msgstr "電源按鈕："
 
-#: src/MainView.vala:207 src/MainView.vala:240
+#: src/MainView.vala:207 src/MainView.vala:253
 msgid "Suspend when inactive for:"
 msgstr "電腦暫停前的不使用時間："
 
-#: src/MainView.vala:225
+#: src/MainView.vala:229 src/MainView.vala:276
+msgid "Power management mode:"
+msgstr ""
+
+#: src/MainView.vala:238
 msgid "Plugged In"
 msgstr "插入電源線"
 
-#: src/MainView.vala:258
+#: src/MainView.vala:284
 msgid "On Battery"
 msgstr "使用電池"
 
-#: src/MainView.vala:283
+#: src/MainView.vala:309
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "有些更改在您重新啟動電腦之前還不會生效"
-
-#: src/MainView.vala:303
-msgid "Power management mode:"
-msgstr ""
 
 #: src/Plug.vala:36
 msgid "Configure display brightness, power buttons, and suspend behavior"
@@ -194,17 +194,17 @@ msgstr "未支援"
 msgid "Prompt to shutdown"
 msgstr "提請關機"
 
-#: src/Widgets/PowerModeButton.vala:43
+#: src/Widgets/PowerModeButton.vala:66
 #, fuzzy
 #| msgid "Power"
 msgid "Power Saver"
 msgstr "電源"
 
-#: src/Widgets/PowerModeButton.vala:62
+#: src/Widgets/PowerModeButton.vala:85
 msgid "Balanced"
 msgstr ""
 
-#: src/Widgets/PowerModeButton.vala:83
+#: src/Widgets/PowerModeButton.vala:106
 msgid "Performance"
 msgstr ""
 
