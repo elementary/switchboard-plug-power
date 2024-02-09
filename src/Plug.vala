@@ -51,7 +51,7 @@ namespace Power {
                 return;
             }
 
-            if (main_view.battery.is_present ()) {
+            if (PowerManager.get_default ().on_battery ()) {
                 main_view.stack.visible_child_name = "battery";
             } else {
                 main_view.stack.visible_child_name = "ac";

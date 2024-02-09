@@ -2,11 +2,9 @@ data/power.policy.in
 cli/Server.vala
 cli/main.vala
 src/MainView.vala
-src/PowerSupply.vala
 src/Plug.vala
 src/LogindHelper.vala
 src/Interfaces.vala
-src/Battery.vala
 src/Widgets/TimeoutComboBox.vala
 src/Widgets/LidCloseActionComboBox.vala
 src/Widgets/ActionComboBox.vala
