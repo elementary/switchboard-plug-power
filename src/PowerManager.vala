@@ -28,20 +28,18 @@ public class Power.PowerManager : Object {
         };
 
         try {
-            foreach (unowned var path in upower.enumerate_devices ()) {
-                UpowerDevice device = Bus.get_proxy_sync (
-                    SYSTEM,
-                    UPOWER_NAME,
-                    path.to_string (),
-                    GET_INVALIDATED_PROPERTIES
-                );
+            UpowerDevice device = Bus.get_proxy_sync (
+                SYSTEM,
+                UPOWER_NAME,
+                "/org/freedesktop/UPower/devices/DisplayDevice",
+                GET_INVALIDATED_PROPERTIES
+            );
 
-                if (device != null && device.device_type == 2 && device.is_present) {
-                    return true;
-                }
+            if (device != null && device.device_type == 2 && device.is_present) {
+                return true;
             }
         } catch (Error e) {
-            critical ("acpi couldn't get upower devices: %s", e.message);
+            critical ("Couldn't get upower display device: %s", e.message);
         }
 
         return false;
