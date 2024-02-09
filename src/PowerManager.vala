@@ -12,11 +12,24 @@ public class Power.PowerManager : Object {
         return instance.once (() => { return new PowerManager (); });
     }
 
+    public HashTable<string, Device> devices { get; private set; }
+
     private Upower? upower;
 
     construct {
+        devices = new HashTable<string, Device> (str_hash, str_equal);
+
         try {
             upower = Bus.get_proxy_sync (SYSTEM, UPOWER_NAME, UPOWER_PATH);
+
+            try {
+                foreach (unowned var path in upower.enumerate_devices ()) {
+                    var device_path = path.to_string ();
+                    devices[device_path] = new Device (device_path);
+                }
+            } catch (Error e) {
+                critical ("acpi couldn't get upower devices: %s", e.message);
+            }
         } catch (Error e) {
             critical ("Connecting to UPower bus failed: %s", e.message);
         }
@@ -27,22 +40,14 @@ public class Power.PowerManager : Object {
             return true;
         };
 
-        try {
-            UpowerDevice device = Bus.get_proxy_sync (
-                SYSTEM,
-                UPOWER_NAME,
-                "/org/freedesktop/UPower/devices/DisplayDevice",
-                GET_INVALIDATED_PROPERTIES
-            );
-
-            if (device != null && device.device_type == 2 && device.is_present) {
-                return true;
+        var has_battery = false;
+        devices.foreach ((path, device) => {
+            if (device.device_type == BATTERY) {
+                has_battery = true;
             }
-        } catch (Error e) {
-            critical ("Couldn't get upower display device: %s", e.message);
-        }
+        });
 
-        return false;
+        return has_battery;
     }
 
     public bool on_battery () {

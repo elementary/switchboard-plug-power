@@ -76,23 +76,6 @@ public class Power.MainView : Switchboard.SettingsPage {
             row_spacing = 12
         };
 
-        if (power_manager.has_battery ()) {
-            var wingpanel_power_settings = new GLib.Settings ("io.elementary.desktop.wingpanel.power");
-
-            var show_percent_label = new Gtk.Label (_("Show battery percentage in Panel:")) {
-                halign = Gtk.Align.END,
-                xalign = 1
-            };
-
-            var show_percent_switch = new Gtk.Switch () {
-                halign = Gtk.Align.START
-            };
-            wingpanel_power_settings.bind ("show-percentage", show_percent_switch, "active", SettingsBindFlags.DEFAULT);
-
-            main_grid.attach (show_percent_label, 0, 0);
-            main_grid.attach (show_percent_switch, 1, 0);
-        }
-
         if (backlight_detect ()) {
             var brightness_label = new Gtk.Label (_("Display brightness:")) {
                 halign = Gtk.Align.END,
@@ -307,6 +290,14 @@ public class Power.MainView : Switchboard.SettingsPage {
 
         var box = new Gtk.Box (VERTICAL, 12);
         box.append (infobar);
+        if (power_manager.has_battery ()) {
+            var battery_box = new BatteryBox () {
+                margin_bottom = 12
+            };
+
+            box.append (battery_box);
+        }
+
         box.append (main_grid);
 
         child = box;
