@@ -315,7 +315,7 @@ public class Power.MainView : Switchboard.SettingsPage {
         label_size.add_widget (power_label);
 
         // hide stack switcher if we only have ac line
-        // stack_switcher.visible = stack.observe_children ().get_n_items () > 1;
+        stack_switcher.visible = stack.observe_children ().get_n_items () > 1;
     }
 
     public static Polkit.Permission? get_permission () {
