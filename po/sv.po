@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-08 23:42+0000\n"
+"POT-Creation-Date: 2024-02-09 15:47+0000\n"
 "PO-Revision-Date: 2018-10-21 12:06+0000\n"
 "Last-Translator: Fredrik B <frbo9002@gmail.com>\n"
 "Language-Team: Swedish <https://weblate.elementary.io/projects/switchboard/"
@@ -28,59 +28,55 @@ msgstr "Hantera ströminställningar"
 msgid "Authentication is required to manage power settings"
 msgstr "Autentisering krävs för att hantera ströminställningar"
 
-#: src/MainView.vala:52 src/Plug.vala:35
+#: src/MainView.vala:50 src/Plug.vala:35
 msgid "Power"
 msgstr "Ström"
 
-#: src/MainView.vala:85
+#: src/MainView.vala:82
 msgid "Show battery percentage in Panel:"
 msgstr ""
 
-#: src/MainView.vala:100
+#: src/MainView.vala:97
 msgid "Display brightness:"
 msgstr "Skärmens ljusstyrka:"
 
-#: src/MainView.vala:105
+#: src/MainView.vala:102
 msgid "Automatically adjust brightness:"
 msgstr "Justera skärmens ljusstyrka automatiskt:"
 
-#: src/MainView.vala:150
+#: src/MainView.vala:147
 msgid "Enable power save on low battery:"
 msgstr ""
 
-#: src/MainView.vala:165
+#: src/MainView.vala:162
 msgid "When lid is closed:"
 msgstr "När skärmen fälls ned:"
 
-#: src/MainView.vala:172
+#: src/MainView.vala:169
 msgid "When lid is closed with external monitor:"
 msgstr "När skärmen fälls ned med extern bildskärm:"
 
-#: src/MainView.vala:188
+#: src/MainView.vala:185
 msgid "Turn off display when inactive for:"
 msgstr "Stäng av skärm vid inaktivitet i:"
 
-#: src/MainView.vala:195
+#: src/MainView.vala:192
 msgid "Power button:"
 msgstr "Avstängningsknapp:"
 
-#: src/MainView.vala:207 src/MainView.vala:253
+#: src/MainView.vala:204 src/MainView.vala:243
 msgid "Suspend when inactive for:"
 msgstr "Vänteläge vid inaktivitet i:"
 
-#: src/MainView.vala:229 src/MainView.vala:276
-msgid "Power management mode:"
-msgstr ""
-
-#: src/MainView.vala:238
+#: src/MainView.vala:228
 msgid "Plugged In"
 msgstr "Inkopplad"
 
-#: src/MainView.vala:284
+#: src/MainView.vala:267
 msgid "On Battery"
 msgstr "På batteri"
 
-#: src/MainView.vala:309
+#: src/MainView.vala:292
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Vissa ändringar verkställs inte förren du startar om datorn"
 
@@ -88,47 +84,47 @@ msgstr "Vissa ändringar verkställs inte förren du startar om datorn"
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "Ställ in skärmens ljusstyrka, strömbrytare och strömsparlägen"
 
-#: src/Plug.vala:71
+#: src/Plug.vala:72
 msgid "Suspend button"
 msgstr "Väntelägesknapp"
 
-#: src/Plug.vala:72
+#: src/Plug.vala:73
 msgid "Power button"
 msgstr "Avstängningsknapp"
 
-#: src/Plug.vala:73
+#: src/Plug.vala:74
 msgid "Display inactive"
 msgstr "Skärmen är inaktiv"
 
-#: src/Plug.vala:74
+#: src/Plug.vala:75
 msgid "Dim display"
 msgstr "Dämpa skärmens ljusstyrka"
 
-#: src/Plug.vala:75
+#: src/Plug.vala:76
 msgid "Lid close"
 msgstr "Locket stängs"
 
-#: src/Plug.vala:76
+#: src/Plug.vala:77
 msgid "Display brightness"
 msgstr "Skärmljusstyrka"
 
-#: src/Plug.vala:77
+#: src/Plug.vala:78
 msgid "Automatic brightness adjustment"
 msgstr "Automatisk justering av ljusstyrka"
 
-#: src/Plug.vala:78
+#: src/Plug.vala:79
 msgid "Inactive display off"
 msgstr "Inaktiv skärm av"
 
-#: src/Plug.vala:79
+#: src/Plug.vala:80
 msgid "Docked lid close"
 msgstr "Dockad lockstängning"
 
-#: src/Plug.vala:80
+#: src/Plug.vala:81
 msgid "Sleep inactivity timeout"
 msgstr ""
 
-#: src/Plug.vala:81
+#: src/Plug.vala:82
 msgid "Suspend inactive"
 msgstr "Vänteläge inaktiverat"
 
@@ -194,17 +190,23 @@ msgstr "Stöds ej"
 msgid "Prompt to shutdown"
 msgstr ""
 
-#: src/Widgets/PowerModeButton.vala:66
+#: src/Widgets/PowerModeButton.vala:60
+#, fuzzy
+#| msgid "Power"
+msgid "Power Mode"
+msgstr "Ström"
+
+#: src/Widgets/PowerModeButton.vala:68
 #, fuzzy
 #| msgid "Power"
 msgid "Power Saver"
 msgstr "Ström"
 
-#: src/Widgets/PowerModeButton.vala:85
+#: src/Widgets/PowerModeButton.vala:82
 msgid "Balanced"
 msgstr ""
 
-#: src/Widgets/PowerModeButton.vala:106
+#: src/Widgets/PowerModeButton.vala:98
 msgid "Performance"
 msgstr ""
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-08 23:42+0000\n"
+"POT-Creation-Date: 2024-02-09 15:47+0000\n"
 "PO-Revision-Date: 2024-02-07 10:31+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/power/"
@@ -30,59 +30,55 @@ msgstr ""
 "Il est nécessaire d'être authentifié pour modifier les paramètres "
 "d'alimentation"
 
-#: src/MainView.vala:52 src/Plug.vala:35
+#: src/MainView.vala:50 src/Plug.vala:35
 msgid "Power"
 msgstr "Alimentation"
 
-#: src/MainView.vala:85
+#: src/MainView.vala:82
 msgid "Show battery percentage in Panel:"
 msgstr "Afficher le pourcentage de la batterie dans le panneau :"
 
-#: src/MainView.vala:100
+#: src/MainView.vala:97
 msgid "Display brightness:"
 msgstr "Luminosité de l'écran :"
 
-#: src/MainView.vala:105
+#: src/MainView.vala:102
 msgid "Automatically adjust brightness:"
 msgstr "Ajuster automatiquement la luminosité :"
 
-#: src/MainView.vala:150
+#: src/MainView.vala:147
 msgid "Enable power save on low battery:"
 msgstr "Activer le mode d'économie d'énergie lorsque la batterie est faible :"
 
-#: src/MainView.vala:165
+#: src/MainView.vala:162
 msgid "When lid is closed:"
 msgstr "Lorsque l'écran du portable est fermé :"
 
-#: src/MainView.vala:172
+#: src/MainView.vala:169
 msgid "When lid is closed with external monitor:"
 msgstr "Lorsque l'écran du portable est fermé avec un moniteur externe :"
 
-#: src/MainView.vala:188
+#: src/MainView.vala:185
 msgid "Turn off display when inactive for:"
 msgstr "Éteindre l'écran lors d'une inactivité supérieure à :"
 
-#: src/MainView.vala:195
+#: src/MainView.vala:192
 msgid "Power button:"
 msgstr "Bouton de mise sous tension :"
 
-#: src/MainView.vala:207 src/MainView.vala:253
+#: src/MainView.vala:204 src/MainView.vala:243
 msgid "Suspend when inactive for:"
 msgstr "Mettre en veille si inactif depuis :"
 
-#: src/MainView.vala:229 src/MainView.vala:276
-msgid "Power management mode:"
-msgstr "Mode de gestion de l'énergie :"
-
-#: src/MainView.vala:238
+#: src/MainView.vala:228
 msgid "Plugged In"
 msgstr "Sur secteur"
 
-#: src/MainView.vala:284
+#: src/MainView.vala:267
 msgid "On Battery"
 msgstr "Sur batterie"
 
-#: src/MainView.vala:309
+#: src/MainView.vala:292
 msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
 "Certaines modifications ne prendront effet qu'après un redémarrage de votre "
@@ -94,47 +90,47 @@ msgstr ""
 "Configurer la luminosité de l'écran, le comportement des boutons allumer et "
 "mise en veille"
 
-#: src/Plug.vala:71
+#: src/Plug.vala:72
 msgid "Suspend button"
 msgstr "Bouton veille"
 
-#: src/Plug.vala:72
+#: src/Plug.vala:73
 msgid "Power button"
 msgstr "Bouton de mise sous tension"
 
-#: src/Plug.vala:73
+#: src/Plug.vala:74
 msgid "Display inactive"
 msgstr "Écran inactif"
 
-#: src/Plug.vala:74
+#: src/Plug.vala:75
 msgid "Dim display"
 msgstr "Cacher l'affichage"
 
-#: src/Plug.vala:75
+#: src/Plug.vala:76
 msgid "Lid close"
 msgstr "Rabattre l'écran"
 
-#: src/Plug.vala:76
+#: src/Plug.vala:77
 msgid "Display brightness"
 msgstr "Luminosité de l'écran"
 
-#: src/Plug.vala:77
+#: src/Plug.vala:78
 msgid "Automatic brightness adjustment"
 msgstr "Ajustement automatique de la luminosité"
 
-#: src/Plug.vala:78
+#: src/Plug.vala:79
 msgid "Inactive display off"
 msgstr "Éteindre l'écran inactif"
 
-#: src/Plug.vala:79
+#: src/Plug.vala:80
 msgid "Docked lid close"
 msgstr "Rabat de l'écran"
 
-#: src/Plug.vala:80
+#: src/Plug.vala:81
 msgid "Sleep inactivity timeout"
 msgstr "Délai d'inactivité pour la mise en veille"
 
-#: src/Plug.vala:81
+#: src/Plug.vala:82
 msgid "Suspend inactive"
 msgstr "Veille d'inactivité"
 
@@ -200,17 +196,26 @@ msgstr "Non pris en charge"
 msgid "Prompt to shutdown"
 msgstr "Demander pour éteindre"
 
-#: src/Widgets/PowerModeButton.vala:66
+#: src/Widgets/PowerModeButton.vala:60
+#, fuzzy
+#| msgid "Power Saver"
+msgid "Power Mode"
+msgstr "Économie d'énergie"
+
+#: src/Widgets/PowerModeButton.vala:68
 msgid "Power Saver"
 msgstr "Économie d'énergie"
 
-#: src/Widgets/PowerModeButton.vala:85
+#: src/Widgets/PowerModeButton.vala:82
 msgid "Balanced"
 msgstr "Équilibré"
 
-#: src/Widgets/PowerModeButton.vala:106
+#: src/Widgets/PowerModeButton.vala:98
 msgid "Performance"
 msgstr "Performances"
+
+#~ msgid "Power management mode:"
+#~ msgstr "Mode de gestion de l'énergie :"
 
 #~ msgid "You do not have permission to change this"
 #~ msgstr "Vous n'avez pas la permission de modifier cela"

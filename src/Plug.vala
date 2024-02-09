@@ -40,6 +40,7 @@ namespace Power {
 
         public override Gtk.Widget get_widget () {
             if (main_view == null) {
+                Gtk.IconTheme.get_for_display (Gdk.Display.get_default ()).add_resource_path ("/io/elementary/settings/power");
                 main_view = new MainView ();
             }
             return main_view;
@@ -50,7 +51,7 @@ namespace Power {
                 return;
             }
 
-            if (main_view.battery.is_present ()) {
+            if (PowerManager.get_default ().on_battery ()) {
                 main_view.stack.visible_child_name = "battery";
             } else {
                 main_view.stack.visible_child_name = "ac";

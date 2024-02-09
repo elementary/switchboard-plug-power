@@ -18,8 +18,6 @@
  */
 
 namespace Power {
-    public const string DBUS_UPOWER_NAME = "org.freedesktop.UPower";
-    public const string DBUS_UPOWER_PATH = "/org/freedesktop/UPower";
     public const string LOGIND_HELPER_NAME = "io.elementary.logind.helper";
     public const string LOGIND_HELPER_OBJECT_PATH = "/io/elementary/logind/helper";
     public const string POWER_PROFILES_DAEMON_NAME = "net.hadess.PowerProfiles";
@@ -62,6 +60,7 @@ namespace Power {
     interface Upower : Object {
         public signal void changed ();
         public abstract bool on_battery { owned get; }
+        public abstract bool lid_is_present { owned get; }
         public abstract bool low_on_battery { owned get; }
         public abstract ObjectPath[] enumerate_devices () throws Error;
     }

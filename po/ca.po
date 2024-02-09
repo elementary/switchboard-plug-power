@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-08 23:42+0000\n"
-"PO-Revision-Date: 2024-02-02 22:42+0000\n"
+"POT-Creation-Date: 2024-02-09 15:47+0000\n"
+"PO-Revision-Date: 2024-02-09 15:13+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "power/ca/>\n"
@@ -28,59 +28,55 @@ msgstr "Gestioneu els paràmetres de l'energia."
 msgid "Authentication is required to manage power settings"
 msgstr "Cal autenticació per gestionar els paràmetres de l'energia."
 
-#: src/MainView.vala:52 src/Plug.vala:35
+#: src/MainView.vala:50 src/Plug.vala:35
 msgid "Power"
 msgstr "Energia"
 
-#: src/MainView.vala:85
+#: src/MainView.vala:82
 msgid "Show battery percentage in Panel:"
 msgstr "Mostra el percentatge de la bateria al plafó:"
 
-#: src/MainView.vala:100
+#: src/MainView.vala:97
 msgid "Display brightness:"
 msgstr "Brillantor de la pantalla:"
 
-#: src/MainView.vala:105
+#: src/MainView.vala:102
 msgid "Automatically adjust brightness:"
 msgstr "Ajusta automàticament la brillantor:"
 
-#: src/MainView.vala:150
+#: src/MainView.vala:147
 msgid "Enable power save on low battery:"
 msgstr "Activa l'estalvi d'energia amb bateria baixa:"
 
-#: src/MainView.vala:165
+#: src/MainView.vala:162
 msgid "When lid is closed:"
 msgstr "Quan la tapa estigui tancada:"
 
-#: src/MainView.vala:172
+#: src/MainView.vala:169
 msgid "When lid is closed with external monitor:"
 msgstr "Quan la tapa estigui tancada amb una pantalla externa:"
 
-#: src/MainView.vala:188
+#: src/MainView.vala:185
 msgid "Turn off display when inactive for:"
 msgstr "Apaga la pantalla quan estigui inactiva durant:"
 
-#: src/MainView.vala:195
+#: src/MainView.vala:192
 msgid "Power button:"
 msgstr "Botó d'engegada:"
 
-#: src/MainView.vala:207 src/MainView.vala:253
+#: src/MainView.vala:204 src/MainView.vala:243
 msgid "Suspend when inactive for:"
 msgstr "Atura temporalment quan estigui inactiu durant..."
 
-#: src/MainView.vala:229 src/MainView.vala:276
-msgid "Power management mode:"
-msgstr "Mode de gestió d'energia:"
-
-#: src/MainView.vala:238
+#: src/MainView.vala:228
 msgid "Plugged In"
 msgstr "Endollat"
 
-#: src/MainView.vala:284
+#: src/MainView.vala:267
 msgid "On Battery"
 msgstr "Amb la bateria"
 
-#: src/MainView.vala:309
+#: src/MainView.vala:292
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Alguns canvis no tindran efecte fins que reinicieu l'ordinador."
 
@@ -90,47 +86,47 @@ msgstr ""
 "Configureu la brillantor de la pantalla, els botons d'engegar i el "
 "comportament de la suspensió."
 
-#: src/Plug.vala:71
+#: src/Plug.vala:72
 msgid "Suspend button"
 msgstr "Botó d'aturada temporal"
 
-#: src/Plug.vala:72
+#: src/Plug.vala:73
 msgid "Power button"
 msgstr "Botó d'engegada"
 
-#: src/Plug.vala:73
+#: src/Plug.vala:74
 msgid "Display inactive"
 msgstr "Pantalla inactiva"
 
-#: src/Plug.vala:74
+#: src/Plug.vala:75
 msgid "Dim display"
 msgstr "Atenua la pantalla"
 
-#: src/Plug.vala:75
+#: src/Plug.vala:76
 msgid "Lid close"
 msgstr "Tancament de la tapa"
 
-#: src/Plug.vala:76
+#: src/Plug.vala:77
 msgid "Display brightness"
 msgstr "Brillantor de la pantalla"
 
-#: src/Plug.vala:77
+#: src/Plug.vala:78
 msgid "Automatic brightness adjustment"
 msgstr "Ajustament automàtica de la brillantor"
 
-#: src/Plug.vala:78
+#: src/Plug.vala:79
 msgid "Inactive display off"
 msgstr "Pantalla inactiva desactivada"
 
-#: src/Plug.vala:79
+#: src/Plug.vala:80
 msgid "Docked lid close"
 msgstr "Tancament de la pantalla acoblada"
 
-#: src/Plug.vala:80
+#: src/Plug.vala:81
 msgid "Sleep inactivity timeout"
 msgstr "Temps d'inactivitat per dormir"
 
-#: src/Plug.vala:81
+#: src/Plug.vala:82
 msgid "Suspend inactive"
 msgstr "Aturada temporal inactiva"
 
@@ -177,7 +173,7 @@ msgstr "Apaga"
 
 #: src/Widgets/LidCloseActionComboBox.vala:48
 msgid "Lock"
-msgstr "Bloqueja"
+msgstr "Bloca"
 
 #: src/Widgets/LidCloseActionComboBox.vala:49
 msgid "Halt"
@@ -196,17 +192,26 @@ msgstr "No s'admet"
 msgid "Prompt to shutdown"
 msgstr "Suggereix l'aturada"
 
-#: src/Widgets/PowerModeButton.vala:66
+#: src/Widgets/PowerModeButton.vala:60
+#, fuzzy
+#| msgid "Power Saver"
+msgid "Power Mode"
+msgstr "Estalvi d'energia"
+
+#: src/Widgets/PowerModeButton.vala:68
 msgid "Power Saver"
 msgstr "Estalvi d'energia"
 
-#: src/Widgets/PowerModeButton.vala:85
+#: src/Widgets/PowerModeButton.vala:82
 msgid "Balanced"
 msgstr "Equilibrada"
 
-#: src/Widgets/PowerModeButton.vala:106
+#: src/Widgets/PowerModeButton.vala:98
 msgid "Performance"
 msgstr "Rendiment"
+
+#~ msgid "Power management mode:"
+#~ msgstr "Mode de gestió d'energia:"
 
 #~ msgid "You do not have permission to change this"
 #~ msgstr "No teniu permís per canviar això."
