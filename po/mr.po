@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-09 15:47+0000\n"
+"POT-Creation-Date: 2024-02-10 02:17+0000\n"
 "PO-Revision-Date: 2019-09-07 20:22+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -40,38 +40,44 @@ msgid "Automatically adjust brightness:"
 msgstr "ब्राइटनेस स्वयंचलितपणे समायोजित करा:"
 
 #: src/MainView.vala:147
-msgid "Enable power save on low battery:"
-msgstr ""
-
-#: src/MainView.vala:162
 msgid "When lid is closed:"
 msgstr "झाकण बंद असताना:"
 
-#: src/MainView.vala:169
+#: src/MainView.vala:154
 msgid "When lid is closed with external monitor:"
 msgstr "बाह्य मॉनिटरसह झाकण बंद असताना:"
 
-#: src/MainView.vala:185
+#: src/MainView.vala:170
 msgid "Turn off display when inactive for:"
 msgstr "पर्यंत निष्क्रिय असताना प्रदर्शन बंद करा:"
 
-#: src/MainView.vala:192
+#: src/MainView.vala:177
 msgid "Power button:"
 msgstr "पॉवर बटण:"
 
-#: src/MainView.vala:204 src/MainView.vala:243
+#: src/MainView.vala:189 src/MainView.vala:228
 msgid "Suspend when inactive for:"
 msgstr "पर्यंत निष्क्रिय असेल तेव्हा निलंबित करा:"
 
-#: src/MainView.vala:228
+#: src/MainView.vala:213
 msgid "Plugged In"
 msgstr "प्लग इन"
 
-#: src/MainView.vala:267
+#: src/MainView.vala:258 src/Plug.vala:79
+#, fuzzy
+#| msgid "Automatically adjust brightness:"
+msgid "Automatically Save Power"
+msgstr "ब्राइटनेस स्वयंचलितपणे समायोजित करा:"
+
+#: src/MainView.vala:260
+msgid "Power Saver mode will be used when battery is low"
+msgstr ""
+
+#: src/MainView.vala:266
 msgid "On Battery"
 msgstr "बॅटरी"
 
-#: src/MainView.vala:292
+#: src/MainView.vala:291
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "आपण हे संगणक रीस्टार्ट करेपर्यंत काही बदल प्रभावी होणार नाहीत"
 
@@ -107,19 +113,19 @@ msgstr "प्रदर्शन ब्राईटनेस"
 msgid "Automatic brightness adjustment"
 msgstr "स्वयंचलित ब्राईटनेस समायोजन"
 
-#: src/Plug.vala:79
+#: src/Plug.vala:80
 msgid "Inactive display off"
 msgstr "निष्क्रिय प्रदर्शन बंद"
 
-#: src/Plug.vala:80
+#: src/Plug.vala:81
 msgid "Docked lid close"
 msgstr "डॉक केलेले झाकण बंद"
 
-#: src/Plug.vala:81
+#: src/Plug.vala:82
 msgid "Sleep inactivity timeout"
 msgstr ""
 
-#: src/Plug.vala:82
+#: src/Plug.vala:83
 msgid "Suspend inactive"
 msgstr "निष्क्रिय निलंबित"
 
