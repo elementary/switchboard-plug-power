@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-10 02:17+0000\n"
-"PO-Revision-Date: 2024-02-02 22:42+0000\n"
+"PO-Revision-Date: 2024-02-10 18:59+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "power/ja/>\n"
@@ -64,14 +64,12 @@ msgid "Plugged In"
 msgstr "電源接続時"
 
 #: src/MainView.vala:258 src/Plug.vala:79
-#, fuzzy
-#| msgid "Automatically adjust brightness:"
 msgid "Automatically Save Power"
-msgstr "明るさを自動調整:"
+msgstr "自動的に電力消費を抑える"
 
 #: src/MainView.vala:260
 msgid "Power Saver mode will be used when battery is low"
-msgstr ""
+msgstr "電力消費を抑えるモードは、バッテリー残量が低下した際に適用されます"
 
 #: src/MainView.vala:266
 msgid "On Battery"
@@ -192,10 +190,8 @@ msgid "Prompt to shutdown"
 msgstr "シャットダウンの確認"
 
 #: src/Widgets/PowerModeButton.vala:60
-#, fuzzy
-#| msgid "Power Saver"
 msgid "Power Mode"
-msgstr "省電力"
+msgstr "電力モード"
 
 #: src/Widgets/PowerModeButton.vala:68
 msgid "Power Saver"
