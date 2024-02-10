@@ -126,21 +126,6 @@ public class Power.MainView : Switchboard.SettingsPage {
             label_size.add_widget (als_label);
         }
 
-        if (power_manager.has_battery ()) {
-            var auto_low_power_label = new Gtk.Label (_("Enable power save on low battery:")) {
-                halign = Gtk.Align.END,
-                xalign = 1
-            };
-
-            var auto_low_power_switch = new Gtk.Switch () {
-                halign = Gtk.Align.START
-            };
-            settings.bind ("power-saver-profile-on-low-battery", auto_low_power_switch, "active", SettingsBindFlags.DEFAULT);
-
-            main_grid.attach (auto_low_power_label, 0, 3);
-            main_grid.attach (auto_low_power_switch, 1, 3);
-        }
-
         if (power_manager.has_lid ()) {
             var lid_closed_label = new Gtk.Label (_("When lid is closed:")) {
                 halign = Gtk.Align.END,
@@ -246,6 +231,20 @@ public class Power.MainView : Switchboard.SettingsPage {
             if (PowerModeButton.successfully_initialized) {
                 battery_grid.attach (battery_power_mode_button, 0, 1, 2);
             }
+
+            var auto_low_power_switch = new Gtk.Switch () {
+                halign = END,
+                valign = CENTER
+            };
+            settings.bind ("power-saver-profile-on-low-battery", auto_low_power_switch, "active", DEFAULT);
+
+            var auto_low_power_label = new Granite.HeaderLabel (_("Automatically Save Power")) {
+                mnemonic_widget = auto_low_power_switch,
+                secondary_text = _("Power Saver mode will be used when battery is low")
+            };
+
+            battery_grid.attach (auto_low_power_label, 0, 3);
+            battery_grid.attach (auto_low_power_switch, 1, 3);
 
             stack.add_titled (battery_grid, "battery", _("On Battery"));
 
