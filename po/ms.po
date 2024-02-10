@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-09 15:47+0000\n"
+"POT-Creation-Date: 2024-02-10 02:17+0000\n"
 "PO-Revision-Date: 2016-12-27 02:16+0000\n"
 "Last-Translator: Timothy <timothy.wong@rocketmail.com>\n"
 "Language-Team: Malay <ms@li.org>\n"
@@ -44,39 +44,45 @@ msgid "Automatically adjust brightness:"
 msgstr "Laras kecerahan secara automatik:"
 
 #: src/MainView.vala:147
-msgid "Enable power save on low battery:"
-msgstr ""
-
-#: src/MainView.vala:162
 msgid "When lid is closed:"
 msgstr "Bila penutup ditutup:"
 
-#: src/MainView.vala:169
+#: src/MainView.vala:154
 msgid "When lid is closed with external monitor:"
 msgstr "Jika penutup ditutup dengan monitor luar:"
 
-#: src/MainView.vala:185
+#: src/MainView.vala:170
 msgid "Turn off display when inactive for:"
 msgstr "Matikan paparan jika tidak aktif selama:"
 
-#: src/MainView.vala:192
+#: src/MainView.vala:177
 msgid "Power button:"
 msgstr "Butang kuasa:"
 
-#: src/MainView.vala:204 src/MainView.vala:243
+#: src/MainView.vala:189 src/MainView.vala:228
 #, fuzzy
 msgid "Suspend when inactive for:"
 msgstr "Tangguh bila tidak aktif selama:"
 
-#: src/MainView.vala:228
+#: src/MainView.vala:213
 msgid "Plugged In"
 msgstr "Dipalam Masuk"
 
-#: src/MainView.vala:267
+#: src/MainView.vala:258 src/Plug.vala:79
+#, fuzzy
+#| msgid "Automatically adjust brightness:"
+msgid "Automatically Save Power"
+msgstr "Laras kecerahan secara automatik:"
+
+#: src/MainView.vala:260
+msgid "Power Saver mode will be used when battery is low"
+msgstr ""
+
+#: src/MainView.vala:266
 msgid "On Battery"
 msgstr "Mod Bateri"
 
-#: src/MainView.vala:292
+#: src/MainView.vala:291
 msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
 "Beberapa perubahan tidak akan berkesan sehinggalah anda memulakan semula "
@@ -116,19 +122,19 @@ msgstr "Papar kecerahan"
 msgid "Automatic brightness adjustment"
 msgstr "Pelarasan kecerahan secara automatik"
 
-#: src/Plug.vala:79
+#: src/Plug.vala:80
 msgid "Inactive display off"
 msgstr "Paparan tidak aktif dimatikan"
 
-#: src/Plug.vala:80
+#: src/Plug.vala:81
 msgid "Docked lid close"
 msgstr "Penutup terlabuh ditutup"
 
-#: src/Plug.vala:81
+#: src/Plug.vala:82
 msgid "Sleep inactivity timeout"
 msgstr ""
 
-#: src/Plug.vala:82
+#: src/Plug.vala:83
 #, fuzzy
 msgid "Suspend inactive"
 msgstr "Tidur tidak aktif"
