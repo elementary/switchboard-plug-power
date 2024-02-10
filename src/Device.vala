@@ -10,6 +10,8 @@ public interface Power.UpowerDevice : DBusProxy {
     public abstract bool online { owned get; }
     public abstract bool power_supply { owned get; }
     public abstract double percentage { owned get; }
+    public abstract string model { owned get; }
+    public abstract uint32 battery_level { owned get; }
     public abstract void refresh () throws Error;
     public abstract Device.State state { owned get; }
     [DBus (name = "Type")]
@@ -64,11 +66,56 @@ public class Power.Device : Object {
         TABLET = 10,
         COMPUTER = 11,
         GAMING_INPUT = 12,
-        PEN = 13
+        PEN = 13;
+
+        public unowned string? to_icon_name () {
+            switch (this) {
+                case UPS:
+                    return "uninterruptible-power-supply";
+                case MOUSE:
+                    return "input-mouse";
+                case KEYBOARD:
+                    return "input-keyboard";
+                case PDA:
+                case PHONE:
+                    return "phone";
+                case MEDIA_PLAYER:
+                    return "multimedia-player";
+                case TABLET:
+                case PEN:
+                    return "input-tablet";
+                case GAMING_INPUT:
+                    return "input-gaming";
+                case COMPUTER:
+                    return "computer";
+                case MONITOR:
+                    return "video-display";
+                case LINE_POWER:
+                    return "battery-ac-adapter";
+                case UNKNOWN:
+                case BATTERY:
+                default:
+                    return "battery";
+            }
+        }
     }
 
     public string path { get; construct; }
+
+    /*
+     * If the device is used to supply the system
+     * TRUE for batteries and UPS, FALSE for mice and keyboards
+     */
+    public bool is_power_supply { get; private set; }
+
+    /*
+     * Coarse battery level reporting
+     * If the value is 1, percentage should be used instead.
+     */
+    public uint32 battery_level { get; private set; default = 1; }
     public double percentage { get; private set; default = -1; }
+
+    public string model { get; private set; }
     public State state { get; private set; default = UNKNOWN; }
     public Type device_type { get; private set; default = UNKNOWN; }
 
@@ -88,6 +135,7 @@ public class Power.Device : Object {
             );
 
             device_type = upower_device.device_type;
+            is_power_supply = upower_device.power_supply;
 
             update_properties ();
             upower_device.g_properties_changed.connect (update_properties);
@@ -96,7 +144,29 @@ public class Power.Device : Object {
         }
     }
 
+    public string cent_to_string () {
+        if (percentage < 20) {
+            return _("Critical");
+        }
+
+        if (percentage < 40) {
+            return _("Low");
+        }
+
+        if (percentage < 60) {
+            return _("Good");
+        }
+
+        if (percentage < 80) {
+            return _("High");
+        }
+
+        return _("Full");
+    }
+
     private void update_properties () {
+        battery_level = upower_device.battery_level;
+        model = upower_device.model; // Can sometimes update eg when phone is trusted
         percentage = upower_device.percentage;
         state = upower_device.state;
     }

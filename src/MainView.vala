@@ -297,6 +297,11 @@ public class Power.MainView : Switchboard.SettingsPage {
             box.append (battery_box);
         }
 
+        var devices_box = new DevicesBox () {
+            margin_bottom = 12
+        };
+
+        box.append (devices_box);
         box.append (main_grid);
 
         child = box;
