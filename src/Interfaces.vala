@@ -44,18 +44,6 @@ namespace Power {
         public abstract int brightness {get; set; }
     }
 
-    [DBus (name = "org.freedesktop.UPower.Device")]
-    interface UpowerDevice : Object {
-        public signal void changed ();
-        public abstract void refresh () throws Error;
-        public abstract bool online { owned get; }
-        public abstract bool power_supply { owned get; }
-        public abstract bool is_present { owned get; }
-        [DBus (name = "Type")]
-        public abstract uint device_type { owned get; }
-    }
-
-
     [DBus (name = "org.freedesktop.UPower")]
     interface Upower : Object {
         public signal void changed ();
