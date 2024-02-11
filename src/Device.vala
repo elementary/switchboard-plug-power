@@ -170,4 +170,8 @@ public class Power.Device : Object {
         percentage = upower_device.percentage;
         state = upower_device.state;
     }
+
+    public bool equal_func (Device other) {
+        return this == other || this.path == other.path;
+    }
 }

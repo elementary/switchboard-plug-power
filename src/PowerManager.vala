@@ -12,20 +12,27 @@ public class Power.PowerManager : Object {
         return instance.once (() => { return new PowerManager (); });
     }
 
-    public HashTable<string, Device> devices { get; private set; }
+    public bool has_battery { get; private set; default = false; }
+    public ListStore devices { get; private set; }
 
     private Upower? upower;
 
     construct {
-        devices = new HashTable<string, Device> (str_hash, str_equal);
+        devices = new ListStore (typeof (Device));
 
         try {
             upower = Bus.get_proxy_sync (SYSTEM, UPOWER_NAME, UPOWER_PATH);
 
+            upower.device_added.connect (on_device_added);
+            upower.device_removed.connect (on_device_removed);
+
             try {
                 foreach (unowned var path in upower.enumerate_devices ()) {
-                    var device_path = path.to_string ();
-                    devices[device_path] = new Device (device_path);
+                    var device = new Device (path.to_string ());
+                    devices.append (device);
+                    if (device.device_type == BATTERY) {
+                        has_battery = true;
+                    }
                 }
             } catch (Error e) {
                 critical ("acpi couldn't get upower devices: %s", e.message);
@@ -35,26 +42,31 @@ public class Power.PowerManager : Object {
         }
     }
 
-    public bool has_battery () {
-        if (upower.on_battery) {
-            return true;
-        };
-
-        var has_battery = false;
-        devices.foreach ((path, device) => {
-            if (device.device_type == BATTERY) {
-                has_battery = true;
-            }
-        });
-
-        return has_battery;
-    }
-
     public bool on_battery () {
         return upower.on_battery;
     }
 
     public bool has_lid () {
         return upower.lid_is_present;
+    }
+
+    private void on_device_added (ObjectPath device_path) {
+        var device = new Device (device_path);
+
+        uint position = -1;
+        var found = devices.find_with_equal_func (device, (EqualFunc<Device>) Device.equal_func, out position);
+
+        if (!found) {
+            devices.append (device);
+        }
+    }
+
+    private void on_device_removed (ObjectPath device_path) {
+        uint position = -1;
+        devices.find_with_equal_func (new Device (device_path), (EqualFunc<Device>) Device.equal_func, out position);
+
+        if (position != -1) {
+            devices.remove (position);
+        }
     }
 }

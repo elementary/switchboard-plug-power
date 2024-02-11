@@ -10,19 +10,27 @@ public class Power.DevicesBox : Gtk.Grid {
         var devices_box = new Gtk.ListBox () {
             hexpand = true
         };
+        devices_box.bind_model (
+            PowerManager.get_default ().devices,
+            create_widget_func
+        );
         devices_box.add_css_class (Granite.STYLE_CLASS_RICH_LIST);
         devices_box.add_css_class (Granite.STYLE_CLASS_FRAME);
-
-        PowerManager.get_default ().devices.foreach ((path, device) => {
-            if (!device.is_power_supply) {
-                devices_box.append (new Battery (device));
-            }
-        });
 
         column_spacing = 12;
         row_spacing = 6;
         attach (header, 0, 0, 2);
         attach (devices_box, 0, 1, 2);
+    }
+
+    private Gtk.Widget create_widget_func (Object object) {
+        var battery = new Battery ((Device) object);
+
+        if (battery.device.is_power_supply) {
+            battery.visible = false;
+        }
+
+        return battery;
     }
 
     private class Battery : Gtk.Grid {

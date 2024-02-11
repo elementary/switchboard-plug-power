@@ -12,12 +12,17 @@ public class Power.BatteryBox : Gtk.Grid {
         };
 
         ulong n_batteries = 0;
-        PowerManager.get_default ().devices.foreach ((path, device) => {
+
+        var devices = PowerManager.get_default ().devices;
+
+        var has_battery = false;
+        for (int i = 0; i < devices.n_items; i++) {
+            var device = (Device) devices.get_item (i);
             if (device.device_type == BATTERY) {
                 devices_box.append (new Battery (device));
                 n_batteries ++;
             }
-        });
+        }
 
         battery_header.label = ngettext (
             _("Battery Level"),
