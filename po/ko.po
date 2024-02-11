@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-10 02:17+0000\n"
+"POT-Creation-Date: 2024-02-11 17:42+0000\n"
 "PO-Revision-Date: 2022-08-06 22:53+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
@@ -28,61 +28,85 @@ msgstr "전력 설정 관리"
 msgid "Authentication is required to manage power settings"
 msgstr "전력 설정 관리에는 인증이 필요합니다"
 
+#: src/Device.vala:35
+msgid "Charging"
+msgstr ""
+
+#: src/Device.vala:37
+msgid "Using battery power"
+msgstr ""
+
+#: src/Device.vala:39
+msgid "Empty"
+msgstr ""
+
+#: src/Device.vala:41
+msgid "Fully charged"
+msgstr ""
+
+#: src/Device.vala:43
+msgid "Waiting to charge"
+msgstr ""
+
+#: src/Device.vala:45
+msgid "Waiting to use battery power"
+msgstr ""
+
+#: src/Device.vala:47
+msgid "Unknown"
+msgstr ""
+
 #: src/MainView.vala:50 src/Plug.vala:35
 msgid "Power"
 msgstr "전력"
 
-#: src/MainView.vala:82
-msgid "Show battery percentage in Panel:"
-msgstr "패널에 배터리 백분율 표시:"
-
-#: src/MainView.vala:97
+#: src/MainView.vala:80
 msgid "Display brightness:"
 msgstr "화면 밝기:"
 
-#: src/MainView.vala:102
+#: src/MainView.vala:85
 msgid "Automatically adjust brightness:"
 msgstr "밝기 자동 조절:"
 
-#: src/MainView.vala:147
+#: src/MainView.vala:130
 msgid "When lid is closed:"
 msgstr "덮개가 닫혀있을 때:"
 
-#: src/MainView.vala:154
+#: src/MainView.vala:137
 msgid "When lid is closed with external monitor:"
 msgstr "외부 모니터에 연결된 채 덮개가 닫혀있을 때:"
 
-#: src/MainView.vala:170
+#: src/MainView.vala:153
 msgid "Turn off display when inactive for:"
 msgstr "다음 시간 동안 활동이 없으면 화면 끄기:"
 
-#: src/MainView.vala:177
+#: src/MainView.vala:160
 msgid "Power button:"
 msgstr "전원 버튼:"
 
-#: src/MainView.vala:189 src/MainView.vala:228
+#: src/MainView.vala:172 src/MainView.vala:211
 msgid "Suspend when inactive for:"
 msgstr "다음 시간 동안 활동이 없으면 잠자기:"
 
-#: src/MainView.vala:213
+#: src/MainView.vala:196
 msgid "Plugged In"
 msgstr "플러그 연결"
 
-#: src/MainView.vala:258 src/Plug.vala:79
+#: src/MainView.vala:241 src/Plug.vala:79
 #, fuzzy
 #| msgid "Automatically adjust brightness:"
 msgid "Automatically Save Power"
 msgstr "밝기 자동 조절:"
 
-#: src/MainView.vala:260
+#: src/MainView.vala:243
 msgid "Power Saver mode will be used when battery is low"
 msgstr ""
 
-#: src/MainView.vala:266
+#: src/MainView.vala:249
 msgid "On Battery"
 msgstr "배터리 사용"
 
-#: src/MainView.vala:291
+#: src/MainView.vala:274
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "몇 가지 바뀐 설정은 이 컴퓨터를 다시 시작해야 적용됩니다"
 
@@ -133,6 +157,22 @@ msgstr "잠자기 모드 정지 시간 초과"
 #: src/Plug.vala:83
 msgid "Suspend inactive"
 msgstr "사용하지 않을 땐 잠자기"
+
+#: src/Widgets/BatteryBox.vala:23
+#, fuzzy
+#| msgid "On Battery"
+msgid "Battery Level"
+msgstr "배터리 사용"
+
+#: src/Widgets/BatteryBox.vala:24
+msgid "Battery Levels"
+msgstr ""
+
+#: src/Widgets/BatteryBox.vala:32
+#, fuzzy
+#| msgid "Show battery percentage in Panel:"
+msgid "Show Percentage In Panel"
+msgstr "패널에 배터리 백분율 표시:"
 
 #: src/Widgets/TimeoutComboBox.vala:99
 msgid "Never"

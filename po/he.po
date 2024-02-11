@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-10 02:17+0000\n"
+"POT-Creation-Date: 2024-02-11 17:42+0000\n"
 "PO-Revision-Date: 2024-02-10 18:59+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/power/"
@@ -28,59 +28,83 @@ msgstr "ניהול הגדרות צריכת חשמל"
 msgid "Authentication is required to manage power settings"
 msgstr "נדרש אימות לצורך ניהול הגדרות צריכת חשמל"
 
+#: src/Device.vala:35
+msgid "Charging"
+msgstr ""
+
+#: src/Device.vala:37
+msgid "Using battery power"
+msgstr ""
+
+#: src/Device.vala:39
+msgid "Empty"
+msgstr ""
+
+#: src/Device.vala:41
+msgid "Fully charged"
+msgstr ""
+
+#: src/Device.vala:43
+msgid "Waiting to charge"
+msgstr ""
+
+#: src/Device.vala:45
+msgid "Waiting to use battery power"
+msgstr ""
+
+#: src/Device.vala:47
+msgid "Unknown"
+msgstr ""
+
 #: src/MainView.vala:50 src/Plug.vala:35
 msgid "Power"
 msgstr "חשמל"
 
-#: src/MainView.vala:82
-msgid "Show battery percentage in Panel:"
-msgstr "הצגת אחוזי סוללה בלוח:"
-
-#: src/MainView.vala:97
+#: src/MainView.vala:80
 msgid "Display brightness:"
 msgstr "בהירות התצוגה:"
 
-#: src/MainView.vala:102
+#: src/MainView.vala:85
 msgid "Automatically adjust brightness:"
 msgstr "התאמת בהירות התצוגה אוטומטית:"
 
-#: src/MainView.vala:147
+#: src/MainView.vala:130
 msgid "When lid is closed:"
 msgstr "כאשר המכסה סגור:"
 
-#: src/MainView.vala:154
+#: src/MainView.vala:137
 msgid "When lid is closed with external monitor:"
 msgstr "כאשר המכסה סגור עם צג חיצוני:"
 
-#: src/MainView.vala:170
+#: src/MainView.vala:153
 msgid "Turn off display when inactive for:"
 msgstr "יש לכבות את התצוגה כאשר אין פעילות במשך:"
 
-#: src/MainView.vala:177
+#: src/MainView.vala:160
 msgid "Power button:"
 msgstr "כפתור הפעלה:"
 
-#: src/MainView.vala:189 src/MainView.vala:228
+#: src/MainView.vala:172 src/MainView.vala:211
 msgid "Suspend when inactive for:"
 msgstr "יש לעבור למצב השהיה בעת חוסר פעילות למשך:"
 
-#: src/MainView.vala:213
+#: src/MainView.vala:196
 msgid "Plugged In"
 msgstr "מחובר"
 
-#: src/MainView.vala:258 src/Plug.vala:79
+#: src/MainView.vala:241 src/Plug.vala:79
 msgid "Automatically Save Power"
 msgstr "חיסכון אוטומטי בחשמל"
 
-#: src/MainView.vala:260
+#: src/MainView.vala:243
 msgid "Power Saver mode will be used when battery is low"
 msgstr "מצב חיסכון בחשמל יופעל כשהסוללה חלשה"
 
-#: src/MainView.vala:266
+#: src/MainView.vala:249
 msgid "On Battery"
 msgstr "על סוללה"
 
-#: src/MainView.vala:291
+#: src/MainView.vala:274
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "חלק מהשינויים לא יכנסו לתוקף עד להפעלת המחשב מחדש"
 
@@ -131,6 +155,22 @@ msgstr "תום זמן חוסר פעילות שינה"
 #: src/Plug.vala:83
 msgid "Suspend inactive"
 msgstr "השהיה בלתי פעילה"
+
+#: src/Widgets/BatteryBox.vala:23
+#, fuzzy
+#| msgid "On Battery"
+msgid "Battery Level"
+msgstr "על סוללה"
+
+#: src/Widgets/BatteryBox.vala:24
+msgid "Battery Levels"
+msgstr ""
+
+#: src/Widgets/BatteryBox.vala:32
+#, fuzzy
+#| msgid "Show battery percentage in Panel:"
+msgid "Show Percentage In Panel"
+msgstr "הצגת אחוזי סוללה בלוח:"
 
 #: src/Widgets/TimeoutComboBox.vala:99
 msgid "Never"

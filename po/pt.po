@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-10 02:17+0000\n"
+"POT-Creation-Date: 2024-02-11 17:42+0000\n"
 "PO-Revision-Date: 2024-02-08 04:56+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
@@ -28,61 +28,85 @@ msgstr "Gerir definições de energia"
 msgid "Authentication is required to manage power settings"
 msgstr "É necessário autenticação para modificar as definições de energia"
 
+#: src/Device.vala:35
+msgid "Charging"
+msgstr ""
+
+#: src/Device.vala:37
+msgid "Using battery power"
+msgstr ""
+
+#: src/Device.vala:39
+msgid "Empty"
+msgstr ""
+
+#: src/Device.vala:41
+msgid "Fully charged"
+msgstr ""
+
+#: src/Device.vala:43
+msgid "Waiting to charge"
+msgstr ""
+
+#: src/Device.vala:45
+msgid "Waiting to use battery power"
+msgstr ""
+
+#: src/Device.vala:47
+msgid "Unknown"
+msgstr ""
+
 #: src/MainView.vala:50 src/Plug.vala:35
 msgid "Power"
 msgstr "Energia"
 
-#: src/MainView.vala:82
-msgid "Show battery percentage in Panel:"
-msgstr "Mostrar percentagem de bateria no Painel:"
-
-#: src/MainView.vala:97
+#: src/MainView.vala:80
 msgid "Display brightness:"
 msgstr "Brilho do ecrã:"
 
-#: src/MainView.vala:102
+#: src/MainView.vala:85
 msgid "Automatically adjust brightness:"
 msgstr "Ajustar brilho automaticamente:"
 
-#: src/MainView.vala:147
+#: src/MainView.vala:130
 msgid "When lid is closed:"
 msgstr "Quando a tampa for fechada:"
 
-#: src/MainView.vala:154
+#: src/MainView.vala:137
 msgid "When lid is closed with external monitor:"
 msgstr "Quando a tampa for fechada com monitor externo:"
 
-#: src/MainView.vala:170
+#: src/MainView.vala:153
 msgid "Turn off display when inactive for:"
 msgstr "Desligar ecrã quando inativo por:"
 
-#: src/MainView.vala:177
+#: src/MainView.vala:160
 msgid "Power button:"
 msgstr "Botão ligar/desligar:"
 
-#: src/MainView.vala:189 src/MainView.vala:228
+#: src/MainView.vala:172 src/MainView.vala:211
 msgid "Suspend when inactive for:"
 msgstr "Suspender quando inativo durante:"
 
-#: src/MainView.vala:213
+#: src/MainView.vala:196
 msgid "Plugged In"
 msgstr "Ligado"
 
-#: src/MainView.vala:258 src/Plug.vala:79
+#: src/MainView.vala:241 src/Plug.vala:79
 #, fuzzy
 #| msgid "Automatically adjust brightness:"
 msgid "Automatically Save Power"
 msgstr "Ajustar brilho automaticamente:"
 
-#: src/MainView.vala:260
+#: src/MainView.vala:243
 msgid "Power Saver mode will be used when battery is low"
 msgstr ""
 
-#: src/MainView.vala:266
+#: src/MainView.vala:249
 msgid "On Battery"
 msgstr "A Bateria"
 
-#: src/MainView.vala:291
+#: src/MainView.vala:274
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Algumas alterações não serão aplicadas até reiniciar o computador"
 
@@ -133,6 +157,22 @@ msgstr "Tempo limite de inatividade do repouso"
 #: src/Plug.vala:83
 msgid "Suspend inactive"
 msgstr "Suspensão inativa"
+
+#: src/Widgets/BatteryBox.vala:23
+#, fuzzy
+#| msgid "On Battery"
+msgid "Battery Level"
+msgstr "A Bateria"
+
+#: src/Widgets/BatteryBox.vala:24
+msgid "Battery Levels"
+msgstr ""
+
+#: src/Widgets/BatteryBox.vala:32
+#, fuzzy
+#| msgid "Show battery percentage in Panel:"
+msgid "Show Percentage In Panel"
+msgstr "Mostrar percentagem de bateria no Painel:"
 
 #: src/Widgets/TimeoutComboBox.vala:99
 msgid "Never"
