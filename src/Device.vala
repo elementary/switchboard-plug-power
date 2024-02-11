@@ -68,6 +68,7 @@ public class Power.Device : Object {
     }
 
     public string path { get; construct; }
+    public bool power_supply { get; private set; }
     public double percentage { get; private set; default = -1; }
     public State state { get; private set; default = UNKNOWN; }
     public Type device_type { get; private set; default = UNKNOWN; }
@@ -88,6 +89,7 @@ public class Power.Device : Object {
             );
 
             device_type = upower_device.device_type;
+            power_supply = upower_device.power_supply;
 
             update_properties ();
             upower_device.g_properties_changed.connect (update_properties);

@@ -54,7 +54,11 @@ public class Power.PowerManager : Object {
         if (!found) {
             devices.append (device);
 
-            if (device.device_type == BATTERY) {
+            /*
+            * Need to verify power-supply before considering it a laptop battery.
+            * Otherwise it will likely be the battery for a device of an unknown type.
+            */
+            if (device.device_type == BATTERY && device.power_supply) {
                 has_battery = true;
             }
         }

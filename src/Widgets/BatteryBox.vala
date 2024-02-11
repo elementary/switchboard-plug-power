@@ -17,7 +17,12 @@ public class Power.BatteryBox : Gtk.Grid {
 
         for (int i = 0; i < devices.n_items; i++) {
             var device = (Device) devices.get_item (i);
-            if (device.device_type == BATTERY) {
+
+            /*
+            * Need to verify power-supply before considering it a laptop battery.
+            * Otherwise it will likely be the battery for a device of an unknown type.
+            */
+            if (device.device_type == BATTERY && device.power_supply) {
                 devices_box.append (new Battery (device));
                 n_batteries ++;
             }
