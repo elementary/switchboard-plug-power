@@ -76,7 +76,7 @@ public class Power.MainView : Switchboard.SettingsPage {
             row_spacing = 12
         };
 
-        if (bscreen.brightness != -1) {
+        if (screen.brightness != -1) {
             var brightness_label = new Gtk.Label (_("Display brightness:")) {
                 halign = Gtk.Align.END,
                 xalign = 1
