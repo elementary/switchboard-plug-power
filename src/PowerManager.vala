@@ -28,11 +28,7 @@ public class Power.PowerManager : Object {
 
             try {
                 foreach (unowned var path in upower.enumerate_devices ()) {
-                    var device = new Device (path.to_string ());
-                    devices.append (device);
-                    if (device.device_type == BATTERY) {
-                        has_battery = true;
-                    }
+                    on_device_added (path);
                 }
             } catch (Error e) {
                 critical ("acpi couldn't get upower devices: %s", e.message);
@@ -58,6 +54,10 @@ public class Power.PowerManager : Object {
 
         if (!found) {
             devices.append (device);
+
+            if (device.device_type == BATTERY) {
+                has_battery = true;
+            }
         }
     }
 
