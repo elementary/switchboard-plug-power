@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-10 02:17+0000\n"
+"POT-Creation-Date: 2024-02-11 17:42+0000\n"
 "PO-Revision-Date: 2017-01-26 15:11+0000\n"
 "Last-Translator: Marius Albina <marius.albina@gmail.com>\n"
 "Language-Team: Romanian <ro@li.org>\n"
@@ -27,62 +27,86 @@ msgstr "Gestionați setările de alimentare "
 msgid "Authentication is required to manage power settings"
 msgstr "Autentificarea este necesară pentru a gestiona setările de alimentare"
 
+#: src/Device.vala:35
+msgid "Charging"
+msgstr ""
+
+#: src/Device.vala:37
+msgid "Using battery power"
+msgstr ""
+
+#: src/Device.vala:39
+msgid "Empty"
+msgstr ""
+
+#: src/Device.vala:41
+msgid "Fully charged"
+msgstr ""
+
+#: src/Device.vala:43
+msgid "Waiting to charge"
+msgstr ""
+
+#: src/Device.vala:45
+msgid "Waiting to use battery power"
+msgstr ""
+
+#: src/Device.vala:47
+msgid "Unknown"
+msgstr ""
+
 #: src/MainView.vala:50 src/Plug.vala:35
 msgid "Power"
 msgstr "Alimentare"
 
-#: src/MainView.vala:82
-msgid "Show battery percentage in Panel:"
-msgstr ""
-
-#: src/MainView.vala:97
+#: src/MainView.vala:80
 msgid "Display brightness:"
 msgstr "Luminozitatea ecranului:"
 
-#: src/MainView.vala:102
+#: src/MainView.vala:85
 msgid "Automatically adjust brightness:"
 msgstr "Reglează automat luminozitatea:"
 
-#: src/MainView.vala:147
+#: src/MainView.vala:130
 msgid "When lid is closed:"
 msgstr "Când capacul este închis:"
 
-#: src/MainView.vala:154
+#: src/MainView.vala:137
 msgid "When lid is closed with external monitor:"
 msgstr "Când capacul este închis cu un monitor extern:"
 
-#: src/MainView.vala:170
+#: src/MainView.vala:153
 msgid "Turn off display when inactive for:"
 msgstr "Stinge ecranul când este inactiv pentru:"
 
-#: src/MainView.vala:177
+#: src/MainView.vala:160
 msgid "Power button:"
 msgstr "Butonul de pornire:"
 
-#: src/MainView.vala:189 src/MainView.vala:228
+#: src/MainView.vala:172 src/MainView.vala:211
 #, fuzzy
 msgid "Suspend when inactive for:"
 msgstr "Suspendă atunci când este inactiv pentru:"
 
-#: src/MainView.vala:213
+#: src/MainView.vala:196
 msgid "Plugged In"
 msgstr "Conectat la priză"
 
-#: src/MainView.vala:258 src/Plug.vala:79
+#: src/MainView.vala:241 src/Plug.vala:79
 #, fuzzy
 #| msgid "Automatically adjust brightness:"
 msgid "Automatically Save Power"
 msgstr "Reglează automat luminozitatea:"
 
-#: src/MainView.vala:260
+#: src/MainView.vala:243
 msgid "Power Saver mode will be used when battery is low"
 msgstr ""
 
-#: src/MainView.vala:266
+#: src/MainView.vala:249
 msgid "On Battery"
 msgstr "Pe baterie"
 
-#: src/MainView.vala:291
+#: src/MainView.vala:274
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Anumite modificări nu vor avea efect până la restart"
 
@@ -138,6 +162,20 @@ msgstr ""
 #, fuzzy
 msgid "Suspend inactive"
 msgstr "Mod somn inactiv"
+
+#: src/Widgets/BatteryBox.vala:23
+#, fuzzy
+#| msgid "On Battery"
+msgid "Battery Level"
+msgstr "Pe baterie"
+
+#: src/Widgets/BatteryBox.vala:24
+msgid "Battery Levels"
+msgstr ""
+
+#: src/Widgets/BatteryBox.vala:32
+msgid "Show Percentage In Panel"
+msgstr ""
 
 #: src/Widgets/TimeoutComboBox.vala:99
 msgid "Never"

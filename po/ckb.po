@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-10 02:17+0000\n"
+"POT-Creation-Date: 2024-02-11 17:42+0000\n"
 "PO-Revision-Date: 2022-10-07 16:57+0000\n"
 "Last-Translator: Aga Ismael <agaesmaeel@gmail.com>\n"
 "Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
@@ -23,61 +23,85 @@ msgstr "بەڕێوەبردنی ڕێکخستنەکانی وزە"
 msgid "Authentication is required to manage power settings"
 msgstr "پێویستە بیسەلمێنیت کە بەڕێوەبەریت بۆ بەڕێوەبردنی ڕێکجستنەکانی وزە"
 
+#: src/Device.vala:35
+msgid "Charging"
+msgstr ""
+
+#: src/Device.vala:37
+msgid "Using battery power"
+msgstr ""
+
+#: src/Device.vala:39
+msgid "Empty"
+msgstr ""
+
+#: src/Device.vala:41
+msgid "Fully charged"
+msgstr ""
+
+#: src/Device.vala:43
+msgid "Waiting to charge"
+msgstr ""
+
+#: src/Device.vala:45
+msgid "Waiting to use battery power"
+msgstr ""
+
+#: src/Device.vala:47
+msgid "Unknown"
+msgstr ""
+
 #: src/MainView.vala:50 src/Plug.vala:35
 msgid "Power"
 msgstr "وزە"
 
-#: src/MainView.vala:82
-msgid "Show battery percentage in Panel:"
-msgstr "پشاندانی ڕێژەی پاتری لە پانێڵدا:"
-
-#: src/MainView.vala:97
+#: src/MainView.vala:80
 msgid "Display brightness:"
 msgstr "ڕووناکی ڕوونما:"
 
-#: src/MainView.vala:102
+#: src/MainView.vala:85
 msgid "Automatically adjust brightness:"
 msgstr "ڕێکخستنی ڕووناکی خۆکارانە:"
 
-#: src/MainView.vala:147
+#: src/MainView.vala:130
 msgid "When lid is closed:"
 msgstr "کاتێک ڕوونماکە دادەدەیەوە:"
 
-#: src/MainView.vala:154
+#: src/MainView.vala:137
 msgid "When lid is closed with external monitor:"
 msgstr "کاتێک ڕوونماکە دادراوەتەوە لەگەڵ مۆنیتەرێکی دەرەکی:"
 
-#: src/MainView.vala:170
+#: src/MainView.vala:153
 msgid "Turn off display when inactive for:"
 msgstr "ڕوونماکە بکوژێنەوە کاتێک ناچالاک بوو بۆ ماوەی:"
 
-#: src/MainView.vala:177
+#: src/MainView.vala:160
 msgid "Power button:"
 msgstr "دوگمەی وزە:"
 
-#: src/MainView.vala:189 src/MainView.vala:228
+#: src/MainView.vala:172 src/MainView.vala:211
 msgid "Suspend when inactive for:"
 msgstr "بیوەستێنە کاتێک ناچالاکە بۆ ماوەی:"
 
-#: src/MainView.vala:213
+#: src/MainView.vala:196
 msgid "Plugged In"
 msgstr "وزە وەردەگرێت"
 
-#: src/MainView.vala:258 src/Plug.vala:79
+#: src/MainView.vala:241 src/Plug.vala:79
 #, fuzzy
 #| msgid "Automatically adjust brightness:"
 msgid "Automatically Save Power"
 msgstr "ڕێکخستنی ڕووناکی خۆکارانە:"
 
-#: src/MainView.vala:260
+#: src/MainView.vala:243
 msgid "Power Saver mode will be used when battery is low"
 msgstr ""
 
-#: src/MainView.vala:266
+#: src/MainView.vala:249
 msgid "On Battery"
 msgstr "لەسەر پاتری"
 
-#: src/MainView.vala:291
+#: src/MainView.vala:274
 msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
 "هەندێک لە گۆڕانکارییەکان ناچنە جێبەجێ بوونەوە هەتا کۆمپیتەرەکەت پێ نەکەیتەوە"
@@ -129,6 +153,22 @@ msgstr "کات بەسەرچوونی ناچالاکی خەو"
 #: src/Plug.vala:83
 msgid "Suspend inactive"
 msgstr "وەستاندن ناچالاکە"
+
+#: src/Widgets/BatteryBox.vala:23
+#, fuzzy
+#| msgid "On Battery"
+msgid "Battery Level"
+msgstr "لەسەر پاتری"
+
+#: src/Widgets/BatteryBox.vala:24
+msgid "Battery Levels"
+msgstr ""
+
+#: src/Widgets/BatteryBox.vala:32
+#, fuzzy
+#| msgid "Show battery percentage in Panel:"
+msgid "Show Percentage In Panel"
+msgstr "پشاندانی ڕێژەی پاتری لە پانێڵدا:"
 
 #: src/Widgets/TimeoutComboBox.vala:99
 msgid "Never"
