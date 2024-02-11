@@ -207,7 +207,7 @@ public class Power.MainView : Switchboard.SettingsPage {
             }
         }
 
-        if (power_manager.has_battery ()) {
+        if (power_manager.has_battery) {
             var battery_timeout_label = new Gtk.Label (_("Suspend when inactive for:")) {
                 xalign = 1
             };
@@ -289,7 +289,7 @@ public class Power.MainView : Switchboard.SettingsPage {
 
         var box = new Gtk.Box (VERTICAL, 12);
         box.append (infobar);
-        if (power_manager.has_battery ()) {
+        if (power_manager.has_battery) {
             var battery_box = new BatteryBox () {
                 margin_bottom = 12
             };
