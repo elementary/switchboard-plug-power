@@ -163,11 +163,13 @@ public class Power.MainView : Switchboard.SettingsPage {
             _("Do nothing"),
             _("Suspend"),
             _("Ask to shutdown")
-        });
+        }) {
+            hexpand = true
+        };
 
         var powerbutton_label = new Gtk.Label (_("Power Button Behavior")) {
-            halign = START,
-            hexpand = true,
+            halign = Gtk.Align.END,
+            xalign = 1,
             mnemonic_widget = powerbutton_dropdown
         };
 
