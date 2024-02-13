@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-11 17:42+0000\n"
+"POT-Creation-Date: 2024-02-13 10:52+0000\n"
 "PO-Revision-Date: 2022-10-07 16:57+0000\n"
 "Last-Translator: Aga Ismael <agaesmaeel@gmail.com>\n"
 "Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
@@ -51,57 +51,74 @@ msgstr ""
 msgid "Unknown"
 msgstr ""
 
-#: src/MainView.vala:50 src/Plug.vala:35
+#: src/MainView.vala:51 src/Plug.vala:35
 msgid "Power"
 msgstr "وزە"
 
-#: src/MainView.vala:80
+#: src/MainView.vala:81
 msgid "Display brightness:"
 msgstr "ڕووناکی ڕوونما:"
 
-#: src/MainView.vala:85
+#: src/MainView.vala:86
 msgid "Automatically adjust brightness:"
 msgstr "ڕێکخستنی ڕووناکی خۆکارانە:"
 
-#: src/MainView.vala:130
+#: src/MainView.vala:131
 msgid "When lid is closed:"
 msgstr "کاتێک ڕوونماکە دادەدەیەوە:"
 
-#: src/MainView.vala:137
+#: src/MainView.vala:138
 msgid "When lid is closed with external monitor:"
 msgstr "کاتێک ڕوونماکە دادراوەتەوە لەگەڵ مۆنیتەرێکی دەرەکی:"
 
-#: src/MainView.vala:153
+#: src/MainView.vala:154
 msgid "Turn off display when inactive for:"
 msgstr "ڕوونماکە بکوژێنەوە کاتێک ناچالاک بوو بۆ ماوەی:"
 
-#: src/MainView.vala:160
-msgid "Power button:"
-msgstr "دوگمەی وزە:"
+#. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
+#: src/MainView.vala:163 src/Widgets/LidCloseActionComboBox.vala:50
+msgid "Do nothing"
+msgstr "با هیچ ڕوونەدات"
 
-#: src/MainView.vala:172 src/MainView.vala:211
+#: src/MainView.vala:164 src/Widgets/LidCloseActionComboBox.vala:46
+msgid "Suspend"
+msgstr "وەستاندن"
+
+#: src/MainView.vala:165
+#, fuzzy
+#| msgid "Prompt to shutdown"
+msgid "Ask to shutdown"
+msgstr "داواکردنی کوژاندنەوە"
+
+#: src/MainView.vala:170 src/Plug.vala:73
+#, fuzzy
+#| msgid "Power button"
+msgid "Power Button Behavior"
+msgstr "دوگمەی داگیرساندن"
+
+#: src/MainView.vala:181 src/MainView.vala:220
 msgid "Suspend when inactive for:"
 msgstr "بیوەستێنە کاتێک ناچالاکە بۆ ماوەی:"
 
-#: src/MainView.vala:196
+#: src/MainView.vala:205
 msgid "Plugged In"
 msgstr "وزە وەردەگرێت"
 
-#: src/MainView.vala:241 src/Plug.vala:79
+#: src/MainView.vala:250 src/Plug.vala:79
 #, fuzzy
 #| msgid "Automatically adjust brightness:"
 msgid "Automatically Save Power"
 msgstr "ڕێکخستنی ڕووناکی خۆکارانە:"
 
-#: src/MainView.vala:243
+#: src/MainView.vala:252
 msgid "Power Saver mode will be used when battery is low"
 msgstr ""
 
-#: src/MainView.vala:249
+#: src/MainView.vala:258
 msgid "On Battery"
 msgstr "لەسەر پاتری"
 
-#: src/MainView.vala:274
+#: src/MainView.vala:283
 msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
 "هەندێک لە گۆڕانکارییەکان ناچنە جێبەجێ بوونەوە هەتا کۆمپیتەرەکەت پێ نەکەیتەوە"
@@ -113,10 +130,6 @@ msgstr "ڕووناکی ڕوونما و دوگمەکانی وزە و ڕەفتار
 #: src/Plug.vala:72
 msgid "Suspend button"
 msgstr "دوگمەی وەستاندن"
-
-#: src/Plug.vala:73
-msgid "Power button"
-msgstr "دوگمەی داگیرساندن"
 
 #: src/Plug.vala:74
 msgid "Display inactive"
@@ -202,11 +215,6 @@ msgstr "١ کاتژمێر"
 msgid "2 hours"
 msgstr "٢ کاتژمێر"
 
-#: src/Widgets/LidCloseActionComboBox.vala:46
-#: src/Widgets/ActionComboBox.vala:42
-msgid "Suspend"
-msgstr "وەستاندن"
-
 #: src/Widgets/LidCloseActionComboBox.vala:47
 msgid "Shutdown"
 msgstr "کوژاندنەوە"
@@ -219,18 +227,9 @@ msgstr "قوفڵکردنی سیستەم"
 msgid "Halt"
 msgstr "halt"
 
-#: src/Widgets/LidCloseActionComboBox.vala:50
-#: src/Widgets/ActionComboBox.vala:41
-msgid "Do nothing"
-msgstr "با هیچ ڕوونەدات"
-
 #: src/Widgets/LidCloseActionComboBox.vala:52
 msgid "Not supported"
 msgstr "پاڵپشتی نەکراو"
-
-#: src/Widgets/ActionComboBox.vala:43
-msgid "Prompt to shutdown"
-msgstr "داواکردنی کوژاندنەوە"
 
 #: src/Widgets/PowerModeButton.vala:60
 #, fuzzy
@@ -249,6 +248,9 @@ msgstr "باڵانسکراو"
 #: src/Widgets/PowerModeButton.vala:98
 msgid "Performance"
 msgstr "ئەدا"
+
+#~ msgid "Power button:"
+#~ msgstr "دوگمەی وزە:"
 
 #~ msgid "Power management mode:"
 #~ msgstr "دۆخی بەڕێوەبردنی وزە:"

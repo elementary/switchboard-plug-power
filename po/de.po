@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-11 17:42+0000\n"
+"POT-Creation-Date: 2024-02-13 10:52+0000\n"
 "PO-Revision-Date: 2024-02-12 16:57+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/power/"
@@ -56,57 +56,74 @@ msgstr "Warten zur Verwenden von Akkuenergie"
 msgid "Unknown"
 msgstr "Unbekannt"
 
-#: src/MainView.vala:50 src/Plug.vala:35
+#: src/MainView.vala:51 src/Plug.vala:35
 msgid "Power"
 msgstr "Energie"
 
-#: src/MainView.vala:80
+#: src/MainView.vala:81
 msgid "Display brightness:"
 msgstr "Bildschirmhelligkeit:"
 
-#: src/MainView.vala:85
+#: src/MainView.vala:86
 msgid "Automatically adjust brightness:"
 msgstr "Bildschirmhelligkeit automatisch einstellen:"
 
-#: src/MainView.vala:130
+#: src/MainView.vala:131
 msgid "When lid is closed:"
 msgstr "Deckel geschlossen:"
 
-#: src/MainView.vala:137
+#: src/MainView.vala:138
 msgid "When lid is closed with external monitor:"
 msgstr "Deckel bei angeschlossenem externen Bildschirm geschlossen:"
 
-#: src/MainView.vala:153
+#: src/MainView.vala:154
 msgid "Turn off display when inactive for:"
 msgstr "Bildschirm ausschalten, wenn inaktiv seit:"
 
-#: src/MainView.vala:160
-msgid "Power button:"
-msgstr "Ein-/Ausschalter:"
+#. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
+#: src/MainView.vala:163 src/Widgets/LidCloseActionComboBox.vala:50
+msgid "Do nothing"
+msgstr "Nichts tun"
 
-#: src/MainView.vala:172 src/MainView.vala:211
+#: src/MainView.vala:164 src/Widgets/LidCloseActionComboBox.vala:46
+msgid "Suspend"
+msgstr "Bereitschaft"
+
+#: src/MainView.vala:165
+#, fuzzy
+#| msgid "Prompt to shutdown"
+msgid "Ask to shutdown"
+msgstr "Bestätigung vor dem Ausschalten"
+
+#: src/MainView.vala:170 src/Plug.vala:73
+#, fuzzy
+#| msgid "Power button"
+msgid "Power Button Behavior"
+msgstr "Einschaltknopf"
+
+#: src/MainView.vala:181 src/MainView.vala:220
 msgid "Suspend when inactive for:"
 msgstr "In Bereitschaft versetzen, wenn inaktiv seit:"
 
-#: src/MainView.vala:196
+#: src/MainView.vala:205
 msgid "Plugged In"
 msgstr "Netzbetrieb"
 
-#: src/MainView.vala:241 src/Plug.vala:79
+#: src/MainView.vala:250 src/Plug.vala:79
 msgid "Automatically Save Power"
 msgstr "Automatisch Energie sparen"
 
-#: src/MainView.vala:243
+#: src/MainView.vala:252
 msgid "Power Saver mode will be used when battery is low"
 msgstr ""
 "Der Energiesparmodus wird genutzt, sobald die Akkukapazität sich dem Ende "
 "nähert"
 
-#: src/MainView.vala:249
+#: src/MainView.vala:258
 msgid "On Battery"
 msgstr "Akkubetrieb"
 
-#: src/MainView.vala:274
+#: src/MainView.vala:283
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Einige Änderungen werden erst nach einem Neustart des Rechners wirksam"
 
@@ -118,10 +135,6 @@ msgstr ""
 #: src/Plug.vala:72
 msgid "Suspend button"
 msgstr "Bereitschaftsknopf"
-
-#: src/Plug.vala:73
-msgid "Power button"
-msgstr "Einschaltknopf"
 
 #: src/Plug.vala:74
 msgid "Display inactive"
@@ -203,11 +216,6 @@ msgstr "1 Stunde"
 msgid "2 hours"
 msgstr "2 Stunden"
 
-#: src/Widgets/LidCloseActionComboBox.vala:46
-#: src/Widgets/ActionComboBox.vala:42
-msgid "Suspend"
-msgstr "Bereitschaft"
-
 #: src/Widgets/LidCloseActionComboBox.vala:47
 msgid "Shutdown"
 msgstr "Ausschalten"
@@ -220,18 +228,9 @@ msgstr "Sperren"
 msgid "Halt"
 msgstr "Anhalten"
 
-#: src/Widgets/LidCloseActionComboBox.vala:50
-#: src/Widgets/ActionComboBox.vala:41
-msgid "Do nothing"
-msgstr "Nichts tun"
-
 #: src/Widgets/LidCloseActionComboBox.vala:52
 msgid "Not supported"
 msgstr "Nicht unterstützt"
-
-#: src/Widgets/ActionComboBox.vala:43
-msgid "Prompt to shutdown"
-msgstr "Bestätigung vor dem Ausschalten"
 
 #: src/Widgets/PowerModeButton.vala:60
 msgid "Power Mode"
@@ -248,6 +247,9 @@ msgstr "Ausgewogen"
 #: src/Widgets/PowerModeButton.vala:98
 msgid "Performance"
 msgstr "Leistung"
+
+#~ msgid "Power button:"
+#~ msgstr "Ein-/Ausschalter:"
 
 #~ msgid "Power management mode:"
 #~ msgstr "Energieverwaltungsmodus:"

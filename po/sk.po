@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-11 17:42+0000\n"
+"POT-Creation-Date: 2024-02-13 10:52+0000\n"
 "PO-Revision-Date: 2022-04-20 07:04+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
@@ -57,57 +57,74 @@ msgstr ""
 msgid "Unknown"
 msgstr ""
 
-#: src/MainView.vala:50 src/Plug.vala:35
+#: src/MainView.vala:51 src/Plug.vala:35
 msgid "Power"
 msgstr "Napájanie"
 
-#: src/MainView.vala:80
+#: src/MainView.vala:81
 msgid "Display brightness:"
 msgstr "Jas obrazovky:"
 
-#: src/MainView.vala:85
+#: src/MainView.vala:86
 msgid "Automatically adjust brightness:"
 msgstr "Automatická úprava jasu:"
 
-#: src/MainView.vala:130
+#: src/MainView.vala:131
 msgid "When lid is closed:"
 msgstr "Ak je veko zatvorené:"
 
-#: src/MainView.vala:137
+#: src/MainView.vala:138
 msgid "When lid is closed with external monitor:"
 msgstr "Ak je veko zatvorené a pripojený externý monitor:"
 
-#: src/MainView.vala:153
+#: src/MainView.vala:154
 msgid "Turn off display when inactive for:"
 msgstr "Vypnúť monitor, ak je neaktívny po dobu:"
 
-#: src/MainView.vala:160
-msgid "Power button:"
-msgstr "Tlačidlo napájania:"
+#. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
+#: src/MainView.vala:163 src/Widgets/LidCloseActionComboBox.vala:50
+msgid "Do nothing"
+msgstr "Nerobiť nič"
 
-#: src/MainView.vala:172 src/MainView.vala:211
+#: src/MainView.vala:164 src/Widgets/LidCloseActionComboBox.vala:46
+msgid "Suspend"
+msgstr "Uspať"
+
+#: src/MainView.vala:165
+#, fuzzy
+#| msgid "Prompt to shutdown"
+msgid "Ask to shutdown"
+msgstr "Výzva na vypnutie"
+
+#: src/MainView.vala:170 src/Plug.vala:73
+#, fuzzy
+#| msgid "Power button"
+msgid "Power Button Behavior"
+msgstr "Tlačidlo napájania"
+
+#: src/MainView.vala:181 src/MainView.vala:220
 msgid "Suspend when inactive for:"
 msgstr "Uspať, ak je neaktívny po dobu:"
 
-#: src/MainView.vala:196
+#: src/MainView.vala:205
 msgid "Plugged In"
 msgstr "Pripojené"
 
-#: src/MainView.vala:241 src/Plug.vala:79
+#: src/MainView.vala:250 src/Plug.vala:79
 #, fuzzy
 #| msgid "Automatically adjust brightness:"
 msgid "Automatically Save Power"
 msgstr "Automatická úprava jasu:"
 
-#: src/MainView.vala:243
+#: src/MainView.vala:252
 msgid "Power Saver mode will be used when battery is low"
 msgstr ""
 
-#: src/MainView.vala:249
+#: src/MainView.vala:258
 msgid "On Battery"
 msgstr "Na batérii"
 
-#: src/MainView.vala:274
+#: src/MainView.vala:283
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Niektoré zmeny sa prejavia až po reštarte počítača"
 
@@ -118,10 +135,6 @@ msgstr "Nastavujte jas obrazovky, tlačidlá napájania a správanie uspávania"
 #: src/Plug.vala:72
 msgid "Suspend button"
 msgstr "Tlačidlo uspania"
-
-#: src/Plug.vala:73
-msgid "Power button"
-msgstr "Tlačidlo napájania"
 
 #: src/Plug.vala:74
 msgid "Display inactive"
@@ -207,11 +220,6 @@ msgstr "1 hodina"
 msgid "2 hours"
 msgstr "2 hodiny"
 
-#: src/Widgets/LidCloseActionComboBox.vala:46
-#: src/Widgets/ActionComboBox.vala:42
-msgid "Suspend"
-msgstr "Uspať"
-
 #: src/Widgets/LidCloseActionComboBox.vala:47
 msgid "Shutdown"
 msgstr "Vypnúť"
@@ -224,18 +232,9 @@ msgstr "Uzamknúť"
 msgid "Halt"
 msgstr "Zastaviť"
 
-#: src/Widgets/LidCloseActionComboBox.vala:50
-#: src/Widgets/ActionComboBox.vala:41
-msgid "Do nothing"
-msgstr "Nerobiť nič"
-
 #: src/Widgets/LidCloseActionComboBox.vala:52
 msgid "Not supported"
 msgstr "Nepodporované"
-
-#: src/Widgets/ActionComboBox.vala:43
-msgid "Prompt to shutdown"
-msgstr "Výzva na vypnutie"
 
 #: src/Widgets/PowerModeButton.vala:60
 #, fuzzy
@@ -254,6 +253,9 @@ msgstr "Vyvážený"
 #: src/Widgets/PowerModeButton.vala:98
 msgid "Performance"
 msgstr "Výkon"
+
+#~ msgid "Power button:"
+#~ msgstr "Tlačidlo napájania:"
 
 #~ msgid "Power management mode:"
 #~ msgstr "Režim správy napájania:"

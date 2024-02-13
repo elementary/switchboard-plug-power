@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-11 17:42+0000\n"
+"POT-Creation-Date: 2024-02-13 10:52+0000\n"
 "PO-Revision-Date: 2018-03-21 19:52+0000\n"
 "Last-Translator: Jernej Virag <jernej@virag.si>\n"
 "Language-Team: Slovenian <https://weblate.elementary.io/projects/switchboard/"
@@ -57,57 +57,74 @@ msgstr ""
 msgid "Unknown"
 msgstr ""
 
-#: src/MainView.vala:50 src/Plug.vala:35
+#: src/MainView.vala:51 src/Plug.vala:35
 msgid "Power"
 msgstr "Napajanje"
 
-#: src/MainView.vala:80
+#: src/MainView.vala:81
 msgid "Display brightness:"
 msgstr "Svetlost zaslona:"
 
-#: src/MainView.vala:85
+#: src/MainView.vala:86
 msgid "Automatically adjust brightness:"
 msgstr "Samodejno prilagajanje svetlosti:"
 
-#: src/MainView.vala:130
+#: src/MainView.vala:131
 msgid "When lid is closed:"
 msgstr "Ob zaprtju pokrova:"
 
-#: src/MainView.vala:137
+#: src/MainView.vala:138
 msgid "When lid is closed with external monitor:"
 msgstr "Ob zaprtju pokrova s priključenim zunanjim zaslonom:"
 
-#: src/MainView.vala:153
+#: src/MainView.vala:154
 msgid "Turn off display when inactive for:"
 msgstr "Ob nedejavnosti izklopi zaslon po:"
 
-#: src/MainView.vala:160
-msgid "Power button:"
-msgstr "Ob pritisku gumba za vklop:"
+#. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
+#: src/MainView.vala:163 src/Widgets/LidCloseActionComboBox.vala:50
+msgid "Do nothing"
+msgstr "Ne stori ničesar"
 
-#: src/MainView.vala:172 src/MainView.vala:211
+#: src/MainView.vala:164 src/Widgets/LidCloseActionComboBox.vala:46
+msgid "Suspend"
+msgstr "V pripravljenost"
+
+#: src/MainView.vala:165
+#, fuzzy
+#| msgid "Shutdown"
+msgid "Ask to shutdown"
+msgstr "Ugasni"
+
+#: src/MainView.vala:170 src/Plug.vala:73
+#, fuzzy
+#| msgid "Power button"
+msgid "Power Button Behavior"
+msgstr "Gumb za vklop"
+
+#: src/MainView.vala:181 src/MainView.vala:220
 msgid "Suspend when inactive for:"
 msgstr "Ob nedejavnosti v spanje po:"
 
-#: src/MainView.vala:196
+#: src/MainView.vala:205
 msgid "Plugged In"
 msgstr "Priključeno"
 
-#: src/MainView.vala:241 src/Plug.vala:79
+#: src/MainView.vala:250 src/Plug.vala:79
 #, fuzzy
 #| msgid "Automatically adjust brightness:"
 msgid "Automatically Save Power"
 msgstr "Samodejno prilagajanje svetlosti:"
 
-#: src/MainView.vala:243
+#: src/MainView.vala:252
 msgid "Power Saver mode will be used when battery is low"
 msgstr ""
 
-#: src/MainView.vala:249
+#: src/MainView.vala:258
 msgid "On Battery"
 msgstr "Na bateriji"
 
-#: src/MainView.vala:274
+#: src/MainView.vala:283
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Nekatere spremembe bodo vidne samo po ponovnem zagonu sistema"
 
@@ -118,10 +135,6 @@ msgstr "Nastavitve svetlosti, gumbov za napajanje in spanja"
 #: src/Plug.vala:72
 msgid "Suspend button"
 msgstr "Gumb za spanje"
-
-#: src/Plug.vala:73
-msgid "Power button"
-msgstr "Gumb za vklop"
 
 #: src/Plug.vala:74
 msgid "Display inactive"
@@ -205,11 +218,6 @@ msgstr "1 uri"
 msgid "2 hours"
 msgstr "2 urah"
 
-#: src/Widgets/LidCloseActionComboBox.vala:46
-#: src/Widgets/ActionComboBox.vala:42
-msgid "Suspend"
-msgstr "V pripravljenost"
-
 #: src/Widgets/LidCloseActionComboBox.vala:47
 msgid "Shutdown"
 msgstr "Ugasni"
@@ -222,18 +230,9 @@ msgstr "Zakleni"
 msgid "Halt"
 msgstr "Izklop"
 
-#: src/Widgets/LidCloseActionComboBox.vala:50
-#: src/Widgets/ActionComboBox.vala:41
-msgid "Do nothing"
-msgstr "Ne stori ničesar"
-
 #: src/Widgets/LidCloseActionComboBox.vala:52
 msgid "Not supported"
 msgstr "Ni podprto"
-
-#: src/Widgets/ActionComboBox.vala:43
-msgid "Prompt to shutdown"
-msgstr ""
 
 #: src/Widgets/PowerModeButton.vala:60
 #, fuzzy
@@ -254,6 +253,9 @@ msgstr ""
 #: src/Widgets/PowerModeButton.vala:98
 msgid "Performance"
 msgstr ""
+
+#~ msgid "Power button:"
+#~ msgstr "Ob pritisku gumba za vklop:"
 
 #~ msgid "You do not have permission to change this"
 #~ msgstr "Nimate dovoljenja za spreminjanje teh nastavitev"
