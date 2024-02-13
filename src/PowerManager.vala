@@ -12,13 +12,12 @@ public class Power.PowerManager : Object {
         return instance.once (() => { return new PowerManager (); });
     }
 
-    public bool has_battery { get; private set; default = false; }
-    public ListStore devices { get; private set; }
+    public ListStore batteries { get; private set; }
 
     private Upower? upower;
 
     construct {
-        devices = new ListStore (typeof (Device));
+        batteries = new ListStore (typeof (Device));
 
         try {
             upower = Bus.get_proxy_sync (SYSTEM, UPOWER_NAME, UPOWER_PATH);
@@ -49,27 +48,25 @@ public class Power.PowerManager : Object {
         var device = new Device (device_path);
 
         uint position = -1;
-        var found = devices.find_with_equal_func (device, (EqualFunc<Device>) Device.equal_func, out position);
+        var found = batteries.find_with_equal_func (device, (EqualFunc<Device>) Device.equal_func, out position);
 
         if (!found) {
-            devices.append (device);
-
             /*
             * Need to verify power-supply before considering it a laptop battery.
             * Otherwise it will likely be the battery for a device of an unknown type.
             */
             if (device.device_type == BATTERY && device.power_supply) {
-                has_battery = true;
+                batteries.append (device);
             }
         }
     }
 
     private void on_device_removed (ObjectPath device_path) {
         uint position = -1;
-        devices.find_with_equal_func (new Device (device_path), (EqualFunc<Device>) Device.equal_func, out position);
+        batteries.find_with_equal_func (new Device (device_path), (EqualFunc<Device>) Device.equal_func, out position);
 
         if (position != -1) {
-            devices.remove (position);
+            batteries.remove (position);
         }
     }
 }
