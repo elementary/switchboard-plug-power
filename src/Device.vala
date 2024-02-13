@@ -49,6 +49,10 @@ public class Power.Device : Object {
         }
     }
 
+    /*
+    * Need to verify power-supply before considering it a laptop battery.
+    * Otherwise it will likely be the battery for a device of an unknown type.
+    */
     [CCode (type_signature = "u")]
     public enum Type {
         UNKNOWN = 0,

@@ -47,15 +47,15 @@ public class Power.PowerManager : Object {
     private void on_device_added (ObjectPath device_path) {
         var device = new Device (device_path);
 
-        uint position = -1;
-        var found = batteries.find_with_equal_func (device, (EqualFunc<Device>) Device.equal_func, out position);
+        /*
+        * Need to verify power-supply before considering it a laptop battery.
+        * Otherwise it will likely be the battery for a device of an unknown type.
+        */
+        if (device.device_type == BATTERY && device.power_supply) {
+            uint position = -1;
+            var found = batteries.find_with_equal_func (device, (EqualFunc<Device>) Device.equal_func, out position);
 
-        if (!found) {
-            /*
-            * Need to verify power-supply before considering it a laptop battery.
-            * Otherwise it will likely be the battery for a device of an unknown type.
-            */
-            if (device.device_type == BATTERY && device.power_supply) {
+            if (!found) {
                 batteries.append (device);
             }
         }
