@@ -140,52 +140,7 @@ public class Power.MainView : Switchboard.SettingsPage {
         }
 
         if (power_manager.has_lid ()) {
-            var infobar_label = new Gtk.Label (_("Some changes will not take effect until you restart this computer"));
-
-            var infobar = new Gtk.InfoBar () {
-                message_type = WARNING,
-                revealed = false
-            };
-            infobar.add_child (infobar_label);
-            infobar.add_css_class (Granite.STYLE_CLASS_FRAME);
-
-            var lid_closed_label = new Gtk.Label (_("Lid Close Behavior")) {
-                xalign = 0
-            };
-
-            var lid_closed_box = new LidCloseActionComboBox (false) {
-                hexpand = true
-            };
-
-            var lid_dock_label = new Gtk.Label (_("Lid Close With External Display")) {
-                xalign = 0
-            };
-
-            var lid_dock_box = new LidCloseActionComboBox (true) {
-                hexpand = true
-            };
-
-            label_size.add_widget (lid_closed_label);
-            label_size.add_widget (lid_dock_label);
-
-            var lid_close_grid = new Gtk.Grid () {
-                row_spacing = 12,
-                column_spacing = 12
-            };
-            lid_close_grid.attach (lid_closed_label, 0, 0);
-            lid_close_grid.attach (lid_closed_box, 1, 0);
-            lid_close_grid.attach (lid_dock_label, 0, 1);
-            lid_close_grid.attach (lid_dock_box, 1, 1);
-            lid_close_grid.attach (infobar, 0, 2, 2);
-
-            box.append (lid_close_grid);
-
-            var helper = LogindHelper.get_logind_helper ();
-            if (helper != null) {
-                helper.changed.connect (() => {
-                    infobar.revealed = true;
-                });
-            }
+            box.append (new LidCloseBox (label_size));
         }
 
         var screen_timeout_label = new Gtk.Label (_("Automatic Display Off")) {
