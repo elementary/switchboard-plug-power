@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-11 17:42+0000\n"
+"POT-Creation-Date: 2024-02-13 10:52+0000\n"
 "PO-Revision-Date: 2014-12-29 08:26+0000\n"
 "Last-Translator: ERX <eriksh@inbox.lv>\n"
 "Language-Team: Latvian <lv@li.org>\n"
@@ -54,55 +54,72 @@ msgstr ""
 msgid "Unknown"
 msgstr ""
 
-#: src/MainView.vala:50 src/Plug.vala:35
+#: src/MainView.vala:51 src/Plug.vala:35
 msgid "Power"
 msgstr "Barošanas pārvaldība"
 
-#: src/MainView.vala:80
+#: src/MainView.vala:81
 msgid "Display brightness:"
 msgstr "Ekrāna spilgtums"
 
-#: src/MainView.vala:85
+#: src/MainView.vala:86
 msgid "Automatically adjust brightness:"
 msgstr ""
 
-#: src/MainView.vala:130
+#: src/MainView.vala:131
 msgid "When lid is closed:"
 msgstr ""
 
-#: src/MainView.vala:137
+#: src/MainView.vala:138
 msgid "When lid is closed with external monitor:"
 msgstr ""
 
-#: src/MainView.vala:153
+#: src/MainView.vala:154
 msgid "Turn off display when inactive for:"
 msgstr ""
 
-#: src/MainView.vala:160
-msgid "Power button:"
+#. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
+#: src/MainView.vala:163 src/Widgets/LidCloseActionComboBox.vala:50
+msgid "Do nothing"
+msgstr "Nedarīt neko"
+
+#: src/MainView.vala:164 src/Widgets/LidCloseActionComboBox.vala:46
+msgid "Suspend"
+msgstr "Iemidzināt"
+
+#: src/MainView.vala:165
+#, fuzzy
+#| msgid "Shutdown"
+msgid "Ask to shutdown"
+msgstr "Izslēgt"
+
+#: src/MainView.vala:170 src/Plug.vala:73
+#, fuzzy
+#| msgid "Power button:"
+msgid "Power Button Behavior"
 msgstr "Izslēgšanas poga:"
 
-#: src/MainView.vala:172 src/MainView.vala:211
+#: src/MainView.vala:181 src/MainView.vala:220
 msgid "Suspend when inactive for:"
 msgstr ""
 
-#: src/MainView.vala:196
+#: src/MainView.vala:205
 msgid "Plugged In"
 msgstr "Pievienots strāvas avotam"
 
-#: src/MainView.vala:241 src/Plug.vala:79
+#: src/MainView.vala:250 src/Plug.vala:79
 msgid "Automatically Save Power"
 msgstr ""
 
-#: src/MainView.vala:243
+#: src/MainView.vala:252
 msgid "Power Saver mode will be used when battery is low"
 msgstr ""
 
-#: src/MainView.vala:249
+#: src/MainView.vala:258
 msgid "On Battery"
 msgstr "No akumulatora"
 
-#: src/MainView.vala:274
+#: src/MainView.vala:283
 msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
 
@@ -114,10 +131,6 @@ msgstr ""
 #, fuzzy
 msgid "Suspend button"
 msgstr "Iemidzināt"
-
-#: src/Plug.vala:73
-msgid "Power button"
-msgstr ""
 
 #: src/Plug.vala:74
 msgid "Display inactive"
@@ -202,11 +215,6 @@ msgstr "1 h"
 msgid "2 hours"
 msgstr ""
 
-#: src/Widgets/LidCloseActionComboBox.vala:46
-#: src/Widgets/ActionComboBox.vala:42
-msgid "Suspend"
-msgstr "Iemidzināt"
-
 #: src/Widgets/LidCloseActionComboBox.vala:47
 msgid "Shutdown"
 msgstr "Izslēgt"
@@ -219,17 +227,8 @@ msgstr ""
 msgid "Halt"
 msgstr ""
 
-#: src/Widgets/LidCloseActionComboBox.vala:50
-#: src/Widgets/ActionComboBox.vala:41
-msgid "Do nothing"
-msgstr "Nedarīt neko"
-
 #: src/Widgets/LidCloseActionComboBox.vala:52
 msgid "Not supported"
-msgstr ""
-
-#: src/Widgets/ActionComboBox.vala:43
-msgid "Prompt to shutdown"
 msgstr ""
 
 #: src/Widgets/PowerModeButton.vala:60
