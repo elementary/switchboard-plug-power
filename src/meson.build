@@ -10,7 +10,6 @@ plug_files = files(
     'Widgets/BatteryBox.vala',
     'Widgets/TimeoutComboBox.vala',
     'Widgets/LidCloseActionComboBox.vala',
-    'Widgets/ActionComboBox.vala',
     'Widgets/PowerModeButton.vala',
 )
 
