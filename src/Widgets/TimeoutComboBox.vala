@@ -93,9 +93,7 @@ class Power.TimeoutComboBox : Gtk.Widget {
     construct {
         key_type = schema.get_value (key).get_type ();
 
-        combobox = new Gtk.ComboBoxText () {
-            hexpand = true
-        };
+        combobox = new Gtk.ComboBoxText ();
         combobox.append_text (_("Never"));
         combobox.append_text (_("5 min"));
         combobox.append_text (_("10 min"));
