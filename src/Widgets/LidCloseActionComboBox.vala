@@ -56,7 +56,7 @@ class Power.LidCloseActionComboBox : Gtk.Widget {
 
         update_current_action ();
         previous_active = dropdown.selected;
-        dropdown.activate.connect (on_changed);
+        dropdown.notify["selected"].connect (on_changed);
     }
 
     private bool set_active_with_permission (uint index_) {
