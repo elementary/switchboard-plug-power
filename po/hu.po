@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-13 10:52+0000\n"
-"PO-Revision-Date: 2024-02-02 22:42+0000\n"
+"PO-Revision-Date: 2024-02-15 02:35+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "power/hu/>\n"
@@ -30,31 +30,31 @@ msgstr "Hitelesítés szükséges az energiagazdálkodási beállítások kezel�
 
 #: src/Device.vala:35
 msgid "Charging"
-msgstr ""
+msgstr "Töltés"
 
 #: src/Device.vala:37
 msgid "Using battery power"
-msgstr ""
+msgstr "Akkumulátoron"
 
 #: src/Device.vala:39
 msgid "Empty"
-msgstr ""
+msgstr "Üres"
 
 #: src/Device.vala:41
 msgid "Fully charged"
-msgstr ""
+msgstr "Teljesen feltöltve"
 
 #: src/Device.vala:43
 msgid "Waiting to charge"
-msgstr ""
+msgstr "Várakozás a töltésre"
 
 #: src/Device.vala:45
 msgid "Waiting to use battery power"
-msgstr ""
+msgstr "Várakozás az akkumulátor használatára"
 
 #: src/Device.vala:47
 msgid "Unknown"
-msgstr ""
+msgstr "Ismeretlen"
 
 #: src/MainView.vala:51 src/Plug.vala:35
 msgid "Power"
@@ -90,16 +90,12 @@ msgid "Suspend"
 msgstr "Felfüggesztés"
 
 #: src/MainView.vala:165
-#, fuzzy
-#| msgid "Prompt to shutdown"
 msgid "Ask to shutdown"
 msgstr "Kikapcsolási menü"
 
 #: src/MainView.vala:170 src/Plug.vala:73
-#, fuzzy
-#| msgid "Power button"
 msgid "Power Button Behavior"
-msgstr "Bekapcsológomb"
+msgstr "Bekapcsológomb viselkedése"
 
 #: src/MainView.vala:181 src/MainView.vala:220
 msgid "Suspend when inactive for:"
@@ -110,14 +106,12 @@ msgid "Plugged In"
 msgstr "Csatlakoztatva"
 
 #: src/MainView.vala:250 src/Plug.vala:79
-#, fuzzy
-#| msgid "Automatically adjust brightness:"
 msgid "Automatically Save Power"
-msgstr "A fényerő automatikus beállítása:"
+msgstr "Automatikus energiatakarékosság"
 
 #: src/MainView.vala:252
 msgid "Power Saver mode will be used when battery is low"
-msgstr ""
+msgstr "Az energiatakarékos mód bekapcsolása alacsony akkumulátorszintnél"
 
 #: src/MainView.vala:258
 msgid "On Battery"
@@ -174,20 +168,16 @@ msgid "Suspend inactive"
 msgstr "Felfüggesztés inaktivitáskor"
 
 #: src/Widgets/BatteryBox.vala:23
-#, fuzzy
-#| msgid "On Battery"
 msgid "Battery Level"
-msgstr "Akkumulátorról"
+msgstr "Akkumulátorszint"
 
 #: src/Widgets/BatteryBox.vala:24
 msgid "Battery Levels"
-msgstr ""
+msgstr "Akkumulátorszintek"
 
 #: src/Widgets/BatteryBox.vala:32
-#, fuzzy
-#| msgid "Show battery percentage in Panel:"
 msgid "Show Percentage In Panel"
-msgstr "Akkumulátor százalékának megjelenítése a felső állapotsoron:"
+msgstr "Százalékmegjelenítés a felső állapotsoron"
 
 #: src/Widgets/TimeoutComboBox.vala:99
 msgid "Never"
@@ -227,7 +217,7 @@ msgstr "Leállítás"
 
 #: src/Widgets/LidCloseActionComboBox.vala:48
 msgid "Lock"
-msgstr "Lezárás"
+msgstr "Zárolás"
 
 #: src/Widgets/LidCloseActionComboBox.vala:49
 msgid "Halt"
@@ -238,14 +228,12 @@ msgid "Not supported"
 msgstr "Nem támogatott"
 
 #: src/Widgets/PowerModeButton.vala:60
-#, fuzzy
-#| msgid "Power Saver"
 msgid "Power Mode"
-msgstr "Energiamegtakarítás"
+msgstr "Energiakezelési mód"
 
 #: src/Widgets/PowerModeButton.vala:68
 msgid "Power Saver"
-msgstr "Energiamegtakarítás"
+msgstr "Energiatakarékos"
 
 #: src/Widgets/PowerModeButton.vala:82
 msgid "Balanced"
