@@ -51,6 +51,10 @@ public class Power.Device : Object {
         }
     }
 
+    /*
+    * Need to verify power-supply before considering it a laptop battery.
+    * Otherwise it will likely be the battery for a device of an unknown type.
+    */
     [CCode (type_signature = "u")]
     public enum Type {
         UNKNOWN = 0,
@@ -100,19 +104,19 @@ public class Power.Device : Object {
         }
     }
 
-    public string path { get; construct; }
-
-    /*
-     * If the device is used to supply the system
-     * TRUE for batteries and UPS, FALSE for mice and keyboards
-     */
-    public bool is_power_supply { get; private set; }
-
     /*
      * Coarse battery level reporting
      * If the value is 1, percentage should be used instead.
      */
     public uint32 battery_level { get; private set; default = 1; }
+
+    /*
+     * If the device is used to supply the system
+     * TRUE for batteries and UPS, FALSE for mice and keyboards
+     */
+    public bool power_supply { get; private set; }
+
+    public string path { get; construct; }
     public double percentage { get; private set; default = -1; }
 
     public string model { get; private set; }
@@ -135,7 +139,7 @@ public class Power.Device : Object {
             );
 
             device_type = upower_device.device_type;
-            is_power_supply = upower_device.power_supply;
+            power_supply = upower_device.power_supply;
 
             update_properties ();
             upower_device.g_properties_changed.connect (update_properties);

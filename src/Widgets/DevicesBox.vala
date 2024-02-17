@@ -24,23 +24,17 @@ public class Power.DevicesBox : Gtk.Grid {
     }
 
     private Gtk.Widget create_widget_func (Object object) {
-        var battery = new Battery ((Device) object);
-
-        if (battery.device.is_power_supply) {
-            battery.visible = false;
-        }
-
-        return battery;
+        return new DeviceRow ((Device) object);
     }
 
-    private class Battery : Gtk.Grid {
+    private class DeviceRow : Gtk.Grid {
         public Device device { get; construct; }
 
         private static Gtk.SizeGroup size_group;
 
         private Gtk.LevelBar charge_levelbar;
 
-        public Battery (Device device) {
+        public DeviceRow (Device device) {
             Object (device: device);
         }
 
@@ -78,7 +72,7 @@ public class Power.DevicesBox : Gtk.Grid {
                 charge_levelbar.max_value = 5;
                 charge_levelbar.mode = DISCRETE;
 
-                // Battery level is sometimes 0 so more reliable to divide percentage;
+                // DeviceRow level is sometimes 0 so more reliable to divide percentage;
                 device.bind_property ("percentage", charge_levelbar, "value", SYNC_CREATE,
                     ((binding, srcval, ref targetval) => {
                         targetval.set_double ((double) srcval / 20);

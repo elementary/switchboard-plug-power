@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-11 17:42+0000\n"
-"PO-Revision-Date: 2024-02-10 18:59+0000\n"
+"POT-Creation-Date: 2024-02-13 10:52+0000\n"
+"PO-Revision-Date: 2024-02-14 17:17+0000\n"
 "Last-Translator: кубик круглый <megarainbow29@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "power/ru/>\n"
@@ -16,8 +16,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2016-12-02 05:21+0000\n"
 
@@ -31,82 +31,95 @@ msgstr "Для изменения параметров питания требу
 
 #: src/Device.vala:35
 msgid "Charging"
-msgstr ""
+msgstr "Заряжается"
 
 #: src/Device.vala:37
 msgid "Using battery power"
-msgstr ""
+msgstr "Работает от батареи"
 
 #: src/Device.vala:39
 msgid "Empty"
-msgstr ""
+msgstr "Разряжено"
 
 #: src/Device.vala:41
 msgid "Fully charged"
-msgstr ""
+msgstr "Полностью заряжено"
 
 #: src/Device.vala:43
 msgid "Waiting to charge"
-msgstr ""
+msgstr "Ожидает зарядки"
 
 #: src/Device.vala:45
 msgid "Waiting to use battery power"
-msgstr ""
+msgstr "Ожидает работы от батареи"
 
 #: src/Device.vala:47
 msgid "Unknown"
-msgstr ""
+msgstr "Неизвестно"
 
-#: src/MainView.vala:50 src/Plug.vala:35
+#: src/MainView.vala:51 src/Plug.vala:35
 msgid "Power"
 msgstr "Питание"
 
-#: src/MainView.vala:80
+#: src/MainView.vala:81
 msgid "Display brightness:"
 msgstr "Яркость экрана:"
 
-#: src/MainView.vala:85
+#: src/MainView.vala:86
 msgid "Automatically adjust brightness:"
 msgstr "Автоматическая регулировка яркости:"
 
-#: src/MainView.vala:130
+#: src/MainView.vala:131
 msgid "When lid is closed:"
 msgstr "Когда крышка закрыта:"
 
-#: src/MainView.vala:137
+#: src/MainView.vala:138
 msgid "When lid is closed with external monitor:"
 msgstr "Когда крышка закрыта с внешним монитором:"
 
-#: src/MainView.vala:153
+#: src/MainView.vala:154
 msgid "Turn off display when inactive for:"
 msgstr "Выключать экран при бездействии в течение:"
 
-#: src/MainView.vala:160
-msgid "Power button:"
-msgstr "Кнопка питания:"
+#. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
+#: src/MainView.vala:163 src/Widgets/LidCloseActionComboBox.vala:50
+msgid "Do nothing"
+msgstr "Ничего не делать"
 
-#: src/MainView.vala:172 src/MainView.vala:211
+#: src/MainView.vala:164 src/Widgets/LidCloseActionComboBox.vala:46
+msgid "Suspend"
+msgstr "Режим ожидания"
+
+#: src/MainView.vala:165
+msgid "Ask to shutdown"
+msgstr "Запрос на выключение"
+
+#: src/MainView.vala:170 src/Plug.vala:73
+msgid "Power Button Behavior"
+msgstr "Поведение кнопки питания"
+
+#: src/MainView.vala:181 src/MainView.vala:220
 msgid "Suspend when inactive for:"
 msgstr "Перейти в режим ожидания при бездействии в течение:"
 
-#: src/MainView.vala:196
+#: src/MainView.vala:205
 msgid "Plugged In"
 msgstr "На зарядке"
 
-#: src/MainView.vala:241 src/Plug.vala:79
+#: src/MainView.vala:250 src/Plug.vala:79
 msgid "Automatically Save Power"
 msgstr "Автоматическая экономия энергии"
 
-#: src/MainView.vala:243
+#: src/MainView.vala:252
 msgid "Power Saver mode will be used when battery is low"
 msgstr ""
 "Режим экономии энергии будет использоваться при низком уровне заряда батареи"
 
-#: src/MainView.vala:249
+#: src/MainView.vala:258
 msgid "On Battery"
 msgstr "От батареи"
 
-#: src/MainView.vala:274
+#: src/MainView.vala:283
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Некоторые изменения вступят в силу после перезагрузки компьютера"
 
@@ -118,10 +131,6 @@ msgstr ""
 #: src/Plug.vala:72
 msgid "Suspend button"
 msgstr "Кнопка сна"
-
-#: src/Plug.vala:73
-msgid "Power button"
-msgstr "Кнопка питания"
 
 #: src/Plug.vala:74
 msgid "Display inactive"
@@ -160,20 +169,16 @@ msgid "Suspend inactive"
 msgstr "Сон при простое"
 
 #: src/Widgets/BatteryBox.vala:23
-#, fuzzy
-#| msgid "On Battery"
 msgid "Battery Level"
-msgstr "От батареи"
+msgstr "Уровень заряда"
 
 #: src/Widgets/BatteryBox.vala:24
 msgid "Battery Levels"
-msgstr ""
+msgstr "Уровни заряда"
 
 #: src/Widgets/BatteryBox.vala:32
-#, fuzzy
-#| msgid "Show battery percentage in Panel:"
 msgid "Show Percentage In Panel"
-msgstr "Отображать заряд аккумулятора на панели:"
+msgstr "Отображать процент заряда на панели"
 
 #: src/Widgets/TimeoutComboBox.vala:99
 msgid "Never"
@@ -207,11 +212,6 @@ msgstr "1 часа"
 msgid "2 hours"
 msgstr "2 часа"
 
-#: src/Widgets/LidCloseActionComboBox.vala:46
-#: src/Widgets/ActionComboBox.vala:42
-msgid "Suspend"
-msgstr "Режим ожидания"
-
 #: src/Widgets/LidCloseActionComboBox.vala:47
 msgid "Shutdown"
 msgstr "Выключение"
@@ -224,18 +224,9 @@ msgstr "Заблокировать"
 msgid "Halt"
 msgstr "Завершить работу"
 
-#: src/Widgets/LidCloseActionComboBox.vala:50
-#: src/Widgets/ActionComboBox.vala:41
-msgid "Do nothing"
-msgstr "Ничего не делать"
-
 #: src/Widgets/LidCloseActionComboBox.vala:52
 msgid "Not supported"
 msgstr "Не поддерживается"
-
-#: src/Widgets/ActionComboBox.vala:43
-msgid "Prompt to shutdown"
-msgstr "Запрос на выключение"
 
 #: src/Widgets/PowerModeButton.vala:60
 msgid "Power Mode"
@@ -252,6 +243,9 @@ msgstr "Сбалансированный"
 #: src/Widgets/PowerModeButton.vala:98
 msgid "Performance"
 msgstr "Производительность"
+
+#~ msgid "Power button:"
+#~ msgstr "Кнопка питания:"
 
 #~ msgid "Enable power save on low battery:"
 #~ msgstr "Экономия энергии при низком уровне заряда:"

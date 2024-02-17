@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-11 17:42+0000\n"
+"POT-Creation-Date: 2024-02-13 10:52+0000\n"
 "PO-Revision-Date: 2024-02-10 18:59+0000\n"
 "Last-Translator: Dennis ten Hoove <dennistenhoove@protonmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/power/"
@@ -57,56 +57,73 @@ msgstr ""
 msgid "Unknown"
 msgstr ""
 
-#: src/MainView.vala:50 src/Plug.vala:35
+#: src/MainView.vala:51 src/Plug.vala:35
 msgid "Power"
 msgstr "Energie"
 
-#: src/MainView.vala:80
+#: src/MainView.vala:81
 msgid "Display brightness:"
 msgstr "Helderheid:"
 
-#: src/MainView.vala:85
+#: src/MainView.vala:86
 msgid "Automatically adjust brightness:"
 msgstr "Pas de helderheid automatisch aan:"
 
-#: src/MainView.vala:130
+#: src/MainView.vala:131
 msgid "When lid is closed:"
 msgstr "Wanneer laptop is dichtgeklapt:"
 
-#: src/MainView.vala:137
+#: src/MainView.vala:138
 msgid "When lid is closed with external monitor:"
 msgstr "Wanneer deksel dicht is met extern beeldscherm aangesloten:"
 
-#: src/MainView.vala:153
+#: src/MainView.vala:154
 msgid "Turn off display when inactive for:"
 msgstr "Automatisch het scherm uitschakelen bij inactiviteit na:"
 
-#: src/MainView.vala:160
-msgid "Power button:"
-msgstr "Aan/uit-knop:"
+#. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
+#: src/MainView.vala:163 src/Widgets/LidCloseActionComboBox.vala:50
+msgid "Do nothing"
+msgstr "Doe niets"
 
-#: src/MainView.vala:172 src/MainView.vala:211
+#: src/MainView.vala:164 src/Widgets/LidCloseActionComboBox.vala:46
+msgid "Suspend"
+msgstr "Pauzestand"
+
+#: src/MainView.vala:165
+#, fuzzy
+#| msgid "Prompt to shutdown"
+msgid "Ask to shutdown"
+msgstr "Vragen om uit te schakelen"
+
+#: src/MainView.vala:170 src/Plug.vala:73
+#, fuzzy
+#| msgid "Power button"
+msgid "Power Button Behavior"
+msgstr "Stroomknop"
+
+#: src/MainView.vala:181 src/MainView.vala:220
 msgid "Suspend when inactive for:"
 msgstr "Automatisch in slaapstaand gaan na:"
 
-#: src/MainView.vala:196
+#: src/MainView.vala:205
 msgid "Plugged In"
 msgstr "Aangesloten"
 
-#: src/MainView.vala:241 src/Plug.vala:79
+#: src/MainView.vala:250 src/Plug.vala:79
 msgid "Automatically Save Power"
 msgstr "Automatisch stroom besparen"
 
-#: src/MainView.vala:243
+#: src/MainView.vala:252
 msgid "Power Saver mode will be used when battery is low"
 msgstr ""
 "Energiebesparende modus zal worden gebruikt als het batterijniveau laag is"
 
-#: src/MainView.vala:249
+#: src/MainView.vala:258
 msgid "On Battery"
 msgstr "Op accustroom"
 
-#: src/MainView.vala:274
+#: src/MainView.vala:283
 msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
 "sommige verraderingen zijn pas van kracht nadat deze computer opnieuw is "
@@ -119,10 +136,6 @@ msgstr "Configureer schermhelderheid, stroomknoppen en slaapstand"
 #: src/Plug.vala:72
 msgid "Suspend button"
 msgstr "Slaapstandknop"
-
-#: src/Plug.vala:73
-msgid "Power button"
-msgstr "Stroomknop"
 
 #: src/Plug.vala:74
 msgid "Display inactive"
@@ -208,11 +221,6 @@ msgstr "1 uur"
 msgid "2 hours"
 msgstr "2 uur"
 
-#: src/Widgets/LidCloseActionComboBox.vala:46
-#: src/Widgets/ActionComboBox.vala:42
-msgid "Suspend"
-msgstr "Pauzestand"
-
 #: src/Widgets/LidCloseActionComboBox.vala:47
 msgid "Shutdown"
 msgstr "Afsluiten"
@@ -225,18 +233,9 @@ msgstr "Vergrendeling"
 msgid "Halt"
 msgstr "Stoppen"
 
-#: src/Widgets/LidCloseActionComboBox.vala:50
-#: src/Widgets/ActionComboBox.vala:41
-msgid "Do nothing"
-msgstr "Doe niets"
-
 #: src/Widgets/LidCloseActionComboBox.vala:52
 msgid "Not supported"
 msgstr "Niet ondersteund"
-
-#: src/Widgets/ActionComboBox.vala:43
-msgid "Prompt to shutdown"
-msgstr "Vragen om uit te schakelen"
 
 #: src/Widgets/PowerModeButton.vala:60
 msgid "Power Mode"
@@ -253,6 +252,9 @@ msgstr "Gebalanceerd"
 #: src/Widgets/PowerModeButton.vala:98
 msgid "Performance"
 msgstr "Prestaties"
+
+#~ msgid "Power button:"
+#~ msgstr "Aan/uit-knop:"
 
 #~ msgid "Power management mode:"
 #~ msgstr "Energiebeheer modus:"

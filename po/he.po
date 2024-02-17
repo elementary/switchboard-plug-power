@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-11 17:42+0000\n"
-"PO-Revision-Date: 2024-02-10 18:59+0000\n"
+"POT-Creation-Date: 2024-02-13 10:52+0000\n"
+"PO-Revision-Date: 2024-02-14 17:17+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/power/"
 "he/>\n"
@@ -30,81 +30,94 @@ msgstr "נדרש אימות לצורך ניהול הגדרות צריכת חשמ
 
 #: src/Device.vala:35
 msgid "Charging"
-msgstr ""
+msgstr "בטעינה"
 
 #: src/Device.vala:37
 msgid "Using battery power"
-msgstr ""
+msgstr "מופעל על סוללה"
 
 #: src/Device.vala:39
 msgid "Empty"
-msgstr ""
+msgstr "ריקה"
 
 #: src/Device.vala:41
 msgid "Fully charged"
-msgstr ""
+msgstr "טעונה במלואה"
 
 #: src/Device.vala:43
 msgid "Waiting to charge"
-msgstr ""
+msgstr "בהמתנה לטעינה"
 
 #: src/Device.vala:45
 msgid "Waiting to use battery power"
-msgstr ""
+msgstr "בהמתנה לשימוש בסוללה"
 
 #: src/Device.vala:47
 msgid "Unknown"
-msgstr ""
+msgstr "לא ידוע"
 
-#: src/MainView.vala:50 src/Plug.vala:35
+#: src/MainView.vala:51 src/Plug.vala:35
 msgid "Power"
 msgstr "חשמל"
 
-#: src/MainView.vala:80
+#: src/MainView.vala:81
 msgid "Display brightness:"
 msgstr "בהירות התצוגה:"
 
-#: src/MainView.vala:85
+#: src/MainView.vala:86
 msgid "Automatically adjust brightness:"
 msgstr "התאמת בהירות התצוגה אוטומטית:"
 
-#: src/MainView.vala:130
+#: src/MainView.vala:131
 msgid "When lid is closed:"
 msgstr "כאשר המכסה סגור:"
 
-#: src/MainView.vala:137
+#: src/MainView.vala:138
 msgid "When lid is closed with external monitor:"
 msgstr "כאשר המכסה סגור עם צג חיצוני:"
 
-#: src/MainView.vala:153
+#: src/MainView.vala:154
 msgid "Turn off display when inactive for:"
 msgstr "יש לכבות את התצוגה כאשר אין פעילות במשך:"
 
-#: src/MainView.vala:160
-msgid "Power button:"
-msgstr "כפתור הפעלה:"
+#. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
+#: src/MainView.vala:163 src/Widgets/LidCloseActionComboBox.vala:50
+msgid "Do nothing"
+msgstr "לא לעשות כלום"
 
-#: src/MainView.vala:172 src/MainView.vala:211
+#: src/MainView.vala:164 src/Widgets/LidCloseActionComboBox.vala:46
+msgid "Suspend"
+msgstr "השהה"
+
+#: src/MainView.vala:165
+msgid "Ask to shutdown"
+msgstr "בקשה לכיבוי"
+
+#: src/MainView.vala:170 src/Plug.vala:73
+msgid "Power Button Behavior"
+msgstr "התנהגות כפתור הפעלה"
+
+#: src/MainView.vala:181 src/MainView.vala:220
 msgid "Suspend when inactive for:"
 msgstr "יש לעבור למצב השהיה בעת חוסר פעילות למשך:"
 
-#: src/MainView.vala:196
+#: src/MainView.vala:205
 msgid "Plugged In"
 msgstr "מחובר"
 
-#: src/MainView.vala:241 src/Plug.vala:79
+#: src/MainView.vala:250 src/Plug.vala:79
 msgid "Automatically Save Power"
 msgstr "חיסכון אוטומטי בחשמל"
 
-#: src/MainView.vala:243
+#: src/MainView.vala:252
 msgid "Power Saver mode will be used when battery is low"
 msgstr "מצב חיסכון בחשמל יופעל כשהסוללה חלשה"
 
-#: src/MainView.vala:249
+#: src/MainView.vala:258
 msgid "On Battery"
 msgstr "על סוללה"
 
-#: src/MainView.vala:274
+#: src/MainView.vala:283
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "חלק מהשינויים לא יכנסו לתוקף עד להפעלת המחשב מחדש"
 
@@ -115,10 +128,6 @@ msgstr "הגדרת בהירות המסך, כפתורי הכיבוי והתנהג
 #: src/Plug.vala:72
 msgid "Suspend button"
 msgstr "כפתור השהיה"
-
-#: src/Plug.vala:73
-msgid "Power button"
-msgstr "כפתור הפעלה"
 
 #: src/Plug.vala:74
 msgid "Display inactive"
@@ -157,20 +166,16 @@ msgid "Suspend inactive"
 msgstr "השהיה בלתי פעילה"
 
 #: src/Widgets/BatteryBox.vala:23
-#, fuzzy
-#| msgid "On Battery"
 msgid "Battery Level"
-msgstr "על סוללה"
+msgstr "עוצמת הסוללה"
 
 #: src/Widgets/BatteryBox.vala:24
 msgid "Battery Levels"
-msgstr ""
+msgstr "רמות הסוללה"
 
 #: src/Widgets/BatteryBox.vala:32
-#, fuzzy
-#| msgid "Show battery percentage in Panel:"
 msgid "Show Percentage In Panel"
-msgstr "הצגת אחוזי סוללה בלוח:"
+msgstr "הצגת אחוזים בלוח"
 
 #: src/Widgets/TimeoutComboBox.vala:99
 msgid "Never"
@@ -204,11 +209,6 @@ msgstr "שעה"
 msgid "2 hours"
 msgstr "שעתיים"
 
-#: src/Widgets/LidCloseActionComboBox.vala:46
-#: src/Widgets/ActionComboBox.vala:42
-msgid "Suspend"
-msgstr "השהה"
-
 #: src/Widgets/LidCloseActionComboBox.vala:47
 msgid "Shutdown"
 msgstr "כיבוי"
@@ -221,18 +221,9 @@ msgstr "נעילה"
 msgid "Halt"
 msgstr "עצירה"
 
-#: src/Widgets/LidCloseActionComboBox.vala:50
-#: src/Widgets/ActionComboBox.vala:41
-msgid "Do nothing"
-msgstr "לא לעשות כלום"
-
 #: src/Widgets/LidCloseActionComboBox.vala:52
 msgid "Not supported"
 msgstr "לא נתמך"
-
-#: src/Widgets/ActionComboBox.vala:43
-msgid "Prompt to shutdown"
-msgstr "בקשה לכיבוי"
 
 #: src/Widgets/PowerModeButton.vala:60
 msgid "Power Mode"
@@ -249,6 +240,9 @@ msgstr "מאוזן"
 #: src/Widgets/PowerModeButton.vala:98
 msgid "Performance"
 msgstr "ביצועים"
+
+#~ msgid "Power button:"
+#~ msgstr "כפתור הפעלה:"
 
 #~ msgid "Enable power save on low battery:"
 #~ msgstr "הפעלת חיסכון בחשמל כשהסוללה חלשה:"
