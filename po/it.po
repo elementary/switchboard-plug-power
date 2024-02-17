@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-10 02:17+0000\n"
+"POT-Creation-Date: 2024-02-13 10:52+0000\n"
 "PO-Revision-Date: 2020-10-24 13:15+0000\n"
 "Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
 "Language-Team: Italian <https://l10n.elementary.io/projects/switchboard/"
@@ -28,61 +28,102 @@ msgstr "Gestisci le impostazioni di alimentazione"
 msgid "Authentication is required to manage power settings"
 msgstr "È necessario autenticarsi per gestire le impostazioni di alimentazione"
 
-#: src/MainView.vala:50 src/Plug.vala:35
+#: src/Device.vala:35
+msgid "Charging"
+msgstr ""
+
+#: src/Device.vala:37
+msgid "Using battery power"
+msgstr ""
+
+#: src/Device.vala:39
+msgid "Empty"
+msgstr ""
+
+#: src/Device.vala:41
+msgid "Fully charged"
+msgstr ""
+
+#: src/Device.vala:43
+msgid "Waiting to charge"
+msgstr ""
+
+#: src/Device.vala:45
+msgid "Waiting to use battery power"
+msgstr ""
+
+#: src/Device.vala:47
+msgid "Unknown"
+msgstr ""
+
+#: src/MainView.vala:51 src/Plug.vala:35
 msgid "Power"
 msgstr "Alimentazione"
 
-#: src/MainView.vala:82
-msgid "Show battery percentage in Panel:"
-msgstr ""
-
-#: src/MainView.vala:97
+#: src/MainView.vala:81
 msgid "Display brightness:"
 msgstr "Luminosità dello schermo:"
 
-#: src/MainView.vala:102
+#: src/MainView.vala:86
 msgid "Automatically adjust brightness:"
 msgstr "Imposta automaticamente la luminosità:"
 
-#: src/MainView.vala:147
+#: src/MainView.vala:131
 msgid "When lid is closed:"
 msgstr "Quando il coperchio è chiuso:"
 
-#: src/MainView.vala:154
+#: src/MainView.vala:138
 msgid "When lid is closed with external monitor:"
 msgstr "Quando il coperchio è chiuso con monitor esterno:"
 
-#: src/MainView.vala:170
+#: src/MainView.vala:154
 msgid "Turn off display when inactive for:"
 msgstr "Spegni lo schermo quando inattivo per:"
 
-#: src/MainView.vala:177
-msgid "Power button:"
-msgstr "Pulsante di accensione:"
+#. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
+#: src/MainView.vala:163 src/Widgets/LidCloseActionComboBox.vala:50
+msgid "Do nothing"
+msgstr "Nessuna azione"
 
-#: src/MainView.vala:189 src/MainView.vala:228
+#: src/MainView.vala:164 src/Widgets/LidCloseActionComboBox.vala:46
+msgid "Suspend"
+msgstr "Sospendi"
+
+#: src/MainView.vala:165
+#, fuzzy
+#| msgid "Prompt to shutdown"
+msgid "Ask to shutdown"
+msgstr "Chiedi di spegnere"
+
+#: src/MainView.vala:170 src/Plug.vala:73
+#, fuzzy
+#| msgid "Power button"
+msgid "Power Button Behavior"
+msgstr "Pulsante di accensione"
+
+#: src/MainView.vala:181 src/MainView.vala:220
 msgid "Suspend when inactive for:"
 msgstr "Sospendere quando inattivo per:"
 
-#: src/MainView.vala:213
+#: src/MainView.vala:205
 msgid "Plugged In"
 msgstr "Collegato all'alimentazione"
 
-#: src/MainView.vala:258 src/Plug.vala:79
+#: src/MainView.vala:250 src/Plug.vala:79
 #, fuzzy
 #| msgid "Automatically adjust brightness:"
 msgid "Automatically Save Power"
 msgstr "Imposta automaticamente la luminosità:"
 
-#: src/MainView.vala:260
+#: src/MainView.vala:252
 msgid "Power Saver mode will be used when battery is low"
 msgstr ""
 
-#: src/MainView.vala:266
+#: src/MainView.vala:258
 msgid "On Battery"
 msgstr "Con batteria"
 
-#: src/MainView.vala:291
+#: src/MainView.vala:283
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Alcune modifiche non avranno effetto fino al riavvio del computer"
 
@@ -95,10 +136,6 @@ msgstr ""
 #: src/Plug.vala:72
 msgid "Suspend button"
 msgstr "Pulsante di sospensione"
-
-#: src/Plug.vala:73
-msgid "Power button"
-msgstr "Pulsante di accensione"
 
 #: src/Plug.vala:74
 msgid "Display inactive"
@@ -136,6 +173,20 @@ msgstr ""
 msgid "Suspend inactive"
 msgstr "Inattività in sospensione"
 
+#: src/Widgets/BatteryBox.vala:23
+#, fuzzy
+#| msgid "On Battery"
+msgid "Battery Level"
+msgstr "Con batteria"
+
+#: src/Widgets/BatteryBox.vala:24
+msgid "Battery Levels"
+msgstr ""
+
+#: src/Widgets/BatteryBox.vala:32
+msgid "Show Percentage In Panel"
+msgstr ""
+
 #: src/Widgets/TimeoutComboBox.vala:99
 msgid "Never"
 msgstr "Mai"
@@ -168,11 +219,6 @@ msgstr "1 ora"
 msgid "2 hours"
 msgstr "2 ore"
 
-#: src/Widgets/LidCloseActionComboBox.vala:46
-#: src/Widgets/ActionComboBox.vala:42
-msgid "Suspend"
-msgstr "Sospendi"
-
 #: src/Widgets/LidCloseActionComboBox.vala:47
 msgid "Shutdown"
 msgstr "Spegni"
@@ -185,18 +231,9 @@ msgstr "Blocca"
 msgid "Halt"
 msgstr "Arresta"
 
-#: src/Widgets/LidCloseActionComboBox.vala:50
-#: src/Widgets/ActionComboBox.vala:41
-msgid "Do nothing"
-msgstr "Nessuna azione"
-
 #: src/Widgets/LidCloseActionComboBox.vala:52
 msgid "Not supported"
 msgstr "Non supportato"
-
-#: src/Widgets/ActionComboBox.vala:43
-msgid "Prompt to shutdown"
-msgstr "Chiedi di spegnere"
 
 #: src/Widgets/PowerModeButton.vala:60
 #, fuzzy
@@ -217,6 +254,9 @@ msgstr ""
 #: src/Widgets/PowerModeButton.vala:98
 msgid "Performance"
 msgstr ""
+
+#~ msgid "Power button:"
+#~ msgstr "Pulsante di accensione:"
 
 #~ msgid "You do not have permission to change this"
 #~ msgstr "Non disponi dei permessi necessari per cambiare questo parametro"

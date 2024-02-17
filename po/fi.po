@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-10 02:17+0000\n"
+"POT-Creation-Date: 2024-02-13 10:52+0000\n"
 "PO-Revision-Date: 2022-06-02 22:01+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
@@ -28,61 +28,102 @@ msgstr "Hallitse virranhallinnan asetuksia"
 msgid "Authentication is required to manage power settings"
 msgstr "Virranhallinnan asetusten hallinta vaatii tunnistautumisen"
 
-#: src/MainView.vala:50 src/Plug.vala:35
+#: src/Device.vala:35
+msgid "Charging"
+msgstr ""
+
+#: src/Device.vala:37
+msgid "Using battery power"
+msgstr ""
+
+#: src/Device.vala:39
+msgid "Empty"
+msgstr ""
+
+#: src/Device.vala:41
+msgid "Fully charged"
+msgstr ""
+
+#: src/Device.vala:43
+msgid "Waiting to charge"
+msgstr ""
+
+#: src/Device.vala:45
+msgid "Waiting to use battery power"
+msgstr ""
+
+#: src/Device.vala:47
+msgid "Unknown"
+msgstr ""
+
+#: src/MainView.vala:51 src/Plug.vala:35
 msgid "Power"
 msgstr "Virranhallinta"
 
-#: src/MainView.vala:82
-msgid "Show battery percentage in Panel:"
-msgstr "Näytä akun varauksen prosentti paneelissa:"
-
-#: src/MainView.vala:97
+#: src/MainView.vala:81
 msgid "Display brightness:"
 msgstr "Näytön kirkkaus:"
 
-#: src/MainView.vala:102
+#: src/MainView.vala:86
 msgid "Automatically adjust brightness:"
 msgstr "Säädä kirkkautta automaattisesti:"
 
-#: src/MainView.vala:147
+#: src/MainView.vala:131
 msgid "When lid is closed:"
 msgstr "Kun kansi suljetaan:"
 
-#: src/MainView.vala:154
+#: src/MainView.vala:138
 msgid "When lid is closed with external monitor:"
 msgstr "Kun kansi suljetaan ulkoisen näytön kanssa:"
 
-#: src/MainView.vala:170
+#: src/MainView.vala:154
 msgid "Turn off display when inactive for:"
 msgstr "Sammuta näyttö kun käyttämättä:"
 
-#: src/MainView.vala:177
-msgid "Power button:"
-msgstr "Virtapainike:"
+#. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
+#: src/MainView.vala:163 src/Widgets/LidCloseActionComboBox.vala:50
+msgid "Do nothing"
+msgstr "Älä tee mitään"
 
-#: src/MainView.vala:189 src/MainView.vala:228
+#: src/MainView.vala:164 src/Widgets/LidCloseActionComboBox.vala:46
+msgid "Suspend"
+msgstr "Valmiustila"
+
+#: src/MainView.vala:165
+#, fuzzy
+#| msgid "Prompt to shutdown"
+msgid "Ask to shutdown"
+msgstr "Vahvistus sammutukselle"
+
+#: src/MainView.vala:170 src/Plug.vala:73
+#, fuzzy
+#| msgid "Power button"
+msgid "Power Button Behavior"
+msgstr "Virtapainike"
+
+#: src/MainView.vala:181 src/MainView.vala:220
 msgid "Suspend when inactive for:"
 msgstr "Siirry valmiustilaan kun käyttämättä:"
 
-#: src/MainView.vala:213
+#: src/MainView.vala:205
 msgid "Plugged In"
 msgstr "Verkkovirralla"
 
-#: src/MainView.vala:258 src/Plug.vala:79
+#: src/MainView.vala:250 src/Plug.vala:79
 #, fuzzy
 #| msgid "Automatically adjust brightness:"
 msgid "Automatically Save Power"
 msgstr "Säädä kirkkautta automaattisesti:"
 
-#: src/MainView.vala:260
+#: src/MainView.vala:252
 msgid "Power Saver mode will be used when battery is low"
 msgstr ""
 
-#: src/MainView.vala:266
+#: src/MainView.vala:258
 msgid "On Battery"
 msgstr "Akkuvirralla"
 
-#: src/MainView.vala:291
+#: src/MainView.vala:283
 msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
 "Jotkin asetukset tulevat voimaan vasta tietokoneen uudelleenkäynnistyksen "
@@ -95,10 +136,6 @@ msgstr "Määritä näytön kirkkaus sekä virtapainikkeiden ja lepotilan toimin
 #: src/Plug.vala:72
 msgid "Suspend button"
 msgstr "Valmiustilan painike"
-
-#: src/Plug.vala:73
-msgid "Power button"
-msgstr "Virtapainike"
 
 #: src/Plug.vala:74
 msgid "Display inactive"
@@ -136,6 +173,22 @@ msgstr ""
 msgid "Suspend inactive"
 msgstr "Valmiustila kun käyttämättä"
 
+#: src/Widgets/BatteryBox.vala:23
+#, fuzzy
+#| msgid "On Battery"
+msgid "Battery Level"
+msgstr "Akkuvirralla"
+
+#: src/Widgets/BatteryBox.vala:24
+msgid "Battery Levels"
+msgstr ""
+
+#: src/Widgets/BatteryBox.vala:32
+#, fuzzy
+#| msgid "Show battery percentage in Panel:"
+msgid "Show Percentage In Panel"
+msgstr "Näytä akun varauksen prosentti paneelissa:"
+
 #: src/Widgets/TimeoutComboBox.vala:99
 msgid "Never"
 msgstr "Ei koskaan"
@@ -168,11 +221,6 @@ msgstr "1 tunti"
 msgid "2 hours"
 msgstr "2 tuntia"
 
-#: src/Widgets/LidCloseActionComboBox.vala:46
-#: src/Widgets/ActionComboBox.vala:42
-msgid "Suspend"
-msgstr "Valmiustila"
-
 #: src/Widgets/LidCloseActionComboBox.vala:47
 msgid "Shutdown"
 msgstr "Sammuta"
@@ -185,18 +233,9 @@ msgstr "Lukitse"
 msgid "Halt"
 msgstr "Pysäytä"
 
-#: src/Widgets/LidCloseActionComboBox.vala:50
-#: src/Widgets/ActionComboBox.vala:41
-msgid "Do nothing"
-msgstr "Älä tee mitään"
-
 #: src/Widgets/LidCloseActionComboBox.vala:52
 msgid "Not supported"
 msgstr "Ei tuettu"
-
-#: src/Widgets/ActionComboBox.vala:43
-msgid "Prompt to shutdown"
-msgstr "Vahvistus sammutukselle"
 
 #: src/Widgets/PowerModeButton.vala:60
 #, fuzzy
@@ -215,6 +254,9 @@ msgstr "Tasapainotettu"
 #: src/Widgets/PowerModeButton.vala:98
 msgid "Performance"
 msgstr "Suorituskyky"
+
+#~ msgid "Power button:"
+#~ msgstr "Virtapainike:"
 
 #~ msgid "Power management mode:"
 #~ msgstr "Virranhallinnan tila:"

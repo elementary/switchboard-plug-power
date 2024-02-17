@@ -11,18 +11,16 @@ public class Power.BatteryBox : Gtk.Grid {
             margin_bottom = 6
         };
 
-        ulong n_batteries = 0;
-        PowerManager.get_default ().devices.foreach ((path, device) => {
-            if (device.device_type == BATTERY) {
-                devices_box.append (new Battery (device));
-                n_batteries ++;
-            }
-        });
+        var batteries = PowerManager.get_default ().batteries;
+
+        for (int i = 0; i < batteries.n_items; i++) {
+            devices_box.append (new Battery ((Device) batteries.get_item (i)));
+        }
 
         battery_header.label = ngettext (
             _("Battery Level"),
             _("Battery Levels"),
-            n_batteries
+            batteries.n_items
         );
 
         var show_percent_switch = new Gtk.Switch () {
