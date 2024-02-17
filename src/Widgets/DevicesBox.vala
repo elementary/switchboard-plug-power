@@ -43,11 +43,13 @@ public class Power.DevicesBox : Gtk.Grid {
         }
 
         construct {
-            var image = new Gtk.Image.from_icon_name (device.device_type.to_icon_name ()) {
-                icon_size = LARGE
+            var image = new Gtk.Image.from_icon_name (device.icon_name) {
+                icon_size = LARGE,
+                use_fallback = true
             };
 
             var name_label = new Gtk.Label ("") {
+                margin_end = 12,
                 xalign = 0
             };
 
@@ -57,9 +59,19 @@ public class Power.DevicesBox : Gtk.Grid {
             charge_label.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
             charge_label.add_css_class (Granite.STYLE_CLASS_SMALL_LABEL);
 
+            var charge_image = new Gtk.Image.from_gicon (device.state.to_icon ()) {
+                tooltip_text = device.state.to_string ()
+            };
+
+            var charge_revealer = new Gtk.Revealer () {
+                child = charge_image,
+                transition_type = CROSSFADE,
+                reveal_child = device.state.to_icon () != null
+            };
+
             charge_levelbar = new Gtk.LevelBar () {
                 hexpand = true,
-                margin_start = 18,
+                margin_end = 6,
                 min_value = 0,
                 valign = CENTER
             };
@@ -86,11 +98,11 @@ public class Power.DevicesBox : Gtk.Grid {
             }
 
             column_spacing = 6;
-            row_spacing = 6;
             attach (image, 0, 0, 1, 2);
             attach (name_label, 1, 0);
             attach (charge_label, 1, 1);
-            attach (charge_levelbar, 2, 0, 1, 2);
+            attach (charge_revealer, 2, 0, 1, 2);
+            attach (charge_levelbar, 3, 0, 1, 2);
 
             size_group.add_widget (name_label);
             size_group.add_widget (charge_label);
@@ -100,7 +112,12 @@ public class Power.DevicesBox : Gtk.Grid {
             if (charge_levelbar.mode == CONTINUOUS) {
                 device.bind_property ("percentage", charge_label, "label", SYNC_CREATE,
                     ((binding, srcval, ref targetval) => {
-                        targetval.set_string ("%.0f%%".printf ((double) srcval));
+                        if ((double) srcval == 0 && device.state == UNKNOWN) {
+                            targetval.set_string (_("Unknown. Device may be locked."));
+                        } else {
+                            targetval.set_string ("%.0f%%".printf ((double) srcval));
+                        }
+
                         return true;
                     })
                 );
@@ -113,6 +130,12 @@ public class Power.DevicesBox : Gtk.Grid {
 
             update_levelbar_offsets ();
             device.notify["state"].connect (update_levelbar_offsets);
+
+            device.notify["state"].connect (() => {
+                charge_image.gicon = device.state.to_icon ();
+                charge_image.tooltip_text = device.state.to_string ();
+                charge_revealer.reveal_child = device.state.to_icon () != null;
+            });
         }
 
         private void update_levelbar_offsets () {

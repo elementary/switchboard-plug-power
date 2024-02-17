@@ -31,6 +31,23 @@ public class Power.Device : Object {
         PENDING_CHARGE = 5,
         PENDING_DISCHARGE = 6;
 
+        public Icon? to_icon () {
+            switch (this) {
+                case CHARGING:
+                    return new ThemedIcon ("device-charging-symbolic");
+                case PENDING_CHARGE:
+                case PENDING_DISCHARGE:
+                    return new ThemedIcon ("device-paused-symbolic");
+                case EMPTY:
+                case UNKNOWN:
+                    return new ThemedIcon ("dialog-warning-symbolic");
+                case DISCHARGING:
+                case FULLY_CHARGED:
+                default:
+                    return null;
+            }
+        }
+
         public string to_string () {
             switch (this) {
                 case CHARGING:
@@ -71,37 +88,6 @@ public class Power.Device : Object {
         COMPUTER = 11,
         GAMING_INPUT = 12,
         PEN = 13;
-
-        public unowned string? to_icon_name () {
-            switch (this) {
-                case UPS:
-                    return "uninterruptible-power-supply";
-                case MOUSE:
-                    return "input-mouse";
-                case KEYBOARD:
-                    return "input-keyboard";
-                case PDA:
-                case PHONE:
-                    return "phone";
-                case MEDIA_PLAYER:
-                    return "multimedia-player";
-                case TABLET:
-                case PEN:
-                    return "input-tablet";
-                case GAMING_INPUT:
-                    return "input-gaming";
-                case COMPUTER:
-                    return "computer";
-                case MONITOR:
-                    return "video-display";
-                case LINE_POWER:
-                    return "battery-ac-adapter";
-                case UNKNOWN:
-                case BATTERY:
-                default:
-                    return "battery";
-            }
-        }
     }
 
     /*
@@ -119,6 +105,7 @@ public class Power.Device : Object {
     public string path { get; construct; }
     public double percentage { get; private set; default = -1; }
 
+    public string icon_name { get; private set; }
     public string model { get; private set; }
     public State state { get; private set; default = UNKNOWN; }
     public Type device_type { get; private set; default = UNKNOWN; }
@@ -173,6 +160,51 @@ public class Power.Device : Object {
         model = upower_device.model; // Can sometimes update eg when phone is trusted
         percentage = upower_device.percentage;
         state = upower_device.state;
+
+        switch (device_type) {
+            case UPS:
+                icon_name = "uninterruptible-power-supply";
+                break;
+            case MOUSE:
+                icon_name = "input-mouse";
+                break;
+            case KEYBOARD:
+                icon_name =  "input-keyboard";
+                break;
+            case PDA:
+            case PHONE:
+                icon_name =  "phone";
+                break;
+            case MEDIA_PLAYER:
+                icon_name =  "multimedia-player";
+                break;
+            case TABLET:
+                icon_name = "input-touchpad";
+                break;
+            case PEN:
+                icon_name =  "input-tablet";
+                break;
+            case GAMING_INPUT:
+                icon_name =  "input-gaming";
+                break;
+            case COMPUTER:
+                if (model == "iPad") {
+                    icon_name = "computer-tablet";
+                } else {
+                    icon_name = "computer-laptop";
+                }
+
+                break;
+            case MONITOR:
+                icon_name =  "video-display";
+                break;
+            case LINE_POWER:
+                icon_name =  "battery-ac-adapter";
+                break;
+            default:
+                icon_name = "battery";
+                break;
+        }
     }
 
     public bool equal_func (Device other) {
