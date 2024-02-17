@@ -90,21 +90,16 @@ public class Power.Device : Object {
         PEN = 13;
     }
 
-    /*
-     * Coarse battery level reporting
-     * If the value is 1, percentage should be used instead.
-     */
-    public uint32 battery_level { get; private set; default = 1; }
+    public string path { get; construct; }
 
     /*
      * If the device is used to supply the system
      * TRUE for batteries and UPS, FALSE for mice and keyboards
      */
     public bool power_supply { get; private set; }
-
-    public string path { get; construct; }
     public double percentage { get; private set; default = -1; }
-
+    public bool coarse_battery_level { get; private set; default = false; }
+    public string description { get; private set; }
     public string icon_name { get; private set; }
     public string model { get; private set; }
     public State state { get; private set; default = UNKNOWN; }
@@ -130,33 +125,17 @@ public class Power.Device : Object {
 
             update_properties ();
             upower_device.g_properties_changed.connect (update_properties);
+
+            update_description ();
+            notify["percentage"].connect (update_description);
         } catch (IOError e) {
             critical (e.message);
         }
     }
 
-    public string cent_to_string () {
-        if (percentage < 20) {
-            return _("Critical");
-        }
-
-        if (percentage < 40) {
-            return _("Low");
-        }
-
-        if (percentage < 60) {
-            return _("Good");
-        }
-
-        if (percentage < 80) {
-            return _("High");
-        }
-
-        return _("Full");
-    }
-
     private void update_properties () {
-        battery_level = upower_device.battery_level;
+        coarse_battery_level = upower_device.battery_level != 1;
+
         model = upower_device.model; // Can sometimes update eg when phone is trusted
         percentage = upower_device.percentage;
         state = upower_device.state;
@@ -204,6 +183,28 @@ public class Power.Device : Object {
             default:
                 icon_name = "battery";
                 break;
+        }
+    }
+
+    private void update_description () {
+        if (coarse_battery_level) {
+            if (percentage < 20) {
+                description = _("Critical");
+            } else if (percentage < 40) {
+                description = _("Low");
+            } else if (percentage < 60) {
+                description = _("Good");
+            } else if (percentage < 80) {
+                description = _("High");
+            } else {
+                description = _("Full");
+            }
+        } else {
+            if (percentage == 0 && state == UNKNOWN) {
+                description = _("Unknown. Device may be locked.");
+            } else {
+                description = "%.0f%%".printf (percentage);
+            }
         }
     }
 

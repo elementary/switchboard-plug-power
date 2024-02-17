@@ -7,6 +7,15 @@ public class Power.DevicesBox : Gtk.Grid {
     construct {
         var header = new Granite.HeaderLabel (_("Connected Devices"));
 
+        var placeholder = new Gtk.Label (_("Devices that report battery information when plugged in or connected wirelessly will appear here")) {
+            wrap = true,
+            margin_top = 12,
+            margin_bottom = 12,
+            margin_start = 12,
+            margin_end = 12
+        };
+        placeholder.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
+
         var devices_box = new Gtk.ListBox () {
             hexpand = true
         };
@@ -14,6 +23,7 @@ public class Power.DevicesBox : Gtk.Grid {
             PowerManager.get_default ().devices,
             create_widget_func
         );
+        devices_box.set_placeholder (placeholder);
         devices_box.add_css_class (Granite.STYLE_CLASS_RICH_LIST);
         devices_box.add_css_class (Granite.STYLE_CLASS_FRAME);
 
@@ -76,11 +86,7 @@ public class Power.DevicesBox : Gtk.Grid {
                 valign = CENTER
             };
 
-            /*
-             * Coarse battery level reporting
-             * If the value is 1, percentage should be used instead.
-             */
-            if (device.battery_level == 1) {
+            if (!device.coarse_battery_level) {
                 charge_levelbar.max_value = 100;
                 charge_levelbar.add_offset_value ("full", 100);
                 device.bind_property ("percentage", charge_levelbar, "value", SYNC_CREATE);
@@ -108,25 +114,7 @@ public class Power.DevicesBox : Gtk.Grid {
             size_group.add_widget (charge_label);
 
             device.bind_property ("model", name_label, "label", SYNC_CREATE);
-
-            if (charge_levelbar.mode == CONTINUOUS) {
-                device.bind_property ("percentage", charge_label, "label", SYNC_CREATE,
-                    ((binding, srcval, ref targetval) => {
-                        if ((double) srcval == 0 && device.state == UNKNOWN) {
-                            targetval.set_string (_("Unknown. Device may be locked."));
-                        } else {
-                            targetval.set_string ("%.0f%%".printf ((double) srcval));
-                        }
-
-                        return true;
-                    })
-                );
-            } else {
-                charge_label.label = device.cent_to_string ();
-                device.notify["percentage"].connect (() => {
-                    charge_label.label = device.cent_to_string ();
-                });
-            }
+            device.bind_property ("description", charge_label, "label", SYNC_CREATE);
 
             update_levelbar_offsets ();
             device.notify["state"].connect (update_levelbar_offsets);
