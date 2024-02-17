@@ -64,6 +64,10 @@ public class Power.DevicesBox : Gtk.Grid {
                 valign = CENTER
             };
 
+            /*
+             * Coarse battery level reporting
+             * If the value is 1, percentage should be used instead.
+             */
             if (device.battery_level == 1) {
                 charge_levelbar.max_value = 100;
                 charge_levelbar.add_offset_value ("full", 100);
