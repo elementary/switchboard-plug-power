@@ -47,6 +47,8 @@ namespace Power {
     [DBus (name = "org.freedesktop.UPower")]
     interface Upower : Object {
         public signal void changed ();
+        public signal void device_added (ObjectPath device_path);
+        public signal void device_removed (ObjectPath device_path);
         public abstract bool on_battery { owned get; }
         public abstract bool lid_is_present { owned get; }
         public abstract bool low_on_battery { owned get; }
