@@ -96,7 +96,7 @@ public class Power.DevicesBox : Gtk.Grid {
                 charge_levelbar.max_value = 5;
                 charge_levelbar.mode = DISCRETE;
 
-                // DeviceRow level is sometimes 0 so more reliable to divide percentage;
+                // Coarse battery level can sometimes be unknown, percentage is more reliable
                 device.bind_property ("percentage", charge_levelbar, "value", SYNC_CREATE,
                     ((binding, srcval, ref targetval) => {
                         targetval.set_double ((double) srcval / 20);
