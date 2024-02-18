@@ -37,7 +37,7 @@ public class Power.Device : Object {
                     return new ThemedIcon ("device-charging-symbolic");
                 case PENDING_CHARGE:
                 case PENDING_DISCHARGE:
-                    return new ThemedIcon ("device-paused-symbolic");
+                    return new ThemedIcon ("device-charging-paused-symbolic");
                 case EMPTY:
                 case UNKNOWN:
                     return new ThemedIcon ("dialog-warning-symbolic");
