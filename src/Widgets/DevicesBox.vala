@@ -5,8 +5,6 @@
 
 public class Power.DevicesBox : Gtk.Grid {
     construct {
-        var header = new Granite.HeaderLabel (_("Connected Devices"));
-
         var placeholder = new Gtk.Label (_("Devices that report battery information when plugged in or connected wirelessly will appear here")) {
             wrap = true,
             margin_top = 12,
@@ -26,6 +24,10 @@ public class Power.DevicesBox : Gtk.Grid {
         devices_box.set_placeholder (placeholder);
         devices_box.add_css_class (Granite.STYLE_CLASS_RICH_LIST);
         devices_box.add_css_class (Granite.STYLE_CLASS_FRAME);
+
+        var header = new Granite.HeaderLabel (_("Connected Devices")) {
+            mnemonic_widget = devices_box
+        };
 
         column_spacing = 12;
         row_spacing = 6;
