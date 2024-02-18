@@ -148,20 +148,20 @@ public class Power.Device : Object {
                 icon_name = "input-mouse";
                 break;
             case KEYBOARD:
-                icon_name =  "input-keyboard";
+                icon_name = "input-keyboard";
                 break;
             case PDA:
             case PHONE:
-                icon_name =  "phone";
+                icon_name = "phone";
                 break;
             case MEDIA_PLAYER:
-                icon_name =  "multimedia-player";
+                icon_name = "multimedia-player";
                 break;
             case TABLET:
                 icon_name = "input-touchpad";
                 break;
             case PEN:
-                icon_name =  "input-tablet";
+                icon_name = "input-tablet";
                 break;
             case GAMING_INPUT:
                 icon_name =  "input-gaming";
@@ -175,10 +175,10 @@ public class Power.Device : Object {
 
                 break;
             case MONITOR:
-                icon_name =  "video-display";
+                icon_name = "video-display";
                 break;
             case LINE_POWER:
-                icon_name =  "battery-ac-adapter";
+                icon_name = "battery-ac-adapter";
                 break;
             default:
                 icon_name = "battery";
