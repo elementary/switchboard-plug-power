@@ -188,6 +188,7 @@ public class Power.Device : Object {
 
     private void update_description () {
         if (coarse_battery_level) {
+            // Coarse battery level can sometimes be unknown, percentage is more reliable
             if (percentage < 20) {
                 description = _("Critical");
             } else if (percentage < 40) {
