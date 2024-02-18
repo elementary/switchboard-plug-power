@@ -164,7 +164,7 @@ public class Power.Device : Object {
                 icon_name = "input-tablet";
                 break;
             case GAMING_INPUT:
-                icon_name =  "input-gaming";
+                icon_name = "input-gaming";
                 break;
             case COMPUTER:
                 if (model == "iPad") {
