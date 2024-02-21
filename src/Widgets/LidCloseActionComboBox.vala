@@ -57,10 +57,9 @@ class Power.LidCloseActionComboBox : Gtk.Widget {
         combobox.changed.connect (on_changed);
     }
 
-    private bool set_active_with_permission (int index_) {
-        // Returns true on success
-
-        var permission = MainView.get_permission ();
+    // Returns true on success
+    private async bool set_active_with_permission (int index_) {
+        var permission = yield MainView.get_permission_async ();
         if (permission == null) {
             return false;
         }
@@ -76,26 +75,13 @@ class Power.LidCloseActionComboBox : Gtk.Widget {
 
         previous_active = combobox.active;
         combobox.active = index_;
-        return true;
-    }
 
-    private void on_changed () {
         var helper = LogindHelper.get_logind_helper ();
         if (helper == null) {
-            return;
+            return false;
         }
 
-        if (combobox.active != previous_active) {
-            var success = set_active_with_permission (combobox.active);
-            if (!success) {
-                combobox.active = previous_active;
-                return;
-            }
-        } else {
-            return;
-        }
-
-        LogindHelper.Action action = get_action ();
+        var action = get_action ();
         try {
             if (dock) {
                 helper.set_key (HANDLE_LID_SWITCH_DOCKED_KEY, action.to_string ());
@@ -105,6 +91,20 @@ class Power.LidCloseActionComboBox : Gtk.Widget {
         } catch (Error e) {
             warning (e.message);
         }
+
+        return true;
+    }
+
+    private void on_changed () {
+        if (combobox.active == previous_active) {
+            return;
+        }
+
+        set_active_with_permission (combobox.active, (obj, res) => {
+            if (!set_active_with_permission.end (res)) {
+                combobox.active = previous_active;
+            }
+        });
     }
 
     private void update_current_action () {
