@@ -329,7 +329,7 @@ public class Power.MainView : Switchboard.SettingsPage {
         });
     }
 
-    public static async Polkit.Permission? get_permission_async () {
+    public static async Polkit.Permission? get_permission () {
         if (permission != null) {
             return permission;
         }
@@ -339,24 +339,6 @@ public class Power.MainView : Switchboard.SettingsPage {
                 "io.elementary.settings.power.administration",
                 new Polkit.UnixProcess (Posix.getpid ())
             );
-        } catch (Error e) {
-            critical (e.message);
-            return null;
-        }
-    }
-
-    public static Polkit.Permission? get_permission () {
-        if (permission != null) {
-            return permission;
-        }
-
-        try {
-            permission = new Polkit.Permission.sync (
-                "io.elementary.settings.power.administration",
-                new Polkit.UnixProcess (Posix.getpid ())
-            );
-
-            return permission;
         } catch (Error e) {
             critical (e.message);
             return null;

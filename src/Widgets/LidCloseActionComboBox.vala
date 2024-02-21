@@ -59,7 +59,7 @@ class Power.LidCloseActionComboBox : Gtk.Widget {
 
     // Returns true on success
     private async bool set_active_with_permission (int index_) {
-        var permission = yield MainView.get_permission_async ();
+        var permission = yield MainView.get_permission ();
         if (permission == null) {
             return false;
         }
@@ -100,7 +100,7 @@ class Power.LidCloseActionComboBox : Gtk.Widget {
             return;
         }
 
-        set_active_with_permission (combobox.active, (obj, res) => {
+        set_active_with_permission.begin (combobox.active, (obj, res) => {
             if (!set_active_with_permission.end (res)) {
                 combobox.active = previous_active;
             }
