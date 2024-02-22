@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-13 10:52+0000\n"
-"PO-Revision-Date: 2024-02-10 18:59+0000\n"
+"PO-Revision-Date: 2024-02-19 12:12+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "power/ja/>\n"
@@ -25,31 +25,31 @@ msgstr "電源設定を管理するには認証が必要です"
 
 #: src/Device.vala:35
 msgid "Charging"
-msgstr ""
+msgstr "充電中"
 
 #: src/Device.vala:37
 msgid "Using battery power"
-msgstr ""
+msgstr "バッテリー電力を使用中"
 
 #: src/Device.vala:39
 msgid "Empty"
-msgstr ""
+msgstr "空"
 
 #: src/Device.vala:41
 msgid "Fully charged"
-msgstr ""
+msgstr "完全に充電済み"
 
 #: src/Device.vala:43
 msgid "Waiting to charge"
-msgstr ""
+msgstr "充電の待機中"
 
 #: src/Device.vala:45
 msgid "Waiting to use battery power"
-msgstr ""
+msgstr "バッテリー電力使用の待機中"
 
 #: src/Device.vala:47
 msgid "Unknown"
-msgstr ""
+msgstr "不明"
 
 #: src/MainView.vala:51 src/Plug.vala:35
 msgid "Power"
@@ -85,16 +85,12 @@ msgid "Suspend"
 msgstr "サスペンド"
 
 #: src/MainView.vala:165
-#, fuzzy
-#| msgid "Prompt to shutdown"
 msgid "Ask to shutdown"
 msgstr "シャットダウンの確認"
 
 #: src/MainView.vala:170 src/Plug.vala:73
-#, fuzzy
-#| msgid "Power button"
 msgid "Power Button Behavior"
-msgstr "電源ボタン"
+msgstr "電源ボタンの動作"
 
 #: src/MainView.vala:181 src/MainView.vala:220
 msgid "Suspend when inactive for:"
@@ -165,20 +161,16 @@ msgid "Suspend inactive"
 msgstr "非アクティブ時にサスペンド"
 
 #: src/Widgets/BatteryBox.vala:23
-#, fuzzy
-#| msgid "On Battery"
 msgid "Battery Level"
-msgstr "バッテリー時"
+msgstr "バッテリー残量"
 
 #: src/Widgets/BatteryBox.vala:24
 msgid "Battery Levels"
-msgstr ""
+msgstr "バッテリー残量"
 
 #: src/Widgets/BatteryBox.vala:32
-#, fuzzy
-#| msgid "Show battery percentage in Panel:"
 msgid "Show Percentage In Panel"
-msgstr "バッテリーの割合をパネルに表示:"
+msgstr "パネルに割合を表示"
 
 #: src/Widgets/TimeoutComboBox.vala:99
 msgid "Never"
