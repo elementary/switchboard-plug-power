@@ -329,18 +329,16 @@ public class Power.MainView : Switchboard.SettingsPage {
         });
     }
 
-    public static Polkit.Permission? get_permission () {
+    public static async Polkit.Permission? get_permission () {
         if (permission != null) {
             return permission;
         }
 
         try {
-            permission = new Polkit.Permission.sync (
+            return yield new Polkit.Permission (
                 "io.elementary.settings.power.administration",
                 new Polkit.UnixProcess (Posix.getpid ())
             );
-
-            return permission;
         } catch (Error e) {
             critical (e.message);
             return null;
