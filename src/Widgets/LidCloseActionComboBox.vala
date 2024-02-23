@@ -69,6 +69,7 @@ class Power.LidCloseActionComboBox : Gtk.Widget {
                 );
             } catch (Error e) {
                 critical (e.message);
+                return false;
             }
         }
 
