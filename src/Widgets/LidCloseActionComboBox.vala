@@ -37,10 +37,7 @@ class Power.LidCloseActionComboBox : Gtk.Widget {
     }
 
     construct {
-        combobox = new Gtk.ComboBoxText () {
-            hexpand = true
-        };
-
+        combobox = new Gtk.ComboBoxText ();
         combobox.set_parent (this);
 
         var helper = LogindHelper.get_logind_helper ();
