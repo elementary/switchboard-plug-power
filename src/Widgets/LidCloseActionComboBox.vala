@@ -23,6 +23,8 @@ class Power.LidCloseActionComboBox : Gtk.Widget {
 
     public bool dock { get; construct; }
 
+    private static Polkit.Permission? permission = null;
+
     private Gtk.ComboBoxText combobox;
     private int previous_active;
 
@@ -56,14 +58,21 @@ class Power.LidCloseActionComboBox : Gtk.Widget {
 
     // Returns true on success
     private async bool set_active_with_permission (int index_) {
-        var permission = yield MainView.get_permission ();
         if (permission == null) {
-            return false;
+            try {
+                permission = yield new Polkit.Permission (
+                    "io.elementary.settings.power.administration",
+                    new Polkit.UnixProcess (Posix.getpid ())
+                );
+            } catch (Error e) {
+                critical (e.message);
+                return false;
+            }
         }
 
         if (!permission.allowed) {
             try {
-                permission.acquire ();
+                yield permission.acquire_async ();
             } catch (Error e) {
                 warning (e.message);
                 return false;

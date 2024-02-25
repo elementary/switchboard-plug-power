@@ -44,8 +44,6 @@ public class Power.MainView : Switchboard.SettingsPage {
         LOGOUT
     }
 
-    private static Polkit.Permission? permission = null;
-
     public MainView () {
         Object (
             title: _("Power"),
@@ -348,22 +346,6 @@ public class Power.MainView : Switchboard.SettingsPage {
                 map[powerbutton_dropdown.selected]
             );
         });
-    }
-
-    public static async Polkit.Permission? get_permission () {
-        if (permission != null) {
-            return permission;
-        }
-
-        try {
-            return yield new Polkit.Permission (
-                "io.elementary.settings.power.administration",
-                new Polkit.UnixProcess (Posix.getpid ())
-            );
-        } catch (Error e) {
-            critical (e.message);
-            return null;
-        }
     }
 
     private static bool backlight_detect () {
