@@ -69,18 +69,16 @@ namespace Power {
         // 'search' returns results like ("Keyboard → Behavior → Duration", "keyboard<sep>behavior")
         public override async Gee.TreeMap<string, string> search (string search) {
             var search_results = new Gee.TreeMap<string, string> ((GLib.CompareDataFunc<string>)strcmp, (Gee.EqualDataFunc<string>)str_equal);
-            search_results.set ("%s → %s".printf (display_name, _("Suspend button")), "");
-            search_results.set ("%s → %s".printf (display_name, _("Power Button Behavior")), "");
-            search_results.set ("%s → %s".printf (display_name, _("Display inactive")), "");
-            search_results.set ("%s → %s".printf (display_name, _("Dim display")), "");
-            search_results.set ("%s → %s".printf (display_name, _("Lid close")), "");
-            search_results.set ("%s → %s".printf (display_name, _("Display brightness")), "");
-            search_results.set ("%s → %s".printf (display_name, _("Automatic brightness adjustment")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Automatically Adjust Brightness")), "");
             search_results.set ("%s → %s".printf (display_name, _("Automatically Save Power")), "");
-            search_results.set ("%s → %s".printf (display_name, _("Inactive display off")), "");
-            search_results.set ("%s → %s".printf (display_name, _("Docked lid close")), "");
-            search_results.set ("%s → %s".printf (display_name, _("Sleep inactivity timeout")), "");
-            search_results.set ("%s → %s".printf (display_name, _("Suspend inactive")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Automatic Display Off")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Battery Level")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Dim Display")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Display Brightness")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Lid Close Behavior")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Lid Close With External Display")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Power Button Behavior")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Suspend When Inactive For")), "");
             return search_results;
         }
     }
