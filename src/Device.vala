@@ -49,6 +49,10 @@ public class Power.Device : Object {
         }
     }
 
+    /*
+    * Need to verify power-supply before considering it a laptop battery.
+    * Otherwise it will likely be the battery for a device of an unknown type.
+    */
     [CCode (type_signature = "u")]
     public enum Type {
         UNKNOWN = 0,
@@ -68,6 +72,7 @@ public class Power.Device : Object {
     }
 
     public string path { get; construct; }
+    public bool power_supply { get; private set; }
     public double percentage { get; private set; default = -1; }
     public State state { get; private set; default = UNKNOWN; }
     public Type device_type { get; private set; default = UNKNOWN; }
@@ -88,6 +93,7 @@ public class Power.Device : Object {
             );
 
             device_type = upower_device.device_type;
+            power_supply = upower_device.power_supply;
 
             update_properties ();
             upower_device.g_properties_changed.connect (update_properties);
@@ -99,5 +105,9 @@ public class Power.Device : Object {
     private void update_properties () {
         percentage = upower_device.percentage;
         state = upower_device.state;
+    }
+
+    public bool equal_func (Device other) {
+        return this == other || this.path == other.path;
     }
 }

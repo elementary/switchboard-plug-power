@@ -74,6 +74,7 @@ namespace Power {
             search_results.set ("%s → %s".printf (display_name, _("Automatically Save Power")), "");
             search_results.set ("%s → %s".printf (display_name, _("Automatic Display Off")), "");
             search_results.set ("%s → %s".printf (display_name, _("Battery Level")), "");
+            search_results.set ("%s → %s".printf (display_name, _("Dim Display")), "");
             search_results.set ("%s → %s".printf (display_name, _("Display Brightness")), "");
             search_results.set ("%s → %s".printf (display_name, _("Lid Close Behavior")), "");
             search_results.set ("%s → %s".printf (display_name, _("Lid Close With External Display")), "");

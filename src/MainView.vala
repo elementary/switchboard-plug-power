@@ -44,8 +44,6 @@ public class Power.MainView : Switchboard.SettingsPage {
         LOGOUT
     }
 
-    private static Polkit.Permission? permission = null;
-
     public MainView () {
         Object (
             title: _("Power"),
@@ -74,7 +72,7 @@ public class Power.MainView : Switchboard.SettingsPage {
 
         var box = new Gtk.Box (VERTICAL, 24);
 
-        if (power_manager.has_battery ()) {
+        if (power_manager.batteries.n_items > 0) {
             var battery_box = new BatteryBox () {
                 margin_bottom = 12
             };
@@ -271,7 +269,7 @@ public class Power.MainView : Switchboard.SettingsPage {
             }
         }
 
-        if (power_manager.has_battery ()) {
+        if (power_manager.batteries.n_items > 0) {
             var battery_timeout_label = new Gtk.Label (_("Suspend When Inactive For")) {
                 xalign = 0
             };
@@ -363,24 +361,6 @@ public class Power.MainView : Switchboard.SettingsPage {
                 map[powerbutton_dropdown.selected]
             );
         });
-    }
-
-    public static Polkit.Permission? get_permission () {
-        if (permission != null) {
-            return permission;
-        }
-
-        try {
-            permission = new Polkit.Permission.sync (
-                "io.elementary.settings.power.administration",
-                new Polkit.UnixProcess (Posix.getpid ())
-            );
-
-            return permission;
-        } catch (Error e) {
-            critical (e.message);
-            return null;
-        }
     }
 
     private static bool backlight_detect () {

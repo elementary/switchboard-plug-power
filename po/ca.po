@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-13 10:52+0000\n"
-"PO-Revision-Date: 2024-02-09 15:13+0000\n"
+"PO-Revision-Date: 2024-02-14 17:17+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "power/ca/>\n"
@@ -30,31 +30,31 @@ msgstr "Cal autenticació per gestionar els paràmetres de l'energia."
 
 #: src/Device.vala:35
 msgid "Charging"
-msgstr ""
+msgstr "Es carrega"
 
 #: src/Device.vala:37
 msgid "Using battery power"
-msgstr ""
+msgstr "S'usa la bateria"
 
 #: src/Device.vala:39
 msgid "Empty"
-msgstr ""
+msgstr "Buida"
 
 #: src/Device.vala:41
 msgid "Fully charged"
-msgstr ""
+msgstr "Carregada"
 
 #: src/Device.vala:43
 msgid "Waiting to charge"
-msgstr ""
+msgstr "S'espera per carregar"
 
 #: src/Device.vala:45
 msgid "Waiting to use battery power"
-msgstr ""
+msgstr "S'espera per usar la bateria"
 
 #: src/Device.vala:47
 msgid "Unknown"
-msgstr ""
+msgstr "Desconegut"
 
 #: src/MainView.vala:51 src/Plug.vala:35
 msgid "Power"
@@ -90,16 +90,12 @@ msgid "Suspend"
 msgstr "Suspèn"
 
 #: src/MainView.vala:165
-#, fuzzy
-#| msgid "Prompt to shutdown"
 msgid "Ask to shutdown"
-msgstr "Suggereix l'aturada"
+msgstr "Demana l'aturada"
 
 #: src/MainView.vala:170 src/Plug.vala:73
-#, fuzzy
-#| msgid "Power button"
 msgid "Power Button Behavior"
-msgstr "Botó d'engegada"
+msgstr "Comportament del botó d'engegada"
 
 #: src/MainView.vala:181 src/MainView.vala:220
 msgid "Suspend when inactive for:"
@@ -110,14 +106,12 @@ msgid "Plugged In"
 msgstr "Endollat"
 
 #: src/MainView.vala:250 src/Plug.vala:79
-#, fuzzy
-#| msgid "Automatically adjust brightness:"
 msgid "Automatically Save Power"
-msgstr "Ajusta automàticament la brillantor:"
+msgstr "Estalvia bateria automàticament"
 
 #: src/MainView.vala:252
 msgid "Power Saver mode will be used when battery is low"
-msgstr ""
+msgstr "L'estalvi de bateria s'usarà quan la bateria estigui baixa."
 
 #: src/MainView.vala:258
 msgid "On Battery"
@@ -174,20 +168,16 @@ msgid "Suspend inactive"
 msgstr "Aturada temporal inactiva"
 
 #: src/Widgets/BatteryBox.vala:23
-#, fuzzy
-#| msgid "On Battery"
 msgid "Battery Level"
-msgstr "Amb la bateria"
+msgstr "Nivell de la bateria"
 
 #: src/Widgets/BatteryBox.vala:24
 msgid "Battery Levels"
-msgstr ""
+msgstr "Nivells de bateria"
 
 #: src/Widgets/BatteryBox.vala:32
-#, fuzzy
-#| msgid "Show battery percentage in Panel:"
 msgid "Show Percentage In Panel"
-msgstr "Mostra el percentatge de la bateria al plafó:"
+msgstr "Mostra el percentatge de la bateria al plafó."
 
 #: src/Widgets/TimeoutComboBox.vala:99
 msgid "Never"
@@ -238,10 +228,8 @@ msgid "Not supported"
 msgstr "No s'admet"
 
 #: src/Widgets/PowerModeButton.vala:60
-#, fuzzy
-#| msgid "Power Saver"
 msgid "Power Mode"
-msgstr "Estalvi d'energia"
+msgstr "Mode d'energia"
 
 #: src/Widgets/PowerModeButton.vala:68
 msgid "Power Saver"
