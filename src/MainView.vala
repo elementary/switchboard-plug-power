@@ -74,7 +74,8 @@ public class Power.MainView : Switchboard.SettingsPage {
 
         if (power_manager.batteries.n_items > 0) {
             var battery_box = new BatteryBox () {
-                margin_bottom = 12            };
+                margin_bottom = 12
+            };
 
             box.append (battery_box);
         }
