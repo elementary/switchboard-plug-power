@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-13 10:52+0000\n"
-"PO-Revision-Date: 2024-02-02 22:42+0000\n"
+"PO-Revision-Date: 2024-02-21 09:10+0000\n"
 "Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "switchboard/power/en_GB/>\n"
@@ -30,31 +30,31 @@ msgstr "Authentication is required to manage power settings"
 
 #: src/Device.vala:35
 msgid "Charging"
-msgstr ""
+msgstr "Charging"
 
 #: src/Device.vala:37
 msgid "Using battery power"
-msgstr ""
+msgstr "Using battery power"
 
 #: src/Device.vala:39
 msgid "Empty"
-msgstr ""
+msgstr "Empty"
 
 #: src/Device.vala:41
 msgid "Fully charged"
-msgstr ""
+msgstr "Fully charged"
 
 #: src/Device.vala:43
 msgid "Waiting to charge"
-msgstr ""
+msgstr "Waiting to charge"
 
 #: src/Device.vala:45
 msgid "Waiting to use battery power"
-msgstr ""
+msgstr "Waiting to use battery power"
 
 #: src/Device.vala:47
 msgid "Unknown"
-msgstr ""
+msgstr "Unknown"
 
 #: src/MainView.vala:51 src/Plug.vala:35
 msgid "Power"
@@ -90,16 +90,12 @@ msgid "Suspend"
 msgstr "Suspend"
 
 #: src/MainView.vala:165
-#, fuzzy
-#| msgid "Prompt to shutdown"
 msgid "Ask to shutdown"
-msgstr "Prompt to shutdown"
+msgstr "Ask to shutdown"
 
 #: src/MainView.vala:170 src/Plug.vala:73
-#, fuzzy
-#| msgid "Power button"
 msgid "Power Button Behavior"
-msgstr "Power button"
+msgstr "Power Button Behaviour"
 
 #: src/MainView.vala:181 src/MainView.vala:220
 msgid "Suspend when inactive for:"
@@ -110,14 +106,12 @@ msgid "Plugged In"
 msgstr "Plugged In"
 
 #: src/MainView.vala:250 src/Plug.vala:79
-#, fuzzy
-#| msgid "Automatically adjust brightness:"
 msgid "Automatically Save Power"
-msgstr "Automatically adjust brightness:"
+msgstr "Automatically Save Power"
 
 #: src/MainView.vala:252
 msgid "Power Saver mode will be used when battery is low"
-msgstr ""
+msgstr "Power Saver mode will be used when battery is low"
 
 #: src/MainView.vala:258
 msgid "On Battery"
@@ -172,20 +166,16 @@ msgid "Suspend inactive"
 msgstr "Suspend inactive"
 
 #: src/Widgets/BatteryBox.vala:23
-#, fuzzy
-#| msgid "On Battery"
 msgid "Battery Level"
-msgstr "On Battery"
+msgstr "Battery Level"
 
 #: src/Widgets/BatteryBox.vala:24
 msgid "Battery Levels"
-msgstr ""
+msgstr "Battery Levels"
 
 #: src/Widgets/BatteryBox.vala:32
-#, fuzzy
-#| msgid "Show battery percentage in Panel:"
 msgid "Show Percentage In Panel"
-msgstr "Show battery percentage in Panel:"
+msgstr "Show Percentage In Panel"
 
 #: src/Widgets/TimeoutComboBox.vala:99
 msgid "Never"
@@ -236,10 +226,8 @@ msgid "Not supported"
 msgstr "Not supported"
 
 #: src/Widgets/PowerModeButton.vala:60
-#, fuzzy
-#| msgid "Power Saver"
 msgid "Power Mode"
-msgstr "Power Saver"
+msgstr "Power Mode"
 
 #: src/Widgets/PowerModeButton.vala:68
 msgid "Power Saver"

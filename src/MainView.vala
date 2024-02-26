@@ -44,8 +44,6 @@ public class Power.MainView : Switchboard.SettingsPage {
         LOGOUT
     }
 
-    private static Polkit.Permission? permission = null;
-
     public MainView () {
         Object (
             title: _("Power"),
@@ -72,23 +70,30 @@ public class Power.MainView : Switchboard.SettingsPage {
             warning ("Failed to get settings daemon for brightness setting");
         }
 
-        var main_grid = new Gtk.Grid () {
-            column_spacing = 12,
-            row_spacing = 12
+        var box = new Gtk.Box (VERTICAL, 24);
+
+        if (power_manager.batteries.n_items > 0) {
+            var battery_box = new BatteryBox () {
+                margin_bottom = 12
+            };
+
+            box.append (battery_box);
+        }
+
+        var devices_box = new DevicesBox () {
+            margin_bottom = 12
         };
 
+        box.append (devices_box);
+
         if (backlight_detect ()) {
-            var brightness_label = new Gtk.Label (_("Display brightness:")) {
-                halign = Gtk.Align.END,
-                xalign = 1
-            };
-
-            var als_label = new Gtk.Label (_("Automatically adjust brightness:")) {
-                xalign = 1
-            };
-
             var als_switch = new Gtk.Switch () {
-                halign = Gtk.Align.START
+                halign = END
+            };
+
+            var als_label = new Gtk.Label (_("Automatically Adjust Brightness")) {
+                mnemonic_widget = als_switch,
+                xalign = 0
             };
 
             settings.bind ("ambient-enabled", als_switch, "active", SettingsBindFlags.DEFAULT);
@@ -118,45 +123,82 @@ public class Power.MainView : Switchboard.SettingsPage {
             scale.value_changed.connect (on_scale_value_changed);
             ((DBusProxy)screen).g_properties_changed.connect (on_screen_properties_changed);
 
-            main_grid.attach (brightness_label, 0, 1);
-            main_grid.attach (scale, 1, 1);
-            main_grid.attach (als_label, 0, 2);
-            main_grid.attach (als_switch, 1, 2);
+            var brightness_label = new Gtk.Label (_("Display Brightness")) {
+                mnemonic_widget = scale,
+                xalign = 0
+            };
+
+            var brightness_grid = new Gtk.Grid () {
+                column_spacing = 12,
+                row_spacing = 12
+            };
+            brightness_grid.attach (brightness_label, 0, 0);
+            brightness_grid.attach (scale, 1, 0);
+            brightness_grid.attach (als_label, 0, 1);
+            brightness_grid.attach (als_switch, 1, 1);
+
+            box.append (brightness_grid);
 
             label_size.add_widget (brightness_label);
             label_size.add_widget (als_label);
         }
 
         if (power_manager.has_lid ()) {
-            var lid_closed_label = new Gtk.Label (_("When lid is closed:")) {
-                halign = Gtk.Align.END,
-                xalign = 1
+            var infobar_label = new Gtk.Label (_("Some changes will not take effect until you restart this computer"));
+
+            var infobar = new Gtk.InfoBar () {
+                message_type = WARNING,
+                revealed = false
+            };
+            infobar.add_child (infobar_label);
+            infobar.add_css_class (Granite.STYLE_CLASS_FRAME);
+
+            var lid_closed_label = new Gtk.Label (_("Lid Close Behavior")) {
+                xalign = 0
             };
 
-            var lid_closed_box = new LidCloseActionComboBox (false);
-
-            var lid_dock_label = new Gtk.Label (_("When lid is closed with external monitor:")) {
-                halign = Gtk.Align.END,
-                xalign = 1
+            var lid_closed_box = new LidCloseActionComboBox (false) {
+                hexpand = true
             };
 
-            var lid_dock_box = new LidCloseActionComboBox (true);
+            var lid_dock_label = new Gtk.Label (_("Lid Close With External Display")) {
+                xalign = 0
+            };
+
+            var lid_dock_box = new LidCloseActionComboBox (true) {
+                hexpand = true
+            };
 
             label_size.add_widget (lid_closed_label);
             label_size.add_widget (lid_dock_label);
 
-            main_grid.attach (lid_closed_label, 0, 6);
-            main_grid.attach (lid_closed_box, 1, 6);
-            main_grid.attach (lid_dock_label, 0, 7);
-            main_grid.attach (lid_dock_box, 1, 7);
+            var lid_close_grid = new Gtk.Grid () {
+                row_spacing = 12,
+                column_spacing = 12
+            };
+            lid_close_grid.attach (lid_closed_label, 0, 0);
+            lid_close_grid.attach (lid_closed_box, 1, 0);
+            lid_close_grid.attach (lid_dock_label, 0, 1);
+            lid_close_grid.attach (lid_dock_box, 1, 1);
+            lid_close_grid.attach (infobar, 0, 2, 2);
+
+            box.append (lid_close_grid);
+
+            var helper = LogindHelper.get_logind_helper ();
+            if (helper != null) {
+                helper.changed.connect (() => {
+                    infobar.revealed = true;
+                });
+            }
         }
 
-        var screen_timeout_label = new Gtk.Label (_("Turn off display when inactive for:")) {
-            halign = Gtk.Align.END,
-            xalign = 1
+        var screen_timeout_label = new Gtk.Label (_("Automatic Display Off")) {
+            xalign = 0
         };
 
-        var screen_timeout = new TimeoutComboBox (new GLib.Settings ("org.gnome.desktop.session"), "idle-delay");
+        var screen_timeout = new TimeoutComboBox (new GLib.Settings ("org.gnome.desktop.session"), "idle-delay") {
+            hexpand = true
+        };
 
         // FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
         powerbutton_dropdown = new Gtk.DropDown.from_strings ({
@@ -168,24 +210,28 @@ public class Power.MainView : Switchboard.SettingsPage {
         };
 
         var powerbutton_label = new Gtk.Label (_("Power Button Behavior")) {
-            halign = Gtk.Align.END,
-            xalign = 1,
-            mnemonic_widget = powerbutton_dropdown
+            mnemonic_widget = powerbutton_dropdown,
+            xalign = 0
         };
 
+        var main_grid = new Gtk.Grid () {
+            column_spacing = 12,
+            row_spacing = 12
+        };
         main_grid.attach (screen_timeout_label, 0, 4);
         main_grid.attach (screen_timeout, 1, 4);
         main_grid.attach (powerbutton_label, 0, 5);
         main_grid.attach (powerbutton_dropdown, 1, 5);
 
-        var sleep_timeout_label = new Gtk.Label (_("Suspend when inactive for:")) {
-            xalign = 1
+        var sleep_timeout_label = new Gtk.Label (_("Suspend When Inactive For")) {
+            xalign = 0
         };
 
         var sleep_timeout = new TimeoutComboBox (settings, "sleep-inactive-ac-timeout") {
             enum_property = "sleep-inactive-ac-type",
             enum_never_value = PowerActionType.NOTHING,
-            enum_normal_value = PowerActionType.SUSPEND
+            enum_normal_value = PowerActionType.SUSPEND,
+            hexpand = true
         };
 
         var ac_grid = new Gtk.Grid () {
@@ -217,15 +263,16 @@ public class Power.MainView : Switchboard.SettingsPage {
         }
 
         if (power_manager.batteries.n_items > 0) {
-            var battery_timeout_label = new Gtk.Label (_("Suspend when inactive for:")) {
-                xalign = 1
+            var battery_timeout_label = new Gtk.Label (_("Suspend When Inactive For")) {
+                xalign = 0
             };
             label_size.add_widget (battery_timeout_label);
 
             var battery_timeout = new TimeoutComboBox (settings, "sleep-inactive-battery-timeout") {
                 enum_property = "sleep-inactive-battery-type",
                 enum_never_value = PowerActionType.NOTHING,
-                enum_normal_value = PowerActionType.SUSPEND
+                enum_normal_value = PowerActionType.SUSPEND,
+                  hexpand = true
             };
 
             var battery_grid = new Gtk.Grid () {
@@ -248,12 +295,16 @@ public class Power.MainView : Switchboard.SettingsPage {
             settings.bind ("power-saver-profile-on-low-battery", auto_low_power_switch, "active", DEFAULT);
 
             var auto_low_power_label = new Granite.HeaderLabel (_("Automatically Save Power")) {
+                hexpand = true,
                 mnemonic_widget = auto_low_power_switch,
                 secondary_text = _("Power Saver mode will be used when battery is low")
             };
 
-            battery_grid.attach (auto_low_power_label, 0, 3);
-            battery_grid.attach (auto_low_power_switch, 1, 3);
+            var auto_low_power_box = new Gtk.Box (HORIZONTAL, 12);
+            auto_low_power_box.append (auto_low_power_label);
+            auto_low_power_box.append (auto_low_power_switch);
+
+            battery_grid.attach (auto_low_power_box, 0, 3, 2);
 
             stack.add_titled (battery_grid, "battery", _("On Battery"));
 
@@ -280,38 +331,6 @@ public class Power.MainView : Switchboard.SettingsPage {
 
         main_grid.attach (stack, 0, 9, 2);
 
-        var infobar_label = new Gtk.Label (_("Some changes will not take effect until you restart this computer"));
-
-        var infobar = new Gtk.InfoBar () {
-            message_type = Gtk.MessageType.WARNING,
-            revealed = false
-        };
-        infobar.add_child (infobar_label);
-        infobar.add_css_class (Granite.STYLE_CLASS_FRAME);
-
-        var helper = LogindHelper.get_logind_helper ();
-        if (helper != null) {
-            helper.changed.connect (() => {
-                infobar.revealed = true;
-            });
-        }
-
-        var box = new Gtk.Box (VERTICAL, 12);
-        box.append (infobar);
-
-        if (power_manager.batteries.n_items > 0) {
-            var battery_box = new BatteryBox () {
-                margin_bottom = 12
-            };
-
-            box.append (battery_box);
-        }
-
-        var devices_box = new DevicesBox () {
-            margin_bottom = 12
-        };
-
-        box.append (devices_box);
         box.append (main_grid);
 
         child = box;
@@ -333,24 +352,6 @@ public class Power.MainView : Switchboard.SettingsPage {
                 map[powerbutton_dropdown.selected]
             );
         });
-    }
-
-    public static Polkit.Permission? get_permission () {
-        if (permission != null) {
-            return permission;
-        }
-
-        try {
-            permission = new Polkit.Permission.sync (
-                "io.elementary.settings.power.administration",
-                new Polkit.UnixProcess (Posix.getpid ())
-            );
-
-            return permission;
-        } catch (Error e) {
-            critical (e.message);
-            return null;
-        }
     }
 
     private static bool backlight_detect () {
