@@ -25,8 +25,8 @@ class Power.LidCloseActionComboBox : Gtk.Widget {
 
     private static Polkit.Permission? permission = null;
 
-    private Gtk.ComboBoxText combobox;
-    private int previous_active;
+    private Gtk.DropDown dropdown;
+    private uint previous_active;
 
     public LidCloseActionComboBox (bool dock) {
         Object (dock: dock);
@@ -37,27 +37,32 @@ class Power.LidCloseActionComboBox : Gtk.Widget {
     }
 
     construct {
-        combobox = new Gtk.ComboBoxText ();
-        combobox.set_parent (this);
+        dropdown = new Gtk.DropDown (null, null) {
+            hexpand = true
+        };
+        dropdown.set_parent (this);
 
         var helper = LogindHelper.get_logind_helper ();
         if (helper != null && helper.present) {
-            combobox.append_text (_("Suspend"));
-            combobox.append_text (_("Shutdown"));
-            combobox.append_text (_("Lock"));
-            combobox.append_text (_("Halt"));
-            combobox.append_text (_("Do nothing"));
+            dropdown.model = new Gtk.StringList ({
+                _("Suspend"),
+                _("Shutdown"),
+                _("Lock"),
+                _("Halt"),
+                _("Do nothing")
+            });
         } else {
-            combobox.append_text (_("Not supported"));
+            dropdown.model = new Gtk.StringList ({_("Not supported")});
+            dropdown.sensitive = false;
         }
 
         update_current_action ();
-        previous_active = combobox.active;
-        combobox.changed.connect (on_changed);
+        previous_active = dropdown.selected;
+        dropdown.notify["selected"].connect (on_changed);
     }
 
     // Returns true on success
-    private async bool set_active_with_permission (int index_) {
+    private async bool set_active_with_permission (uint index_) {
         if (permission == null) {
             try {
                 permission = yield new Polkit.Permission (
@@ -79,8 +84,8 @@ class Power.LidCloseActionComboBox : Gtk.Widget {
             }
         }
 
-        previous_active = combobox.active;
-        combobox.active = index_;
+        previous_active = dropdown.selected;
+        dropdown.selected = index_;
 
         var helper = LogindHelper.get_logind_helper ();
         if (helper == null) {
@@ -102,13 +107,13 @@ class Power.LidCloseActionComboBox : Gtk.Widget {
     }
 
     private void on_changed () {
-        if (combobox.active == previous_active) {
+        if (dropdown.selected == previous_active) {
             return;
         }
 
-        set_active_with_permission.begin (combobox.active, (obj, res) => {
+        set_active_with_permission.begin (dropdown.selected, (obj, res) => {
             if (!set_active_with_permission.end (res)) {
-                combobox.active = previous_active;
+                dropdown.selected = previous_active;
             }
         });
     }
@@ -142,7 +147,7 @@ class Power.LidCloseActionComboBox : Gtk.Widget {
     }
 
     private LogindHelper.Action get_action () {
-        switch (combobox.active) {
+        switch (dropdown.selected) {
             case 0:
                 return LogindHelper.Action.SUSPEND;
             case 1:
@@ -161,19 +166,19 @@ class Power.LidCloseActionComboBox : Gtk.Widget {
     private void set_active_item (LogindHelper.Action action) {
         switch (action) {
             case LogindHelper.Action.SUSPEND:
-                combobox.active = 0;
+                dropdown.selected = 0;
                 break;
             case LogindHelper.Action.POWEROFF:
-                combobox.active = 1;
+                dropdown.selected = 1;
                 break;
             case LogindHelper.Action.LOCK:
-                combobox.active = 2;
+                dropdown.selected = 2;
                 break;
             case LogindHelper.Action.HALT:
-                combobox.active = 3;
+                dropdown.selected = 3;
                 break;
             case LogindHelper.Action.IGNORE:
-                combobox.active = 4;
+                dropdown.selected = 4;
                 break;
             default:
                 break;
