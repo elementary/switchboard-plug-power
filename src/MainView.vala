@@ -80,7 +80,7 @@ public class Power.MainView : Switchboard.SettingsPage {
             box.append (battery_box);
         }
 
-        if (backlight_detect ()) {
+        if (screen.brightness != -1) {
             var als_switch = new Gtk.Switch () {
                 halign = END
             };
@@ -346,28 +346,6 @@ public class Power.MainView : Switchboard.SettingsPage {
                 map[powerbutton_dropdown.selected]
             );
         });
-    }
-
-    private static bool backlight_detect () {
-        var interface_path = File.new_for_path ("/sys/class/backlight/");
-
-        try {
-            var enumerator = interface_path.enumerate_children (
-            GLib.FileAttribute.STANDARD_NAME,
-            FileQueryInfoFlags.NONE);
-            FileInfo backlight;
-            if ((backlight = enumerator.next_file ()) != null) {
-                debug ("Detected backlight interface");
-                return true;
-            }
-
-        enumerator.close ();
-
-        } catch (GLib.Error err) {
-            critical (err.message);
-        }
-
-        return false;
     }
 
     private void on_scale_value_changed () {
