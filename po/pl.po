@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-13 10:52+0000\n"
+"POT-Creation-Date: 2024-03-21 16:33+0000\n"
 "PO-Revision-Date: 2024-02-21 09:10+0000\n"
 "Last-Translator: Sebastian Bernat <srakap330@gmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/power/"
@@ -57,175 +57,149 @@ msgstr "Czekanie, aby użyć energii z baterii"
 msgid "Unknown"
 msgstr "Nieznane"
 
-#: src/MainView.vala:51 src/Plug.vala:35
+#: src/MainView.vala:49 src/Plug.vala:36
 msgid "Power"
 msgstr "Zasilanie"
 
-#: src/MainView.vala:81
-msgid "Display brightness:"
-msgstr "Jasność ekranu:"
-
-#: src/MainView.vala:86
-msgid "Automatically adjust brightness:"
+#: src/MainView.vala:88 src/Plug.vala:86
+#, fuzzy
+#| msgid "Automatically adjust brightness:"
+msgid "Automatically Adjust Brightness"
 msgstr "Automatyczne dostosowanie jasności:"
 
-#: src/MainView.vala:131
-msgid "When lid is closed:"
-msgstr "Gdy pokrywa jest zamknięta:"
+#: src/MainView.vala:120 src/Plug.vala:91
+#, fuzzy
+#| msgid "Display brightness"
+msgid "Display Brightness"
+msgstr "Jasność wyświetlacza"
 
-#: src/MainView.vala:138
-msgid "When lid is closed with external monitor:"
-msgstr "Kiedy pokrywa jest zamknięta z zewnętrznym monitorem:"
-
-#: src/MainView.vala:154
-msgid "Turn off display when inactive for:"
-msgstr "Wyłącz ekran, gdy bezczynny przez:"
-
-#. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
-#: src/MainView.vala:163 src/Widgets/LidCloseActionComboBox.vala:50
-msgid "Do nothing"
-msgstr "Brak czynności"
-
-#: src/MainView.vala:164 src/Widgets/LidCloseActionComboBox.vala:46
-msgid "Suspend"
-msgstr "Uśpij"
-
-#: src/MainView.vala:165
-msgid "Ask to shutdown"
-msgstr "Zapytaj aby wyłączyć"
-
-#: src/MainView.vala:170 src/Plug.vala:73
-msgid "Power Button Behavior"
-msgstr "Zachowanie przycisku zasilania"
-
-#: src/MainView.vala:181 src/MainView.vala:220
-msgid "Suspend when inactive for:"
-msgstr "Uśpienie, gdy nieaktywność przez:"
-
-#: src/MainView.vala:205
-msgid "Plugged In"
-msgstr "Zasilacz sieciowy"
-
-#: src/MainView.vala:250 src/Plug.vala:79
-msgid "Automatically Save Power"
-msgstr "Automatycznie oszczędzaj energie"
-
-#: src/MainView.vala:252
-msgid "Power Saver mode will be used when battery is low"
-msgstr ""
-"Tryb oszczędzania baterii będzie używany, gdy poziom baterii będzie niski"
-
-#: src/MainView.vala:258
-msgid "On Battery"
-msgstr "Na baterii"
-
-#: src/MainView.vala:283
+#: src/MainView.vala:141
 msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
 "Niektóre ustawienia zaczną obowiązywać po ponownym uruchomieniu komputera"
 
-#: src/Plug.vala:36
+#: src/MainView.vala:150 src/Plug.vala:92
+msgid "Lid Close Behavior"
+msgstr ""
+
+#: src/MainView.vala:158 src/Plug.vala:93
+msgid "Lid Close With External Display"
+msgstr ""
+
+#: src/MainView.vala:189 src/Plug.vala:88
+#, fuzzy
+#| msgid "Inactive display off"
+msgid "Automatic Display Off"
+msgstr "Wyłączenie czasu nieaktywności ekranu"
+
+#. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
+#: src/MainView.vala:199 src/Widgets/LidCloseActionComboBox.vala:52
+msgid "Do nothing"
+msgstr "Brak czynności"
+
+#: src/MainView.vala:200 src/Widgets/LidCloseActionComboBox.vala:48
+msgid "Suspend"
+msgstr "Uśpij"
+
+#: src/MainView.vala:201
+msgid "Ask to shutdown"
+msgstr "Zapytaj aby wyłączyć"
+
+#: src/MainView.vala:206 src/Plug.vala:94
+msgid "Power Button Behavior"
+msgstr "Zachowanie przycisku zasilania"
+
+#: src/MainView.vala:220 src/MainView.vala:260 src/Plug.vala:95
+#, fuzzy
+#| msgid "Suspend when inactive for:"
+msgid "Suspend When Inactive For"
+msgstr "Uśpienie, gdy nieaktywność przez:"
+
+#: src/MainView.vala:245
+msgid "Plugged In"
+msgstr "Zasilacz sieciowy"
+
+#: src/MainView.vala:291 src/Plug.vala:87
+msgid "Automatically Save Power"
+msgstr "Automatycznie oszczędzaj energie"
+
+#: src/MainView.vala:294
+msgid "Power Saver mode will be used when battery is low"
+msgstr ""
+"Tryb oszczędzania baterii będzie używany, gdy poziom baterii będzie niski"
+
+#: src/MainView.vala:303
+msgid "On Battery"
+msgstr "Na baterii"
+
+#: src/Plug.vala:37
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr ""
 "Konfiguruj jasność ekranu, zachowanie przycisków zasilania i trybu usypiania"
 
-#: src/Plug.vala:72
-msgid "Suspend button"
-msgstr "Przycisk uśpienia"
-
-#: src/Plug.vala:74
-msgid "Display inactive"
-msgstr "Nieaktywność wyświetlacza"
-
-#: src/Plug.vala:75
-msgid "Dim display"
-msgstr "Przyciemnienie ekranu"
-
-#: src/Plug.vala:76
-msgid "Lid close"
-msgstr "Zamknięcie pokrywy"
-
-#: src/Plug.vala:77
-msgid "Display brightness"
-msgstr "Jasność wyświetlacza"
-
-#: src/Plug.vala:78
-msgid "Automatic brightness adjustment"
-msgstr "Automatyczne dostosowanie jasności"
-
-#: src/Plug.vala:80
-msgid "Inactive display off"
-msgstr "Wyłączenie czasu nieaktywności ekranu"
-
-#: src/Plug.vala:81
-msgid "Docked lid close"
-msgstr "Zamknięcie pokrywy w doku"
-
-#: src/Plug.vala:82
-msgid "Sleep inactivity timeout"
-msgstr "Limit czasu nieaktywności uśpienia"
-
-#: src/Plug.vala:83
-msgid "Suspend inactive"
-msgstr "Nieaktywność usypiania"
-
-#: src/Widgets/BatteryBox.vala:23
+#: src/Plug.vala:89 src/Widgets/BatteryBox.vala:21
 msgid "Battery Level"
 msgstr "Poziom naładowania baterii"
 
-#: src/Widgets/BatteryBox.vala:24
+#: src/Plug.vala:90
+#, fuzzy
+#| msgid "Dim display"
+msgid "Dim Display"
+msgstr "Przyciemnienie ekranu"
+
+#: src/Widgets/BatteryBox.vala:22
 msgid "Battery Levels"
 msgstr "Poziomy naładowania baterii"
 
-#: src/Widgets/BatteryBox.vala:32
+#: src/Widgets/BatteryBox.vala:30
 msgid "Show Percentage In Panel"
 msgstr "Pokaż procent naładowania baterii w panelu"
 
-#: src/Widgets/TimeoutComboBox.vala:99
+#: src/Widgets/TimeoutComboBox.vala:97
 msgid "Never"
 msgstr "Nigdy"
 
-#: src/Widgets/TimeoutComboBox.vala:100
+#: src/Widgets/TimeoutComboBox.vala:98
 msgid "5 min"
 msgstr "5 minut"
 
-#: src/Widgets/TimeoutComboBox.vala:101
+#: src/Widgets/TimeoutComboBox.vala:99
 msgid "10 min"
 msgstr "10 minut"
 
-#: src/Widgets/TimeoutComboBox.vala:102
+#: src/Widgets/TimeoutComboBox.vala:100
 msgid "15 min"
 msgstr "15 minut"
 
-#: src/Widgets/TimeoutComboBox.vala:103
+#: src/Widgets/TimeoutComboBox.vala:101
 msgid "30 min"
 msgstr "30 minut"
 
-#: src/Widgets/TimeoutComboBox.vala:104
+#: src/Widgets/TimeoutComboBox.vala:102
 msgid "45 min"
 msgstr "45 minut"
 
-#: src/Widgets/TimeoutComboBox.vala:105
+#: src/Widgets/TimeoutComboBox.vala:103
 msgid "1 hour"
 msgstr "1 godzina"
 
-#: src/Widgets/TimeoutComboBox.vala:106
+#: src/Widgets/TimeoutComboBox.vala:104
 msgid "2 hours"
 msgstr "2 godziny"
 
-#: src/Widgets/LidCloseActionComboBox.vala:47
+#: src/Widgets/LidCloseActionComboBox.vala:49
 msgid "Shutdown"
 msgstr "Wyłączenie"
 
-#: src/Widgets/LidCloseActionComboBox.vala:48
+#: src/Widgets/LidCloseActionComboBox.vala:50
 msgid "Lock"
 msgstr "Zablokuj"
 
-#: src/Widgets/LidCloseActionComboBox.vala:49
+#: src/Widgets/LidCloseActionComboBox.vala:51
 msgid "Halt"
 msgstr "Wstrzymaj"
 
-#: src/Widgets/LidCloseActionComboBox.vala:52
+#: src/Widgets/LidCloseActionComboBox.vala:55
 msgid "Not supported"
 msgstr "Nieobsługiwane"
 
@@ -244,6 +218,39 @@ msgstr "Zrównoważony"
 #: src/Widgets/PowerModeButton.vala:98
 msgid "Performance"
 msgstr "Wydajność"
+
+#~ msgid "Display brightness:"
+#~ msgstr "Jasność ekranu:"
+
+#~ msgid "When lid is closed:"
+#~ msgstr "Gdy pokrywa jest zamknięta:"
+
+#~ msgid "When lid is closed with external monitor:"
+#~ msgstr "Kiedy pokrywa jest zamknięta z zewnętrznym monitorem:"
+
+#~ msgid "Turn off display when inactive for:"
+#~ msgstr "Wyłącz ekran, gdy bezczynny przez:"
+
+#~ msgid "Suspend button"
+#~ msgstr "Przycisk uśpienia"
+
+#~ msgid "Display inactive"
+#~ msgstr "Nieaktywność wyświetlacza"
+
+#~ msgid "Lid close"
+#~ msgstr "Zamknięcie pokrywy"
+
+#~ msgid "Automatic brightness adjustment"
+#~ msgstr "Automatyczne dostosowanie jasności"
+
+#~ msgid "Docked lid close"
+#~ msgstr "Zamknięcie pokrywy w doku"
+
+#~ msgid "Sleep inactivity timeout"
+#~ msgstr "Limit czasu nieaktywności uśpienia"
+
+#~ msgid "Suspend inactive"
+#~ msgstr "Nieaktywność usypiania"
 
 #~ msgid "Power button:"
 #~ msgstr "Przycisk zasilania:"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-13 10:52+0000\n"
+"POT-Creation-Date: 2024-03-21 16:33+0000\n"
 "PO-Revision-Date: 2024-02-09 15:13+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
@@ -56,185 +56,156 @@ msgstr ""
 msgid "Unknown"
 msgstr ""
 
-#: src/MainView.vala:51 src/Plug.vala:35
+#: src/MainView.vala:49 src/Plug.vala:36
 msgid "Power"
 msgstr "Strøm"
 
-#: src/MainView.vala:81
-msgid "Display brightness:"
-msgstr "Lysstyrke på skjerm:"
-
-#: src/MainView.vala:86
-msgid "Automatically adjust brightness:"
+#: src/MainView.vala:88 src/Plug.vala:86
+#, fuzzy
+#| msgid "Automatically adjust brightness:"
+msgid "Automatically Adjust Brightness"
 msgstr "Juster lysstyrken automatisk:"
 
-#: src/MainView.vala:131
-msgid "When lid is closed:"
-msgstr "Når lokket lukkes:"
+#: src/MainView.vala:120 src/Plug.vala:91
+#, fuzzy
+#| msgid "Display brightness"
+msgid "Display Brightness"
+msgstr "Skjermlysstyrke"
 
-#: src/MainView.vala:138
-msgid "When lid is closed with external monitor:"
-msgstr "Når lokket lukkes med ekstern skjerm:"
+#: src/MainView.vala:141
+msgid "Some changes will not take effect until you restart this computer"
+msgstr "Noen endringer trår ikke i kraft før omstart av maskinen"
 
-#: src/MainView.vala:154
-msgid "Turn off display when inactive for:"
-msgstr "Skru av skjerm når inaktiv i:"
+#: src/MainView.vala:150 src/Plug.vala:92
+msgid "Lid Close Behavior"
+msgstr ""
+
+#: src/MainView.vala:158 src/Plug.vala:93
+msgid "Lid Close With External Display"
+msgstr ""
+
+#: src/MainView.vala:189 src/Plug.vala:88
+#, fuzzy
+#| msgid "Inactive display off"
+msgid "Automatic Display Off"
+msgstr "Avslag av inaktiv skjerm"
 
 #. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
-#: src/MainView.vala:163 src/Widgets/LidCloseActionComboBox.vala:50
+#: src/MainView.vala:199 src/Widgets/LidCloseActionComboBox.vala:52
 msgid "Do nothing"
 msgstr "Ikke gjør noe"
 
-#: src/MainView.vala:164 src/Widgets/LidCloseActionComboBox.vala:46
+#: src/MainView.vala:200 src/Widgets/LidCloseActionComboBox.vala:48
 msgid "Suspend"
 msgstr "Hvilemodus"
 
-#: src/MainView.vala:165
+#: src/MainView.vala:201
 #, fuzzy
 #| msgid "Prompt to shutdown"
 msgid "Ask to shutdown"
 msgstr "Spør om å skru av"
 
-#: src/MainView.vala:170 src/Plug.vala:73
+#: src/MainView.vala:206 src/Plug.vala:94
 #, fuzzy
 #| msgid "Power button"
 msgid "Power Button Behavior"
 msgstr "På-knapp"
 
-#: src/MainView.vala:181 src/MainView.vala:220
-msgid "Suspend when inactive for:"
+#: src/MainView.vala:220 src/MainView.vala:260 src/Plug.vala:95
+#, fuzzy
+#| msgid "Suspend when inactive for:"
+msgid "Suspend When Inactive For"
 msgstr "Hvilemodus hvis inaktiv i:"
 
-#: src/MainView.vala:205
+#: src/MainView.vala:245
 msgid "Plugged In"
 msgstr "Tilkoblet nettspenning"
 
-#: src/MainView.vala:250 src/Plug.vala:79
+#: src/MainView.vala:291 src/Plug.vala:87
 #, fuzzy
 #| msgid "Automatically adjust brightness:"
 msgid "Automatically Save Power"
 msgstr "Juster lysstyrken automatisk:"
 
-#: src/MainView.vala:252
+#: src/MainView.vala:294
 msgid "Power Saver mode will be used when battery is low"
 msgstr ""
 
-#: src/MainView.vala:258
+#: src/MainView.vala:303
 msgid "On Battery"
 msgstr "På batteri"
 
-#: src/MainView.vala:283
-msgid "Some changes will not take effect until you restart this computer"
-msgstr "Noen endringer trår ikke i kraft før omstart av maskinen"
-
-#: src/Plug.vala:36
+#: src/Plug.vala:37
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "Sett opp skjermlysstyrke, på-knapper, og dvalgangsoppførsel"
 
-#: src/Plug.vala:72
-msgid "Suspend button"
-msgstr "Dvaleknapp"
-
-#: src/Plug.vala:74
-msgid "Display inactive"
-msgstr "Skjerm inaktiv"
-
-#: src/Plug.vala:75
-msgid "Dim display"
-msgstr "Senk lysstyrke på skjerm"
-
-#: src/Plug.vala:76
-msgid "Lid close"
-msgstr "Lukk lokket"
-
-#: src/Plug.vala:77
-msgid "Display brightness"
-msgstr "Skjermlysstyrke"
-
-#: src/Plug.vala:78
-msgid "Automatic brightness adjustment"
-msgstr "Automatisk justering av lysstyrke"
-
-#: src/Plug.vala:80
-msgid "Inactive display off"
-msgstr "Avslag av inaktiv skjerm"
-
-#: src/Plug.vala:81
-#, fuzzy
-msgid "Docked lid close"
-msgstr "Tilkoblet skjermlukking"
-
-#: src/Plug.vala:82
-#, fuzzy
-msgid "Sleep inactivity timeout"
-msgstr "Tidsavbrudd for dvalgangsinaktivitet"
-
-#: src/Plug.vala:83
-#, fuzzy
-msgid "Suspend inactive"
-msgstr "Dvalgang inaktiv"
-
-#: src/Widgets/BatteryBox.vala:23
+#: src/Plug.vala:89 src/Widgets/BatteryBox.vala:21
 #, fuzzy
 #| msgid "On Battery"
 msgid "Battery Level"
 msgstr "På batteri"
 
-#: src/Widgets/BatteryBox.vala:24
+#: src/Plug.vala:90
+#, fuzzy
+#| msgid "Dim display"
+msgid "Dim Display"
+msgstr "Senk lysstyrke på skjerm"
+
+#: src/Widgets/BatteryBox.vala:22
 msgid "Battery Levels"
 msgstr ""
 
-#: src/Widgets/BatteryBox.vala:32
+#: src/Widgets/BatteryBox.vala:30
 #, fuzzy
 #| msgid "Show battery percentage in Panel:"
 msgid "Show Percentage In Panel"
 msgstr "Vis gjenværende batteriprosent i panel:"
 
-#: src/Widgets/TimeoutComboBox.vala:99
+#: src/Widgets/TimeoutComboBox.vala:97
 msgid "Never"
 msgstr "Aldri"
 
-#: src/Widgets/TimeoutComboBox.vala:100
+#: src/Widgets/TimeoutComboBox.vala:98
 msgid "5 min"
 msgstr "5 min"
 
-#: src/Widgets/TimeoutComboBox.vala:101
+#: src/Widgets/TimeoutComboBox.vala:99
 msgid "10 min"
 msgstr "10 min"
 
-#: src/Widgets/TimeoutComboBox.vala:102
+#: src/Widgets/TimeoutComboBox.vala:100
 msgid "15 min"
 msgstr "15 min"
 
-#: src/Widgets/TimeoutComboBox.vala:103
+#: src/Widgets/TimeoutComboBox.vala:101
 msgid "30 min"
 msgstr "30 min"
 
-#: src/Widgets/TimeoutComboBox.vala:104
+#: src/Widgets/TimeoutComboBox.vala:102
 msgid "45 min"
 msgstr "45 min"
 
-#: src/Widgets/TimeoutComboBox.vala:105
+#: src/Widgets/TimeoutComboBox.vala:103
 msgid "1 hour"
 msgstr "1 time"
 
-#: src/Widgets/TimeoutComboBox.vala:106
+#: src/Widgets/TimeoutComboBox.vala:104
 msgid "2 hours"
 msgstr "2 timer"
 
-#: src/Widgets/LidCloseActionComboBox.vala:47
+#: src/Widgets/LidCloseActionComboBox.vala:49
 msgid "Shutdown"
 msgstr "Slå av"
 
-#: src/Widgets/LidCloseActionComboBox.vala:48
+#: src/Widgets/LidCloseActionComboBox.vala:50
 msgid "Lock"
 msgstr "Lås"
 
-#: src/Widgets/LidCloseActionComboBox.vala:49
+#: src/Widgets/LidCloseActionComboBox.vala:51
 msgid "Halt"
 msgstr "Stans"
 
-#: src/Widgets/LidCloseActionComboBox.vala:52
+#: src/Widgets/LidCloseActionComboBox.vala:55
 msgid "Not supported"
 msgstr "Ikke støttet"
 
@@ -259,6 +230,42 @@ msgstr "Balansert"
 #| msgid "High Performance"
 msgid "Performance"
 msgstr "Høy ytelse"
+
+#~ msgid "Display brightness:"
+#~ msgstr "Lysstyrke på skjerm:"
+
+#~ msgid "When lid is closed:"
+#~ msgstr "Når lokket lukkes:"
+
+#~ msgid "When lid is closed with external monitor:"
+#~ msgstr "Når lokket lukkes med ekstern skjerm:"
+
+#~ msgid "Turn off display when inactive for:"
+#~ msgstr "Skru av skjerm når inaktiv i:"
+
+#~ msgid "Suspend button"
+#~ msgstr "Dvaleknapp"
+
+#~ msgid "Display inactive"
+#~ msgstr "Skjerm inaktiv"
+
+#~ msgid "Lid close"
+#~ msgstr "Lukk lokket"
+
+#~ msgid "Automatic brightness adjustment"
+#~ msgstr "Automatisk justering av lysstyrke"
+
+#, fuzzy
+#~ msgid "Docked lid close"
+#~ msgstr "Tilkoblet skjermlukking"
+
+#, fuzzy
+#~ msgid "Sleep inactivity timeout"
+#~ msgstr "Tidsavbrudd for dvalgangsinaktivitet"
+
+#, fuzzy
+#~ msgid "Suspend inactive"
+#~ msgstr "Dvalgang inaktiv"
 
 #~ msgid "Power button:"
 #~ msgstr "Av/på-knapp:"

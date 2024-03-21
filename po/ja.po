@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-13 10:52+0000\n"
+"POT-Creation-Date: 2024-03-21 16:33+0000\n"
 "PO-Revision-Date: 2024-02-19 12:12+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -51,172 +51,146 @@ msgstr "バッテリー電力使用の待機中"
 msgid "Unknown"
 msgstr "不明"
 
-#: src/MainView.vala:51 src/Plug.vala:35
+#: src/MainView.vala:49 src/Plug.vala:36
 msgid "Power"
 msgstr "電源"
 
-#: src/MainView.vala:81
-msgid "Display brightness:"
-msgstr "ディスプレイの明るさ:"
-
-#: src/MainView.vala:86
-msgid "Automatically adjust brightness:"
+#: src/MainView.vala:88 src/Plug.vala:86
+#, fuzzy
+#| msgid "Automatically adjust brightness:"
+msgid "Automatically Adjust Brightness"
 msgstr "明るさを自動調整:"
 
-#: src/MainView.vala:131
-msgid "When lid is closed:"
-msgstr "カバーが閉じられたとき:"
+#: src/MainView.vala:120 src/Plug.vala:91
+#, fuzzy
+#| msgid "Display brightness"
+msgid "Display Brightness"
+msgstr "ディスプレイの明るさ"
 
-#: src/MainView.vala:138
-msgid "When lid is closed with external monitor:"
-msgstr "外部モニターとカバーが閉じられたとき:"
-
-#: src/MainView.vala:154
-msgid "Turn off display when inactive for:"
-msgstr "非アクティブ時はディスプレイをオフにする:"
-
-#. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
-#: src/MainView.vala:163 src/Widgets/LidCloseActionComboBox.vala:50
-msgid "Do nothing"
-msgstr "何もしない"
-
-#: src/MainView.vala:164 src/Widgets/LidCloseActionComboBox.vala:46
-msgid "Suspend"
-msgstr "サスペンド"
-
-#: src/MainView.vala:165
-msgid "Ask to shutdown"
-msgstr "シャットダウンの確認"
-
-#: src/MainView.vala:170 src/Plug.vala:73
-msgid "Power Button Behavior"
-msgstr "電源ボタンの動作"
-
-#: src/MainView.vala:181 src/MainView.vala:220
-msgid "Suspend when inactive for:"
-msgstr "非アクティブ時にサスペンド:"
-
-#: src/MainView.vala:205
-msgid "Plugged In"
-msgstr "電源接続時"
-
-#: src/MainView.vala:250 src/Plug.vala:79
-msgid "Automatically Save Power"
-msgstr "自動的に電力消費を抑える"
-
-#: src/MainView.vala:252
-msgid "Power Saver mode will be used when battery is low"
-msgstr "電力消費を抑えるモードは、バッテリー残量が低下した際に適用されます"
-
-#: src/MainView.vala:258
-msgid "On Battery"
-msgstr "バッテリー時"
-
-#: src/MainView.vala:283
+#: src/MainView.vala:141
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "一部の変更は、このコンピューターの再起動後に反映されます"
 
-#: src/Plug.vala:36
+#: src/MainView.vala:150 src/Plug.vala:92
+msgid "Lid Close Behavior"
+msgstr ""
+
+#: src/MainView.vala:158 src/Plug.vala:93
+msgid "Lid Close With External Display"
+msgstr ""
+
+#: src/MainView.vala:189 src/Plug.vala:88
+#, fuzzy
+#| msgid "Inactive display off"
+msgid "Automatic Display Off"
+msgstr "非アクティブディスプレイをオフにする"
+
+#. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
+#: src/MainView.vala:199 src/Widgets/LidCloseActionComboBox.vala:52
+msgid "Do nothing"
+msgstr "何もしない"
+
+#: src/MainView.vala:200 src/Widgets/LidCloseActionComboBox.vala:48
+msgid "Suspend"
+msgstr "サスペンド"
+
+#: src/MainView.vala:201
+msgid "Ask to shutdown"
+msgstr "シャットダウンの確認"
+
+#: src/MainView.vala:206 src/Plug.vala:94
+msgid "Power Button Behavior"
+msgstr "電源ボタンの動作"
+
+#: src/MainView.vala:220 src/MainView.vala:260 src/Plug.vala:95
+#, fuzzy
+#| msgid "Suspend when inactive for:"
+msgid "Suspend When Inactive For"
+msgstr "非アクティブ時にサスペンド:"
+
+#: src/MainView.vala:245
+msgid "Plugged In"
+msgstr "電源接続時"
+
+#: src/MainView.vala:291 src/Plug.vala:87
+msgid "Automatically Save Power"
+msgstr "自動的に電力消費を抑える"
+
+#: src/MainView.vala:294
+msgid "Power Saver mode will be used when battery is low"
+msgstr "電力消費を抑えるモードは、バッテリー残量が低下した際に適用されます"
+
+#: src/MainView.vala:303
+msgid "On Battery"
+msgstr "バッテリー時"
+
+#: src/Plug.vala:37
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "ディスプレイの明るさ、電源ボタン、サスペンドの挙動を設定します"
 
-#: src/Plug.vala:72
-msgid "Suspend button"
-msgstr "サスペンドボタン"
-
-#: src/Plug.vala:74
-msgid "Display inactive"
-msgstr "非アクティブディスプレイ"
-
-#: src/Plug.vala:75
-msgid "Dim display"
-msgstr "ディスプレイを薄暗くする"
-
-#: src/Plug.vala:76
-msgid "Lid close"
-msgstr "カバーを閉じる"
-
-#: src/Plug.vala:77
-msgid "Display brightness"
-msgstr "ディスプレイの明るさ"
-
-#: src/Plug.vala:78
-msgid "Automatic brightness adjustment"
-msgstr "明るさを自動調整"
-
-#: src/Plug.vala:80
-msgid "Inactive display off"
-msgstr "非アクティブディスプレイをオフにする"
-
-#: src/Plug.vala:81
-msgid "Docked lid close"
-msgstr "充電中にカバーを閉じる"
-
-#: src/Plug.vala:82
-msgid "Sleep inactivity timeout"
-msgstr "非アクティブ時にスリープするまでの時間"
-
-#: src/Plug.vala:83
-msgid "Suspend inactive"
-msgstr "非アクティブ時にサスペンド"
-
-#: src/Widgets/BatteryBox.vala:23
+#: src/Plug.vala:89 src/Widgets/BatteryBox.vala:21
 msgid "Battery Level"
 msgstr "バッテリー残量"
 
-#: src/Widgets/BatteryBox.vala:24
+#: src/Plug.vala:90
+#, fuzzy
+#| msgid "Dim display"
+msgid "Dim Display"
+msgstr "ディスプレイを薄暗くする"
+
+#: src/Widgets/BatteryBox.vala:22
 msgid "Battery Levels"
 msgstr "バッテリー残量"
 
-#: src/Widgets/BatteryBox.vala:32
+#: src/Widgets/BatteryBox.vala:30
 msgid "Show Percentage In Panel"
 msgstr "パネルに割合を表示"
 
-#: src/Widgets/TimeoutComboBox.vala:99
+#: src/Widgets/TimeoutComboBox.vala:97
 msgid "Never"
 msgstr "なし"
 
-#: src/Widgets/TimeoutComboBox.vala:100
+#: src/Widgets/TimeoutComboBox.vala:98
 msgid "5 min"
 msgstr "5分"
 
-#: src/Widgets/TimeoutComboBox.vala:101
+#: src/Widgets/TimeoutComboBox.vala:99
 msgid "10 min"
 msgstr "10分"
 
-#: src/Widgets/TimeoutComboBox.vala:102
+#: src/Widgets/TimeoutComboBox.vala:100
 msgid "15 min"
 msgstr "15分"
 
-#: src/Widgets/TimeoutComboBox.vala:103
+#: src/Widgets/TimeoutComboBox.vala:101
 msgid "30 min"
 msgstr "30分"
 
-#: src/Widgets/TimeoutComboBox.vala:104
+#: src/Widgets/TimeoutComboBox.vala:102
 msgid "45 min"
 msgstr "45分"
 
-#: src/Widgets/TimeoutComboBox.vala:105
+#: src/Widgets/TimeoutComboBox.vala:103
 msgid "1 hour"
 msgstr "1時間"
 
-#: src/Widgets/TimeoutComboBox.vala:106
+#: src/Widgets/TimeoutComboBox.vala:104
 msgid "2 hours"
 msgstr "2時間"
 
-#: src/Widgets/LidCloseActionComboBox.vala:47
+#: src/Widgets/LidCloseActionComboBox.vala:49
 msgid "Shutdown"
 msgstr "シャットダウン"
 
-#: src/Widgets/LidCloseActionComboBox.vala:48
+#: src/Widgets/LidCloseActionComboBox.vala:50
 msgid "Lock"
 msgstr "ロック"
 
-#: src/Widgets/LidCloseActionComboBox.vala:49
+#: src/Widgets/LidCloseActionComboBox.vala:51
 msgid "Halt"
 msgstr "終了"
 
-#: src/Widgets/LidCloseActionComboBox.vala:52
+#: src/Widgets/LidCloseActionComboBox.vala:55
 msgid "Not supported"
 msgstr "非対応"
 
@@ -235,6 +209,39 @@ msgstr "バランス"
 #: src/Widgets/PowerModeButton.vala:98
 msgid "Performance"
 msgstr "パフォーマンス"
+
+#~ msgid "Display brightness:"
+#~ msgstr "ディスプレイの明るさ:"
+
+#~ msgid "When lid is closed:"
+#~ msgstr "カバーが閉じられたとき:"
+
+#~ msgid "When lid is closed with external monitor:"
+#~ msgstr "外部モニターとカバーが閉じられたとき:"
+
+#~ msgid "Turn off display when inactive for:"
+#~ msgstr "非アクティブ時はディスプレイをオフにする:"
+
+#~ msgid "Suspend button"
+#~ msgstr "サスペンドボタン"
+
+#~ msgid "Display inactive"
+#~ msgstr "非アクティブディスプレイ"
+
+#~ msgid "Lid close"
+#~ msgstr "カバーを閉じる"
+
+#~ msgid "Automatic brightness adjustment"
+#~ msgstr "明るさを自動調整"
+
+#~ msgid "Docked lid close"
+#~ msgstr "充電中にカバーを閉じる"
+
+#~ msgid "Sleep inactivity timeout"
+#~ msgstr "非アクティブ時にスリープするまでの時間"
+
+#~ msgid "Suspend inactive"
+#~ msgstr "非アクティブ時にサスペンド"
 
 #~ msgid "Power button:"
 #~ msgstr "電源ボタン:"
