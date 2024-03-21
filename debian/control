@@ -4,8 +4,8 @@ Priority: optional
 Maintainer: elementary, Inc. <builds@elementary.io>
 Build-Depends: debhelper (>= 10.5.1),
                gettext,
-               libdbus-1-dev,
                libadwaita-1-dev,
+               libdbus-1-dev,
                libglib2.0-dev (>= 2.74),
                libgranite-7-dev,
                libpolkit-gobject-1-dev,
