@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-21 16:33+0000\n"
-"PO-Revision-Date: 2024-02-14 17:17+0000\n"
+"PO-Revision-Date: 2024-03-23 18:13+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/power/"
 "he/>\n"
@@ -61,14 +61,10 @@ msgid "Power"
 msgstr "חשמל"
 
 #: src/MainView.vala:88 src/Plug.vala:86
-#, fuzzy
-#| msgid "Automatically adjust brightness:"
 msgid "Automatically Adjust Brightness"
-msgstr "התאמת בהירות התצוגה אוטומטית:"
+msgstr "התאמת בהירות התצוגה אוטומטית"
 
 #: src/MainView.vala:120 src/Plug.vala:91
-#, fuzzy
-#| msgid "Display brightness"
 msgid "Display Brightness"
 msgstr "בהירות תצוגה"
 
@@ -78,17 +74,15 @@ msgstr "חלק מהשינויים לא יכנסו לתוקף עד להפעלת �
 
 #: src/MainView.vala:150 src/Plug.vala:92
 msgid "Lid Close Behavior"
-msgstr ""
+msgstr "התנהגות סגירת מסך"
 
 #: src/MainView.vala:158 src/Plug.vala:93
 msgid "Lid Close With External Display"
-msgstr ""
+msgstr "סגירת מסך עם תצוגה חיצונית"
 
 #: src/MainView.vala:189 src/Plug.vala:88
-#, fuzzy
-#| msgid "Inactive display off"
 msgid "Automatic Display Off"
-msgstr "כיבוי תצוגה בלתי פעילה"
+msgstr "כיבוי תצוגה אוטומטי"
 
 #. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
 #: src/MainView.vala:199 src/Widgets/LidCloseActionComboBox.vala:52
@@ -108,10 +102,8 @@ msgid "Power Button Behavior"
 msgstr "התנהגות כפתור הפעלה"
 
 #: src/MainView.vala:220 src/MainView.vala:260 src/Plug.vala:95
-#, fuzzy
-#| msgid "Suspend when inactive for:"
 msgid "Suspend When Inactive For"
-msgstr "יש לעבור למצב השהיה בעת חוסר פעילות למשך:"
+msgstr "יש לעבור למצב השהיה בעת חוסר פעילות למשך"
 
 #: src/MainView.vala:245
 msgid "Plugged In"
@@ -138,8 +130,6 @@ msgid "Battery Level"
 msgstr "עוצמת הסוללה"
 
 #: src/Plug.vala:90
-#, fuzzy
-#| msgid "Dim display"
 msgid "Dim Display"
 msgstr "עמעום התצוגה"
 
