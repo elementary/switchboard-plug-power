@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-21 16:33+0000\n"
-"PO-Revision-Date: 2024-02-19 12:12+0000\n"
+"PO-Revision-Date: 2024-03-23 18:13+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "power/ja/>\n"
@@ -56,14 +56,10 @@ msgid "Power"
 msgstr "電源"
 
 #: src/MainView.vala:88 src/Plug.vala:86
-#, fuzzy
-#| msgid "Automatically adjust brightness:"
 msgid "Automatically Adjust Brightness"
-msgstr "明るさを自動調整:"
+msgstr "明るさを自動調整"
 
 #: src/MainView.vala:120 src/Plug.vala:91
-#, fuzzy
-#| msgid "Display brightness"
 msgid "Display Brightness"
 msgstr "ディスプレイの明るさ"
 
@@ -73,17 +69,15 @@ msgstr "一部の変更は、このコンピューターの再起動後に反映
 
 #: src/MainView.vala:150 src/Plug.vala:92
 msgid "Lid Close Behavior"
-msgstr ""
+msgstr "フタを閉じたときの動作"
 
 #: src/MainView.vala:158 src/Plug.vala:93
 msgid "Lid Close With External Display"
-msgstr ""
+msgstr "外部ディスプレイ接続時にフタを閉じたとき"
 
 #: src/MainView.vala:189 src/Plug.vala:88
-#, fuzzy
-#| msgid "Inactive display off"
 msgid "Automatic Display Off"
-msgstr "非アクティブディスプレイをオフにする"
+msgstr "ディスプレイを自動でオフにする"
 
 #. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
 #: src/MainView.vala:199 src/Widgets/LidCloseActionComboBox.vala:52
@@ -103,10 +97,8 @@ msgid "Power Button Behavior"
 msgstr "電源ボタンの動作"
 
 #: src/MainView.vala:220 src/MainView.vala:260 src/Plug.vala:95
-#, fuzzy
-#| msgid "Suspend when inactive for:"
 msgid "Suspend When Inactive For"
-msgstr "非アクティブ時にサスペンド:"
+msgstr "非アクティブ時にサスペンド"
 
 #: src/MainView.vala:245
 msgid "Plugged In"
@@ -133,8 +125,6 @@ msgid "Battery Level"
 msgstr "バッテリー残量"
 
 #: src/Plug.vala:90
-#, fuzzy
-#| msgid "Dim display"
 msgid "Dim Display"
 msgstr "ディスプレイを薄暗くする"
 
