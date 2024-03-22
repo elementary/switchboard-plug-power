@@ -8,6 +8,7 @@ plug_files = files(
     'Plug.vala',
     'PowerManager.vala',
     'Widgets/BatteryBox.vala',
+    'Widgets/DevicesBox.vala',
     'Widgets/TimeoutComboBox.vala',
     'Widgets/LidCloseActionComboBox.vala',
     'Widgets/PowerModeButton.vala',
