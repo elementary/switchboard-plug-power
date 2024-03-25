@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-21 16:33+0000\n"
-"PO-Revision-Date: 2024-02-08 04:56+0000\n"
+"PO-Revision-Date: 2024-03-26 22:13+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "power/pt/>\n"
@@ -30,65 +30,59 @@ msgstr "É necessário autenticação para modificar as definições de energia"
 
 #: src/Device.vala:35
 msgid "Charging"
-msgstr ""
+msgstr "A carregar"
 
 #: src/Device.vala:37
 msgid "Using battery power"
-msgstr ""
+msgstr "A usar energia da bateria"
 
 #: src/Device.vala:39
 msgid "Empty"
-msgstr ""
+msgstr "Sem carga"
 
 #: src/Device.vala:41
 msgid "Fully charged"
-msgstr ""
+msgstr "Totalmente carregada"
 
 #: src/Device.vala:43
 msgid "Waiting to charge"
-msgstr ""
+msgstr "À espera de carregar"
 
 #: src/Device.vala:45
 msgid "Waiting to use battery power"
-msgstr ""
+msgstr "À espera de usar a energia da bateria"
 
 #: src/Device.vala:47
 msgid "Unknown"
-msgstr ""
+msgstr "Desconhecida"
 
 #: src/MainView.vala:49 src/Plug.vala:36
 msgid "Power"
 msgstr "Energia"
 
 #: src/MainView.vala:88 src/Plug.vala:86
-#, fuzzy
-#| msgid "Automatically adjust brightness:"
 msgid "Automatically Adjust Brightness"
-msgstr "Ajustar brilho automaticamente:"
+msgstr "Ajustar luminosidade automaticamente"
 
 #: src/MainView.vala:120 src/Plug.vala:91
-#, fuzzy
-#| msgid "Display brightness"
 msgid "Display Brightness"
-msgstr "Brilho do ecrã"
+msgstr "Luminosidade do ecrã"
 
 #: src/MainView.vala:141
 msgid "Some changes will not take effect until you restart this computer"
-msgstr "Algumas alterações não serão aplicadas até reiniciar o computador"
+msgstr "Algumas alterações não terão efeito até reiniciar o computador"
 
 #: src/MainView.vala:150 src/Plug.vala:92
 msgid "Lid Close Behavior"
-msgstr ""
+msgstr "Comportamento do fechar a tampa"
 
 #: src/MainView.vala:158 src/Plug.vala:93
 msgid "Lid Close With External Display"
-msgstr ""
+msgstr "Fechar a tampa com visor exterior"
 
 #: src/MainView.vala:189 src/Plug.vala:88
-#, fuzzy
-#| msgid "Inactive display off"
 msgid "Automatic Display Off"
-msgstr "Ecrã inativo desligado"
+msgstr "Desligar ecrã automático"
 
 #. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
 #: src/MainView.vala:199 src/Widgets/LidCloseActionComboBox.vala:52
@@ -100,36 +94,28 @@ msgid "Suspend"
 msgstr "Suspender"
 
 #: src/MainView.vala:201
-#, fuzzy
-#| msgid "Prompt to shutdown"
 msgid "Ask to shutdown"
-msgstr "Avisar para encerrar"
+msgstr "Perguntar para encerrar"
 
 #: src/MainView.vala:206 src/Plug.vala:94
-#, fuzzy
-#| msgid "Power button"
 msgid "Power Button Behavior"
-msgstr "Botão ligar/desligar"
+msgstr "Comportamento do botão de energia"
 
 #: src/MainView.vala:220 src/MainView.vala:260 src/Plug.vala:95
-#, fuzzy
-#| msgid "Suspend when inactive for:"
 msgid "Suspend When Inactive For"
-msgstr "Suspender quando inativo durante:"
+msgstr "Suspender quando inativo durante"
 
 #: src/MainView.vala:245
 msgid "Plugged In"
 msgstr "Ligado"
 
 #: src/MainView.vala:291 src/Plug.vala:87
-#, fuzzy
-#| msgid "Automatically adjust brightness:"
 msgid "Automatically Save Power"
-msgstr "Ajustar brilho automaticamente:"
+msgstr "Poupar energia automaticamente"
 
 #: src/MainView.vala:294
 msgid "Power Saver mode will be used when battery is low"
-msgstr ""
+msgstr "O modo de poupança de energia será usado quando a bateria estiver fraca"
 
 #: src/MainView.vala:303
 msgid "On Battery"
@@ -140,26 +126,20 @@ msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "Configurar o brilho do ecrã, botões de energia e modo de suspensão"
 
 #: src/Plug.vala:89 src/Widgets/BatteryBox.vala:21
-#, fuzzy
-#| msgid "On Battery"
 msgid "Battery Level"
-msgstr "A Bateria"
+msgstr "Nível de bateria"
 
 #: src/Plug.vala:90
-#, fuzzy
-#| msgid "Dim display"
 msgid "Dim Display"
 msgstr "Escurecer ecrã"
 
 #: src/Widgets/BatteryBox.vala:22
 msgid "Battery Levels"
-msgstr ""
+msgstr "Níveis de bateria"
 
 #: src/Widgets/BatteryBox.vala:30
-#, fuzzy
-#| msgid "Show battery percentage in Panel:"
 msgid "Show Percentage In Panel"
-msgstr "Mostrar percentagem de bateria no Painel:"
+msgstr "Mostrar percentagem no painel"
 
 #: src/Widgets/TimeoutComboBox.vala:97
 msgid "Never"
@@ -210,10 +190,8 @@ msgid "Not supported"
 msgstr "Não suportado"
 
 #: src/Widgets/PowerModeButton.vala:60
-#, fuzzy
-#| msgid "Power Saver"
 msgid "Power Mode"
-msgstr "Poupança de energia"
+msgstr "Modo de energia"
 
 #: src/Widgets/PowerModeButton.vala:68
 msgid "Power Saver"
