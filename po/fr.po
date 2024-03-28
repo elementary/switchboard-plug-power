@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-21 16:33+0000\n"
-"PO-Revision-Date: 2024-03-05 16:12+0000\n"
-"Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
+"PO-Revision-Date: 2024-03-28 08:32+0000\n"
+"Last-Translator: Alban CLERGEOT <alban.clergeot@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/power/"
 "fr/>\n"
 "Language: fr\n"
@@ -63,10 +63,8 @@ msgid "Power"
 msgstr "Alimentation"
 
 #: src/MainView.vala:88 src/Plug.vala:86
-#, fuzzy
-#| msgid "Automatically adjust brightness:"
 msgid "Automatically Adjust Brightness"
-msgstr "Ajuster automatiquement la luminosité :"
+msgstr "Ajuster automatiquement la luminosité"
 
 #: src/MainView.vala:120 src/Plug.vala:91
 #, fuzzy
@@ -82,11 +80,11 @@ msgstr ""
 
 #: src/MainView.vala:150 src/Plug.vala:92
 msgid "Lid Close Behavior"
-msgstr ""
+msgstr "Comportement lorsque le capot est fermé"
 
 #: src/MainView.vala:158 src/Plug.vala:93
 msgid "Lid Close With External Display"
-msgstr ""
+msgstr "Capot fermé avec un écran auxiliaire"
 
 #: src/MainView.vala:189 src/Plug.vala:88
 #, fuzzy
