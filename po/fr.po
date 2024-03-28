@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-21 16:33+0000\n"
 "PO-Revision-Date: 2024-03-29 22:13+0000\n"
-"Last-Translator: Corentin Noël <tintou@noel.tf>\n"
+"Last-Translator: Alban CLERGEOT <alban.clergeot@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/power/"
 "fr/>\n"
 "Language: fr\n"
@@ -87,10 +87,8 @@ msgid "Lid Close With External Display"
 msgstr "Capot fermé avec un écran externe"
 
 #: src/MainView.vala:189 src/Plug.vala:88
-#, fuzzy
-#| msgid "Inactive display off"
 msgid "Automatic Display Off"
-msgstr "Éteindre l'écran inactif"
+msgstr "Extinction automatique de l'écran"
 
 #. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
 #: src/MainView.vala:199 src/Widgets/LidCloseActionComboBox.vala:52
@@ -110,10 +108,8 @@ msgid "Power Button Behavior"
 msgstr "Comportement du bouton d'alimentation"
 
 #: src/MainView.vala:220 src/MainView.vala:260 src/Plug.vala:95
-#, fuzzy
-#| msgid "Suspend when inactive for:"
 msgid "Suspend When Inactive For"
-msgstr "Mettre en veille si inactif depuis :"
+msgstr "Mettre en veille si inactif depuis"
 
 #: src/MainView.vala:245
 msgid "Plugged In"
