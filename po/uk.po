@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-21 16:33+0000\n"
-"PO-Revision-Date: 2024-02-14 17:17+0000\n"
+"PO-Revision-Date: 2024-03-29 22:13+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "power/uk/>\n"
@@ -16,8 +16,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2016-11-21 05:42+0000\n"
 
@@ -62,14 +62,10 @@ msgid "Power"
 msgstr "Живлення"
 
 #: src/MainView.vala:88 src/Plug.vala:86
-#, fuzzy
-#| msgid "Automatically adjust brightness:"
 msgid "Automatically Adjust Brightness"
-msgstr "Автоматичне регулювання яскравості:"
+msgstr "Авторегулювання яскравості"
 
 #: src/MainView.vala:120 src/Plug.vala:91
-#, fuzzy
-#| msgid "Display brightness"
 msgid "Display Brightness"
 msgstr "Яскравість екрана"
 
@@ -79,17 +75,15 @@ msgstr "Деякі зміни не набудуть чинності до пер
 
 #: src/MainView.vala:150 src/Plug.vala:92
 msgid "Lid Close Behavior"
-msgstr ""
+msgstr "Поведінка після закриття кришки"
 
 #: src/MainView.vala:158 src/Plug.vala:93
 msgid "Lid Close With External Display"
-msgstr ""
+msgstr "Закриття кришки із зовнішнім дисплеєм"
 
 #: src/MainView.vala:189 src/Plug.vala:88
-#, fuzzy
-#| msgid "Inactive display off"
 msgid "Automatic Display Off"
-msgstr "Вимикання бездіяльного екрана"
+msgstr "Автовимкнення дисплея"
 
 #. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
 #: src/MainView.vala:199 src/Widgets/LidCloseActionComboBox.vala:52
@@ -109,10 +103,8 @@ msgid "Power Button Behavior"
 msgstr "Поведінка кнопки живлення"
 
 #: src/MainView.vala:220 src/MainView.vala:260 src/Plug.vala:95
-#, fuzzy
-#| msgid "Suspend when inactive for:"
 msgid "Suspend When Inactive For"
-msgstr "Призупиняти за бездіяльності впродовж:"
+msgstr "Призупиняти за бездіяльності впродовж"
 
 #: src/MainView.vala:245
 msgid "Plugged In"
@@ -141,8 +133,6 @@ msgid "Battery Level"
 msgstr "Рівень заряду акумулятора"
 
 #: src/Plug.vala:90
-#, fuzzy
-#| msgid "Dim display"
 msgid "Dim Display"
 msgstr "Притлумлення екрана"
 
