@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-13 10:52+0000\n"
-"PO-Revision-Date: 2024-02-14 17:17+0000\n"
+"POT-Creation-Date: 2024-03-21 16:33+0000\n"
+"PO-Revision-Date: 2024-03-23 18:13+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "power/ca/>\n"
@@ -56,174 +56,138 @@ msgstr "S'espera per usar la bateria"
 msgid "Unknown"
 msgstr "Desconegut"
 
-#: src/MainView.vala:51 src/Plug.vala:35
+#: src/MainView.vala:49 src/Plug.vala:36
 msgid "Power"
 msgstr "Energia"
 
-#: src/MainView.vala:81
-msgid "Display brightness:"
-msgstr "Brillantor de la pantalla:"
+#: src/MainView.vala:88 src/Plug.vala:86
+msgid "Automatically Adjust Brightness"
+msgstr "Ajusta automàticament la brillantor"
 
-#: src/MainView.vala:86
-msgid "Automatically adjust brightness:"
-msgstr "Ajusta automàticament la brillantor:"
+#: src/MainView.vala:120 src/Plug.vala:91
+msgid "Display Brightness"
+msgstr "Brillantor de la pantalla"
 
-#: src/MainView.vala:131
-msgid "When lid is closed:"
-msgstr "Quan la tapa estigui tancada:"
-
-#: src/MainView.vala:138
-msgid "When lid is closed with external monitor:"
-msgstr "Quan la tapa estigui tancada amb una pantalla externa:"
-
-#: src/MainView.vala:154
-msgid "Turn off display when inactive for:"
-msgstr "Apaga la pantalla quan estigui inactiva durant:"
-
-#. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
-#: src/MainView.vala:163 src/Widgets/LidCloseActionComboBox.vala:50
-msgid "Do nothing"
-msgstr "No facis res"
-
-#: src/MainView.vala:164 src/Widgets/LidCloseActionComboBox.vala:46
-msgid "Suspend"
-msgstr "Suspèn"
-
-#: src/MainView.vala:165
-msgid "Ask to shutdown"
-msgstr "Demana l'aturada"
-
-#: src/MainView.vala:170 src/Plug.vala:73
-msgid "Power Button Behavior"
-msgstr "Comportament del botó d'engegada"
-
-#: src/MainView.vala:181 src/MainView.vala:220
-msgid "Suspend when inactive for:"
-msgstr "Atura temporalment quan estigui inactiu durant..."
-
-#: src/MainView.vala:205
-msgid "Plugged In"
-msgstr "Endollat"
-
-#: src/MainView.vala:250 src/Plug.vala:79
-msgid "Automatically Save Power"
-msgstr "Estalvia bateria automàticament"
-
-#: src/MainView.vala:252
-msgid "Power Saver mode will be used when battery is low"
-msgstr "L'estalvi de bateria s'usarà quan la bateria estigui baixa."
-
-#: src/MainView.vala:258
-msgid "On Battery"
-msgstr "Amb la bateria"
-
-#: src/MainView.vala:283
+#: src/MainView.vala:141
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Alguns canvis no tindran efecte fins que reinicieu l'ordinador."
 
-#: src/Plug.vala:36
+#: src/MainView.vala:150 src/Plug.vala:92
+msgid "Lid Close Behavior"
+msgstr "Comportament pel tancament de la tapa"
+
+#: src/MainView.vala:158 src/Plug.vala:93
+msgid "Lid Close With External Display"
+msgstr "Tancament de la tapa amb una pantalla externa"
+
+#: src/MainView.vala:189 src/Plug.vala:88
+msgid "Automatic Display Off"
+msgstr "Apaga la pantalla automàticament"
+
+#. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
+#: src/MainView.vala:199 src/Widgets/LidCloseActionComboBox.vala:52
+msgid "Do nothing"
+msgstr "No facis res"
+
+#: src/MainView.vala:200 src/Widgets/LidCloseActionComboBox.vala:48
+msgid "Suspend"
+msgstr "Suspèn"
+
+#: src/MainView.vala:201
+msgid "Ask to shutdown"
+msgstr "Demana l'aturada"
+
+#: src/MainView.vala:206 src/Plug.vala:94
+msgid "Power Button Behavior"
+msgstr "Comportament del botó d'engegada"
+
+#: src/MainView.vala:220 src/MainView.vala:260 src/Plug.vala:95
+msgid "Suspend When Inactive For"
+msgstr "Posa't en suspensió quan estiguis inactiu durant..."
+
+#: src/MainView.vala:245
+msgid "Plugged In"
+msgstr "Endollat"
+
+#: src/MainView.vala:291 src/Plug.vala:87
+msgid "Automatically Save Power"
+msgstr "Estalvia bateria automàticament"
+
+#: src/MainView.vala:294
+msgid "Power Saver mode will be used when battery is low"
+msgstr "L'estalvi de bateria s'usarà quan la bateria estigui baixa."
+
+#: src/MainView.vala:303
+msgid "On Battery"
+msgstr "Amb la bateria"
+
+#: src/Plug.vala:37
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr ""
 "Configureu la brillantor de la pantalla, els botons d'engegar i el "
 "comportament de la suspensió."
 
-#: src/Plug.vala:72
-msgid "Suspend button"
-msgstr "Botó d'aturada temporal"
-
-#: src/Plug.vala:74
-msgid "Display inactive"
-msgstr "Pantalla inactiva"
-
-#: src/Plug.vala:75
-msgid "Dim display"
-msgstr "Atenua la pantalla"
-
-#: src/Plug.vala:76
-msgid "Lid close"
-msgstr "Tancament de la tapa"
-
-#: src/Plug.vala:77
-msgid "Display brightness"
-msgstr "Brillantor de la pantalla"
-
-#: src/Plug.vala:78
-msgid "Automatic brightness adjustment"
-msgstr "Ajustament automàtica de la brillantor"
-
-#: src/Plug.vala:80
-msgid "Inactive display off"
-msgstr "Pantalla inactiva desactivada"
-
-#: src/Plug.vala:81
-msgid "Docked lid close"
-msgstr "Tancament de la pantalla acoblada"
-
-#: src/Plug.vala:82
-msgid "Sleep inactivity timeout"
-msgstr "Temps d'inactivitat per dormir"
-
-#: src/Plug.vala:83
-msgid "Suspend inactive"
-msgstr "Aturada temporal inactiva"
-
-#: src/Widgets/BatteryBox.vala:23
+#: src/Plug.vala:89 src/Widgets/BatteryBox.vala:21
 msgid "Battery Level"
 msgstr "Nivell de la bateria"
 
-#: src/Widgets/BatteryBox.vala:24
+#: src/Plug.vala:90
+msgid "Dim Display"
+msgstr "Atenua la pantalla"
+
+#: src/Widgets/BatteryBox.vala:22
 msgid "Battery Levels"
 msgstr "Nivells de bateria"
 
-#: src/Widgets/BatteryBox.vala:32
+#: src/Widgets/BatteryBox.vala:30
 msgid "Show Percentage In Panel"
 msgstr "Mostra el percentatge de la bateria al plafó."
 
-#: src/Widgets/TimeoutComboBox.vala:99
+#: src/Widgets/TimeoutComboBox.vala:97
 msgid "Never"
 msgstr "Mai"
 
-#: src/Widgets/TimeoutComboBox.vala:100
+#: src/Widgets/TimeoutComboBox.vala:98
 msgid "5 min"
 msgstr "5 min"
 
-#: src/Widgets/TimeoutComboBox.vala:101
+#: src/Widgets/TimeoutComboBox.vala:99
 msgid "10 min"
 msgstr "10 min"
 
-#: src/Widgets/TimeoutComboBox.vala:102
+#: src/Widgets/TimeoutComboBox.vala:100
 msgid "15 min"
 msgstr "15 min"
 
-#: src/Widgets/TimeoutComboBox.vala:103
+#: src/Widgets/TimeoutComboBox.vala:101
 msgid "30 min"
 msgstr "30 min"
 
-#: src/Widgets/TimeoutComboBox.vala:104
+#: src/Widgets/TimeoutComboBox.vala:102
 msgid "45 min"
 msgstr "45 min"
 
-#: src/Widgets/TimeoutComboBox.vala:105
+#: src/Widgets/TimeoutComboBox.vala:103
 msgid "1 hour"
 msgstr "1 hora"
 
-#: src/Widgets/TimeoutComboBox.vala:106
+#: src/Widgets/TimeoutComboBox.vala:104
 msgid "2 hours"
 msgstr "2 hores"
 
-#: src/Widgets/LidCloseActionComboBox.vala:47
+#: src/Widgets/LidCloseActionComboBox.vala:49
 msgid "Shutdown"
 msgstr "Apaga"
 
-#: src/Widgets/LidCloseActionComboBox.vala:48
+#: src/Widgets/LidCloseActionComboBox.vala:50
 msgid "Lock"
 msgstr "Bloca"
 
-#: src/Widgets/LidCloseActionComboBox.vala:49
+#: src/Widgets/LidCloseActionComboBox.vala:51
 msgid "Halt"
 msgstr "Atura"
 
-#: src/Widgets/LidCloseActionComboBox.vala:52
+#: src/Widgets/LidCloseActionComboBox.vala:55
 msgid "Not supported"
 msgstr "No s'admet"
 
@@ -242,6 +206,39 @@ msgstr "Equilibrada"
 #: src/Widgets/PowerModeButton.vala:98
 msgid "Performance"
 msgstr "Rendiment"
+
+#~ msgid "Display brightness:"
+#~ msgstr "Brillantor de la pantalla:"
+
+#~ msgid "When lid is closed:"
+#~ msgstr "Quan la tapa estigui tancada:"
+
+#~ msgid "When lid is closed with external monitor:"
+#~ msgstr "Quan la tapa estigui tancada amb una pantalla externa:"
+
+#~ msgid "Turn off display when inactive for:"
+#~ msgstr "Apaga la pantalla quan estigui inactiva durant:"
+
+#~ msgid "Suspend button"
+#~ msgstr "Botó d'aturada temporal"
+
+#~ msgid "Display inactive"
+#~ msgstr "Pantalla inactiva"
+
+#~ msgid "Lid close"
+#~ msgstr "Tancament de la tapa"
+
+#~ msgid "Automatic brightness adjustment"
+#~ msgstr "Ajustament automàtica de la brillantor"
+
+#~ msgid "Docked lid close"
+#~ msgstr "Tancament de la pantalla acoblada"
+
+#~ msgid "Sleep inactivity timeout"
+#~ msgstr "Temps d'inactivitat per dormir"
+
+#~ msgid "Suspend inactive"
+#~ msgstr "Aturada temporal inactiva"
 
 #~ msgid "Power button:"
 #~ msgstr "Botó d'engegada:"

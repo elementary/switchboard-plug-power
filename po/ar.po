@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-power\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-13 10:52+0000\n"
+"POT-Creation-Date: 2024-03-21 16:33+0000\n"
 "PO-Revision-Date: 2019-08-29 15:22+0000\n"
 "Last-Translator: nasserbinlaboun <nasser1990com@gmail.com>\n"
 "Language-Team: Arabic <https://l10n.elementary.io/projects/switchboard/"
@@ -57,178 +57,141 @@ msgstr ""
 msgid "Unknown"
 msgstr ""
 
-#: src/MainView.vala:51 src/Plug.vala:35
+#: src/MainView.vala:49 src/Plug.vala:36
 msgid "Power"
 msgstr "الطاقة"
 
-#: src/MainView.vala:81
-msgid "Display brightness:"
+#: src/MainView.vala:88 src/Plug.vala:86
+msgid "Automatically Adjust Brightness"
 msgstr ""
 
-#: src/MainView.vala:86
-msgid "Automatically adjust brightness:"
+#: src/MainView.vala:120 src/Plug.vala:91
+msgid "Display Brightness"
 msgstr ""
 
-#: src/MainView.vala:131
-msgid "When lid is closed:"
+#: src/MainView.vala:141
+msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
 
-#: src/MainView.vala:138
-msgid "When lid is closed with external monitor:"
+#: src/MainView.vala:150 src/Plug.vala:92
+msgid "Lid Close Behavior"
 msgstr ""
 
-#: src/MainView.vala:154
-msgid "Turn off display when inactive for:"
+#: src/MainView.vala:158 src/Plug.vala:93
+msgid "Lid Close With External Display"
+msgstr ""
+
+#: src/MainView.vala:189 src/Plug.vala:88
+msgid "Automatic Display Off"
 msgstr ""
 
 #. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
-#: src/MainView.vala:163 src/Widgets/LidCloseActionComboBox.vala:50
+#: src/MainView.vala:199 src/Widgets/LidCloseActionComboBox.vala:52
 msgid "Do nothing"
 msgstr "لا تفعل شيئا"
 
-#: src/MainView.vala:164 src/Widgets/LidCloseActionComboBox.vala:46
+#: src/MainView.vala:200 src/Widgets/LidCloseActionComboBox.vala:48
 msgid "Suspend"
 msgstr "تعليق"
 
-#: src/MainView.vala:165
+#: src/MainView.vala:201
 #, fuzzy
 #| msgid "Shutdown"
 msgid "Ask to shutdown"
 msgstr "إيقاف التشغيل"
 
-#: src/MainView.vala:170 src/Plug.vala:73
+#: src/MainView.vala:206 src/Plug.vala:94
 #, fuzzy
 #| msgid "Power button:"
 msgid "Power Button Behavior"
 msgstr "زر الطاقة:"
 
-#: src/MainView.vala:181 src/MainView.vala:220
-msgid "Suspend when inactive for:"
-msgstr ""
+#: src/MainView.vala:220 src/MainView.vala:260 src/Plug.vala:95
+#, fuzzy
+msgid "Suspend When Inactive For"
+msgstr "تعليق"
 
-#: src/MainView.vala:205
+#: src/MainView.vala:245
 msgid "Plugged In"
 msgstr "موصَل"
 
-#: src/MainView.vala:250 src/Plug.vala:79
+#: src/MainView.vala:291 src/Plug.vala:87
 msgid "Automatically Save Power"
 msgstr ""
 
-#: src/MainView.vala:252
+#: src/MainView.vala:294
 msgid "Power Saver mode will be used when battery is low"
 msgstr ""
 
-#: src/MainView.vala:258
+#: src/MainView.vala:303
 msgid "On Battery"
 msgstr ""
 
-#: src/MainView.vala:283
-msgid "Some changes will not take effect until you restart this computer"
-msgstr ""
-
-#: src/Plug.vala:36
+#: src/Plug.vala:37
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr ""
 
-#: src/Plug.vala:72
-#, fuzzy
-msgid "Suspend button"
-msgstr "تعليق"
-
-#: src/Plug.vala:74
-msgid "Display inactive"
-msgstr ""
-
-#: src/Plug.vala:75
-msgid "Dim display"
-msgstr ""
-
-#: src/Plug.vala:76
-msgid "Lid close"
-msgstr ""
-
-#: src/Plug.vala:77
-msgid "Display brightness"
-msgstr ""
-
-#: src/Plug.vala:78
-msgid "Automatic brightness adjustment"
-msgstr ""
-
-#: src/Plug.vala:80
-msgid "Inactive display off"
-msgstr ""
-
-#: src/Plug.vala:81
-msgid "Docked lid close"
-msgstr ""
-
-#: src/Plug.vala:82
-msgid "Sleep inactivity timeout"
-msgstr ""
-
-#: src/Plug.vala:83
-#, fuzzy
-msgid "Suspend inactive"
-msgstr "تعليق"
-
-#: src/Widgets/BatteryBox.vala:23
+#: src/Plug.vala:89 src/Widgets/BatteryBox.vala:21
 msgid "Battery Level"
 msgstr ""
 
-#: src/Widgets/BatteryBox.vala:24
+#: src/Plug.vala:90
+msgid "Dim Display"
+msgstr ""
+
+#: src/Widgets/BatteryBox.vala:22
 msgid "Battery Levels"
 msgstr ""
 
-#: src/Widgets/BatteryBox.vala:32
+#: src/Widgets/BatteryBox.vala:30
 msgid "Show Percentage In Panel"
 msgstr ""
 
-#: src/Widgets/TimeoutComboBox.vala:99
+#: src/Widgets/TimeoutComboBox.vala:97
 msgid "Never"
 msgstr "أبداً"
 
-#: src/Widgets/TimeoutComboBox.vala:100
+#: src/Widgets/TimeoutComboBox.vala:98
 msgid "5 min"
 msgstr "5 دقائق"
 
-#: src/Widgets/TimeoutComboBox.vala:101
+#: src/Widgets/TimeoutComboBox.vala:99
 msgid "10 min"
 msgstr "10 دقائق"
 
-#: src/Widgets/TimeoutComboBox.vala:102
+#: src/Widgets/TimeoutComboBox.vala:100
 msgid "15 min"
 msgstr ""
 
-#: src/Widgets/TimeoutComboBox.vala:103
+#: src/Widgets/TimeoutComboBox.vala:101
 msgid "30 min"
 msgstr "30 دقيقة"
 
-#: src/Widgets/TimeoutComboBox.vala:104
+#: src/Widgets/TimeoutComboBox.vala:102
 msgid "45 min"
 msgstr ""
 
-#: src/Widgets/TimeoutComboBox.vala:105
+#: src/Widgets/TimeoutComboBox.vala:103
 msgid "1 hour"
 msgstr "ساعة واحدة"
 
-#: src/Widgets/TimeoutComboBox.vala:106
+#: src/Widgets/TimeoutComboBox.vala:104
 msgid "2 hours"
 msgstr ""
 
-#: src/Widgets/LidCloseActionComboBox.vala:47
+#: src/Widgets/LidCloseActionComboBox.vala:49
 msgid "Shutdown"
 msgstr "إيقاف التشغيل"
 
-#: src/Widgets/LidCloseActionComboBox.vala:48
+#: src/Widgets/LidCloseActionComboBox.vala:50
 msgid "Lock"
 msgstr ""
 
-#: src/Widgets/LidCloseActionComboBox.vala:49
+#: src/Widgets/LidCloseActionComboBox.vala:51
 msgid "Halt"
 msgstr ""
 
-#: src/Widgets/LidCloseActionComboBox.vala:52
+#: src/Widgets/LidCloseActionComboBox.vala:55
 msgid "Not supported"
 msgstr ""
 
@@ -251,6 +214,10 @@ msgstr ""
 #: src/Widgets/PowerModeButton.vala:98
 msgid "Performance"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Suspend button"
+#~ msgstr "تعليق"
 
 #~ msgid "Some settings require administrator rights to be changed"
 #~ msgstr "تتطلب بعض الإعدادات تغيير الصلاحيات للمسؤول"

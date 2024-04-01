@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-power-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-13 10:52+0000\n"
+"POT-Creation-Date: 2024-03-21 16:33+0000\n"
 "PO-Revision-Date: 2021-02-16 02:40+0000\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <https://l10n.elementary.io/projects/switchboard/"
@@ -57,180 +57,154 @@ msgstr ""
 msgid "Unknown"
 msgstr ""
 
-#: src/MainView.vala:51 src/Plug.vala:35
+#: src/MainView.vala:49 src/Plug.vala:36
 msgid "Power"
 msgstr "Напајање"
 
-#: src/MainView.vala:81
-msgid "Display brightness:"
-msgstr "Осветљеност екрана:"
-
-#: src/MainView.vala:86
-msgid "Automatically adjust brightness:"
+#: src/MainView.vala:88 src/Plug.vala:86
+#, fuzzy
+#| msgid "Automatically adjust brightness:"
+msgid "Automatically Adjust Brightness"
 msgstr "Сам подеси осветљеност:"
 
-#: src/MainView.vala:131
-msgid "When lid is closed:"
-msgstr "Кад је поклопац спуштен:"
+#: src/MainView.vala:120 src/Plug.vala:91
+#, fuzzy
+#| msgid "Display brightness"
+msgid "Display Brightness"
+msgstr "Осветљеност екрана"
 
-#: src/MainView.vala:138
-msgid "When lid is closed with external monitor:"
-msgstr "Када је поклопац спуштен са спољним монитором:"
+#: src/MainView.vala:141
+msgid "Some changes will not take effect until you restart this computer"
+msgstr "Неке промене неће ступити на снагу све док поново не покренете рачунар"
 
-#: src/MainView.vala:154
-msgid "Turn off display when inactive for:"
-msgstr "Искључи екран када је нерадан након:"
+#: src/MainView.vala:150 src/Plug.vala:92
+msgid "Lid Close Behavior"
+msgstr ""
+
+#: src/MainView.vala:158 src/Plug.vala:93
+msgid "Lid Close With External Display"
+msgstr ""
+
+#: src/MainView.vala:189 src/Plug.vala:88
+#, fuzzy
+#| msgid "Inactive display off"
+msgid "Automatic Display Off"
+msgstr "Нерадан екран је искључен"
 
 #. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
-#: src/MainView.vala:163 src/Widgets/LidCloseActionComboBox.vala:50
+#: src/MainView.vala:199 src/Widgets/LidCloseActionComboBox.vala:52
 msgid "Do nothing"
 msgstr "Не ради ништа"
 
-#: src/MainView.vala:164 src/Widgets/LidCloseActionComboBox.vala:46
+#: src/MainView.vala:200 src/Widgets/LidCloseActionComboBox.vala:48
 msgid "Suspend"
 msgstr "Обустави"
 
-#: src/MainView.vala:165
+#: src/MainView.vala:201
 #, fuzzy
 #| msgid "Prompt to shutdown"
 msgid "Ask to shutdown"
 msgstr "Постави упит гашења"
 
-#: src/MainView.vala:170 src/Plug.vala:73
+#: src/MainView.vala:206 src/Plug.vala:94
 #, fuzzy
 #| msgid "Power button"
 msgid "Power Button Behavior"
 msgstr "Дугме напајања"
 
-#: src/MainView.vala:181 src/MainView.vala:220
-msgid "Suspend when inactive for:"
+#: src/MainView.vala:220 src/MainView.vala:260 src/Plug.vala:95
+#, fuzzy
+#| msgid "Suspend when inactive for:"
+msgid "Suspend When Inactive For"
 msgstr "Обустави када је нерадан након:"
 
-#: src/MainView.vala:205
+#: src/MainView.vala:245
 msgid "Plugged In"
 msgstr "На ел. мрежи"
 
-#: src/MainView.vala:250 src/Plug.vala:79
+#: src/MainView.vala:291 src/Plug.vala:87
 #, fuzzy
 #| msgid "Automatically adjust brightness:"
 msgid "Automatically Save Power"
 msgstr "Сам подеси осветљеност:"
 
-#: src/MainView.vala:252
+#: src/MainView.vala:294
 msgid "Power Saver mode will be used when battery is low"
 msgstr ""
 
-#: src/MainView.vala:258
+#: src/MainView.vala:303
 msgid "On Battery"
 msgstr "На батерији"
 
-#: src/MainView.vala:283
-msgid "Some changes will not take effect until you restart this computer"
-msgstr "Неке промене неће ступити на снагу све док поново не покренете рачунар"
-
-#: src/Plug.vala:36
+#: src/Plug.vala:37
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "Подесите осветљеност екрана, дугмад напајања и понашање обустављања"
 
-#: src/Plug.vala:72
-msgid "Suspend button"
-msgstr "Дугме обуставе"
-
-#: src/Plug.vala:74
-msgid "Display inactive"
-msgstr "Екран је нерадан"
-
-#: src/Plug.vala:75
-msgid "Dim display"
-msgstr "Затамни екран"
-
-#: src/Plug.vala:76
-msgid "Lid close"
-msgstr "Поклопац је спуштен"
-
-#: src/Plug.vala:77
-msgid "Display brightness"
-msgstr "Осветљеност екрана"
-
-#: src/Plug.vala:78
-msgid "Automatic brightness adjustment"
-msgstr "Самостално подешавање осветљености"
-
-#: src/Plug.vala:80
-msgid "Inactive display off"
-msgstr "Нерадан екран је искључен"
-
-#: src/Plug.vala:81
-msgid "Docked lid close"
-msgstr "Затвори прикачени поклопац"
-
-#: src/Plug.vala:82
-msgid "Sleep inactivity timeout"
-msgstr "Истек времена мировања спавања"
-
-#: src/Plug.vala:83
-msgid "Suspend inactive"
-msgstr "Обустава је неактивна"
-
-#: src/Widgets/BatteryBox.vala:23
+#: src/Plug.vala:89 src/Widgets/BatteryBox.vala:21
 #, fuzzy
 #| msgid "On Battery"
 msgid "Battery Level"
 msgstr "На батерији"
 
-#: src/Widgets/BatteryBox.vala:24
+#: src/Plug.vala:90
+#, fuzzy
+#| msgid "Dim display"
+msgid "Dim Display"
+msgstr "Затамни екран"
+
+#: src/Widgets/BatteryBox.vala:22
 msgid "Battery Levels"
 msgstr ""
 
-#: src/Widgets/BatteryBox.vala:32
+#: src/Widgets/BatteryBox.vala:30
 msgid "Show Percentage In Panel"
 msgstr ""
 
-#: src/Widgets/TimeoutComboBox.vala:99
+#: src/Widgets/TimeoutComboBox.vala:97
 msgid "Never"
 msgstr "Никада"
 
-#: src/Widgets/TimeoutComboBox.vala:100
+#: src/Widgets/TimeoutComboBox.vala:98
 msgid "5 min"
 msgstr "5 мин."
 
-#: src/Widgets/TimeoutComboBox.vala:101
+#: src/Widgets/TimeoutComboBox.vala:99
 msgid "10 min"
 msgstr "10 мин."
 
-#: src/Widgets/TimeoutComboBox.vala:102
+#: src/Widgets/TimeoutComboBox.vala:100
 msgid "15 min"
 msgstr "15 мин."
 
-#: src/Widgets/TimeoutComboBox.vala:103
+#: src/Widgets/TimeoutComboBox.vala:101
 msgid "30 min"
 msgstr "30 мин."
 
-#: src/Widgets/TimeoutComboBox.vala:104
+#: src/Widgets/TimeoutComboBox.vala:102
 msgid "45 min"
 msgstr "45 мин."
 
-#: src/Widgets/TimeoutComboBox.vala:105
+#: src/Widgets/TimeoutComboBox.vala:103
 msgid "1 hour"
 msgstr "1 сат"
 
-#: src/Widgets/TimeoutComboBox.vala:106
+#: src/Widgets/TimeoutComboBox.vala:104
 msgid "2 hours"
 msgstr "2 сата"
 
-#: src/Widgets/LidCloseActionComboBox.vala:47
+#: src/Widgets/LidCloseActionComboBox.vala:49
 msgid "Shutdown"
 msgstr "Угаси"
 
-#: src/Widgets/LidCloseActionComboBox.vala:48
+#: src/Widgets/LidCloseActionComboBox.vala:50
 msgid "Lock"
 msgstr "Закључај"
 
-#: src/Widgets/LidCloseActionComboBox.vala:49
+#: src/Widgets/LidCloseActionComboBox.vala:51
 msgid "Halt"
 msgstr "Заустави"
 
-#: src/Widgets/LidCloseActionComboBox.vala:52
+#: src/Widgets/LidCloseActionComboBox.vala:55
 msgid "Not supported"
 msgstr "Није подржано"
 
@@ -253,6 +227,39 @@ msgstr ""
 #: src/Widgets/PowerModeButton.vala:98
 msgid "Performance"
 msgstr ""
+
+#~ msgid "Display brightness:"
+#~ msgstr "Осветљеност екрана:"
+
+#~ msgid "When lid is closed:"
+#~ msgstr "Кад је поклопац спуштен:"
+
+#~ msgid "When lid is closed with external monitor:"
+#~ msgstr "Када је поклопац спуштен са спољним монитором:"
+
+#~ msgid "Turn off display when inactive for:"
+#~ msgstr "Искључи екран када је нерадан након:"
+
+#~ msgid "Suspend button"
+#~ msgstr "Дугме обуставе"
+
+#~ msgid "Display inactive"
+#~ msgstr "Екран је нерадан"
+
+#~ msgid "Lid close"
+#~ msgstr "Поклопац је спуштен"
+
+#~ msgid "Automatic brightness adjustment"
+#~ msgstr "Самостално подешавање осветљености"
+
+#~ msgid "Docked lid close"
+#~ msgstr "Затвори прикачени поклопац"
+
+#~ msgid "Sleep inactivity timeout"
+#~ msgstr "Истек времена мировања спавања"
+
+#~ msgid "Suspend inactive"
+#~ msgstr "Обустава је неактивна"
 
 #~ msgid "Power button:"
 #~ msgstr "Дугме напајања:"

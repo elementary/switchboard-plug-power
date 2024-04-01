@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-13 10:52+0000\n"
-"PO-Revision-Date: 2024-02-14 17:17+0000\n"
+"POT-Creation-Date: 2024-03-21 16:33+0000\n"
+"PO-Revision-Date: 2024-03-23 18:13+0000\n"
 "Last-Translator: кубик круглый <megarainbow29@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "power/ru/>\n"
@@ -57,174 +57,138 @@ msgstr "Ожидает работы от батареи"
 msgid "Unknown"
 msgstr "Неизвестно"
 
-#: src/MainView.vala:51 src/Plug.vala:35
+#: src/MainView.vala:49 src/Plug.vala:36
 msgid "Power"
 msgstr "Питание"
 
-#: src/MainView.vala:81
-msgid "Display brightness:"
-msgstr "Яркость экрана:"
+#: src/MainView.vala:88 src/Plug.vala:86
+msgid "Automatically Adjust Brightness"
+msgstr "Автоматическая регулировка яркости"
 
-#: src/MainView.vala:86
-msgid "Automatically adjust brightness:"
-msgstr "Автоматическая регулировка яркости:"
+#: src/MainView.vala:120 src/Plug.vala:91
+msgid "Display Brightness"
+msgstr "Яркость экрана"
 
-#: src/MainView.vala:131
-msgid "When lid is closed:"
-msgstr "Когда крышка закрыта:"
+#: src/MainView.vala:141
+msgid "Some changes will not take effect until you restart this computer"
+msgstr "Некоторые изменения вступят в силу после перезагрузки компьютера"
 
-#: src/MainView.vala:138
-msgid "When lid is closed with external monitor:"
-msgstr "Когда крышка закрыта с внешним монитором:"
+#: src/MainView.vala:150 src/Plug.vala:92
+msgid "Lid Close Behavior"
+msgstr "При закрытии крышки"
 
-#: src/MainView.vala:154
-msgid "Turn off display when inactive for:"
-msgstr "Выключать экран при бездействии в течение:"
+#: src/MainView.vala:158 src/Plug.vala:93
+msgid "Lid Close With External Display"
+msgstr "При закрытии крышки, с внешним монитором"
+
+#: src/MainView.vala:189 src/Plug.vala:88
+msgid "Automatic Display Off"
+msgstr "Автоматическое выключение экрана"
 
 #. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
-#: src/MainView.vala:163 src/Widgets/LidCloseActionComboBox.vala:50
+#: src/MainView.vala:199 src/Widgets/LidCloseActionComboBox.vala:52
 msgid "Do nothing"
 msgstr "Ничего не делать"
 
-#: src/MainView.vala:164 src/Widgets/LidCloseActionComboBox.vala:46
+#: src/MainView.vala:200 src/Widgets/LidCloseActionComboBox.vala:48
 msgid "Suspend"
 msgstr "Режим ожидания"
 
-#: src/MainView.vala:165
+#: src/MainView.vala:201
 msgid "Ask to shutdown"
 msgstr "Запрос на выключение"
 
-#: src/MainView.vala:170 src/Plug.vala:73
+#: src/MainView.vala:206 src/Plug.vala:94
 msgid "Power Button Behavior"
 msgstr "Поведение кнопки питания"
 
-#: src/MainView.vala:181 src/MainView.vala:220
-msgid "Suspend when inactive for:"
-msgstr "Перейти в режим ожидания при бездействии в течение:"
+#: src/MainView.vala:220 src/MainView.vala:260 src/Plug.vala:95
+msgid "Suspend When Inactive For"
+msgstr "Перейти в режим ожидания при бездействии"
 
-#: src/MainView.vala:205
+#: src/MainView.vala:245
 msgid "Plugged In"
 msgstr "На зарядке"
 
-#: src/MainView.vala:250 src/Plug.vala:79
+#: src/MainView.vala:291 src/Plug.vala:87
 msgid "Automatically Save Power"
 msgstr "Автоматическая экономия энергии"
 
-#: src/MainView.vala:252
+#: src/MainView.vala:294
 msgid "Power Saver mode will be used when battery is low"
 msgstr ""
 "Режим экономии энергии будет использоваться при низком уровне заряда батареи"
 
-#: src/MainView.vala:258
+#: src/MainView.vala:303
 msgid "On Battery"
 msgstr "От батареи"
 
-#: src/MainView.vala:283
-msgid "Some changes will not take effect until you restart this computer"
-msgstr "Некоторые изменения вступят в силу после перезагрузки компьютера"
-
-#: src/Plug.vala:36
+#: src/Plug.vala:37
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr ""
 "Настройка яркости экрана, кнопок питания и поведения перехода в спящий режим"
 
-#: src/Plug.vala:72
-msgid "Suspend button"
-msgstr "Кнопка сна"
-
-#: src/Plug.vala:74
-msgid "Display inactive"
-msgstr "Экран при простое"
-
-#: src/Plug.vala:75
-msgid "Dim display"
-msgstr "Затемнение экрана"
-
-#: src/Plug.vala:76
-msgid "Lid close"
-msgstr "Крышка закрыта"
-
-#: src/Plug.vala:77
-msgid "Display brightness"
-msgstr "Яркость экрана"
-
-#: src/Plug.vala:78
-msgid "Automatic brightness adjustment"
-msgstr "Автоматическая настройка яркости"
-
-#: src/Plug.vala:80
-msgid "Inactive display off"
-msgstr "Выключение экрана в простое"
-
-#: src/Plug.vala:81
-msgid "Docked lid close"
-msgstr "Крышка закрыта"
-
-#: src/Plug.vala:82
-msgid "Sleep inactivity timeout"
-msgstr "Время бездействия для перехода в спящий режим"
-
-#: src/Plug.vala:83
-msgid "Suspend inactive"
-msgstr "Сон при простое"
-
-#: src/Widgets/BatteryBox.vala:23
+#: src/Plug.vala:89 src/Widgets/BatteryBox.vala:21
 msgid "Battery Level"
 msgstr "Уровень заряда"
 
-#: src/Widgets/BatteryBox.vala:24
+#: src/Plug.vala:90
+msgid "Dim Display"
+msgstr "Затемнение экрана"
+
+#: src/Widgets/BatteryBox.vala:22
 msgid "Battery Levels"
 msgstr "Уровни заряда"
 
-#: src/Widgets/BatteryBox.vala:32
+#: src/Widgets/BatteryBox.vala:30
 msgid "Show Percentage In Panel"
 msgstr "Отображать процент заряда на панели"
 
-#: src/Widgets/TimeoutComboBox.vala:99
+#: src/Widgets/TimeoutComboBox.vala:97
 msgid "Never"
 msgstr "Никогда"
 
-#: src/Widgets/TimeoutComboBox.vala:100
+#: src/Widgets/TimeoutComboBox.vala:98
 msgid "5 min"
 msgstr "5 минут"
 
-#: src/Widgets/TimeoutComboBox.vala:101
+#: src/Widgets/TimeoutComboBox.vala:99
 msgid "10 min"
 msgstr "10 минут"
 
-#: src/Widgets/TimeoutComboBox.vala:102
+#: src/Widgets/TimeoutComboBox.vala:100
 msgid "15 min"
 msgstr "15 минут"
 
-#: src/Widgets/TimeoutComboBox.vala:103
+#: src/Widgets/TimeoutComboBox.vala:101
 msgid "30 min"
 msgstr "30 минут"
 
-#: src/Widgets/TimeoutComboBox.vala:104
+#: src/Widgets/TimeoutComboBox.vala:102
 msgid "45 min"
 msgstr "45 минут"
 
-#: src/Widgets/TimeoutComboBox.vala:105
+#: src/Widgets/TimeoutComboBox.vala:103
 msgid "1 hour"
 msgstr "1 часа"
 
-#: src/Widgets/TimeoutComboBox.vala:106
+#: src/Widgets/TimeoutComboBox.vala:104
 msgid "2 hours"
 msgstr "2 часа"
 
-#: src/Widgets/LidCloseActionComboBox.vala:47
+#: src/Widgets/LidCloseActionComboBox.vala:49
 msgid "Shutdown"
 msgstr "Выключение"
 
-#: src/Widgets/LidCloseActionComboBox.vala:48
+#: src/Widgets/LidCloseActionComboBox.vala:50
 msgid "Lock"
 msgstr "Заблокировать"
 
-#: src/Widgets/LidCloseActionComboBox.vala:49
+#: src/Widgets/LidCloseActionComboBox.vala:51
 msgid "Halt"
 msgstr "Завершить работу"
 
-#: src/Widgets/LidCloseActionComboBox.vala:52
+#: src/Widgets/LidCloseActionComboBox.vala:55
 msgid "Not supported"
 msgstr "Не поддерживается"
 
@@ -243,6 +207,39 @@ msgstr "Сбалансированный"
 #: src/Widgets/PowerModeButton.vala:98
 msgid "Performance"
 msgstr "Производительность"
+
+#~ msgid "Display brightness:"
+#~ msgstr "Яркость экрана:"
+
+#~ msgid "When lid is closed:"
+#~ msgstr "Когда крышка закрыта:"
+
+#~ msgid "When lid is closed with external monitor:"
+#~ msgstr "Когда крышка закрыта с внешним монитором:"
+
+#~ msgid "Turn off display when inactive for:"
+#~ msgstr "Выключать экран при бездействии в течение:"
+
+#~ msgid "Suspend button"
+#~ msgstr "Кнопка сна"
+
+#~ msgid "Display inactive"
+#~ msgstr "Экран при простое"
+
+#~ msgid "Lid close"
+#~ msgstr "Крышка закрыта"
+
+#~ msgid "Automatic brightness adjustment"
+#~ msgstr "Автоматическая настройка яркости"
+
+#~ msgid "Docked lid close"
+#~ msgstr "Крышка закрыта"
+
+#~ msgid "Sleep inactivity timeout"
+#~ msgstr "Время бездействия для перехода в спящий режим"
+
+#~ msgid "Suspend inactive"
+#~ msgstr "Сон при простое"
 
 #~ msgid "Power button:"
 #~ msgstr "Кнопка питания:"
