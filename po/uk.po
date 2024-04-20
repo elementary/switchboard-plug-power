@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-21 16:33+0000\n"
+"POT-Creation-Date: 2024-04-20 18:42+0000\n"
 "PO-Revision-Date: 2024-03-29 22:13+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
@@ -16,8 +16,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2016-11-21 05:42+0000\n"
 
@@ -29,96 +29,121 @@ msgstr "Керування налаштуваннями живлення"
 msgid "Authentication is required to manage power settings"
 msgstr "Для керування налаштування живлення необхідна автентифікація"
 
-#: src/Device.vala:35
+#: src/Device.vala:54
 msgid "Charging"
 msgstr "Заряджання"
 
-#: src/Device.vala:37
+#: src/Device.vala:56
 msgid "Using battery power"
 msgstr "Живлення від акумулятора"
 
-#: src/Device.vala:39
+#: src/Device.vala:58
 msgid "Empty"
 msgstr "Порожній"
 
-#: src/Device.vala:41
+#: src/Device.vala:60
 msgid "Fully charged"
 msgstr "Повністю заряджений"
 
-#: src/Device.vala:43
+#: src/Device.vala:62
 msgid "Waiting to charge"
 msgstr "Очікує заряджання"
 
-#: src/Device.vala:45
+#: src/Device.vala:64
 msgid "Waiting to use battery power"
 msgstr "Очікування використання заряду акумулятора"
 
-#: src/Device.vala:47
+#: src/Device.vala:66
 msgid "Unknown"
 msgstr "Невідомо"
+
+#. Coarse battery level can sometimes be unknown, percentage is more reliable
+#: src/Device.vala:193
+msgid "Critical"
+msgstr ""
+
+#: src/Device.vala:195
+msgid "Low"
+msgstr ""
+
+#: src/Device.vala:197
+msgid "Good"
+msgstr ""
+
+#: src/Device.vala:199
+msgid "High"
+msgstr ""
+
+#: src/Device.vala:201
+msgid "Full"
+msgstr ""
+
+#: src/Device.vala:205
+msgid "Unknown. Device may be locked."
+msgstr ""
 
 #: src/MainView.vala:49 src/Plug.vala:36
 msgid "Power"
 msgstr "Живлення"
 
-#: src/MainView.vala:88 src/Plug.vala:86
+#: src/MainView.vala:94 src/Plug.vala:86
 msgid "Automatically Adjust Brightness"
 msgstr "Авторегулювання яскравості"
 
-#: src/MainView.vala:120 src/Plug.vala:91
+#: src/MainView.vala:126 src/Plug.vala:91
 msgid "Display Brightness"
 msgstr "Яскравість екрана"
 
-#: src/MainView.vala:141
+#: src/MainView.vala:147
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Деякі зміни не набудуть чинності до перезавантаження комп'ютера"
 
-#: src/MainView.vala:150 src/Plug.vala:92
+#: src/MainView.vala:156 src/Plug.vala:92
 msgid "Lid Close Behavior"
 msgstr "Поведінка після закриття кришки"
 
-#: src/MainView.vala:158 src/Plug.vala:93
+#: src/MainView.vala:164 src/Plug.vala:93
 msgid "Lid Close With External Display"
 msgstr "Закриття кришки із зовнішнім дисплеєм"
 
-#: src/MainView.vala:189 src/Plug.vala:88
+#: src/MainView.vala:195 src/Plug.vala:88
 msgid "Automatic Display Off"
 msgstr "Автовимкнення дисплея"
 
 #. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
-#: src/MainView.vala:199 src/Widgets/LidCloseActionComboBox.vala:52
+#: src/MainView.vala:205 src/Widgets/LidCloseActionComboBox.vala:52
 msgid "Do nothing"
 msgstr "Нічого не робити"
 
-#: src/MainView.vala:200 src/Widgets/LidCloseActionComboBox.vala:48
+#: src/MainView.vala:206 src/Widgets/LidCloseActionComboBox.vala:48
 msgid "Suspend"
 msgstr "Призупинити"
 
-#: src/MainView.vala:201
+#: src/MainView.vala:207
 msgid "Ask to shutdown"
 msgstr "Питати про вимкнення"
 
-#: src/MainView.vala:206 src/Plug.vala:94
+#: src/MainView.vala:212 src/Plug.vala:94
 msgid "Power Button Behavior"
 msgstr "Поведінка кнопки живлення"
 
-#: src/MainView.vala:220 src/MainView.vala:260 src/Plug.vala:95
+#: src/MainView.vala:226 src/MainView.vala:266 src/Plug.vala:95
 msgid "Suspend When Inactive For"
 msgstr "Призупиняти за бездіяльності впродовж"
 
-#: src/MainView.vala:245
+#: src/MainView.vala:251
 msgid "Plugged In"
 msgstr "Під'єднано до електромережі"
 
-#: src/MainView.vala:291 src/Plug.vala:87
+#: src/MainView.vala:297 src/Plug.vala:87
 msgid "Automatically Save Power"
 msgstr "Автозаощадження енергії"
 
-#: src/MainView.vala:294
+#: src/MainView.vala:300
 msgid "Power Saver mode will be used when battery is low"
 msgstr "Енергоощадний режим увімкнеться за низького рівня заряду акумулятора"
 
-#: src/MainView.vala:303
+#: src/MainView.vala:309
 msgid "On Battery"
 msgstr "Робота від акумулятора"
 
@@ -143,6 +168,16 @@ msgstr "Рівні заряду акумулятора"
 #: src/Widgets/BatteryBox.vala:30
 msgid "Show Percentage In Panel"
 msgstr "Показувати відсоток заряду на панелі"
+
+#: src/Widgets/DevicesBox.vala:8
+msgid ""
+"Devices that report battery information when plugged in or connected "
+"wirelessly will appear here"
+msgstr ""
+
+#: src/Widgets/DevicesBox.vala:28
+msgid "Connected Devices"
+msgstr ""
 
 #: src/Widgets/TimeoutComboBox.vala:97
 msgid "Never"

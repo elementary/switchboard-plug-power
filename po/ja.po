@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-21 16:33+0000\n"
+"POT-Creation-Date: 2024-04-20 18:42+0000\n"
 "PO-Revision-Date: 2024-03-23 18:13+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -23,96 +23,121 @@ msgstr "電源設定を管理します"
 msgid "Authentication is required to manage power settings"
 msgstr "電源設定を管理するには認証が必要です"
 
-#: src/Device.vala:35
+#: src/Device.vala:54
 msgid "Charging"
 msgstr "充電中"
 
-#: src/Device.vala:37
+#: src/Device.vala:56
 msgid "Using battery power"
 msgstr "バッテリー電力を使用中"
 
-#: src/Device.vala:39
+#: src/Device.vala:58
 msgid "Empty"
 msgstr "空"
 
-#: src/Device.vala:41
+#: src/Device.vala:60
 msgid "Fully charged"
 msgstr "完全に充電済み"
 
-#: src/Device.vala:43
+#: src/Device.vala:62
 msgid "Waiting to charge"
 msgstr "充電の待機中"
 
-#: src/Device.vala:45
+#: src/Device.vala:64
 msgid "Waiting to use battery power"
 msgstr "バッテリー電力使用の待機中"
 
-#: src/Device.vala:47
+#: src/Device.vala:66
 msgid "Unknown"
 msgstr "不明"
+
+#. Coarse battery level can sometimes be unknown, percentage is more reliable
+#: src/Device.vala:193
+msgid "Critical"
+msgstr ""
+
+#: src/Device.vala:195
+msgid "Low"
+msgstr ""
+
+#: src/Device.vala:197
+msgid "Good"
+msgstr ""
+
+#: src/Device.vala:199
+msgid "High"
+msgstr ""
+
+#: src/Device.vala:201
+msgid "Full"
+msgstr ""
+
+#: src/Device.vala:205
+msgid "Unknown. Device may be locked."
+msgstr ""
 
 #: src/MainView.vala:49 src/Plug.vala:36
 msgid "Power"
 msgstr "電源"
 
-#: src/MainView.vala:88 src/Plug.vala:86
+#: src/MainView.vala:94 src/Plug.vala:86
 msgid "Automatically Adjust Brightness"
 msgstr "明るさを自動調整"
 
-#: src/MainView.vala:120 src/Plug.vala:91
+#: src/MainView.vala:126 src/Plug.vala:91
 msgid "Display Brightness"
 msgstr "ディスプレイの明るさ"
 
-#: src/MainView.vala:141
+#: src/MainView.vala:147
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "一部の変更は、このコンピューターの再起動後に反映されます"
 
-#: src/MainView.vala:150 src/Plug.vala:92
+#: src/MainView.vala:156 src/Plug.vala:92
 msgid "Lid Close Behavior"
 msgstr "フタを閉じたときの動作"
 
-#: src/MainView.vala:158 src/Plug.vala:93
+#: src/MainView.vala:164 src/Plug.vala:93
 msgid "Lid Close With External Display"
 msgstr "外部ディスプレイ接続時にフタを閉じたとき"
 
-#: src/MainView.vala:189 src/Plug.vala:88
+#: src/MainView.vala:195 src/Plug.vala:88
 msgid "Automatic Display Off"
 msgstr "ディスプレイを自動でオフにする"
 
 #. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
-#: src/MainView.vala:199 src/Widgets/LidCloseActionComboBox.vala:52
+#: src/MainView.vala:205 src/Widgets/LidCloseActionComboBox.vala:52
 msgid "Do nothing"
 msgstr "何もしない"
 
-#: src/MainView.vala:200 src/Widgets/LidCloseActionComboBox.vala:48
+#: src/MainView.vala:206 src/Widgets/LidCloseActionComboBox.vala:48
 msgid "Suspend"
 msgstr "サスペンド"
 
-#: src/MainView.vala:201
+#: src/MainView.vala:207
 msgid "Ask to shutdown"
 msgstr "シャットダウンの確認"
 
-#: src/MainView.vala:206 src/Plug.vala:94
+#: src/MainView.vala:212 src/Plug.vala:94
 msgid "Power Button Behavior"
 msgstr "電源ボタンの動作"
 
-#: src/MainView.vala:220 src/MainView.vala:260 src/Plug.vala:95
+#: src/MainView.vala:226 src/MainView.vala:266 src/Plug.vala:95
 msgid "Suspend When Inactive For"
 msgstr "非アクティブ時にサスペンド"
 
-#: src/MainView.vala:245
+#: src/MainView.vala:251
 msgid "Plugged In"
 msgstr "電源接続時"
 
-#: src/MainView.vala:291 src/Plug.vala:87
+#: src/MainView.vala:297 src/Plug.vala:87
 msgid "Automatically Save Power"
 msgstr "自動的に電力消費を抑える"
 
-#: src/MainView.vala:294
+#: src/MainView.vala:300
 msgid "Power Saver mode will be used when battery is low"
 msgstr "電力消費を抑えるモードは、バッテリー残量が低下した際に適用されます"
 
-#: src/MainView.vala:303
+#: src/MainView.vala:309
 msgid "On Battery"
 msgstr "バッテリー時"
 
@@ -135,6 +160,16 @@ msgstr "バッテリー残量"
 #: src/Widgets/BatteryBox.vala:30
 msgid "Show Percentage In Panel"
 msgstr "パネルに割合を表示"
+
+#: src/Widgets/DevicesBox.vala:8
+msgid ""
+"Devices that report battery information when plugged in or connected "
+"wirelessly will appear here"
+msgstr ""
+
+#: src/Widgets/DevicesBox.vala:28
+msgid "Connected Devices"
+msgstr ""
 
 #: src/Widgets/TimeoutComboBox.vala:97
 msgid "Never"

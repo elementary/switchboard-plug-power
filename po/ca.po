@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-21 16:33+0000\n"
+"POT-Creation-Date: 2024-04-20 18:42+0000\n"
 "PO-Revision-Date: 2024-03-23 18:13+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
@@ -28,96 +28,121 @@ msgstr "Gestioneu els paràmetres de l'energia."
 msgid "Authentication is required to manage power settings"
 msgstr "Cal autenticació per gestionar els paràmetres de l'energia."
 
-#: src/Device.vala:35
+#: src/Device.vala:54
 msgid "Charging"
 msgstr "Es carrega"
 
-#: src/Device.vala:37
+#: src/Device.vala:56
 msgid "Using battery power"
 msgstr "S'usa la bateria"
 
-#: src/Device.vala:39
+#: src/Device.vala:58
 msgid "Empty"
 msgstr "Buida"
 
-#: src/Device.vala:41
+#: src/Device.vala:60
 msgid "Fully charged"
 msgstr "Carregada"
 
-#: src/Device.vala:43
+#: src/Device.vala:62
 msgid "Waiting to charge"
 msgstr "S'espera per carregar"
 
-#: src/Device.vala:45
+#: src/Device.vala:64
 msgid "Waiting to use battery power"
 msgstr "S'espera per usar la bateria"
 
-#: src/Device.vala:47
+#: src/Device.vala:66
 msgid "Unknown"
 msgstr "Desconegut"
+
+#. Coarse battery level can sometimes be unknown, percentage is more reliable
+#: src/Device.vala:193
+msgid "Critical"
+msgstr ""
+
+#: src/Device.vala:195
+msgid "Low"
+msgstr ""
+
+#: src/Device.vala:197
+msgid "Good"
+msgstr ""
+
+#: src/Device.vala:199
+msgid "High"
+msgstr ""
+
+#: src/Device.vala:201
+msgid "Full"
+msgstr ""
+
+#: src/Device.vala:205
+msgid "Unknown. Device may be locked."
+msgstr ""
 
 #: src/MainView.vala:49 src/Plug.vala:36
 msgid "Power"
 msgstr "Energia"
 
-#: src/MainView.vala:88 src/Plug.vala:86
+#: src/MainView.vala:94 src/Plug.vala:86
 msgid "Automatically Adjust Brightness"
 msgstr "Ajusta automàticament la brillantor"
 
-#: src/MainView.vala:120 src/Plug.vala:91
+#: src/MainView.vala:126 src/Plug.vala:91
 msgid "Display Brightness"
 msgstr "Brillantor de la pantalla"
 
-#: src/MainView.vala:141
+#: src/MainView.vala:147
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "Alguns canvis no tindran efecte fins que reinicieu l'ordinador."
 
-#: src/MainView.vala:150 src/Plug.vala:92
+#: src/MainView.vala:156 src/Plug.vala:92
 msgid "Lid Close Behavior"
 msgstr "Comportament pel tancament de la tapa"
 
-#: src/MainView.vala:158 src/Plug.vala:93
+#: src/MainView.vala:164 src/Plug.vala:93
 msgid "Lid Close With External Display"
 msgstr "Tancament de la tapa amb una pantalla externa"
 
-#: src/MainView.vala:189 src/Plug.vala:88
+#: src/MainView.vala:195 src/Plug.vala:88
 msgid "Automatic Display Off"
 msgstr "Apaga la pantalla automàticament"
 
 #. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
-#: src/MainView.vala:199 src/Widgets/LidCloseActionComboBox.vala:52
+#: src/MainView.vala:205 src/Widgets/LidCloseActionComboBox.vala:52
 msgid "Do nothing"
 msgstr "No facis res"
 
-#: src/MainView.vala:200 src/Widgets/LidCloseActionComboBox.vala:48
+#: src/MainView.vala:206 src/Widgets/LidCloseActionComboBox.vala:48
 msgid "Suspend"
 msgstr "Suspèn"
 
-#: src/MainView.vala:201
+#: src/MainView.vala:207
 msgid "Ask to shutdown"
 msgstr "Demana l'aturada"
 
-#: src/MainView.vala:206 src/Plug.vala:94
+#: src/MainView.vala:212 src/Plug.vala:94
 msgid "Power Button Behavior"
 msgstr "Comportament del botó d'engegada"
 
-#: src/MainView.vala:220 src/MainView.vala:260 src/Plug.vala:95
+#: src/MainView.vala:226 src/MainView.vala:266 src/Plug.vala:95
 msgid "Suspend When Inactive For"
 msgstr "Posa't en suspensió quan estiguis inactiu durant..."
 
-#: src/MainView.vala:245
+#: src/MainView.vala:251
 msgid "Plugged In"
 msgstr "Endollat"
 
-#: src/MainView.vala:291 src/Plug.vala:87
+#: src/MainView.vala:297 src/Plug.vala:87
 msgid "Automatically Save Power"
 msgstr "Estalvia bateria automàticament"
 
-#: src/MainView.vala:294
+#: src/MainView.vala:300
 msgid "Power Saver mode will be used when battery is low"
 msgstr "L'estalvi de bateria s'usarà quan la bateria estigui baixa."
 
-#: src/MainView.vala:303
+#: src/MainView.vala:309
 msgid "On Battery"
 msgstr "Amb la bateria"
 
@@ -142,6 +167,16 @@ msgstr "Nivells de bateria"
 #: src/Widgets/BatteryBox.vala:30
 msgid "Show Percentage In Panel"
 msgstr "Mostra el percentatge de la bateria al plafó."
+
+#: src/Widgets/DevicesBox.vala:8
+msgid ""
+"Devices that report battery information when plugged in or connected "
+"wirelessly will appear here"
+msgstr ""
+
+#: src/Widgets/DevicesBox.vala:28
+msgid "Connected Devices"
+msgstr ""
 
 #: src/Widgets/TimeoutComboBox.vala:97
 msgid "Never"

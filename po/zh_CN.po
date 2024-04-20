@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-21 16:33+0000\n"
+"POT-Creation-Date: 2024-04-20 18:42+0000\n"
 "PO-Revision-Date: 2022-07-21 09:20+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -28,110 +28,135 @@ msgstr "管理电源设置"
 msgid "Authentication is required to manage power settings"
 msgstr "电源设置需要管理员权限"
 
-#: src/Device.vala:35
+#: src/Device.vala:54
 msgid "Charging"
 msgstr ""
 
-#: src/Device.vala:37
+#: src/Device.vala:56
 msgid "Using battery power"
 msgstr ""
 
-#: src/Device.vala:39
+#: src/Device.vala:58
 msgid "Empty"
 msgstr ""
 
-#: src/Device.vala:41
+#: src/Device.vala:60
 msgid "Fully charged"
 msgstr ""
 
-#: src/Device.vala:43
+#: src/Device.vala:62
 msgid "Waiting to charge"
 msgstr ""
 
-#: src/Device.vala:45
+#: src/Device.vala:64
 msgid "Waiting to use battery power"
 msgstr ""
 
-#: src/Device.vala:47
+#: src/Device.vala:66
 msgid "Unknown"
+msgstr ""
+
+#. Coarse battery level can sometimes be unknown, percentage is more reliable
+#: src/Device.vala:193
+msgid "Critical"
+msgstr ""
+
+#: src/Device.vala:195
+msgid "Low"
+msgstr ""
+
+#: src/Device.vala:197
+msgid "Good"
+msgstr ""
+
+#: src/Device.vala:199
+msgid "High"
+msgstr ""
+
+#: src/Device.vala:201
+msgid "Full"
+msgstr ""
+
+#: src/Device.vala:205
+msgid "Unknown. Device may be locked."
 msgstr ""
 
 #: src/MainView.vala:49 src/Plug.vala:36
 msgid "Power"
 msgstr "电源"
 
-#: src/MainView.vala:88 src/Plug.vala:86
+#: src/MainView.vala:94 src/Plug.vala:86
 #, fuzzy
 #| msgid "Automatically adjust brightness:"
 msgid "Automatically Adjust Brightness"
 msgstr "自动调整："
 
-#: src/MainView.vala:120 src/Plug.vala:91
+#: src/MainView.vala:126 src/Plug.vala:91
 #, fuzzy
 #| msgid "Display brightness"
 msgid "Display Brightness"
 msgstr "屏幕亮度"
 
-#: src/MainView.vala:141
+#: src/MainView.vala:147
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "某些变更需要重启系统才会生效"
 
-#: src/MainView.vala:150 src/Plug.vala:92
+#: src/MainView.vala:156 src/Plug.vala:92
 msgid "Lid Close Behavior"
 msgstr ""
 
-#: src/MainView.vala:158 src/Plug.vala:93
+#: src/MainView.vala:164 src/Plug.vala:93
 msgid "Lid Close With External Display"
 msgstr ""
 
-#: src/MainView.vala:189 src/Plug.vala:88
+#: src/MainView.vala:195 src/Plug.vala:88
 #, fuzzy
 #| msgid "Inactive display off"
 msgid "Automatic Display Off"
 msgstr "闲时关闭屏幕"
 
 #. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
-#: src/MainView.vala:199 src/Widgets/LidCloseActionComboBox.vala:52
+#: src/MainView.vala:205 src/Widgets/LidCloseActionComboBox.vala:52
 msgid "Do nothing"
 msgstr "无操作"
 
-#: src/MainView.vala:200 src/Widgets/LidCloseActionComboBox.vala:48
+#: src/MainView.vala:206 src/Widgets/LidCloseActionComboBox.vala:48
 msgid "Suspend"
 msgstr "挂起"
 
-#: src/MainView.vala:201
+#: src/MainView.vala:207
 #, fuzzy
 #| msgid "Prompt to shutdown"
 msgid "Ask to shutdown"
 msgstr "立刻关机"
 
-#: src/MainView.vala:206 src/Plug.vala:94
+#: src/MainView.vala:212 src/Plug.vala:94
 #, fuzzy
 #| msgid "Power button"
 msgid "Power Button Behavior"
 msgstr "电源键"
 
-#: src/MainView.vala:220 src/MainView.vala:260 src/Plug.vala:95
+#: src/MainView.vala:226 src/MainView.vala:266 src/Plug.vala:95
 #, fuzzy
 #| msgid "Suspend when inactive for:"
 msgid "Suspend When Inactive For"
 msgstr "睡眠模式："
 
-#: src/MainView.vala:245
+#: src/MainView.vala:251
 msgid "Plugged In"
 msgstr "接入电源"
 
-#: src/MainView.vala:291 src/Plug.vala:87
+#: src/MainView.vala:297 src/Plug.vala:87
 #, fuzzy
 #| msgid "Automatically adjust brightness:"
 msgid "Automatically Save Power"
 msgstr "自动调整："
 
-#: src/MainView.vala:294
+#: src/MainView.vala:300
 msgid "Power Saver mode will be used when battery is low"
 msgstr ""
 
-#: src/MainView.vala:303
+#: src/MainView.vala:309
 msgid "On Battery"
 msgstr "使用电池"
 
@@ -160,6 +185,16 @@ msgstr ""
 #| msgid "Show battery percentage in Panel:"
 msgid "Show Percentage In Panel"
 msgstr "显示电池百分比："
+
+#: src/Widgets/DevicesBox.vala:8
+msgid ""
+"Devices that report battery information when plugged in or connected "
+"wirelessly will appear here"
+msgstr ""
+
+#: src/Widgets/DevicesBox.vala:28
+msgid "Connected Devices"
+msgstr ""
 
 #: src/Widgets/TimeoutComboBox.vala:97
 msgid "Never"
