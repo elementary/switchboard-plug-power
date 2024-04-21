@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-20 18:42+0000\n"
-"PO-Revision-Date: 2024-03-23 18:13+0000\n"
+"PO-Revision-Date: 2024-04-23 20:13+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/power/"
 "pl/>\n"
@@ -60,27 +60,27 @@ msgstr "Nieznane"
 #. Coarse battery level can sometimes be unknown, percentage is more reliable
 #: src/Device.vala:193
 msgid "Critical"
-msgstr ""
+msgstr "Krytyczny"
 
 #: src/Device.vala:195
 msgid "Low"
-msgstr ""
+msgstr "Niski"
 
 #: src/Device.vala:197
 msgid "Good"
-msgstr ""
+msgstr "Dobry"
 
 #: src/Device.vala:199
 msgid "High"
-msgstr ""
+msgstr "Wysoki"
 
 #: src/Device.vala:201
 msgid "Full"
-msgstr ""
+msgstr "Pełny"
 
 #: src/Device.vala:205
 msgid "Unknown. Device may be locked."
-msgstr ""
+msgstr "Nieznany. Urządzenie może być zablokowane."
 
 #: src/MainView.vala:49 src/Plug.vala:36
 msgid "Power"
@@ -175,10 +175,12 @@ msgid ""
 "Devices that report battery information when plugged in or connected "
 "wirelessly will appear here"
 msgstr ""
+"Urządzenia raportujące poziom baterii pojawią się tutaj po połączeniu "
+"przewodowym lub bezprzewodowym"
 
 #: src/Widgets/DevicesBox.vala:28
 msgid "Connected Devices"
-msgstr ""
+msgstr "Połączone urządzenia"
 
 #: src/Widgets/TimeoutComboBox.vala:97
 msgid "Never"
