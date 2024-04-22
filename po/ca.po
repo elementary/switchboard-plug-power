@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-20 18:42+0000\n"
-"PO-Revision-Date: 2024-03-23 18:13+0000\n"
+"PO-Revision-Date: 2024-04-23 20:13+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "power/ca/>\n"
@@ -59,27 +59,27 @@ msgstr "Desconegut"
 #. Coarse battery level can sometimes be unknown, percentage is more reliable
 #: src/Device.vala:193
 msgid "Critical"
-msgstr ""
+msgstr "Crítica"
 
 #: src/Device.vala:195
 msgid "Low"
-msgstr ""
+msgstr "Baixa"
 
 #: src/Device.vala:197
 msgid "Good"
-msgstr ""
+msgstr "Bona"
 
 #: src/Device.vala:199
 msgid "High"
-msgstr ""
+msgstr "Alta"
 
 #: src/Device.vala:201
 msgid "Full"
-msgstr ""
+msgstr "Plena"
 
 #: src/Device.vala:205
 msgid "Unknown. Device may be locked."
-msgstr ""
+msgstr "Desconegut. El dispositiu pot estar blocat."
 
 #: src/MainView.vala:49 src/Plug.vala:36
 msgid "Power"
@@ -173,10 +173,12 @@ msgid ""
 "Devices that report battery information when plugged in or connected "
 "wirelessly will appear here"
 msgstr ""
+"Els dispositius que informen sobre l'estat de la bateria, quan estiguin "
+"connectats a aquest físicament o sense fil, apareixeran aquí."
 
 #: src/Widgets/DevicesBox.vala:28
 msgid "Connected Devices"
-msgstr ""
+msgstr "Dispositius connectats"
 
 #: src/Widgets/TimeoutComboBox.vala:97
 msgid "Never"
