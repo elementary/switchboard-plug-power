@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-20 18:42+0000\n"
-"PO-Revision-Date: 2024-04-28 01:13+0000\n"
+"PO-Revision-Date: 2024-04-29 02:13+0000\n"
 "Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "switchboard/power/en_GB/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.5\n"
 "X-Launchpad-Export-Date: 2016-11-21 05:42+0000\n"
 
 #: data/power.policy.in:10
@@ -75,27 +75,23 @@ msgstr "High"
 
 #: src/Device.vala:201
 msgid "Full"
-msgstr ""
+msgstr "Full"
 
 #: src/Device.vala:205
 msgid "Unknown. Device may be locked."
-msgstr ""
+msgstr "Unknown. Device may be locked."
 
 #: src/MainView.vala:49 src/Plug.vala:36
 msgid "Power"
 msgstr "Power"
 
 #: src/MainView.vala:94 src/Plug.vala:86
-#, fuzzy
-#| msgid "Automatically adjust brightness:"
 msgid "Automatically Adjust Brightness"
-msgstr "Automatically adjust brightness:"
+msgstr "Automatically Adjust Brightness"
 
 #: src/MainView.vala:126 src/Plug.vala:91
-#, fuzzy
-#| msgid "Display brightness"
 msgid "Display Brightness"
-msgstr "Display brightness"
+msgstr "Display Brightness"
 
 #: src/MainView.vala:147
 msgid "Some changes will not take effect until you restart this computer"
@@ -103,17 +99,15 @@ msgstr "Some changes will not take effect until you restart this computer"
 
 #: src/MainView.vala:156 src/Plug.vala:92
 msgid "Lid Close Behavior"
-msgstr ""
+msgstr "Lid Close Behaviour"
 
 #: src/MainView.vala:164 src/Plug.vala:93
 msgid "Lid Close With External Display"
-msgstr ""
+msgstr "Lid Close With External Display"
 
 #: src/MainView.vala:195 src/Plug.vala:88
-#, fuzzy
-#| msgid "Inactive display off"
 msgid "Automatic Display Off"
-msgstr "Inactive display off"
+msgstr "Automatic Display Off"
 
 #. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
 #: src/MainView.vala:205 src/Widgets/LidCloseActionComboBox.vala:52
@@ -133,10 +127,8 @@ msgid "Power Button Behavior"
 msgstr "Power Button Behaviour"
 
 #: src/MainView.vala:226 src/MainView.vala:266 src/Plug.vala:95
-#, fuzzy
-#| msgid "Suspend when inactive for:"
 msgid "Suspend When Inactive For"
-msgstr "Suspend when inactive for:"
+msgstr "Suspend When Inactive For"
 
 #: src/MainView.vala:251
 msgid "Plugged In"
@@ -163,10 +155,8 @@ msgid "Battery Level"
 msgstr "Battery Level"
 
 #: src/Plug.vala:90
-#, fuzzy
-#| msgid "Dim display"
 msgid "Dim Display"
-msgstr "Dim display"
+msgstr "Dim Display"
 
 #: src/Widgets/BatteryBox.vala:22
 msgid "Battery Levels"
@@ -181,10 +171,12 @@ msgid ""
 "Devices that report battery information when plugged in or connected "
 "wirelessly will appear here"
 msgstr ""
+"Devices that report battery information when plugged in or connected "
+"wirelessly will appear here"
 
 #: src/Widgets/DevicesBox.vala:28
 msgid "Connected Devices"
-msgstr ""
+msgstr "Connected Devices"
 
 #: src/Widgets/TimeoutComboBox.vala:97
 msgid "Never"
