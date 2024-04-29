@@ -80,6 +80,12 @@ public class Power.MainView : Switchboard.SettingsPage {
             box.append (battery_box);
         }
 
+        var devices_box = new DevicesBox () {
+            margin_bottom = 12
+        };
+
+        box.append (devices_box);
+
         if (screen.brightness != -1) {
             var als_switch = new Gtk.Switch () {
                 halign = END

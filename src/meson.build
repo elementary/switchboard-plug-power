@@ -8,6 +8,7 @@ plug_files = files(
     'Plug.vala',
     'PowerManager.vala',
     'Widgets/BatteryBox.vala',
+    'Widgets/DevicesBox.vala',
     'Widgets/TimeoutComboBox.vala',
     'Widgets/LidCloseActionComboBox.vala',
     'Widgets/PowerModeButton.vala',
@@ -23,6 +24,7 @@ shared_module(
     conf_file,
     interfaces_file,
     dependencies: [
+        adw_dep,
         glib_dep,
         gio_dep,
         dependency('gobject-2.0'),
