@@ -13,11 +13,13 @@ public class Power.PowerManager : Object {
     }
 
     public ListStore batteries { get; private set; }
+    public ListStore devices { get; private set; }
 
     private Upower? upower;
 
     construct {
         batteries = new ListStore (typeof (Device));
+        devices = new ListStore (typeof (Device));
 
         try {
             upower = Bus.get_proxy_sync (SYSTEM, UPOWER_NAME, UPOWER_PATH);
@@ -46,23 +48,41 @@ public class Power.PowerManager : Object {
 
     private void on_device_added (ObjectPath device_path) {
         var device = new Device (device_path);
+        uint position = -1;
+
+        if (device.device_type == LINE_POWER) {
+            return;
+        }
 
         /*
         * Need to verify power-supply before considering it a laptop battery.
         * Otherwise it will likely be the battery for a device of an unknown type.
         */
         if (device.device_type == BATTERY && device.power_supply) {
-            uint position = -1;
             var found = batteries.find_with_equal_func (device, (EqualFunc<Device>) Device.equal_func, out position);
 
             if (!found) {
                 batteries.append (device);
+            }
+        } else {
+            var found = devices.find_with_equal_func (device, (EqualFunc<Device>) Device.equal_func, out position);
+
+            if (!found) {
+                devices.append (device);
             }
         }
     }
 
     private void on_device_removed (ObjectPath device_path) {
         uint position = -1;
+
+        // Try devices first. More likely to be unplugged than batteries
+        devices.find_with_equal_func (new Device (device_path), (EqualFunc<Device>) Device.equal_func, out position);
+        if (position != -1) {
+            devices.remove (position);
+            return;
+        }
+
         batteries.find_with_equal_func (new Device (device_path), (EqualFunc<Device>) Device.equal_func, out position);
 
         if (position != -1) {

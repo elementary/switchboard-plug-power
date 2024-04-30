@@ -21,6 +21,7 @@ namespace Power {
     private GLib.Settings settings;
 
     public class Plug : Switchboard.Plug {
+        private Gtk.Box box;
         private MainView main_view;
 
         public Plug () {
@@ -39,11 +40,24 @@ namespace Power {
         }
 
         public override Gtk.Widget get_widget () {
-            if (main_view == null) {
+            if (box == null) {
                 Gtk.IconTheme.get_for_display (Gdk.Display.get_default ()).add_resource_path ("/io/elementary/settings/power");
-                main_view = new MainView ();
+
+                var headerbar = new Adw.HeaderBar () {
+                    show_title = false
+                };
+                headerbar.add_css_class (Granite.STYLE_CLASS_FLAT);
+
+                main_view = new MainView () {
+                    vexpand = true
+                };
+
+                box = new Gtk.Box (VERTICAL, 0);
+                box.append (headerbar);
+                box.append (main_view);
             }
-            return main_view;
+
+            return box;
         }
 
         public override void shown () {

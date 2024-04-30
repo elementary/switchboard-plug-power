@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-13 10:52+0000\n"
-"PO-Revision-Date: 2024-02-14 17:17+0000\n"
+"POT-Creation-Date: 2024-04-20 18:42+0000\n"
+"PO-Revision-Date: 2024-04-23 20:13+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/power/"
 "he/>\n"
@@ -28,200 +28,201 @@ msgstr "ניהול הגדרות צריכת חשמל"
 msgid "Authentication is required to manage power settings"
 msgstr "נדרש אימות לצורך ניהול הגדרות צריכת חשמל"
 
-#: src/Device.vala:35
+#: src/Device.vala:54
 msgid "Charging"
 msgstr "בטעינה"
 
-#: src/Device.vala:37
+#: src/Device.vala:56
 msgid "Using battery power"
 msgstr "מופעל על סוללה"
 
-#: src/Device.vala:39
+#: src/Device.vala:58
 msgid "Empty"
 msgstr "ריקה"
 
-#: src/Device.vala:41
+#: src/Device.vala:60
 msgid "Fully charged"
 msgstr "טעונה במלואה"
 
-#: src/Device.vala:43
+#: src/Device.vala:62
 msgid "Waiting to charge"
 msgstr "בהמתנה לטעינה"
 
-#: src/Device.vala:45
+#: src/Device.vala:64
 msgid "Waiting to use battery power"
 msgstr "בהמתנה לשימוש בסוללה"
 
-#: src/Device.vala:47
+#: src/Device.vala:66
 msgid "Unknown"
 msgstr "לא ידוע"
 
-#: src/MainView.vala:51 src/Plug.vala:35
+#. Coarse battery level can sometimes be unknown, percentage is more reliable
+#: src/Device.vala:193
+msgid "Critical"
+msgstr "משמעותית"
+
+#: src/Device.vala:195
+msgid "Low"
+msgstr "חלשה"
+
+#: src/Device.vala:197
+msgid "Good"
+msgstr "טובה"
+
+#: src/Device.vala:199
+msgid "High"
+msgstr "גבוהה"
+
+#: src/Device.vala:201
+msgid "Full"
+msgstr "מלאה"
+
+#: src/Device.vala:205
+msgid "Unknown. Device may be locked."
+msgstr "לא ידוע. כנראה שההתקן נעול."
+
+#: src/MainView.vala:49 src/Plug.vala:36
 msgid "Power"
 msgstr "חשמל"
 
-#: src/MainView.vala:81
-msgid "Display brightness:"
-msgstr "בהירות התצוגה:"
+#: src/MainView.vala:94 src/Plug.vala:86
+msgid "Automatically Adjust Brightness"
+msgstr "התאמת בהירות התצוגה אוטומטית"
 
-#: src/MainView.vala:86
-msgid "Automatically adjust brightness:"
-msgstr "התאמת בהירות התצוגה אוטומטית:"
+#: src/MainView.vala:126 src/Plug.vala:91
+msgid "Display Brightness"
+msgstr "בהירות תצוגה"
 
-#: src/MainView.vala:131
-msgid "When lid is closed:"
-msgstr "כאשר המכסה סגור:"
-
-#: src/MainView.vala:138
-msgid "When lid is closed with external monitor:"
-msgstr "כאשר המכסה סגור עם צג חיצוני:"
-
-#: src/MainView.vala:154
-msgid "Turn off display when inactive for:"
-msgstr "יש לכבות את התצוגה כאשר אין פעילות במשך:"
-
-#. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
-#: src/MainView.vala:163 src/Widgets/LidCloseActionComboBox.vala:50
-msgid "Do nothing"
-msgstr "לא לעשות כלום"
-
-#: src/MainView.vala:164 src/Widgets/LidCloseActionComboBox.vala:46
-msgid "Suspend"
-msgstr "השהה"
-
-#: src/MainView.vala:165
-msgid "Ask to shutdown"
-msgstr "בקשה לכיבוי"
-
-#: src/MainView.vala:170 src/Plug.vala:73
-msgid "Power Button Behavior"
-msgstr "התנהגות כפתור הפעלה"
-
-#: src/MainView.vala:181 src/MainView.vala:220
-msgid "Suspend when inactive for:"
-msgstr "יש לעבור למצב השהיה בעת חוסר פעילות למשך:"
-
-#: src/MainView.vala:205
-msgid "Plugged In"
-msgstr "מחובר"
-
-#: src/MainView.vala:250 src/Plug.vala:79
-msgid "Automatically Save Power"
-msgstr "חיסכון אוטומטי בחשמל"
-
-#: src/MainView.vala:252
-msgid "Power Saver mode will be used when battery is low"
-msgstr "מצב חיסכון בחשמל יופעל כשהסוללה חלשה"
-
-#: src/MainView.vala:258
-msgid "On Battery"
-msgstr "על סוללה"
-
-#: src/MainView.vala:283
+#: src/MainView.vala:147
 msgid "Some changes will not take effect until you restart this computer"
 msgstr "חלק מהשינויים לא יכנסו לתוקף עד להפעלת המחשב מחדש"
 
-#: src/Plug.vala:36
+#: src/MainView.vala:156 src/Plug.vala:92
+msgid "Lid Close Behavior"
+msgstr "התנהגות סגירת מסך"
+
+#: src/MainView.vala:164 src/Plug.vala:93
+msgid "Lid Close With External Display"
+msgstr "סגירת מסך עם תצוגה חיצונית"
+
+#: src/MainView.vala:195 src/Plug.vala:88
+msgid "Automatic Display Off"
+msgstr "כיבוי תצוגה אוטומטי"
+
+#. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
+#: src/MainView.vala:205 src/Widgets/LidCloseActionComboBox.vala:52
+msgid "Do nothing"
+msgstr "לא לעשות כלום"
+
+#: src/MainView.vala:206 src/Widgets/LidCloseActionComboBox.vala:48
+msgid "Suspend"
+msgstr "השהה"
+
+#: src/MainView.vala:207
+msgid "Ask to shutdown"
+msgstr "בקשה לכיבוי"
+
+#: src/MainView.vala:212 src/Plug.vala:94
+msgid "Power Button Behavior"
+msgstr "התנהגות כפתור הפעלה"
+
+#: src/MainView.vala:226 src/MainView.vala:266 src/Plug.vala:95
+msgid "Suspend When Inactive For"
+msgstr "יש לעבור למצב השהיה בעת חוסר פעילות למשך"
+
+#: src/MainView.vala:251
+msgid "Plugged In"
+msgstr "מחובר"
+
+#: src/MainView.vala:297 src/Plug.vala:87
+msgid "Automatically Save Power"
+msgstr "חיסכון אוטומטי בחשמל"
+
+#: src/MainView.vala:300
+msgid "Power Saver mode will be used when battery is low"
+msgstr "מצב חיסכון בחשמל יופעל כשהסוללה חלשה"
+
+#: src/MainView.vala:309
+msgid "On Battery"
+msgstr "על סוללה"
+
+#: src/Plug.vala:37
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "הגדרת בהירות המסך, כפתורי הכיבוי והתנהגות מצב ההשהיה"
 
-#: src/Plug.vala:72
-msgid "Suspend button"
-msgstr "כפתור השהיה"
-
-#: src/Plug.vala:74
-msgid "Display inactive"
-msgstr "תצוגה בלתי פעילה"
-
-#: src/Plug.vala:75
-msgid "Dim display"
-msgstr "עמעום התצוגה"
-
-#: src/Plug.vala:76
-msgid "Lid close"
-msgstr "מכסה סגור"
-
-#: src/Plug.vala:77
-msgid "Display brightness"
-msgstr "בהירות תצוגה"
-
-#: src/Plug.vala:78
-msgid "Automatic brightness adjustment"
-msgstr "התאמת בהירות אוטומטית"
-
-#: src/Plug.vala:80
-msgid "Inactive display off"
-msgstr "כיבוי תצוגה בלתי פעילה"
-
-#: src/Plug.vala:81
-msgid "Docked lid close"
-msgstr "סגירת מכסה בתחנת עגינה"
-
-#: src/Plug.vala:82
-msgid "Sleep inactivity timeout"
-msgstr "תום זמן חוסר פעילות שינה"
-
-#: src/Plug.vala:83
-msgid "Suspend inactive"
-msgstr "השהיה בלתי פעילה"
-
-#: src/Widgets/BatteryBox.vala:23
+#: src/Plug.vala:89 src/Widgets/BatteryBox.vala:21
 msgid "Battery Level"
 msgstr "עוצמת הסוללה"
 
-#: src/Widgets/BatteryBox.vala:24
+#: src/Plug.vala:90
+msgid "Dim Display"
+msgstr "עמעום התצוגה"
+
+#: src/Widgets/BatteryBox.vala:22
 msgid "Battery Levels"
 msgstr "רמות הסוללה"
 
-#: src/Widgets/BatteryBox.vala:32
+#: src/Widgets/BatteryBox.vala:30
 msgid "Show Percentage In Panel"
 msgstr "הצגת אחוזים בלוח"
 
-#: src/Widgets/TimeoutComboBox.vala:99
+#: src/Widgets/DevicesBox.vala:8
+msgid ""
+"Devices that report battery information when plugged in or connected "
+"wirelessly will appear here"
+msgstr ""
+"התקנים שמדווחים על פרטי הסוללה שלנו כשהם מחוברים בכבל או בצורה אלחוטית "
+"יופיעו כאן"
+
+#: src/Widgets/DevicesBox.vala:28
+msgid "Connected Devices"
+msgstr "התקנים מחוברים"
+
+#: src/Widgets/TimeoutComboBox.vala:97
 msgid "Never"
 msgstr "אף פעם"
 
-#: src/Widgets/TimeoutComboBox.vala:100
+#: src/Widgets/TimeoutComboBox.vala:98
 msgid "5 min"
 msgstr "5 דקות"
 
-#: src/Widgets/TimeoutComboBox.vala:101
+#: src/Widgets/TimeoutComboBox.vala:99
 msgid "10 min"
 msgstr "10 דקות"
 
-#: src/Widgets/TimeoutComboBox.vala:102
+#: src/Widgets/TimeoutComboBox.vala:100
 msgid "15 min"
 msgstr "רבע שעה"
 
-#: src/Widgets/TimeoutComboBox.vala:103
+#: src/Widgets/TimeoutComboBox.vala:101
 msgid "30 min"
 msgstr "30 דקות"
 
-#: src/Widgets/TimeoutComboBox.vala:104
+#: src/Widgets/TimeoutComboBox.vala:102
 msgid "45 min"
 msgstr "45 דקות"
 
-#: src/Widgets/TimeoutComboBox.vala:105
+#: src/Widgets/TimeoutComboBox.vala:103
 msgid "1 hour"
 msgstr "שעה"
 
-#: src/Widgets/TimeoutComboBox.vala:106
+#: src/Widgets/TimeoutComboBox.vala:104
 msgid "2 hours"
 msgstr "שעתיים"
 
-#: src/Widgets/LidCloseActionComboBox.vala:47
+#: src/Widgets/LidCloseActionComboBox.vala:49
 msgid "Shutdown"
 msgstr "כיבוי"
 
-#: src/Widgets/LidCloseActionComboBox.vala:48
+#: src/Widgets/LidCloseActionComboBox.vala:50
 msgid "Lock"
 msgstr "נעילה"
 
-#: src/Widgets/LidCloseActionComboBox.vala:49
+#: src/Widgets/LidCloseActionComboBox.vala:51
 msgid "Halt"
 msgstr "עצירה"
 
-#: src/Widgets/LidCloseActionComboBox.vala:52
+#: src/Widgets/LidCloseActionComboBox.vala:55
 msgid "Not supported"
 msgstr "לא נתמך"
 
@@ -240,6 +241,39 @@ msgstr "מאוזן"
 #: src/Widgets/PowerModeButton.vala:98
 msgid "Performance"
 msgstr "ביצועים"
+
+#~ msgid "Display brightness:"
+#~ msgstr "בהירות התצוגה:"
+
+#~ msgid "When lid is closed:"
+#~ msgstr "כאשר המכסה סגור:"
+
+#~ msgid "When lid is closed with external monitor:"
+#~ msgstr "כאשר המכסה סגור עם צג חיצוני:"
+
+#~ msgid "Turn off display when inactive for:"
+#~ msgstr "יש לכבות את התצוגה כאשר אין פעילות במשך:"
+
+#~ msgid "Suspend button"
+#~ msgstr "כפתור השהיה"
+
+#~ msgid "Display inactive"
+#~ msgstr "תצוגה בלתי פעילה"
+
+#~ msgid "Lid close"
+#~ msgstr "מכסה סגור"
+
+#~ msgid "Automatic brightness adjustment"
+#~ msgstr "התאמת בהירות אוטומטית"
+
+#~ msgid "Docked lid close"
+#~ msgstr "סגירת מכסה בתחנת עגינה"
+
+#~ msgid "Sleep inactivity timeout"
+#~ msgstr "תום זמן חוסר פעילות שינה"
+
+#~ msgid "Suspend inactive"
+#~ msgstr "השהיה בלתי פעילה"
 
 #~ msgid "Power button:"
 #~ msgstr "כפתור הפעלה:"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-13 10:52+0000\n"
+"POT-Creation-Date: 2024-04-20 18:42+0000\n"
 "PO-Revision-Date: 2020-03-01 14:09+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
@@ -28,208 +28,217 @@ msgstr "管理電源設定值"
 msgid "Authentication is required to manage power settings"
 msgstr "需要核對身份才能管理電源設定值"
 
-#: src/Device.vala:35
+#: src/Device.vala:54
 msgid "Charging"
 msgstr ""
 
-#: src/Device.vala:37
+#: src/Device.vala:56
 msgid "Using battery power"
 msgstr ""
 
-#: src/Device.vala:39
+#: src/Device.vala:58
 msgid "Empty"
 msgstr ""
 
-#: src/Device.vala:41
+#: src/Device.vala:60
 msgid "Fully charged"
 msgstr ""
 
-#: src/Device.vala:43
+#: src/Device.vala:62
 msgid "Waiting to charge"
 msgstr ""
 
-#: src/Device.vala:45
+#: src/Device.vala:64
 msgid "Waiting to use battery power"
 msgstr ""
 
-#: src/Device.vala:47
+#: src/Device.vala:66
 msgid "Unknown"
 msgstr ""
 
-#: src/MainView.vala:51 src/Plug.vala:35
+#. Coarse battery level can sometimes be unknown, percentage is more reliable
+#: src/Device.vala:193
+msgid "Critical"
+msgstr ""
+
+#: src/Device.vala:195
+msgid "Low"
+msgstr ""
+
+#: src/Device.vala:197
+msgid "Good"
+msgstr ""
+
+#: src/Device.vala:199
+msgid "High"
+msgstr ""
+
+#: src/Device.vala:201
+msgid "Full"
+msgstr ""
+
+#: src/Device.vala:205
+msgid "Unknown. Device may be locked."
+msgstr ""
+
+#: src/MainView.vala:49 src/Plug.vala:36
 msgid "Power"
 msgstr "電源"
 
-#: src/MainView.vala:81
-msgid "Display brightness:"
-msgstr "顯示器亮度："
-
-#: src/MainView.vala:86
-msgid "Automatically adjust brightness:"
+#: src/MainView.vala:94 src/Plug.vala:86
+#, fuzzy
+#| msgid "Automatically adjust brightness:"
+msgid "Automatically Adjust Brightness"
 msgstr "自動調整亮度："
 
-#: src/MainView.vala:131
-msgid "When lid is closed:"
-msgstr "當闔起上蓋時："
+#: src/MainView.vala:126 src/Plug.vala:91
+#, fuzzy
+#| msgid "Display brightness"
+msgid "Display Brightness"
+msgstr "顯示器亮度"
 
-#: src/MainView.vala:138
-msgid "When lid is closed with external monitor:"
-msgstr "當上蓋關閉但有外部螢幕時："
+#: src/MainView.vala:147
+msgid "Some changes will not take effect until you restart this computer"
+msgstr "有些更改在您重新啟動電腦之前還不會生效"
 
-#: src/MainView.vala:154
-msgid "Turn off display when inactive for:"
-msgstr "關閉顯示器前的不使用時間："
+#: src/MainView.vala:156 src/Plug.vala:92
+msgid "Lid Close Behavior"
+msgstr ""
+
+#: src/MainView.vala:164 src/Plug.vala:93
+msgid "Lid Close With External Display"
+msgstr ""
+
+#: src/MainView.vala:195 src/Plug.vala:88
+#, fuzzy
+#| msgid "Inactive display off"
+msgid "Automatic Display Off"
+msgstr "閒置顯示器關閉"
 
 #. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
-#: src/MainView.vala:163 src/Widgets/LidCloseActionComboBox.vala:50
+#: src/MainView.vala:205 src/Widgets/LidCloseActionComboBox.vala:52
 msgid "Do nothing"
 msgstr "不做處理"
 
-#: src/MainView.vala:164 src/Widgets/LidCloseActionComboBox.vala:46
+#: src/MainView.vala:206 src/Widgets/LidCloseActionComboBox.vala:48
 msgid "Suspend"
 msgstr "暫停"
 
-#: src/MainView.vala:165
+#: src/MainView.vala:207
 #, fuzzy
 #| msgid "Prompt to shutdown"
 msgid "Ask to shutdown"
 msgstr "提請關機"
 
-#: src/MainView.vala:170 src/Plug.vala:73
+#: src/MainView.vala:212 src/Plug.vala:94
 #, fuzzy
 #| msgid "Power button"
 msgid "Power Button Behavior"
 msgstr "睡眠按鈕"
 
-#: src/MainView.vala:181 src/MainView.vala:220
-msgid "Suspend when inactive for:"
+#: src/MainView.vala:226 src/MainView.vala:266 src/Plug.vala:95
+#, fuzzy
+#| msgid "Suspend when inactive for:"
+msgid "Suspend When Inactive For"
 msgstr "電腦暫停前的不使用時間："
 
-#: src/MainView.vala:205
+#: src/MainView.vala:251
 msgid "Plugged In"
 msgstr "插入電源線"
 
-#: src/MainView.vala:250 src/Plug.vala:79
+#: src/MainView.vala:297 src/Plug.vala:87
 #, fuzzy
 #| msgid "Automatically adjust brightness:"
 msgid "Automatically Save Power"
 msgstr "自動調整亮度："
 
-#: src/MainView.vala:252
+#: src/MainView.vala:300
 msgid "Power Saver mode will be used when battery is low"
 msgstr ""
 
-#: src/MainView.vala:258
+#: src/MainView.vala:309
 msgid "On Battery"
 msgstr "使用電池"
 
-#: src/MainView.vala:283
-msgid "Some changes will not take effect until you restart this computer"
-msgstr "有些更改在您重新啟動電腦之前還不會生效"
-
-#: src/Plug.vala:36
+#: src/Plug.vala:37
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "調整顯示器亮度、電源按鈕、暫停行為等設定"
 
-#: src/Plug.vala:72
-msgid "Suspend button"
-msgstr "暫停按鈕"
-
-#: src/Plug.vala:74
-msgid "Display inactive"
-msgstr "顯示器閒置"
-
-#: src/Plug.vala:75
-msgid "Dim display"
-msgstr "調暗顯示器"
-
-#: src/Plug.vala:76
-msgid "Lid close"
-msgstr "闔上上蓋"
-
-#: src/Plug.vala:77
-msgid "Display brightness"
-msgstr "顯示器亮度"
-
-#: src/Plug.vala:78
-msgid "Automatic brightness adjustment"
-msgstr "自動亮度調整"
-
-#: src/Plug.vala:80
-msgid "Inactive display off"
-msgstr "閒置顯示器關閉"
-
-#: src/Plug.vala:81
-msgid "Docked lid close"
-msgstr "臺座上蓋關閉"
-
-#: src/Plug.vala:82
-msgid "Sleep inactivity timeout"
-msgstr ""
-
-#: src/Plug.vala:83
-msgid "Suspend inactive"
-msgstr "暫停停用"
-
-#: src/Widgets/BatteryBox.vala:23
+#: src/Plug.vala:89 src/Widgets/BatteryBox.vala:21
 #, fuzzy
 #| msgid "On Battery"
 msgid "Battery Level"
 msgstr "使用電池"
 
-#: src/Widgets/BatteryBox.vala:24
+#: src/Plug.vala:90
+#, fuzzy
+#| msgid "Dim display"
+msgid "Dim Display"
+msgstr "調暗顯示器"
+
+#: src/Widgets/BatteryBox.vala:22
 msgid "Battery Levels"
 msgstr ""
 
-#: src/Widgets/BatteryBox.vala:32
+#: src/Widgets/BatteryBox.vala:30
 msgid "Show Percentage In Panel"
 msgstr ""
 
-#: src/Widgets/TimeoutComboBox.vala:99
+#: src/Widgets/DevicesBox.vala:8
+msgid ""
+"Devices that report battery information when plugged in or connected "
+"wirelessly will appear here"
+msgstr ""
+
+#: src/Widgets/DevicesBox.vala:28
+msgid "Connected Devices"
+msgstr ""
+
+#: src/Widgets/TimeoutComboBox.vala:97
 msgid "Never"
 msgstr "永不"
 
-#: src/Widgets/TimeoutComboBox.vala:100
+#: src/Widgets/TimeoutComboBox.vala:98
 msgid "5 min"
 msgstr "5 分鐘"
 
-#: src/Widgets/TimeoutComboBox.vala:101
+#: src/Widgets/TimeoutComboBox.vala:99
 msgid "10 min"
 msgstr "10 分鐘"
 
-#: src/Widgets/TimeoutComboBox.vala:102
+#: src/Widgets/TimeoutComboBox.vala:100
 msgid "15 min"
 msgstr "15 分鐘"
 
-#: src/Widgets/TimeoutComboBox.vala:103
+#: src/Widgets/TimeoutComboBox.vala:101
 msgid "30 min"
 msgstr "30 分鐘"
 
-#: src/Widgets/TimeoutComboBox.vala:104
+#: src/Widgets/TimeoutComboBox.vala:102
 msgid "45 min"
 msgstr "45 分鐘"
 
-#: src/Widgets/TimeoutComboBox.vala:105
+#: src/Widgets/TimeoutComboBox.vala:103
 msgid "1 hour"
 msgstr "1 小時"
 
-#: src/Widgets/TimeoutComboBox.vala:106
+#: src/Widgets/TimeoutComboBox.vala:104
 msgid "2 hours"
 msgstr "2 小時"
 
-#: src/Widgets/LidCloseActionComboBox.vala:47
+#: src/Widgets/LidCloseActionComboBox.vala:49
 msgid "Shutdown"
 msgstr "關機"
 
-#: src/Widgets/LidCloseActionComboBox.vala:48
+#: src/Widgets/LidCloseActionComboBox.vala:50
 msgid "Lock"
 msgstr "鎖定"
 
-#: src/Widgets/LidCloseActionComboBox.vala:49
+#: src/Widgets/LidCloseActionComboBox.vala:51
 msgid "Halt"
 msgstr "停機"
 
-#: src/Widgets/LidCloseActionComboBox.vala:52
+#: src/Widgets/LidCloseActionComboBox.vala:55
 msgid "Not supported"
 msgstr "未支援"
 
@@ -252,6 +261,36 @@ msgstr ""
 #: src/Widgets/PowerModeButton.vala:98
 msgid "Performance"
 msgstr ""
+
+#~ msgid "Display brightness:"
+#~ msgstr "顯示器亮度："
+
+#~ msgid "When lid is closed:"
+#~ msgstr "當闔起上蓋時："
+
+#~ msgid "When lid is closed with external monitor:"
+#~ msgstr "當上蓋關閉但有外部螢幕時："
+
+#~ msgid "Turn off display when inactive for:"
+#~ msgstr "關閉顯示器前的不使用時間："
+
+#~ msgid "Suspend button"
+#~ msgstr "暫停按鈕"
+
+#~ msgid "Display inactive"
+#~ msgstr "顯示器閒置"
+
+#~ msgid "Lid close"
+#~ msgstr "闔上上蓋"
+
+#~ msgid "Automatic brightness adjustment"
+#~ msgstr "自動亮度調整"
+
+#~ msgid "Docked lid close"
+#~ msgstr "臺座上蓋關閉"
+
+#~ msgid "Suspend inactive"
+#~ msgstr "暫停停用"
 
 #~ msgid "Power button:"
 #~ msgstr "電源按鈕："

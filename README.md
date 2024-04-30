@@ -9,6 +9,7 @@
 You'll need the following dependencies:
 
 * gio-2.0 (>=2.74)
+* libadwaita-1-dev
 * libdbus-1-dev
 * libswitchboard-3-dev
 * libgranite-7-dev
