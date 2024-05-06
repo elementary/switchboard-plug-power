@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-20 18:42+0000\n"
-"PO-Revision-Date: 2024-02-15 02:35+0000\n"
+"PO-Revision-Date: 2024-05-07 22:13+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "power/hu/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.5\n"
 "X-Launchpad-Export-Date: 2016-11-21 05:42+0000\n"
 
 #: data/power.policy.in:10
@@ -86,10 +86,8 @@ msgid "Power"
 msgstr "Energiagazdálkodás"
 
 #: src/MainView.vala:94 src/Plug.vala:86
-#, fuzzy
-#| msgid "Automatically adjust brightness:"
 msgid "Automatically Adjust Brightness"
-msgstr "A fényerő automatikus beállítása:"
+msgstr "A fényerő automatikus beállítása"
 
 #: src/MainView.vala:126 src/Plug.vala:91
 #, fuzzy
@@ -133,10 +131,8 @@ msgid "Power Button Behavior"
 msgstr "Bekapcsológomb viselkedése"
 
 #: src/MainView.vala:226 src/MainView.vala:266 src/Plug.vala:95
-#, fuzzy
-#| msgid "Suspend when inactive for:"
 msgid "Suspend When Inactive For"
-msgstr "Felfüggesztés ennyi inaktivitás után:"
+msgstr "Felfüggesztés ennyi inaktivitás után"
 
 #: src/MainView.vala:251
 msgid "Plugged In"
