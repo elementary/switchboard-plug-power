@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-20 18:42+0000\n"
-"PO-Revision-Date: 2024-03-23 18:13+0000\n"
+"PO-Revision-Date: 2024-05-01 17:17+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "power/ja/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.5\n"
 "X-Launchpad-Export-Date: 2017-03-02 05:49+0000\n"
 
 #: data/power.policy.in:10
@@ -74,7 +74,7 @@ msgstr ""
 
 #: src/Device.vala:205
 msgid "Unknown. Device may be locked."
-msgstr ""
+msgstr "不明。デバイスがロック中の可能性があります。"
 
 #: src/MainView.vala:49 src/Plug.vala:36
 msgid "Power"
@@ -165,11 +165,11 @@ msgstr "パネルに割合を表示"
 msgid ""
 "Devices that report battery information when plugged in or connected "
 "wirelessly will appear here"
-msgstr ""
+msgstr "有線/無線で接続時にバッテリー情報を通知するデバイスがここに表示されます"
 
 #: src/Widgets/DevicesBox.vala:28
 msgid "Connected Devices"
-msgstr ""
+msgstr "接続済みデバイス"
 
 #: src/Widgets/TimeoutComboBox.vala:97
 msgid "Never"
