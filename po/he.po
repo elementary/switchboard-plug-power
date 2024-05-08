@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-08 03:08+0000\n"
-"PO-Revision-Date: 2024-04-23 20:13+0000\n"
+"PO-Revision-Date: 2024-05-09 06:13+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/power/"
 "he/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.5\n"
 "X-Launchpad-Export-Date: 2016-11-21 05:42+0000\n"
 
 #: data/power.policy.in:10
@@ -58,36 +58,26 @@ msgstr "לא ידוע"
 
 #. Coarse battery level can sometimes be unknown, percentage is more reliable
 #: src/Device.vala:193
-#, fuzzy
-#| msgid "Critical"
 msgctxt "battery-level"
 msgid "Critical"
 msgstr "משמעותית"
 
 #: src/Device.vala:195
-#, fuzzy
-#| msgid "Low"
 msgctxt "battery-level"
 msgid "Low"
 msgstr "חלשה"
 
 #: src/Device.vala:197
-#, fuzzy
-#| msgid "Good"
 msgctxt "battery-level"
 msgid "Good"
 msgstr "טובה"
 
 #: src/Device.vala:199
-#, fuzzy
-#| msgid "High"
 msgctxt "battery-level"
 msgid "High"
 msgstr "גבוהה"
 
 #: src/Device.vala:201
-#, fuzzy
-#| msgid "Full"
 msgctxt "battery-level"
 msgid "Full"
 msgstr "מלאה"
