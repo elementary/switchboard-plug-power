@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-20 18:42+0000\n"
+"POT-Creation-Date: 2024-05-08 03:08+0000\n"
 "PO-Revision-Date: 2024-04-23 20:13+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/power/"
@@ -59,22 +59,37 @@ msgstr "Nieznane"
 
 #. Coarse battery level can sometimes be unknown, percentage is more reliable
 #: src/Device.vala:193
+#, fuzzy
+#| msgid "Critical"
+msgctxt "battery-level"
 msgid "Critical"
 msgstr "Krytyczny"
 
 #: src/Device.vala:195
+#, fuzzy
+#| msgid "Low"
+msgctxt "battery-level"
 msgid "Low"
 msgstr "Niski"
 
 #: src/Device.vala:197
+#, fuzzy
+#| msgid "Good"
+msgctxt "battery-level"
 msgid "Good"
 msgstr "Dobry"
 
 #: src/Device.vala:199
+#, fuzzy
+#| msgid "High"
+msgctxt "battery-level"
 msgid "High"
 msgstr "Wysoki"
 
 #: src/Device.vala:201
+#, fuzzy
+#| msgid "Full"
+msgctxt "battery-level"
 msgid "Full"
 msgstr "Pełny"
 
