@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-08 03:08+0000\n"
-"PO-Revision-Date: 2024-05-07 22:13+0000\n"
+"PO-Revision-Date: 2024-05-09 06:13+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "power/ja/>\n"
@@ -53,22 +53,16 @@ msgstr "不明"
 
 #. Coarse battery level can sometimes be unknown, percentage is more reliable
 #: src/Device.vala:193
-#, fuzzy
-#| msgid "Critical"
 msgctxt "battery-level"
 msgid "Critical"
-msgstr "電池切れ"
+msgstr "充電切れ"
 
 #: src/Device.vala:195
-#, fuzzy
-#| msgid "Low"
 msgctxt "battery-level"
 msgid "Low"
 msgstr "低下"
 
 #: src/Device.vala:197
-#, fuzzy
-#| msgid "Good"
 msgctxt "battery-level"
 msgid "Good"
 msgstr "良好"
@@ -76,11 +70,9 @@ msgstr "良好"
 #: src/Device.vala:199
 msgctxt "battery-level"
 msgid "High"
-msgstr ""
+msgstr "十分"
 
 #: src/Device.vala:201
-#, fuzzy
-#| msgid "Full"
 msgctxt "battery-level"
 msgid "Full"
 msgstr "充電完了"
