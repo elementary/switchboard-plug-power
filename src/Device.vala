@@ -190,15 +190,15 @@ public class Power.Device : Object {
         if (coarse_battery_level) {
             // Coarse battery level can sometimes be unknown, percentage is more reliable
             if (percentage < 20) {
-                description = _("Critical");
+                description = C_("battery-level", "Critical");
             } else if (percentage < 40) {
-                description = _("Low");
+                description = C_("battery-level", "Low");
             } else if (percentage < 60) {
-                description = _("Good");
+                description = C_("battery-level", "Good");
             } else if (percentage < 80) {
-                description = _("High");
+                description = C_("battery-level", "High");
             } else {
-                description = _("Full");
+                description = C_("battery-level", "Full");
             }
         } else {
             if (percentage == 0 && state == UNKNOWN) {

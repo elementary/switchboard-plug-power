@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-20 18:42+0000\n"
-"PO-Revision-Date: 2024-02-15 02:35+0000\n"
+"POT-Creation-Date: 2024-05-08 03:08+0000\n"
+"PO-Revision-Date: 2024-05-09 06:13+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "power/hu/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.5\n"
 "X-Launchpad-Export-Date: 2016-11-21 05:42+0000\n"
 
 #: data/power.policy.in:10
@@ -58,44 +58,45 @@ msgstr "Ismeretlen"
 
 #. Coarse battery level can sometimes be unknown, percentage is more reliable
 #: src/Device.vala:193
+msgctxt "battery-level"
 msgid "Critical"
-msgstr ""
+msgstr "Kritikus"
 
 #: src/Device.vala:195
+msgctxt "battery-level"
 msgid "Low"
-msgstr ""
+msgstr "Alacsony"
 
 #: src/Device.vala:197
+msgctxt "battery-level"
 msgid "Good"
-msgstr ""
+msgstr "Jó"
 
 #: src/Device.vala:199
+msgctxt "battery-level"
 msgid "High"
-msgstr ""
+msgstr "Magas"
 
 #: src/Device.vala:201
+msgctxt "battery-level"
 msgid "Full"
-msgstr ""
+msgstr "Tele"
 
 #: src/Device.vala:205
 msgid "Unknown. Device may be locked."
-msgstr ""
+msgstr "Ismeretlen. Előfordulhat, hogy a készülék le van zárva."
 
 #: src/MainView.vala:49 src/Plug.vala:36
 msgid "Power"
 msgstr "Energiagazdálkodás"
 
 #: src/MainView.vala:94 src/Plug.vala:86
-#, fuzzy
-#| msgid "Automatically adjust brightness:"
 msgid "Automatically Adjust Brightness"
-msgstr "A fényerő automatikus beállítása:"
+msgstr "A fényerő automatikus beállítása"
 
 #: src/MainView.vala:126 src/Plug.vala:91
-#, fuzzy
-#| msgid "Display brightness"
 msgid "Display Brightness"
-msgstr "Kijelző fényereje"
+msgstr "A kijelző fényereje"
 
 #: src/MainView.vala:147
 msgid "Some changes will not take effect until you restart this computer"
@@ -103,17 +104,15 @@ msgstr "Néhány módosítás csak a számítógép újraindítása után lép �
 
 #: src/MainView.vala:156 src/Plug.vala:92
 msgid "Lid Close Behavior"
-msgstr ""
+msgstr "A fedél lecsukásának művelete"
 
 #: src/MainView.vala:164 src/Plug.vala:93
 msgid "Lid Close With External Display"
-msgstr ""
+msgstr "A fedél lecsukása külső kijelzővel"
 
 #: src/MainView.vala:195 src/Plug.vala:88
-#, fuzzy
-#| msgid "Inactive display off"
 msgid "Automatic Display Off"
-msgstr "Inaktív kijelző kikapcsolva"
+msgstr "Automatikus kijelzőkikapcsolás"
 
 #. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
 #: src/MainView.vala:205 src/Widgets/LidCloseActionComboBox.vala:52
@@ -133,10 +132,8 @@ msgid "Power Button Behavior"
 msgstr "Bekapcsológomb viselkedése"
 
 #: src/MainView.vala:226 src/MainView.vala:266 src/Plug.vala:95
-#, fuzzy
-#| msgid "Suspend when inactive for:"
 msgid "Suspend When Inactive For"
-msgstr "Felfüggesztés ennyi inaktivitás után:"
+msgstr "Felfüggesztés ennyi inaktivitás után"
 
 #: src/MainView.vala:251
 msgid "Plugged In"
@@ -165,10 +162,8 @@ msgid "Battery Level"
 msgstr "Akkumulátorszint"
 
 #: src/Plug.vala:90
-#, fuzzy
-#| msgid "Dim display"
 msgid "Dim Display"
-msgstr "Kijelző elsötétítése"
+msgstr "A kijelző elsötétítése"
 
 #: src/Widgets/BatteryBox.vala:22
 msgid "Battery Levels"
@@ -183,10 +178,12 @@ msgid ""
 "Devices that report battery information when plugged in or connected "
 "wirelessly will appear here"
 msgstr ""
+"Itt fognak megjelenni azok az eszközök, amelyek töltöttségi információkat "
+"osztanak meg"
 
 #: src/Widgets/DevicesBox.vala:28
 msgid "Connected Devices"
-msgstr ""
+msgstr "Csatlakoztatott eszközök"
 
 #: src/Widgets/TimeoutComboBox.vala:97
 msgid "Never"

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-20 18:42+0000\n"
-"PO-Revision-Date: 2024-05-01 17:17+0000\n"
+"POT-Creation-Date: 2024-05-08 03:08+0000\n"
+"PO-Revision-Date: 2024-05-09 06:13+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "power/ja/>\n"
@@ -53,24 +53,29 @@ msgstr "不明"
 
 #. Coarse battery level can sometimes be unknown, percentage is more reliable
 #: src/Device.vala:193
+msgctxt "battery-level"
 msgid "Critical"
-msgstr ""
+msgstr "充電切れ"
 
 #: src/Device.vala:195
+msgctxt "battery-level"
 msgid "Low"
-msgstr ""
+msgstr "低下"
 
 #: src/Device.vala:197
+msgctxt "battery-level"
 msgid "Good"
-msgstr ""
+msgstr "良好"
 
 #: src/Device.vala:199
+msgctxt "battery-level"
 msgid "High"
-msgstr ""
+msgstr "十分"
 
 #: src/Device.vala:201
+msgctxt "battery-level"
 msgid "Full"
-msgstr ""
+msgstr "充電完了"
 
 #: src/Device.vala:205
 msgid "Unknown. Device may be locked."
@@ -165,7 +170,8 @@ msgstr "パネルに割合を表示"
 msgid ""
 "Devices that report battery information when plugged in or connected "
 "wirelessly will appear here"
-msgstr "有線/無線で接続時にバッテリー情報を通知するデバイスがここに表示されます"
+msgstr ""
+"有線/無線で接続時にバッテリー情報を通知するデバイスがここに表示されます"
 
 #: src/Widgets/DevicesBox.vala:28
 msgid "Connected Devices"
