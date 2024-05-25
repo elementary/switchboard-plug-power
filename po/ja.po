@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-08 03:08+0000\n"
-"PO-Revision-Date: 2024-05-09 06:13+0000\n"
+"PO-Revision-Date: 2024-05-26 07:13+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "power/ja/>\n"
@@ -183,31 +183,31 @@ msgstr "なし"
 
 #: src/Widgets/TimeoutComboBox.vala:98
 msgid "5 min"
-msgstr "5分"
+msgstr "5 分"
 
 #: src/Widgets/TimeoutComboBox.vala:99
 msgid "10 min"
-msgstr "10分"
+msgstr "10 分"
 
 #: src/Widgets/TimeoutComboBox.vala:100
 msgid "15 min"
-msgstr "15分"
+msgstr "15 分"
 
 #: src/Widgets/TimeoutComboBox.vala:101
 msgid "30 min"
-msgstr "30分"
+msgstr "30 分"
 
 #: src/Widgets/TimeoutComboBox.vala:102
 msgid "45 min"
-msgstr "45分"
+msgstr "45 分"
 
 #: src/Widgets/TimeoutComboBox.vala:103
 msgid "1 hour"
-msgstr "1時間"
+msgstr "1 時間"
 
 #: src/Widgets/TimeoutComboBox.vala:104
 msgid "2 hours"
-msgstr "2時間"
+msgstr "2 時間"
 
 #: src/Widgets/LidCloseActionComboBox.vala:49
 msgid "Shutdown"
