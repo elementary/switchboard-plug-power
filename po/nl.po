@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-08 03:08+0000\n"
-"PO-Revision-Date: 2024-05-29 20:51+0000\n"
+"PO-Revision-Date: 2024-05-31 01:46+0000\n"
 "Last-Translator: DutchVipperloid <svenroelof@e.email>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/power/"
 "nl/>\n"
@@ -31,97 +31,91 @@ msgstr ""
 
 #: src/Device.vala:54
 msgid "Charging"
-msgstr ""
+msgstr "Opladen"
 
 #: src/Device.vala:56
 msgid "Using battery power"
-msgstr ""
+msgstr "Gebruikt batterijstroom"
 
 #: src/Device.vala:58
 msgid "Empty"
-msgstr ""
+msgstr "Leeg"
 
 #: src/Device.vala:60
 msgid "Fully charged"
-msgstr ""
+msgstr "Volledig opgeladen"
 
 #: src/Device.vala:62
 msgid "Waiting to charge"
-msgstr ""
+msgstr "Wachten om op te laden"
 
 #: src/Device.vala:64
 msgid "Waiting to use battery power"
-msgstr ""
+msgstr "Wachten om batterijstroom te gebruiken"
 
 #: src/Device.vala:66
 msgid "Unknown"
-msgstr ""
+msgstr "Niet bekend"
 
 #. Coarse battery level can sometimes be unknown, percentage is more reliable
 #: src/Device.vala:193
 msgctxt "battery-level"
 msgid "Critical"
-msgstr ""
+msgstr "Kritiek"
 
 #: src/Device.vala:195
 msgctxt "battery-level"
 msgid "Low"
-msgstr ""
+msgstr "Laag"
 
 #: src/Device.vala:197
 msgctxt "battery-level"
 msgid "Good"
-msgstr ""
+msgstr "Goed"
 
 #: src/Device.vala:199
 msgctxt "battery-level"
 msgid "High"
-msgstr ""
+msgstr "Hoog"
 
 #: src/Device.vala:201
 msgctxt "battery-level"
 msgid "Full"
-msgstr ""
+msgstr "Vol"
 
 #: src/Device.vala:205
 msgid "Unknown. Device may be locked."
-msgstr ""
+msgstr "Onbekend. Apparaat kan vergrendeld zijn."
 
 #: src/MainView.vala:49 src/Plug.vala:36
 msgid "Power"
 msgstr "Energie"
 
 #: src/MainView.vala:94 src/Plug.vala:86
-#, fuzzy
-#| msgid "Automatically adjust brightness:"
 msgid "Automatically Adjust Brightness"
-msgstr "Pas de helderheid automatisch aan:"
+msgstr "Pas helderheid automatisch aan"
 
 #: src/MainView.vala:126 src/Plug.vala:91
-#, fuzzy
-#| msgid "Display brightness"
 msgid "Display Brightness"
-msgstr "Helderheid beeldscherm"
+msgstr "Beeldscherm helderheid"
 
 #: src/MainView.vala:147
 msgid "Some changes will not take effect until you restart this computer"
 msgstr ""
-"sommige verraderingen zijn pas van kracht nadat deze computer opnieuw is "
+"sommige veranderingen zijn pas van kracht nadat deze computer opnieuw is "
 "opgestart"
 
 #: src/MainView.vala:156 src/Plug.vala:92
 msgid "Lid Close Behavior"
-msgstr ""
+msgstr "Gedrag wanneer deksel gesloten is"
 
 #: src/MainView.vala:164 src/Plug.vala:93
 msgid "Lid Close With External Display"
-msgstr ""
+msgstr "Deksel gesloten met extern scherm"
 
 #: src/MainView.vala:195 src/Plug.vala:88
-#, fuzzy
-#| msgid "Inactive display off"
 msgid "Automatic Display Off"
-msgstr "Inactief beeldscherm uit"
+msgstr "Automatisch beeldscherm uit"
 
 #. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
 #: src/MainView.vala:205 src/Widgets/LidCloseActionComboBox.vala:52
@@ -133,22 +127,16 @@ msgid "Suspend"
 msgstr "Pauzestand"
 
 #: src/MainView.vala:207
-#, fuzzy
-#| msgid "Prompt to shutdown"
 msgid "Ask to shutdown"
-msgstr "Vragen om uit te schakelen"
+msgstr "Vraag om uit te schakelen"
 
 #: src/MainView.vala:212 src/Plug.vala:94
-#, fuzzy
-#| msgid "Power button"
 msgid "Power Button Behavior"
-msgstr "Stroomknop"
+msgstr "Aan/uitknop gedrag"
 
 #: src/MainView.vala:226 src/MainView.vala:266 src/Plug.vala:95
-#, fuzzy
-#| msgid "Suspend when inactive for:"
 msgid "Suspend When Inactive For"
-msgstr "Automatisch in slaapstaand gaan na:"
+msgstr "Slaapstand inschakelen wanneer inactief voor"
 
 #: src/MainView.vala:251
 msgid "Plugged In"
@@ -172,36 +160,32 @@ msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "Configureer schermhelderheid, stroomknoppen en slaapstand"
 
 #: src/Plug.vala:89 src/Widgets/BatteryBox.vala:21
-#, fuzzy
-#| msgid "On Battery"
 msgid "Battery Level"
-msgstr "Op accustroom"
+msgstr "Batterijniveau"
 
 #: src/Plug.vala:90
-#, fuzzy
-#| msgid "Dim display"
 msgid "Dim Display"
 msgstr "Verduister beeldscherm"
 
 #: src/Widgets/BatteryBox.vala:22
 msgid "Battery Levels"
-msgstr ""
+msgstr "Batterij niveaus"
 
 #: src/Widgets/BatteryBox.vala:30
-#, fuzzy
-#| msgid "Show battery percentage in Panel:"
 msgid "Show Percentage In Panel"
-msgstr "Toon batterijpercentage in het Paneel:"
+msgstr "Toon percentage in het Paneel"
 
 #: src/Widgets/DevicesBox.vala:8
 msgid ""
 "Devices that report battery information when plugged in or connected "
 "wirelessly will appear here"
 msgstr ""
+"Apparaten die batterijinformatie rapporteren wanneer ingeplugd of draadloos "
+"verbonden komen hier te staan"
 
 #: src/Widgets/DevicesBox.vala:28
 msgid "Connected Devices"
-msgstr ""
+msgstr "Verbonden apparaten"
 
 #: src/Widgets/TimeoutComboBox.vala:97
 msgid "Never"
