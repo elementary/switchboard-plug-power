@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-08 03:08+0000\n"
-"PO-Revision-Date: 2024-06-13 01:03+0000\n"
+"PO-Revision-Date: 2024-06-13 08:33+0000\n"
 "Last-Translator: Italo Felipe Capasso Ballesteros <edwood.grant@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "power-extra/es/>\n"
@@ -31,7 +31,7 @@ msgstr ""
 
 #: data/power.appdata.xml.in:11 data/power.appdata.xml.in:23
 msgid "New features:"
-msgstr "Funcionalidades nuevas:"
+msgstr "Nuevas características:"
 
 #: data/power.appdata.xml.in:13
 msgid "Add power profile management"
