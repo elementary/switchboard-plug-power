@@ -10,10 +10,10 @@ configure_file(
 )
 
 i18n.merge_file(
-    input: 'power.appdata.xml.in',
-    output: 'io.elementary.settings.power.appdata.xml',
-    po_dir: join_paths(meson.source_root(), 'po', 'extra'),
+    input: 'power.metainfo.xml.in',
+    output: 'io.elementary.settings.power.metainfo.xml',
+    po_dir: meson.source_root() / 'po' / 'extra',
     type: 'xml',
     install: true,
-    install_dir: join_paths(datadir, 'metainfo'),
+    install_dir: datadir / 'metainfo',
 )
