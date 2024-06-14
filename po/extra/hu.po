@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-08 03:08+0000\n"
+"POT-Creation-Date: 2024-06-14 23:59+0000\n"
 "PO-Revision-Date: 2022-10-18 17:44+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
@@ -19,62 +19,64 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.4.2\n"
 
-#: data/power.appdata.xml.in:5
+#: data/power.metainfo.xml.in:10
 msgid "Power Settings"
 msgstr "Energiagazdálkodási beállítások"
 
-#: data/power.appdata.xml.in:6
+#: data/power.metainfo.xml.in:11
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr ""
 "A kijelző fényerejének, a bekapcsológomb viselkedésének és a felfüggesztési "
 "opciók beállítása"
 
-#: data/power.appdata.xml.in:11 data/power.appdata.xml.in:23
+#: data/power.metainfo.xml.in:26
+msgid "elementary, Inc."
+msgstr ""
+
+#: data/power.metainfo.xml.in:34 data/power.metainfo.xml.in:47
 msgid "New features:"
 msgstr "Új funkciók:"
 
-#: data/power.appdata.xml.in:13
+#: data/power.metainfo.xml.in:36
 msgid "Add power profile management"
 msgstr "Lehetőség energiakezelési mód beállítására"
 
-#: data/power.appdata.xml.in:15 data/power.appdata.xml.in:27
-#: data/power.appdata.xml.in:36
+#: data/power.metainfo.xml.in:38 data/power.metainfo.xml.in:51
+#: data/power.metainfo.xml.in:61
 msgid "Minor updates:"
 msgstr "Kisebb frissítések:"
 
-#: data/power.appdata.xml.in:17 data/power.appdata.xml.in:30
-#: data/power.appdata.xml.in:40 data/power.appdata.xml.in:47
-#: data/power.appdata.xml.in:52 data/power.appdata.xml.in:59
+#: data/power.metainfo.xml.in:40 data/power.metainfo.xml.in:54
+#: data/power.metainfo.xml.in:65 data/power.metainfo.xml.in:73
+#: data/power.metainfo.xml.in:79
 msgid "Updated translations"
 msgstr "Frissített fordítások"
 
-#: data/power.appdata.xml.in:25
+#: data/power.metainfo.xml.in:49
 msgid "Add toggle for showing battery percentage in Panel"
 msgstr "Kapcsoló az akkumulátor töltöttségének kijelzéséhez az állapotsoron"
 
-#: data/power.appdata.xml.in:29
+#: data/power.metainfo.xml.in:53
 msgid "Fix a potential issue with resuming from sleep"
 msgstr ""
 "Az alvó módból való visszatéréskor jelentkező lehetséges fagyás javítva"
 
-#: data/power.appdata.xml.in:38
+#: data/power.metainfo.xml.in:63
 msgid "Change lid settings without restarting"
 msgstr "A fedélbeállítások módosítása újraindítás nélkül"
 
-#: data/power.appdata.xml.in:39
+#: data/power.metainfo.xml.in:64
 msgid "Show in search results for \"sleep\" and \"timeout\""
 msgstr "Megjelenítés a keresési találatokban többféle kulcsszó beírása után"
 
-#: data/power.appdata.xml.in:46
+#: data/power.metainfo.xml.in:72
 msgid "Fix potential freeze when changing settings from multiple panes"
 msgstr ""
 "Lehetséges fagyás javítása a többféle helyről való beállítások "
 "változtatásakor"
 
-#: data/power.appdata.xml.in:57
-msgid "Remove broken hibernate option"
-msgstr "Nem működő hibernálási opció eltávolítva"
+#~ msgid "Remove broken hibernate option"
+#~ msgstr "Nem működő hibernálási opció eltávolítva"
 
-#: data/power.appdata.xml.in:58
-msgid "Add prompt to shutdown to power button actions"
-msgstr "A kikapcsolómenű megjelenítése opció a kikapcsoló gomb műveleteinél"
+#~ msgid "Add prompt to shutdown to power button actions"
+#~ msgstr "A kikapcsolómenű megjelenítése opció a kikapcsoló gomb műveleteinél"
