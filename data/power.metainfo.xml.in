@@ -29,6 +29,25 @@
   <update_contact>contact_at_elementary.io</update_contact>
 
   <releases>
+    <release version="8.0.0" date="2024-06-14" urgency="medium">
+      <description>
+        <p>New features:</p>
+        <ul>
+          <li>Show computer batteries and batteries for connected devices</li>
+        </ul>
+        <p>Minor updates:</p>
+        <ul>
+          <li>Fix a potential freeze when getting advanced permissions</li>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+      <issues>
+        <issue url="https://github.com/elementary/switchboard-plug-power/issues/110">Brightness controls missing</issue>
+        <issue url="https://github.com/elementary/switchboard-plug-power/issues/146">Authenticate on demand for lid close settings</issue>
+        <issue url="https://github.com/elementary/switchboard-plug-power/issues/210">Expose automatic lower power mode setting</issue>
+      </issues>
+    </release>
+
     <release version="2.7.0" date="2022-05-16" urgency="medium">
       <description>
         <p>New features:</p>
@@ -74,12 +93,7 @@
       </description>
     </release>
 
-    <release version="2.4.1" date="2020-04-01" urgency="medium">
-      <description>
-        <p>Updated translations</p>
-      </description>
-    </release>
-
+    <release version="2.4.1" date="2020-04-01" urgency="medium" />
     <release version="2.4.0" date="2019-11-15" urgency="medium" />
   </releases>
 </component>
