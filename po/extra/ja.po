@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-08 03:08+0000\n"
+"POT-Creation-Date: 2024-06-14 23:59+0000\n"
 "PO-Revision-Date: 2024-05-09 06:13+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -19,60 +19,62 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.5\n"
 
-#: data/power.appdata.xml.in:5
+#: data/power.metainfo.xml.in:10
 msgid "Power Settings"
 msgstr "電源の設定"
 
-#: data/power.appdata.xml.in:6
+#: data/power.metainfo.xml.in:11
 msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "ディスプレイの明るさ、電源ボタン、サスペンドの挙動を設定します"
 
-#: data/power.appdata.xml.in:11 data/power.appdata.xml.in:23
+#: data/power.metainfo.xml.in:26
+msgid "elementary, Inc."
+msgstr ""
+
+#: data/power.metainfo.xml.in:34 data/power.metainfo.xml.in:47
 msgid "New features:"
 msgstr "新機能:"
 
-#: data/power.appdata.xml.in:13
+#: data/power.metainfo.xml.in:36
 msgid "Add power profile management"
 msgstr "電源プランの管理機能を追加"
 
-#: data/power.appdata.xml.in:15 data/power.appdata.xml.in:27
-#: data/power.appdata.xml.in:36
+#: data/power.metainfo.xml.in:38 data/power.metainfo.xml.in:51
+#: data/power.metainfo.xml.in:61
 msgid "Minor updates:"
 msgstr "そのほかのアップデート:"
 
-#: data/power.appdata.xml.in:17 data/power.appdata.xml.in:30
-#: data/power.appdata.xml.in:40 data/power.appdata.xml.in:47
-#: data/power.appdata.xml.in:52 data/power.appdata.xml.in:59
+#: data/power.metainfo.xml.in:40 data/power.metainfo.xml.in:54
+#: data/power.metainfo.xml.in:65 data/power.metainfo.xml.in:73
+#: data/power.metainfo.xml.in:79
 msgid "Updated translations"
 msgstr "翻訳の更新"
 
-#: data/power.appdata.xml.in:25
+#: data/power.metainfo.xml.in:49
 msgid "Add toggle for showing battery percentage in Panel"
 msgstr "パネルにバッテリー残量割合の表示/非表示を切り替えるスイッチを追加"
 
-#: data/power.appdata.xml.in:29
+#: data/power.metainfo.xml.in:53
 msgid "Fix a potential issue with resuming from sleep"
 msgstr "スリープからの復帰時に発生することがある不具合を修正"
 
-#: data/power.appdata.xml.in:38
+#: data/power.metainfo.xml.in:63
 msgid "Change lid settings without restarting"
 msgstr "カバーの設定を再起動せず変更できるように修正"
 
-#: data/power.appdata.xml.in:39
+#: data/power.metainfo.xml.in:64
 msgid "Show in search results for \"sleep\" and \"timeout\""
 msgstr "\"スリープ\"や\"時間\"といった単語でプラグを検索できるように変更"
 
-#: data/power.appdata.xml.in:46
+#: data/power.metainfo.xml.in:72
 msgid "Fix potential freeze when changing settings from multiple panes"
 msgstr "複数のペインから設定を変更した際にフリーズすることがある不具合を修正"
 
-#: data/power.appdata.xml.in:57
-msgid "Remove broken hibernate option"
-msgstr "機能しないハイバーネートオプションを削除"
+#~ msgid "Remove broken hibernate option"
+#~ msgstr "機能しないハイバーネートオプションを削除"
 
-#: data/power.appdata.xml.in:58
-msgid "Add prompt to shutdown to power button actions"
-msgstr "電源ボタンを押したときの動作に “シャットダウンの確認” を追加"
+#~ msgid "Add prompt to shutdown to power button actions"
+#~ msgstr "電源ボタンを押したときの動作に “シャットダウンの確認” を追加"
 
 #~ msgid "Power"
 #~ msgstr "電源"
