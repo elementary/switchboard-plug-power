@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-14 23:59+0000\n"
+"POT-Creation-Date: 2024-06-15 00:14+0000\n"
 "PO-Revision-Date: 2023-03-11 14:25+0000\n"
 "Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
@@ -31,41 +31,52 @@ msgstr ""
 msgid "elementary, Inc."
 msgstr ""
 
-#: data/power.metainfo.xml.in:34 data/power.metainfo.xml.in:47
+#: data/power.metainfo.xml.in:34 data/power.metainfo.xml.in:53
+#: data/power.metainfo.xml.in:66
 msgid "New features:"
 msgstr "ახალი ფუნქციები:"
 
 #: data/power.metainfo.xml.in:36
-msgid "Add power profile management"
+msgid "Show computer batteries and batteries for connected devices"
 msgstr ""
 
-#: data/power.metainfo.xml.in:38 data/power.metainfo.xml.in:51
-#: data/power.metainfo.xml.in:61
+#: data/power.metainfo.xml.in:38 data/power.metainfo.xml.in:57
+#: data/power.metainfo.xml.in:70 data/power.metainfo.xml.in:80
 msgid "Minor updates:"
 msgstr "უმნიშვნელო განახლებები:"
 
-#: data/power.metainfo.xml.in:40 data/power.metainfo.xml.in:54
-#: data/power.metainfo.xml.in:65 data/power.metainfo.xml.in:73
-#: data/power.metainfo.xml.in:79
+#: data/power.metainfo.xml.in:40
+#, fuzzy
+#| msgid "Fix potential freeze when changing settings from multiple panes"
+msgid "Fix a potential freeze when getting advanced permissions"
+msgstr "ბევრი პანელიდან პარამეტრების ცვლილებისას შესაძლო დაკიდების გასწორება"
+
+#: data/power.metainfo.xml.in:41 data/power.metainfo.xml.in:59
+#: data/power.metainfo.xml.in:73 data/power.metainfo.xml.in:84
+#: data/power.metainfo.xml.in:92
 msgid "Updated translations"
 msgstr "განახლებული თარგმანები"
 
-#: data/power.metainfo.xml.in:49
+#: data/power.metainfo.xml.in:55
+msgid "Add power profile management"
+msgstr ""
+
+#: data/power.metainfo.xml.in:68
 msgid "Add toggle for showing battery percentage in Panel"
 msgstr ""
 
-#: data/power.metainfo.xml.in:53
+#: data/power.metainfo.xml.in:72
 msgid "Fix a potential issue with resuming from sleep"
 msgstr ""
 
-#: data/power.metainfo.xml.in:63
+#: data/power.metainfo.xml.in:82
 msgid "Change lid settings without restarting"
 msgstr ""
 
-#: data/power.metainfo.xml.in:64
+#: data/power.metainfo.xml.in:83
 msgid "Show in search results for \"sleep\" and \"timeout\""
 msgstr ""
 
-#: data/power.metainfo.xml.in:72
+#: data/power.metainfo.xml.in:91
 msgid "Fix potential freeze when changing settings from multiple panes"
 msgstr "ბევრი პანელიდან პარამეტრების ცვლილებისას შესაძლო დაკიდების გასწორება"

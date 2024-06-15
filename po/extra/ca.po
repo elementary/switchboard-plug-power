@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-14 23:59+0000\n"
+"POT-Creation-Date: 2024-06-15 00:14+0000\n"
 "PO-Revision-Date: 2022-01-11 09:19+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
@@ -33,43 +33,56 @@ msgstr ""
 msgid "elementary, Inc."
 msgstr ""
 
-#: data/power.metainfo.xml.in:34 data/power.metainfo.xml.in:47
+#: data/power.metainfo.xml.in:34 data/power.metainfo.xml.in:53
+#: data/power.metainfo.xml.in:66
 msgid "New features:"
 msgstr "Característiques noves:"
 
 #: data/power.metainfo.xml.in:36
-msgid "Add power profile management"
-msgstr "Addició de la gestió del perfil d'energia"
+msgid "Show computer batteries and batteries for connected devices"
+msgstr ""
 
-#: data/power.metainfo.xml.in:38 data/power.metainfo.xml.in:51
-#: data/power.metainfo.xml.in:61
+#: data/power.metainfo.xml.in:38 data/power.metainfo.xml.in:57
+#: data/power.metainfo.xml.in:70 data/power.metainfo.xml.in:80
 msgid "Minor updates:"
 msgstr "Actualitzacions menors:"
 
-#: data/power.metainfo.xml.in:40 data/power.metainfo.xml.in:54
-#: data/power.metainfo.xml.in:65 data/power.metainfo.xml.in:73
-#: data/power.metainfo.xml.in:79
+#: data/power.metainfo.xml.in:40
+#, fuzzy
+#| msgid "Fix potential freeze when changing settings from multiple panes"
+msgid "Fix a potential freeze when getting advanced permissions"
+msgstr ""
+"Correcció de la congelació potencial quan es canvia la configuració des de "
+"diversos taulers"
+
+#: data/power.metainfo.xml.in:41 data/power.metainfo.xml.in:59
+#: data/power.metainfo.xml.in:73 data/power.metainfo.xml.in:84
+#: data/power.metainfo.xml.in:92
 msgid "Updated translations"
 msgstr "Traduccions actualitzades"
 
-#: data/power.metainfo.xml.in:49
+#: data/power.metainfo.xml.in:55
+msgid "Add power profile management"
+msgstr "Addició de la gestió del perfil d'energia"
+
+#: data/power.metainfo.xml.in:68
 msgid "Add toggle for showing battery percentage in Panel"
 msgstr ""
 "Addicció de commutació per a mostrar el percentatge de la bateria al plafó"
 
-#: data/power.metainfo.xml.in:53
+#: data/power.metainfo.xml.in:72
 msgid "Fix a potential issue with resuming from sleep"
 msgstr "Correcció d'un problema potencial en despertar"
 
-#: data/power.metainfo.xml.in:63
+#: data/power.metainfo.xml.in:82
 msgid "Change lid settings without restarting"
 msgstr "Canvi de la configuració de la tapa sense reiniciar"
 
-#: data/power.metainfo.xml.in:64
+#: data/power.metainfo.xml.in:83
 msgid "Show in search results for \"sleep\" and \"timeout\""
 msgstr "Es mostren els resultats de cerca per a dormir i temps d'espera"
 
-#: data/power.metainfo.xml.in:72
+#: data/power.metainfo.xml.in:91
 msgid "Fix potential freeze when changing settings from multiple panes"
 msgstr ""
 "Correcció de la congelació potencial quan es canvia la configuració des de "

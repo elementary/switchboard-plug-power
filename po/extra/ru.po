@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-14 23:59+0000\n"
+"POT-Creation-Date: 2024-06-15 00:14+0000\n"
 "PO-Revision-Date: 2022-01-12 22:47+0000\n"
 "Last-Translator: DartDeaDia <dartdeadia@protonmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -33,43 +33,56 @@ msgstr ""
 msgid "elementary, Inc."
 msgstr ""
 
-#: data/power.metainfo.xml.in:34 data/power.metainfo.xml.in:47
+#: data/power.metainfo.xml.in:34 data/power.metainfo.xml.in:53
+#: data/power.metainfo.xml.in:66
 msgid "New features:"
 msgstr "Новые возможности:"
 
 #: data/power.metainfo.xml.in:36
-msgid "Add power profile management"
-msgstr "Добавлен профиль управления питанием"
+msgid "Show computer batteries and batteries for connected devices"
+msgstr ""
 
-#: data/power.metainfo.xml.in:38 data/power.metainfo.xml.in:51
-#: data/power.metainfo.xml.in:61
+#: data/power.metainfo.xml.in:38 data/power.metainfo.xml.in:57
+#: data/power.metainfo.xml.in:70 data/power.metainfo.xml.in:80
 msgid "Minor updates:"
 msgstr "Незначительные обновления:"
 
-#: data/power.metainfo.xml.in:40 data/power.metainfo.xml.in:54
-#: data/power.metainfo.xml.in:65 data/power.metainfo.xml.in:73
-#: data/power.metainfo.xml.in:79
+#: data/power.metainfo.xml.in:40
+#, fuzzy
+#| msgid "Fix potential freeze when changing settings from multiple panes"
+msgid "Fix a potential freeze when getting advanced permissions"
+msgstr ""
+"Исправлено потенциальное зависание при изменении параметров из нескольких "
+"панелей"
+
+#: data/power.metainfo.xml.in:41 data/power.metainfo.xml.in:59
+#: data/power.metainfo.xml.in:73 data/power.metainfo.xml.in:84
+#: data/power.metainfo.xml.in:92
 msgid "Updated translations"
 msgstr "Обновлены переводы"
 
-#: data/power.metainfo.xml.in:49
+#: data/power.metainfo.xml.in:55
+msgid "Add power profile management"
+msgstr "Добавлен профиль управления питанием"
+
+#: data/power.metainfo.xml.in:68
 msgid "Add toggle for showing battery percentage in Panel"
 msgstr ""
 "Добавлен переключатель для отображения процента заряда батареи на панели"
 
-#: data/power.metainfo.xml.in:53
+#: data/power.metainfo.xml.in:72
 msgid "Fix a potential issue with resuming from sleep"
 msgstr "Исправлена возможная проблема связанная с выходом из режима сна"
 
-#: data/power.metainfo.xml.in:63
+#: data/power.metainfo.xml.in:82
 msgid "Change lid settings without restarting"
 msgstr "Изменение настроек действия для закрывания крышки без перезагрузки"
 
-#: data/power.metainfo.xml.in:64
+#: data/power.metainfo.xml.in:83
 msgid "Show in search results for \"sleep\" and \"timeout\""
 msgstr "К результатам поиска добавлены «спящий режим» и «бездействие»"
 
-#: data/power.metainfo.xml.in:72
+#: data/power.metainfo.xml.in:91
 msgid "Fix potential freeze when changing settings from multiple panes"
 msgstr ""
 "Исправлено потенциальное зависание при изменении параметров из нескольких "
