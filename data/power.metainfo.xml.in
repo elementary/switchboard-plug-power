@@ -44,7 +44,7 @@
       <issues>
         <issue url="https://github.com/elementary/switchboard-plug-power/issues/110">Brightness controls missing</issue>
         <issue url="https://github.com/elementary/switchboard-plug-power/issues/146">Authenticate on demand for lid close settings</issue>
-        <issue url="https://github.com/elementary/switchboard-plug-power/issues/210">Expose automatic lower power mode setting</issues>
+        <issue url="https://github.com/elementary/switchboard-plug-power/issues/210">Expose automatic lower power mode setting</issue>
       </issues>
     </release>
 
