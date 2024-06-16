@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-15 00:14+0000\n"
-"PO-Revision-Date: 2024-06-16 01:16+0000\n"
+"PO-Revision-Date: 2024-06-17 02:16+0000\n"
 "Last-Translator: Italo Felipe Capasso Ballesteros <edwood.grant@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "power/es/>\n"
@@ -140,14 +140,12 @@ msgid "Plugged In"
 msgstr "Conectado"
 
 #: src/MainView.vala:297 src/Plug.vala:87
-#, fuzzy
-#| msgid "Automatically adjust brightness:"
 msgid "Automatically Save Power"
-msgstr "Ajustar brillo automáticamente:"
+msgstr "Ahorrar energía automáticamente"
 
 #: src/MainView.vala:300
 msgid "Power Saver mode will be used when battery is low"
-msgstr ""
+msgstr "El modo de ahorro de energía se utilizará cuando la batería esté baja"
 
 #: src/MainView.vala:309
 msgid "On Battery"
@@ -160,34 +158,32 @@ msgstr ""
 "comportamiento al suspender"
 
 #: src/Plug.vala:89 src/Widgets/BatteryBox.vala:21
-#, fuzzy
-#| msgid "On Battery"
 msgid "Battery Level"
-msgstr "Con batería"
+msgstr "Nivel de batería"
 
 #: src/Plug.vala:90
-#, fuzzy
-#| msgid "Dim display"
 msgid "Dim Display"
 msgstr "Oscurecer pantalla"
 
 #: src/Widgets/BatteryBox.vala:22
 msgid "Battery Levels"
-msgstr ""
+msgstr "Niveles de batería"
 
 #: src/Widgets/BatteryBox.vala:30
 msgid "Show Percentage In Panel"
-msgstr ""
+msgstr "Mostrar porcentaje en el Panel"
 
 #: src/Widgets/DevicesBox.vala:8
 msgid ""
 "Devices that report battery information when plugged in or connected "
 "wirelessly will appear here"
 msgstr ""
+"Los dispositivos que reporten información sobre el estado de su batería al "
+"estar conectados se mostrarán aquí"
 
 #: src/Widgets/DevicesBox.vala:28
 msgid "Connected Devices"
-msgstr ""
+msgstr "Dispositivos conectados"
 
 #: src/Widgets/TimeoutComboBox.vala:97
 msgid "Never"
@@ -235,27 +231,23 @@ msgstr "Interrumpir"
 
 #: src/Widgets/LidCloseActionComboBox.vala:55
 msgid "Not supported"
-msgstr "No admitido"
+msgstr "No compatible"
 
 #: src/Widgets/PowerModeButton.vala:60
-#, fuzzy
-#| msgid "Power"
 msgid "Power Mode"
-msgstr "Energía"
+msgstr "Modo de energía"
 
 #: src/Widgets/PowerModeButton.vala:68
-#, fuzzy
-#| msgid "Power"
 msgid "Power Saver"
-msgstr "Energía"
+msgstr "Ahorro de energía"
 
 #: src/Widgets/PowerModeButton.vala:82
 msgid "Balanced"
-msgstr ""
+msgstr "Balanceado"
 
 #: src/Widgets/PowerModeButton.vala:98
 msgid "Performance"
-msgstr ""
+msgstr "Rendimiento"
 
 #~ msgid "Display brightness:"
 #~ msgstr "Brillo de pantalla:"
