@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-15 00:14+0000\n"
-"PO-Revision-Date: 2022-05-30 10:51+0000\n"
+"PO-Revision-Date: 2024-06-19 19:12+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
-"Language-Team: French <https://l10n.elementary.io/projects/switchboard/power-"
-"plug-extra/fr/>\n"
+"Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
+"power-extra/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 5.5.5\n"
 
 #: data/power.metainfo.xml.in:10
 msgid "Power Settings"
@@ -31,7 +31,7 @@ msgstr ""
 
 #: data/power.metainfo.xml.in:26
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
 
 #: data/power.metainfo.xml.in:34 data/power.metainfo.xml.in:53
 #: data/power.metainfo.xml.in:66
@@ -40,7 +40,7 @@ msgstr "Nouvelles fonctionnalités :"
 
 #: data/power.metainfo.xml.in:36
 msgid "Show computer batteries and batteries for connected devices"
-msgstr ""
+msgstr "Affichage de la batterie de l'ordinateur et des appareils connectés"
 
 #: data/power.metainfo.xml.in:38 data/power.metainfo.xml.in:57
 #: data/power.metainfo.xml.in:70 data/power.metainfo.xml.in:80
@@ -48,12 +48,10 @@ msgid "Minor updates:"
 msgstr "Mises à jour mineures :"
 
 #: data/power.metainfo.xml.in:40
-#, fuzzy
-#| msgid "Fix potential freeze when changing settings from multiple panes"
 msgid "Fix a potential freeze when getting advanced permissions"
 msgstr ""
-"Correction d'un blocage potentiel lors de la modification de paramètre "
-"depuis plusieurs volets"
+"Correction d'un blocage potentiel lors de la récupération des permissions "
+"avancées"
 
 #: data/power.metainfo.xml.in:41 data/power.metainfo.xml.in:59
 #: data/power.metainfo.xml.in:73 data/power.metainfo.xml.in:84
