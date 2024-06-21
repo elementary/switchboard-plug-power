@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-15 00:14+0000\n"
-"PO-Revision-Date: 2024-06-16 01:16+0000\n"
+"PO-Revision-Date: 2024-06-22 14:16+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "power-extra/he/>\n"
@@ -38,7 +38,7 @@ msgstr "יכולות חדשות:"
 
 #: data/power.metainfo.xml.in:36
 msgid "Show computer batteries and batteries for connected devices"
-msgstr ""
+msgstr "הצגת סוללות המחשב וסוללות להתקנים מחוברים"
 
 #: data/power.metainfo.xml.in:38 data/power.metainfo.xml.in:57
 #: data/power.metainfo.xml.in:70 data/power.metainfo.xml.in:80
@@ -46,10 +46,8 @@ msgid "Minor updates:"
 msgstr "עדכונים משניים:"
 
 #: data/power.metainfo.xml.in:40
-#, fuzzy
-#| msgid "Fix potential freeze when changing settings from multiple panes"
 msgid "Fix a potential freeze when getting advanced permissions"
-msgstr "תיקון קיפאון שעשוי להתרחש בעת החלפת הגדרות ממגוון לוחות"
+msgstr "תוקן קיפאון שעשוי להתרחש בעת קבלת הרשאות מתקדמות"
 
 #: data/power.metainfo.xml.in:41 data/power.metainfo.xml.in:59
 #: data/power.metainfo.xml.in:73 data/power.metainfo.xml.in:84
