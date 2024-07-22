@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-14 23:59+0000\n"
-"PO-Revision-Date: 2024-05-09 06:13+0000\n"
+"POT-Creation-Date: 2024-06-15 00:14+0000\n"
+"PO-Revision-Date: 2024-06-16 01:16+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "power-extra/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5\n"
+"X-Generator: Weblate 5.5.5\n"
 
 #: data/power.metainfo.xml.in:10
 msgid "Power Settings"
@@ -29,44 +29,53 @@ msgstr "ディスプレイの明るさ、電源ボタン、サスペンドの挙
 
 #: data/power.metainfo.xml.in:26
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
 
-#: data/power.metainfo.xml.in:34 data/power.metainfo.xml.in:47
+#: data/power.metainfo.xml.in:34 data/power.metainfo.xml.in:53
+#: data/power.metainfo.xml.in:66
 msgid "New features:"
 msgstr "新機能:"
 
 #: data/power.metainfo.xml.in:36
-msgid "Add power profile management"
-msgstr "電源プランの管理機能を追加"
+msgid "Show computer batteries and batteries for connected devices"
+msgstr "コンピューターと接続済みデバイスのバッテリーを表示する機能を追加"
 
-#: data/power.metainfo.xml.in:38 data/power.metainfo.xml.in:51
-#: data/power.metainfo.xml.in:61
+#: data/power.metainfo.xml.in:38 data/power.metainfo.xml.in:57
+#: data/power.metainfo.xml.in:70 data/power.metainfo.xml.in:80
 msgid "Minor updates:"
 msgstr "そのほかのアップデート:"
 
-#: data/power.metainfo.xml.in:40 data/power.metainfo.xml.in:54
-#: data/power.metainfo.xml.in:65 data/power.metainfo.xml.in:73
-#: data/power.metainfo.xml.in:79
+#: data/power.metainfo.xml.in:40
+msgid "Fix a potential freeze when getting advanced permissions"
+msgstr "高度な権限を取得する際にフリーズすることがある不具合を修正"
+
+#: data/power.metainfo.xml.in:41 data/power.metainfo.xml.in:59
+#: data/power.metainfo.xml.in:73 data/power.metainfo.xml.in:84
+#: data/power.metainfo.xml.in:92
 msgid "Updated translations"
 msgstr "翻訳の更新"
 
-#: data/power.metainfo.xml.in:49
+#: data/power.metainfo.xml.in:55
+msgid "Add power profile management"
+msgstr "電源プランの管理機能を追加"
+
+#: data/power.metainfo.xml.in:68
 msgid "Add toggle for showing battery percentage in Panel"
 msgstr "パネルにバッテリー残量割合の表示/非表示を切り替えるスイッチを追加"
 
-#: data/power.metainfo.xml.in:53
+#: data/power.metainfo.xml.in:72
 msgid "Fix a potential issue with resuming from sleep"
 msgstr "スリープからの復帰時に発生することがある不具合を修正"
 
-#: data/power.metainfo.xml.in:63
+#: data/power.metainfo.xml.in:82
 msgid "Change lid settings without restarting"
 msgstr "カバーの設定を再起動せず変更できるように修正"
 
-#: data/power.metainfo.xml.in:64
+#: data/power.metainfo.xml.in:83
 msgid "Show in search results for \"sleep\" and \"timeout\""
 msgstr "\"スリープ\"や\"時間\"といった単語でプラグを検索できるように変更"
 
-#: data/power.metainfo.xml.in:72
+#: data/power.metainfo.xml.in:91
 msgid "Fix potential freeze when changing settings from multiple panes"
 msgstr "複数のペインから設定を変更した際にフリーズすることがある不具合を修正"
 

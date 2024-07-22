@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-14 23:59+0000\n"
-"PO-Revision-Date: 2024-06-13 08:33+0000\n"
+"POT-Creation-Date: 2024-06-15 00:14+0000\n"
+"PO-Revision-Date: 2024-06-17 02:16+0000\n"
 "Last-Translator: Italo Felipe Capasso Ballesteros <edwood.grant@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "power-extra/es/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: data/power.metainfo.xml.in:10
 msgid "Power Settings"
-msgstr "Configuración de energía"
+msgstr "Configuración de Energía"
 
 #: data/power.metainfo.xml.in:11
 msgid "Configure display brightness, power buttons, and suspend behavior"
@@ -31,44 +31,56 @@ msgstr ""
 
 #: data/power.metainfo.xml.in:26
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
 
-#: data/power.metainfo.xml.in:34 data/power.metainfo.xml.in:47
+#: data/power.metainfo.xml.in:34 data/power.metainfo.xml.in:53
+#: data/power.metainfo.xml.in:66
 msgid "New features:"
 msgstr "Nuevas características:"
 
 #: data/power.metainfo.xml.in:36
-msgid "Add power profile management"
-msgstr ""
+msgid "Show computer batteries and batteries for connected devices"
+msgstr "Ahora se muestran baterías de computadoras y dispositivos conectados"
 
-#: data/power.metainfo.xml.in:38 data/power.metainfo.xml.in:51
-#: data/power.metainfo.xml.in:61
+#: data/power.metainfo.xml.in:38 data/power.metainfo.xml.in:57
+#: data/power.metainfo.xml.in:70 data/power.metainfo.xml.in:80
 msgid "Minor updates:"
 msgstr "Actualizaciones menores:"
 
-#: data/power.metainfo.xml.in:40 data/power.metainfo.xml.in:54
-#: data/power.metainfo.xml.in:65 data/power.metainfo.xml.in:73
-#: data/power.metainfo.xml.in:79
+#: data/power.metainfo.xml.in:40
+msgid "Fix a potential freeze when getting advanced permissions"
+msgstr "Se corrigió un posible bloqueo al obtener permisos avanzados"
+
+#: data/power.metainfo.xml.in:41 data/power.metainfo.xml.in:59
+#: data/power.metainfo.xml.in:73 data/power.metainfo.xml.in:84
+#: data/power.metainfo.xml.in:92
 msgid "Updated translations"
 msgstr "Traducciones actualizadas"
 
-#: data/power.metainfo.xml.in:49
+#: data/power.metainfo.xml.in:55
+msgid "Add power profile management"
+msgstr "Ahora se puede gestionar energía mediante perfiles"
+
+#: data/power.metainfo.xml.in:68
 msgid "Add toggle for showing battery percentage in Panel"
 msgstr ""
-
-#: data/power.metainfo.xml.in:53
-msgid "Fix a potential issue with resuming from sleep"
-msgstr ""
-
-#: data/power.metainfo.xml.in:63
-msgid "Change lid settings without restarting"
-msgstr ""
-
-#: data/power.metainfo.xml.in:64
-msgid "Show in search results for \"sleep\" and \"timeout\""
-msgstr ""
+"Se agregó un botón para poder mostrar el porcentaje de la batería en el Panel"
 
 #: data/power.metainfo.xml.in:72
+msgid "Fix a potential issue with resuming from sleep"
+msgstr "Se corrigió un posible problema al resumir de un reposo"
+
+#: data/power.metainfo.xml.in:82
+msgid "Change lid settings without restarting"
+msgstr "Se pueden cambiar el comportamiento de la tapa sin tener que reiniciar"
+
+#: data/power.metainfo.xml.in:83
+msgid "Show in search results for \"sleep\" and \"timeout\""
+msgstr ""
+"Ahora aparece en los resultados de búsqueda al buscar «reposo» y «tiempo de "
+"espera»"
+
+#: data/power.metainfo.xml.in:91
 msgid "Fix potential freeze when changing settings from multiple panes"
 msgstr ""
 "Se corrigió un posible bloqueo al modificar opciones de diversos paneles"

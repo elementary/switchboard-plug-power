@@ -7,18 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-14 23:59+0000\n"
-"PO-Revision-Date: 2022-05-29 23:10+0000\n"
+"POT-Creation-Date: 2024-06-15 00:14+0000\n"
+"PO-Revision-Date: 2024-07-01 13:16+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
-"power-plug-extra/uk/>\n"
+"power-extra/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 5.5.5\n"
 
 #: data/power.metainfo.xml.in:10
 msgid "Power Settings"
@@ -32,44 +32,53 @@ msgstr ""
 
 #: data/power.metainfo.xml.in:26
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
 
-#: data/power.metainfo.xml.in:34 data/power.metainfo.xml.in:47
+#: data/power.metainfo.xml.in:34 data/power.metainfo.xml.in:53
+#: data/power.metainfo.xml.in:66
 msgid "New features:"
 msgstr "Нові функції:"
 
 #: data/power.metainfo.xml.in:36
-msgid "Add power profile management"
-msgstr "Додано профіль керування енергоспоживанням"
+msgid "Show computer batteries and batteries for connected devices"
+msgstr "Показ акумуляторів комп'ютера та акумуляторів підключених пристроїв"
 
-#: data/power.metainfo.xml.in:38 data/power.metainfo.xml.in:51
-#: data/power.metainfo.xml.in:61
+#: data/power.metainfo.xml.in:38 data/power.metainfo.xml.in:57
+#: data/power.metainfo.xml.in:70 data/power.metainfo.xml.in:80
 msgid "Minor updates:"
 msgstr "Незначні оновлення:"
 
-#: data/power.metainfo.xml.in:40 data/power.metainfo.xml.in:54
-#: data/power.metainfo.xml.in:65 data/power.metainfo.xml.in:73
-#: data/power.metainfo.xml.in:79
+#: data/power.metainfo.xml.in:40
+msgid "Fix a potential freeze when getting advanced permissions"
+msgstr "Виправлено ймовірні зависання, коли надаються розширені дозволи"
+
+#: data/power.metainfo.xml.in:41 data/power.metainfo.xml.in:59
+#: data/power.metainfo.xml.in:73 data/power.metainfo.xml.in:84
+#: data/power.metainfo.xml.in:92
 msgid "Updated translations"
 msgstr "Оновлені переклади"
 
-#: data/power.metainfo.xml.in:49
+#: data/power.metainfo.xml.in:55
+msgid "Add power profile management"
+msgstr "Додано профіль керування енергоспоживанням"
+
+#: data/power.metainfo.xml.in:68
 msgid "Add toggle for showing battery percentage in Panel"
 msgstr "Додано перемикач показу відсотків заряду акумулятора на панелі"
 
-#: data/power.metainfo.xml.in:53
+#: data/power.metainfo.xml.in:72
 msgid "Fix a potential issue with resuming from sleep"
 msgstr "Виправлено ймовірну можливість самостійного пробудження"
 
-#: data/power.metainfo.xml.in:63
+#: data/power.metainfo.xml.in:82
 msgid "Change lid settings without restarting"
 msgstr "Зміна налаштувань дії закривання кришки без перезавантаження"
 
-#: data/power.metainfo.xml.in:64
+#: data/power.metainfo.xml.in:83
 msgid "Show in search results for \"sleep\" and \"timeout\""
 msgstr "До результатів пошуку додано «сон» і «час»"
 
-#: data/power.metainfo.xml.in:72
+#: data/power.metainfo.xml.in:91
 msgid "Fix potential freeze when changing settings from multiple panes"
 msgstr ""
 "Виправлено ймовірні зависання під час зміни налаштувань у кількох панелях"

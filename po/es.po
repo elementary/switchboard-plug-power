@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-14 23:59+0000\n"
-"PO-Revision-Date: 2021-03-04 07:57+0000\n"
-"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
+"POT-Creation-Date: 2024-06-15 00:14+0000\n"
+"PO-Revision-Date: 2024-06-17 02:16+0000\n"
+"Last-Translator: Italo Felipe Capasso Ballesteros <edwood.grant@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
-"switchboard-plug-power/es/>\n"
+"power/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 5.5.5\n"
 "X-Launchpad-Export-Date: 2017-01-09 05:39+0000\n"
 
 #: data/power.policy.in:10
@@ -30,95 +30,89 @@ msgstr "Necesita autenticarse para gestionar la configuración de energía"
 
 #: src/Device.vala:54
 msgid "Charging"
-msgstr ""
+msgstr "Cargando"
 
 #: src/Device.vala:56
 msgid "Using battery power"
-msgstr ""
+msgstr "Usando la energía de la batería"
 
 #: src/Device.vala:58
 msgid "Empty"
-msgstr ""
+msgstr "Vacío"
 
 #: src/Device.vala:60
 msgid "Fully charged"
-msgstr ""
+msgstr "Completamente cargado"
 
 #: src/Device.vala:62
 msgid "Waiting to charge"
-msgstr ""
+msgstr "Esperando a cargar"
 
 #: src/Device.vala:64
 msgid "Waiting to use battery power"
-msgstr ""
+msgstr "Esperando a usar la energía de la batería"
 
 #: src/Device.vala:66
 msgid "Unknown"
-msgstr ""
+msgstr "Desconocido"
 
 #. Coarse battery level can sometimes be unknown, percentage is more reliable
 #: src/Device.vala:193
 msgctxt "battery-level"
 msgid "Critical"
-msgstr ""
+msgstr "Crítico"
 
 #: src/Device.vala:195
 msgctxt "battery-level"
 msgid "Low"
-msgstr ""
+msgstr "Bajo"
 
 #: src/Device.vala:197
 msgctxt "battery-level"
 msgid "Good"
-msgstr ""
+msgstr "Bien"
 
 #: src/Device.vala:199
 msgctxt "battery-level"
 msgid "High"
-msgstr ""
+msgstr "Alto"
 
 #: src/Device.vala:201
 msgctxt "battery-level"
 msgid "Full"
-msgstr ""
+msgstr "Completo"
 
 #: src/Device.vala:205
 msgid "Unknown. Device may be locked."
-msgstr ""
+msgstr "Desconocido. El equipo puede estar bloqueado."
 
 #: src/MainView.vala:49 src/Plug.vala:36
 msgid "Power"
 msgstr "Energía"
 
 #: src/MainView.vala:94 src/Plug.vala:86
-#, fuzzy
-#| msgid "Automatically adjust brightness:"
 msgid "Automatically Adjust Brightness"
-msgstr "Ajustar brillo automáticamente:"
+msgstr "Ajustar brillo automáticamente"
 
 #: src/MainView.vala:126 src/Plug.vala:91
-#, fuzzy
-#| msgid "Display brightness"
 msgid "Display Brightness"
 msgstr "Brillo de pantalla"
 
 #: src/MainView.vala:147
 msgid "Some changes will not take effect until you restart this computer"
-msgstr "Algunos cambios no tendrán efecto hasta que reinicies el equipo"
+msgstr "Algunos cambios no tendrán efecto hasta que reinicie el equipo"
 
 #: src/MainView.vala:156 src/Plug.vala:92
 msgid "Lid Close Behavior"
-msgstr ""
+msgstr "Comportamiento al cerrar la tapa"
 
 #: src/MainView.vala:164 src/Plug.vala:93
 msgid "Lid Close With External Display"
-msgstr ""
+msgstr "Cierre de tapa con pantalla externa"
 
 #: src/MainView.vala:195 src/Plug.vala:88
-#, fuzzy
-#| msgid "Inactive display off"
 msgid "Automatic Display Off"
-msgstr "Apagar pantalla inactiva"
+msgstr "Apagar pantalla automáticamente"
 
 #. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
 #: src/MainView.vala:205 src/Widgets/LidCloseActionComboBox.vala:52
@@ -130,36 +124,28 @@ msgid "Suspend"
 msgstr "Suspender"
 
 #: src/MainView.vala:207
-#, fuzzy
-#| msgid "Prompt to shutdown"
 msgid "Ask to shutdown"
-msgstr "Aviso de apagado"
+msgstr "Pedir que se apague"
 
 #: src/MainView.vala:212 src/Plug.vala:94
-#, fuzzy
-#| msgid "Power button"
 msgid "Power Button Behavior"
-msgstr "Botón de encendido"
+msgstr "Comportamiento del botón de encendido"
 
 #: src/MainView.vala:226 src/MainView.vala:266 src/Plug.vala:95
-#, fuzzy
-#| msgid "Suspend when inactive for:"
 msgid "Suspend When Inactive For"
-msgstr "Suspender cuando esté inactivo por:"
+msgstr "Suspender cuando esté inactivo por"
 
 #: src/MainView.vala:251
 msgid "Plugged In"
 msgstr "Conectado"
 
 #: src/MainView.vala:297 src/Plug.vala:87
-#, fuzzy
-#| msgid "Automatically adjust brightness:"
 msgid "Automatically Save Power"
-msgstr "Ajustar brillo automáticamente:"
+msgstr "Ahorrar energía automáticamente"
 
 #: src/MainView.vala:300
 msgid "Power Saver mode will be used when battery is low"
-msgstr ""
+msgstr "El modo de ahorro de energía se utilizará cuando la batería esté baja"
 
 #: src/MainView.vala:309
 msgid "On Battery"
@@ -172,34 +158,32 @@ msgstr ""
 "comportamiento al suspender"
 
 #: src/Plug.vala:89 src/Widgets/BatteryBox.vala:21
-#, fuzzy
-#| msgid "On Battery"
 msgid "Battery Level"
-msgstr "Con batería"
+msgstr "Nivel de batería"
 
 #: src/Plug.vala:90
-#, fuzzy
-#| msgid "Dim display"
 msgid "Dim Display"
 msgstr "Oscurecer pantalla"
 
 #: src/Widgets/BatteryBox.vala:22
 msgid "Battery Levels"
-msgstr ""
+msgstr "Niveles de batería"
 
 #: src/Widgets/BatteryBox.vala:30
 msgid "Show Percentage In Panel"
-msgstr ""
+msgstr "Mostrar porcentaje en el Panel"
 
 #: src/Widgets/DevicesBox.vala:8
 msgid ""
 "Devices that report battery information when plugged in or connected "
 "wirelessly will appear here"
 msgstr ""
+"Los dispositivos que reporten información sobre el estado de su batería al "
+"estar conectados se mostrarán aquí"
 
 #: src/Widgets/DevicesBox.vala:28
 msgid "Connected Devices"
-msgstr ""
+msgstr "Dispositivos conectados"
 
 #: src/Widgets/TimeoutComboBox.vala:97
 msgid "Never"
@@ -247,27 +231,23 @@ msgstr "Interrumpir"
 
 #: src/Widgets/LidCloseActionComboBox.vala:55
 msgid "Not supported"
-msgstr "No admitido"
+msgstr "No compatible"
 
 #: src/Widgets/PowerModeButton.vala:60
-#, fuzzy
-#| msgid "Power"
 msgid "Power Mode"
-msgstr "Energía"
+msgstr "Modo de energía"
 
 #: src/Widgets/PowerModeButton.vala:68
-#, fuzzy
-#| msgid "Power"
 msgid "Power Saver"
-msgstr "Energía"
+msgstr "Ahorro de energía"
 
 #: src/Widgets/PowerModeButton.vala:82
 msgid "Balanced"
-msgstr ""
+msgstr "Balanceado"
 
 #: src/Widgets/PowerModeButton.vala:98
 msgid "Performance"
-msgstr ""
+msgstr "Rendimiento"
 
 #~ msgid "Display brightness:"
 #~ msgstr "Brillo de pantalla:"

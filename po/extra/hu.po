@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-14 23:59+0000\n"
-"PO-Revision-Date: 2022-10-18 17:44+0000\n"
+"POT-Creation-Date: 2024-06-15 00:14+0000\n"
+"PO-Revision-Date: 2024-06-19 02:57+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
-"power-plug-extra/hu/>\n"
+"power-extra/hu/>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 5.5.5\n"
 
 #: data/power.metainfo.xml.in:10
 msgid "Power Settings"
@@ -31,45 +31,54 @@ msgstr ""
 
 #: data/power.metainfo.xml.in:26
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
 
-#: data/power.metainfo.xml.in:34 data/power.metainfo.xml.in:47
+#: data/power.metainfo.xml.in:34 data/power.metainfo.xml.in:53
+#: data/power.metainfo.xml.in:66
 msgid "New features:"
 msgstr "Új funkciók:"
 
 #: data/power.metainfo.xml.in:36
-msgid "Add power profile management"
-msgstr "Lehetőség energiakezelési mód beállítására"
+msgid "Show computer batteries and batteries for connected devices"
+msgstr "A számítógép és a csatlakoztatott eszközök akkumulátorának kijelzése"
 
-#: data/power.metainfo.xml.in:38 data/power.metainfo.xml.in:51
-#: data/power.metainfo.xml.in:61
+#: data/power.metainfo.xml.in:38 data/power.metainfo.xml.in:57
+#: data/power.metainfo.xml.in:70 data/power.metainfo.xml.in:80
 msgid "Minor updates:"
 msgstr "Kisebb frissítések:"
 
-#: data/power.metainfo.xml.in:40 data/power.metainfo.xml.in:54
-#: data/power.metainfo.xml.in:65 data/power.metainfo.xml.in:73
-#: data/power.metainfo.xml.in:79
+#: data/power.metainfo.xml.in:40
+msgid "Fix a potential freeze when getting advanced permissions"
+msgstr "Lehetséges fagyás javítása haladó engedélyek kérésekor"
+
+#: data/power.metainfo.xml.in:41 data/power.metainfo.xml.in:59
+#: data/power.metainfo.xml.in:73 data/power.metainfo.xml.in:84
+#: data/power.metainfo.xml.in:92
 msgid "Updated translations"
 msgstr "Frissített fordítások"
 
-#: data/power.metainfo.xml.in:49
+#: data/power.metainfo.xml.in:55
+msgid "Add power profile management"
+msgstr "Lehetőség energiakezelési mód beállítására"
+
+#: data/power.metainfo.xml.in:68
 msgid "Add toggle for showing battery percentage in Panel"
 msgstr "Kapcsoló az akkumulátor töltöttségének kijelzéséhez az állapotsoron"
 
-#: data/power.metainfo.xml.in:53
+#: data/power.metainfo.xml.in:72
 msgid "Fix a potential issue with resuming from sleep"
 msgstr ""
 "Az alvó módból való visszatéréskor jelentkező lehetséges fagyás javítva"
 
-#: data/power.metainfo.xml.in:63
+#: data/power.metainfo.xml.in:82
 msgid "Change lid settings without restarting"
 msgstr "A fedélbeállítások módosítása újraindítás nélkül"
 
-#: data/power.metainfo.xml.in:64
+#: data/power.metainfo.xml.in:83
 msgid "Show in search results for \"sleep\" and \"timeout\""
 msgstr "Megjelenítés a keresési találatokban többféle kulcsszó beírása után"
 
-#: data/power.metainfo.xml.in:72
+#: data/power.metainfo.xml.in:91
 msgid "Fix potential freeze when changing settings from multiple panes"
 msgstr ""
 "Lehetséges fagyás javítása a többféle helyről való beállítások "
