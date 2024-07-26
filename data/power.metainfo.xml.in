@@ -12,7 +12,7 @@
 
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-power/main/data/screenshot.png</image>
+      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-power/8.0.0/data/screenshot.png</image>
     </screenshot>
   </screenshots>
 
@@ -29,7 +29,7 @@
   <update_contact>contact_at_elementary.io</update_contact>
 
   <releases>
-    <release version="8.0.0" date="2024-06-14" urgency="medium">
+    <release version="8.0.0" date="2024-07-26" urgency="medium">
       <description>
         <p>New features:</p>
         <ul>
