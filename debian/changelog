@@ -1,3 +1,9 @@
+io.elementary.settings.power (8.0.0) noble; urgency=medium
+
+  * Release 8.0.0
+
+ -- Danielle Foré <danielle@elementary.io>  Fri, 26 Jul 2024 10:32:31 -0700
+
 io.elementary.settings.power (2.7.0) bionic; urgency=medium
 
   * Release 2.7.0 (#216)
