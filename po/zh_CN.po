@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-15 00:14+0000\n"
-"PO-Revision-Date: 2022-07-21 09:20+0000\n"
-"Last-Translator: colindemian <colindemian@outlook.com>\n"
+"PO-Revision-Date: 2024-08-07 18:16+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
-"switchboard/switchboard-plug-power/zh_Hans/>\n"
+"switchboard/power/zh_Hans/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 5.6.2\n"
 "X-Launchpad-Export-Date: 2017-03-14 07:03+0000\n"
 
 #: data/power.policy.in:10
@@ -54,7 +54,7 @@ msgstr ""
 
 #: src/Device.vala:66
 msgid "Unknown"
-msgstr ""
+msgstr "未知设备"
 
 #. Coarse battery level can sometimes be unknown, percentage is more reliable
 #: src/Device.vala:193
@@ -75,7 +75,7 @@ msgstr ""
 #: src/Device.vala:199
 msgctxt "battery-level"
 msgid "High"
-msgstr ""
+msgstr "高"
 
 #: src/Device.vala:201
 msgctxt "battery-level"
