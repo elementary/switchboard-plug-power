@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-15 00:14+0000\n"
-"PO-Revision-Date: 2024-03-26 22:13+0000\n"
-"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
+"PO-Revision-Date: 2024-08-07 18:16+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "power/pt/>\n"
 "Language: pt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.6.2\n"
 "X-Launchpad-Export-Date: 2017-01-01 05:31+0000\n"
 
 #: data/power.policy.in:10
@@ -75,7 +75,7 @@ msgstr ""
 #: src/Device.vala:199
 msgctxt "battery-level"
 msgid "High"
-msgstr ""
+msgstr "Alta"
 
 #: src/Device.vala:201
 msgctxt "battery-level"
