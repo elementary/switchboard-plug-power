@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-15 00:14+0000\n"
-"PO-Revision-Date: 2024-08-07 18:16+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2024-09-01 23:41+0000\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
 "switchboard/power/zh_Hant/>\n"
 "Language: zh_TW\n"
@@ -30,7 +30,7 @@ msgstr "需要核對身份才能管理電源設定值"
 
 #: src/Device.vala:54
 msgid "Charging"
-msgstr ""
+msgstr "充電中"
 
 #: src/Device.vala:56
 msgid "Using battery power"
@@ -42,15 +42,15 @@ msgstr ""
 
 #: src/Device.vala:60
 msgid "Fully charged"
-msgstr ""
+msgstr "已充飽"
 
 #: src/Device.vala:62
 msgid "Waiting to charge"
-msgstr ""
+msgstr "正在等待充電"
 
 #: src/Device.vala:64
 msgid "Waiting to use battery power"
-msgstr ""
+msgstr "正在等待使用電池電力"
 
 #: src/Device.vala:66
 msgid "Unknown"
@@ -60,45 +60,41 @@ msgstr "未知"
 #: src/Device.vala:193
 msgctxt "battery-level"
 msgid "Critical"
-msgstr ""
+msgstr "嚴重不足"
 
 #: src/Device.vala:195
 msgctxt "battery-level"
 msgid "Low"
-msgstr ""
+msgstr "不足"
 
 #: src/Device.vala:197
 msgctxt "battery-level"
 msgid "Good"
-msgstr ""
+msgstr "普通"
 
 #: src/Device.vala:199
 msgctxt "battery-level"
 msgid "High"
-msgstr "高級"
+msgstr "足夠"
 
 #: src/Device.vala:201
 msgctxt "battery-level"
 msgid "Full"
-msgstr ""
+msgstr "已充飽"
 
 #: src/Device.vala:205
 msgid "Unknown. Device may be locked."
-msgstr ""
+msgstr "未知。裝置可能已鎖定。"
 
 #: src/MainView.vala:49 src/Plug.vala:36
 msgid "Power"
 msgstr "電源"
 
 #: src/MainView.vala:94 src/Plug.vala:86
-#, fuzzy
-#| msgid "Automatically adjust brightness:"
 msgid "Automatically Adjust Brightness"
-msgstr "自動調整亮度："
+msgstr "自動調整亮度"
 
 #: src/MainView.vala:126 src/Plug.vala:91
-#, fuzzy
-#| msgid "Display brightness"
 msgid "Display Brightness"
 msgstr "顯示器亮度"
 
@@ -115,10 +111,8 @@ msgid "Lid Close With External Display"
 msgstr ""
 
 #: src/MainView.vala:195 src/Plug.vala:88
-#, fuzzy
-#| msgid "Inactive display off"
 msgid "Automatic Display Off"
-msgstr "閒置顯示器關閉"
+msgstr "自動關閉顯示器"
 
 #. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
 #: src/MainView.vala:205 src/Widgets/LidCloseActionComboBox.vala:52
@@ -130,36 +124,28 @@ msgid "Suspend"
 msgstr "暫停"
 
 #: src/MainView.vala:207
-#, fuzzy
-#| msgid "Prompt to shutdown"
 msgid "Ask to shutdown"
-msgstr "提請關機"
+msgstr "關機前詢問"
 
 #: src/MainView.vala:212 src/Plug.vala:94
-#, fuzzy
-#| msgid "Power button"
 msgid "Power Button Behavior"
-msgstr "睡眠按鈕"
+msgstr "電源按鈕動作"
 
 #: src/MainView.vala:226 src/MainView.vala:266 src/Plug.vala:95
-#, fuzzy
-#| msgid "Suspend when inactive for:"
 msgid "Suspend When Inactive For"
-msgstr "電腦暫停前的不使用時間："
+msgstr "電腦暫停前的不使用時間"
 
 #: src/MainView.vala:251
 msgid "Plugged In"
 msgstr "插入電源線"
 
 #: src/MainView.vala:297 src/Plug.vala:87
-#, fuzzy
-#| msgid "Automatically adjust brightness:"
 msgid "Automatically Save Power"
-msgstr "自動調整亮度："
+msgstr "自動降低電力消耗"
 
 #: src/MainView.vala:300
 msgid "Power Saver mode will be used when battery is low"
-msgstr ""
+msgstr "電池電量不足時使用省電模式"
 
 #: src/MainView.vala:309
 msgid "On Battery"
@@ -176,18 +162,16 @@ msgid "Battery Level"
 msgstr "使用電池"
 
 #: src/Plug.vala:90
-#, fuzzy
-#| msgid "Dim display"
 msgid "Dim Display"
 msgstr "調暗顯示器"
 
 #: src/Widgets/BatteryBox.vala:22
 msgid "Battery Levels"
-msgstr ""
+msgstr "電量"
 
 #: src/Widgets/BatteryBox.vala:30
 msgid "Show Percentage In Panel"
-msgstr ""
+msgstr "在面板上顯示百分比"
 
 #: src/Widgets/DevicesBox.vala:8
 msgid ""
