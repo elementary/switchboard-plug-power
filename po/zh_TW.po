@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-15 00:14+0000\n"
-"PO-Revision-Date: 2024-09-01 23:41+0000\n"
+"PO-Revision-Date: 2024-09-02 05:42+0000\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
 "switchboard/power/zh_Hant/>\n"
@@ -181,7 +181,7 @@ msgstr ""
 
 #: src/Widgets/DevicesBox.vala:28
 msgid "Connected Devices"
-msgstr ""
+msgstr "已連接的裝置"
 
 #: src/Widgets/TimeoutComboBox.vala:97
 msgid "Never"
@@ -232,24 +232,20 @@ msgid "Not supported"
 msgstr "未支援"
 
 #: src/Widgets/PowerModeButton.vala:60
-#, fuzzy
-#| msgid "Power"
 msgid "Power Mode"
-msgstr "電源"
+msgstr "電源模式"
 
 #: src/Widgets/PowerModeButton.vala:68
-#, fuzzy
-#| msgid "Power"
 msgid "Power Saver"
-msgstr "電源"
+msgstr "省電"
 
 #: src/Widgets/PowerModeButton.vala:82
 msgid "Balanced"
-msgstr ""
+msgstr "平衡"
 
 #: src/Widgets/PowerModeButton.vala:98
 msgid "Performance"
-msgstr ""
+msgstr "效能"
 
 #~ msgid "Display brightness:"
 #~ msgstr "顯示器亮度："
