@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-15 00:14+0000\n"
-"PO-Revision-Date: 2024-09-02 05:42+0000\n"
+"PO-Revision-Date: 2024-09-07 17:04+0000\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
 "switchboard/power/zh_Hant/>\n"
@@ -34,11 +34,11 @@ msgstr "充電中"
 
 #: src/Device.vala:56
 msgid "Using battery power"
-msgstr ""
+msgstr "正在使用電池電力"
 
 #: src/Device.vala:58
 msgid "Empty"
-msgstr ""
+msgstr "空"
 
 #: src/Device.vala:60
 msgid "Fully charged"
@@ -104,11 +104,11 @@ msgstr "有些更改在您重新啟動電腦之前還不會生效"
 
 #: src/MainView.vala:156 src/Plug.vala:92
 msgid "Lid Close Behavior"
-msgstr ""
+msgstr "上蓋關閉行為"
 
 #: src/MainView.vala:164 src/Plug.vala:93
 msgid "Lid Close With External Display"
-msgstr ""
+msgstr "上蓋關閉但有外部顯示器時"
 
 #: src/MainView.vala:195 src/Plug.vala:88
 msgid "Automatic Display Off"
@@ -156,10 +156,8 @@ msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "調整顯示器亮度、電源按鈕、暫停行為等設定"
 
 #: src/Plug.vala:89 src/Widgets/BatteryBox.vala:21
-#, fuzzy
-#| msgid "On Battery"
 msgid "Battery Level"
-msgstr "使用電池"
+msgstr "電池電量"
 
 #: src/Plug.vala:90
 msgid "Dim Display"
@@ -177,7 +175,7 @@ msgstr "在面板上顯示百分比"
 msgid ""
 "Devices that report battery information when plugged in or connected "
 "wirelessly will appear here"
-msgstr ""
+msgstr "有線或無線連接時有回報電池電量資訊的裝置會出現在此"
 
 #: src/Widgets/DevicesBox.vala:28
 msgid "Connected Devices"
