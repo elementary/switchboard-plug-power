@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-15 00:14+0000\n"
-"PO-Revision-Date: 2024-08-07 18:16+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2024-11-28 12:16+0000\n"
+"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "power/pt/>\n"
 "Language: pt\n"
@@ -60,17 +60,17 @@ msgstr "Desconhecida"
 #: src/Device.vala:193
 msgctxt "battery-level"
 msgid "Critical"
-msgstr ""
+msgstr "Crítica"
 
 #: src/Device.vala:195
 msgctxt "battery-level"
 msgid "Low"
-msgstr ""
+msgstr "Baixa"
 
 #: src/Device.vala:197
 msgctxt "battery-level"
 msgid "Good"
-msgstr ""
+msgstr "Boa"
 
 #: src/Device.vala:199
 msgctxt "battery-level"
@@ -80,11 +80,11 @@ msgstr "Alta"
 #: src/Device.vala:201
 msgctxt "battery-level"
 msgid "Full"
-msgstr ""
+msgstr "Cheia"
 
 #: src/Device.vala:205
 msgid "Unknown. Device may be locked."
-msgstr ""
+msgstr "Desconhecida. O dispositivo pode estar bloqueado."
 
 #: src/MainView.vala:49 src/Plug.vala:36
 msgid "Power"
@@ -177,10 +177,12 @@ msgid ""
 "Devices that report battery information when plugged in or connected "
 "wirelessly will appear here"
 msgstr ""
+"Os dispositivos que reportam informações da bateria quando conectados ou "
+"ligados sem fios aparecerão aqui"
 
 #: src/Widgets/DevicesBox.vala:28
 msgid "Connected Devices"
-msgstr ""
+msgstr "Dispositivos conectados"
 
 #: src/Widgets/TimeoutComboBox.vala:97
 msgid "Never"
