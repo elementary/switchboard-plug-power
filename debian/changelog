@@ -1,3 +1,9 @@
+io.elementary.settings.power (8.0.1) noble; urgency=medium
+
+  * Release 8.0.1 (#274)
+
+ -- elementary, Inc. <builds@elementary.io>  Wed, 11 Dec 2024 22:46:49 +0000
+
 io.elementary.settings.power (8.0.0) noble; urgency=medium
 
   * Release 8.0.0
