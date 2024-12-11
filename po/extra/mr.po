@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-15 00:14+0000\n"
+"POT-Creation-Date: 2024-12-11 22:29+0000\n"
 "PO-Revision-Date: 2024-08-07 18:16+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -31,53 +31,54 @@ msgstr "डिस्प्ले ब्राइटनेस, पॉवर ब�
 msgid "elementary, Inc."
 msgstr "एलिमेंटरी, Inc ."
 
-#: data/power.metainfo.xml.in:34 data/power.metainfo.xml.in:53
-#: data/power.metainfo.xml.in:66
-msgid "New features:"
-msgstr "नवीन वैशिष्ट्ये:"
-
-#: data/power.metainfo.xml.in:36
-msgid "Show computer batteries and batteries for connected devices"
-msgstr ""
-
-#: data/power.metainfo.xml.in:38 data/power.metainfo.xml.in:57
-#: data/power.metainfo.xml.in:70 data/power.metainfo.xml.in:80
+#: data/power.metainfo.xml.in:34 data/power.metainfo.xml.in:47
+#: data/power.metainfo.xml.in:66 data/power.metainfo.xml.in:79
+#: data/power.metainfo.xml.in:89
 msgid "Minor updates:"
 msgstr "किरकोळ अद्यतने:"
 
-#: data/power.metainfo.xml.in:40
+#: data/power.metainfo.xml.in:36 data/power.metainfo.xml.in:50
+#: data/power.metainfo.xml.in:68 data/power.metainfo.xml.in:82
+#: data/power.metainfo.xml.in:93 data/power.metainfo.xml.in:101
+msgid "Updated translations"
+msgstr "अद्ययावत भाषांतर"
+
+#: data/power.metainfo.xml.in:43 data/power.metainfo.xml.in:62
+#: data/power.metainfo.xml.in:75
+msgid "New features:"
+msgstr "नवीन वैशिष्ट्ये:"
+
+#: data/power.metainfo.xml.in:45
+msgid "Show computer batteries and batteries for connected devices"
+msgstr ""
+
+#: data/power.metainfo.xml.in:49
 #, fuzzy
 #| msgid "Fix potential freeze when changing settings from multiple panes"
 msgid "Fix a potential freeze when getting advanced permissions"
 msgstr "एकाधिक पॅनमधून सेटिंग्ज बदलताना संभाव्य फ्रीझशी संबंधित समस्यांचे निराकरण करा"
 
-#: data/power.metainfo.xml.in:41 data/power.metainfo.xml.in:59
-#: data/power.metainfo.xml.in:73 data/power.metainfo.xml.in:84
-#: data/power.metainfo.xml.in:92
-msgid "Updated translations"
-msgstr "अद्ययावत भाषांतर"
-
-#: data/power.metainfo.xml.in:55
+#: data/power.metainfo.xml.in:64
 msgid "Add power profile management"
 msgstr ""
 
-#: data/power.metainfo.xml.in:68
+#: data/power.metainfo.xml.in:77
 msgid "Add toggle for showing battery percentage in Panel"
 msgstr ""
 
-#: data/power.metainfo.xml.in:72
+#: data/power.metainfo.xml.in:81
 msgid "Fix a potential issue with resuming from sleep"
 msgstr ""
 
-#: data/power.metainfo.xml.in:82
+#: data/power.metainfo.xml.in:91
 msgid "Change lid settings without restarting"
 msgstr ""
 
-#: data/power.metainfo.xml.in:83
+#: data/power.metainfo.xml.in:92
 msgid "Show in search results for \"sleep\" and \"timeout\""
 msgstr ""
 
-#: data/power.metainfo.xml.in:91
+#: data/power.metainfo.xml.in:100
 msgid "Fix potential freeze when changing settings from multiple panes"
 msgstr "एकाधिक पॅनमधून सेटिंग्ज बदलताना संभाव्य फ्रीझशी संबंधित समस्यांचे निराकरण करा"
 

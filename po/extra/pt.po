@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-15 00:14+0000\n"
+"POT-Creation-Date: 2024-12-11 22:29+0000\n"
 "PO-Revision-Date: 2024-11-28 12:16+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
@@ -31,52 +31,53 @@ msgstr "Configurar o brilho do ecrã, botões de energia e modo de suspensão"
 msgid "elementary, Inc."
 msgstr "elementary, Inc."
 
-#: data/power.metainfo.xml.in:34 data/power.metainfo.xml.in:53
-#: data/power.metainfo.xml.in:66
-msgid "New features:"
-msgstr "Novas funcionalidades:"
-
-#: data/power.metainfo.xml.in:36
-msgid "Show computer batteries and batteries for connected devices"
-msgstr "Mostra baterias de computador e baterias para dispositivos ligados"
-
-#: data/power.metainfo.xml.in:38 data/power.metainfo.xml.in:57
-#: data/power.metainfo.xml.in:70 data/power.metainfo.xml.in:80
+#: data/power.metainfo.xml.in:34 data/power.metainfo.xml.in:47
+#: data/power.metainfo.xml.in:66 data/power.metainfo.xml.in:79
+#: data/power.metainfo.xml.in:89
 msgid "Minor updates:"
 msgstr "Pequenas atualizações:"
 
-#: data/power.metainfo.xml.in:40
-msgid "Fix a potential freeze when getting advanced permissions"
-msgstr "Corrige um possível congelamento ao obter permissões avançadas"
-
-#: data/power.metainfo.xml.in:41 data/power.metainfo.xml.in:59
-#: data/power.metainfo.xml.in:73 data/power.metainfo.xml.in:84
-#: data/power.metainfo.xml.in:92
+#: data/power.metainfo.xml.in:36 data/power.metainfo.xml.in:50
+#: data/power.metainfo.xml.in:68 data/power.metainfo.xml.in:82
+#: data/power.metainfo.xml.in:93 data/power.metainfo.xml.in:101
 msgid "Updated translations"
 msgstr "Traduções atualizadas"
 
-#: data/power.metainfo.xml.in:55
+#: data/power.metainfo.xml.in:43 data/power.metainfo.xml.in:62
+#: data/power.metainfo.xml.in:75
+msgid "New features:"
+msgstr "Novas funcionalidades:"
+
+#: data/power.metainfo.xml.in:45
+msgid "Show computer batteries and batteries for connected devices"
+msgstr "Mostra baterias de computador e baterias para dispositivos ligados"
+
+#: data/power.metainfo.xml.in:49
+msgid "Fix a potential freeze when getting advanced permissions"
+msgstr "Corrige um possível congelamento ao obter permissões avançadas"
+
+#: data/power.metainfo.xml.in:64
 msgid "Add power profile management"
 msgstr "Adiciona gestão de perfil de energia"
 
-#: data/power.metainfo.xml.in:68
+#: data/power.metainfo.xml.in:77
 msgid "Add toggle for showing battery percentage in Panel"
 msgstr "Adiciona comutador para mostrar a percentagem de bateria no Painel"
 
-#: data/power.metainfo.xml.in:72
+#: data/power.metainfo.xml.in:81
 msgid "Fix a potential issue with resuming from sleep"
 msgstr "Correção de um problema potencial com o retomar da suspensão"
 
-#: data/power.metainfo.xml.in:82
+#: data/power.metainfo.xml.in:91
 msgid "Change lid settings without restarting"
 msgstr "Alterar as definições do fecho da tampa sem reiniciar"
 
-#: data/power.metainfo.xml.in:83
+#: data/power.metainfo.xml.in:92
 msgid "Show in search results for \"sleep\" and \"timeout\""
 msgstr ""
 "Mostrar em resultados de pesquisa para \"hibernação\" e \"tempo limite\""
 
-#: data/power.metainfo.xml.in:91
+#: data/power.metainfo.xml.in:100
 msgid "Fix potential freeze when changing settings from multiple panes"
 msgstr ""
 "Corrige o possível congelamento ao alterar as configurações de vários painéis"
