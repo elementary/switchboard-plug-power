@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-11 22:29+0000\n"
-"PO-Revision-Date: 2024-06-16 01:16+0000\n"
+"PO-Revision-Date: 2024-12-12 05:36+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "power-extra/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5.5\n"
+"X-Generator: Weblate 5.8.4\n"
 
 #: data/power.metainfo.xml.in:10
 msgid "Power Settings"
@@ -35,7 +35,7 @@ msgstr "elementary, Inc."
 #: data/power.metainfo.xml.in:66 data/power.metainfo.xml.in:79
 #: data/power.metainfo.xml.in:89
 msgid "Minor updates:"
-msgstr "そのほかのアップデート:"
+msgstr "マイナーアップデート:"
 
 #: data/power.metainfo.xml.in:36 data/power.metainfo.xml.in:50
 #: data/power.metainfo.xml.in:68 data/power.metainfo.xml.in:82
