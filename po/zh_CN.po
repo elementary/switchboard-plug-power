@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: maya\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-11 22:29+0000\n"
-"PO-Revision-Date: 2024-08-07 18:16+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
-"Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
-"switchboard/power/zh_Hans/>\n"
+"PO-Revision-Date: 2025-08-03 09:55+0000\n"
+"Last-Translator: JieXu <xujie0739@qq.com>\n"
+"Language-Team: Chinese (Simplified Han script) <https://"
+"l10n.elementaryos.org/projects/settings/power/zh_Hans/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.11.4\n"
 "X-Launchpad-Export-Date: 2017-03-14 07:03+0000\n"
 
 #: data/power.policy.in:10
@@ -30,27 +30,27 @@ msgstr "电源设置需要管理员权限"
 
 #: src/Device.vala:54
 msgid "Charging"
-msgstr ""
+msgstr "充电中"
 
 #: src/Device.vala:56
 msgid "Using battery power"
-msgstr ""
+msgstr "正在使用电池电能"
 
 #: src/Device.vala:58
 msgid "Empty"
-msgstr ""
+msgstr "空"
 
 #: src/Device.vala:60
 msgid "Fully charged"
-msgstr ""
+msgstr "已充满"
 
 #: src/Device.vala:62
 msgid "Waiting to charge"
-msgstr ""
+msgstr "正在等待充电"
 
 #: src/Device.vala:64
 msgid "Waiting to use battery power"
-msgstr ""
+msgstr "正在等待使用电池电能"
 
 #: src/Device.vala:66
 msgid "Unknown"
@@ -60,12 +60,12 @@ msgstr "未知设备"
 #: src/Device.vala:193
 msgctxt "battery-level"
 msgid "Critical"
-msgstr ""
+msgstr "严重不足"
 
 #: src/Device.vala:195
 msgctxt "battery-level"
 msgid "Low"
-msgstr ""
+msgstr "不足"
 
 #: src/Device.vala:197
 msgctxt "battery-level"
@@ -80,7 +80,7 @@ msgstr "高"
 #: src/Device.vala:201
 msgctxt "battery-level"
 msgid "Full"
-msgstr ""
+msgstr "已充满"
 
 #: src/Device.vala:205
 msgid "Unknown. Device may be locked."
@@ -91,14 +91,10 @@ msgid "Power"
 msgstr "电源"
 
 #: src/MainView.vala:94 src/Plug.vala:86
-#, fuzzy
-#| msgid "Automatically adjust brightness:"
 msgid "Automatically Adjust Brightness"
-msgstr "自动调整："
+msgstr "自动调节亮度"
 
 #: src/MainView.vala:126 src/Plug.vala:91
-#, fuzzy
-#| msgid "Display brightness"
 msgid "Display Brightness"
 msgstr "屏幕亮度"
 
@@ -108,17 +104,15 @@ msgstr "某些变更需要重启系统才会生效"
 
 #: src/MainView.vala:156 src/Plug.vala:92
 msgid "Lid Close Behavior"
-msgstr ""
+msgstr "上盖关闭行为"
 
 #: src/MainView.vala:164 src/Plug.vala:93
 msgid "Lid Close With External Display"
-msgstr ""
+msgstr "上盖关闭但有外部显示器时"
 
 #: src/MainView.vala:195 src/Plug.vala:88
-#, fuzzy
-#| msgid "Inactive display off"
 msgid "Automatic Display Off"
-msgstr "闲时关闭屏幕"
+msgstr "自动关闭显示器"
 
 #. FIXME: Virtual machines can only shutdown or do nothing. Tablets always suspend.
 #: src/MainView.vala:205 src/Widgets/LidCloseActionComboBox.vala:52
@@ -136,30 +130,24 @@ msgid "Ask to shutdown"
 msgstr "立刻关机"
 
 #: src/MainView.vala:212 src/Plug.vala:94
-#, fuzzy
-#| msgid "Power button"
 msgid "Power Button Behavior"
-msgstr "电源键"
+msgstr "按下电源按钮"
 
 #: src/MainView.vala:226 src/MainView.vala:266 src/Plug.vala:95
-#, fuzzy
-#| msgid "Suspend when inactive for:"
 msgid "Suspend When Inactive For"
-msgstr "睡眠模式："
+msgstr "电脑挂起前的闲置时间"
 
 #: src/MainView.vala:251
 msgid "Plugged In"
 msgstr "接入电源"
 
 #: src/MainView.vala:297 src/Plug.vala:87
-#, fuzzy
-#| msgid "Automatically adjust brightness:"
 msgid "Automatically Save Power"
-msgstr "自动调整："
+msgstr "自动节省电能"
 
 #: src/MainView.vala:300
 msgid "Power Saver mode will be used when battery is low"
-msgstr ""
+msgstr "电池电量不足时使用省电模式"
 
 #: src/MainView.vala:309
 msgid "On Battery"
@@ -170,36 +158,30 @@ msgid "Configure display brightness, power buttons, and suspend behavior"
 msgstr "配置显示器亮度、电源按键和睡眠方式"
 
 #: src/Plug.vala:89 src/Widgets/BatteryBox.vala:21
-#, fuzzy
-#| msgid "On Battery"
 msgid "Battery Level"
-msgstr "使用电池"
+msgstr "电池电量"
 
 #: src/Plug.vala:90
-#, fuzzy
-#| msgid "Dim display"
 msgid "Dim Display"
 msgstr "调暗屏幕"
 
 #: src/Widgets/BatteryBox.vala:22
 msgid "Battery Levels"
-msgstr ""
+msgstr "电量"
 
 #: src/Widgets/BatteryBox.vala:30
-#, fuzzy
-#| msgid "Show battery percentage in Panel:"
 msgid "Show Percentage In Panel"
-msgstr "显示电池百分比："
+msgstr "在面板中显示电池百分比"
 
 #: src/Widgets/DevicesBox.vala:8
 msgid ""
 "Devices that report battery information when plugged in or connected "
 "wirelessly will appear here"
-msgstr ""
+msgstr "通过有线或无线连接并能提供电池信息的设备会显示在这里"
 
 #: src/Widgets/DevicesBox.vala:28
 msgid "Connected Devices"
-msgstr ""
+msgstr "已连接的设备"
 
 #: src/Widgets/TimeoutComboBox.vala:97
 msgid "Never"
@@ -250,10 +232,8 @@ msgid "Not supported"
 msgstr "不支持"
 
 #: src/Widgets/PowerModeButton.vala:60
-#, fuzzy
-#| msgid "Power Saver"
 msgid "Power Mode"
-msgstr "节能"
+msgstr "电源模式"
 
 #: src/Widgets/PowerModeButton.vala:68
 msgid "Power Saver"
