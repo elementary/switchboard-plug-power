@@ -192,6 +192,17 @@ public class Power.MainView : Switchboard.SettingsPage {
             }
         }
 
+        var idle_dim_switch = new Gtk.Switch () {
+            halign = END
+        };
+
+        var idle_dim_label = new Gtk.Label (_("Automatically Dim Display")) {
+            mnemonic_widget = idle_dim_switch,
+            xalign = 0
+        };
+
+        label_size.add_widget (idle_dim_label);
+
         var screen_timeout_label = new Gtk.Label (_("Automatic Display Off")) {
             xalign = 0
         };
@@ -218,6 +229,8 @@ public class Power.MainView : Switchboard.SettingsPage {
             column_spacing = 12,
             row_spacing = 12
         };
+        main_grid.attach (idle_dim_label, 0, 3);
+        main_grid.attach (idle_dim_switch, 1, 3);
         main_grid.attach (screen_timeout_label, 0, 4);
         main_grid.attach (screen_timeout, 1, 4);
         main_grid.attach (powerbutton_label, 0, 5);
@@ -344,6 +357,8 @@ public class Power.MainView : Switchboard.SettingsPage {
 
         update_powerbutton_dropdown ();
         settings.changed["power-button-action"].connect (update_powerbutton_dropdown);
+
+        settings.bind ("idle-dim", idle_dim_switch, "active", DEFAULT);
 
         powerbutton_dropdown.notify["selected"].connect (() => {
             int[] map = {0, 1, 3};
